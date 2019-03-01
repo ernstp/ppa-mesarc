@@ -1,0 +1,18 @@
+xserver-xorg-video-amdgpu (18.1.99+git1810120025.aa57268~b~padoka0) bionic; urgency=medium
+
+  * Checkout from master git branch up to commit
+    aa572683d86174be2bfc09d4e173ae2a9907d40e
+
+ -- Paulo Dias <paulo.miguel.dias@gmail.com>  Fri, 12 Oct 2018 00:26:05 +0100
+
+xserver-xorg-video-amdgpu (0.0.01~git20150807-0ubuntu1) wily; urgency=medium
+
+  * Sync from debian git.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 20 Aug 2015 14:19:31 +0300
+
+xserver-xorg-video-amdgpu (0.0.01~git20150807-1) unstable; urgency=low
+
+  * Initial release (Closes: #795686)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sun, 16 Aug 2015 11:26:30 +0300
