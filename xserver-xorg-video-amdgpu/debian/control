@@ -1,32 +1,22 @@
 Source: xserver-xorg-video-amdgpu
 Section: x11
 Priority: optional
-Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Timo Aaltonen <tjaalton@debian.org>
 Build-Depends:
- debhelper (>= 9),
- dh-autoreconf,
+ debhelper (>= 11),
  quilt,
- libdrm-dev (>= 2.4.63) [!hurd-i386],
+ libdrm-dev (>= 2.4.89) [!hurd-i386],
  libgl1-mesa-dev | libgl-dev,
  libgbm-dev,
- libpciaccess-dev,
  libudev-dev [linux-any],
  pkg-config,
- x11proto-core-dev,
- x11proto-dri2-dev,
- x11proto-fonts-dev,
- x11proto-randr-dev (>= 1.2),
- x11proto-render-dev,
- x11proto-video-dev,
- x11proto-xext-dev,
- x11proto-xf86dri-dev,
+ x11proto-dev,
  xserver-xorg-dev (>= 2:1.16),
  xutils-dev (>= 1:7.5+4)
-Standards-Version: 3.9.6
-Vcs-Git: git://anonscm.debian.org/pkg-xorg/xserver-xorg-video-amdgpu.git
-Vcs-Browser: http://anonscm.debian.org/cgit/pkg-xorg/xserver-xorg-video-amdgpu.git
+Standards-Version: 4.2.1
+Vcs-Git: https://salsa.debian.org/xorg-team/driver/xserver-xorg-video-amdgpu.git
+Vcs-Browser: https://salsa.debian.org/xorg-team/driver/xserver-xorg-video-amdgpu.git
 
 Package: xserver-xorg-video-amdgpu
 Architecture: linux-any
@@ -35,28 +25,13 @@ Depends:
  ${misc:Depends},
  ${xviddriver:Depends},
 Provides: ${xviddriver:Provides}
-Suggests: linux-firmware
+Suggests: firmware-amd-graphics
 Description: X.Org X server -- AMDGPU display driver
  This package provides the 'amdgpu' driver for the AMD Radeon cards. The
  following chip families should be supported: Bonaire, Hawaii, Kaveri, Kabini
- Mullins, Iceland, Tonga, Carrizo.
+ Mullins, Iceland, Tonga, Carrizo, Fiji, Stoney.
  .
  More information about X.Org can be found at:
  <URL:http://www.X.org>
  .
  This package is built from the X.org xf86-video-amdgpu driver module.
-
-Package: xserver-xorg-video-amdgpu-dbg
-Architecture: linux-any
-Depends:
- ${misc:Depends},
- xserver-xorg-video-amdgpu (= ${binary:Version})
-Section: debug
-Priority: extra
-Description: X.Org X server -- AMDGPU display driver (debugging symbols)
- This package provides the 'amdgpu' driver for the AMD Radeon cards. The
- following chip families should be supported: Bonaire, Hawaii, Kaveri, Kabini
- Mullins, Iceland, Tonga, Carrizo.
- .
- This package provides debugging symbols for this X.org X driver.
-

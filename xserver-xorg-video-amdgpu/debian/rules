@@ -8,25 +8,26 @@ XXV=xserver-xorg-video
 
 override_dh_auto_configure:
 	dh_auto_configure --builddirectory=build/ -- \
-		--libdir=/usr/lib \
-		--disable-silent-rules
+		--libdir=/usr/lib
+
+override_dh_auto_install:
+	dh_auto_install --destdir debian/tmp
 
 # Kill *.la files, and forget no-one:
 override_dh_install:
 	find debian/tmp -name '*.la' -delete
-	dh_install --fail-missing
+	dh_install
+
+override_dh_missing:
+	dh_missing --fail-missing
 
 # Debug packages:
 override_dh_strip:
-	dh_strip -p$(XXV)-amdgpu --dbg-package=$(XXV)-amdgpu-dbg
+	dh_strip -p$(XXV)-amdgpu --dbgsym-migration="$(XXV)-amdgpu-dbg (<< 18.0.1-2~)"
 
 # That's a plugin, use appropriate warning level:
 override_dh_shlibdeps:
 	dh_shlibdeps -- --warnings=6
 
 %:
-	dh $@ --with quilt,autoreconf,xsf --builddirectory=build/ --parallel
-
-
-
-
+	dh $@ --with quilt,xsf --builddirectory=build/

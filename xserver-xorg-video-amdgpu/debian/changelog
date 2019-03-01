@@ -1,15 +1,98 @@
-xserver-xorg-video-amdgpu (18.1.99+git1810120025.aa57268~b~padoka0) bionic; urgency=medium
+xserver-xorg-video-amdgpu (18.1.99+git20190207-1) unstable; urgency=medium
 
-  * Checkout from master git branch up to commit
-    aa572683d86174be2bfc09d4e173ae2a9907d40e
+  * New upstream snapshot.
+  * Stop passing --disable-silent-rules to configure.
 
- -- Paulo Dias <paulo.miguel.dias@gmail.com>  Fri, 12 Oct 2018 00:26:05 +0100
+ -- Andreas Boll <aboll@debian.org>  Thu, 07 Feb 2019 22:19:06 +0100
 
-xserver-xorg-video-amdgpu (0.0.01~git20150807-0ubuntu1) wily; urgency=medium
+xserver-xorg-video-amdgpu (18.1.0-1) unstable; urgency=medium
 
-  * Sync from debian git.
+  * Switch to dbgsym package.
+  * New upstream release.
+  * control: Build-depend on x11proto-dev.
+  * control: Bump libdrm build-dep.
+  * Bump debhelper to 11.
+  * control: Bump policy to 4.2.1.
 
- -- Timo Aaltonen <tjaalton@debian.org>  Thu, 20 Aug 2015 14:19:31 +0300
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 18 Sep 2018 10:23:52 +0300
+
+xserver-xorg-video-amdgpu (18.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 20 Mar 2018 14:02:29 +0200
+
+xserver-xorg-video-amdgpu (18.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Update VCS urls.
+  * control: Bump policy to 4.1.3, no changes.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 07 Mar 2018 04:44:35 +0200
+
+xserver-xorg-video-amdgpu (1.4.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Bump libdrm-dev build-dep to 2.4.78 to match configure.ac.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 29 Sep 2017 00:17:42 +0300
+
+xserver-xorg-video-amdgpu (1.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Bump libdrm-dev build-dep.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 27 Jun 2017 11:44:43 +0300
+
+xserver-xorg-video-amdgpu (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Bump policy to 3.9.8, no changes.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 17 Nov 2016 11:21:36 +0200
+
+xserver-xorg-video-amdgpu (1.1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+    - fix-configdir.diff: Dropped, fixed upstream
+
+  [ Julien Cristau ]
+  * Use https URL in debian/watch.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 16 Sep 2016 13:18:07 +0300
+
+xserver-xorg-video-amdgpu (1.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * fix-configdir.diff: Fix installing the config snippet.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 15 Sep 2016 23:55:07 +0300
+
+xserver-xorg-video-amdgpu (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Bump policy to 3.9.7, no changes.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 07 Apr 2016 13:32:21 +0300
+
+xserver-xorg-video-amdgpu (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 22 Feb 2016 06:36:08 +0200
+
+xserver-xorg-video-amdgpu (1.0.0-1) unstable; urgency=medium
+
+  [ Andreas Boll ]
+  * First upstream release.
+  * Let uscan verify tarball signatures.
+  * Replace non-existing Suggests: linux-firmware with new firmware-amd-
+    graphics.
+  * Remove unused libpciaccess-dev build-dep.
+  * Update list of supported chips.
+  * Use https for Vcs-* fields.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 24 Nov 2015 15:46:07 +0200
 
 xserver-xorg-video-amdgpu (0.0.01~git20150807-1) unstable; urgency=low
 
