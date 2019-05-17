@@ -1,0 +1,34 @@
+Description: Disable i965 CCS renderbuffer compression
+ It's a new optimization introduced in Mesa 18.0.0, however is presently
+ causing framebuffer corruption when logging into Xorg sessions. This
+ corruption is actually expected for now, until the kernel and Xorg are
+ extended to query and understand the CCS modifier properly.
+ .
+ Presently upstream would rather have CCS _and_ the corruption in Xorg
+ sessions than remove it. However that's not good enough for the Ubuntu
+ user experience so we're just disabling CCS while the corruption is still
+ a problem. It was just an optional optimization anyway.
+Author: Daniel van Vugt <daniel.van.vugt@canonical.com>
+Bug-Ubuntu: https://launchpad.net/bugs/1753776
+Bug: https://bugs.freedesktop.org/show_bug.cgi?id=105518
+Forwarded: no
+Last-Update: 2018-03-21
+
+Index: mesa-18.0.0~rc4-1ubuntu4/src/mesa/drivers/dri/i965/intel_screen.c
+===================================================================
+--- mesa-18.0.0~rc4-1ubuntu4.orig/src/mesa/drivers/dri/i965/intel_screen.c
++++ mesa-18.0.0~rc4-1ubuntu4/src/mesa/drivers/dri/i965/intel_screen.c
+@@ -300,7 +300,11 @@ static const struct {
+    { .modifier = DRM_FORMAT_MOD_LINEAR       , .since_gen = 1 },
+    { .modifier = I915_FORMAT_MOD_X_TILED     , .since_gen = 1 },
+    { .modifier = I915_FORMAT_MOD_Y_TILED     , .since_gen = 6 },
+-   { .modifier = I915_FORMAT_MOD_Y_TILED_CCS , .since_gen = 9 },
++/* Disable CCS to work around Xorg login corruption (LP: #1753776).
++ * Longer-term, upstream or someone needs to extend the kernel (and Xorg?)
++ * to fix it properly: https://bugs.freedesktop.org/show_bug.cgi?id=105518
++ * { .modifier = I915_FORMAT_MOD_Y_TILED_CCS , .since_gen = 9 },
++ */
+ };
+ 
+ static bool
+
