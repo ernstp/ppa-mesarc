@@ -1,0 +1,10 @@
+--- a/include/drm/drm.h
++++ b/include/drm/drm.h
+@@ -44,6 +44,7 @@ typedef unsigned int drm_handle_t;
+ 
+ #else /* One of the BSDs */
+ 
++#include <stdint.h>
+ #include <sys/ioccom.h>
+ #include <sys/types.h>
+ typedef int8_t   __s8;
