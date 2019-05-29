@@ -1,1 +1,1 @@
-DISTROS="bionic cosmic disco"
+DISTROS="bionic cosmic disco eoan"
