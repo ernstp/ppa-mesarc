@@ -1,0 +1,81 @@
+commit d72507cb400c2ef8940ee194e46818d9ebf4187f
+Author: Timo Aaltonen <tjaalton@debian.org>
+Date:   Mon Mar 4 11:32:22 2019 +0200
+
+    Revert "util/u_queue: add UTIL_QUEUE_INIT_SET_FULL_THREAD_AFFINITY"
+    
+    This reverts commit d877451b48a59ab0f9a4210fc736f51da5851c9a.
+
+diff --git a/src/gallium/drivers/radeonsi/si_pipe.c b/src/gallium/drivers/radeonsi/si_pipe.c
+index 2656bdc2068..168657c9cc5 100644
+--- a/src/gallium/drivers/radeonsi/si_pipe.c
++++ b/src/gallium/drivers/radeonsi/si_pipe.c
+@@ -916,8 +916,7 @@ struct pipe_screen *radeonsi_screen_create(struct radeon_winsys *ws,
+ 
+ 	if (!util_queue_init(&sscreen->shader_compiler_queue, "sh",
+ 			     64, num_comp_hi_threads,
+-			     UTIL_QUEUE_INIT_RESIZE_IF_FULL |
+-			     UTIL_QUEUE_INIT_SET_FULL_THREAD_AFFINITY)) {
++			     UTIL_QUEUE_INIT_RESIZE_IF_FULL)) {
+ 		si_destroy_shader_cache(sscreen);
+ 		FREE(sscreen);
+ 		return NULL;
+@@ -927,7 +926,6 @@ struct pipe_screen *radeonsi_screen_create(struct radeon_winsys *ws,
+ 			     "shlo",
+ 			     64, num_comp_lo_threads,
+ 			     UTIL_QUEUE_INIT_RESIZE_IF_FULL |
+-			     UTIL_QUEUE_INIT_SET_FULL_THREAD_AFFINITY |
+ 			     UTIL_QUEUE_INIT_USE_MINIMUM_PRIORITY)) {
+ 	       si_destroy_shader_cache(sscreen);
+ 	       FREE(sscreen);
+diff --git a/src/util/disk_cache.c b/src/util/disk_cache.c
+index 0aa2646a9bb..368ec417927 100644
+--- a/src/util/disk_cache.c
++++ b/src/util/disk_cache.c
+@@ -378,8 +378,7 @@ disk_cache_create(const char *gpu_name, const char *driver_id,
+     */
+    util_queue_init(&cache->cache_queue, "disk$", 32, 1,
+                    UTIL_QUEUE_INIT_RESIZE_IF_FULL |
+-                   UTIL_QUEUE_INIT_USE_MINIMUM_PRIORITY |
+-                   UTIL_QUEUE_INIT_SET_FULL_THREAD_AFFINITY);
++                   UTIL_QUEUE_INIT_USE_MINIMUM_PRIORITY);
+ 
+    cache->path_init_failed = false;
+ 
+diff --git a/src/util/u_queue.c b/src/util/u_queue.c
+index 3812c824b6d..22d2cdd0fa2 100644
+--- a/src/util/u_queue.c
++++ b/src/util/u_queue.c
+@@ -239,20 +239,6 @@ util_queue_thread_func(void *input)
+ 
+    free(input);
+ 
+-#ifdef HAVE_PTHREAD_SETAFFINITY
+-   if (queue->flags & UTIL_QUEUE_INIT_SET_FULL_THREAD_AFFINITY) {
+-      /* Don't inherit the thread affinity from the parent thread.
+-       * Set the full mask.
+-       */
+-      cpu_set_t cpuset;
+-      CPU_ZERO(&cpuset);
+-      for (unsigned i = 0; i < CPU_SETSIZE; i++)
+-         CPU_SET(i, &cpuset);
+-
+-      pthread_setaffinity_np(pthread_self(), sizeof(cpuset), &cpuset);
+-   }
+-#endif
+-
+    if (strlen(queue->name) > 0) {
+       char name[16];
+       util_snprintf(name, sizeof(name), "%s%i", queue->name, thread_index);
+diff --git a/src/util/u_queue.h b/src/util/u_queue.h
+index 4e63a76aab2..714d9243f00 100644
+--- a/src/util/u_queue.h
++++ b/src/util/u_queue.h
+@@ -48,7 +48,6 @@ extern "C" {
+ 
+ #define UTIL_QUEUE_INIT_USE_MINIMUM_PRIORITY      (1 << 0)
+ #define UTIL_QUEUE_INIT_RESIZE_IF_FULL            (1 << 1)
+-#define UTIL_QUEUE_INIT_SET_FULL_THREAD_AFFINITY  (1 << 2)
+ 
+ #if defined(__GNUC__) && defined(HAVE_LINUX_FUTEX_H)
+ #define UTIL_QUEUE_FENCE_FUTEX
