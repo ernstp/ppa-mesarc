@@ -14,7 +14,7 @@ Build-Depends:
  libx11-dev,
  libxxf86vm-dev,
  libexpat1-dev,
- libsensors-dev [!hurd-any],
+ libsensors4-dev [!hurd-any],
  libxfixes-dev,
  libxdamage-dev,
  libxext-dev,
