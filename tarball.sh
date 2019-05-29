@@ -27,7 +27,7 @@ fi
 cd "$WDIR"
 cp -r ../debian .
 
-for dist in "$@"; do
+for dist in $DISTROS; do
 	DEBIAN_VERSION=${PACKAGE_VERSION}-1ubuntu1~${dist:0:1}~mesarc${INC}
 
 	dch --distribution ${dist} -v ${DEBIAN_VERSION} "New snapshot"
