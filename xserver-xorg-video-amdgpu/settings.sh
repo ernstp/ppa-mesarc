@@ -1,0 +1,1 @@
+DISTROS="bionic cosmic disco"
