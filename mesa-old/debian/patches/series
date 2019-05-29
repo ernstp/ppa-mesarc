@@ -1,0 +1,4 @@
+# Ubuntu patches.
+dont-enable-10bpc-by-default.diff
+disable-intel-ccs-compression.diff
+revert-set-full-thread-affinity.diff
