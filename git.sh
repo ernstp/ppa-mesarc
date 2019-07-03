@@ -9,6 +9,9 @@ source settings.sh
 BASEDIR=$(basename "$PWD")
 PACKAGE_NAME=${PACKAGE_NAME:-$BASEDIR}
 
+if [ ! -e "$PACKAGE_NAME/.git" ]; then
+	git clone "$GIT" "$PACKAGE_NAME"
+fi
 cd "$PACKAGE_NAME"
 
 git clean -xdf
