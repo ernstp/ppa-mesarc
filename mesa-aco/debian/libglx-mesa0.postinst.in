@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  configure)
+  # remove alternatives from libgl1-mesa-glx
+  update-alternatives --remove ${DEB_HOST_MULTIARCH}_gl_conf \
+	/usr/lib/${DEB_HOST_MULTIARCH}/mesa/ld.so.conf
+
+  # explicit ldconfig due to alternatives
+  ldconfig
+
+esac
+
+#DEBHELPER#
+
+exit 0
