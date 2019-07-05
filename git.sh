@@ -43,7 +43,9 @@ fi
 GIT_VERSION=$(git show --date=format:%y%m%d%H%M -s --format=format:%cd.%h)
 GIT_REV=$(git show -s --format=format:%h)
 
-if [ "x$GIT_REV" = "x$OLD_GIT_REV" ]; then
+if [ "$1" = "-f" ]; then
+	CHANGES="No change rebuild"
+elif [ "x$GIT_REV" = "x$OLD_GIT_REV" ]; then
 	echo "Nothing new"
 	exit 0
 else
