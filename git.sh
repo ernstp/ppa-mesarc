@@ -9,9 +9,10 @@ source settings.sh
 BASEDIR=$(basename "$PWD")
 PACKAGE_NAME=${PACKAGE_NAME:-$BASEDIR}
 INC=${INC:-0}
+GITBRANCH=${GITBRANCH:-master}
 
 if [ ! -e "$PACKAGE_NAME/.git" ]; then
-	git clone --separate-git-dir=git "$GIT" "$PACKAGE_NAME"
+	git clone --separate-git-dir=git "$GIT" "$PACKAGE_NAME" -b "$GITBRANCH"
 	newclone=1
 fi
 
