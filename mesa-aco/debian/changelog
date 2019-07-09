@@ -1,3 +1,20 @@
+mesa (19.2.0~git1907091712.9928a225386~b~mesarc1) UNRELEASED; urgency=medium
+
+  * New snapshot:
+  * 9928a225386 amd/compiler: correctly apply input modifiers to DPP
+    instructions
+  * aae07fa2083 amd/compiler: handle fixed register definitions before
+    assigning registers for other definitions
+  * 75d5748b16a amd/compiler: respect definition sizes when allocating
+    registers for split_vector
+  * 7a202201a64 amd/compiler: handle swizzled vector alu sources
+  * 65dbabab773 amd/compiler: correctly handle p_extract_vector with
+    vector definition
+  * 077490f1121 amd/compiler: remove killed phi sgpr-operands from live
+    vars between p_logical_end and block end.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 09 Jul 2019 20:46:49 +0200
+
 mesa (19.0.2-1ubuntu1) disco; urgency=medium
 
   * Merge from Debian.
