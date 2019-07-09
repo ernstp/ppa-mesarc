@@ -49,14 +49,23 @@ if [ "$1" = "-f" ]; then
 elif [ "x$GIT_REV" = "x$OLD_GIT_REV" ]; then
 	echo "Nothing new"
 	exit 0
-else
-	CHANGES=$(git log --oneline "${OLD_GIT_REV}..${GIT_REV}")
 fi
 
+first=1
 for dist in $DISTROS ; do
+	if [ "$first" -eq 1 ]; then
+		dch -c ../debian/changelog -v ${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~mesarc${INC} "New snapshot:"
+		git log --oneline "${OLD_GIT_REV}..${GIT_REV}" | while read change; do
+			dch -c ../debian/changelog -a "$change"
+		done
+		first=0
+	fi
+
+	rm -rf debian
+	cp -r ../debian .
 	DEBIAN_VERSION=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~mesarc${INC}
 
-	dch --distribution ${dist} -v ${DEBIAN_VERSION} "$CHANGES"
+	dch --distribution ${dist} -v ${DEBIAN_VERSION} "Build for $dist"
 
 	debuild -S -d
 done
