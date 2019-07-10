@@ -1,3 +1,12 @@
+mesa (19.1.2+git1907090918.e42399f4de8~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * e42399f4de8 docs: add sha256 checksums for 19.1.2
+  * fe1f7b538b7 docs: add release notes for 19.1.2
+  * eea0045458c Update version to 19.1.2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 10 Jul 2019 16:40:12 +0200
+
 mesa (19.0.2-1ubuntu1) disco; urgency=medium
 
   * Merge from Debian.
