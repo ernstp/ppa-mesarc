@@ -53,17 +53,18 @@ fi
 
 first=1
 for dist in $DISTROS ; do
+	DEBIAN_VERSION=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~mesarc${INC}
 	if [ "$first" -eq 1 ]; then
-		dch -c ../debian/changelog -v ${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~mesarc${INC} "New snapshot:"
+		dch -c ../debian/changelog -D ${dist} -v ${DEBIAN_VERSION} "New snapshot:"
 		git log --oneline "${OLD_GIT_REV}..${GIT_REV}" | while read change; do
 			dch -c ../debian/changelog -a "$change"
 		done
+		(cd .. && git add debian/changelog && git commit -m "$BASEDIR: $DEBIAN_VERSION")
 		first=0
 	fi
 
 	rm -rf debian
 	cp -r ../debian .
-	DEBIAN_VERSION=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~mesarc${INC}
 
 	dch --distribution ${dist} -v ${DEBIAN_VERSION} "Build for $dist"
 
