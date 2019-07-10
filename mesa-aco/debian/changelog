@@ -1,4 +1,12 @@
-mesa (19.2.0~git1907091712.9928a225386~b~mesarc1) UNRELEASED; urgency=medium
+mesa (19.2.0~git1907101128.eebe7f88564~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * eebe7f88564 amd/compiler: recover from failed live-range splitting
+    while register allocation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 10 Jul 2019 16:58:02 +0200
+
+mesa (19.2.0~git1907091712.9928a225386~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
   * 9928a225386 amd/compiler: correctly apply input modifiers to DPP
