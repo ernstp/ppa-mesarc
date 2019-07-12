@@ -1,3 +1,15 @@
+mesa (19.2.0~git1907111232.677bea5144d~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 677bea5144d amd/compiler: implement nir_op_{f2f32,u2f64,i2f64}
+  * acc3f4d56b9 amd/compiler: remove wrong assertion in ssa_elimination
+  * 2064386e734 amd/compiler: set exec mask always to zero on discard()
+  * 49f4a60b453 amd/compiler: fix register file restoration when
+    get_regs_for_copies fails
+  * e757dd9cc05 add Github issue template
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 12 Jul 2019 21:21:42 +0200
+
 mesa (19.2.0~git1907101128.eebe7f88564~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
