@@ -1,3 +1,21 @@
+mesa (19.1.2+git1907190840.f17ff71f490~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f17ff71f490 radv: fix crash in shader tracing.
+  * d86b14ecbb7 radv: fix VGT_GS_MODE if VS uses the primitive ID
+  * 900bcab48be anv: fix alphaToCoverage when there is no color
+    attachment
+  * 0b1ee72bbc5 anv: fix format mapping for depth/stencil formats
+  * 3dea2e2ffc6 virgl: Set meta data for textures from handle.
+  * 1527d02acb3 radv: Only save the descriptor set if we have one.
+  * d578b42e349 anv: report timestampComputeAndGraphics true
+  * a612f0210a0 vulkan/wsi: update swapchain status on vkQueuePresent
+  * 7a072f1f396 nir/loop_analyze: Properly handle swizzles in loop
+    conditions
+  * b685e303f74 nir: Add some helpers for chasing SSA values properly
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jul 2019 17:27:54 +0200
+
 mesa (19.1.2+git1907090918.e42399f4de8~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
