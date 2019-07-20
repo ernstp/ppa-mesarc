@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1907051243.87f41ac~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 87f41ac Don't disable page flipping completely with SW cursor
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jul 2019 17:30:41 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (18.1.0-1~18.04.1) bionic; urgency=medium
 
   * Backport for 18.04.2 HWE stack update. (LP: #1798597)
