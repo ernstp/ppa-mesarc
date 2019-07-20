@@ -1,3 +1,520 @@
+mesa (19.2.0~git1907191421.3f3665b8d52~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 3f3665b8d52 nir/lower_io_to_vector: update to v3
+  * a60c3076062 amd/compiler: preserve omod_success/clamp_success in
+    some combining opts
+  * 6628a16a9b4 amd/compiler: remove potentially incorrect optimization
+  * 5031ab774a6 Update issue templates
+  * 0c473a421aa amd/compiler: Fix RA for shader with more than 32 input
+    variables
+  * 1d9a46843ff amd/compiler: implement stencil writes when depth writes
+    are also done
+  * a50d59e3f9d amd/compiler: fix v_add_lshl_u32 optimization to only
+    consider the second operand
+  * 7157929d52c add Github issue template
+  * 6240f934f57 Add DOOM app profile
+  * 6f5cef467ff amd/compiler: fix RADV_DEBUG=compiletime
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jul 2019 17:23:12 +0200
+
+mesa (19.2.0~git1907191421.3f3665b8d52~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 3f3665b8d52 nir/lower_io_to_vector: update to v3
+  * a60c3076062 amd/compiler: preserve omod_success/clamp_success in
+    some combining opts
+  * 6628a16a9b4 amd/compiler: remove potentially incorrect optimization
+  * 5031ab774a6 Update issue templates
+  * 0c473a421aa amd/compiler: Fix RA for shader with more than 32 input
+    variables
+  * 1d9a46843ff amd/compiler: implement stencil writes when depth writes
+    are also done
+  * a50d59e3f9d amd/compiler: fix v_add_lshl_u32 optimization to only
+    consider the second operand
+  * 7157929d52c add Github issue template
+  * 6240f934f57 Add DOOM app profile
+  * 6f5cef467ff amd/compiler: fix RADV_DEBUG=compiletime
+  * 0e2241145ac amd/compiler: allow p_wqm to take a sgpr
+  * 8b446e71548 amd/compiler: Don't emit unnecessary split- &
+    create_vector instructions for load_shared
+  * 196fe3fd91b amd/compiler: don't propagate VGPR operands into
+    p_linear_phi
+  * 9d29e77ff5e amd/compiler: split vectors only locally if it is not
+    safe to reuse the result
+  * e7117737c52 amd/compiler: move upper half of 64bit iadd/isub
+    operands to VGPR
+  * 2078a8bf3f3 amd/compiler: implement nir_op_{f2f32,u2f64,i2f64}
+  * c2978f65f7d amd/compiler: remove wrong assertion in ssa_elimination
+  * 8c6ebf61d7a amd/compiler: set exec mask always to zero on discard()
+  * 6aa313c904c amd/compiler: fix register file restoration when
+    get_regs_for_copies fails
+  * 465d1fe3b0f amd/compiler: recover from failed live-range splitting
+    while register allocation
+  * 6f5e73ca6ff amd/compiler: correctly apply input modifiers to DPP
+    instructions
+  * e57976fedea amd/compiler: handle fixed register definitions before
+    assigning registers for other definitions
+  * 3cf9454e583 amd/compiler: handle swizzled vector alu sources
+  * d6916a69500 amd/compiler: correctly handle p_extract_vector with
+    vector definition
+  * 1f6010dd013 amd/compiler: remove killed phi sgpr-operands from live
+    vars between p_logical_end and block end.
+  * a34cf700907 amd/compiler: add missing scc clobbers
+  * 574fda19c06 amd/compiler: update ctx.spills_exit even if the block
+    isn't processed
+  * 48fc73f325f amd/compiler: update ctx.remat_use_count after renaming
+  * b8308f9079e amd/compiler: remove partially spilled vars after adding
+    to spills_entry
+  * 024a5b3cd9e amd/compiler: update phi operand after reloading
+  * ea5bdb1cda9 amd/compiler: fix uniform b2i32 with s2 src.
+  * 5f98621a3ea amd/compiler: set level_zero for negative levels
+  * 1dde704358c amd/compiler: re-enable definitions after disabling
+    killed operands
+  * 604ab1c3f60 amd/compiler: update block->{s,v}gpr_demand later
+  * 5f3d09426e5 amd/compiler: wrap v_{sin,cos}_f32 inputs on pre-GFX9
+  * fabeea5da2d amd/compiler: fix phi reassignment
+  * f918de3dc07 amd/compiler: fix early-exit for some p_end_linear_vgpr
+    insertion code
+  * 47187f7c5ef amd/compiler: use new concept of radv shader binaries.
+  * 2b29f01cd78 amd/compiler: cleanup #include headers
+  * 78df91ca1d0 amd/compiler: fix discard() inside uniform branches
+  * cd8236887c5 amd/compiler: use a boolean vector for ctx.reload_count
+  * 44784dee04b use spills_exit instead when ending spill vgpr live
+    ranges
+  * f0e34a04a34 nir/lower_io_to_vector: handle dual source blending
+  * d179cb2a103 amd/compiler: fix fneg(fabs(fmul(a,b))) optimization
+  * e24c5521e79 amd/compiler: extend spill vgpr live ranges in some
+    situations
+  * e0db642e734 Simplify controll flow in dominator_tree
+  * b09d5def1eb amd/compiler: fix uniform phis with vgpr operands
+  * a5306a08606 amd/compiler: add idep_amdgfxregs_h as a dependency
+  * 11adc0cfb4b amd/compiler: update spiller with Tonga workaround
+  * 6be54229aa8 amd/compiler: workaround Tonga SGPR bug
+  * 2ac392e3280 amd/compiler: correctly update branches in
+    try_remove_invert_block()
+  * 73c665795e5 amd/compiler: fix vgpr nir_op_uadd_sat on pre-GFX9
+  * 904355ed0fa amd/compiler: enable shaderInt64
+  * 51c9d07d633 amd/compiler: implement 64bit nir_op_uadd_carry &
+    nir_op_usub_borrow
+  * ce7374acdb9 amd/compiler: implement 64bit load_push_constant()
+  * ab830ec0dfd amd/compiler: implement 64bit load_ubo
+  * b84db6a2724 amd/compiler: implement 64bit load/store_shared
+  * 023c765bbd2 amd/compiler: fix register assignment restrictions for
+    SMEM operands
+  * 5d769291fb3 amd/compiler: respect definition sizes when allocating
+    registers for split_vector
+  * 8ca90736377 amd/compiler: fix nir_op_mov to uniform for 64bit values
+  * 4313187ded1 amd/compiler: implement 64bit load/store_ssbo
+  * 074e1a71bc1 amd/compiler: add various peephole optimizations
+  * 386cf49cb0f amd/compiler: move some code out of
+    combine_instruction()
+  * 4d5c986d87b amd/compiler: replace the base_offset label with add_sub
+  * 259c3a47912 amd/compiler: recognize p_create_vector instructions
+    which are just moves
+  * 4c7f0a54682 amd/compiler: create more optimizable vector code in
+    visit_load_shared()
+  * b1697d92ac6 amd/compiler: label labels and prevent conflicting
+    labels
+  * 0578f3903d4 nir/algebraic: mark a few comparison simplifications as
+    precise
+  * 45802977d89 nir/algebraic: optimize contradictory iand operands
+  * 422d58df2fa amd/compiler: lower more int64 instructions which are
+    not supported by GCN hardware
+  * 2cd6d1ce72a nir: lower int64 in a single pass.
+  * bbd383acc09 amd/compiler: implement 64bit nir_op_isign
+  * 5b8b4c60218 amd/compiler: implement scalar 64bit nir_op_isub
+  * c1691b16c1c amd/compiler: add some more 32bit <-> 64bit integer
+    conversions
+  * 9dccd649581 amd/compiler: implement nir_op_f2i64 & nir_op_f2u64
+  * 8df8ebf2c3b amd/compiler: implement divergent 64bit nir_op_ieq
+  * 54c57025b89 amd/compiler: add VOPC opcodes for all HW generations
+  * 746f1351208 amd/compiler: disable ACO on unsupported GPUs
+  * 7c0f5895703 amd/compiler: don't label muls with modifiers as omods
+  * 67b477ec8e5 radv: add RADV_PERFTEST=llvm
+  * 62d7bb84195 radv: add ACO to the disk cache's driver flags
+  * f5c66e788fc radv: warn about using ACO
+  * 65ec849ba5a radv: print ACO earlier in the device name
+  * 68639624a5c amd/compiler: add VOP1 opcodes for all HW generations
+  * aab19cd3f65 amd/compiler: add VOP2 opcodes for all HW generations
+  * a2a32bf5a7f amd/compiler: add SMEM opcodes for all HW generations
+  * b21d487535c amd/compiler: add SOP* opcodes for all HW generations
+  * d7b5a252423 amd/compiler: remove pseudo_barrier instructions when
+    lowering them.
+  * ce9b385f9f7 amd/compiler: fix linear register class on reduction
+    operand
+  * cdd6d7dfa75 amd/compiler: fix edge case of potential pointer
+    invalidation
+  * 7db103e4a26 amd/compiler: refactor opcode_infos from AoS to SoA
+    layout
+  * 0c38cdd18bc amd/compiler: refactor VOP1/VOP2 instructions each into
+    a single table
+  * e74e7a0a9f6 amd/compiler: add Navi SMEM opcodes
+  * 92e35a1bc74 amd/compiler: add Navi opcodes for SOP* instructions
+  * 2d74a576813 amd/compiler: refactor SOP1/SOP2/SOPC opcodes as single
+    table for each format
+  * 9095c5bec18 amd/compiler: simplify opcode table access in assembler.
+  * 0cc9f437e0c amd/compiler: fix warning about uninitialized variable
+  * a7029aeb293 amd/compiler: refactor CFG as std::vector<Block> instead
+    of using unique_ptr.
+  * 723e3029c78 amd/compiler: make dominator_tree() a single forward
+    pass.
+  * 0d8debca8ae amd/compiler: make visit_jump() and visit_discard()
+    independent from pointers into program->blocks
+  * 978501d2e67 amd/compiler: change signature of add_edge() and friends
+    to take the predecessor's index instead of pointer
+  * 5ca0a5d128d amd/compiler: make visit_if() independent from pointers
+    to program->blocks
+  * dca57abb437 amd/compiler: make visit_loop() independent from
+    pointers into program->blocks
+  * efb28ca38e1 amd/compiler: refactor linear/logical_pre- and
+    successors based on block index instead of pointer.
+  * 68c68e94a94 amd/compiler: make pseudo_branch targets int and fill
+    them after instruction selection
+  * e99bd6b3579 amd/compiler: change signature of get_ssa()
+  * f7f11792b54 amd/compiler: change signature of mark_block_wqm()
+  * 25f65ae6b71 amd/compiler: change signature of read_variable() in RA.
+  * 25025331f62 amd/compiler: remove template argument from
+    live_var_analysis
+  * 0df10a2fca3 amd/compiler: fix more warnings
+  * c369fefa71a amd/compiler: disable RA validation by default
+  * ef5161993f1 amd/compiler: don't propagate constants to p_wqm,
+    s_mulk_i32 and such
+  * d760deb8e29 amd/compiler: fix incorrect expression order in RA
+  * 4298ebacb98 amd/compiler: fix p_wqm, s_mulk_i32 and such with undef
+    operands
+  * e2bb99a72f9 amd/compiler: fix null dereference in
+    setup_reduce_temp()
+  * 851816a2365 amd/compiler: refactor PhysReg
+  * c95b63afe9b amd/compiler: beautify Temp definition
+  * 2d1a92c133d amd/compiler: make RegClass a struct with proper methods
+  * 1d3f2927c35 amd/compiler,nir: fix warnings
+  * e6fb1dc22fc amd/compiler: correctly update reload_count with
+    affinities
+  * ff342525966 amd/compiler: disable validation on release builds, add
+    ACO_VALIDATE
+  * 69a96dfe2cb amd/compiler: correctly swap scc and a sgpr
+  * 709760dfe84 amd/compiler: handle parallel copies from a constant
+    into scc
+  * 7e17a84420a amd/compiler: preserve scc when swapping sgprs
+  * 3b6a57dd463 amd/compiler: add Pseudo_instruction
+  * f506137e9b8 amd/compiler: treat buffer and image barriers as the
+    same
+  * cb49172e8ed amd/compiler: fix interferences and affinities of
+    spilled variables
+  * e04810971d9 amd/compiler: don't spill constants which are used in
+    the next instruction.
+  * 289391f5e51 amd/compiler: fix incorrect register class
+  * 2f1a290561f amd/compiler: better handle high waitcnt counters
+  * c6e8d48211a amd/compiler: remove incorrect assert in spiller
+  * 96194896c5f amd/compiler: better handle unreachable continues with
+    divergent ifs
+  * 3b499fa684c amd/compiler: implement planar textures
+  * 2776e698085 amd/compiler: be more strict when scheduling around
+    s_barrier
+  * 8ee03c69faf amd/compiler: extend moving_ds to more memory
+    instructions
+  * 4487c75df96 amd/compiler: fix 1D array nir_texop_txs on GFX9+
+  * cf1684ebfe4 amd/compiler: support rematerialization of
+    p_create_vector
+  * 34b53bb33b2 amd/compiler: increase MAX_ARGS to 64
+  * 9344f6faa24 amd/compiler: for spilling, only insert linear_vgpr user
+    after loops if there was a reload inside the loop.
+  * 8eee6292445 amd/compiler: fix sgpr demand for live var analysis wrt
+    exec mask
+  * d4d06e2392b amd/compiler: fix reductions in loops
+  * 10daffc5e16 Revert "amd/compiler: try to avoid using XOR when
+    lowering parallelcopies"
+  * 2afa7807e72 amd/compiler: fixup NUM_FORMAT name after rebase
+  * 14ca560d026 amd/compiler: fix CIK/SI/VI -> GFX6/7/8 after rebase
+  * 0ed9259520d nir: fix nir_opt_load_store_vectorize imov -> mov
+  * cbee466861b amd/compiler: fix imov/fmov -> mov after rebase
+  * 575e6e9a562 amd/compiler: allow the scheduler to decrease max_waves
+  * f94aea03be8 amd/compiler: always predicate discard early exits on an
+    exact exec mask
+  * 92ccc27757c amd/compiler: correctly preserve WQM mask after discards
+  * 7fc6ddaf509 amd/compiler: don't move export instructions during
+    scheduling
+  * d601277466e amd/compiler: allow the scheduler to reorder some memory
+    instructions
+  * 81ae50f0834 amd/compiler: increase scheduler window size
+  * 2677d22de31 amd/compiler: fix assert in get_reg()
+  * 03b6d291709 amd/compiler: fix edge-case in print_regs()
+  * d4f0bf65494 amd/compiler: label and optimize add(add(<tmp>,
+    <const>), <const>)
+  * b9f820f52be amd/compiler: don't create NULL exports during isel
+  * d863c373fde amd/compiler: check live-out during RA validation
+  * 1c232481c69 amd/compiler: correctly identify unreachable continues
+    with divergent ifs
+  * 68bdeb5b5a7 amd/compiler: fixup loop header phis in the case of
+    unreachable continues
+  * d32c3cf178d amd/compiler: correctly add parallelcopies to a phi's
+    uses
+  * b1b02641d7e amd/compiler: shuffle register if needed to make space
+    for phis
+  * bdfd00a6df2 amd/compiler: correctly give an empty expr_set to
+    process_block()
+  * 4bae41cae94 amd/compiler: don't mark invert blocks as top level
+  * cc258a45e6c amd/compiler: fix situation where instructions were
+    inserted before phis
+  * ef383ebb581 amd/compiler: remove incorrect assert
+  * 4d11b6dc90a amd/compiler: don't fix outer mask to exec on discards
+  * f6f64344364 amd/compiler: allow for 2 more sgprs without spilling
+  * edd939062a2 amd/compiler: fix renaming of spilled variables in
+    (nested) loops
+  * 5e90cb74f69 amd/compiler: validate out-of-bounds register
+    assignments.
+  * 95e6026452e amd/compiler: consider WAR hazards for Export
+    instructions while register assignment.
+  * 634a0831b3d amd/compiler: soft-align vec4 registers when live-range
+    splitting
+  * 810f3fd091d amd/compiler: try to avoid using XOR when lowering
+    parallelcopies
+  * b88fa9970ae amd/compiler: use best_fit for register assignments
+    without live-range splits
+  * 04d550b62dd amd/compiler: Rework live-range splitting for register
+    assignment.
+  * 033a1bbdcdc amd/compiler: outline get_reg_simple() function to find
+    a register without live-range splitting
+  * bcfd7906f61 amd/compiler: round up GPRs for correct #num_waves in
+    shader stats
+  * 5b2a039c46c amd/compiler: have insert_waitcnt() ignore discard
+    exports
+  * 0ed7cb4ca34 amd/compiler: fix nir_texop_samples_identical
+  * 36ba48b0fdc amd/compiler: add missing scc clobber
+  * d711496fd83 amd/compiler: implement push constant inlining
+  * 7cd5c48d99f radv: use a different device name if ACO is used
+  * 17067955172 nir: combine move_load_const and opt_sink
+  * 667fb14aaea radv: consider ACO when hashing shaders
+  * 3f99228193b radv: only flush SMEM L1 for SSBOs if ACO is enabled
+  * 1ed419e1715 amd/compiler: correctly size 64-bit constants
+  * d976564d86e amd/compiler: assert when a 64-bit literal constant is
+    being created
+  * 02575d8bb5c amd/compiler: explicitly size undefined operands
+  * 997dd13020f nir/load_store_vectorize: remove deref stuff in
+    may_alias()
+  * 1b78ed17f51 amd/compiler: update TODO
+  * ad94def48fd amd/compiler: optimize v_cndmask(0, 1.0, b) * a ->
+    v_cndmask(0, a, b)
+  * ef0371c55e7 nir: remove fmul(b2f(a), b) -> bcsel optimization
+  * 88bf8ac990c Revert "nir: optimize fadd(a, fneg(b)) -> fsub"
+  * 6de006ead12 amd/compiler: add fadd(a, -b) -> fsub(a, b) optimization
+  * b12ea32cd79 amd/compiler: don't do any combining for dead VALU
+    instructions
+  * e08793e7a71 amd/compiler: make an instruction VOP3 to apply a sgpr
+  * 2fd79e766bd amd/compiler: optimize fneg(fneg(a))
+  * 9bb81e7318a nir/load_store_vectorize: cosmetic changes
+  * e8872ca08bf nir/load_store_vectorize: miscellaneous fixes, cleanups
+    and improvements
+  * beb98ab0718 nir/lcssa: update formatting
+  * e61e17629ae nir/lcsaa: simplify instr_is_invariant()
+  * c6ee6061c0f nir/load_store_vectorize: update comment
+  * 99b96859487 amd/compiler: use nir_shader_get_entrypoint()
+  * a6a08a02f1f nir/subgroups: fix clustered reduction lowering when
+    subgroup_size=0
+  * f3a5efd603f radv: lower FS outputs to vector
+  * f037d4253b5 nir/lower_io_to_vector: add flat mode
+  * 47d5251b905 nir/lower_io_to_vector: allow FS outputs to be
+    vectorized
+  * 2854ce5dfcb nir/divergence_analysis: process cf_nodes recursively
+    instead of using a worklist.
+  * b2358159821 nir/divergence_analysis: only consider phis at loop
+    headers as uniform if all loop-carried values are the same.
+  * 8c034f3c2dc amd/compiler: update TODO
+  * 29ea256d46c amd/compiler: use Builder more during instruction
+    selection
+  * 809315cdb13 amd/compiler: remove unused post-RA scheduler
+  * 6a314b77732 amd/compiler: use Builder in lower_bool_phis()
+  * 1adacd2808d amd/compiler: make further use of Builder in
+    lower_to_hw_instr
+  * 732dd11f0d0 amd/compiler: remove RegType::scc_bit and RegClass::b
+  * 958f3b6886f amd/compiler: move misplaced branch in
+    p_{create,split}_vector lowering
+  * bd258491f9c amd/compiler: set p_create_vector operands when
+    scalarizing phis
+  * a48a5f63672 amd/compiler: fix num_components in phi regClass
+    selection.
+  * 8946ed4f0de amd/compiler: fix assertion in phi regClass selection
+  * e172544b750 amd/compiler: fix regs_intersect()
+  * ec6661a8706 amd/compiler: fix after rebase
+  * a7715530d85 amd/compiler: update TODOs for upstreaming
+  * acf13b5ebe7 amd/compiler: change neg(mul(a, b)) to use v_mul_f32 in
+    VOP3 Format
+  * 54b1fa6396e amd/compiler: fix vector expansion of nir_texop_tg4
+  * 4049dfb606c amd/compiler: try to scalarize phis so that they can be
+    partially eliminated
+  * 7ff77ed0c63 amd/compiler: emit better code for uniform tex
+    instructions and fix validation error
+  * 8102563fa53 amd/compiler: handle uniform offsets in load_input()
+  * c874dd0b5a0 amd/compiler: always set need_indirect_descriptor_sets
+  * 7b8029c1724 amd/compiler: limit user sgprs to 16 on Vega compute
+    shaders
+  * ecc1dfe2706 amd/compiler: fix local_next_use_distance calculation
+  * cc3af2075ce amd/compiler: fix interferences of spilled variables
+  * 50a3213ae37 amd/compiler: add 64bit lshl & ashr
+  * f9054bd163b amd/compiler: add indirect descriptor sets
+  * cf0f221e6e1 amd/compiler: return uniform texture and image_load
+    instructions in sgprs.
+  * c5578482226 amd/compiler: fix inlined uniform block descriptors
+  * a1cf6692e50 amd/compiler: allow for image stores with less than 4
+    components
+  * 5e7e4433031 amd/compiler: update TODO
+  * 042d8b4beae amd/compiler: implement SMEM ssbo stores for fragment
+    shaders
+  * 1f791ba2cea amd/compiler: break up SMEM clauses if needed
+  * 371eac2531c amd/compiler: combine negates and multiplies
+  * bec4e5931ad amd/compiler: fix nir_op_fneg with zero
+  * 7b38c82797a amd/compiler: implement 64bit comparison instructions
+  * 5f424384c9d amd/compiler: silence warnings and fix
+    texop_samples_identical wrong tmp_dst ssa-def
+  * bc83280656e amd/compiler: implement nir_intrinsic_load_sample_pos
+  * b0515d75666 amd/compiler: implement
+    nir_intrinsic_load_barycentric_at_offset
+  * d785cb313e2 amd/compiler: implement
+    nir_intrinsic_load_barycentrinc_at_sample
+  * d03a54e862c nir: add load_barycentrinc_at_[sample|offset] and
+    load_sample_pos to divergence analysis
+  * 28137675e1b amd/compiler: fix split global stores on pre-GFX9
+  * d93a8923522 amd/compiler: don't propagate constants into
+    v_cndmask_b32 conditions
+  * 77e05a0edaa amd/compiler: fix integer texture gather on pre-GFX9
+  * e720c5edf70 amd/compiler: fix 1D texture sampling with explicit
+    derivatives on GFX9
+  * fb31ebfc8df amd/compiler: implement 1D array nir_texop_txs on GFX9
+  * f8ab0dbfdbc amd/compiler: implement cube sampling with explicit
+    derivatives
+  * 3e93dc1267e amd/compiler: fix wrong image opcode
+  * e27a2652404 amd/compiler: fix spilling at merge blocks
+  * 08d1873714a amd/compiler: remove debug code
+  * 0c1811e2454 amd/compiler: fix missing logical not
+  * 00b04a626b5 amd/compiler: handle flat interpolation of vec inputs
+  * 6dc6494589b amd/compiler: allow undef to be specified for
+    p_{split,extract}_vector
+  * ccb1ebb5366 amd/compiler: fix removal of live_out_exec in spiller
+  * 35d66e6a4f9 amd/compiler: use SMEM for some ssbo stores
+  * 3a1e141e179 amd/compiler: fix compilation
+  * ba4bb569f6f amd/compiler: add missing check in v_mad_f32 ->
+    v_mac_f32 optimization
+  * 32c0ea8acfc amd/compiler: fix error in nir_intrinsic_mbcnt_amd
+    implementation
+  * 6461aef0e24 amd/compiler: optimize vectors of undefined operands
+  * e9dc3d32890 amd/compiler: handle more barriers when moving DS
+    instructions
+  * db22dcb425b amd/compiler: Fix 64bit iadd if both operands are
+    created from vectors (like from i2i64).
+  * a6133a4a89f amd/compiler: implement nir_op_i2i64
+  * e10fcec1584 amd/compiler: fix boolean subgroupClusteredXor()
+  * 7dd38b9c578 amd/compiler: handle fixed phi definitions before
+    affinities.
+  * 68052bfc3b1 nir: remove wrong assertion in divergence analysis.
+  * a49c798d609 amd/compiler: add unofficial errata in README
+  * c0847b7bd6b amd/compiler: disable VK_KHR_shader_float16_int8 for aco
+  * f3dad9c79aa amd/compiler: mark s_bfe_* as writing SCC
+  * 7629dad9932 amd/compiler: fix vgpr nir_op_iabs and implement
+    nir_op_frexp_*
+  * 1abe7f5c0f4 amd/compiler: set flat_shaded_mask
+  * 002de1c3daf amd/compiler: switch optimizer to new dead_code_analysis
+    pass instead of using live_var_analysis
+  * 6e5c1915d1f amd/compiler: implement new dead_code_analysis pass to
+    calculate number of uses for each SSA-def
+  * dcc0369364a amd/compiler: move v_mad -> v_mac optimization to
+    register allocation
+  * 4a889995fcf amd/compiler: add missing uses == 1 check
+  * 103d308fbe6 amd/compiler: fix logical edges after break/continue
+  * d064bb996e4 amd/compiler: add support for AMD_shader_ballot
+    instructions
+  * 3e0e7c83099 nir: add AMD_shader_ballot intrinsics to divergence
+    analysis
+  * 6333bacc5bb amd/compiler: Add support for AMD_gcn_shader
+    instructions
+  * e51d39b6268 amd/compiler: Add support for AMD_shader_trinary_minmax
+    instructions
+  * 923a0b70b69 amd/common: rework writelane function for
+    write_invocation
+  * cd5d3f5e367 amd/compiler: ensure branches leading to WQM code are in
+    WQM
+  * fb8532277be amd/compiler: allow a WQM/exact transition when handling
+    p_is_helper
+  * 7df08254006 amd/compiler: don't value number DS instructions
+  * d9ca0e2686f amd/compiler: be more careful with barriers in the
+    scheduler
+  * e8171d4e0bc amd/compiler: fix 64-bit load_const after rebase
+  * b9140c8ff53 amd/compiler: print block kind
+  * b15a78170e6 amd/compiler: set block_kind_top_level
+  * 46bbdbd9d65 amd/compiler: remove duplicate 'count--'
+  * 52fa68c3f82 amd/compiler: disable VK_AMD_gpu_shader_half_float &
+    VK_AMD_gpu_shader_int16 for aco
+  * 36c03d372b5 nir: fix load_store_vectorize after rebase
+  * a3721720a48 nir: fix lower_io after rebase
+  * 0a7f9a2edb0 amd/compiler: fix rebase compilation errors from NIR
+    changes
+  * 0e233041796 amd/compiler: implement global loads/stores
+  * 40580c0617f amd/compiler: add support for flat,global and scratch
+    instructions
+  * 9ad36f597af amd/compiler: print_regs() fixes
+  * 45b816b2cca amd/compiler: use std::vector for ssa_info in
+    aco::optimize()
+  * 738e18a7de5 amd/compiler: implement 64-bit sgpr nir_op_iadd
+  * 798d438255a amd/compiler: fixup p_linear_phi with s2 boolean operand
+    and s1 definition
+  * ac219af0fc4 amd/compiler: switch jump threading to new exec mask
+    handling
+  * 12da2ccc79b amd/compiler: Do not spill the exec mask and don't count
+    it for sgpr demand
+  * 2a762047748 amd/compiler: implement load_helper_invocation for new
+    exec mask handling
+  * 7e929e87c2f amd/compiler: implement correct nir_intrinsic_discard()
+  * 7f088ee23df amd/compiler: rework discard_if()
+  * 2e76806945f amd/compiler: switch instruction selection to new exec
+    mask handling pass.
+  * d682ed52e22 amd/compiler: handle WQM in insert_exec_mask
+  * f414a91982c amd/compiler: move calculation of wqm needs to
+    insert_exec_mask()
+  * eba9de7f8cd amd/compiler: new separate pass for exec mask handling
+  * d514674ff30 amd/compiler: small builder extension
+  * a5556fef937 amd/compiler: add exec as operand to s_or_saveexec
+  * 1bfd1f35d45 amd/compiler: add block kind information to IR
+  * 38ed51b598b amd/compiler: don't schedule beyond changes of the exec
+    mask
+  * da0eaedc921 amd/compiler: correctly update waitcnt_ctx for empty
+    blocks
+  * 25b2211993b amd/compiler: allow for phis with fixed exec register
+  * fdbbe6517b1 amd/compiler: increase register limit when get_reg()
+    fails
+  * a46d3344404 amd/compiler: handle phis with all sources undefined
+  * bfff286253a nir/subgroups: Clamp cluster size to subgroup_size
+  * 5a66d7b7fe8 amd/compiler: use bit arrays to represent sets of
+    temporaries in scheduler
+  * 34f755b6b19 amd/compiler: fix uniform b2f32 with s2 booleans
+  * ddab7ee1388 amd/compiler: handle clip distance inputs
+  * 28c7334fe13 amd/compiler: implement linear interpolation
+  * 916fa7f3b4c nir,amd/compiler: improve various subgroup operations
+    with uniform inputs
+  * fed56e253de nir/lower_to_explicit: set explicit_stride for vectors
+  * 8c689c904fd amd/compiler: initialized fixed register with
+    Operand(Temp(0, ...))
+  * 21a99d9290d amd/compiler: propagate p_is_helper as 0 when wqm isn't
+    needed
+  * 6e11ae4f953 amd/compiler: implement
+    nir_intrinsic_load_helper_invocation
+  * a5f5372f50c amd/compiler: implement nir_intrinsic_first_invocation
+  * 5f720f7bb1f amd/compiler: implement nir_intrinsic_quad_*
+  * 7a388498878 amd/compiler: implement nir_intrinsic_vote_any
+  * 7e0d3f81ce4 amd/compiler: implement read_invocation
+  * 58e0e8efdb6 amd/compiler: implement boolean read_first_invocation
+  * 531a0ee7a2a amd/compiler: don't value number reductions
+  * 5643b9ed625 nir: mark nir_intrinsic_shuffle as divergent
+  * fc67e6374ac amd/compiler: implement boolean nir_intrinsic_shuffle
+  * 1a4b4109b15 amd/compiler: multiply shuffle lane by 4
+  * bc9856e0d7b amd/compiler: implement boolean nir_intrinsic_ballot
+  * c93d76e8e2d amd/compiler: implement 64-bit vgpr nir_op_ine
+  * 171f9eaaa2b amd/compiler: implement 64-bit bit_count
+  * 5536ae80fb6 amd/compler: implement 64-bit vgpr i2b1
+  * 9c287388f7c amd/compler: implement 64-bit sgpr find_lsb/find_msb
+  * b92149bd53b amd/compiler: implement clustered reductions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jul 2019 17:20:07 +0200
+
 mesa (19.2.0~git1907111232.677bea5144d~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
