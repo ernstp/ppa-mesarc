@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (19.0.1+git1907051243.87f41ac~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 87f41ac Don't disable page flipping completely with SW cursor
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jul 2019 17:28:53 +0200
+
 xserver-xorg-video-amdgpu (18.1.99+git20190207-1) unstable; urgency=medium
 
   * New upstream snapshot.
