@@ -1,3 +1,31 @@
+mesa (19.2.0~git1907251230.58e0420cb35~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 58e0420cb35 amd/compiler: fix assertion in aco_insert_exec_mask
+  * f7b925a4029 amd/compiler: disable
+    VK_EXT_shader_demote_to_helper_invocation temporary because of a
+    hang in PoE
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 25 Jul 2019 12:59:00 +0200
+
+mesa (19.2.0~git1907231419.17d9490cef1~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 17d9490cef1 amd/compiler: fix texture offsets
+  * c9897e7a781 Update issue templates
+  * d5dbdc8ee86 Add DOOM app profile
+  * f9b38efdda1 amd/compiler: enable int64_atomics capability for ACO
+  * 721477d1e3a amd/compiler: implement 64bit atomic_ssbo
+  * 7bc5d18ca0c nir/lower_io_to_vector: update to v3
+  * 19de84cb5b6 amd/compiler: disable int8_float16 device feature
+  * 99f9e3dc372 amd/compiler: enable shaderFloat64
+  * 2cbed4c245e amd/compiler: implement remaining shaderFloat64
+    instructions
+  * 39de1211353 amd/compiler: implement
+    VK_EXT_shader_demote_to_helper_invocation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 23 Jul 2019 16:47:52 +0200
+
 mesa (19.2.0~git1907191421.3f3665b8d52~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
