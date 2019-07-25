@@ -30,8 +30,13 @@ cp -r ../debian .
 
 if [ -e VERSION ]; then
 	PACKAGE_VERSION=$(cat VERSION | sed "s/-devel//")
-else
+elif [ -e CMakeLists.txt ]; then
+	PACKAGE_VERSION=$(grep PROJECT_VERSION CMakeLists.txt | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+elif [ -e configure.ac ]; then
 	PACKAGE_VERSION=$(grep AC_INIT -A 1 configure.ac | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+else
+	echo "Error, couldn't find package version"
+	exit 1
 fi
 
 # Is the version number in git incresed to the next version in advance or not?
