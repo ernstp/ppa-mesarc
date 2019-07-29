@@ -1,3 +1,12 @@
+mesa (19.1.3+git1907231118.33e57d0ace8~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 33e57d0ace8 docs: add sha256 checksums for 19.1.3
+  * 09a1b2bdbab docs: add release notes for 19.1.3
+  * 58e93aef968 Update version to 19.1.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 23 Jul 2019 15:42:14 +0200
+
 mesa (19.1.2+git1907190840.f17ff71f490~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
