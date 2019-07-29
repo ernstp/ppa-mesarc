@@ -1,3 +1,11 @@
+mesa (19.2.0~git1907291609.9bdc04c3811~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 9bdc04c3811 amd/compiler: fix txf_ms with an offset
+  * 4a6a40930f9 ac/nir: fix txf_ms with an offset
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 29 Jul 2019 18:44:25 +0200
+
 mesa (19.2.0~git1907251230.58e0420cb35~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
