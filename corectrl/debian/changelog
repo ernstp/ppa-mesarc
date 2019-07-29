@@ -1,3 +1,19 @@
+corectrl (1.1.0~git1907281721.432c5cf~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 432c5cf Merge branch 'fix-check_profile_import_values'
+  * 70682e9 Check AMD FanCurve import state
+  * 40e92c8 Check AMD FanFixed import state
+  * 3da54a1 Check AMD PMFVState import state
+  * 18dbb28 Check AMD PMFVVoltCurve import state
+  * 57145ce Check AMD PMFixedFreq import state
+  * 34be5fb Check AMD PMFreqOd import state
+  * ee90b63 Check AMD PMPowerCap import state
+  * bbf88c8 Check AMD PMPowerProfile import state
+  * 6b5901a Check AMD PMFixed import state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 29 Jul 2019 18:43:49 +0200
+
 corectrl (1.1.0~git1907201945.bc2cb34~b~mesarc0) bionic; urgency=low
 
   * Setup changelog
