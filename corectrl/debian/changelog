@@ -1,3 +1,15 @@
+corectrl (1.1.0~git1907311052.833407b~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 833407b Add Ubuntu repo to README.md
+  * 21f8e30 Make SysModelSyncer threaded
+  * 1baa989 Refactor ControlMode (+ ModeSelector.qml)
+  * 93de3f6 Refactor System.qml
+  * 07385dd Use Qt 5.9 known data types to exchange values between C++
+    and QML
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Jul 2019 15:50:31 +0200
+
 corectrl (1.1.0~git1907281721.432c5cf~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
