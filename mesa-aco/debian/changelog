@@ -1,3 +1,21 @@
+mesa (19.2.0~git1907292153.5c6077221dd~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 5c6077221dd Update issue templates
+  * a1c84be3133 Add DOOM app profile
+  * 8d199b9a888 nir/algebraic: turn (a+#b)<<#c into (a<<c)+(b<<c)
+  * 9fca550ae63 amd/compiler: optimize multiplication by one
+  * 1f8a8125e65 amd/compiler: move comparisons to their uses
+  * 5d51c40074a nir: merge opt_move_comparisons and move_load_ubo and
+    extend opt_sink
+  * aea96eb4afe amd/compiler: add position export scheduler
+  * 56d0d1f704f amd/compiler: implement transform feedback
+  * 3aa21e7c38a amd/compiler: split out divergent if code in visit_if()
+    into helpers
+  * d7c7cce7615 amd/compiler: initial vertex shader support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Jul 2019 15:51:42 +0200
+
 mesa (19.2.0~git1907291609.9bdc04c3811~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
