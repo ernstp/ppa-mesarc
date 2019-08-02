@@ -1,3 +1,13 @@
+mesa (19.2.0~git1908012232.fbaabd839e8~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * fbaabd839e8 amd/compiler: ensure loops with discards exit
+  * 613a8082bb6 amd/compiler: fix combined break+discard blocks
+  * 2d096ea935b amd/compiler: don't fix WQM operand to exec
+  * b2bb91dcccf amd/compiler: fix NOP after 3+ dword VMEM store
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 02 Aug 2019 03:54:36 +0200
+
 mesa (19.2.0~git1907292153.5c6077221dd~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
