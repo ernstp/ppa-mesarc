@@ -1,3 +1,19 @@
+corectrl (1.1.0~git1908012008.3b461a6~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 3b461a6 Merge branch 'refactor-datasources_data_check'
+  * 551da0a Check data source data on FanCurve provider
+  * d40273a Check data source data on FanFixed provider
+  * 820acea Check data source data on PMFixedFreq providers
+  * 1700d57 Refactor PMFVState
+  * 70110d8 Refactor PMFVVoltCurve
+  * 16832b6 Check data source data on PMPowerCap provider
+  * fa6fd7c Refactor PMFreqOd
+  * fc42fb7 Refactor PMPowerProfile
+  * 4d57b83 Check data sources data on sensor providers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 02 Aug 2019 03:58:14 +0200
+
 corectrl (1.1.0~git1907311052.833407b~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
