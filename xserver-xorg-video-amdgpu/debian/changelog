@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (19.0.1+git1907300943.98f172e~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 98f172e gitlab-ci: Use templates from wayland/ci-templates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Aug 2019 21:06:28 +0200
+
 xserver-xorg-video-amdgpu (19.0.1+git1907051243.87f41ac~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
