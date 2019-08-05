@@ -1,3 +1,48 @@
+mesa (19.2.0~git1908051748.70bb3c0becd~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 70bb3c0becd nir/lcssa,amd/compiler: always create lcssa phis for
+    loop-invariant bools
+  * 40415564cf7 amd/compiler: remove incorrect boolean-phi optimization
+  * 26b6cc3b31f amd/compiler: move nir_to_lcssa() later
+  * cad7efa469a amd/compiler: set loops to WQM if any nested IF needs
+    WQM
+  * 8f5ac45a1a4 Update issue templates
+  * 1043e92a395 fix compilation after rebase
+  * 62b82b237d9 nir: update to latest nir lower_io_to_vector MR
+  * e1c7c2ddcc3 nir,amd/compiler: update to latest
+    nir_lower_io_to_explicit MR
+  * 40ab0e84d95 nir: update to latest nir_opt_load_store_vectorize MR
+  * 0d6d2ff0c13 nir,amd/compiler: update to latest nir_lower_idiv MR
+  * 7c5a352f6da amd/compiler: trim number of maintained exec masks in
+    top-level loops to at most 2
+  * 994dc8eefdc amd/compiler: fix NOP insertion between M0 writes and
+    VINTRP
+  * 4f6d659efb3 amd/compiler: emit breaks for more discards in loops
+  * 5eda909f9c7 amd/compiler: ensure loops with discards exit
+  * f45a6504a27 amd/compiler: fix combined break+discard blocks
+  * 2f0a273c853 amd/compiler: don't fix WQM operand to exec
+  * 83c970b6c7f amd/compiler: fix NOP after 3+ dword VMEM store
+  * 748101ec11b amd/compiler: enable shader_ballot by default for ACO
+  * 47b9989dcb4 nir/algebraic: turn (a+#b)<<#c into (a<<c)+(b<<c)
+  * cc527e6f643 amd/compiler: optimize multiplication by one
+  * 8bea0e80557 amd/compiler: move comparisons to their uses
+  * f900fb0ab3e nir: merge opt_move_comparisons and move_load_ubo and
+    extend opt_sink
+  * 2400d6a766f amd/compiler: add position export scheduler
+  * 822fdbc7342 amd/compiler: implement transform feedback
+  * f7086c30f40 amd/compiler: split out divergent if code in visit_if()
+    into helpers
+  * 58710a9f7e3 amd/compiler: initial vertex shader support
+  * bf455af1c83 nir: add various VS intrinsics to divergence analysis
+  * 23c75af145e amd/compiler: use war_hint for VMEM stores on pre-GFX8
+  * c056bf47467 amd/compiler: don't add waitcnts when VMEM write data is
+    used or on GFX8+
+  * bccd79eee44 nir/algebraic: add a few masking-before-unpack
+    optimizations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Aug 2019 20:48:03 +0200
+
 mesa (19.2.0~git1908012232.fbaabd839e8~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
