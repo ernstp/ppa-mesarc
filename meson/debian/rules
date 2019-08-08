@@ -31,6 +31,8 @@ override_dh_install:
 	dh_install
 	mkdir -p $$(pwd)/debian/meson/usr/share/meson
 	cp debian/debcrossgen $$(pwd)/debian/meson/usr/share/meson
+	mkdir -p $$(pwd)/debian/meson/usr/share/zsh/vendor-completions
+	cp data/shell-completions/zsh/_meson $$(pwd)/debian/meson/usr/share/zsh/vendor-completions
 	rm -rf $$(pwd)/debian/meson/usr/lib/python*/dist-packages/mesonbuild/__pycache__
 	rm -rf $$(pwd)/debian/meson/usr/lib/python*/dist-packages/mesonbuild/*/__pycache__
 # For some reason Debian helpers install the files in the wrong directory,

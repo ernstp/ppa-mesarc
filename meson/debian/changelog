@@ -1,8 +1,42 @@
-meson (0.49.0-2ubuntu1) disco; urgency=medium
+meson (0.51.1-1) unstable; urgency=medium
 
-  * Skip test_generate_gir_with_address_sanitizer on ppc64le. LP: #1812223
+  * New upstream release.
+  * Fix debcrossgen on i386.
 
- -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 17 Jan 2019 15:36:43 +0000
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 09 Jul 2019 19:40:49 +0300
+
+meson (0.51.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Add build-dep to CMake needed by new tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 16 Jun 2019 22:04:22 +0300
+
+meson (0.50.1-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 17 Apr 2019 01:12:02 +0300
+
+meson (0.50.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Install zsh completion files. Closes: #920154.
+  * Add python2-dev to build deps as needed by new tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 10 Mar 2019 19:27:10 +0200
+
+meson (0.49.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 04 Feb 2019 21:20:09 +0200
+
+meson (0.49.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 23 Jan 2019 18:49:53 +0200
 
 meson (0.49.0-2) unstable; urgency=medium
 

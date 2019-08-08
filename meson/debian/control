@@ -1,9 +1,8 @@
 Source: meson
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Jussi Pakkanen <jpakkane@gmail.com>
+Maintainer: Jussi Pakkanen <jpakkane@gmail.com>
 Section: devel
 Priority: optional
-Standards-Version: 4.2.1
+Standards-Version: 4.3.0
 Homepage: https://mesonbuild.com
 X-Python3-Version: >= 3.5
 Build-Depends: debhelper (>= 11),
@@ -81,6 +80,8 @@ Build-Depends: debhelper (>= 11),
   yosys <!nocheck>,
   doxygen <!nocheck>,
   nasm <!nocheck>,
+  python2-dev <!nocheck>,
+  cmake <!nocheck>,
 
 Package: meson
 Architecture: all

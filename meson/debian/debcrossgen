@@ -70,9 +70,10 @@ def write_args_from_envvars(ofile):
     write_args_line(ofile, 'c_link_args', c_link_args)
     write_args_line(ofile, 'cpp_link_args', cpp_link_args)
 
-cpu_family_map = dict(mips64el="mips64")
+cpu_family_map = dict(mips64el="mips64",
+                      i686='x86')
 cpu_map = dict(armhf="arm7hlf",
-               mips64el="mips64")
+               mips64el="mips64",)
 
 def run(options):
     if options.arch is None:
@@ -119,4 +120,4 @@ def run(options):
 if __name__ == '__main__':
     options = parser.parse_args()
     run(options)
-    print('Remember to add the proper --libdir arg to Meson invocation.')
+    print('Remember to add the correct --libdir arg to Meson invocation.')
