@@ -1,0 +1,12 @@
+diff --git a/test cases/frameworks/17 mpi/meson.build b/test cases/frameworks/17 mpi/meson.build
+index 2102b817..cd250b58 100644
+--- a/test cases/frameworks/17 mpi/meson.build	
++++ b/test cases/frameworks/17 mpi/meson.build	
+@@ -1,5 +1,7 @@
+ project('mpi', 'c', 'cpp', default_options: ['b_asneeded=false'])
+ 
++error('MESON_SKIP_TEST openmpi binaries do not work when run in pbuilder for some reason.')
++
+ cc = meson.get_compiler('c')
+ 
+ if build_machine.system() == 'windows' and cc.get_id() != 'msvc'

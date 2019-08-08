@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+
+# Print all logging info to stdout so it
+# shows up in build logs.
+export MESON_PRINT_TEST_OUTPUT=1
+
+export QT_SELECT=qt5
+
+# We're not in 1963 anymore, Toto!
+export LC_ALL=C.UTF-8
+
+export PYBUILD_NAME=meson
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+override_dh_auto_test:
+	./run_tests.py
+endif
+
+override_dh_clean:
+	dh_clean
+	rm -f meson-test-run.txt meson-test-run.xml
+	rm -rf __pycache__
+	rm -rf mesonbuild/__pycache__
+	rm -rf mesonbuild/*/__pycache__
+
+override_dh_install:
+# Helper script to autogenerate cross files.
+	dh_install
+	mkdir -p $$(pwd)/debian/meson/usr/share/meson
+	cp debian/debcrossgen $$(pwd)/debian/meson/usr/share/meson
+	rm -rf $$(pwd)/debian/meson/usr/lib/python*/dist-packages/mesonbuild/__pycache__
+	rm -rf $$(pwd)/debian/meson/usr/lib/python*/dist-packages/mesonbuild/*/__pycache__
+# For some reason Debian helpers install the files in the wrong directory,
+# i.e. /usr/lib/python3.6 instead of /usr/lib/python3. I don't know why
+# or how to fix it, since we just call to the default tools with default
+# parameters. Fix manually.
+	mv $$(pwd)/debian/meson/usr/lib/python3.* $$(pwd)/debian/meson/usr/lib/python3

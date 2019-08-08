@@ -1,0 +1,8 @@
+Tests: basicmeson
+Depends: meson, ninja-build, g++
+
+Tests: clangmeson
+Depends: meson, ninja-build, clang
+
+Tests: exhaustive
+Depends: meson, @builddeps@

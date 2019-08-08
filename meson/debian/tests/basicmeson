@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -eu
+
+WORKDIR=$(mktemp -d)
+trap "rm -rf $WORKDIR" 0 INT QUIT ABRT PIPE TERM
+cd $WORKDIR
+cat <<EOF > meson.build
+project('debian package test', 'c')
+e = executable('prog', 'prog.c')
+test('debtest', e)
+EOF
+cat <<EOF > prog.c
+int main(int argc, char **argv) {
+  return 0;
+}
+EOF
+mkdir build
+CC=gcc meson build
+cd build
+ninja test
+# Test that conf tools and build regeneration works.
+meson introspect . --tests > /dev/null
+meson configure -Dbuildtype=debugoptimized
+ninja test

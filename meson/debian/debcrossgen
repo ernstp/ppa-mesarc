@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+
+# Copyright 2017 Jussi Pakkanen
+
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+#     http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import sys, os, subprocess
+
+import argparse
+
+parser = argparse.ArgumentParser(description='''Generate cross compilation definition file for the Meson build system.
+
+If you do not specify the --arch argument, Meson assumes that running
+plain 'dpkg-architecture' will return correct information for the
+host system.
+
+This script must be run in an environment where CPPFLAGS et al are set to the
+same values used in the actual compilation.
+'''
+)
+
+parser.add_argument('--arch', default=None,
+                    help='The dpkg architecture to generate.')
+parser.add_argument('--gccsuffix', default="",
+                    help='A particular gcc version suffix if necessary.')
+parser.add_argument('-o', required=True, dest='outfile',
+                    help='The output file.')
+
+def locate_path(program):
+    if os.path.isabs(program):
+        return program
+    for d in os.get_exec_path():
+        f = os.path.join(d, program)
+        if os.access(f, os.X_OK):
+            return f
+    raise ValueError("%s not found on $PATH" % program)
+
+def write_args_line(ofile, name, args):
+    if len(args) == 0:
+        return
+    ostr = name + ' = ['
+    ostr += ', '.join("'" + i + "'" for i in args)
+    ostr += ']\n'
+    ofile.write(ostr)
+
+def write_args_from_envvars(ofile):
+    import shlex
+    cppflags = shlex.split(os.environ.get('CPPFLAGS', ''))
+    cflags = shlex.split(os.environ.get('CFLAGS', ''))
+    cxxflags = shlex.split(os.environ.get('CXXFLAGS', ''))
+    ldflags = shlex.split(os.environ.get('LDFLAGS', ''))
+
+    c_args = cppflags + cflags
+    cpp_args = cppflags + cxxflags
+    c_link_args = cflags + ldflags
+    cpp_link_args = cxxflags + ldflags
+
+    write_args_line(ofile, 'c_args', c_args)
+    write_args_line(ofile, 'cpp_args', cpp_args)
+    write_args_line(ofile, 'c_link_args', c_link_args)
+    write_args_line(ofile, 'cpp_link_args', cpp_link_args)
+
+cpu_family_map = dict(mips64el="mips64")
+cpu_map = dict(armhf="arm7hlf",
+               mips64el="mips64")
+
+def run(options):
+    if options.arch is None:
+        cmd = ['dpkg-architecture']
+    else:
+        cmd = ['dpkg-architecture', '-a' + options.arch]
+    output = subprocess.check_output(cmd, universal_newlines=True)
+    data = {}
+    for line in output.split('\n'):
+        line = line.strip()
+        if line == '':
+            continue
+        k, v = line.split('=', 1)
+        data[k] = v
+    host_arch = data['DEB_HOST_GNU_TYPE']
+    host_os = data['DEB_HOST_ARCH_OS']
+    host_cpu_family = cpu_family_map.get(data['DEB_HOST_GNU_CPU'],
+                                         data['DEB_HOST_GNU_CPU'])
+    host_cpu = cpu_map.get(data['DEB_HOST_ARCH'],
+                           data['DEB_HOST_ARCH'])
+    host_endian = data['DEB_HOST_ARCH_ENDIAN']
+    with open(options.outfile, "w") as ofile:
+        ofile.write('[binaries]\n')
+        c = "%s-gcc%s" % (host_arch, options.gccsuffix)
+        ofile.write("c = '%s'\n" % locate_path(c))
+        cpp = "%s-g++%s" % (host_arch, options.gccsuffix)
+        ofile.write("cpp = '%s'\n" % locate_path(cpp))
+        ofile.write("ar = '%s'\n" % locate_path("%s-ar" % host_arch))
+        ofile.write("strip = '%s'\n" % locate_path("%s-strip" % host_arch))
+        ofile.write("objcopy = '%s'\n" % locate_path("%s-objcopy" % host_arch))
+        ofile.write("ld= '%s'\n" % locate_path("%s-ld" % host_arch))
+        try:
+            ofile.write("pkgconfig = '%s'\n" % locate_path("%s-pkg-config" % host_arch))
+        except ValueError:
+            pass # pkg-config is optional
+        ofile.write('\n[properties]\n')
+        write_args_from_envvars(ofile)
+        ofile.write('\n[host_machine]\n')
+        ofile.write("system = '%s'\n" % host_os)
+        ofile.write("cpu_family = '%s'\n" % host_cpu_family)
+        ofile.write("cpu = '%s'\n" % host_cpu)
+        ofile.write("endian = '%s'\n" % host_endian)
+
+if __name__ == '__main__':
+    options = parser.parse_args()
+    run(options)
+    print('Remember to add the proper --libdir arg to Meson invocation.')

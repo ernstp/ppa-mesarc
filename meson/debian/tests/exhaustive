@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Autopkgtests will raise an error if any
+# text is written to stderr by the test.
+#
+# This is stupid, because many test frameworks
+# such as Python's unittest, write status
+# information to stderr. The only thing we can
+# do is to forward it all to stdout, since
+# the test runner will return a non zero
+# exit code if any actual errors happened.
+MESON_EXE=/usr/bin/meson ./run_tests.py 2>&1

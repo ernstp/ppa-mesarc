@@ -1,0 +1,414 @@
+meson (0.49.0-2ubuntu1) disco; urgency=medium
+
+  * Skip test_generate_gir_with_address_sanitizer on ppc64le. LP: #1812223
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 17 Jan 2019 15:36:43 +0000
+
+meson (0.49.0-2) unstable; urgency=medium
+
+  * Debcrossgen CPU fix from Helmut Grohne. Closes: #919065.
+  * Add system compiler flags to cross files. Closes: #919117.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 13 Jan 2019 00:59:08 +0200
+
+meson (0.49.0-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #894774, #914543, #913263.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 09 Dec 2018 19:56:53 +0200
+
+meson (0.48.2-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #911879, #911697.
+  * Backport split-merge patch from trunk. Closes: #913320.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Fri, 15 Nov 2018 21:30:25 +0200
+
+meson (0.48.1-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #909851, #910443.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 17 Oct 2018 18:57:16 +0300
+
+meson (0.48.0-2) unstable; urgency=medium
+
+  * Add dependency to python3-pkg-resources temporarily. Closes: #909440.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 24 Sep 2018 18:51:11 +0300
+
+meson (0.48.0-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #907324.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 22 Sep 2018 23:13:11 +0300
+
+meson (0.47.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 25 Aug 2018 11:15:05 +0300
+
+meson (0.47.1-2) unstable; urgency=medium
+
+  * Fix debcrossgen install properly. Closes: #903279.
+  * Re-enable Valgrind tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Fri, 3 Aug 2018 22:56:19 +0300
+
+meson (0.47.1-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #903414.
+  * Install depfixer again, it got lost accidentally. Closes: #903279.
+  * Disable all Valgrind tests because of #903404.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 11 Jul 2018 00:05:14 +0300
+
+meson (0.47.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch to using standard Python install because trying to keep the
+    library private is just too damn hard and annoying.
+  * Updated Google test dependencies. Closes: #897174.
+  * Added build deps to test new functionality.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 02 Jul 2018 20:54:05 +0300
+
+meson (0.46.1-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #896876.
+  * Use an UTF-8 locale because ASCII breaks tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 16 May 2018 19:28:58 +0300
+
+meson (0.46.0-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #892515.
+  * Updated debcrossgen.
+  * Old command names now only print errors. Closes: #886882.
+  * Marked pytho3 dependency with :any as recommended by multiarch hinter.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 22 Apr 2018 19:42:22 +0300
+
+meson (0.45.1-2) unstable; urgency=medium
+
+  * Added cross fix to enable RISC-V bootstrap. Closes: #894505.
+  * Added patch to fix autopkgtests. Closes: #894594.
+  * Fixed Java detection logic and dependency. Closes: #894200.
+  * Fixed cross dependencies. Closes: #894199.
+  * Updated debcrossgen tool. Closes: #893502.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 02 Apr 2018 12:54:53 +0300
+
+meson (0.45.1-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #892956.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Thu, 22 Mar 2018 00:04:38 +0200
+
+meson (0.45.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Updated debhelper requirement.
+  * New build deps for FPGA tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 04 Mar 2018 20:27:57 +0200
+
+meson (0.44.1-1) unstable; urgency=medium
+
+  * New upstream version. Closes: #884627.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 21 Feb 2018 00:02:07 +0200
+
+meson (0.44.0-3) unstable; urgency=medium
+
+  * Forward autopkgtest stderr to stdout because the test executor
+    interprets any text in stderr as a test failure.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 23 Dec 2017 15:42:17 +0200
+
+meson (0.44.0-2) unstable; urgency=medium
+
+  * Add meson package as a dependency of all autopkgtests.
+  * Add build deps to enable a few optional tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 17 Dec 2017 13:49:31 +0200
+
+meson (0.44.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Do not run D library tests, because GDC has problems
+    with them. Closes: #879976.
+  * Fixed dependency declarations so a nocheck build
+    no longer requires Rust. Closes: #879704.
+  * Converted thorough autopkgtest to run the full test
+    suite including all dependency tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 10 Dec 2017 15:41:49 +0200
+
+meson (0.43.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Updated debcrossgen script. Closes: #875703.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 08 Oct 2017 22:36:43 +0300
+
+meson (0.42.1-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Marked the package multi-arch foreign
+  * Ship non-public helper script to generate cross files
+    from architecture info to aid in cross builds. Closes: #859177.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 12 Sep 2017 19:37:59 +0300
+
+meson (0.42.0-2) unstable; urgency=medium
+
+  * Fix autopkgtests to use the meson command rather than mesonconf,
+    mesonintrospect et al, because the latter write a warning to
+    stderr which causes autopkg to mark the test as failed.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Thu, 24 Aug 2017 01:08:48 +0300
+
+meson (0.42.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Disabled openmpi test because the generated binaries do not run
+    in pbuilder for an unknown reason.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 15 Aug 2017 00:45:25 +0300
+
+meson (0.41.2-2) unstable; urgency=medium
+
+  * Cherry picked asm tagging patch to fix Ubuntu CI breakage.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 25 Jul 2017 18:59:58 +0300
+
+meson (0.41.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 19 Jul 2017 12:41:18 +0300
+
+meson (0.41.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 19 Jun 2017 23:48:01 +0300
+
+meson (0.41.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Added build dep to sdl2 and llvm for new tests.
+  * Added a new, more exhaustive Debian test.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 12 Jun 2017 21:49:13 +0300
+
+meson (0.40.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Backport helper fix from Martin Pitt. Closes: #861055.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Fri, 28 Apr 2017 21:13:15 +0300
+
+meson (0.40.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 23 Apr 2017 02:01:34 +0300
+
+meson (0.39.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 15 Mar 2017 22:58:47 +0200
+
+meson (0.39.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Added build-dep to Valgrind which some tests use if available
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 05 Mar 2017 23:10:04 +0200
+
+meson (0.38.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 07 Feb 2017 22:03:30 +0200
+
+meson (0.38.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Versioned Ninja dependency. Closes: #850078.
+  * Install mesontest properly. Closes: #851601.
+  * Build-dep on arm cross compiler to run cross build tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 29 Jan 2017 21:17:38 +0200
+
+meson (0.37.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 20 Dec 2016 22:09:22 +0200
+
+meson (0.37.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Added build dep to libgtk-3-dev needed by new tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 18 Dec 2016 21:17:38 +0200
+
+meson (0.36.0-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #841846.
+  * Added build dep to itstool, which is needed by new tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 14 Nov 2016 20:12:41 +0200
+
+meson (0.35.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 17 Oct 2016 21:02:42 +0300
+
+meson (0.35.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 03 Oct 2016 22:53:31 +0300
+
+meson (0.34.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Added build dep to D compiler to run new tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 05 Sep 2016 22:33:07 +0300
+
+meson (0.33.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 30 Jul 2016 22:36:07 +0300
+
+meson (0.32.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Removed meson-gui package because upstream removed it.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 05 Jun 2016 20:51:37 +0300
+
+meson (0.31.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 13 Apr 2016 19:39:02 +0300
+
+meson (0.30.0-1) unstable; urgency=medium
+
+  * New upstream release. Closes: #815253.
+  * New build deps to test building of Python3 extension modules.
+  * Add Lintian override for build-depping on python-dev
+    even though the package is arch-all.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 12 Mar 2016 19:04:33 +0200
+
+meson (0.29.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Upstream moved to distutils so rewrote packaging.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 24 Jan 2016 18:57:59 +0200
+
+meson (0.28.0-2) unstable; urgency=medium
+
+  * Change Rust dependency so the package builds
+    on Debian and Ubuntu without changes.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 06 Jan 2016 15:23:56 +0200
+
+meson (0.28.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Only build-dep on Rust on platforms that provide it.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 29 Dec 2015 00:01:46 +0200
+
+meson (0.27.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Build-dep on rustc to run Rust tests.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 25 Nov 2015 19:58:44 +0200
+
+meson (0.26.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 12 Sep 2015 22:31:28 +0300
+
+meson (0.25.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 12 Jul 2015 20:52:27 +0300
+
+meson (0.24.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 23 May 2015 21:31:15 +0300
+
+meson (0.23.0-2) unstable; urgency=medium
+
+  * Reupload to unstable.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sun, 26 Apr 2015 13:43:52 +0300
+
+meson (0.23.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Tue, 31 Mar 2015 01:02:33 +0300
+
+meson (0.22.0-1) experimental; urgency=medium
+
+  * New upstream release
+  * Use QT_SELECT instead of build-depending on
+    qt5-default to fix Lintian error
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 19 Jan 2015 21:49:17 +0200
+
+meson (0.21.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Added autopkgtest for Clang
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Fri, 24 Oct 2014 05:01:08 +0300
+
+meson (0.20.0-1) unstable; urgency=medium
+
+  * New upstream version
+  * Added build-deps to Mono, Flex and Bison as
+    required by new unit tests
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Sat, 13 Sep 2014 00:46:56 +0300
+
+meson (0.19.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Meson now supports Fortran compilation,
+    so build-depend on gfortran to test that it's working.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 11 Aug 2014 00:24:16 +0300
+
+meson (0.18.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Made compilation and test output more verbose.
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Mon, 14 Jul 2014 18:26:28 +0300
+
+meson (0.17.0-1) unstable; urgency=medium
+
+  * Initial release. Closes: #712605, #712610
+
+ -- Jussi Pakkanen <jpakkane@gmail.com>  Wed, 04 Jun 2014 22:33:44 +0300
