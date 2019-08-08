@@ -7,7 +7,7 @@ function download() {
 
 	mkdir -p "$DOWNLOADS"
 	if [ ! -e "$DOWNLOADS/$name" ]; then
-		curl -f "$url" -o "$DOWNLOADS/$name"
+		curl -L -f "$url" -o "$DOWNLOADS/$name"
 	fi
 	cp "$DOWNLOADS/$name" "$name"
 }
@@ -23,8 +23,11 @@ PACKAGE_VERSION=$(echo $RELEASE_VERSION | tr -- - \~)
 
 download "${URL}/${PACKAGE_NAME}-${RELEASE_VERSION}.tar.$COMPR" \
 	"${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR"
-download "${URL}/${PACKAGE_NAME}-${RELEASE_VERSION}.tar.$COMPR.sig" \
-	"${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR.sig"
+if ! download "${URL}/${PACKAGE_NAME}-${RELEASE_VERSION}.tar.$COMPR.sig" \
+	"${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR.sig" ; then
+	download "${URL}/${PACKAGE_NAME}-${RELEASE_VERSION}.tar.$COMPR.asc" \
+		"${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR.sig"
+fi
 
 gpg --verify "${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR.sig" \
 	"${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR"
