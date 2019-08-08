@@ -1,3 +1,14 @@
+corectrl (1.1.0~git1908062023.66ad96b~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 66ad96b Only refresh graph series when the graph is visible
+  * d88c5f3 Refactor SysModelForm children changed handling
+  * b0fd442 Add WITH_DEBUG_INFO CMake option
+  * d41f519 Reduce compiler warnings
+  * 894051f Restore pre-init hardware state values
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Aug 2019 12:37:34 +0200
+
 corectrl (1.1.0~git1908012008.3b461a6~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
