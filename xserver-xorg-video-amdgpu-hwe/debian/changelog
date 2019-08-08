@@ -1,3 +1,16 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1908071811.e6fce59~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * e6fce59 present: Don't check pixmap pitch in check_flip with non-DC
+    >= 3.34
+  * 5bb2580 present: Don't check pixmap pitch in check_flip with current
+    DC
+  * ac66086 present: Also check pixmap pitch in check_flip with current
+    xserver
+  * 98f172e gitlab-ci: Use templates from wayland/ci-templates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Aug 2019 11:43:54 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1907051243.87f41ac~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
