@@ -1,3 +1,15 @@
+xserver-xorg-video-amdgpu (19.0.1+git1908071811.e6fce59~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * e6fce59 present: Don't check pixmap pitch in check_flip with non-DC
+    >= 3.34
+  * 5bb2580 present: Don't check pixmap pitch in check_flip with current
+    DC
+  * ac66086 present: Also check pixmap pitch in check_flip with current
+    xserver
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Aug 2019 11:43:22 +0200
+
 xserver-xorg-video-amdgpu (19.0.1+git1907300943.98f172e~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
