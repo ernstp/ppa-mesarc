@@ -1,3 +1,10 @@
+mesa (19.2.0~git1908071710.3b777a1dd7e~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 3b777a1dd7e amd/compiler: Fix waitcnt_entries for lgkm
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Aug 2019 14:21:46 +0200
+
 mesa (19.2.0~git1908051748.70bb3c0becd~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
