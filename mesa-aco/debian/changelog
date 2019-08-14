@@ -1,3 +1,52 @@
+mesa (19.2.0~git1908141454.73c5a984ab5~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 73c5a984ab5 amd/compiler: don't eliminate phis for EXEC if they are
+    necessary
+  * 32cd9487f45 Update issue templates
+  * e3bb1cc46bd amd/compiler: rework waitcnt insertion pass
+  * b9fe0048d33 amd/compiler: document VCCZ/SMEM hardware bug on SI/CI
+  * 21ce4e7a99f amd/compiler: further fixup after rebase
+  * b354a9c38d8 amd/compiler: add missing scc clobber
+  * 6eea4986a1d amd/compiler: improve MUBUF offset optimization with
+    literals
+  * a687537fe4e amd/compiler: implement
+    nir_intrinsic_{load|store}_scratch
+  * 567b942d05c nir: add nir_intrinsic_load_scratch to divergence
+    analysis
+  * 00a75a66f05 amd/compiler: fixup after rebase
+  * 75ebd8a03d3 amd/compiler: Use range based loops and algorithms for
+    Instruction::definitions
+  * c23767137a2 amd/compiler: Use range based loops for
+    Instruction::operations
+  * 8eee7a9c069 amd/compiler: Use aco::span for definitions and
+    operations of an instruction
+  * dc818201df7 amd/compiler: Introduce a span object
+  * d810a418510 amd/compiler: ensure loops complete when nested in
+    Unspecified branches
+  * 1b865e46517 amd/compiler: refactor uses_gpr()
+  * 90b8d884ea2 amd/compiler: Fix waitcnt_entries for lgkm
+  * b23b2c1f5c0 amd/compiler: remove various TODOs in isel
+  * 1ed0a761ce9 amd/compiler: remove constant offset optimization in
+    visit_load_ubo()
+  * 5229c587573 nir/load_store_vectorize: assume explicitly laid out
+    types
+  * 177d686e5cb amd/compiler: RA: don't check triviality of phis if
+    already done or the block is not sealed
+  * 0a5c4d91fbd amd/compiler: set loops to WQM if any nested IF needs
+    WQM
+  * 628020f7c9c amd/compiler: update README
+  * 16d46584382 nir/lcssa,amd/compiler: always create lcssa phis for
+    loop-invariant bools
+  * 69e886f30fc amd/compiler: remove incorrect boolean-phi optimization
+  * 375a6a8b01e amd/compiler: move nir_to_lcssa() later
+  * 930637aecd2 fix compilation after rebase
+  * f88511be3ab nir: update to latest nir lower_io_to_vector MR
+  * 433e61c899b nir: update to latest nir_opt_load_store_vectorize MR
+  * b8f8ebdfd09 nir,amd/compiler: update to latest nir_lower_idiv MR
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Aug 2019 22:20:01 +0200
+
 mesa (19.2.0~git1908071710.3b777a1dd7e~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
