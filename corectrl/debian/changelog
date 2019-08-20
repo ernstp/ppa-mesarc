@@ -1,3 +1,11 @@
+corectrl (1.1.0~git1908170959.20786e1~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 20786e1 Merge branch 'fr_translation' into 'master'
+  * a2793ea Add French translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Aug 2019 02:50:52 +0200
+
 corectrl (1.1.0~git1908062023.66ad96b~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
