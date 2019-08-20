@@ -1,3 +1,30 @@
+mesa (19.2.0~git1908192010.81fac59f8c0~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 81fac59f8c0 amd/compiler: fix scratch on compute
+  * 738b81e8d45 amd/compiler: misc _setup.cpp fixes regarding scratch
+  * 6fb87e024c9 amd/compiler: workaround LLVM disassembler erroring on
+    v_add_u32+clamp
+  * f6829fef242 amd/compiler: set const_element_size = 16 bytes for
+    swizzled scratch accesses
+  * 29058402777 amd/compiler: set scratch_size_per_wave
+  * 650031018b4 amd/compiler: Fix jump-threading of helper blocks after
+    break/continue
+  * 420bc51b5f4 amd/compiler: fix compilation with c++14
+  * a0a7fa7531b Revert "radv: Do not decompress on LAYOUT_GENERAL."
+  * 597ea285541 amd/compiler: Use an enum class for RegType
+  * 56db3b3eef9 amd/compiler: don't execute subgroup operations in WQM
+    if it is not required
+  * 9c26d227b81 nir/sink: handle uses outside the defining loop but
+    within another loop
+  * 30574bba376 amd/compiler: be more careful scheduling spill/reload
+    instructions
+  * 7d6ab5e165e amd/compiler: consider DPP/SDWA when applying literals
+  * aba8c9f0c7b temporary workarounds
+  * 54ece766654 amd/compiler: fix copy+paste errors in waitcnt pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Aug 2019 02:54:55 +0200
+
 mesa (19.2.0~git1908141454.73c5a984ab5~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
