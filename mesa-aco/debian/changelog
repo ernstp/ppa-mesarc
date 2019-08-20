@@ -1,3 +1,13 @@
+mesa (19.2.0~git1908201459.9b18c4e3df0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 9b18c4e3df0 amd/compiler: work around SGPR init bug for Iceland
+    family
+  * 62b2e2c3467 amd/compiler: update remat_use_count for some loop
+    header phis
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Aug 2019 18:00:50 +0200
+
 mesa (19.2.0~git1908192010.81fac59f8c0~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
