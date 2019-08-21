@@ -1,3 +1,52 @@
+mesa (19.2.0~rc1+git1908202318.c0b9399d9d2~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c0b9399d9d2 Update version to 19.2.0-rc1
+  * 71fb721ca5b lima/ppir: use ra_get_best_spill_node to select spill
+    node
+  * c1dc84e71d1 tgsi: Remove unused tgsi_check_soa_dependencies().
+  * 4ebe6b2e72e tgsi: Drop the SSE2 constants setup that's been dead
+    code since 2011.
+  * 98c58355d31 tgsi: drop a stale comment
+  * 553cd82d64c gitlab-ci: Enable the GLES2/3 CTS on softpipe.
+  * 6c904773fe3 mesa: reverse no_error on compressed_tex_sub_image for
+    TEX_MODE_CURRENT
+  * b2839193987 glx: Eliminate glx_config::{rgb,float,colorIndex}Mode
+  * 74ca87e4bce glx: Remove unused glx_config::pixmapMode
+  * 35fc7bdf0e6 glx: convert glx_config_create_list to one big calloc
+  * 97d58eabcc8 glx: convert a malloc+memset to calloc
+  * cabd09c9e70 glx: Fix parameter documentation of
+    glx_config_create_list
+  * 3835535537b anv: inline uniforms blocks don't count toward
+    descriptor set limits
+  * df86c5ffb35 nir: add divergence analysis pass.
+  * 7b070349314 nir/subgroups: Lower clustered reductions with
+    cluster_size >= subgroup_size into reductions
+  * 911a1dfad25 nir/lcssa: allow to create LCSSA phis for loop-invariant
+    booleans
+  * 9c40ad49d5a nir/lcssa: Skip loop invariant variables when converting
+    to LCSSA.
+  * 8a6cfaa15a5 nir: make nir_to_lcssa() a general NIR pass.
+  * 204846ad062 nir/lcssa: handle deref instructions properly
+  * 7c56a68c8bd tgsi_to_nir: only update TGSI properties of the current
+    shader stage
+  * 83a63a5b123 radv/gfx10: do not emit PA_SC_TILE_STEERING_OVERRIDE
+    twice
+  * 2ca8629fa9b radv: do not emit PKT3_CONTEXT_CONTROL with AMDGPU
+    3.6.0+
+  * 6a09405368a mesa/program: Take ARB_framebuffers_no_attachments into
+    account in wpos correction
+  * fe0e9db797e iris: Enable non coherent framebuffer fetch on broadwell
+  * 57ce422e20f iris: Free resource if failed to allocate surface state
+  * 02244bc5157 iris: Pass isl_surf to fill_surface_state
+  * 638a157e022 iris: Add infrastructure to support non coherent
+    framebuffer fetch
+  * 61c0637afb4 iris: Add helper functions to get tile offset
+  * 7e816991cc3 iris: Add helper function to get isl dim layout
+  * 58471e20d21 iris: Add render target read entry in binding table
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Aug 2019 17:10:25 +0200
+
 mesa (19.1.4+git1908071849.7fcb69a33c6~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
