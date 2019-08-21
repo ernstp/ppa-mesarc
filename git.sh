@@ -16,7 +16,7 @@ if [ ! -e "$PACKAGE_NAME/.git" ]; then
 	newclone=1
 fi
 
-cd "$PACKAGE_NAME"
+pushd "$PACKAGE_NAME"
 
 if [ -z "$newclone" ]; then
 	OLD_GIT_REV=$(git show -s --format=format:%h)
@@ -58,7 +58,7 @@ fi
 
 first=1
 for dist in $DISTROS ; do
-	DEBIAN_VERSION=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~mesarc${INC}
+	DEBIAN_VERSION=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~${PPA}${INC}
 	if [ "$first" -eq 1 ]; then
 		dch -c ../debian/changelog -D ${dist} -v ${DEBIAN_VERSION} "New snapshot:"
 		git log -n 30 --oneline "${OLD_GIT_REV}..${GIT_REV}" | while read change; do
@@ -75,3 +75,8 @@ for dist in $DISTROS ; do
 
 	debuild -S -d
 done
+
+popd
+dput ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
+
+rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz
