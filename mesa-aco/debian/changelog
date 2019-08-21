@@ -1,3 +1,10 @@
+mesa (19.2.0~git1908211454.a952333d50d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * a952333d50d amd/compiler: fix tg4 instruction temp regClass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Aug 2019 16:57:11 +0200
+
 mesa (19.2.0~git1908201459.9b18c4e3df0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
