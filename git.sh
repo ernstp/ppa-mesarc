@@ -38,6 +38,8 @@ else
 	echo "Error, couldn't find package version"
 	exit 1
 fi
+# Change -rc1 to ~rc1
+PACKAGE_VERSION=$(echo $PACKAGE_VERSION | tr -- -rc \~rc)
 
 # Is the version number in git incresed to the next version in advance or not?
 if [ -n "$PREBUMP" ]; then

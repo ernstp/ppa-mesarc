@@ -19,7 +19,8 @@ source settings.sh
 BASEDIR=$(basename "$PWD")
 PACKAGE_NAME=${PACKAGE_NAME:-$BASEDIR}
 DOWNLOADS="../downloads"
-PACKAGE_VERSION=$(echo $RELEASE_VERSION | tr -- - \~)
+# Change -rc1 to ~rc1
+PACKAGE_VERSION=$(echo $RELEASE_VERSION | tr -- -rc \~rc)
 
 download "${URL}/${PACKAGE_NAME}-${RELEASE_VERSION}.tar.$COMPR" \
 	"${PACKAGE_NAME}_${PACKAGE_VERSION}.orig.tar.$COMPR"
