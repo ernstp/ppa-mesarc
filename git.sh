@@ -34,6 +34,8 @@ elif [ -e CMakeLists.txt ]; then
 	PACKAGE_VERSION=$(grep PROJECT_VERSION CMakeLists.txt | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
 elif [ -e configure.ac ]; then
 	PACKAGE_VERSION=$(grep AC_INIT -A 1 configure.ac | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+elif [ -e meson.build ]; then
+	PACKAGE_VERSION=$(grep -E "^\s+version:" meson.build | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
 else
 	echo "Error, couldn't find package version"
 	exit 1
@@ -79,6 +81,8 @@ for dist in $DISTROS ; do
 done
 
 popd
-dput ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
+if [ -n "$PPA" ]; then
+	dput ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
+fi
 
 rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz
