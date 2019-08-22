@@ -1,3 +1,11 @@
+corectrl (1.1.0~git1908221848.928dc4b~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 928dc4b Fix missing character on profile menu icon
+  * 20adfb2 Move button's text icons definition to g_icon on Style.js
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Aug 2019 23:55:00 +0200
+
 corectrl (1.1.0~git1908170959.20786e1~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
