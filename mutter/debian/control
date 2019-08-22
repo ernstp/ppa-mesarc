@@ -19,18 +19,19 @@ Build-Depends: debhelper-compat (= 12),
                gnome-settings-daemon-common <!nocheck>,
                gnome-settings-daemon-dev,
                gobject-introspection (>= 1.41.3),
-               gsettings-desktop-schemas-dev (>= 3.31.0),
+               gsettings-desktop-schemas-dev (>= 3.33.0),
                gtk-doc-tools (>= 1.15),
                libcairo2-dev (>= 1.10.0),
                libcanberra-gtk3-dev,
                libdrm-dev (>= 2.4.83) [linux-any],
                libegl1-mesa-dev (>= 17) [linux-any],
+               libfribidi-dev (>= 1.0.0),
                libgbm-dev (>= 10.3) [linux-any],
                libgirepository1.0-dev (>= 0.9.12),
                libgl1-mesa-dev (>= 7.1~rc3-1~),
                libgles2-mesa-dev (>= 7.1~rc3-1~) | libgles2-dev,
-               libglib2.0-dev (>= 2.57.2),
-               libgnome-desktop-3-dev (>= 3.27.90),
+               libglib2.0-dev (>= 2.61.1),
+               libgnome-desktop-3-dev (>= 3.32),
                libgtk-3-dev (>= 3.19.8),
                libgudev-1.0-dev (>= 232) [linux-any],
                libice-dev,
@@ -45,6 +46,7 @@ Build-Depends: debhelper-compat (= 12),
                libsystemd-dev (>= 212) [linux-any],
                libwacom-dev (>= 0.13) [linux-any],
                libwayland-dev (>= 1.13.0) [linux-any],
+               libxau-dev,
                libx11-dev,
                libx11-xcb-dev,
                libxcb-randr0-dev,
@@ -64,7 +66,8 @@ Build-Depends: debhelper-compat (= 12),
                libxt-dev,
                meson (>= 0.46),
                pkg-config (>= 0.22),
-               wayland-protocols (>= 1.16) [linux-any],
+               quilt,
+               wayland-protocols (>= 1.18) [linux-any],
                xauth <!nocheck>,
                xkb-data,
                xserver-xorg-core [linux-any],
@@ -76,12 +79,12 @@ Standards-Version: 4.3.0
 XS-Debian-Vcs-Git: https://salsa.debian.org/gnome-team/mutter.git
 XS-Debian-Vcs-Browser: https://salsa.debian.org/gnome-team/mutter
 Vcs-Browser: https://git.launchpad.net/~ubuntu-desktop/ubuntu/+source/mutter
-Vcs-Git: https://git.launchpad.net/~ubuntu-desktop/ubuntu/+source/mutter -b ubuntu/disco
+Vcs-Git: https://git.launchpad.net/~ubuntu-desktop/ubuntu/+source/mutter
 
 Package: mutter
 Architecture: any
 Depends: gnome-settings-daemon-common,
-         gsettings-desktop-schemas (>= 3.31.0),
+         gsettings-desktop-schemas (>= 3.33.0),
          mutter-common (>= ${source:Version}),
          zenity,
          ${misc:Depends},
@@ -100,11 +103,11 @@ Description: lightweight GTK+ window manager
  .
  This package contains the core binaries.
 
-Package: gir1.2-mutter-4
+Package: gir1.2-mutter-5
 Section: introspection
 Architecture: any
 Multi-Arch: same
-Depends: libmutter-4-0 (= ${binary:Version}),
+Depends: libmutter-5-0 (= ${binary:Version}),
          ${gir:Depends},
          ${misc:Depends},
          ${shlibs:Depends}
@@ -120,12 +123,12 @@ Description: GObject introspection data for Mutter
  This package contains the GObject introspection data which may be
  used to generate dynamic bindings.
 
-Package: libmutter-4-0
+Package: libmutter-5-0
 Section: libs
 Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
-Depends: gsettings-desktop-schemas (>= 3.15.92),
+Depends: gsettings-desktop-schemas (>= 3.33.0),
          mutter-common (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
@@ -143,12 +146,12 @@ Description: window manager library from the Mutter window manager
  This package contains the window manager shared library, used by mutter
  itself, and gnome-shell.
 
-Package: libmutter-4-dev
+Package: libmutter-5-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: gir1.2-mutter-4 (= ${binary:Version}),
-         gsettings-desktop-schemas-dev,
+Depends: gir1.2-mutter-5 (= ${binary:Version}),
+         gsettings-desktop-schemas-dev (>= 3.33.0),
          libatk1.0-dev,
          libcairo2-dev,
          libdrm-dev,
@@ -160,7 +163,7 @@ Depends: gir1.2-mutter-4 (= ${binary:Version}),
          libgtk-3-dev,
          libinput-dev (>= 1.4),
          libjson-glib-dev,
-         libmutter-4-0 (= ${binary:Version}),
+         libmutter-5-0 (= ${binary:Version}),
          libpango1.0-dev,
          libudev-dev,
          libwayland-dev,

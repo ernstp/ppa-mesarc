@@ -1,8 +1,127 @@
-mutter (3.32.2+git20190711-2ubuntu1~19.04.1) disco; urgency=medium
+mutter (3.33.91+git1908241146.b10f82d30~e~gnome7) eoan; urgency=medium
 
-  * No-change backport from disco to eoan.
+  * New snapshot:
 
- -- Iain Lane <laney@debian.org>  Sun, 21 Jul 2019 20:51:33 +0100
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 26 Aug 2019 22:14:31 +0200
+
+mutter (3.33.91-1ubuntu1) eoan; urgency=medium
+
+  [ Iain Lane ]
+  * Merge with debian. Remaining changes:
+    + debian/control:
+      - Update VCS flags to point to launchpad
+      - Update maintainer to ubuntu
+    + debian/gbp.conf: update branch to point to ubuntu/master
+    + debian/patches/x11-Add-support-for-fractional-scaling-using-Randr.patch:
+      - X11: Add support for fractional scaling using Randr
+
+  [ Marco Trevisan (Treviño) ]
+  * debian/patches: Refresh. Compositor is now a GObject, so we can use
+    smarter connection
+
+ -- Iain Lane <iain.lane@canonical.com>  Fri, 23 Aug 2019 21:02:03 +0100
+
+mutter (3.33.91-1) experimental; urgency=medium
+
+  [ Dmitry Shachnev ]
+  * Update dh_girepository argument from mutter-4 to mutter-5
+
+  [ Iain Lane ]
+  * New upstream release
+    + Fix primary selection copy and paste between X11 and wayland
+    + Improve monitor hotplug support
+    + Remove a source of frame skips
+    + Fix windows being lowered after unmaximizing with double click
+    + Remove Clutter API for global grabs
+    + Improve processing of incompressible events
+    + Add xdg-output v3 support
+  * control: Bump BDs per upstream
+  * debian/libmutter-5-0.symbols: Update for new/dropped symbols.
+    The ABI of libmutter-5-0 is *not* considered stable until the final
+    release.
+
+ -- Iain Lane <laney@debian.org>  Fri, 23 Aug 2019 15:15:50 +0100
+
+mutter (3.33.90-2) experimental; urgency=medium
+
+  [ Marco Trevisan (Treviño) ]
+  * debian/rules: Use more verbose logging, printing failure output
+
+  [ Iain Lane ]
+  * tests-Tag-closed-transient-no-input-tests-as-flaky.patch, rules: Tag some
+    tests as 'flaky' and run them non-fatally.
+  * rules: Add mips64el to mips arches to not run tests on
+
+ -- Iain Lane <laney@debian.org>  Wed, 14 Aug 2019 16:26:24 +0100
+
+mutter (3.33.90-1) experimental; urgency=medium
+
+  [ Marco Trevisan (Treviño) ]
+  * New upstream release
+    + Avoid repainting covered areas
+    + Start Xwayland on demand
+    + Expose layout manager properties to transitions
+  * debian/patches: Refresh
+
+  [ Simon McVittie ]
+  * d/libmutter-5-0.bug-control: Include GL drivers in bug reports
+
+ -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Tue, 13 Aug 2019 09:58:27 +0100
+
+mutter (3.33.4-1) experimental; urgency=medium
+
+  * New upstream release
+    + Add API to reorder workspaces
+    + Add a Sysprof-based profiler
+    + Add initial KMS transactional support
+    + Add xdg-output v2 support
+    + Consolidate frame throttling
+    + Defer actor allocation till shown
+    + Discard page flip retries on hotplug
+    + Don't emit ::size-changed when only position changed
+    + Don't use grab modifiers when shortcuts are inhibited
+    + Expose workspace layout properties
+    + Fix background corruption on Nvidia after resuming from suspend (LP:
+      #1809407)
+    + Fix black shadows when using fractional scaling
+    + Fix modifier-drag on wayland subsurfaces
+    + Fix running X11 applications with sudo under wayland
+    + Fix setting blank cursor under wayland
+    + Fix stuttering due to unchanged power save mode notifications
+    + Fix text selection color rendering
+    + Handle returning from fullscreen/maximization better
+    + Honor startup sequence workspace on wayland
+    + Implement locate-pointer accessibility feature
+    + Implement mouse accessibility
+    + Implement toggle-keys notification
+    + Improve finding new focus window when the old one is closed
+    + Improve screencast support on multi-monitor systems
+    + Make picking a new focus window more reliable
+    + Only emit 'grab-op-end` signal after dropping grabs
+    + Only grab the locate-pointer key when necessary
+    + Pixel-align OpenGL cursors
+    + Prepare for running Xwayland on demand
+    + Relax "xwayland-allow-grabs" setting
+    + Restore DRM format fallbacks
+    + Try to use primary GPU for copy instead of glReadPixels
+    + Unset pointer focus when the cursor is hidden
+  * debian/control: Update dependencies per meson.build
+  * debian/rules: Disable profiler.
+    We need to split sysprof into a library before we can enable this, so
+    that all users don't get headers / the profiler application installed
+  * Drop patches applied upstream
+    - window-x11-Focus-a-window-in-the-active-workspace-as-take.patch
+    - metatest-Dispatch-the-destruction-instead-of-sleeping-aft.patch
+    - debian/Revert-meson-Bump-meson-requirement-to-0.50.0.patch
+  * cogl-tests-Only-install-run-tests.sh-when-building-instal.patch:
+    Cherry-pick to fix building without installed tests
+  * build-Bump-API-version-automatically-each-development-cyc.patch:
+    Cherry-pick - bump ABI
+  * Refresh patches
+  * Bump to libmutter-5 and update symbols
+  * BD on a gnome-desktop that provides libgnome-desktop-3-18
+
+ -- Iain Lane <laney@debian.org>  Tue, 30 Jul 2019 18:16:52 +0100
 
 mutter (3.32.2+git20190711-2ubuntu1) eoan; urgency=medium
 
@@ -49,12 +168,6 @@ mutter (3.32.2+git20190711-1) experimental; urgency=medium
     - Revert dependency on meson 0.50.0
 
  -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Fri, 12 Jul 2019 14:11:53 +0100
-
-mutter (3.32.2+git20190626-1ubuntu1~19.04.1) disco; urgency=medium
-
-  * No-change backport from eoan to disco for SRU.
-
- -- Iain Lane <iain.lane@canonical.com>  Thu, 27 Jun 2019 16:38:59 +0100
 
 mutter (3.32.2+git20190626-1ubuntu1) eoan; urgency=medium
 
@@ -108,13 +221,6 @@ mutter (3.32.2-1) experimental; urgency=medium
     - Refreshed
 
  -- Marco Trevisan (Treviño) <marco@ubuntu.com>  Tue, 21 May 2019 12:31:38 +0100
-
-mutter (3.32.1-2ubuntu1~19.04.1) disco; urgency=medium
-
-  * Backport from eoan to disco
-  * Update VCS metadata
-
- -- Iain Lane <iain.lane@canonical.com>  Wed, 01 May 2019 11:32:50 +0100
 
 mutter (3.32.1-2ubuntu1) eoan; urgency=medium
 
