@@ -1,3 +1,50 @@
+mesa (19.3.0~git1908221134.fc0fdb637b4~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * fc0fdb637b4 amd/compiler: only handle SCC for pseudo instructions
+    which write to SGPR
+  * b928c8306d3 amd/compiler: fix Instruction class of some
+    p_create_vector pseudo instructions
+  * 2f8ffc7b4b2 amd/compiler: fix RegClass of reduction operations
+  * 1797f68263d amd/compiler: Fix boolean quad swaps
+  * bfeeb9ff56f amd/compiler: fix tg4 instruction temp regClass
+  * 4c70c31074a amd/compiler: fix lcssa & divergence function calls
+    after rebase
+  * 0f33ed0e3ca amd/compiler: work around SGPR init bug for Iceland
+    family
+  * 427291fb223 amd/compiler: update remat_use_count for some loop
+    header phis
+  * e4f2574e919 amd/compiler: fix scratch on compute
+  * afa5fc5d9ce amd/compiler: misc _setup.cpp fixes regarding scratch
+  * b67b5d96a1c amd/compiler: remove many undef checks
+  * 97112598d80 amd/compiler: get rid of most undefs
+  * a5a3e39eea1 amd/compiler: use a constant for v_interp_mov_f32
+  * 48821e67675 radv: remove dead shared variables
+  * 6c5f250637c amd/compiler: workaround LLVM disassembler erroring on
+    v_add_u32+clamp
+  * 2f70dffd6b2 amd/compiler: set const_element_size = 16 bytes for
+    swizzled scratch accesses
+  * 79a09291a43 amd/compiler: set scratch_size_per_wave
+  * 699174c1ad8 amd/compiler: Fix jump-threading of helper blocks after
+    break/continue
+  * d1b14bffd57 amd/compiler: clean up the type size stuff in _setup.cpp
+  * 9e324dd9941 amd/compiler: fix compilation with c++14
+  * 025db3b4e0f amd/compiler: Use an enum class for RegType
+  * 2b47f20a914 amd/compiler: don't execute subgroup operations in WQM
+    if it is not required
+  * c7ecb41675a nir/sink: handle uses outside the defining loop but
+    within another loop
+  * 2f17b4e7252 amd/compiler: make Definition more compact
+  * 1f2cedaa883 amd/compiler: make Operand more compact
+  * 2ab3e850280 amd/compiler: make Temp more compact
+  * 748fad9d652 amd/compiler: use s_mul_hi_u32/s_mul_hi_i32
+  * 545b398ce28 amd/compiler: be more careful scheduling spill/reload
+    instructions
+  * 78ee46bea4d amd/compiler: consider DPP/SDWA when applying literals
+  * 13eb3cc19f7 amd/compiler: fix copy+paste errors in waitcnt pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 24 Aug 2019 18:48:41 +0200
+
 mesa (19.2.0~git1908211454.a952333d50d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
