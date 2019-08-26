@@ -1,3 +1,10 @@
+mesa (19.3.0~git1908251522.db73bde35cc~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * db73bde35cc Update issue templates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 26 Aug 2019 22:54:31 +0200
+
 mesa (19.3.0~git1908221134.fc0fdb637b4~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
