@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 set -o pipefail
 
@@ -12,6 +12,7 @@ INC=${INC:-0}
 GITBRANCH=${GITBRANCH:-master}
 
 if [ ! -e "$PACKAGE_NAME/.git" ]; then
+	echo Cloning $GIT
 	git clone --separate-git-dir=git "$GIT" "$PACKAGE_NAME" -b "$GITBRANCH"
 	newclone=1
 fi
@@ -20,9 +21,10 @@ pushd "$PACKAGE_NAME"
 
 if [ -z "$newclone" ]; then
 	OLD_GIT_REV=$(git show -s --format=format:%h)
+	echo Previous rev: $OLD_GIT_REV
 fi
 
-git clean -xdf
+git clean -xdfq
 git fetch
 git reset --hard origin/"$GITBRANCH"
 
@@ -42,6 +44,7 @@ else
 fi
 # Change -rc1 to ~rc1
 PACKAGE_VERSION=$(echo $PACKAGE_VERSION | tr -- -rc \~rc)
+echo Current version: $PACKAGE_VERSION
 
 # Is the version number in git incresed to the next version in advance or not?
 if [ -n "$PREBUMP" ]; then
@@ -59,6 +62,7 @@ elif [ "x$GIT_REV" = "x$OLD_GIT_REV" ]; then
 	echo "Nothing new"
 	exit 0
 fi
+echo New rev: $GIT_REV
 
 first=1
 for dist in $DISTROS ; do
@@ -83,6 +87,6 @@ done
 popd
 if [ -n "$PPA" ]; then
 	dput ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
+	rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz
 fi
 
-rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz
