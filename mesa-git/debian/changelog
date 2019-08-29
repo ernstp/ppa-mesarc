@@ -1,3 +1,36 @@
+mesa (19.2.0~rc1+git1908271610.25de4596442~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 25de4596442 radeonsi: consolidate determining VGPR_COMP_CNT for API
+    VS
+  * 5d7754017cd radeonsi/gfx10: set PA_CL_VS_OUT_CNTL with
+    CONTEXT_REG_RMW to fix edge flags
+  * d23bf14d44e radeonsi/gfx10: remove incorrect ngg/pos_writes_edgeflag
+    variables
+  * 514eb1587ed radeonsi: add PKT3_CONTEXT_REG_RMW
+  * a935da7cef0 winsys/amdgpu+radeon: process AMD_DEBUG in addition to
+    R600_DEBUG
+  * b9330a6189c radeonsi/gfx10: add AMD_DEBUG=nongg
+  * 0207c318e0d radeonsi/gfx10: finish up Navi14, add PCI ID
+  * e09d4696221 radeonsi/gfx10: always use the legacy pipeline for
+    streamout
+  * f208b04dba7 radeonsi/gfx10: don't initialize
+    VGT_INSTANCE_STEP_RATE_0
+  * c0716446a46 radeonsi/gfx10: fix InstanceID for legacy VS+GS
+  * 4d3097f36ae radeonsi/gfx10: add as_ngg variant for VS as ES to
+    select Wave32/64
+  * a3a266807ee radeonsi/gfx10: create the GS copy shader if using
+    legacy streamout
+  * beea2dee8a4 radeonsi/gfx10: fix the PRIMITIVES_GENERATED query if
+    using legacy streamout
+  * 78c603ebf56 radeonsi/gfx10: fix tessellation for the legacy pipeline
+  * 3dec21a8aa3 radeonsi: move some global shader cache flags to per-
+    binary flags
+  * 6e07ac33435 radeonsi/gfx10: fix the legacy pipeline by storing
+    as_ngg in the shader cache
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Aug 2019 06:00:06 +0200
+
 mesa (19.2.0~rc1+git1908202318.c0b9399d9d2~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
