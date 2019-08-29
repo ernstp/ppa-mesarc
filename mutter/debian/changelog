@@ -1,3 +1,36 @@
+mutter (3.33.91+git1908271800.5004b7e6d~e~gnome7) eoan; urgency=medium
+
+  * New snapshot:
+  * 5004b7e6d Geometric (OpenGL-less) picking
+  * beb3a68c1 clutter-types: Add ClutterPoint polygon testing API
+  * a3c97ee53 surface-actor-wayland: Handle stex being disposed
+  * 77229f99b wayland: Implement subsurface.place_below() for parents
+  * a51437ee2 clutter/input-pointer-a11y: Include success boolean in
+    stop signals
+  * 78232fa3e core: Check X11 display availability before use in
+    MetaStackTracker
+  * 433e1b388 core: Move Stack to StackTracker synchronization back to
+    stack.c
+  * 9b7d91853 surface-actor: Unref shaped texture on dispose
+  * 4c59eb091 Update Catalan translation
+  * 5cfea4fee wayland/dnd-surface: Apply surface offset
+  * 7275cf60b wayland/feedback-actor: Use float for position and anchor
+  * acbefa526 wayland: pointer-confinement: Listen to "geometry-changed"
+    on the surface, not the actor
+  * 2b64861ee Update Galician translation
+  * ea90b803f Update Hungarian translation
+  * 56e8aab28 Updated Slovenian translation
+  * 1b58341e5 Update Latvian translation
+  * 634c31d7c backends: Don’t translate GLib properties
+  * b8dcd5f84 clutter/main: Ignore synthetic events for accessibility
+  * 14e02635f clutter/input-pointer-a11y: Trigger dwell detection in a
+    timeout
+  * 9b3b5badf clutter/input-pointer-a11y: Fix dwell timeout start after
+    moving pointer
+  * 47c155828 clutter/input-pointer-a11y: Remove unneeded character
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Aug 2019 06:02:17 +0200
+
 mutter (3.33.91+git1908241146.b10f82d30~e~gnome7) eoan; urgency=medium
 
   * New snapshot:
