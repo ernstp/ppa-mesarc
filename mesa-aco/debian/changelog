@@ -1,3 +1,49 @@
+mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * f2bed9b344c Update issue templates
+  * 7e5756a4a67 temporary workarounds
+  * c0be725e28b radv: finish removing RADV_PERFTEST=llvmvs
+  * 91dd2390693 amd/compiler: fix compilation with release builds
+  * 984d9736997 amd/compiler,radv: prepare for merged stages
+  * 6cebde38c08 amd/compiler: switch to more detailed stage enum
+  * 9ef7b244eb2 amd/compiler: combine reg_class and allocated
+  * dea903fad69 amd/compiler: don't print disasm twice
+  * d622dfd1450 amd/compiler: spare two VGPRs when scheduling for less
+    live-range splits
+  * 6b16591a527 amd/compiler: remove Export_instruction::waitcnt_ignore
+  * b96db540d18 amd/compiler: store block index in SOPP instructions
+  * c8c0e48fe9a amd/compiler: don't emit pointless discard early exits
+  * 85eb76c8fac amd/compiler: add missing regclass check
+  * 95a683b52a3 amd/compiler: have discards jump to a block instead of
+    over instructions
+  * 4cc14c32e82 radv: actually disable ACO on unsupported GPUs
+  * 9a5c93826a0 amd/compiler: misc print_ir cleanups, fixes and
+    additions
+  * 48eedbf5ff2 amd/compiler: use s_bfm_b32 to load some constants
+  * d9a9273b0c7 amd/compiler: use v_bfrev_b32/s_brev_b32 to load some
+    constants
+  * 82e6585966c amd/compiler: fix constant propagation from s_movk_i32
+  * 9f020a642d3 amd/compiler: use Builder more
+  * bc888c30b6d radv: initialize LLVM for ACO if disassembly is needed
+  * 5a04765b2e7 radv: move decision whether to use ACO or LLVM to
+    radv_create_shaders()
+  * 3854c776713 amd/compiler: fix
+    nir_intrinsic_image_deref_atomic_{min|max} after rebase
+  * 66da8ca98ce amd/compiler: only handle SCC for pseudo instructions
+    which write to SGPR
+  * aa804e650b6 amd/compiler: fix Instruction class of some
+    p_create_vector pseudo instructions
+  * 771849020b5 amd/compiler: fix RegClass of reduction operations
+  * 60bcbcbe6a8 amd/compiler: Fix boolean quad swaps
+  * 0062f4da958 amd/compiler: fix tg4 instruction temp regClass
+  * 30aab7e49fc amd/compiler: fix lcssa & divergence function calls
+    after rebase
+  * a1d3204b1f6 amd/compiler: work around SGPR init bug for Iceland
+    family
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 31 Aug 2019 13:14:36 +0200
+
 mesa (19.3.0~git1908251522.db73bde35cc~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
