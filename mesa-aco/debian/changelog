@@ -1,6 +1,12 @@
 mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 05 Sep 2019 05:11:52 +0200
+
+mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
   * f2bed9b344c Update issue templates
   * 7e5756a4a67 temporary workarounds
   * c0be725e28b radv: finish removing RADV_PERFTEST=llvmvs
