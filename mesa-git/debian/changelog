@@ -1,3 +1,53 @@
+mesa (19.2.0~rc2+git1909041422.7f9b49218fe~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 7f9b49218fe bump version to 19.2-rc2
+  * efa4aee99d9 glsl: replace 'x + (-x)' with constant 0
+  * ec74c76a1a5 Revert "radeonsi: don't emit PKT3_CONTEXT_CONTROL on
+    amdgpu"
+  * 6934bc4f080 nir/range-analysis: Handle constants in nir_op_mov just
+    like nir_op_bcsel
+  * 6aa7a103709 nir/range-analysis: Fix incorrect fadd range result for
+    (ne_zero, ne_zero)
+  * 97e44d68176 nir/range-analysis: Adjust result range of
+    multiplication to account for flush-to-zero
+  * a8525d77512 nir/range-analysis: Adjust result range of exp2 to
+    account for flush-to-zero
+  * 2971f079e1c nir/algebraic: Mark some value range analysis-based
+    optimizations imprecise
+  * da03ddf677a iris: Fix partial fast clear checks to account for
+    miplevel.
+  * 753ea83477f intel/compiler: Request bitfield_reverse lowering on pre-
+    Gen7 hardware
+  * 91fa24a6869 nir/algrbraic: Don't optimize open-coded bitfield
+    reverse when lowering is enabled
+  * c96de002b77 mesa: Fix _mesa_float_to_unorm() on 32-bit systems.
+  * 07ac4269a51 util: Add a _mesa_i64roundevenf() helper.
+  * c2aad5dc4d2 radeonsi: fix scratch buffer WAVESIZE setting leading to
+    corruption
+  * 952fd550156 radeonsi: unbind blend/DSA/rasterizer state correctly in
+    delete functions
+  * 9433241cc9b gallivm: fix atomic compare-and-swap
+  * 6e07e58ef64 intel/fs: grab fail_msg from v32 instead of v16 when v32-
+    >run_cs fails
+  * 7160c70f0fc isl: Don't set UnormPathInColorPipe for integer
+    surfaces.
+  * b871874de73 isl: Drop UnormPathInColorPipe for buffer surfaces.
+  * 80514527e51 radv: fix getting the index type size for uint8_t
+  * 7d8eee2bdb1 virgl: fix format conversion for recent gallium changes.
+  * 6ea07af9c1c radv: Change memory type order for GPUs without
+    dedicated VRAM
+  * 1ec895b4a79 anv: Only re-emit non-dynamic state that has changed.
+  * 7ff682a12ca util: fix compilation on macos
+  * 9fff4192bc8 radv: additional query fixes
+  * 5c1362581ad iris: Fix large timeout handling in rel2abs()
+  * 649040ed8de radv/gfx10: do not use NGG with NAVI14
+  * 7200ed13997 radv/gfx10: don't initialize VGT_INSTANCE_STEP_RATE_0
+  * 966a2bdc998 egl: reset blob cache set/get functions on terminate
+  * dff3ab5c040 iris: Avoid unnecessary resolves on transfer maps
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 05 Sep 2019 05:02:39 +0200
+
 mesa (19.2.0~rc1+git1908271610.25de4596442~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
