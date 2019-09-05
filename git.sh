@@ -71,6 +71,7 @@ for dist in $DISTROS ; do
 		dch -c ../debian/changelog -D ${dist} -v ${DEBIAN_VERSION} "New snapshot:"
 		git log -n 30 --oneline "${OLD_GIT_REV}..${GIT_REV}" | while read change; do
 			dch -c ../debian/changelog -a "$change"
+			echo "$change"
 		done
 		(cd .. && git add debian/changelog && git commit -m "$BASEDIR: $DEBIAN_VERSION")
 		first=0
