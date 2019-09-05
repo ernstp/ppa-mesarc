@@ -1,8 +1,9 @@
-mutter (3.33.91+git1908271800.5004b7e6d~e~gnome8) UNRELEASED; urgency=medium
+mutter (3.33.92+git1909042049.fdbac25e0~e~gnome0) eoan; urgency=medium
 
   * Switch to master branch
+  * New snapshot:
 
- -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 05 Sep 2019 06:25:31 +0200
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 05 Sep 2019 06:26:43 +0200
 
 mutter (3.33.91+git1908271800.5004b7e6d~e~gnome7) eoan; urgency=medium
 
