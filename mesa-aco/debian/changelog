@@ -1,3 +1,9 @@
+mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 05 Sep 2019 05:12:59 +0200
+
 mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
