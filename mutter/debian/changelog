@@ -1,3 +1,26 @@
+mutter (3.34.0+git1909092009.8cdcf529e~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 8cdcf529e Bump version to 3.34.0
+  * 280167f21 Update Japanese translation
+  * a72f3fdab Update Japanese translation
+  * dd6227e3b Update Turkish translation
+  * 1271ce1ca Update Turkish translation
+  * 998114791 Update Italian translation
+  * 8a73324a0 Update French translation
+  * 9065edfc9 Update German translation (Launchpad bug 1786977)
+  * 5111e3394 monitor-manager/kms: Get hotplug events from MetaKms
+  * 4cf828323 kms/impl-device: Add and remove connectors on hot plug
+  * 35776c5d2 kms: Add assert to check that the main thread is blocked
+    on impl task
+  * 2f27b8d5f window-actor: Handle changing surface actor on window
+    reparenting
+  * be4131b3c wayland/xdg-output: Fix xdg-output v3 support
+  * 854feafa8 Update Korean translation
+  * f423736a7 Update Brazilian Portuguese translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Sep 2019 03:05:06 +0200
+
 mutter (3.33.92+git1909042049.fdbac25e0~e~gnome0) eoan; urgency=medium
 
   * Switch to master branch
