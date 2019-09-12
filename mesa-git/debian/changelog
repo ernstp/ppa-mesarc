@@ -1,8 +1,47 @@
-mesa (19.2.0~rc2+git1909041422.7f9b49218fe~b~mesarc2) UNRELEASED; urgency=medium
+mesa (19.2.0~rc3+git1909110905.3771534b2fe~e~mesarc2) eoan; urgency=medium
 
   * Change to llvm-9
+  * New snapshot:
+  * 3771534b2fe Bump version for rc3
+  * 481d82b65b2 radeonsi/gfx10: fix wave occupancy computations
+  * 732950bf360 radeonsi/gfx10: don't call gfx10_destroy_query with
+    compute-only contexts
+  * 637e02c1b19 virgl: Fix pipe_resource leaks under multi-sample.
+  * e4bb2ceb789 st/nine: Properly initialize GLSL types for NIR shaders.
+  * d858388bfc3 Revert "ac/nir: Lower large indirect variables to
+    scratch"
+  * 7635b74acf2 nir/dead_cf: Repair SSA if the pass makes progress
+  * 2012c4a75cb nir/repair_ssa: Insert deref casts when needed
+  * 3f56fa8fe9a nir/repair_ssa: Repair dominance for unreachable blocks
+  * 2c6e34ac935 nir: Add a block_is_unreachable helper
+  * 23bc3a401d3 nir: Don't infinitely recurse in
+    lower_ssa_defs_to_regs_block
+  * 8889cc12412 nir: Handle complex derefs in nir_split_array_vars
+  * 89776bb48c3 drirc: override minImageCount=2 for gfxbench
+  * 55a10da8185 radv: add support for vk_x11_override_min_image_count
+  * c9b1f07e55e amd: move adaptive sync to performance section, as it is
+    defined in xmlpool
+  * 9d22b0dc90f anv: add support for vk_x11_override_min_image_count
+  * cb548d566de wsi: add minImageCount override
+  * 172cff63576 anv: add support for driconf
+  * c1114994f3c anv: Bump maxComputeWorkgroupSize
+  * 1a99cfef285 nir/lower_explicit_io: Handle 1 bit loads and stores
+  * f42a4300aae freedreno/a2xx: ir2: fix lowering of instructions after
+    float lowering
+  * 0e6ccd180cd intel/dri: finish proper glthread
+  * 5e72987777a broadcom/v3d: Allow importing linear BOs with arbitrary
+    offset/stride.
+  * 95145376d18 radv: Call nir_propagate_invariant()
+  * 3ef013f0e98 nir: do not assume that the result of fexp2(a) is always
+    an integral
+  * b84cbdfd4da nir: Add is_not_negative helper function
+  * f180b04d65b glx: Fix SEGV due to dereferencing a NULL ptr from XCB-
+    GLX.
+  * 45b22fb873c iris: Report correct number of planes for planar images
+  * ffa1f33ec0f nir: fix memleak in error path
+  * 0bbf6eab521 freedreno/drm-shim: fix mem leak
 
- -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Sep 2019 19:07:10 +0200
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Sep 2019 19:09:05 +0200
 
 mesa (19.2.0~rc2+git1909041422.7f9b49218fe~b~mesarc1) bionic; urgency=medium
 
