@@ -1,3 +1,25 @@
+mutter (3.34.0+git1909161808.0e69fe078~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 0e69fe078 idle-monitor: Reset timeout before firing watch
+  * 26b08d87a idle-monitor: Remove redundant type cast
+  * 321ab3b36 idle-monitor: Make helper function static
+  * 4d0869e20 kms-device: Free path when finalizing
+  * d13cea6cc kms-device: Handle impl device creation failure
+  * 6922f0e16 x11: Minor refactor of input focus handling code
+  * 31df06d94 x11: Use the currently focused X window for
+    _NET_ACTIVE_WINDOW
+  * ecec9a7ea cogl/egl: Just notify about failure to create high
+    priority context
+  * ab7af2d0c clutter/actor: Remove unused private function
+  * f92e0bec0 clutter/actor: Fix a wrong comment
+  * 7a22f6fd3 Fix a few tracing typos
+  * 850ef5187 core: Split x11-display initialization in 2 signals
+  * ef2e04a61 plugins/default: Get default keymap from localed
+  * e16b75a0b Update Italian translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 Sep 2019 22:08:00 +0200
+
 mutter (3.34.0+git1909092009.8cdcf529e~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
