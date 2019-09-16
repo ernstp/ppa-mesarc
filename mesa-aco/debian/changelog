@@ -1,8 +1,46 @@
-mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco2) UNRELEASED; urgency=medium
+mesa (19.3.0~git1909161937.42225d73ef4~b~mesaaco2) bionic; urgency=medium
 
   * Change to llvm-9
+  * New snapshot:
+  * 42225d73ef4 amd/compiler: fix dump_shaders when record_llvm_ir=false
+    on debug builds
+  * 1940965ed12 amd/compiler: lower ALU to scalar after lowering shared
+    derefs
+  * 7b8bc0d2639 amd/compiler: disallow constant propagation to
+    p_extract_vector
+  * 2b1ac059019 amd/compiler: fix copy+paste errors
+  * 7d1c5cf5753 amd/compiler: rework phi scratch register code
+  * bac6c14fdff amd/compiler: remove trivial phis before finding scc
+    spill registers
+  * 8a96aa03d2e amd/compiler: fix sgpr_live_out
+  * 4eb3121b86e amd/compiler: reset ostream settings after printing asm
+  * 835eaafc88b amd/compiler: reset positioning of fill characters
+  * a28c5d69b7e amd/compiler: don't apply two literals to SALU
+  * 5e92f5b88d3 Update issue templates
+  * 37695f32290 temporary workarounds
+  * 2c20e79e980 nir/constant_folding: fold load_constant intrinsics
+  * 7431f26aeca amd/compiler: implement load_constant using s_getpc_b64
+  * 4583a0a09ab amd/compiler: deduplicate code between
+    load_ubo/load_ssbo
+  * 3341a3fc472 amd/compiler: cleanup after rebase
+  * c57de85c9e4 amd/compiler: fix compilation after rebase
+  * 52f8070b65c radv: finish removing RADV_PERFTEST=llvmvs
+  * 658f64c5c91 amd/compiler: fix compilation with release builds
+  * 9ed9022a2c9 amd/compiler,radv: prepare for merged stages
+  * c1dc9d0324c amd/compiler: switch to more detailed stage enum
+  * c7a81cae853 amd/compiler: combine reg_class and allocated
+  * 96f4f4df0bb amd/compiler: don't print disasm twice
+  * 1b0102a147a amd/compiler: spare two VGPRs when scheduling for less
+    live-range splits
+  * debf1c0c8a2 amd/compiler: remove Export_instruction::waitcnt_ignore
+  * 2141f987f17 amd/compiler: store block index in SOPP instructions
+  * 7452cad1c15 amd/compiler: don't emit pointless discard early exits
+  * 9e179200371 amd/compiler: add missing regclass check
+  * 2c037088f52 amd/compiler: have discards jump to a block instead of
+    over instructions
+  * e0c5cc0e768 radv: actually disable ACO on unsupported GPUs
 
- -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Sep 2019 19:06:35 +0200
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 Sep 2019 22:05:43 +0200
 
 mesa (19.3.0~git1908301754.f2bed9b344c~b~mesaaco1) bionic; urgency=medium
 
