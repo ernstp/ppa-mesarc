@@ -1,3 +1,21 @@
+corectrl (1.1.0~git1909152306.ff60596~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * ff60596 Merge branch 'workaround-high_cpu_load'
+  * d2ce428 Update translations
+  * f6155cf Implement UI part of ignore sensor functionality
+  * bfe13db Implement sensor ignoring on the system model
+  * 8ede8f4 Add Settings::signalSettings and use it on App
+    initialization
+  * c642be0 Implement ignore functionality on GraphItem
+  * 887f3ff Refactor Settings dialog
+  * c944fc3 Rename Global.js to Settings.js
+  * 9530d45 Rework setting changed signal handling on App
+  * c387c43 Add CGroupBox qml component
+  * d79696c Remove duplicated copyright block
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 Sep 2019 22:05:25 +0200
+
 corectrl (1.1.0~git1908221848.928dc4b~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
