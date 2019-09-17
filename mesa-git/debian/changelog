@@ -1,4 +1,10 @@
-mesa (19.2.0~rc3+git1909110905.3771534b2fe~e~mesarc2) eoan; urgency=medium
+mesa (19.2.0~rc3+git1909110905.3771534b2fe~b~mesarc3) UNRELEASED; urgency=medium
+
+  * Force rebuild.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Sep 2019 21:33:02 +0200
+
+mesa (19.2.0~rc3+git1909110905.3771534b2fe~b~mesarc2) eoan; urgency=medium
 
   * Change to llvm-9
   * New snapshot:
