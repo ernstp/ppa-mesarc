@@ -1,3 +1,10 @@
+mesa (19.3.0~git1909171715.374999ecfdf~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 374999ecfdf aco: fix compilation on some GCC versions/flags
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Sep 2019 21:27:07 +0200
+
 mesa (19.3.0~git1909161937.42225d73ef4~b~mesaaco2) bionic; urgency=medium
 
   * Change to llvm-9
