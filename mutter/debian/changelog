@@ -1,3 +1,33 @@
+mutter (3.34.0+git1909201642.b5775e3d8~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * b5775e3d8 window-actor: Use surface coordinates for the fast path in
+    get_image()
+  * cd70595b5 shaped-texture: Use surface coordinates in get_image()
+  * 1d2913d9b shaped-texture: Declare that we inherit from GObject
+  * b8a49a682 window/surface-actor: Add docstrings
+  * 82901f89d shaped-texture: Mark set the clip and return value
+    nullable
+  * c9c53cb55 clutter/actor: Cancel delayed timelines on removal
+  * 1e637bd7e clutter/timeline: Don't emit ::paused signal on delayed
+    timelines
+  * 63a0b702c clutter/timeline: Use a function to cancel the delay
+    timeout
+  * 031003a5d wayland/dma-buf: Handle zero modifiers from
+    eglQueryDmaBufModifiersEXT
+  * b69d2aa6a stage: Compute view perspective when parameters changed
+  * d7d261221 build: Compile with `-ffloat-store` on x86 (32 bit)
+  * 7a0340c57 kms-impl-device: Use portable formatting for 64-bit
+    integers
+  * 0863bd240 output-kms: Use portable formatting for 64-bit integers
+  * 594cc7c7d input-settings: Use portable formatting for 64-bit
+    integers
+  * 0b19078b2 clutter/stage-cogl: Use portable formatting for 64-bit
+    integers
+  * 7811865e8 clutter/paint-node: Convert safely from pointer to integer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Sep 2019 11:38:37 +0200
+
 mutter (3.34.0+git1909161808.0e69fe078~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
