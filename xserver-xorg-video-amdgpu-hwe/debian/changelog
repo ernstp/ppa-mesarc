@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1909181255.5b8bc9f~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5b8bc9f Don't set up black scanout buffer if LeaveVT is called from
+    CloseScreen
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Sep 2019 11:38:52 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1908071811.e6fce59~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
