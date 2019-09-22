@@ -1,3 +1,46 @@
+mesa (19.3.0~git1909191901.b738bf06917~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * b738bf06917 aco: only emit waitcnt on loop continues if we there was
+    some load or export
+  * 75f6ade9cbc radv/aco: enable ACO by default
+  * f5071f82b79 Update issue templates
+  * 9bb418b0155 temporary workarounds
+  * 61b43581004 nir/constant_folding: fold load_constant intrinsics
+  * c5b5e26952e aco: enable nir_opt_sink
+  * 77d431501e6 nir/sink: don't sink load_ubo to outside of it's
+    defining loop
+  * 5ef540b437b nir/sink: handle uses outside the defining loop but
+    within another loop
+  * e79c8423d52 aco: enable load/store vectorizer
+  * 821261c6a6f nir: add load/store vectorizer tests
+  * b6f4fbe4096 nir: add a load/store vectorization pass
+  * 9c835306ab7 nir: tighten nir_var_all
+  * f061fe140c0 nir: add nir_num_variable_modes and
+    nir_var_mem_push_const
+  * 68297b2badd aco: use nir_lower_idiv_llvm
+  * b0cd78f1ea3 nir/lower_idiv: add new llvm-based path
+  * 8cc77978f6c radv/aco: disable lower_sub
+  * 88526ecc6d3 nir: allow for isub and fsub in loop_analyze
+  * 5ed5e76741b nir/algebraic: refactor inexact opcode restrictions
+  * 5b5c5bf8335 docs: Update bug report URLs for the gitlab migration
+  * ec76232785f glx: Remove redundant null check.
+  * 706c9f2d607 iris: Skip double-disabling TCS/TES/GS after BLORP
+    operations
+  * 7f7060dc739 .mailmap: add an alias for Frank Binns
+  * c1b1e0e875a .mailmap: add an alias for Bas Nieuwenhuizen
+  * 5ec5fecc26d anv: fix descriptor limits on gen8
+  * 8b78cce433b radv: remove dead shared variables
+  * 281262281b7 radv/aco: enable
+    VK_EXT_shader_demote_to_helper_invocation
+  * e01b522a72a radv: enable clustered reductions
+  * a70a9987181 radv/aco: Setup alternate path in RADV to support the
+    experimental ACO compiler
+  * 93c8ebfa780 aco: Initial commit of independent AMD compiler
+  * 99cbec0a5f4 egl: check for NULL value like eglGetSyncAttribKHR does
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Sep 2019 11:34:15 +0200
+
 mesa (19.3.0~git1909171715.374999ecfdf~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
