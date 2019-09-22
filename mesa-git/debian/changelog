@@ -1,3 +1,36 @@
+mesa (19.2.0~rc4+git1909180910.71fafc13b94~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * 71fafc13b94 Bump version for 19.2.0-rc4
+  * e2bb51a99be radeonsi: add Navi12 PCI ID
+  * 2e9a37cf1cf iris: close screen fd on iris_destroy_screen
+  * b94ab6f5e33 radv: always emit a position export in gs copy shaders
+  * b2a09536ff9 drirc: include unreal engine version 0 to 23
+  * 3aeddc1f2f7 util/xmlconfig: fix regexp compile failure check
+  * d5fe3f73fc1 nir/large_constants: more careful data copying
+  * 5650308d08a vulkan: add vk_x11_strict_image_count option
+  * fbd96932d6f driconfig: add a new engine name/version parameter
+  * 82fc77b5212 radv: store engine name
+  * 78c34c3bfb8 iris: Initialize ice->state.prim_mode to an invalid
+    value
+  * cd0402c5820 radv: fix allocating number of user sgprs if streamout
+    is used
+  * 110dc21ed3a v3d: make sure we have enough space in the CL for the
+    primitive counts packet
+  * cfcb96da38d intel/fs: Handle UNDEF in split_virtual_grfs
+  * b0b63d95934 add patches to be ignored
+  * 5eba28227cb tgsi_to_nir: Translate TGSI_INTERPOLATE_COLOR as
+    INTERP_MODE_NONE
+  * f9ef2b43751 meson: don't generate file into subdirs
+  * b85d10e14b7 gallium: Fix util_format_get_depth_only
+  * 7882268cc94 glsl/nir: Avoid overflow when setting
+    max_uniform_location
+  * 4eabbc04f2f iris: Fix constant buffer sizes for non-UBOs
+  * 97792279e49 nir/loop_analyze: Treat do{}while(false) loops as 0
+    iterations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Sep 2019 11:36:30 +0200
+
 mesa (19.2.0~rc3+git1909110905.3771534b2fe~b~mesarc3) bionic; urgency=medium
 
   * Force rebuild.
