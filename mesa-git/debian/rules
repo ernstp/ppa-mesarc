@@ -119,7 +119,7 @@ ifneq (,$(filter $(DEB_HOST_ARCH), x32))
 endif
 
 confflags_EGL = -Dplatforms="$(EGL_PLATFORMS)"
-confflags_GLES = -Dgles1=false -Dgles2=true
+confflags_GLES = -Dgles1=false -Dgles2=false
 confflags_GALLIUM += -Dgallium-drivers="$(GALLIUM_DRIVERS)"
 
 confflags += \
