@@ -1,3 +1,9 @@
+mesa (19.3.0~git1910042348.6c3bad5214b~b~mesaaco3) UNRELEASED; urgency=medium
+
+  * Add egl.pc again
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Oct 2019 23:35:23 +0200
+
 mesa (19.3.0~git1909191901.b738bf06917~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
