@@ -119,7 +119,7 @@ ifneq (,$(filter $(DEB_HOST_ARCH), x32))
 endif
 
 confflags_EGL = -Dplatforms="$(EGL_PLATFORMS)"
-confflags_GLES = -Dgles1=false -Dgles2=false
+confflags_GLES = -Dgles1=false -Dgles2=true
 confflags_GALLIUM += -Dgallium-drivers="$(GALLIUM_DRIVERS)"
 
 confflags += \
@@ -186,6 +186,8 @@ override_dh_install:
 	rm debian/tmp/usr/lib/*/libglapi.so
 	rm debian/tmp/usr/lib/*/libEGL_mesa.so
 	rm debian/tmp/usr/lib/*/libGLX_mesa.so
+	rm -f debian/tmp/usr/lib/*/libGLESv2*
+	rm -f debian/tmp/usr/lib/*/pkgconfig/glesv2.pc
 
 	# Copy the hardlinked *_dri.so correctly.
 	install -m755 -d debian/libgl1-mesa-dri/usr/lib/${DEB_HOST_MULTIARCH}/dri/
