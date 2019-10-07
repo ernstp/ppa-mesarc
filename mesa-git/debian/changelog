@@ -1,3 +1,48 @@
+mesa (19.2.0+git1909250956.0c47b502c23~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * 0c47b502c23 Bump version for 19.2.0 final
+  * 8ea440fa3a0 docs: Add release notes for 19.2.0
+  * e59e9cd58a9 meson: re-add incorrect pkg-config files with GLVND for
+    backward compatibility
+  * 0d781fe4b8d android: anv: libmesa_vulkan_common: add libmesa_util
+    static dependency
+  * ba8b282ae49 android: mesa: revert "Enable asm unconditionally"
+  * f7e25ae6d6f util: fix SSE-version needed for double opcodes
+  * 5037ffb646d radv: Add workaround for hang in The Surge 2.
+  * c90dc1232dd bin/get-pick-list.sh: sha1 commits can be smaller than 8
+    chars
+  * a1b62127101 intel: Increase Gen11 compute shader scratch IDs to 64.
+  * 9f94cd7140c ac/addrlib: fix chip identification for Vega10,
+    Arcturus, Raven2, Renoir
+  * 5e289248a45 amd: add more PCI IDs for Navi14
+  * dc7129777fd nir/repair_ssa: Replace the unreachable check with the
+    phi builder
+  * 6485fd83623 gallium/osmesa: Fix the inability to set no context as
+    current.
+  * 2d30c0fc590 nir/algebraic: Do not apply late DPH optimization in
+    vertex processing stages
+  * ac9ef75a252 docs: Update bug report URLs for the gitlab migration
+  * 75836b70c75 docs: Add the maximum implemented Vulkan API version in
+    19.2 rel notes
+  * 0b54e1d1765 anv: fix descriptor limits on gen8
+  * 00eaba77619 egl: check for NULL value like eglGetSyncAttribKHR does
+  * 770e77dcd11 intel/fs: fix SHADER_OPCODE_CLUSTER_BROADCAST for SIMD32
+  * 0c29a15a097 gl: drop incorrect pkg-config file for glvnd
+  * 401de43891b radv/gfx10: fix VK_KHR_pipeline_executable_properties
+    with NGG GS
+  * e27644cc2e2 bin/get-pick-list: use --oneline=pretty instead of --
+    oneline
+  * b1ea3dcc1f0 rehardcode from origin/master to upstream/master
+  * 6ee069f94ad cherry-ignore: Add patches
+  * d0832208798 radv: fix loading 64-bit GS inputs
+  * 9bf80c2b53e tu: Set up glsl types.
+  * fa59ef37ed0 i965: support AYUV/XYUV for external import only
+  * 0ff13c291b5 intel/nir: do not apply the fsin and fcos trig
+    workarounds for consts
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Oct 2019 22:50:17 +0200
+
 mesa (19.2.0~rc4+git1909180910.71fafc13b94~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
