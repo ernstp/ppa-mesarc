@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1909261556.a1b7263~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * a1b7263 Don't unreference FBs of pixmaps from different screens in
+    LeaveVT
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Oct 2019 00:42:41 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1909181255.5b8bc9f~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
