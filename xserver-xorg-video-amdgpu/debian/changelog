@@ -1,3 +1,13 @@
+xserver-xorg-video-amdgpu (19.0.1+git1909261556.a1b7263~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * a1b7263 Don't unreference FBs of pixmaps from different screens in
+    LeaveVT
+  * 5b8bc9f Don't set up black scanout buffer if LeaveVT is called from
+    CloseScreen
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Oct 2019 00:47:52 +0200
+
 xserver-xorg-video-amdgpu (19.0.1+git1908071811.e6fce59~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
