@@ -1,3 +1,57 @@
+mutter (3.34.1+git1910090953.81ee8886c~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 81ee8886c backends: Update inhibited state for the monitor and
+    respect that state
+  * 658c74142 Bump version to 3.34.1
+  * 65cc8c1ea Update Catalan translation
+  * d9597d214 wayland: Ensure to forward numlock state to clients
+  * fc3831c79 backends: Fix thinko
+  * ce86f90ef Revert "backends/x11: Do not reload keymap on new keyboard
+    notifications"
+  * b5f50028f wayland: Untie MetaWindowXwayland lifetime from the
+    wl_surface
+  * 2c388e215 clutter/transition: Don't split reference counting with
+    actor
+  * fb6e2743e plugins/default: Hold reference on timelines while
+    stopping
+  * 6ee006c85 clutter/actor: Mark implicit transitions as remove-on-
+    complete
+  * 107e52155 wayland: Unset pointer constraint in the backend before
+    dropping the grab
+  * 7735a919d wayland: Check pointer visibility on post-grab focus
+    changes
+  * 9f617ae43 wayland: Warn if a surface is being set while the pointer
+    is invisible
+  * 104bdde74 kms: Predict state changes when processing update
+  * 2a990cc14 kms/update: Add helper to turn fixed point rect into int
+    rect
+  * 3e4156807 kms/update: Add helper to get primary plane assignment
+  * 66ae09b67 wayland/subsurface: Check if actor exists before
+    unparenting
+  * 7b97c7b35 wayland/tablet-tool: Fix stylus input with HiDPI scaling
+  * ca318c152 wayland/actor-surface: Pass actor surface to actor destroy
+    handler
+  * cbb4f6c89 wayland/actor-surface: Handle surface actor destruction
+  * 092b3edb5 wayland/actor-surface: Add actor clear helper
+  * 8d6d2d07d Updated Danish translation
+  * fa461525e window-x11: Refactor meta_prop_get_latin1_string() calls
+  * 8e510a07c xprops: Use g_new0 instead of malloc in
+    size_hints_from_results()
+  * e15352474 xprops: Use g_strdup in class_hint_from_results()
+  * eb8a1f42b xprops: Use g_new0 instead of calloc in
+    wm_hints_from_results()
+  * 89cd9d382 xprops: Use g_free instead of XFree in
+    text_property_from_results()
+  * 488991b0f xprops: Free counter_list_from_results() return value with
+    g_free()
+  * e2330617a xprops: Free latin1/utf8_string_from_results() return
+    value with g_free()
+  * 5e6d98e79 xprops: Use g_new0 instead of calloc in
+    meta_prop_get_motif_hints()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Oct 2019 00:42:25 +0200
+
 mutter (3.34.0+git1909201642.b5775e3d8~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
