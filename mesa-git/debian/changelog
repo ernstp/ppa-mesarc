@@ -1,3 +1,44 @@
+mesa (19.2.1+git1910091019.3e156204512~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3e156204512 docs: Add SHA256 sum for 19.2.1
+  * 877417918f6 Bump version for 19.2.1
+  * e19dc53aae3 docs: Add relnotes for 19.2.1
+  * a06f8341d8a bin: delete unused releasing scripts
+  * 4f38287970c release: Add an update_release_calendar.py script
+  * a4348e95949 scripts: Mesa 19.2.x only implements GL 4.5
+  * 61b3371acc0 scripts: Add a gen_release_notes.py script
+  * 5a0361ce096 meson: add missing idep_nir_headers in iris_gen_libs
+  * 06b8b29a0a8 anv/android: fix images created with external format
+    support
+  * 90523185650 scons/MSYS2-MinGW-W64: Fix build options defaults
+  * 85193e808aa intel/isl: Set null surface format to R32_UINT
+  * 34d738ff2e7 intel: fix subslice computation from topology data
+  * c289ac9a229 egl: Remove the 565 pbuffer-only EGL config under X11.
+  * bad5e64da84 meson: Only error building gallium video without libdrm
+    when the platform is drm
+  * 52cf6239555 .cherry-ignore: Update for 19.2.1 cycle
+  * 78a05b8cbb2 radv: Fix condition for skipping the continue CS.
+  * 676471a0923 intel: fix topology query
+  * 0b97377f584 radeonsi/gfx10: fix corruption for chips with harvested
+    TCCs
+  * 33eecbcc9bd ac: add radeon_info::tcc_harvested
+  * 2bbe4c69c83 mesa: don't forget to clear _Layer field on texture unit
+  * db56bc2c525 haiku: fix Mesa build
+  * 4169d86913d iris: Fix iris_rebind_buffer() for VBOs with non-zero
+    offsets.
+  * 680e18c159d meson: gallium media state trackers require libdrm with
+    x11
+  * d4dab05a093 iris: Disable CCS_E for 32-bit floating point textures.
+  * f5cccfe0e64 ac: fix num_good_cu_per_sh for harvested chips
+  * 0a2285b1d45 ac: fix incorrect vram_size reported by the kernel
+  * 8f95245068e radeonsi/gfx10: fix L2 cache rinse programming
+  * a413b55157d scons/windows: Support build with LLVM 9.
+  * 5a027b62019 scons: add py3 support
+  * 769a18d1f3d android: compiler/nir: build nir_divergence_analysis.c
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Oct 2019 00:40:15 +0200
+
 mesa (19.2.0+git1909250956.0c47b502c23~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
