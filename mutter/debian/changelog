@@ -1,3 +1,20 @@
+mutter (3.34.1+git1910102251.2a56de80a~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 2a56de80a ci: Change the without-native-backend to not build with
+    Wayland too
+  * 69a0c1dc8 main: Warn instead of error in meta_test_init()
+  * 1b4709794 kms/crtc: Read gamma state when prediction failed
+  * 1cc249fe1 kms: Always predict state after processing update
+  * 446bd04b6 clutter-backend-x11: Don't push keymap events to clutter
+  * 9234fcb62 event-x11: Use CLUTTER prefix for X11 filter docs
+  * 59a697f77 x11: Translate well known selection atoms to mimetypes
+  * d49d10b14 wayland/actor-surface: Queue redraw for frame callback
+  * 4c15d32b5 wayland/surface: Some minor coding style clean up
+  * 73eaf5177 cogl-pango/meson.build: Remove extraneous quoting
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Oct 2019 06:32:19 +0200
+
 mutter (3.34.1+git1910090953.81ee8886c~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
