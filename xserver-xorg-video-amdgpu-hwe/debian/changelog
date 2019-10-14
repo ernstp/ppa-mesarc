@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git1910111710.b467d25~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * b467d25 Bump version for the 19.1.0 release
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Oct 2019 06:07:35 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.0.1+git1909261556.a1b7263~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
