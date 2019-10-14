@@ -1,3 +1,22 @@
+mutter (3.34.1+git1910121918.5c1be2233~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 5c1be2233 x11: Map mimetypes back to selection atoms
+  * e1751ad9e wayland: Figure out better the right selection source for
+    a wl_data_offer
+  * 84cc89e19 wayland: Set dummy selection source on
+    .set_selection(null)
+  * ea4665bf5 wayland: Simplify MetaSelectionSourceWayland
+  * 227d27204 wayland: Check resource before emitting cancelled event
+  * e53db92a7 wayland: Emit wl/primary offer after changing selection
+  * dd2b1278a wayland: Chain up to the right finalize on
+    MetaWaylandDataSourceWayland
+  * f2e2fcf75 wayland: Drop field from MetaWaylandDataSourcePrimary
+  * dfd44ff97 wayland: Plug MetaSelectionSourceWayland leaks
+  * 943b06999 clutter/shader-effect: Initialize shader-type properly
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Oct 2019 06:14:33 +0200
+
 mutter (3.34.1+git1910102251.2a56de80a~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
