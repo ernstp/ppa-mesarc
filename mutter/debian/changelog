@@ -1,3 +1,9 @@
+mutter (3.34.1+git1910121918.5c1be2233~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Oct 2019 06:37:22 +0200
+
 mutter (3.34.1+git1910121918.5c1be2233~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
