@@ -1,6 +1,12 @@
 mutter (3.34.1+git1910121918.5c1be2233~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Oct 2019 06:37:01 +0200
+
+mutter (3.34.1+git1910121918.5c1be2233~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
   * 5c1be2233 x11: Map mimetypes back to selection atoms
   * e1751ad9e wayland: Figure out better the right selection source for
     a wl_data_offer
