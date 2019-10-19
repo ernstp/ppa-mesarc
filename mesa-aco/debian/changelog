@@ -1,3 +1,13 @@
+mesa (19.3.0~git1910171521.fe930ad92ab~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * fe930ad92ab aco: don't combine minmax3 if there is a neg or abs
+    modifier in between
+  * 2f23d925b86 aco: ensure that uniform booleans are computed in WQM if
+    their uses happen in WQM
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 19 Oct 2019 18:09:37 +0200
+
 mesa (19.3.0~git1910102044.1b2cbc98c39~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
