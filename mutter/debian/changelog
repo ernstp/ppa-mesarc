@@ -1,3 +1,17 @@
+mutter (3.34.1+git1910181340.c0037305e~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * c0037305e window-actor: Add a missing NULL-check
+  * ff885fea3 monitor-manager: check for underscan setting validity
+    upfront
+  * bf17e0401 clutter/stage: Actually set key focus to an actor on key
+    focus
+  * a22731e2b clutter/actor: Save key-focus state and unset it before
+    destruction
+  * b6ed7d678 dbus-session-watcher: Chain up to parent finalize()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 19 Oct 2019 18:12:33 +0200
+
 mutter (3.34.1+git1910121918.5c1be2233~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
