@@ -1,3 +1,11 @@
+corectrl (1.1.0~git1910220858.6f1628b~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * 6f1628b Merge branch 'patch-1' into 'master'
+  * 4b2ade5 Add Bulgarian translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 22 Oct 2019 20:06:42 +0200
+
 corectrl (1.1.0~git1910161828.3c5e11d~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
