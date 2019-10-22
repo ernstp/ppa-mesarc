@@ -1,3 +1,10 @@
+mutter (3.34.1+git1910211303.85f5db7e7~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 85f5db7e7 wayland/surface: Reset buffer_destroy_handler_id
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 22 Oct 2019 20:07:08 +0200
+
 mutter (3.34.1+git1910181340.c0037305e~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
