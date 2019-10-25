@@ -1,3 +1,10 @@
+mutter (3.34.1+git1910241552.ef2f5f07f~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * ef2f5f07f x11: Update X11 focus before updating MetaDisplay focus
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Oct 2019 07:55:39 +0200
+
 mutter (3.34.1+git1910211303.85f5db7e7~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
