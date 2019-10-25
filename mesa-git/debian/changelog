@@ -1,3 +1,52 @@
+mesa (19.2.2+git1910230906.c5f5ce1e375~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * c5f5ce1e375 Bump version for 19.2.2 release
+  * db2797251d1 docs: Add release notes for 19.2.2
+  * 56f04342324 radv: fix updating bound fast ds clear values with
+    different aspects
+  * ad56aaef4f4 radv: Fix single stage constant flush with merged
+    shaders.
+  * 35b900310b2 egl/android: Remove our own reference to buffers.
+  * cb0215a6fbe anv: fix memory leak on device destroy
+  * 425fbe2902b anv: fix vkUpdateDescriptorSets with inline uniform
+    blocks
+  * 62f9ba1bf2e rbug: unwrap index buffer resource
+  * 306e82acb6c rbug: fix transmitted texture sizes
+  * ef906b46366 intel/vec4: Don't try both sources as immediates for DPH
+  * e958b35a40f nir/search: Fix possible NULL dereference in is_fsign
+  * 16af8e97723 gallivm: Fix saturated signed psub/padd intrinsics on
+    llvm 8
+  * 01e31f8cab9 radv: fix DCC fast clear code for intensity formats
+    (correctly)
+  * 4d6fcddc653 util/u_atomic: fix return type of
+    p_atomic_{inc,dec}_return() and p_atomic_{cmp,}xchg()
+  * 5694c201888 mesa: fix invalid target error handling for teximage
+  * 9a929cfef21 iris: finish aux import on get_param
+  * ae4f5692321 etnaviv: remove variable from global namespace
+  * 9d13289ad4a intel/common: include unistd.h for ioctl() prototype on
+    Solaris
+  * 9b49a4ea12f meson: recognize "sunos" as the system name for Solaris
+  * 55a04df479d util: Solaris has linux-style pthread_setname_np
+  * 45aa00da9f6 util: Workaround lack of flock on Solaris
+  * a1e6d1fb301 util: Make Solaris implemention of p_atomic_add work
+    with gcc
+  * 23801734333 c99_compat.h: Don't try to use 'restrict' in C++ code
+  * 45ebe99a88d Revert "radv: do not emit PKT3_CONTEXT_CONTROL with
+    AMDGPU 3.6.0+"
+  * c1ca1602ddf etnaviv: fix vertex buffer state emission for single
+    stream GPUs
+  * 91960ae890c iris: Implement the Gen < 9 tessellation quads
+    workaround
+  * 59e56bf05d2 radv: fix DCC fast clear code for intensity formats
+  * 6f30614d73f glsl: fix crash compiling bindless samplers inside
+    unnamed UBOs
+  * b87edab8a22 nir/dead_cf: Remove dead control flow after infinite
+    loops.
+  * 8355658fa85 meson: skip installation of GLVND-provided headers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Oct 2019 07:53:24 +0200
+
 mesa (19.2.1+git1910091019.3e156204512~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
