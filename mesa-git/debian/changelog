@@ -1,3 +1,9 @@
+mesa (19.2.2+git1910230906.c5f5ce1e375~b~mesarc6) UNRELEASED; urgency=medium
+
+  * Removed *mangle.h
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Oct 2019 08:48:31 +0200
+
 mesa (19.2.2+git1910230906.c5f5ce1e375~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
