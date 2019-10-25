@@ -1,5 +1,11 @@
 mesa (19.2.2+git1910230906.c5f5ce1e375~b~mesarc6) bionic; urgency=medium
 
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Oct 2019 08:50:43 +0200
+
+mesa (19.2.2+git1910230906.c5f5ce1e375~b~mesarc6) bionic; urgency=medium
+
   * Removed *mangle.h
   * New snapshot:
 
