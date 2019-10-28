@@ -1,3 +1,9 @@
+mesa (19.3.0~git1910171521.fe930ad92ab~b~mesaaco3) UNRELEASED; urgency=medium
+
+  * Switch to master git, github no longer updated
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 28 Oct 2019 22:25:48 +0100
+
 mesa (19.3.0~git1910171521.fe930ad92ab~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
