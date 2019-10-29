@@ -1,3 +1,35 @@
+mesa (19.3.0~git1910291605.f9ad73cdfd2~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * f9ad73cdfd2 anv: Set depthBounds to true in
+    anv_GetPhysicalDeviceFeatures.
+  * e6c87502785 genxml: Change 3DSTATE_DEPTH_BOUNDS bias.
+  * 2a38fc1027e gitlab-ci: Only run the pipeline if any files affecting
+    it have changed
+  * 163d5fde066 gallium/swr: Enable GL_ARB_gpu_shader5: multiple streams
+  * 44971b84b70 panfrost: Remove unused definitions in mali-job.h
+  * fa14cdf6e48 panfrost: Cleanup _shader_upper -> shader
+  * b4f508ab599 meson: define _GNU_SOURCE on FreeBSD
+  * 1a2246a5e08 intel/perf: update ICL configurations
+  * 1257d06ba74 gitlab-ci: Update required libdrm version
+  * 690d359b6f4 travis: fix scons build after deprecation warning
+  * e2155158e99 anv: Fix output of INTEL_DEBUG=bat for chained batches
+  * f9fe86e02ad winsys/amdgpu: use the new GPU reset query
+  * 9edcce2a32e ac: get tcc_harvested from the kernel
+  * 4d1e43badb9 radeonsi: initialize shader compilers in threads on
+    demand
+  * 1380db9fa8d radeonsi: don't print diagnostic LLVM remarks and notes
+  * c52ebbcea4f aco: Introduce vgpr_limit to keep track of available
+    VGPRs.
+  * d59f702e268 aco: Implement subgroup shuffle in GFX10 wave64 mode.
+  * c2eebfe3eaa aco: Remove dead code in reduction lowering.
+  * 3865448012b aco: Fix reductions on GFX10.
+  * cd04b63c000 loader: default to iris for all future PCI IDs
+  * ea8116908ce anv: add a couple printflike() annotations
+  * 21b7f79a769 st/mesa: lower global vars to local after lowering clip
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Oct 2019 17:28:11 +0100
+
 mesa (19.3.0~git1910281402.3ac688b0c2e~b~mesaaco0) bionic; urgency=medium
 
   * Switch to master git, github no longer updated
