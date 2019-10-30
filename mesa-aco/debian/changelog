@@ -1,3 +1,44 @@
+mesa (19.3.0~git1910301449.5a9d777f5ac~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5a9d777f5ac radv: fix perftest options
+  * c895e082813 radv: move nomemorycache debug option at the right palce
+  * d4e0bef1bbb radv: fix dumping SPIR-V into hang reports
+  * 4f8c86e6a58 mesa: enable ARB_gpu_shader_int64 in compat profile
+  * 2d8b8d3bd1c mesa: add [Program]Uniform*64ARB display list support
+  * 396195e8f1a radv: Enable VK_KHR_timeline_semaphore.
+  * 4aa75bb3bdd radv: Add wait-before-submit support for timelines.
+  * 88d41367b8a radv: Add timelines with a VK_KHR_timeline_semaphore
+    impl.
+  * 2117c53b723 radv: Add temporary datastructure for submissions.
+  * c3eae659e7b radv: Split semaphore into two parts as enum+union.
+  * 84d9551b232 radv: Always enable syncobj when supported for all
+    fences/semaphores.
+  * 45f4a639a87 radv: Improve fence signalling in QueueSubmit.
+  * a9c8424e083 radv: Do sparse binding in queue submission.
+  * 915e9178faf radv: Split out commandbuffer submission.
+  * 43ba44357c4 radv: Clean up unused variable.
+  * 2e3a635ee69 radv: Add an early exit in the secure compile if we
+    already have the cache entries.
+  * d78809632f5 radv: Compute hashes in secure process for secure
+    compilation.
+  * 4c4ac2d4d51 zink: drop nop descriptor-updates
+  * b222f28357c zink: use bitfield for dirty flagging
+  * 6d30abb4f14 zink: use dynamic state for line-width
+  * d2bb63c8d4c zink: Use optimal layout instead of general. Reduces
+    valid layer warnings. Fixes RADV image noise.
+  * aaf1b092706 gitlab-ci: Disable meson-windows job for the time being
+  * cf256646864 radv: make use of radv_sc_read()
+  * 28fff3efbcb radv: add radv_sc_read() helper
+  * 23a6827e4d9 radv: allow select() calls in secure compile
+  * 1abf05764ba mapi: Improve the x86 tsd stubs performance.
+  * 41407d5e9fc mapi: Inline call x86_current_tls.
+  * b2b8639d8e9 mapi: Clean up entry_patch_public for x86 tls
+  * 1fb75bee90d mapi: split entry_generate_or_patch for x86 tls
+  * 45206d7673a mapi: Adapted libglvnd x86 tsd changes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 30 Oct 2019 16:46:20 +0100
+
 mesa (19.3.0~git1910291605.f9ad73cdfd2~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
