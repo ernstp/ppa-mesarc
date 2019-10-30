@@ -9,23 +9,23 @@ Temporary patch. Not meant for upstream, but only the github repository!
  src/amd/vulkan/radv_device.c | 8 ++++++++
  2 files changed, 9 insertions(+)
 
-diff --git a/src/amd/vulkan/radv_debug.h b/src/amd/vulkan/radv_debug.h
-index 2d35f4e1386..2e037e2f4e4 100644
---- a/src/amd/vulkan/radv_debug.h
-+++ b/src/amd/vulkan/radv_debug.h
+Index: mesa/src/amd/vulkan/radv_debug.h
+===================================================================
+--- mesa.orig/src/amd/vulkan/radv_debug.h
++++ mesa/src/amd/vulkan/radv_debug.h
 @@ -72,6 +72,7 @@ enum {
- 	RADV_PERFTEST_GE_WAVE_32      =  0x400,
- 	RADV_PERFTEST_DFSM            =  0x800,
- 	RADV_PERFTEST_ACO             = 0x1000,
-+	RADV_PERFTEST_LLVM            = 0x2000,
+ 	RADV_PERFTEST_GE_WAVE_32      =  0x200,
+ 	RADV_PERFTEST_DFSM            =  0x400,
+ 	RADV_PERFTEST_ACO             =  0x800,
++	RADV_PERFTEST_LLVM            = 0x1000,
  };
  
  bool
-diff --git a/src/amd/vulkan/radv_device.c b/src/amd/vulkan/radv_device.c
-index 8965530ef28..47c7424593e 100644
---- a/src/amd/vulkan/radv_device.c
-+++ b/src/amd/vulkan/radv_device.c
-@@ -514,6 +514,7 @@ static const struct debug_control radv_perftest_options[] = {
+Index: mesa/src/amd/vulkan/radv_device.c
+===================================================================
+--- mesa.orig/src/amd/vulkan/radv_device.c
++++ mesa/src/amd/vulkan/radv_device.c
+@@ -515,6 +515,7 @@ static const struct debug_control radv_p
  	{"gewave32", RADV_PERFTEST_GE_WAVE_32},
  	{"dfsm", RADV_PERFTEST_DFSM},
  	{"aco", RADV_PERFTEST_ACO},
@@ -33,7 +33,7 @@ index 8965530ef28..47c7424593e 100644
  	{NULL, 0}
  };
  
-@@ -644,6 +645,13 @@ VkResult radv_CreateInstance(
+@@ -655,6 +656,13 @@ VkResult radv_CreateInstance(
  	instance->perftest_flags = parse_debug_string(getenv("RADV_PERFTEST"),
  						   radv_perftest_options);
  
@@ -47,6 +47,3 @@ index 8965530ef28..47c7424593e 100644
  	if (instance->perftest_flags & RADV_PERFTEST_ACO)
  		fprintf(stderr, "WARNING: Experimental compiler backend enabled. Here be dragons! Incorrect rendering, GPU hangs and/or resets are likely\n");
  
--- 
-2.20.1
-
