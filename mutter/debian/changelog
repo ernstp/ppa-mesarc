@@ -1,3 +1,13 @@
+mutter (3.34.1+git1910301008.51f7e8c4d~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 51f7e8c4d wayland: Check stylus serials on
+    meta_wayland_seat_can_popup()
+  * f4574ea36 x11: Limit touch replay pointer events to when replaying
+  * 2301cde8f display: Move finishing of touch sequence to the backend
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 30 Oct 2019 16:48:41 +0100
+
 mutter (3.34.1+git1910241552.ef2f5f07f~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
