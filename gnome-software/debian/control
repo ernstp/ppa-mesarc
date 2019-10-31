@@ -34,6 +34,7 @@ Build-Depends: appstream,
                libxmlb-dev,
                meson (>= 0.40),
                pkg-config,
+               quilt,
                valgrind [amd64 arm64 armhf i386 mips mips64 mips64el mipsel powerpc ppc64 ppc64el s390x],
                xsltproc
 Rules-Requires-Root: no
