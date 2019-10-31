@@ -1,3 +1,9 @@
+gnome-software (3.34.2+git1910162028.6f14a282~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 31 Oct 2019 22:35:52 +0100
+
 gnome-software (3.34.2+git1910162028.6f14a282~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
