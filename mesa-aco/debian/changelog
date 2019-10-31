@@ -1,3 +1,9 @@
+mesa (19.3.0~rc1~git1910301458.20512e9ddb4~b~0) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 31 Oct 2019 23:05:33 +0100
+
 mesa (19.3.0~git1910301449.5a9d777f5ac~b~mesaaco1) bionic; urgency=medium
 
   * Refresh ACO by default patch
