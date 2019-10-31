@@ -1,0 +1,9 @@
+The Ubuntu packaging is maintained at
+https://code.launchpad.net/~ubuntu-desktop/gnome-software/ubuntu
+
+Patches are maintained at https://gitlab.gnome.org/ubuntu/gnome-software
+in ubuntu-* branches. These branches are regularly rebased.
+
+To inspect these changes individually, please issue
+
+  $ git clone -b ubuntu-3-26 https://gitlab.gnome.org/ubuntu/gnome-software.git

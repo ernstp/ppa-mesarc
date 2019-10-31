@@ -1,0 +1,3 @@
+#usr/lib/*/gs-plugins-*/libgs_plugin_ostree*.so
+usr/lib/*/gs-plugins-*/libgs_plugin_flatpak*.so
+usr/share/metainfo/org.gnome.Software.Plugin.Flatpak.metainfo.xml

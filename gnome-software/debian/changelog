@@ -1,0 +1,556 @@
+gnome-software (3.30.6-2ubuntu10) eoan; urgency=medium
+
+  * Rebuild for new gnome-desktop soname version
+
+ -- Sebastien Bacher <seb128@debian.org>  Mon, 19 Aug 2019 17:23:09 +0200
+
+gnome-software (3.30.6-2ubuntu9) eoan; urgency=medium
+
+  * debian/control:
+    - Set git branch for vcs
+  * debian/patches/0014-Add-a-basic-permissions-system.patch:
+    - Fix switches being stretched
+    - Use new connections API
+  * debian/patches/0001-snap-Update-Snap-store-category-mapping.patch:
+    - Update snap store categories (LP: #1836826)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 26 Jul 2019 16:53:05 +1200
+
+gnome-software (3.30.6-2ubuntu8) eoan; urgency=medium
+
+  * debian/patches/0014-Add-a-basic-permissions-system.patch:
+    - Fix interface connections not showing correct state (LP: #1806697)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 17 Jun 2019 14:55:38 +1200
+
+gnome-software (3.30.6-2ubuntu7) eoan; urgency=medium
+
+  * No change rebuild to handle ABI break in flatpak 1.4.0 which was
+    reverted in 1.4.1
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 13 Jun 2019 15:50:20 -0400
+
+gnome-software (3.30.6-2ubuntu6) eoan; urgency=medium
+
+  * debian/patches/0016-snap-Use-default-icon-if-none-provided.patch:
+    - Update default snap icon (LP: #1818920)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Mon, 10 Jun 2019 12:02:12 +1200
+
+gnome-software (3.30.6-2ubuntu5) eoan; urgency=medium
+
+  * debian/patches/0014-Add-a-basic-permissions-system.patch:
+  * debian/patches/0028-Added-u2f-devices-to-interfaces-UI.patch
+    - Merge u2f changes into original patch
+  * debian/patches/0027-shell-Don-t-progate-CTRL-F-key-pressed-event.patch:
+    - Fix Ctrl-F not opening search bar (LP: #1735071)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Tue, 14 May 2019 11:04:29 +1200
+
+gnome-software (3.30.6-2ubuntu4) disco; urgency=mediumd
+
+  * debian/patches/0026-odrs-Only-show-reviews-from-the-same-distribution.patch:
+    - Show only Ubuntu reviews (LP: #1825064)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Wed, 17 Apr 2019 10:49:03 +1200
+
+gnome-software (3.30.6-2ubuntu3) disco; urgency=medium
+
+  * debian/patches/0028-Added-u2f-devices-to-interfaces-UI.patch
+    - Allow connections on the u2f-devices interface (LP: #1738164)
+    (the patch has been SRUed to bionic but was missing from Disco)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 04 Apr 2019 13:45:29 +0200
+
+gnome-software (3.30.6-2ubuntu2) disco; urgency=medium
+
+  * debian/patches/0025-snap-Use-new-media-API.patch:
+    - Use new snapd media API (LP: #1799614)
+
+ -- Robert Ancell <robert.ancell@canonical.com>  Fri, 18 Jan 2019 15:26:44 +1300
+
+gnome-software (3.30.6-2ubuntu1) disco; urgency=medium
+
+  * Sync with Debian. Remaining changes:
+    + debian/patches/*.patch: Various Ubuntu changes from ubuntu-master
+      branch - see patch headers for more information.
+    + Add an "ubuntu-software" package with some branding for Ubuntu.
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Sat, 05 Jan 2019 17:30:35 -0500
+
+gnome-software (3.30.6-2) unstable; urgency=medium
+
+  * Recommend instead of Suggest fwupd (Closes: #916036)
+  * Enable fwupd on all Linux architectures
+  * Drop obsolete Build-Depends on intltool
+  * Add Conflicts: sessioninstaller
+    - since it also provides the PackageKit session interface
+  * Build-Depend on debhelper-compat 12 and drop debian/compat
+  * Bump Standards-Version to 4.3.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 05 Jan 2019 17:26:30 -0500
+
+gnome-software (3.30.6-1ubuntu1) disco; urgency=medium
+
+  * Sync with Debian. Remaining changes:
+    + debian/patches/*.patch: Various Ubuntu changes from ubuntu-master
+      branch - see patch headers for more information.
+    + Add an "ubuntu-software" package with some branding for Ubuntu.
+    + debian/control.in:
+      - GNOME Software provides the PackageKit session interface.
+        Sessioninstaller wants to do that too - Conflict with it to get it
+        off user systems.
+
+ -- Jeremy Bicha <jbicha@ubuntu.com>  Fri, 21 Dec 2018 11:03:20 -0500
+
+gnome-software (3.30.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump required libappstream-glib-dev to >= 0.7.14
+  * Bump minimum PackageKit to 1.1.11 for autoremove support
+  * Drop obsolete Build-Depends on liboauth-dev and libsqlite3-dev
+  * Update configure flags
+  * Add -Wl,-O1 to our LDFLAGS
+  * Recommend gnome-software-plugin-snap on Ubuntu
+  * Mark universe packages as free on Ubuntu
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 21 Dec 2018 10:16:34 -0500
+
+gnome-software (3.30.5-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * Bump minimum libglib2.0-dev to 2.56.0
+  * Enable packagekit autoremove support
+  * Bump minimum libpackagekit-glib2-dev to 1.1.11 for autoremove support
+
+  [ Andrea Azzarone ]
+  * Bump Standards-Version to 4.2.1
+  * Set Rules-Requires-Root to no
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 16 Nov 2018 16:48:13 -0500
+
+gnome-software (3.30.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump build-dependencies
+  * debian/rules: Rename the options, the "enable" part has been removed
+  * Remove limba plugin, dropped upstream
+
+ -- Laurent Bigonville <bigon@debian.org>  Fri, 05 Oct 2018 11:57:57 +0200
+
+gnome-software (3.28.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Mon, 14 May 2018 22:01:33 -0400
+
+gnome-software (3.28.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.4
+  * debian/rules: drop obsolete dh_translations workaround
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 10 Apr 2018 19:45:35 -0400
+
+gnome-software (3.28.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 16 Mar 2018 17:22:24 -0400
+
+gnome-software (3.27.92-1) unstable; urgency=medium
+
+  * New upstream release candidate
+  * Update gsettings schema names for new release ("sources" renamed to
+    "repos") (Closes: #892456)
+  * Depend on libgtk3-perl for debconf's GNOME backend
+  * Bump minimum libfwupd-dev to 1.0.3
+  * Release to unstable
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 10 Mar 2018 21:13:52 -0500
+
+gnome-software (3.27.90-1) experimental; urgency=medium
+
+  * New upstream development release
+  * Bump dependencies for new version:
+    - libappstream-glib-dev (>= 0.7.3), libfwupd (>= 0.9.8),
+      libgtk-3-dev (>= 3.22.4)
+  * Build-Depend on libgspell-1-dev instead of libgtkspell3-3-dev
+  * debian/docs: Install README.md
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sun, 18 Feb 2018 16:27:18 -0500
+
+gnome-software (3.26.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump debhelper compat to 11
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 20 Jan 2018 07:48:06 -0500
+
+gnome-software (3.26.3-4) unstable; urgency=medium
+
+  * Update Vcs fields for conversion to git
+  * Add debian/gbp.conf
+  * Bump Standards-Version to 4.1.2
+  * Stop using appdata-to-NEWS to install NEWS. It's no longer needed.
+  * Add some Multi-Arch metadata
+
+ -- Jeremy Bicha <jbicha@debian.org>  Sat, 16 Dec 2017 13:24:18 -0500
+
+gnome-software (3.26.3-3) unstable; urgency=medium
+
+  * Fix arch:all build
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 24 Nov 2017 19:57:28 -0500
+
+gnome-software (3.26.3-2) unstable; urgency=medium
+
+  * Only build snap plugin on architectures where snapd is built.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 24 Nov 2017 16:31:19 -0500
+
+gnome-software (3.26.3-1) unstable; urgency=medium
+
+  * New upstream release
+  * Use appstream-util appdata-to-news to install NEWS
+  * Build gnome-software-plugin-snap again (Closes: #877684)
+
+ -- Jeremy Bicha <jbicha@debian.org>  Tue, 21 Nov 2017 19:19:28 -0500
+
+gnome-software (3.26.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in:
+    - Bump required fwupd to >= 0.9.7
+  * Drop all patches, applied in new release.
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 10 Nov 2017 09:30:30 -0500
+
+gnome-software (3.26.1-2) unstable; urgency=medium
+
+  * Cherry-pick upstream fixes to make gnome-software build against fwupd 1.0.
+    (Closes: #879006)
+  * Enable GUDev support only on Linux. (Closes: #875916)
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 21 Oct 2017 05:36:14 +0200
+
+gnome-software (3.26.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.1.1
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 05 Oct 2017 22:02:21 -0400
+
+gnome-software (3.26.0-2) unstable; urgency=medium
+
+  * Only build with valgrind on architectures where valgrind is available
+  * Bump Standards-Version to 4.1.0
+
+ -- Jeremy Bicha <jbicha@debian.org>  Fri, 15 Sep 2017 08:20:01 -0400
+
+gnome-software (3.26.0-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * Release to unstable
+  * New upstream release
+  * Add apport hook to report which gnome-software plugins are installed
+  * debian/rules
+    - Add workaround for Ubuntu translations issue
+
+  [ Iain Lane ]
+  * debian/rules: Make sure to not build with -Wl,-Bsymbolic-functions
+
+ -- Jeremy Bicha <jbicha@debian.org>  Thu, 14 Sep 2017 20:30:08 -0400
+
+gnome-software (3.25.91-1) experimental; urgency=medium
+
+  * debian/compat: Bump to 10, mainly to get --parallel by default.
+  * New upstream release 3.25.91 (LP: #1706715)
+    + Doesn't let you cancel PackageKit (.deb) installations when PK says it's
+      not allowed. (LP: #1707053)
+
+ -- Iain Lane <laney@debian.org>  Thu, 24 Aug 2017 16:33:38 +0100
+
+gnome-software (3.25.4-1) experimental; urgency=medium
+
+  * New upstream release 3.25.4
+  * debian/rules: Switch to debhelper's meson buildsystem instead of calling
+    meson directly ourselves.
+  * debian/rules: Use dh_missing --fail-missing instead of dh_install.
+  * debian/control{,.in}: Bump debhelper BD to 10.4 for the above.
+
+ -- Iain Lane <laney@debian.org>  Tue, 25 Jul 2017 13:02:15 +0100
+
+gnome-software (3.25.3-1) experimental; urgency=medium
+
+  * New upstream release 3.25.3
+  * debian/control{,.in}: Bump libappstrem-glib-dev and libfwupd-dev versions
+    in line with meson.build.
+  * debian/rules: -Denable-firmware is now called -Denable-fwupd.
+  * debian/patches: Drop - these are all upstream.
+
+ -- Iain Lane <laney@debian.org>  Fri, 23 Jun 2017 17:44:59 +0100
+
+gnome-software (3.25.1-1) experimental; urgency=medium
+
+  [ Jeremy Bicha ]
+  * debian/control.in:
+    - Bump minimum appstream-glib to 0.6.7
+
+  [ Iain Lane ]
+  * New upstream development release 3.25.1
+  * debian/watch: Find unstable versions
+  * Build with meson. The debhelper support isn't yet in Debian, so we're
+    calling meson directly. Once it is, we can switch.
+  * debian/patches/0001-build-Use-the-configured-directory-locations-to-inst.patch,
+    debian/patches/0002-build-Fix-the-pcfile.patch,
+    debian/patches/0003-build-limba-Set-limba-as-a-dependency.patch: Some
+    cherry-picks I pushed upstream which fix the build to build and install
+    all the right things.
+  * debian/control{,.in}, debian/gnome-software-{dev,doc}.install: Install the
+    headers and gtk-doc documentation so that external plugins can be built.
+  * debian/rules: Build with --fail-missing.
+  * debian/copyright: Consolidate and update.
+
+ -- Iain Lane <laney@debian.org>  Fri, 05 May 2017 17:31:43 +0100
+
+gnome-software (3.22.5-1) unstable; urgency=medium
+
+  * New upstream bugfix release: 3.22.5
+  * Add support for the PureOS Debian derivative
+  * Explicitly enable AppStream icon download in APT
+    - With a recent change in Debian's AppStream support,
+      GUI frontends which need icons have to enable their
+      download explicitly.
+
+ -- Matthias Klumpp <mak@debian.org>  Sun, 22 Jan 2017 19:06:34 +0100
+
+gnome-software (3.22.4-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * debian/gnome-software.gsettings-override.in, debian/rules:
+    - Use Ubuntu's licensing URL when built on Ubuntu
+  * debian/rules:
+    - Enable Ubuntu Reviews on Ubuntu
+
+  [ Laurent Bigonville ]
+  * New upstream release
+    - Bump libappstream-glib-dev and libflatpak-dev build-dependencies
+    - Drop debian/patches/01_pkgname-sanity.patch and
+      debian/patches/02_packagekit-linking.patch, applied upstream
+    - Disable gnome-software-plugin-snap package, it now requires snapd-glib
+      which is not in debian yet
+
+ -- Laurent Bigonville <bigon@debian.org>  Mon, 12 Dec 2016 11:46:39 +0100
+
+gnome-software (3.22.1-1) unstable; urgency=medium
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: Deconfuse build vs. host. (Closes: #839878)
+
+  [ Matthias Klumpp ]
+  * New upstream bugfix release: 3.22.1
+  * Make Snappy/Snap plugin available as separate package
+  * packagekit-linking.patch: Fix PackageKit underlinking
+  * pkgname-sanity.patch: Never pass broken pkgnames to PackageKit for resolving
+    - Closes: #840654
+    - Closes: #839736
+    - Closes: #827723 - if we are lucky.
+  * Depend on software-properties-gtk (Closes: #840368)
+    - We can do that now, since s-p-g switched to using PackageKit too.
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 22 Oct 2016 16:32:42 +0200
+
+gnome-software (3.22.0-1) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * New upstream release
+  * Add debian/docs to install NEWS
+  * Use separate packages for flatpak and limba plugins
+  * debian/control.in:
+    - Update Vcs links
+    - Build-depend on autoconf-archive
+    - Have gnome-software suggest flatpak and limba plugins
+    - Bump build-dependencies based on configure.ac
+  * debian/rules:
+    - Build with autoreconf
+
+  [ Michael Biebl ]
+  * Drop --disable-silent-rules from debian/rules. This is now handled by dh
+    directly depending on whether the DH_QUIET environment variable is set.
+
+  [ Simon McVittie ]
+  * New upstream release: 3.22.0
+    - This release closes upstream bugs
+      + Closes: #838200
+      + Closes: #829975
+      + Closes: #836919
+    - build-depend on libappstream-glib-dev (>= 0.6.2) to get all mandatory
+      and optional functionality
+    - build-depend on libflatpak-dev and enable Flatpak
+    - build-depend on libsecret-1-dev
+    - build-depend on gudev on linux-any
+    - bump Gtk build-dependency
+    - explicitly disable OSTree support for now, OSTree in Debian is not
+      ready to be used for OS deployment
+    - d/p/01_debian-dfsg.patch: remove, the same result can be achieved
+      with GSettings now
+    - d/gnome-software.gsettings-override.in: consider the 'main'
+      component to be Free Software (Ubuntu will likely want to patch this
+      to do the same for universe)
+
+  [ Matthias Klumpp ]
+  * Explicitly enable PackageKit, gnome-desktop support
+  * Small tweaks for debian/rules
+  * Make package binNMUable again
+  * Bump PackageKit dependency to >= 1.1.4 (Closes: #823989)
+  * Update d/copyright
+
+ -- Matthias Klumpp <mak@debian.org>  Thu, 22 Sep 2016 20:48:42 +0200
+
+gnome-software (3.20.2-2) unstable; urgency=medium
+
+  * debian/rules: Do not use -X parameter for dh_install, some files were not
+    installed as expected.
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 26 Apr 2016 14:26:44 +0200
+
+gnome-software (3.20.2-1) unstable; urgency=medium
+
+  [ Matthias Klumpp ]
+  * New upstream release: 3.20.2
+  * Enable the (alpha) Open Desktop Review Service (ODRS) feature
+  * Update dependencies:
+    - Bump libpackagekit-glib2-dev (>= 1.1)
+    - Bump libappstream-glib-dev (>= 0.5.14)
+    - Bump liblimba-dev (>= 0.5.6)
+    - Add libjson-glib-dev
+    - Add libgtkspell3-3-dev (>= 3.0)
+  * Drop patches: Applied upstream
+  * Add Debian DFSG plugin to set license information
+    - See debian-dfsg.patch
+    - In case we don't know if a software is free or not based on the license
+      data it supplies, we set it as free based on it originating from "main".
+  * Set provenance for Debian
+
+  [ Michael Biebl ]
+  * Drop uploaders.mk from debian/rules as this breaks the clean target with
+    dh. Instead use the gnome dh addon which updates debian/control via
+    dh_gnome_clean.
+
+ -- Matthias Klumpp <mak@debian.org>  Mon, 25 Apr 2016 18:12:18 +0200
+
+gnome-software (3.18.3-3) unstable; urgency=medium
+
+  * Add 01_fwupd-dont-crash.patch: Don't crash when the fwupd daemon
+    is removed.
+  * Add 02_fwupd-nofail.patch: Do not fail update checks if fwupd is
+    not available. (Closes: #808305)
+
+ -- Matthias Klumpp <mak@debian.org>  Fri, 15 Jan 2016 15:14:42 +0100
+
+gnome-software (3.18.3-2) unstable; urgency=medium
+
+  * Enable fwupd support
+    - This allows updating flashed firmware from GNOME-Software
+      when 'fwupd' is installed.
+  * Depend on 'appstream'
+    - Enables AppStream/DEP-11 integration on Debian automatically.
+
+ -- Matthias Klumpp <mak@debian.org>  Mon, 14 Dec 2015 16:02:42 +0100
+
+gnome-software (3.18.3-1) unstable; urgency=medium
+
+  * New upstream bugfix release
+    - Closes: #803418
+
+ -- Matthias Klumpp <mak@debian.org>  Thu, 05 Nov 2015 20:04:16 +0100
+
+gnome-software (3.18.2-2) unstable; urgency=medium
+
+  * Add missing Breaks/Replaces against gnome-packagekit-session
+    - Closes: #802458
+  * Explicitly depend on PackageKit (Closes: #794979)
+    - GNOME-Software needs the PackageKit daemon to work properly
+      at time.
+
+ -- Matthias Klumpp <mak@debian.org>  Wed, 21 Oct 2015 20:26:34 +0200
+
+gnome-software (3.18.2-1) unstable; urgency=medium
+
+  [ Michael Biebl ]
+  * Use https:// for Vcs-Browser
+
+  [ Matthias Klumpp ]
+  * New upstream release: 3.18.2
+  * Update Build-Depends:
+    - Bump libpackagekit-glib2-dev to (>= 1.0.10)
+    - Bump libsoup2.4-dev to (>= 2.52)
+    - Bump libgnome-desktop-3-dev to (>= 3.18)
+    - Bump libappstream-glib-dev to (>= 0.5.1)
+    - Bump libgtk-3-dev to (>= 3.18)
+    - Add liblimba-dev (>= 0.5.2) on Linux
+  * Sort build dependencies
+  * Enable optional support for the Limba installer.
+    - Will be inert if not explicitly configured.
+
+ -- Matthias Klumpp <mak@debian.org>  Wed, 14 Oct 2015 19:54:10 +0200
+
+gnome-software (3.16.5-2) unstable; urgency=medium
+
+  * Add transitional package for the PK session interface
+  * Do not ship with Fedora-specific plugins
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 08 Aug 2015 18:18:44 +0200
+
+gnome-software (3.16.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 06 Aug 2015 16:27:58 +0200
+
+gnome-software (3.16.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Build-Depends as per configure.ac:
+    - Add appstream-util.
+    - Add libpolkit-gobject-1-dev.
+    - Bump libappstream-glib-dev to (>= 0.3.4).
+    - Bump libgtk-3-dev to (>= 3.16).
+  * Drop hard-coded dependency on libappstream-glib7 now that the library
+    provides a symbols file.
+  * Use dh_install's exclude (-X) functionality to not install the .a and .la
+    files.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 22 Jul 2015 00:03:04 +0200
+
+gnome-software (3.14.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control.in: Bump both appstream-glib build and runtime dependencies
+    to >= 0.3.2, this can be reverted when appstream-glib will provide a
+    .symbols file
+
+ -- Laurent Bigonville <bigon@debian.org>  Tue, 18 Nov 2014 23:08:05 +0100
+
+gnome-software (3.14.1-2) unstable; urgency=medium
+
+  * debian/rules, debian/gnome-software.install: Install appdata file
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 25 Oct 2014 02:36:59 +0200
+
+gnome-software (3.14.1-1) unstable; urgency=medium
+
+  * New upstream release
+    - debian/control.in: Bump gtk+-3.0 build-dependency to 3.14.1
+    - debian/rules: Bump plugin API version to 7
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 18 Oct 2014 09:12:33 +0200
+
+gnome-software (3.14.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #722316)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sat, 11 Oct 2014 11:04:58 +0200

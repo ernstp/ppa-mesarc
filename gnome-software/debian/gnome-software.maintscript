@@ -1,0 +1,1 @@
+rm_conffile /etc/apt/apt.conf.d/60gnome-software 3.28.0-1

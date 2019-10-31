@@ -1,0 +1,5 @@
+debian/source_gnome-software.py /usr/share/apport/package-hooks
+usr/share/app-info/xmls
+usr/share/gnome-software/
+usr/share/icons/
+usr/share/locale/
