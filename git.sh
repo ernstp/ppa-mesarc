@@ -37,7 +37,7 @@ elif [ -e CMakeLists.txt ]; then
 elif [ -e configure.ac ]; then
 	PACKAGE_VERSION=$(grep AC_INIT -A 1 configure.ac | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
 elif [ -e meson.build ]; then
-	PACKAGE_VERSION=$(grep -E "^\s+version:" meson.build | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+	PACKAGE_VERSION=$(grep -E "^\s+version\s*:" meson.build | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
 else
 	echo "Error, couldn't find package version"
 	exit 1
