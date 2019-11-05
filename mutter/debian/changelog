@@ -1,3 +1,23 @@
+mutter (3.34.1+git1911050856.5e1bbb770~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 5e1bbb770 tests/monitor-unit-tests: Add another tiling window hot
+    plug test
+  * 3df4348f2 window: Reset tile monitor number when untiling
+  * 9ed33dc72 tests/monitor-unit-tests: Add window tiling hot plug test
+  * 8cb0646b6 tests/runner: Move window shown synchronization to helper
+  * c9a05d458 tests/monitor-unit-tests: Move test client sanity check
+    into helper
+  * 98a1630fa window: Always update tile monitor number on hot plug
+  * 4c48c859e plugins/default: Clean up tile preview when closing
+    display
+  * d7bdaeeb8 plugin/default: Init quark before using
+  * 3564b0df4 display: Add 'closing' signal
+  * 34b5a07d5 renderer-native: Separate offscreen and shadowfb
+  * a112d7a10 clutter/stage-view: Separate offscreen and shadowfb
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Nov 2019 19:39:33 +0100
+
 mutter (3.34.1+git1910301008.51f7e8c4d~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
