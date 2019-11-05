@@ -1,3 +1,13 @@
+gnome-software (3.34.2+git1911051621.ff4dc1a2~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * ff4dc1a2 odrs: Only add reviews from non-NULL reviewer's id
+  * fcca66e2 flatpak: download Flatpak updates in the correct
+    installation
+  * 308b9a86 flatpak: factor out function to group by installation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Nov 2019 19:39:10 +0100
+
 gnome-software (3.34.2+git1910162028.6f14a282~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
