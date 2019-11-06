@@ -1,3 +1,47 @@
+mesa (19.3.0~rc2~git1911060908.15342abc5ba~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 15342abc5ba Bump VERSION to 19.3.0-rc2
+  * 08501e77af5 meson: Add dep_glvnd to egl deps when building with
+    glvnd
+  * 49af89a0b98 intel/compiler: remove the operand restriction for src1
+    on GLK
+  * dd4b73ad380 aco: fix accidential reordering of instructions when
+    scheduling
+  * a8faeff399f aco: only use single-dword loads/stores for spilling
+  * 0d846243a02 aco: fix immediate offset for spills if scratch is used
+  * bc5357bf336 anv: Properly handle host query reset of performance
+    queries
+  * 5cee7ad873d iris: Fix "Force Zero RTA Index Enable" setting again
+  * 184d39301d9 nir: correct use of identity check in python
+  * 9bca129bb4c radv: fix compute pipeline keys when optimizations are
+    disabled
+  * 6daaf66f662 mesa: check draw buffer completeness on
+    glClearBufferfi/glClearBufferiv
+  * 4d21f802b56 radv: Close all unnecessary fds in secure compile.
+  * 090469173cc docs/relnotes/new_features.txt: Add note about ACO
+  * 59bc14186ec gallium/swr: Fix depth values for blit scenario
+  * 5032575b949 zink: emit line-width when using polygon line-mode
+  * b981ca4d7ec pipe-loader: Build kmsro loader for with all kmsro
+    targets
+  * 3544a01121c anv: Set the batch allocator for compute pipelines
+  * bb9d1ed2bd4 anv/tests: Zero-initialize instances
+  * 5f8e0c715ef anv: Fix a potential BO handle leak
+  * f0104d8fefe mesa: enable msaa in clear_with_quad if needed
+  * cb66ea7780f radv: Fix disk_cache_get size argument.
+  * 75886fafaad anv: Remove _mesa_locale_init/fini calls.
+  * b3fd30921a2 turnip: Remove _mesa_locale_init/fini calls.
+  * ea886e49be9 radv: Remove _mesa_locale_init/fini calls.
+  * 307e5cc8fd7 radeonsi: tell the shader disk cache what IR is used
+  * 0b8836cb23b android: aco: fix Lower to CSSA
+  * 39e9739a3b2 iris/gen11+: Move flush for render target change
+  * de705da8a63 iris: Add IRIS_DIRTY_RENDER_BUFFER state flag
+  * 640747a2980 intel/compiler: Report the number of non-spill/fill SEND
+    messages on vec4 too
+  * 9df47634403 radv: Fix timeout handling in syncobj wait.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 06 Nov 2019 19:35:07 +0100
+
 mesa (19.3.0~rc1~git1910301458.20512e9ddb4~b~0) bionic; urgency=medium
 
   * New snapshot:
