@@ -1,3 +1,24 @@
+mutter (3.34.1+git1911102242.a14e7b441~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * a14e7b441 input-settings/x11: Add missing clutter_x11_trap_x_errors
+    around XIGetProperty
+  * 403d8fcc6 plugin-manager: Kill window effects on destroy
+  * 7e5366f23 plugins/default: Handle skipped animations
+  * cf7859897 wayland/surface: Don't double scale when getting absolute
+    coordinates
+  * 7c1f3498f window-props: Don't set override redirect windows as top-
+    level parent
+  * 598be2b1d window-props: Don't look for parent multiple times
+  * a8776a963 window: Assert we only set a NULL workspace when
+    unmanaging
+  * 4b238c10f window: Warn if O-R window workspace state is used
+  * 6fa860481 wayland/actor-surface: Always store away frame callbacks
+    on commit
+  * 4ba3c4537 ci: Fix checking out gnome-shell on stable branches
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 Nov 2019 17:48:17 +0100
+
 mutter (3.34.1+git1911061748.1f56514e4~e~1) eoan; urgency=medium
 
   * New snapshot:
