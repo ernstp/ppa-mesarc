@@ -1,3 +1,13 @@
+mutter (3.34.1+git1911131035.d78585d68~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * d78585d68 cursor-renderer/native: Fix cursor drawing in combination
+    with panel_orientation_transform
+  * c462544f7 output-kms: Fix "panel orientation" kms-prop being ignored
+    on native outputs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 13 Nov 2019 20:17:02 +0100
+
 mutter (3.34.1+git1911121337.eb78b7d0d~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
