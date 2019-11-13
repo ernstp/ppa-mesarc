@@ -1,3 +1,11 @@
+mutter (3.34.1+git1911121337.eb78b7d0d~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * eb78b7d0d compositor: Plug cairo_region_t leak
+  * cc00e5551 backends: Plug MetaKmsPageFlipData leak
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 13 Nov 2019 08:06:07 +0100
+
 mutter (3.34.1+git1911102242.a14e7b441~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
