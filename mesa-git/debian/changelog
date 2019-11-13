@@ -1,3 +1,14 @@
+mesa (19.2.4+git1911131109.9cbffed5d05~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 9cbffed5d05 docs: Add SHA256 sum for for 19.2.4
+  * 6f1b8e554fb VERSION: bump to 19.2.4
+  * cebe2b12f5d docs: Add release notes for 19.2.4
+  * 330d31f63b1 mesa: check framebuffer completeness only after state
+    update
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 13 Nov 2019 20:14:48 +0100
+
 mesa (19.2.2+git1910230906.c5f5ce1e375~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
