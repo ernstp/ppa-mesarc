@@ -1,3 +1,28 @@
+mesa (19.3.0~rc3~git1911131117.3d9c678772d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 3d9c678772d Bump version for -rc3
+  * bb08c0f04db cherry-ignore: Update for 19.3-rc3 cycle
+  * 3c1b3656b9e egl: fix _EGL_NATIVE_PLATFORM fallback
+  * 05be7259233 zink: correct depth-stencil format
+  * 8608c460d17 spirv: Don't leak GS initialization to other stages
+  * 2f66f619c8e ac: Handle invalid GFX10 format correctly in
+    ac_get_tbuffer_format.
+  * 2bd7416823e Meson: Remove lib prefix from graw and osmesa when
+    building with Mingw. Also remove version sufix from osmesa swrast on
+    Windows.
+  * 0aef18324a3 aco: workaround Tonga/Iceland hardware bug
+  * 3211308e883 gallium: dri2: Use index as plane number.
+  * f7d76ad80e7 zink: disable fragment-shader texture-lod
+  * 52005416a02 zink: make sure src image is transfer-src-optimal
+  * 0b670a919ce zink: do not advertize coherent mapping
+  * b90f5a9ea02 zink: always allow mutating the format
+  * 2ea5038045d zink: use actual format for render-pass
+  * 5ca2bb392fd freedreno/a6xx: Disable geometry shaders for release
+  * 01f6321c093 radeonsi: fix shader disk cache key
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Nov 2019 15:08:58 +0100
+
 mesa (19.3.0~rc2~git1911060908.15342abc5ba~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
