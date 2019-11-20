@@ -1,3 +1,14 @@
+mutter (3.34.1+git1911201259.7e741fe2d~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 7e741fe2d wayland: Move "ownership" of the DnD selection source to
+    the data device
+  * edb618b2a wayland: Do not cancel data source on offer destruction
+  * e2d6b33b6 wayland: Avoid redundant cancel() call
+  * eac37b17b wayland: Drop unused wl_signal structs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Nov 2019 19:59:46 +0100
+
 mutter (3.34.1+git1911131035.d78585d68~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
