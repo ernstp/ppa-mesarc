@@ -1,3 +1,40 @@
+mesa (19.2.5+git1911200918.4c86eda2c27~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 4c86eda2c27 docs/relnotes/19.2.5: Add SHA256 sum
+  * f418e9231ab VERSION: bump for 19.2.5
+  * 9e0a0d2ebb5 docs: Add relnotes for 19.2.5
+  * e10851ff34c anv: Stop bounds-checking pushed UBOs
+  * 023ddb01b59 Call shmget() with permission 0600 instead of 0777
+  * 3199172eaa7 i965: Unify CC_STATE and BLEND_STATE atoms on Haswell as
+    a workaround
+  * ae071434e91 llvmpipe: use ppc64le/ppc64 Large code model for JIT-
+    compiled shaders
+  * 60c299c542d radeonsi: fix shader disk cache key
+  * b5b09acb748 radeonsi: tell the shader disk cache what IR is used
+  * 38bd621f0d1 radeonsi: disable sdma for gfx10
+  * 0e7e56aa2fd tgsi_to_nir: handle PIPE_FORMAT_NONE in image opcodes
+  * 2353a63a584 tgsi_to_nir: fix masked out image loads
+  * 856c7eddf78 mesa/main: Ignore filter state for MS texture
+    completeness
+  * 4c82d426bda nir/algebraic: Mark other comparison exact when removing
+    a == a
+  * d8a37880b50 nir/algebraic: Add the ability to mark a replacement as
+    exact
+  * bd2f6150ca4 intel/compiler: fix nir_op_{i,u}*32 on ICL
+  * 9ffb0176e25 st/mesa: fix Sanctuary and Tropics by disabling
+    ARB_gpu_shader5 for them
+  * a390cf739fe anv/wsi: signal the semaphore in the acquireNextImage
+  * a993dc20b67 anv: remove list items on batch fini
+  * 2281258a7b8 anv: invalidate file descriptor of semaphore sync fd at
+    vkQueueSubmit
+  * a89d4090bca cherry-ignore: Update for 19.2.4 cycle
+  * cb835d281bd egl: fix _EGL_NATIVE_PLATFORM fallback
+  * 6e98a923cb2 spirv: Don't leak GS initialization to other stages
+  * 2b89e68a2e4 gallium: dri2: Use index as plane number.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Nov 2019 19:57:35 +0100
+
 mesa (19.2.4+git1911131109.9cbffed5d05~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
