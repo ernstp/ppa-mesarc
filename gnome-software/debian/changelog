@@ -1,3 +1,11 @@
+gnome-software (3.34.2+git1911191931.ee31b0b2~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * ee31b0b2 Update Occitan translation
+  * 249e8636 Update Occitan translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Nov 2019 19:54:59 +0100
+
 gnome-software (3.34.2+git1911051621.ff4dc1a2~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
