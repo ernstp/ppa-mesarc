@@ -1,3 +1,53 @@
+mesa (19.3.0~rc4~git1911200925.cd736de7aa6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cd736de7aa6 VERSION: bump for 19.3.0-rc4
+  * b7ab6e9470d anv: Stop bounds-checking pushed UBOs
+  * addf63dbd79 Call shmget() with permission 0600 instead of 0777
+  * 2b4459973b8 Revert "freedreno/ir3: enable pre-fs texture fetch for
+    a6xx"
+  * 48f8f0edca0 i965: Unify CC_STATE and BLEND_STATE atoms on Haswell as
+    a workaround
+  * 3b8461cf162 freedreno/registers: fix a6xx_2d_blit_cntl ROTATE
+  * 79610494f9d freedreno/ir3: disable texture prefetch for 1d array
+    textures
+  * 32aba91c07f llvmpipe: use ppc64le/ppc64 Large code model for JIT-
+    compiled shaders
+  * 35182247fc1 aco: fix 64-bit fsign with 0
+  * ab4df0ec726 aco: don't combine literals into
+    v_cndmask_b32/v_subb/v_addc
+  * 37d13ecca7c cherry-ignore: update for 19.3.0-rc4 cycle
+  * a3d52fd4ab8 Revert "dri_interface: add interface for
+    EGL_EXT_image_flush_external"
+  * 36fbe5b292b Revert "st/dri: assume external consumers of back
+    buffers can write to the buffers"
+  * 9445d96d5cc Revert "st/dri: add support for
+    EGL_EXT_image_flush_external"
+  * 5cd8c67a7f8 Revert "egl: handle EGL_IMAGE_EXTERNAL_FLUSH_EXT"
+  * d7c0a1d3d47 Revert "egl: implement new functions from
+    EGL_EXT_image_flush_external"
+  * 7c61e5192fa intel/compiler: fix nir_op_{i,u}*32 on ICL
+  * f393c923454 anv: Initialize depth_bounds_test_enable when not
+    explicitly set
+  * 4fbe772b237 nir/algebraic: Mark other comparison exact when removing
+    a == a
+  * 17ad67c6dcc nir/algebraic: Add the ability to mark a replacement as
+    exact
+  * 61366cdf055 freedreno/ir3: fix gpu hang with pre-fs-tex-fetch
+  * 001e7305abc aco: don't propagate vgprs into v_readlane/v_writelane
+  * 1b8f93550af aco: fix read_invocation with VGPR lane index
+  * 992bff94f7a aco: fix shuffle with uniform operands
+  * 51a15eabe6f aco: preserve kill flag on moved operands during RA
+  * f3c0d5aa3a2 aco: fix invalid access on Pseudo_instructions
+  * 512ed9899a9 st/mesa: fix Sanctuary and Tropics by disabling
+    ARB_gpu_shader5 for them
+  * 35c196025b7 anv/wsi: signal the semaphore in the acquireNextImage
+  * 4910128baba anv: remove list items on batch fini
+  * 14c8323774a anv: invalidate file descriptor of semaphore sync fd at
+    vkQueueSubmit
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Nov 2019 19:55:17 +0100
+
 mesa (19.3.0~rc3~git1911131117.3d9c678772d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
