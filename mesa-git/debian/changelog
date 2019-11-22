@@ -1,3 +1,19 @@
+mesa (19.2.6+git1911211604.5836dd66e02~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 5836dd66e02 VERSION: bumpre to 19.2.6
+  * 264d1187dfe docs: Add release notes for 19.2.6
+  * aa620fdf8e9 meson: generate .pc files for gles and gles2 with old
+    glvnd
+  * 05d5784ea60 glsl: Enable textureSize for samplerExternalOES
+  * b1f505463d5 llvmpipe/ppc: fix if/ifdef confusion in backport.
+  * c2488d810ba freedreno/ir3: fix printing output registers of FS.
+  * e594e4cefda v3d: adds an extra MOV for any sig.ld*
+  * 8f526ee7cd0 v3d: Fix predication with atomic image operations
+  * be8a46d0647 vulkan: delete typo'd header
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 22 Nov 2019 14:44:45 +0100
+
 mesa (19.2.5+git1911200918.4c86eda2c27~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
