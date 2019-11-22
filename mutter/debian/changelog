@@ -1,3 +1,11 @@
+mutter (3.34.1+git1911211622.9c372388d~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 9c372388d clutter/cally-root: Use g_clear_signal_handler and fix a
+    signal leak
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 22 Nov 2019 14:46:59 +0100
+
 mutter (3.34.1+git1911201259.7e741fe2d~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
