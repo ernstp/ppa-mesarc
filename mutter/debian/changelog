@@ -1,3 +1,15 @@
+mutter (3.34.1+git1911262243.1b75d78c7~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 1b75d78c7 shaped-texture: Do not invalidate content on
+    set_cogl_texture()
+  * cbbffd1db cursor-tracker: Add API to keep the wayland pointer focus
+    while hidden
+  * 06202c342 device-manager-x11: Ignore events if no source device is
+    set
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Nov 2019 18:59:57 +0100
+
 mutter (3.34.1+git1911211622.9c372388d~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
