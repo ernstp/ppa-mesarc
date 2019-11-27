@@ -1,3 +1,11 @@
+corectrl (1.1.0~git1911231952.f3f3d0f~d~mesarc1) disco; urgency=medium
+
+  * New snapshot:
+  * f3f3d0f Update translations
+  * 72ed001 Remove Patreon info
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Nov 2019 18:57:05 +0100
+
 corectrl (1.1.0~git1910311916.4db551f~d~mesarc1) disco; urgency=medium
 
   * New snapshot:
