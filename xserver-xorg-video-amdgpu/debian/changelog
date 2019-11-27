@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu (19.1.0+git1911221729.fd66f5c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * fd66f5c kms: Handle changes to SourceValidate call chain in xserver
+    19
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Nov 2019 19:00:22 +0100
+
 xserver-xorg-video-amdgpu (19.1.0+git1910111710.b467d25~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
