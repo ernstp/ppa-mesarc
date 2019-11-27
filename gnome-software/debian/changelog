@@ -1,3 +1,27 @@
+gnome-software (3.34.3+git1911251355.2c7a0395~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 2c7a0395 Update Brazilian Portuguese translation
+  * d7aeef40 Updated Spanish translation
+  * 2dda4dec trivial: Post release version bump
+  * 70288a2a Release version 3.34.2
+  * 45b17231 flatpak: Ensure use of the installed_refs cache is thread-
+    safe
+  * deb79ab8 gs-details-page: Fix a minor leak in a comparison function
+  * bea7f604 fwupd: Fix compile with old versions of fwupd
+  * 12f0c282 Set the shell extension origin correctly in all cases
+  * 63d55f0d trivial: Move the CI to F31 to avoid a large download for
+    each pull request
+  * a96e3139 flatpak: Cache installed refs for an installation
+  * 48f892da gs-plugin-loader: Do not return a valid result if the job
+    is cancelled
+  * db45c263 gs-plugin-loader: Properly convert GIO error to GS error
+    when retrieving job result
+  * f21b2efc Do not show a crazy error when installing packages
+  * 0e55b67d Do not show non-applications in the installed panel
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Nov 2019 18:57:22 +0100
+
 gnome-software (3.34.2+git1911191931.ee31b0b2~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
