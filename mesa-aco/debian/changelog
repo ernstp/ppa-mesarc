@@ -1,3 +1,29 @@
+mesa (19.3.0~rc5~git1911270907.5a12bc6454a~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5a12bc6454a VERSION: Bump version for -rc5
+  * 14acf6fc3d1 meson: Fix linkage of libgallium_nine with libgalliumvl
+  * 06a95a06e84 radv: Allocate cmdbuffer space for buffer marker write.
+  * 2e8af7b3e0a r600: Disable eight bit three channel formats
+  * 5b9decf632f radv: create a fresh fork for each pipeline compile
+  * 0b0c500ad12 radv: add a secure_compile_open_fifo_fds() helper
+  * 093deac71f5 radv: add some infrastructure for fresh forks for each
+    secure compile
+  * ba9f8e0fee0 Revert "draw: revert using correct order for prim
+    decomposition."
+  * 85b0bb51443 intel/fs: Disable conditional discard optimization on
+    Gen4 and Gen5
+  * 9cd69861f82 glsl: Enable textureSize for samplerExternalOES
+  * c694d3c5ca1 llvmpipe/ppc: fix if/ifdef confusion in backport.
+  * 6477084c1af freedreno/ir3: fix printing output registers of FS.
+  * 37ded70630b v3d: adds an extra MOV for any sig.ld*
+  * 9d1b1968bfc v3d: Fix predication with atomic image operations
+  * 79521963ab2 radv: Do not change scratch settings while shaders are
+    active.
+  * abccd999efa vulkan: delete typo'd header
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Nov 2019 18:57:38 +0100
+
 mesa (19.3.0~rc4~git1911200925.cd736de7aa6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
