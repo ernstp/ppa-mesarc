@@ -1,3 +1,11 @@
+mutter (3.34.1+git1911291418.c0e76186d~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * c0e76186d stack: Allow promoting transient windows to their parent's
+    layer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 01 Dec 2019 16:37:43 +0100
+
 mutter (3.34.1+git1911262243.1b75d78c7~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
