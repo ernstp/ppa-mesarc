@@ -1,3 +1,12 @@
+gnome-software (3.34.3+git1911301704.be7e6406~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * be7e6406 Update German translation
+  * 62c65f1d Update Swedish translation
+  * 6598bf3d Update Polish translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 01 Dec 2019 16:37:19 +0100
+
 gnome-software (3.34.3+git1911251355.2c7a0395~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
