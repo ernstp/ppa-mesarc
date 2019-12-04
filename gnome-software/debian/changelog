@@ -1,3 +1,10 @@
+gnome-software (3.34.3+git1912040117.5e0592a1~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 5e0592a1 Add Malay translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 04 Dec 2019 23:38:30 +0100
+
 gnome-software (3.34.3+git1911301704.be7e6406~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
