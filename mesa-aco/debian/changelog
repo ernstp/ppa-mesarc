@@ -1,3 +1,35 @@
+mesa (19.3.0~rc6~git1912041314.9b189cb9b1b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 9b189cb9b1b VERSION: bump version for 19.3-rc6
+  * 15791ca8f9e aco: fix a couple of value numbering issues
+  * f0aa6a75352 anv: Set up SBE_SWIZ properly for gl_Viewport
+  * f6ac7d9a5b8 iris: Allow max dynamic pool size of 2GB for gen12
+  * f9e8f6bad81 nir/lower_io_to_vector: don't create arrays when not
+    needed
+  * f7d100caad4 radv: set writes_memory for global memory stores/atomics
+  * 0fa0b5fc3a8 aco: don't split live-ranges of linear VGPRs
+  * bf03a4311ba aco: add v_nop inbetween exec write and VMEM/DS/FLAT
+  * 967043eb68e aco: fix i2i64
+  * f4a4cce5904 aco: propagate p_wqm on an image_sample's coordinate
+    p_create_vector
+  * 4f026b2a05d etnaviv: remove dead code
+  * d32a34a3f3d i965: update Makefile.sources for perf changes
+  * 8e3c4caf74d panfrost: Make sure we reset the damage region of RTs at
+    flush time
+  * e11d9cd9ed3 gallium: Fix the ->set_damage_region() implementation
+  * 0ca8b506a46 radv: Fix timeline semaphore refcounting.
+  * a2606453450 winsys/amdgpu: avoid double simple_mtx_unlock()
+  * 5ba4fb857d8 radv: Unify max_descriptor_set_size.
+  * 553de940de8 drirc: Set vs_position_always_invariant for Shadow of
+    Mordor on Intel
+  * f63c3ecaa07 driconf, glsl: Add a vs_position_always_invariant option
+  * d438ccdedf9 radv/gfx10: fix implementation of exclusive scans
+  * 19573e43745 radv: fix enabling sample shading with
+    SampleID/SamplePosition
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 04 Dec 2019 23:38:49 +0100
+
 mesa (19.3.0~rc5~git1911270907.5a12bc6454a~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
