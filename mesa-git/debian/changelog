@@ -1,3 +1,28 @@
+mesa (19.2.7+git1912041348.65d255cd1e1~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 65d255cd1e1 VERSION: bump version for 19.2.7
+  * d8e767ede8a docs: Add release notes for 19.2.7
+  * 4a0199b6e4b radv: set writes_memory for global memory stores/atomics
+  * 3ed8c942446 radv: fix compute pipeline keys when optimizations are
+    disabled
+  * 5c98b365779 radv/gfx10: fix implementation of exclusive scans
+  * a3869c14c0d radv: fix enabling sample shading with
+    SampleID/SamplePosition
+  * bda6890f58c meson: Fix linkage of libgallium_nine with libgalliumvl
+  * 2bf47550cea anv: Set up SBE_SWIZ properly for gl_Viewport
+  * b4e83559cb3 i965: update Makefile.sources for perf changes
+  * a39d364af35 gallium: Fix the ->set_damage_region() implementation
+  * c166435dc24 winsys/amdgpu: avoid double simple_mtx_unlock()
+  * 52a8d43a24f radv: Unify max_descriptor_set_size.
+  * 2e379b0a65c radv: Allocate cmdbuffer space for buffer marker write.
+  * 336f59f8ba2 Revert "draw: revert using correct order for prim
+    decomposition."
+  * 38c8af9e2a2 intel/fs: Disable conditional discard optimization on
+    Gen4 and Gen5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 04 Dec 2019 23:41:03 +0100
+
 mesa (19.2.6+git1911211604.5836dd66e02~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
