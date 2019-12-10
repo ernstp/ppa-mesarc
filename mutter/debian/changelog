@@ -1,3 +1,12 @@
+mutter (3.34.1+git1912061956.868a61790~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 868a61790 backends/native: Fix double free of error
+  * 6f02d2ead kms-impl/simple: Fix meta_set_fallback_feedback_idle
+  * fc77efbcd kms: Process impl idle callbacks before pre dispatch flush
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Dec 2019 08:18:31 +0100
+
 mutter (3.34.1+git1911291418.c0e76186d~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
