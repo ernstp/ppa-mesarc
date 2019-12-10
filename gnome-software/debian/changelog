@@ -1,3 +1,13 @@
+gnome-software (3.34.3+git1912051140.b7b26fb1~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * b7b26fb1 snap: Set sandboxed kudo correctly for snap channels.
+  * ad99594a overview: Disable featured banner if no featured apps
+  * a4475023 overview: Hide featured back/forwards buttons if only one
+    featured app
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Dec 2019 08:18:12 +0100
+
 gnome-software (3.34.3+git1912040117.5e0592a1~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
