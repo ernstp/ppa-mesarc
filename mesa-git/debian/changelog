@@ -1,3 +1,49 @@
+mesa (19.3.0+git1912121155.a278301fd41~b~0) bionic; urgency=medium
+
+  * New snapshot:
+  * a278301fd41 docs/19.3.0: Add SHA256 sums
+  * 4c8bd415b46 VERSION: bump for 19.3.0 final
+  * 9e8aaa6f18d docs: add release notes for 19.3.0
+  * a857bc66dc6 Revert "egl: move #include of local headers out of
+    Khronos headers"
+  * e0da0189072 Revert "egl: avoid local modifications for eglext.h
+    Khronos standard header file"
+  * ce856a73926 anv: fix incorrect VMA alignment for CCS main surfaces
+  * 3a58a73661f ac/nir: fix out-of-bound access when loading constants
+    from global
+  * 1452cf672cc radeonsi: use gfx9.surf_offset to compute texture offset
+  * 88b2a8ba3fb android: radeonsi: fix build after vl refactoring (v2)
+  * 3f50741bc28 anv: Don't leak when set_tiling fails
+  * 58395e52933 iris: Fix import of multi-planar surfaces with modifiers
+  * ae06960627d iris: try to set the specified tiling when importing a
+    dmabuf
+  * 7b2ef16086c gallium: Store the image format in winsys_handle
+  * d4dad580e5f radv: Fix RGBX Android<->Vulkan format correspondence.
+  * 4a3b4ccf6b8 meson/broadcom: libbroadcom_cle also needs zlib
+  * a637f36b610 meson/broadcom: libbroadcom_cle needs expat headers
+  * 843629708e3 anv: fix missing gen12 handling
+  * 01d53f7ac0a radeonsi: fix multi plane buffers creation
+  * 166a3ae3c89 gallium/util: Support POLYGON in
+    u_stream_outputs_for_vertices
+  * c5e203ff501 anv: Re-emit all compute state on pipeline switch
+  * 22d1e495daa freedreno: reorder format check
+  * a67289631f8 gallium/dri2: Fix creation of multi-planar modifier
+    images
+  * 6adf4fe26d3 glsl/nir: iterate the system values list when adding
+    varyings
+  * fe136a943df intel/compiler: Fix 'comparison is always true' warning
+  * b2d5d0aae10 nir/lower_clip: Fix incorrect driver loc for clipdist
+    outputs
+  * e8635ce28ed cherry-ignore: update for 19.3-rc7
+  * fb6db6b5bb3 intel/perf: fix improper pointer access
+  * c90f4e9508e intel/perf: simplify the processing of OA reports
+  * 1de3548668e intel/perf: take into account that reports read can be
+    fairly old
+  * 4399795fbd5 intel/perf: set read buffer len to 0 to identify empty
+    buffer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Dec 2019 21:18:21 +0100
+
 mesa (19.2.7+git1912041348.65d255cd1e1~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
