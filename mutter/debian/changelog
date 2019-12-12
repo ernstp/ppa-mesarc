@@ -1,3 +1,11 @@
+mutter (3.34.2+git1912112005.8b087cfe5~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 8b087cfe5 Bump version to 3.34.2
+  * c05328f76 Update British English translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Dec 2019 21:28:30 +0100
+
 mutter (3.34.1+git1912061956.868a61790~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
