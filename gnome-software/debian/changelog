@@ -1,3 +1,11 @@
+gnome-software (3.34.3+git1912190840.994342d2~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 994342d2 snap: Fix channel versions not matching due to inverted
+    logic
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Dec 2019 17:19:39 +0100
+
 gnome-software (3.34.3+git1912051140.b7b26fb1~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
