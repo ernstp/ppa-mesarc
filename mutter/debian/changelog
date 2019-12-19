@@ -1,6 +1,12 @@
 mutter (3.34.2+git1912181954.9772f084b~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Dec 2019 17:39:48 +0100
+
+mutter (3.34.2+git1912181954.9772f084b~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
   * 9772f084b screen-cast: Fix window recording on HiDPI
 
  -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Dec 2019 17:34:59 +0100
