@@ -1,3 +1,27 @@
+mesa (19.3.1+git1912181056.cb6cc519e7a~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * cb6cc519e7a dcos: add releanse notes for 19.3.1
+  * c5ff7fbeabe VERSION: bump version for 19.3.1
+  * b7f253b87da docs: remove new_features.txt from stable branch
+  * 687df737af0 mesa: avoid triggering assert in implementation
+  * 1949c2a323b i965: expose MESA_FORMAT_B8G8R8X8_SRGB visual
+  * 1a6b8fcf178 dri: add __DRI_IMAGE_FORMAT_SXRGB8
+  * 0309f2f0716 virgl: Increase the shader transfer buffer by doubling
+    the size
+  * e075d332794 anv: Export filter_minmax support only when it's really
+    supported
+  * e3f1a591723 amd/common: Always use addrlib for HTILE tc-compat.
+  * 4f45bac153f amd/common: Fix tcCompatible degradation on Stoney.
+  * fbb0f5dfbb0 radv: fix radv secure compile feature breaks compilation
+    on armhf EABI and aarch64
+  * 9e3be21a915 anv: fix fence underlying primitive checks
+  * 61ea855be34 iris: Default to X-tiling for scanout buffers without
+    modifiers
+  * 08a24d9e286 cherry-ignore: update for the 19.3.1 cycle
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Dec 2019 17:22:16 +0100
+
 mesa (19.3.0+git1912121155.a278301fd41~b~0) bionic; urgency=medium
 
   * New snapshot:
