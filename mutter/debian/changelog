@@ -1,3 +1,11 @@
+mutter (3.34.2+git1912241652.572431089~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 572431089 clutter/stage: Fix picking of rectangles with negative
+    positions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Jan 2020 08:24:16 +0100
+
 mutter (3.34.2+git1912181954.9772f084b~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
