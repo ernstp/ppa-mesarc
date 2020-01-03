@@ -1,3 +1,12 @@
+gnome-software (3.34.3+git2001020049.8e820a46~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 8e820a46 Update Indonesian translation
+  * 33a902cc Update Hungarian translation
+  * 7faa094a Updated Lithuanian translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Jan 2020 08:23:50 +0100
+
 gnome-software (3.34.3+git1912190840.994342d2~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
