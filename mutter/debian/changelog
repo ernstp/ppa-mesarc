@@ -1,3 +1,11 @@
+mutter (3.34.3+git2001081506.78a45e181~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 78a45e181 Update Malay translation
+  * 4947e8ae5 Bump version to 3.34.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 08 Jan 2020 20:30:24 +0100
+
 mutter (3.34.2+git1912241652.572431089~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
