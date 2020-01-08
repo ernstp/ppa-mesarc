@@ -23,7 +23,10 @@ Multi-Arch: foreign
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
+ qml-module-qtquick2,
  qml-module-qtquick-controls2,
+ qml-module-qtquick-layouts,
+ qml-module-qtquick-window2,
  qml-module-qt-labs-platform,
  qml-module-qtcharts,
  sysvinit-utils,
