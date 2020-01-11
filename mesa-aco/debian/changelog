@@ -1,8 +1,11 @@
-mesa (19.3.2+git2001091030.c54178f796d~b~mesaaco1) UNRELEASED; urgency=medium
+mesa (20.0.0~git2001112015.44a6b17df76~b~mesaaco0) bionic; urgency=medium
 
   * Time for glvnd 1.3!
+  * New snapshot:
+  * 44a6b17df76 aco/wave32: Set the definitions of v_cmp instructions to
+    the lane mask.
 
- -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Jan 2020 17:21:55 +0100
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Jan 2020 22:08:24 +0100
 
 mesa (19.3.2+git2001091030.c54178f796d~b~mesaaco1) bionic; urgency=medium
 
