@@ -1,3 +1,50 @@
+mesa (19.3.2+git2001091030.c54178f796d~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c54178f796d docs: add SHA256 sums for 19.3.2
+  * 8734effe130 VERSION: bump for 19.3.2
+  * a2083af27d9 docs: Add release notes for 19.3.2
+  * 30cd0c75237 anv: don't close invalid syncfd semaphore
+  * 11c11597064 radeonsi: check ctx->sdma_cs before using it
+  * d4a1f1daaf3 main: allow external textures for BindImageTexture
+  * 28cba736ce3 intel/nir: Add a memory barrier before barrier()
+  * c63d04cb570 radv: Emit a BATCH_BREAK when changing pixel shaders or
+    CB_TARGET_MASK.
+  * 64ee69a1890 radeonsi: disable SDMA on gfx8 to fix corruption on RX
+    580
+  * 310d8774899 cherry-ignore: update for 19.3.2
+  * d9cbe10ee85 glsl/nir: do not change an element index to have correct
+    block name
+  * e87b1008802 glsl: fix a binding points assignment for ssbo/ubo
+    arrays
+  * 9f1782854e0 glsl: fix an incorrect max_array_access after
+    optimization of ssbo/ubo
+  * 4028c3c8679 radv: Only use the gfx mipmap level offset/pitch for
+    linear textures.
+  * 3d43ce1ca1d radv: return the correct pitch for linear mipmaps on
+    GFX10
+  * 980ac74d5e1 spirv: Fix glsl type assert in spir2nir.
+  * c4eeaf5f603 r600: Fix maximum line width
+  * d8392c05aea anv: Ignore some CreateInfo structs when rasterization
+    is disabled
+  * e5e1c5e0ae6 nir: Add clone/hash/serialize support for non-uniform
+    tex instructions.
+  * 180a8a73e0a aco: Fix uniform i2i64.
+  * e1e84f65020 winsys/radeon: initialize pte_fragment_size
+  * 6f473094a93 meta: Cleanup function for DrawTex
+  * 425450c9845 amd/common: Handle alignment of 96-bit formats.
+  * 1efde6d42af mesa: avoid returning a value in a void function
+  * 8817d8ee18e nine: fix empty-body-issues
+  * 0b25d2ce753 amd: fix empty-body issues
+  * 22aa4585613 util/format: remove left-over
+    util_format_description_table declaration
+  * eaa56931a15 radv: Expose all sample counts for integer formats as
+    well.
+  * 2078d2da462 anv: Properly advertise sampledImageIntegerSampleCounts
+  * 1a0a74f19e8 radeon/vcn2: enable rate control for hevc encoding
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Jan 2020 10:19:35 +0100
+
 mesa (19.3.1+git1912181056.cb6cc519e7a~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
