@@ -1,6 +1,6 @@
 PACKAGE_NAME=mesa
 GIT="https://gitlab.freedesktop.org/mesa/mesa.git"
-GITBRANCH="19.3"
+GITBRANCH="master"
 DISTROS="bionic disco eoan focal"
-INC=1
+INC=0
 PPA=mesaaco
