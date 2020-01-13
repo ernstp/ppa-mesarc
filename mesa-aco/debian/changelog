@@ -1,3 +1,47 @@
+mesa (20.0.0~git2001132126.40dd418e14e~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 40dd418e14e gitlab-ci: Upgrade kernel for LAVA jobs to v5.5-rc5
+  * 05c81875d7b aco: fix unconditional demote_to_helper
+  * 2bb88b2fdc0 radeonsi: don't enable VBOs in user SGPRs if compute-
+    based culling can be used
+  * 363b4027fcb radeonsi: put up to 5 VBO descriptors into user SGPRs
+  * 220d00314fd ac,radeonsi: increase the maximum number of shader args
+    and return values
+  * ef253c67898 radeonsi: simplify si_set_vertex_buffers
+  * 312e04689a9 radeonsi: don't allow draw calls with uninitialized VS
+    inputs
+  * c278c73f135 radeonsi: add si_context::num_vertex_elements
+  * 1e03b63b3bb radeonsi: rename desc_list_byte_size ->
+    vb_desc_list_alloc_size
+  * 2cc14bd7b89 anv: set stencil layout for input attachments
+  * 21bc16a723b anv: Drop an unused variable
+  * d3737002eed nir/lower_atomics_to_ssbo: Also lower barriers
+  * e40b11bbcb0 nir: Rename nir_intrinsic_barrier to control_barrier
+  * bd3ab75aef9 intel/nir: Stop adding redundant barriers
+  * ba43b66dc99 nir/glsl: Emit memory barriers as part of barrier()
+  * a4125b4d261 spirv: Add output memory semantics to OpControlBarrier
+    in TCS
+  * 2365520c9d3 spirv: Add a workaround for OpControlBarrier on old
+    GLSLang
+  * 60097cc840e nir: Add a new memory_barrier_tcs_patch intrinsic
+  * f2eece773c2 llmvpipe: No-op implement more barriers
+  * 3498ab98f5a nir: Handle barriers with more granularity in
+    combine_stores
+  * f09db0bed5f nir: Handle more barriers in dead_write and copy_prop
+  * ada49bae5e0 intel/vec4: Support scoped_memory_barrier
+  * 40aef2bf3ea lima: Add stencil support
+  * 2ce71494f10 lima/parser: Make rsw alpha blend parsing more readable
+  * 440b0d6eec2 panfrost: Remove unneeded phi nodes
+  * 809c8feb92d aco: check if multiplication/clamp is live when applying
+    output modifier
+  * ef8abfa7908 aco: disable add combining for ds_swizzle_b32
+  * 69bed1c9186 aco: don't DCE atomics with return values
+  * 8f291dc1460 aco: set exec_potentially_empty for demotes
+  * 21eafe30df5 aco: better handle neg/abs of sgprs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 13 Jan 2020 22:46:59 +0100
+
 mesa (20.0.0~git2001112015.44a6b17df76~b~mesaaco0) bionic; urgency=medium
 
   * Time for glvnd 1.3!
