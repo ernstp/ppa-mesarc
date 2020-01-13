@@ -1,3 +1,9 @@
+mesa (19.3.2+git2001091030.c54178f796d~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Jan 2020 00:21:45 +0100
+
 mesa (19.3.2+git2001091030.c54178f796d~b~mesarc1) bionic; urgency=medium
 
   * Time for glvnd 1.3!
