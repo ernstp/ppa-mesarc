@@ -1,3 +1,9 @@
+corectrl (1.1.0~git1911231952.f3f3d0f~d~mesarc3) UNRELEASED; urgency=medium
+
+  * Add libdrm-dev as build dependency.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 13 Jan 2020 23:26:56 +0100
+
 corectrl (1.1.0~git1911231952.f3f3d0f~d~mesarc2) disco; urgency=medium
 
   * New snapshot:

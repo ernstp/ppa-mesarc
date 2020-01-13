@@ -13,7 +13,8 @@ Build-Depends:
  libkf5auth-dev,
  libkf5archive-dev,
  libbotan-2-dev,
- libqca-qt5-2-dev
+ libqca-qt5-2-dev,
+ libdrm-dev
 Standards-Version: 4.1.4
 Homepage: https://gitlab.com/corectrl/corectrl
 
