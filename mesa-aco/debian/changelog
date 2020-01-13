@@ -1,3 +1,23 @@
+mesa (20.0.0~git2001132319.1c6a2efa06e~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1c6a2efa06e mesa/st: lower samplers before nir_lower_tex
+  * 4cda61f11e9 nir: assert that nir_lower_tex runs after lowering
+    derefs
+  * d72f1787533 i965: support EXT_EGL_image_storage
+  * b1c266d5fa5 i965: refactor intel_image_target_texture_2d
+  * 34fe560cd6d i965: track if image is created by a dmabuf
+  * bf576772ab4 dri_util: add driImageFormatToSizedInternalGLFormat
+    function
+  * b68ff2b8731 glapi / teximage: implement EGLImageTargetTexStorageEXT
+  * 1fe23d0e22a teximage: split out helper from
+    EGLImageTargetTexture2DOES
+  * 7978f2401bb anv: Memset array properties
+  * d36eed3e695 anv: Don't over-advertise descriptor indexing features
+  * d7ff137445b intel/blorp: Fill out all the dwords of MI_ATOMIC
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Jan 2020 00:43:05 +0100
+
 mesa (20.0.0~git2001132126.40dd418e14e~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
