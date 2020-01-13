@@ -10,7 +10,7 @@ Build-Depends:
  meson (>= 0.45),
  quilt (>= 0.63-8.2~),
  pkg-config,
- libdrm-dev (>= 2.4.97) [!hurd-any],
+ libdrm-dev (>= 2.4.99) [!hurd-any],
  libx11-dev,
  libxxf86vm-dev,
  libexpat1-dev,
@@ -35,7 +35,7 @@ Build-Depends:
  libxshmfence-dev (>= 1.1),
  python3,
  python3-mako,
- python3-distutils,
+ python3-setuptools,
  flex,
  bison,
  llvm-9-dev (>= 1:9~) [amd64 arm64 armel armhf i386 kfreebsd-amd64 kfreebsd-i386 mips mips64el mipsel powerpc ppc64 ppc64el s390x sparc64],
@@ -149,10 +149,6 @@ Depends:
  ${misc:Depends},
  libgbm1 (= ${binary:Version}) [!hurd-any],
 Provides: libegl-vendor
-Breaks:
- nvidia-304,
- nvidia-340 (<= 340.106-0ubuntu1),
- nvidia-384 (<< 390.25),
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: free implementation of the EGL API -- Mesa vendor library
@@ -206,10 +202,6 @@ Architecture: any
 Depends:
  libgles2,
  ${misc:Depends},
-Breaks:
- nvidia-304,
- nvidia-340 (<= 340.106-0ubuntu1),
- nvidia-384 (<< 390.25),
 Multi-Arch: same
 Description: transitional dummy package
  This is a transitional dummy package, it can be safely removed.
@@ -243,15 +235,11 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- libglapi-mesa (= ${binary:Version}),
  libgl1-mesa-dri,
 Provides: libglx-vendor
 Breaks:
  libopengl-perl (<< 0.6704+dfsg-2),
  glx-diversions (<< 0.8.4~),
- nvidia-304,
- nvidia-340 (<= 340.106-0ubuntu1),
- nvidia-384 (<< 390.25),
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: free implementation of the OpenGL API -- GLX vendor library
@@ -313,6 +301,8 @@ Package: mesa-common-dev
 Section: libdevel
 Architecture: any
 Depends:
+ libgl-dev,
+ libglx-dev,
  libx11-dev,
  libdrm-dev (>= 2.4.95) [!hurd-any],
  ${misc:Depends},
@@ -330,7 +320,6 @@ Architecture: any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
- libglapi-mesa (= ${binary:Version}),
 Pre-Depends: ${misc:Pre-Depends}
 Multi-Arch: same
 Description: Mesa Off-screen rendering extension
@@ -402,12 +391,13 @@ Description: Mesa VDPAU video acceleration drivers
 
 Package: mesa-vulkan-drivers
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 mips mips64el mipsel powerpc ppc64 ppc64el s390x sparc64 x32
+Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el s390x sparc64 x32
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
  libvulkan1,
  ${shlibs:Depends},
  ${misc:Depends}
+Provides: vulkan-icd
 Multi-Arch: same
 Description: Mesa Vulkan graphics drivers
  Vulkan is a low-overhead 3D graphics and compute API. This package
@@ -415,7 +405,7 @@ Description: Mesa Vulkan graphics drivers
 
 Package: mesa-opencl-icd
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 kfreebsd-amd64 kfreebsd-i386 mips mips64el mipsel powerpc ppc64 ppc64el s390x sparc64
+Architecture: amd64 arm64 armel armhf i386 kfreebsd-amd64 kfreebsd-i386 mips64el mipsel powerpc ppc64 ppc64el s390x sparc64
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
  libclc-r600 (>= 0.2.0+git20180312-1~),
