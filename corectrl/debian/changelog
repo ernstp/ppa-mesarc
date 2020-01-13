@@ -1,3 +1,9 @@
+corectrl (1.1.0~git1911231952.f3f3d0f~d~mesarc4) disco; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 13 Jan 2020 23:51:30 +0100
+
 corectrl (1.1.0~git1911231952.f3f3d0f~d~mesarc3) disco; urgency=medium
 
   * Add libdrm-dev as build dependency.
