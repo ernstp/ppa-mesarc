@@ -1,3 +1,41 @@
+mesa (20.0.0~git2001150842.7f5462e349a~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 7f5462e349a radv: enable Vulkan 1.2
+  * 68d6bead781 radv: implement Vulkan 1.2 features and properties
+  * b3033198a8c radv: implement Vulkan 1.1 features and properties
+  * a09ab76828a radv: update VK_KHR_timeline_semaphore for Vulkan 1.2
+  * fab0aa91821 radv: update VK_KHR_uniform_buffer_standard_layout for
+    Vulkan 1.2
+  * 3ff8d124583 radv: update VK_KHR_shader_subgroup_extended_types for
+    Vulkan 1.2
+  * af25c8d57bd radv: update VK_KHR_shader_float_controls for Vulkan 1.2
+  * 5335bb6c39e radv: update VK_KHR_shader_float16_int8 for Vulkan 1.2
+  * a73d01b1db9 radv: update VK_KHR_shader_atomic_int64 for Vulkan 1.2
+  * 83d1773a578 radv: update VK_KHR_imageless_framebuffer for Vulkan 1.2
+  * b3bdb4e6ff8 radv: update VK_KHR_image_format_list for Vulkan 1.2
+  * a80229941f5 radv: update VK_KHR_driver_properties for Vulkan 1.2
+  * af883bf3dcd radv: update VK_KHR_draw_indirect_count for Vulkan 1.2
+  * b537be43680 radv: update VK_KHR_depth_stencil_resolve for Vulkan 1.2
+  * 5993f13b27f radv: update VK_KHR_create_renderpass2 for Vulkan 1.2
+  * b2be00fbc17 radv: update VK_KHR_buffer_device_address for Vulkan 1.2
+  * 0eb26aae1ce radv: update VK_KHR_8bit_storage for Vulkan 1.2
+  * b4eed4e548a radv: update VK_EXT_scalar_block_layout for Vulkan 1.2
+  * efdf9d8969a radv: update VK_EXT_sampler_filter_minmax for Vulkan 1.2
+  * 65e215e6f3a radv: update VK_EXT_host_query_reset for Vulkan 1.2
+  * 95ec0c050bf radv: update VK_EXT_descriptor_indexing for Vulkan 1.2
+  * 4ef3f7e3d37 anv: Enable Vulkan 1.2 support
+  * c616627f63d anv: Implement the new core version property queries
+  * a47152c622f anv: Implement the new core version feature queries
+  * 721666e52a7 anv,nir: Lower quad_broadcast with dynamic index in NIR
+  * 7e3e2ce7028 anv: Bump the patch version to 131
+  * f33a68af63e vulkan/overlay: Fix for Vulkan 1.2
+  * 75755e0eba1 turnip: Pretend to support Vulkan 1.2
+  * ac0c7ad2c23 vulkan: Update the XML and headers to 1.2.131
+  * 8775b742ea3 gitlab-ci: Stop using manual jobs for merge requests
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Jan 2020 16:18:40 +0100
+
 mesa (20.0.0~git2001132319.1c6a2efa06e~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
