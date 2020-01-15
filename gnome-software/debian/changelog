@@ -1,3 +1,10 @@
+gnome-software (3.34.3+git2001141544.56d95cd9~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 56d95cd9 snap: Don't try to get alternatives for non-snaps
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Jan 2020 16:18:17 +0100
+
 gnome-software (3.34.3+git2001020049.8e820a46~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
