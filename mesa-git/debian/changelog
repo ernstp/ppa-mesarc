@@ -1,3 +1,49 @@
+mesa (19.3.2+git2001152040.3608b1c8ffb~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 3608b1c8ffb st/mesa: don't lower YUV when driver supports it
+    natively
+  * 0f257d0cf98 radeonsi: make sure fmask expand is done if needed
+  * 14cbf4d8e5c radeonsi: fix fmask expand compute shader
+  * a026923e7c7 egl/android: Restrict minimum triple buffering for
+    android color_buffers
+  * f167aab11db radv: only use VkSamplerCreateInfo::compareOp if enabled
+  * 85b233cc54e radv: Disable VK_EXT_sample_locations on GFX10.
+  * 256bcc247e3 cherry-ignore: Update for 19.3.3
+  * 852f5eac20b aco: fix unconditional demote_to_helper
+  * ded6ead7794 aco: check if multiplication/clamp is live when applying
+    output modifier
+  * 4a7e014b4dd aco: don't DCE atomics with return values
+  * 83821ebb25b intel/fs: Only use SLM fence in compute shaders
+  * b55c8ec5200 anv: only use VkSamplerCreateInfo::compareOp if enabled
+  * 1c8f3ca4a13 mesa: Fix detection of invalidating both depth and
+    stencil.
+  * 0ca67b73b2d anv: Memset array properties
+  * 1ebe018e441 anv: Don't over-advertise descriptor indexing features
+  * c4cd47bad94 intel/blorp: Fill out all the dwords of MI_ATOMIC
+  * 77b8fc9dae1 intel/vec4: Support scoped_memory_barrier
+  * 46b4ffb44d8 aco: disable add combining for ds_swizzle_b32
+  * 288203f47b9 aco: set exec_potentially_empty for demotes
+  * b12fba88bfc aco: fix uninitialized data in the binary
+  * 9fb11c4b9e2 aco: fix imageSize()/textureSize() with large buffers on
+    GFX8
+  * 729d6326860 aco: set vm for pos0 exports on GFX10
+  * 8df6be9b918 intel/fs/gen8+: Fix r127 dst/src overlap RA workaround
+    for EOT message payload.
+  * aa3ab59a721 intel/fs/gen11+: Handle ROR/ROL in lower_simd_width().
+  * ea84c5bee1b glsl: Fix software 64-bit integer to 32-bit float
+    conversions.
+  * db1b7341f17 mesa/st: fix a memory leak in get_version
+  * 31fa1c79371 freedreno/drm: Fix memory leak in softpin implementation
+  * 6cab261441e radeonsi: release saved resources in
+    si_compute_do_clear_or_copy
+  * 964883551dc radeonsi: release saved resources in
+    si_compute_copy_image
+  * 4dfdceeedcf radeonsi: release saved resources in
+    si_compute_clear_render_target
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 17 Jan 2020 20:29:17 +0100
+
 mesa (19.3.2+git2001091030.c54178f796d~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
