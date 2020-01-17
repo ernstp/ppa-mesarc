@@ -1,3 +1,26 @@
+mutter (3.34.3+git2001171357.156dd576f~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 156dd576f x11: Iterate over selections in a safer manner for event
+    handling
+  * 4d0a331cf x11: Detach selection streams on dispose
+  * 01d93f281 kms-impl-simple: Handle mode set race conditions
+    gracefully
+  * be777dbd7 kms-impl-simple: Include mode name in error message
+  * a9a011081 wayland/actor-surface: Always consider unmapped actors not
+    on output
+  * fd7d0fb33 wayland/surface: Move shaped-texture synchronization to
+    actor surface
+  * 167169259 wayland/surface-actor: Reset and sync subsurface state
+    when resetting
+  * 06fc756f0 shaped-texture: Make setting the same texture a no-op
+  * 81b7196ad shaped-texture: Minor clean up
+  * e91b12fdf wayland: Replace manual GNode subsurface iteration with
+    macro
+  * f52c0a3bf wayland/egl-stream: Cache texture snippet
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 17 Jan 2020 20:06:40 +0100
+
 mutter (3.34.3+git2001081506.78a45e181~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
