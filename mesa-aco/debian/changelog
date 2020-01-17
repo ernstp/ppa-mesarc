@@ -1,3 +1,46 @@
+mesa (20.0.0~git2001171827.ddb80f9276b~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * ddb80f9276b anv: enable VK_KHR_swapchain_mutable_format
+  * 4bdf8547f4d vulkan/wsi: Implement VK_KHR_swapchain_mutable_format
+  * a218f132786 vulkan/wsi: Filter modifiers with ImageFormatProperties
+  * 210e68874bb vulkan/wsi: Use the interface from the real modifiers
+    extension
+  * c78926b84df vulkan/wsi: Move the ImageCreateInfo higher up
+  * 6790397346c anv: Support modifiers in GetImageFormatProperties2
+  * 44f5a92c0b1 anv: Drop some VK_IMAGE_TILING_OPTIMAL checks
+  * 0099f85232b aco: print assembly with CLRXdisasm for GFX6-GFX7 if
+    found on the system
+  * 51de5d5ac65 vulkan/wsi: disable the hardware cursor
+  * ad820d5aca1 gallium/swr: Disable showing detected arch message.
+  * b9b393f0ce4 aco: fix emitting slc for MUBUF instructions on GFX6-
+    GFX7
+  * 6af63c939bf panfrost/midgard: Fix swizzle for store instructions
+  * be95c816a7d docs: do not double-close link tag
+  * b009a7644b9 docs: remove double-closed definition-list
+  * b387f68f49a docs: move paragraph closing tag
+  * a370cfd96ed docs: use code-tags instead of pre-tags
+  * 1de361e56b3 docs: use code-tags instead of pre-tags
+  * 36e02752755 docs: use code-tag instead of pre-tag
+  * f0677086a17 docs: open paragraph before closing it
+  * a0d25c4d87e docs: fix paragraphs
+  * 750d664226e docs: fix typo in html tag name
+  * 5b1c4e1b75f util: call bind_sampler_states before setting
+    sampler_views
+  * d55573aac63 nir: Fix printing of ~0 .locations.
+  * 65641e0c7a2 meson: use github URL for wraps instead of completely
+    unreliable wrapdb
+  * d7cef7c67b9 docs: Update release calendar for 20.0
+  * 2ebfc6db161 lima: Fix alpha blending
+  * 3bca0af25db aco: ignore parallelcopies to the same register on jump
+    threading
+  * 427e5eeb020 aco: handle phi affinities transitively through
+    parallelcopies
+  * d098024c40e aco: rework lower_to_cssa()
+  * 300f8dec76f aco: implement stream output with vec3 on GFX6
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 17 Jan 2020 20:04:12 +0100
+
 mesa (20.0.0~git2001150842.7f5462e349a~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
