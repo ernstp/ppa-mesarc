@@ -1,3 +1,12 @@
+gnome-software (3.34.3+git2001221550.f8d3b92b~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * f8d3b92b Update Japanese translation
+  * fb09fe85 Update Japanese translation
+  * 03308e46 gs-appstream: Fix loading of icons from AppStream YAML
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 22 Jan 2020 16:59:47 +0100
+
 gnome-software (3.34.3+git2001141544.56d95cd9~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
