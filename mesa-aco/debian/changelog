@@ -1,3 +1,47 @@
+mesa (20.0.0~git2001221531.5b810c7de30~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 5b810c7de30 panfrost/midgard: Add missing lowering passes for
+    type/size conversion ops
+  * fcceeaffaef panfrost/midgard: Add 64 bits float <-> int converters
+  * fe5fbadd462 panfrost/midgard: Fix mir_print_instruction() for branch
+    instructions
+  * e1f9e8d60b9 panfrost/midgard: Add f2f64 support
+  * f53a0799c7d panfrost/midgard: Factorize f2f and u2u handling
+  * 6548d01b3da panfrost/midgard: Make sure promote_fmov() only promotes
+    32-bit imovs
+  * 9566f26ed46 panfrost/midgard: Rework mir_adjust_constants() to make
+    it type/size agnostic
+  * 15c92d158ca panfrost/midgard: Use a union to manipulate embedded
+    constants
+  * 63461cb7e13 anv: ensure prog params are initialized with 0s
+  * 4936120230f panfrost: Fix crash in compute variant allocation
+  * d817f2c6961 etnaviv: drm: Don't miscalculate timeout
+  * 047162d99ce egl: Fix _eglPointerIsDereferencable w/o mincore()
+  * 39e7492d33c egl/android: fix buffer_count for applications setting
+    max count
+  * 1c9ecb21237 aco: Fix signedness compare warning.
+  * 533a20dbd56 aco: Fix maybe-uninitialized warnings.
+  * 6fb3df2786f aco: Fix -Wstringop-overflow warnings in aco_span.
+  * 75e5720e1a6 radeon: Fix multiple definition error with radeon_debug
+  * 8e22df3aec9 gallium: Fix a couple of multiple definition warnings.
+  * a134ac5ee93 r600: Move get_pic_param to radeon_vce.c
+  * b7f97598091 radeon: Move si_get_pic_param to radeon_vce.c
+  * e45ea781f85 intel/compiler: Fix array bounds warning on GCC 10.
+  * 3abfde13be1 turnip: Add support for non-zero (still constant) UBO
+    buffer indices.
+  * 5f791df0d00 turnip: fix array/matrix varyings
+  * c1717652233 turnip: remove tu_sort_variables_by_location
+  * 1736447f27e freedreno/ir3: allow inputs with the same location
+  * 17c9ec94f59 gitlab-ci: Skip ext_timer_query/time-elapsed
+  * 68cfc65ccbc intel/compiler: Test compaction on Gen <= 12
+  * 22462ba242d intel/compiler: Validate fuzzed instructions
+  * 72cf63cfc63 intel/compiler: Add unit tests for new EU validation
+    checks
+  * 5f4eacaeda5 intel/compiler: Validate some instruction word encodings
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 22 Jan 2020 17:00:05 +0100
+
 mesa (20.0.0~git2001171827.ddb80f9276b~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
