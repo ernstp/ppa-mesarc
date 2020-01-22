@@ -1,3 +1,35 @@
+mesa (19.3.2+git2001212017.baadbbda19e~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * baadbbda19e radeonsi: disable display DCC
+  * 3448d465df7 bin/pick-ui: Add a new maintainer script for picking
+    patches
+  * 4a233ac030b radv: Remove syncobj_handle variable in header.
+  * bd66e8c2a43 turnip: fix invalid VK_ERROR_OUT_OF_POOL_MEMORY
+  * 9cae2f6cc8c clover: Initialize Asm Parsers
+  * 41d867247af anv: Stop allocating WSI event fences off the instance
+  * 8117d2bb338 docs: remove double-closed definition-list
+  * db389ef4ac2 docs: move paragraph closing tag
+  * bb97fdd7f95 docs: use code-tags instead of pre-tags
+  * e51a02daecb docs: use code-tags instead of pre-tags
+  * 1d7f9760117 docs: use code-tag instead of pre-tag
+  * f09a153c0a2 docs: open paragraph before closing it
+  * a2d83eea376 docs: fix paragraphs
+  * 9dc157bbbfe util: call bind_sampler_states before setting
+    sampler_views
+  * dc2933cf18e meson: use github URL for wraps instead of completely
+    unreliable wrapdb
+  * 30029aa0089 aco: rework lower_to_cssa()
+  * c82b88c521e intel/perf: report query split for mdapi
+  * 3c1e9479b85 intel/perf: expose timestamp begin for mdapi
+  * e65d8fce725 radeonsi: work around an LLVM crash when using
+    llvm.amdgcn.icmp.i64.i1
+  * 120bb37d03e intel/compiler: Fix illegal mutation in
+    get_nir_image_intrinsic_image
+  * e0e35321703 .pick_status.json: Add state file for pick-ui
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 22 Jan 2020 17:02:22 +0100
+
 mesa (19.3.2+git2001152040.3608b1c8ffb~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
