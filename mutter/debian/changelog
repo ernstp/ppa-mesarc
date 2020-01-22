@@ -1,3 +1,11 @@
+mutter (3.34.3+git2001211447.59e9b073a~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * 59e9b073a renderer-native: Fix memory leak in secondary GPU update
+  * 6b6e72442 shaped-texture: Plug region leak
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 22 Jan 2020 17:04:37 +0100
+
 mutter (3.34.3+git2001171357.156dd576f~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
