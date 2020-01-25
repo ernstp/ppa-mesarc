@@ -1,3 +1,48 @@
+mesa (20.0.0~git2001250559.eb7cd575da0~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * eb7cd575da0 radeonsi: fix a regression since the addition of
+    si_shader_llvm_vs.c
+  * 688d2901b84 radeonsi: make screen available to shader part
+    compilation
+  * 07a441d53f8 anv: Rework CCS memory handling on TGL-LP
+  * b29cf7daf3a anv: Make anv_vma_alloc/free a lot dumber
+  * fd0f9d11963 anv: Make AUX table invalidate a PIPE_* bit
+  * 658dc9ca506 anv: Add another align_down helper
+  * 64ca8a3272e isl: Add a helper for calculating subimage memory ranges
+  * 47931160369 anv: Delete a redundant calculation
+  * a1e9adc9ce5 intel/aux-map: Factor out some useful helpers
+  * bea62ea566c intel/aux-map: Add some #defines
+  * 0366c8c5b73 radeonsi: expose shader cache stats to the HUD
+  * c046551e603 radeonsi: print shader cache stats with
+    AMD_DEBUG=cache_stats
+  * 2fd3bb23ab7 radeonsi: restructure si_shader_cache_load_shader
+  * 0db74f479b9 radeonsi: use the live shader cache
+  * 4bb919b0b8b gallium/util: add a cache of live shaders for shader CSO
+    deduplication
+  * f36f85d958e util/simple_mtx: add a missing include to get ASSERTED
+  * 6a0dda63dd1 intel/compiler: Add names for SHADER_OPCODE_[IU]SUB_SAT
+  * c1a2ac2abe9 anv: Always initialize target_stencil_layout
+  * 41bffe09135 anv: Replace aux_surface.isl.size_B checks with
+    aux_usage checks
+  * e693a57232a anv: Rework the meaning of
+    anv_image::planes[]::aux_usage
+  * de647190244 radv: print NIR shaders after lowering FS inputs/outputs
+  * 17e225ee1e5 intel/isl: Add a hack for the Gen12 A0 texture buffer
+    bug
+  * 4cd23420bd9 intel/isl: Plumb devinfo into
+    isl_genX(buffer_fill_state_s)
+  * 98aab272a82 intel/disasm: Properly disassemble indirect SENDs
+  * 3b2eafbea95 intel/fs: Don't unnecessarily fall back to indirect
+    sends on Gen12
+  * c70a786c773 anv: Improve BTI change cache flushing
+  * e39c52787e8 panfrost: Fix 32-bit warning for `indices`
+  * 58aa2b8cfc6 pan/decode: Remove SHORT_SLIDE indirection
+  * 7d52b3a18bb pan/midgard: Remove pack_color define
+  * 6c95ea6bd72 pan/decode: Remove last_size
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 25 Jan 2020 09:40:06 +0100
+
 mesa (20.0.0~git2001221531.5b810c7de30~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
