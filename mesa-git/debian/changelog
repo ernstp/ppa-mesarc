@@ -1,3 +1,46 @@
+mesa (19.3.2+git2001241039.b4c1a68af26~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * b4c1a68af26 radeonsi: don't invoke decompression inside internal
+    launch_grid
+  * 6a42381968d radeonsi: clean up how internal compute dispatches are
+    handled
+  * 2ca68218145 drisw: Cache the depth of the X drawable
+  * 995982c0424 aco/gfx10: Fix VcmpxExecWARHazard mitigation.
+  * ce0290dca7d intel: Fix aux map alignments on 32-bit builds.
+  * 5107beff0a8 meson: Do not require libdrm for DRI2 on hurd
+  * 657cbe4f4f7 aco: fix off-by-one error when initializing sgpr_live_in
+  * 7ad584f25cf radv: fix double free corruption in radv_alloc_memory()
+  * bf0c74e0332 egl/android: fix buffer_count for applications setting
+    max count
+  * ea4ba9f258f radv: Remove syncobj_handle variable in header.
+  * 9c8c2fd9c71 turnip: fix invalid VK_ERROR_OUT_OF_POOL_MEMORY
+  * 1775bbd1dc7 clover: Initialize Asm Parsers
+  * 872b6f4d2ac anv: Stop allocating WSI event fences off the instance
+  * 627192e4cc0 anv: Canonicalize buffer formats for image/buffer copies
+  * 2f9076316a2 anv/blorp: Rename buffer image stride parameters
+  * c818f77216b docs: remove double-closed definition-list
+  * 30bb5c5d7ae docs: move paragraph closing tag
+  * 872350a7d52 docs: use code-tags instead of pre-tags
+  * 04698dd7160 docs: use code-tags instead of pre-tags
+  * 456f052741b docs: use code-tag instead of pre-tag
+  * 5d4edf11022 docs: open paragraph before closing it
+  * e604d20a653 docs: fix paragraphs
+  * d870df5aab0 docs: fix typo in html tag name
+  * 2306b28b78c util: call bind_sampler_states before setting
+    sampler_views
+  * 343e777fb18 meson: use github URL for wraps instead of completely
+    unreliable wrapdb
+  * b47e0224b6c aco: rework lower_to_cssa()
+  * fb6bbb842e9 intel/perf: report query split for mdapi
+  * 9efba3ddcfb intel/perf: expose timestamp begin for mdapi
+  * 5824ffcbe45 radeonsi: work around an LLVM crash when using
+    llvm.amdgcn.icmp.i64.i1
+  * 64c24b31b7a intel/compiler: Fix illegal mutation in
+    get_nir_image_intrinsic_image
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 25 Jan 2020 09:42:28 +0100
+
 mesa (19.3.2+git2001212017.baadbbda19e~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
