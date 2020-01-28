@@ -1,3 +1,15 @@
+mutter (3.34.3+git2001271709.ca5ed7369~e~gnome1) eoan; urgency=medium
+
+  * New snapshot:
+  * ca5ed7369 cogl: Fix GLES2 fallback
+  * 5ae317e00 wayland: Do not check current offer on DnD button release
+  * 21dca3293 xwayland: Set XDND source-side actions as per XDND
+  * 41c6e1375 x11: Map x11 (UTF8_)STRING requests to text/plain
+    mimetypes
+  * d38c30c12 wayland: Preserve XdndTypeList for future callers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jan 2020 17:20:02 +0100
+
 mutter (3.34.3+git2001211447.59e9b073a~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
