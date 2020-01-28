@@ -1,3 +1,53 @@
+mesa (20.0.0~git2001281517.815a603889b~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 815a603889b anv: Handle unavailable queries in
+    vkCmdCopyQueryPoolResults
+  * af92ce50a7e anv: Properly fetch partial results in
+    vkGetQueryPoolResults
+  * 7edcf4a59d0 aco: fix rebase error from GS copy shader support
+  * dd9bf7d2911 anv/android: make format_supported_with_usage static
+  * 104744f4dfc anv/android: setup gralloc1 usage from gralloc0 usage
+    manually
+  * 03a0d39366d aco: use MUBUF in some situations instead of splitting
+    vertex fetches
+  * 21d2799cee8 aco: value-number MUBUF instructions
+  * d39f5519a11 aco: handle unaligned vertex fetch on GFX10
+  * d9e357e35ba aco: skip unused channels at the start when fetching
+    vertices
+  * 525b1073474 aco: rework vertex fetching a bit
+  * 4363a1f75b3 amd/common,radv: move vertex_format_table to
+    ac_shader_util.{h,c}
+  * ab7ac1ffda0 gallium/swr: fix tessellation state save/restore
+  * fe5267d3223 lima: disable early-z if fragment shader uses discard
+  * 650c6805453 lima: ppir: always create move and update ld_tex
+    successors for all blocks
+  * 4a0f62f1fca lima: ppir: don't delete root ld_tex nodes without
+    successors in current block
+  * 63af27bc768 freedreno/drm: fix invalid-cmdstream-size with older
+    kernels
+  * 0c154d9e2db Revert "winsys/amdgpu: Re-use amdgpu_screen_winsys when
+    possible"
+  * ba06c7620f3 Revert "winsys/amdgpu: Close KMS handles for other DRM
+    file descriptions"
+  * 993f866d2e3 anv: Insert holes for non-existant XFB varyings
+  * 68b3bfaa424 intel/genxml: Make SO_DECL::"Hole Flag" a Boolean
+  * a27542c5dde intel/compiler: Clear accumulator register before EOT
+  * 480cf7d9bf0 pan/midgard: Remove float_bitcast
+  * 83e1fa87a7e radv: do not allow sparse resources with multi-planar
+    formats
+  * 24360966ab3 panfrost/midgard: Prettify embedded constant prints
+  * aa973fc14e1 panfrost/midgard: Add a condense_writemask() helper
+  * 2dc63d39d31 aco: fix literal application with
+    v_cndmask_b32/v_addc_co_u32/etc
+  * 827681f9213 aco: always add sgprs to sgpr_ids when choosing literals
+  * 92970adb4ba aco: fix operand to scc when selecting SGPR
+    ufind_msb/ifind_msb
+  * e6c90e4af94 aco: fix WaR check for >64-bit FLAT/GLOBAL instructions
+  * 8784062abbc pan/midgard: Handle tag 0x4 as texture
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jan 2020 17:17:43 +0100
+
 mesa (20.0.0~git2001250559.eb7cd575da0~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
