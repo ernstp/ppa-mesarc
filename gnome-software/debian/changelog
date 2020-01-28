@@ -1,3 +1,12 @@
+gnome-software (3.34.3+git2001280745.46ffd04e~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 46ffd04e rpm-ostree: Show progress when downloading distro upgrades
+  * dcfff1d3 rpm-ostree: Hook up distro upgrade triggering
+  * f6227489 rpm-ostree: Avoid downgrade error when doing distro upgrade
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jan 2020 17:17:29 +0100
+
 gnome-software (3.34.3+git2001221550.f8d3b92b~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
