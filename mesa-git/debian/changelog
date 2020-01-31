@@ -1,3 +1,40 @@
+mesa (20.0.0~rc1+git2001301414.21f5d79c7b0~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 21f5d79c7b0 VERSION: bump to 20.0.0-rc1
+  * 58fd26c4332 turnip: Fix vkCmdCopyQueryPoolResults with available
+    flag
+  * 1a3e2a7fa8b turnip: Fix vkGetQueryPoolResults with available flag
+  * 1c3319cf817 turnip: Free event->bo on vkDestroyEvent
+  * 594cb303561 loader: Fix leak of kernel driver name
+  * f09c466732e docs: Update SWR tessellation support
+  * bdba744d700 i965: Use brw_batch_references in tex_busy check
+  * d3fa18a1fa2 etnaviv: drm-shim: add GC400
+  * c5e4d287243 lima: add noheap debug option
+  * b220aec6285 lima: create heap buffer with new interface if available
+  * 92465cc9994 lima: sync lima_drm.h with kernel
+  * cd30c4d7197 lima: fix lima_set_vertex_buffers()
+  * 1c5d84fcae7 turnip: hook up cmdbuffer event set/wait
+  * 5b5b7624753 etnaviv: drop default state for PE_STENCIL_CONFIG_EXT2
+  * d78e0de772d docs: add new features for RADV/ACO.
+  * 3a3b16a3958 radv: refactor physical device properties
+  * 5b9fe184854 freedreno: remove flush-queue
+  * b3b1fa5e2bc freedreno: add gmem_lock
+  * 91f9bb99c5e freedreno: add gmem state cache
+  * 712f8802ee2 freedreno: get GMEM state from batch
+  * 4bcc3a0923b freedreno/a2xx: constify gmem state
+  * 5d442144ae7 freedreno/a3xx: constify gmem state
+  * 7236d6dd4c9 freedreno/a4xx: constify gmem state
+  * 2d2f4a55ebd freedreno/a5xx: constify gmem state
+  * 637ca78ee29 freedreno/a6xx: constify gmem state
+  * 82a64af907d freedreno: constify fd_vsc_pipe
+  * cbae9f34e9c freedreno: constify fd_tile
+  * c7ab8874d07 freedreno: consolidate GMEM state
+  * 62c10b395e1 freedreno: extract vsc pipe bo from GMEM state
+  * d5c32db0760 turnip: remove unused descriptor state dirty
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 31 Jan 2020 01:17:45 +0100
+
 mesa (19.3.2+git2001241039.b4c1a68af26~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
