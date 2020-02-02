@@ -4,3 +4,4 @@ meson-add-back-default_driver-option.patch
 x11-Add-support-for-fractional-scaling-using-Randr.patch
 #debian/synaptics-support.patch
 debian/tests-Tag-closed-transient-no-input-tests-as-flaky.patch
+a444a4c5f58ea516ad3cd9d6ddc0056c3ca9bc90.patch
