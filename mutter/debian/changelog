@@ -1,3 +1,19 @@
+mutter (3.34.3+git2002011630.666bd2500~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 666bd2500 wayland: Handle dragging from/dropping to v1 data device
+    users
+  * 208fd1b08 wayland/data-device: Small style fixes
+  * 12152c7ed wayland/data-device: Guard against a potential crash
+  * de7782221 wayland/data-device: Cancel drag source when the drag
+    finished unsuccessfully
+  * 651d2a57f wayland: Check focus surface client in
+    wl_data_device.set_selection()
+  * e18aa564b wayland: Clean up meta_wayland_data_device_set_primary()
+  * 4cc5b85c5 wayland: Flatten data source object hierarchy
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Feb 2020 10:34:20 +0100
+
 mutter (3.34.3+git2001271709.ca5ed7369~e~gnome1) eoan; urgency=medium
 
   * New snapshot:
