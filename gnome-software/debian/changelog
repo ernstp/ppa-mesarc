@@ -1,3 +1,13 @@
+gnome-software (3.34.3+git2001311115.0c72aabd~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 0c72aabd rpm-ostree: Don't error out when distro upgrade ref is
+    already deployed
+  * 10ba6327 Update Japanese translation
+  * 927dfa49 gs-utils: Handle AsIconErrors
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Feb 2020 10:31:37 +0100
+
 gnome-software (3.34.3+git2001280745.46ffd04e~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
