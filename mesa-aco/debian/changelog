@@ -1,3 +1,43 @@
+mesa (20.1.0~git2002020654.8ff613dc587~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 8ff613dc587 VERSION: bump after 20.0 branch point
+  * 02658df152d lima: Fix build with GCC 10.
+  * 982d61e2cdd freedreno/ir3: fix a dirty lie
+  * 752aeb7b3fe freedreno/ir3: simplify split from collect
+  * 8d0e7d9a4c1 freedreno/ir3: create fragcoord instructions in input
+    block
+  * fb09020ef23 freedreno/ir3: remove unused tex arg harder
+  * 2ffe44ec0a5 freedreno/ir3: add RA sanity check
+  * 2f4f46b7080 freedreno/a6xx: fix lrz overflow
+  * 3e79c4f0edc freedreno/ir3: two pass register allocation
+  * b0293af7a5d freedreno/ir3: don't precolor unused inputs
+  * ad2587d3c88 freedreno/ir3: add is_tex_or_prefetch()
+  * 4a7a6c9ef0e freedreno/ir3: number instructions from one
+  * 0f78c32492e freedreno/ir3: post-RA sched pass
+  * 3369406e44b freedreno/ir3: fix kill scheduling
+  * 9a9f78f1f9f freedreno/ir3/ra: make use()/def() functions instead of
+    macros
+  * a5f24f966ae freedreno/ir3: a bit more optmsgs debug
+  * 300d1181c72 freedreno/ir3: move atomic fixup after RA
+  * 304b50c9f8f freedreno/ir3: move block-scheduling into legalize
+  * 093c94456bc freedreno/ir3: move nop padding to legalize
+  * c803c662f99 freedreno/ir3: split out delay helpers
+  * 54c795f8297 freedreno/ir3: fix crash when no non-input instructions
+  * c1194e10b2d freedreno/ir3: cleanup after lower_locals_to_regs
+  * f0b792ea060 freedreno/ir3: shuffle a few ir3_register fields
+  * 95831e2f66a intel/gen12+: Set way_size_per_bank to 4
+  * 00a84c170a0 intel/gen12+: Reserve 4KB of URB space per bank for
+    Compute Engine
+  * c0d8b373ade virgl: Use align_free for align_malloc allocated buffer
+  * d326d30efef freedreno/drm: readonly cmdstream
+  * f93dfb509cb intel/fs: Write the address register with NoMask for
+    MOV_INDIRECT
+  * 9a95abd0f75 intel/tools: Handle strides better when dumping buffers
+  * 51d7c42165d intel/disasm: SEND has two sources on Gen12+
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Feb 2020 10:31:58 +0100
+
 mesa (20.0.0~git2001281517.815a603889b~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
