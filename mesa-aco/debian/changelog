@@ -1,3 +1,44 @@
+mesa (20.1.0~git2002072203.1c3f4c07047~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1c3f4c07047 zink: fixup sampler-usage
+  * fa915a724fb zink: lower away fdph
+  * 0c36b1c0dbf etnaviv: enable texture upload memory throttling
+  * 7bddaa61362 freedreno/ir3: Fold const only when the type is float
+  * 260bd32b58a freedreno/ir3: put the conversion back for half const to
+    the right place.
+  * d70192e6973 freedreno/ir3: Add cat4 mediump opcodes
+  * 3eca6d9ce14 freedreno/ir3: fold const conversion into consumer
+  * 5e2012d5c74 freedreno/ir3: fix printing half constant registers.
+  * d55dfef7823 freedreno/ir3: Set IR3_REG_HALF flag on src as well in
+    immediate MOV
+  * fbfc8c35315 docs: Mark 20.0-rc2 as done
+  * d8bae10bfe0 freedreno: android: fix build of perfcounters.
+  * fad99243151 freedreno: android: add a6xx-pack.xml.h generation to
+    android build
+  * cad400a59e4 freedreno: android: fix build failure on android due to
+    python version
+  * ff8265b64ff gallium/swr: Fix llvm11 compilation issues
+  * f239bb8020d Vulkan Overlay: Don't try to change the image layout to
+    present twice
+  * 4b978cd950c aco: do not use ds_{read,write}2 on GFX6
+  * da76dfb5159 intel/vec4: fix valgrind errors with vf_values array
+  * 1572e8f3e13 lima/parser: Change value name in RSW parser
+  * 5802259e543 lima/parser: Extend AUX0 findings
+  * cebfb3169ca lima/parser: Fix RSW depth test parsing
+  * eaa0784fd32 i965: remove duplicated comment
+  * 26ab38f1440 ci: Drop turnip opt-in option
+  * fbc117cba31 llvmpipe: advertise 4 vertex streams
+  * 7e6690b1a62 draw: don't emit vertex to streams with no outputs
+  * 72154c90752 draw: emit multiple streams to streamout.
+  * 00c066e5a04 draw/gs: track emitted prims + verts per stream.
+  * 0c77007c9db draw: change geom shader output to an array of outputs.
+  * 8583fcd8f18 gallivm/nir: add support for multiple vertex streams
+  * b6688413131 gallivm/swr: add stream_id to geom epilogue emit
+  * 9d70002744c llvmpipe/query: add support for indexed queries
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Feb 2020 00:21:54 +0100
+
 mesa (20.1.0~git2002020654.8ff613dc587~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
