@@ -1,3 +1,22 @@
+mutter (3.34.3+git2002040027.2235629d2~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 2235629d2 core: Extend list of image formats to be stored in the
+    clipboard manager
+  * 59da900a4 core: Define specific image formats to be stored in the
+    clipboard manager
+  * 0e0dae277 core: Demote image formats' priority from preservation in
+    clipboard manager
+  * 4959ae8bc clutter/brightness-contrast-effect: Compare float with
+    G_APPROX_VALUE
+  * aea5541ff clutter/offscreen-effect: Clear offscreen when pre-paint
+    fails
+  * 47fe7ac25 clutter/offscreen-effect: Clear offscreen framebuffer when
+    disabling
+  * d35d7fb61 clutter/offscreen-effect: Use g_clear_pointer for cleanup
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Feb 2020 00:26:34 +0100
+
 mutter (3.34.3+git2002011630.666bd2500~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
