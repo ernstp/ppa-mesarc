@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git2002051108.edcbe5f~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * edcbe5f Fix link failure with gcc 10
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Feb 2020 00:27:00 +0100
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git1911221729.fd66f5c~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
