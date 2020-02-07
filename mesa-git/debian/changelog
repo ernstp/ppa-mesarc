@@ -1,3 +1,54 @@
+mesa (20.0.0~rc2+git2002070842.440e52ca031~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 440e52ca031 VERSION: bump to 20.0-rc2
+  * 8dede1745c6 gallium/swr: Fix gcc 4.8.5 compile error
+  * 222b47c6c56 intel/fs: Don't count integer instructions as being
+    possibly coissue
+  * ccf70209d28 util/disk_cache: check for write() failure in the zstd
+    path
+  * 7538851a227 anv: implement gen9 post sync pipe control workaround
+  * c937b846437 freedreno: allow ctx->batch to be NULL
+  * b8b9233d5a4 radv: Do not set SX DISABLE bits for RB+ with unused
+    surfaces.
+  * e163a399942 freedreno/perfcntrs: fix fd leak
+  * ce7f0212692 st/mesa: Handle the rest renderbuffer formats from
+    OSMesa
+  * 26adf4b5326 util/os_socket: fix header unavailable on windows
+  * 27e39daa4b5 i965: Do not set front_buffer_dirty if there is no front
+    buffer
+  * 69604c6fd42 .pick_status.json: Update to
+    7eaf21cb6f67adbe0e79b80b4feb8c816a98a720
+  * 450657e26c1 st/mesa: use uint-result for sampling stencil buffers
+  * ecf9055e9c3 etnaviv: Destroy rsc->pending_ctx set in
+    etna_resource_destroy()
+  * 66bb55cc685 clover: Use explicit conversion from llvm::StringRef to
+    std::string
+  * 958f06b99f1 .pick_status.json: Update to
+    9afdcd64f2c96f3fcc1a28912987f2e8066aa995
+  * 7bc056dd785 panfrost: Fix the damage box clamping logic
+  * b5a345595a1 util/os_socket: Include unistd.h to fix build error
+  * 0cac8f332ad anv/blorp: Use the correct size for
+    vkCmdCopyBufferToImage
+  * e87c0c17b24 lima: Fix build with GCC 10.
+  * e6fbf8d9d3b intel/fs: Write the address register with NoMask for
+    MOV_INDIRECT
+  * 208fb2edfad aco: fix image_atomic_cmp_swap
+  * 623126e7419 .pick_status.json: Update to
+    b550b7ef3b8d12f533b67b1a03159a127a3ff34a
+  * 4b43bee72fc aco: fix MUBUF VS input loads when expanding vec3 to
+    vec4 on GFX6
+  * e33167af797 anv: Always fill out the AUX table even if CCS is
+    disabled
+  * f60209b935a iris: Plumb deref block size through to 3DSTATE_SF
+  * 0aff56bd7a9 anv: Plumb deref block size through to 3DSTATE_SF
+  * 0bacf9963b8 intel/blorp: Plumb deref block size through to
+    3DSTATE_SF
+  * fc7ff68df76 intel/common: Return the block size from get_urb_config
+  * 4be5ef5caab anv: Emit URB setup earlier
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Feb 2020 00:24:15 +0100
+
 mesa (20.0.0~rc1+git2001301414.21f5d79c7b0~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
