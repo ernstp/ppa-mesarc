@@ -1,3 +1,10 @@
+mutter (3.34.3+git2002100902.b2bc34546~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * b2bc34546 wayland/subsurface: Keep subsurface actors reactive
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Feb 2020 22:17:23 +0100
+
 mutter (3.34.3+git2002040027.2235629d2~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
