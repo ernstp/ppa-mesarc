@@ -1,3 +1,50 @@
+mesa (20.0.0~rc3+git2002131018.6bbbef96991~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 6bbbef96991 VERSION: bump for 20.0.0-rc3
+  * fa0dcef2ef2 nir: do not use De Morgan's Law rules for flt and fge
+  * 4558bdb95aa aco: fix creating v_madak if v_mad_f32 has two sgpr
+    literals
+  * 75ea9c808d2 panfrost: Remove unused anonymous enum variables.
+  * e5f13bca20d Revert "gallium: Fix big-endian addressing of non-
+    bitmask array formats."
+  * f93c8d8598f radeonsi: fix the DCC MSAA bug workaround
+  * c4e1dd07eb5 svga: Use pipe_shader_state_from_tgsi to set shader
+    state
+  * f86e27156d7 svga: fix size of format_conversion_table[]
+  * 9724b0f32c0 .pick_status.json: Update to
+    23037627359e739c42b194dec54875aefbb9d00b
+  * a3bd400c141 aco: fix waiting for scalar stores before "writing back"
+    data on GFX8-GFX9
+  * 32dc7fff47f Vulkan overlay: use the corresponding image index for
+    each swapchain
+  * 027f9c887c3 radeonsi: don't report that multi-plane formats are
+    supported
+  * f3f47518512 freedreno/ir3: put the conversion back for half const to
+    the right place.
+  * a25c7674aae .pick_status.json: Update to
+    689817c9dfde9a0852f2b2489cb0fa93ffbcb215
+  * 1d17f427321 Vulkan Overlay: Don't try to change the image layout to
+    present twice
+  * e393404ff1d aco: do not use ds_{read,write}2 on GFX6
+  * 1f8db816321 intel/vec4: fix valgrind errors with vf_values array
+  * 8f29aaa2cf7 aco: fix gfx10_wave64_bpermute
+  * 1e0cc313ba0 Correctly wait in the fragment stage until all
+    semaphores are signaled
+  * d96f0faacf8 svga: Fix banded DMA upload
+  * 203710e94c2 anv: set MOCS on push constants
+  * d189ab9fccd intel: Load the driver even if I915_PARAM_REVISION is
+    not found.
+  * bd934ff613c swr: Fix GCC 4.9 checks.
+  * 51f7d81dd25 gallium: let the pipe drivers decide the supported
+    modifiers
+  * 06a9d51f270 aco/optimizer: Don't combine uniform bool s_and to
+    s_andn2.
+  * 419c992e653 .pick_status.json: Update to
+    d8bae10bfe0f487dcaec721743cd51441bcc12f5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Feb 2020 21:53:32 +0100
+
 mesa (20.0.0~rc2+git2002070842.440e52ca031~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
