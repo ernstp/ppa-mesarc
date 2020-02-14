@@ -1,3 +1,46 @@
+mesa (20.1.0~git2002141803.7bee388fb50~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 7bee388fb50 egl: directly access static members instead of using
+    _egl{Get,Set}ConfigKey()
+  * 946eacbafb4 freedreno/a6xx: document some unknown bits
+  * 75fbe089a6a freedreno: name sysmem color/depth flush events
+  * c57456aab69 panfrost: Simplify swizzle translation
+  * f3490a141c8 panfrost: Inline panfrost_get_default_swizzle
+  * efda2cfcf96 spirv2nir: Add kernel spirv support
+  * eeb6d611285 spirv2nir: print nir shader if translation succed
+  * 7e80b03dd15 zink: do not use SpvDimRect
+  * f43a3fc28ff lima: handle early-z and pixel kill better
+  * 582d0c5f147 gitlab-ci: Add three more dEQP-GLES31 tests to softpipe
+    skips
+  * 3d16bfc42de gitlab-ci: Sort random failure softpipe skips
+  * f86bf2e90a9 docs/new_features: empty the feature list for the 20.1
+    cycle
+  * 886acbe1c53 radv: remove unnecessary RADV_DEBUG=nobatchchain option
+  * 676869e1d4b glsl: fix gl_nir_set_uniform_initializers() for image
+    arrays
+  * 6baeca36899 intel/tools: Update aubinator_error_decode.
+  * 334788d4cc9 freedreno: allow INVALID modifier
+  * 3547e19bbd0 intel/isl: Switch to R8_UNORM format for compatiblity
+  * 207a93bbff1 intel/isl: Move get_format_encoding function to isl
+  * 2a98cf3b2ec Revert "gitlab-ci: disable a630 tests as mesa-cheza is
+    down (again)"
+  * 5a82273f09d freedreno/a6xx: fix Z24_UNORM_S8_UINT_AS_R8G8B8A8
+  * 4151d843236 iris: add support INTEL_blackhole_render
+  * 6d35610bd57 st: add support for INTEL_blackhole_render
+  * 5d7e9edba18 i965: enable INTEL_blackhole_render
+  * 74ec39f66d5 mesa: add INTEL_blackhole_render
+  * 08cff938b76 Revert "st/va: Convert interlaced NV12 to progressive"
+  * 3a2977e7b5c anv: Reject modifiers on depth/stencil formats
+  * 5a593bec16b gallium/swr: fix rdtsc debug statistics mechanism
+  * dd16ad107da gitlab-ci: remove load_store_vectorizer from expected
+    s390x test failures
+  * aca2458d1bf nir: fix nir_const_value_as_uint bit size in load/store
+    vectorizer tests
+  * 0c1ba69a270 Revert "nir: Add a couple trivial abs optimizations"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Feb 2020 21:59:25 +0100
+
 mesa (20.1.0~git2002072203.1c3f4c07047~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
