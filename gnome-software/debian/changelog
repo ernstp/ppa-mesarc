@@ -1,3 +1,10 @@
+gnome-software (3.34.3+git2002120931.406f6910~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 406f6910 Update Italian translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Feb 2020 22:09:37 +0100
+
 gnome-software (3.34.3+git2001311115.0c72aabd~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
