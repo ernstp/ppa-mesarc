@@ -1,3 +1,51 @@
+mesa (20.0.0+git2002191158.16c364aaf00~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 16c364aaf00 docs: Add release notes for 20.0.0
+  * 9abde3412d3 VERSION: bump for 20.0.0 release
+  * dfdfddc4bb5 docs: Empty new_features.txt
+  * 604fa0dcad1 Docs: Add 20.0.0 release notes
+  * 555cb9e7d21 st/nir: Unify inputs_read/outputs_written before
+    serializing NIR
+  * a06fc57fda6 zink: confused compilation macro usage for zink in
+    target helpers.
+  * f27e5d9df5b egl: Implement getImage/putImage on pbuffer swrast.
+  * 52714f58ff0 pan/midgard: Use fprintf instead of printf for constants
+  * 01dab4b7fee pan/midgard: Don't crash with constants on unknown ops
+  * 3b65640ea55 pan/midgard: Fix missing prefixes
+  * e6d598b69f5 intel/fs/gen12: Workaround data coherency issues due to
+    broken NoMask control flow.
+  * 5188cd51e2b intel/fs/gen12: Fixup/simplify SWSB annotations of
+    SIMD32 scratch writes.
+  * 96052fdc24e intel/fs/gen12: Workaround unwanted SEND execution due
+    to broken NoMask control flow.
+  * fa5b4bb2df3 intel/fs: Add virtual instruction to load mask of live
+    channels into flag register.
+  * 5df7a39c1b2 intel/fs/gen7: Fix fs_inst::flags_written() for
+    SHADER_OPCODE_FIND_LIVE_CHANNEL.
+  * d92cf573457 intel/fs/cse: Make HALT instruction act as CSE barrier.
+  * 5547fc53c04 radeonsi: don't wait for shader compilation to finish
+    when destroying a context
+  * 99d3ad1c71f .pick_status.json: Update to
+    bee5c9b0dc13dbae0ccf124124eaccebf7f2a435
+  * 0dce180b438 radeonsi/ngg: add VGT_FLUSH when enabling fast launch
+  * 1a35b3d2869 gallium/swr: simplify environmental variabled expansion
+    code
+  * ed906068317 glsl: fix gl_nir_set_uniform_initializers() for image
+    arrays
+  * ea43cc67026 .pick_status.json: Update to
+    946eacbafb47c8b94d47e7c9d2a8b02fff5a22fa
+  * edcc8ba73ad Revert "st/va: Convert interlaced NV12 to progressive"
+  * 6aacd69a027 Revert "nir: Add a couple trivial abs optimizations"
+  * 1c0b76a3826 iris: fix aux buf map failure in 32bits app on Android
+  * a429930e0ac glsl: fix a memory leak with resource_set
+  * 5c0a93b6eb3 radeonsi: make si_fence_server_signal flush pipe without
+    work
+  * 0e0abec7b64 .pick_status.json: Update to
+    2a98cf3b2ecea43cea148df7f77d2abadfd1c9db
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Feb 2020 22:09:48 +0100
+
 mesa (20.0.0~rc3+git2002131018.6bbbef96991~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
