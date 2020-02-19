@@ -1,3 +1,49 @@
+mesa (20.1.0~git2002192005.97a590af21e~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 97a590af21e docs: Mark 20.0.0-rc3 as done
+  * 772d60385cc docs: Mark 19.3.4 as done
+  * 288e9fd295b docs: Add SHA256 sum for 19.3.4
+  * 3238f4c3abf docs: Add release notes for 19.3.4
+  * d8fe9e045f0 anv: Drop anv_image.c:get_surface()
+  * 58bdc1c748f nir/search: Use larger type to hold linearized index
+  * 912ee82521e gallium/util: remove unused u_surfaces.c/h
+  * 360ffdf4e23 main/get: Converted type conversion macros to inline
+    functions
+  * f1dc4c9554c Mark a few static inline helpers with ASSERTED
+  * d46a5cfe781 mesa/draw: Make sure all the unused fields are
+    initialized to zero
+  * 6edbb3c6d07 mesa: Fix FLUSH_VERTICES in SubpixelPrecisionBiasNV.
+  * d3160a6177a panfrost: Remove old hack
+  * 7f6f419be93 panfrost: Remove old comment
+  * aed052f7039 panfrost: Remove dirty tracking
+  * fe5c5507bd6 aco: add some helpers for filling/testing register
+    ranges
+  * 43497e30e26 aco: add RegisterFile
+  * 7e6010106fb st/vdpau: Only call is_video_format_supported hook if
+    needed
+  * 72154237fb7 iris: Do not dereference nullptr with pipe_reference
+  * d800bcd9b96 glsl/blob: Do not call memcpy if there is nothing to
+    copy
+  * 7685f48ece7 intel/bufmgr: Cast bitshift to unsigned
+  * d5931f285be intel/compiler: Do not qsort zero sized array
+  * d596795d4d3 brw_fs: Avoid zero size vla
+  * d4e395a27d7 brw_nir: Cast bitshift to unsigned
+  * 82913bac145 docs/envvars: document RADV_TEX_ANISO
+  * 72f7d3d5b09 gallium: Only define PIPE_ALIGNSTACK on x86.
+  * 427870abfd0 llvmpipe: Fix another uninitialized value warning, on
+    init_val.
+  * 81225e1f034 llvmpipe: Silence uninitialized variable warning about
+    "scissor"
+  * dc8c5af99b0 llvmpipe: Silence uninitialized variable warning about
+    "vals"
+  * d8d34238a6d llvmpipe: Fix warning about uninitialized "op" in the
+    NIR path.
+  * b32bd704c0a llvmpipe: Silence uninitialized variable warning about
+    "chan"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Feb 2020 22:07:27 +0100
+
 mesa (20.1.0~git2002141803.7bee388fb50~b~mesaaco3) bionic; urgency=medium
 
   * Fix ACO patch
