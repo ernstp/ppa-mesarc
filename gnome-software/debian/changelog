@@ -1,3 +1,13 @@
+gnome-software (3.34.3+git2002151910.6f2b6236~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 6f2b6236 Update Japanese translation
+  * d825e42d Update Japanese translation
+  * 02d99edb Update Japanese translation
+  * 23c3a574 Update Japanese translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Feb 2020 22:07:09 +0100
+
 gnome-software (3.34.3+git2002120931.406f6910~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
