@@ -1,3 +1,13 @@
+mutter (3.34.4+git2002200127.011ff1560~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 011ff1560 window-actor: Don't show actor until
+    meta_window_actor_show()
+  * c3d2f3f39 window: Ignore requests to be placed on non-existent
+    workspaces
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 23 Feb 2020 17:19:22 +0100
+
 mutter (3.34.4+git2002190308.053bb5901~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
