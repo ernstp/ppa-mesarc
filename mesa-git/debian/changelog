@@ -1,3 +1,27 @@
+mesa (20.0.0+git2002211949.4d3f535ebb3~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 4d3f535ebb3 iris: handle the failure of converting unsupported yuv
+    formats to isl
+  * 5a7ae6be76b i965: Do not generate D16 B5G6R5_UNORM configs on gen <
+    8
+  * 5adcb0a62ac util: remove the dependency on kcmp.h
+  * 01020aef25c intel/fs: Correctly handle multiply of fsign with a
+    source modifier
+  * d43407e622f radeonsi: Fix compute copies for subsampled formats.
+  * 760b8cfd1c3 nir/search: Use larger type to hold linearized index
+  * 5376a799628 st/vdpau: Only call is_video_format_supported hook if
+    needed
+  * d499e9b4e25 llvmpipe: Fix real uninitialized use of "atype" for
+    SEMANTIC_FACE
+  * 387ee333051 mesa: fix immediate mode with tessellation and varying
+    patch vertices
+  * cdc4ea14965 intel/gen12: Take into account opcode when decoding SWSB
+  * 0d9f4578d67 .pick_status.json: Update to
+    8291d728dc997e87b4d2e4e451692643a1dba881
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 23 Feb 2020 17:16:32 +0100
+
 mesa (20.0.0+git2002191158.16c364aaf00~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
