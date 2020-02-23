@@ -1,3 +1,49 @@
+mesa (20.1.0~git2002211644.4d57a275048~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 4d57a275048 iris: Set MOCS for constant packets on Gen12+
+  * 4bac2fa3c6d iris: Fix BLORP vertex buffers to respect ISL MOCS
+    settings
+  * 1cdf5abdfae iris: Make mocs an inline helper in iris_resource.h
+  * f8ab00776cc ci: Remove a useless filtering of the lava logs.
+  * 7f3f9b2b192 ci: Don't bother generating deqp junit results since we
+    don't present it.
+  * 4c372d384a7 ci: Document how LAVA runners work.
+  * 994e2581226 ci: Make LAVA job fails emit the full list of unexpected
+    test results.
+  * 54dbb55ea82 ci: Make sure that we have a proper shell prompt for
+    LAVA.
+  * 985343e71ae ci: prepare-artifacts: Make the indent here match
+    previously in the file
+  * 89a3856714e anv: Add pipe_state_for_stage() helper
+  * 7df5d36078a anv: Use intel_debug_flag_for_shader_stage()
+  * f58b384fbef spirv: Be consistent when checking for Shader/Kernel
+  * 5f3cbbd958d spirv: Remove outdated SPIR-V decoration warnings
+  * 1598370aca6 nir/builder: Return an integer from nir_get_texture_size
+  * 265e234e234 nir: Fix the nir_builder include path for
+    nir_builtin_builder
+  * f5a8958910f util: Change os_same_file_description return type from
+    bool to int
+  * 228cbdfe67e winsys/amdgpu: Make local variable r signed
+  * 87365e263ec nir/lower_ssbo: handle atomics
+  * 7ab4e4dd963 nir: Add SSBO->global lowering pass
+  * b929565ea8d panfrost: Rewrite texture descriptor creation logic
+  * ad44f587a8e panfrost: Move format translation to root
+  * 58f14018b4f panfrost: Move pan_afbc.c to root
+  * 5ddf7ad9d20 panfrost: Move checksum routines to root panfrost
+  * 2e3318b151a util: promote u_debug_memory.c to src/util
+  * 8021daeb1fb lima: implement PLB PP stream cache
+  * 7edde3d26bb docs: Update index, relnotes, and release-calendar for
+    20.0
+  * 0ada39f37ad Docs: Add 20.0.0 release notes
+  * 740cb3d1939 radv: use RADEON_FLAG_ZERO_VRAM when creating the trace
+    BO
+  * 37650bf9380 radv/winsys: add a new flag that requests zerovram
+    allocations
+  * 7a73446c513 gallivm: fix crash in emit_get_buffer_size
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 23 Feb 2020 17:13:24 +0100
+
 mesa (20.1.0~git2002192005.97a590af21e~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
