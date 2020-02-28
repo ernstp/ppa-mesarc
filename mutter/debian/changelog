@@ -1,3 +1,11 @@
+mutter (3.34.4+git2002231819.2709a4ffb~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * 2709a4ffb wayland/data-device: Fix crash with offer from X11 client
+  * c65db4017 wayland/data-device: Check resource version on cancel
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 Feb 2020 21:30:30 +0100
+
 mutter (3.34.4+git2002200127.011ff1560~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
