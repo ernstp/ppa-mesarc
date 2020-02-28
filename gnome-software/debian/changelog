@@ -1,3 +1,10 @@
+gnome-software (3.34.3+git2002241836.a2168fa3~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * a2168fa3 Update Romanian translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 Feb 2020 21:26:12 +0100
+
 gnome-software (3.34.3+git2002151910.6f2b6236~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
