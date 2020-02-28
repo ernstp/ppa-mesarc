@@ -1,3 +1,43 @@
+mesa (20.1.0~git2002281653.8cb9f794131~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 8cb9f794131 freedreno/ir3: add assert
+  * ac705edd829 freedreno/ir3: fix assert with getinfo
+  * c1f43674618 freedreno/ir3: don't precolor unassigned inputs
+  * 4b8e198fd2b freedreno/ir3: fix crash with samgq workaround
+  * 56565b7bba5 freedreno/ir3: update SFU delay
+  * 2cf4b5f29ed freedreno/ir3: track half-precision live values
+  * 4353b3c1c5a freedreno/ir3: don't hide latency when there is none to
+    hide
+  * 9d2aaa589cf freedreno/ir3: rewrite regmask to better support a6xx+
+  * c02cd8afbd6 freedreno/ir3: remove regmask_set_if_not()
+  * 2fa64729db9 freedreno: honor FD_MESA_DEBUG=nogrow
+  * bab9db6c026 freedreno/a6xx: enable SKIP_IB2_ENABLE properly
+  * 9724a7c1055 freedreno/a6xx: don't emit YIELD packet
+  * 45771786e4a freedreno/a6xx: whitespace fix
+  * ae3e237db05 freedreno/a6xx: emit LRZ clear in sysmem too
+  * 6b605804ead freedreno/a6xx: remove unused param
+  * 141d0d1c25d freedreno/ir3: remove from_tgsi
+  * c7ac1bcea01 turnip: increase array sizes in tu_descriptor_map
+  * d195eef05d2 turnip: fall back to sysmem when attachments don't fit
+    into gmem
+  * de3230e0a5d turnip: remove unnecessary fb size check
+  * cf302c9a22f turnip: don't hardcode gmem base for input attachment
+  * 6420406f197 turnip: fix srgb MRT
+  * 8f9e1c6047e turnip: fix hw binning + render_area offset interaction
+  * de33c23370b turnip: minify image_view extent
+  * b18d6575fee turnip: remove unecessary MRT_CONTROL fill
+  * 33b2db5fb93 turnip: move some constant state to tu6_init_hw
+  * 7d27a9ffb36 turnip: check the right alignment requirement on shader
+    iova
+  * 0f0662a5515 turnip: add r5g5b5a1_unorm/b5g5r5a1_unorm  formats
+  * 80ceebcdd10 turnip: rework format table to support
+    r5g5b5a1_unorm/b5g5r5a1_unorm
+  * 89c6ef42335 util/format: add missing BC4/BC5 vulkan formats
+  * 339f127f2b3 panfrost: LogicOp fixes and non 8-bit format support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 Feb 2020 21:26:31 +0100
+
 mesa (20.1.0~git2002211644.4d57a275048~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
