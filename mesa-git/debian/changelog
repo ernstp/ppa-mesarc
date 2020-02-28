@@ -1,3 +1,26 @@
+mesa (20.0.0+git2002250854.20e6bcea31e~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 20e6bcea31e v3d: Sync on last CS when non-compute stage uses
+    resource written by CS
+  * 16615264b21 gitlab-ci: lima: Add flaky tests to the skips list
+  * 555bf5f9911 glx/drisw: fix shm put image fallback
+  * c2dac5a508c glx/drisw: return false if shmid == -1
+  * 01929a5d90a glx/drisw: add getImageShm2 path
+  * b5b626396e0 dri: add another get shm variant.
+  * 9243bbc9f9b .pick_status.json: Update to
+    01496e3d1ea0370af03e6645dbd2b864c2ace94c
+  * 5d48c296580 iris: Fix import sync-file into syncobj
+  * d7f95b226b5 iris: Fix BLORP vertex buffers to respect ISL MOCS
+    settings
+  * 23043719f75 iris: Make mocs an inline helper in iris_resource.h
+  * 4fbaecd7683 spirv: Remove outdated SPIR-V decoration warnings
+  * 91de922c7ff util: promote u_debug_memory.c to src/util
+  * 410dad2eb44 .pick_status.json: Update to
+    e4baff90812d799d586296fcad992ddcc553c359
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 Feb 2020 21:28:31 +0100
+
 mesa (20.0.0+git2002211949.4d3f535ebb3~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
