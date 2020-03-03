@@ -1,3 +1,10 @@
+mesa (20.1.0~git2003031750.18675363a35~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 18675363a35 gallium/swr: fix corruptions in Unigine Heaven
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 Mar 2020 19:50:40 +0100
+
 mesa (20.1.0~git2003031706.0ab5c88a0ac~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
