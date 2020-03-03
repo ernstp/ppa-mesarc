@@ -1,3 +1,48 @@
+mesa (20.1.0~git2003031706.0ab5c88a0ac~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 0ab5c88a0ac st/va: GetConfigAttributes: check profile and entrypoint
+    combination
+  * cd40110420b intel/isl: Implement D16_UNORM workarounds.
+  * 9fea90ad517 aco: keep track of which events are used in a barrier
+  * 3f31c54842d st/va/postproc: reallocate interlaced destination buffer
+  * 2d32248f49e panfrost: fix transform feedback
+  * 585a21ceca0 gallium: add PIPE_CAP_PSIZ_CLAMPED
+  * babf7357d24 gallium: add PIPE_CAP_VIEWPORT_TRANSFORM_LOWERED
+  * 4ce339e7411 gallium: add PIPE_CAP_PACKED_STREAM_OUTPUT
+  * 82dc149254a glsl/linker: add xfb workaround for modified built-in
+    variables
+  * 4a329bea44f glsl/linker: handle array/struct members for
+    DisableXfbPacking
+  * 00746fa2dab glsl/linker: add DisableTransformFeedbackPacking
+    workaround
+  * 8b361df9cf7 spirv: fix memory_barrier_tcs_patch emission
+  * 6d839addf95 spirv: improve creation of memory_barrier
+  * 5d713fb66e7 lima: don't disable tiling if there's linear modifier in
+    list
+  * 46a8cab58bc ac: rename min_vgpr_alloc to min_wave64_vgpr_alloc
+  * 33faef6a340 ac: rename vgpr_alloc_granularity to
+    wave64_vgpr_alloc_granularity
+  * 9432eb3e9ce ac: rename lds_size_per_cu to lds_size_per_workgroup
+  * 69628ababbd turnip: Execute main cs for secondary command buffers
+  * 5715a61fa96 turnip: Promote tu_cs_get_size/is_empty to header
+  * bdf20d324bf nvc0: enable EXT_texture_shadow_lod
+  * 11a06dfd4ba st/mesa: allow TXB2/TXL2 to work with cube array shadow
+    textures
+  * 1d3b0b90888 nv50,nvc0: add newly added PIPE_CAP's to list
+  * 62f7197fb54 anv: multiply the scratch space by 4 on gen9-10 like
+    iris and i965
+  * aa78801f0a6 intel/device: bdw_gt1 actually has 6 eus per subslice
+  * 9e5ce30da7f intel: fix the gen 12 compute shader scratch IDs
+  * 1efe139cad1 intel: fix the gen 11 compute shader scratch IDs
+  * d0c66869c1f pan/bi: Move some definitions from disasm to bifrost.h
+  * 346262ceb6d pan/bi: Structify FMA_FADD
+  * 4fe5b59a96a pan/bi: Squash LD_ATTR ops together
+  * ee957bc0f37 pan/bi: Combine LOAD_VARYING_ADDRESS instructions by
+    type
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 Mar 2020 18:54:17 +0100
+
 mesa (20.1.0~git2002281653.8cb9f794131~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
