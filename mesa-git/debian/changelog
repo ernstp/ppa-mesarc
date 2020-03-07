@@ -1,3 +1,49 @@
+mesa (20.0.1+git2003061643.f8f4c317fb0~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f8f4c317fb0 bin/gen_release_notes.py: fix commit list command
+  * f64c5d0cf63 nir/lower_input_attachments: remove bogus assert in
+    try_lower_input_texop()
+  * a1041546ec0 iris: Don't skip fast depth clears if the color changed
+  * 18508b37cb6 isl: Set 3DSTATE_DEPTH_BUFFER::Depth correctly for 3D
+    surfaces
+  * acc1dfdc025 .pick_status.json: Update to
+    70341d7746c177a4cd7377ef633e9f85afd11d54
+  * 955226028d7 gitlab-ci: Add add a set of lima flakes
+  * 45e14cbdc77 Revert "spirv: Use a simpler and more correct
+    implementaiton of tanh()"
+  * a9ee554df3c Revert "glsl: Use a simpler formula for tanh"
+  * 3710f7c6a11 aco: fix image load/store with lod and 1D images
+  * b6bb359b646 Revert "mesa: check for z=0 in _mesa_Vertex3dv()"
+  * 4960149a1f1 .pick_status.json: Update to
+    07f1ef5656e0721282d01a8421eaca056348137d
+  * 4392cf2d6de docs: Add sha256sums for 20.0.1
+  * 53b2b224dc2 Bump version for 20.0.1
+  * bc67340ea55 docs: add relnotes for 20.0.1
+  * 1defcf02b49 Revert "glx: convert glx_config_create_list to one big
+    calloc"
+  * 3d203789a93 intel/gen12+: Disable mid thread preemption.
+  * 5620cd4bcaf aco: fix carry-out size for wave32 v_add_co_u32_e64
+  * fe1ba4a0417 aco: keep track of which events are used in a barrier
+  * d8083746748 intel/device: bdw_gt1 actually has 6 eus per subslice
+  * e7b8a304bda intel: fix the gen 12 compute shader scratch IDs
+  * dd4df57ad9e intel: fix the gen 11 compute shader scratch IDs
+  * 131136ab99c .pick_status.json: Update to
+    0ac731b1ff96de46998948aa06081efa5140d50e
+  * 54574288a10 mesa/st: fix formats required for EXT_texture_norm16
+  * eb4a39ba2f4 intel/compiler: Restrict cs_threads to 64
+  * d0a1bc1c217 .pick_status.json: Update to
+    3503cb4c28e01b34f3a25546c058150709c22348
+  * 6f9a26ac25a mesa: fix incorrect prim.begin/end for
+    glMultiDrawElements
+  * 8334c60cba6 turnip: fix srgb MRT
+  * a14b7adabd3 aco: Fix signed-vs-unsigned warning.
+  * 9fc39b9c670 ac/llvm: flush denorms for nir_op_fmed3 on GFX8 and
+    older gens
+  * 710388f0067 ac/llvm: fix 16-bit fmed3 on GFX8 and older gens
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 07 Mar 2020 13:03:22 +0100
+
 mesa (20.0.0+git2002250854.20e6bcea31e~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
