@@ -1,3 +1,41 @@
+mesa (20.1.0~git2003071109.0103f02acb1~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 0103f02acb1 gitlab-ci: Always name artifacts archive after the job
+    producing it
+  * 20c09c9c068 anv: stop storing prog param data into shader blobs
+  * e03f9652801 anv: Bounds-check pushed UBOs when robustBufferAccess =
+    true
+  * faea84e2540 anv: Add an align_down_u32 helper
+  * 61ac8cf0838 anv: Align UBO sizes to 32B
+  * 4610d69e37f anv: Delete some pointless break statements
+  * 28c243e9ece anv: Pass buffer addresses into emit_push_constant*
+  * ff5de35127d anv: Mark max_push_range UNUSED and simplify the code
+  * 35ca2ad22e2 anv: Parse VkPhysicalDeviceFeatures2 in CreateDevice
+  * 0e4c001951a docs/relnotes/20.0: fix vulkan version reported
+  * 5ff443b8aa9 docs/relnotes/19.3: fix vulkan version reported
+  * 2557d614d36 gen_release_notes: fix vulkan version reported
+  * de30a7ae6ea pan/bi: Fix Android.mk
+  * 0b0be49005b pan/bi: Rename next-wait to simply 'wait'
+  * b329f8c750a pan/bi: Add dummy scheduler
+  * 51e537c9fa4 pan/bi: Implement load_const
+  * 1ead0d3488b pan/bi: Add preliminary LOAD_UNIFORM implementation
+  * 48910e83889 pan/bi: Implement store_vary for vertex shaders
+  * d86659ca57e pan/bi: Add helpers for creating temporaries
+  * 59b476e11ad pan/bi: Implement load_input for vertex shaders
+  * dabb6c6b9fd pan/bi: Implement store_output for fragment shaders
+  * 79c1af06234 pan/bi: Add bi_schedule_barrier helper
+  * 92a4f26e7f5 pan/bi: Add blend_location to IR for BI_BLEND
+  * 07671826658 pan/bi: Implement nir_intrsinic_load_interpolated_input
+  * 806533ba7ff pan/bi: Fix destination printing
+  * 65c8dcca3b3 pan/bi: Handle jumps (breaks, continues)
+  * 987aea14000 pan/bi: Handle loops when ingesting CFG
+  * 9a00cf3d1ef pan/bi: Add support for if-else blocks
+  * 977a38c87f5 pan/bi: Call nir_lower_io_to_temporaries in cmdline
+  * 55dab92073f pan/bi: Add instruction emit/remove helpers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 07 Mar 2020 13:01:15 +0100
+
 mesa (20.1.0~git2003031750.18675363a35~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
