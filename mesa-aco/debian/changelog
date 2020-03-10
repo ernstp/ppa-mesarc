@@ -1,3 +1,41 @@
+mesa (20.1.0~git2003101652.ba03e308b66~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * ba03e308b66 freedreno/fdperf: set locale
+  * 30dd0599250 freedreno/computerator: add performance counter support
+  * af68b0d3460 vulkan/wsi: Return an error if dup() fails
+  * 34d2637fa76 vulkan/wsi: Don't leak the FD when
+    GetImageDrmFormatModifierProperties fails
+  * 3c96e25de77 freedreno/ir3: try to avoid syncs
+  * cc82521de4e freedreno/ir3: round-robin RA
+  * b2b349096f0 freedreno/ir3: track register usage in first RA pass
+  * 9ae93be8fbd freedreno/ir3: fix has_latency_to_hide
+  * b6eb11295a7 freedreno/ir3: split out has_latency_to_hide()
+  * dd2e050a842 util/ra: move NO_REG to header
+  * 36aed70b591 util/ra: spiff out select_reg_callback
+  * b3efa2a4da2 freedreno: fix FD_MESA_DEBUG=inorder
+  * 752b9985bed freedreno/ir3: add simplified stall estimation
+  * 64ae2ef8bbc freedreno/ir3: remove extra nops inserted in scheduler
+  * ad2ff7a278a freedreno/computerator: add hrsq/hlog2/hexp2
+  * 4a8e4c18d2f freedreno/ir3: also lower lowp frag outputs
+  * 3535797e8c9 nir/print: show variable precision
+  * 10eee6d8c63 intel/tools: Fix compilation with UBSan
+  * 74be835a84a i965: Use gl_vertex_format in brw_vertex_element.
+  * e62b82a693e i965: Make use of the vertex format functions in i965.
+  * cf929823bf8 mesa: Provide gl_vertex_format accessors.
+  * 1641c872ed3 mesa: Remove now unused _mesa_draw_attrib.
+  * 305724dd7b7 mesa: Remove now unused _mesa_draw_attrib_and_binding.
+  * 4ccda7bfd97 i965: Remove glbinding from brw_vertex_element.
+  * 38db4f17200 i965: Reorder workaround flags computation.
+  * e53fd073bea i965: Split merge_inputs and clear_buffers.
+  * de579ffba2e i965: Test original vertex array pointer to skip array
+    upload.
+  * b684030c3a6 i965: Use the VAOs binding information in array setup.
+  * e1f2c84282b i965: Use 32 bit u_bit_scan for vertex attribute setup.
+  * 0ea3ca3eca4 iris: Move down iris_emit_sbe_swiz in profiles.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Mar 2020 19:25:13 +0100
+
 mesa (20.1.0~git2003071109.0103f02acb1~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
