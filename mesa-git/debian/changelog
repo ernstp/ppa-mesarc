@@ -1,3 +1,26 @@
+mesa (20.0.1+git2003101840.155a550c60e~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 155a550c60e vulkan/wsi: Return an error if dup() fails
+  * 7daa262486a vulkan/wsi: Don't leak the FD when
+    GetImageDrmFormatModifierProperties fails
+  * 4fa692872bf freedreno: fix FD_MESA_DEBUG=inorder
+  * 6b0033dc300 .pick_status.json: Update to
+    ba03e308b66b0b88f60b99d9d47851a5e1522e6e
+  * 868286d10be intel/fs: Fix workaround for VxH indirect addressing bug
+    under control flow.
+  * 5de89fe2ffa st/nine: Fix incompatible-pointer-types-discards-
+    qualifiers errors.
+  * c53788cd41c ac: add a bug workaround for the 100% NGG culling case
+  * 0f437dd2615 radeonsi: add a bug workaround for NGG - LATE_ALLOC_GS
+  * 1e3edbfbd31 anv: Parse VkPhysicalDeviceFeatures2 in CreateDevice
+  * 558746603b8 docs/relnotes/20.0: fix vulkan version reported
+  * 5f4fd166fdf gen_release_notes: fix vulkan version reported
+  * 33c6933ef46 .pick_status.json: Update to
+    24db276d11976905b2e8a44965c684bb48c3d49f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Mar 2020 19:27:19 +0100
+
 mesa (20.0.1+git2003061643.f8f4c317fb0~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
