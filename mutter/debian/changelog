@@ -1,3 +1,11 @@
+mutter (3.34.4+git2003101148.a5b5e95ad~e~gnome2) eoan; urgency=medium
+
+  * New snapshot:
+  * a5b5e95ad cursor-renderer/native: Handle GPU hotplug
+  * 11da42b2f cursor-renderer/native: Refactor init to per-gpu
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Mar 2020 19:29:21 +0100
+
 mutter (3.34.4+git2002231819.2709a4ffb~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
