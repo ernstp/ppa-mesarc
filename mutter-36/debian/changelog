@@ -1,3 +1,9 @@
+mutter (3.36.0+git2003101603.716dbdc3d~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 11 Mar 2020 17:15:17 +0100
+
 mutter (3.35.91-1ubuntu1) focal; urgency=medium
 
   * Merge with debian. Remaining changes:
