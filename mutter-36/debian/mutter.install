@@ -1,0 +1,4 @@
+usr/bin
+usr/lib/*/mutter-6/plugins
+usr/libexec/mutter-restart-helper
+usr/share/applications
