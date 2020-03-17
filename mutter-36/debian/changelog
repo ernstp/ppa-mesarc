@@ -1,3 +1,50 @@
+mutter (3.36.0+git2003132304.0edcd574d~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 0edcd574d compositor: Add support for direct scanout of Wayland
+    surfaces
+  * a3a4b1ca1 later: Listen to MetaCompositor signal instead of clutter
+  * cb7da55d3 later: Make MetaCompositor the owner of the MetaLaters
+    state
+  * 77f9e69b5 display: Initialize MetaCompositor in two steps
+  * 0c003b121 util: Move MetaLater to its own file
+  * 7d8fe1d0f wayland: Add API to acquire a CoglScanout from a surface
+  * 8aa5e3a14 wayland/dma-buf: Handle getting dma-buf from detached
+    buffer handle
+  * 55027f478 wayland/dma-buf: Minor style fix
+  * bd545329c wayland/dma-buf: Don't advertise modifier support by
+    default
+  * feda0f07d onscreen/native: Add API to check whether buffer is
+    scanout compatible
+  * 0c9f6f523 renderer/native: Add API to get primary GPU
+  * d148eab39 clutter/view: Make it possible to assign a temporary
+    direct scanout
+  * c2c2151b3 cogl/onscreen: Add API to scanout a buffer directly
+  * 59453be71 wayland/buffer-ref: Add helpers for use count tracking
+  * 9731bd43d wayland: Make MetaWaylandBufferRef reference counted
+  * 5005414a3 clutter/actor: Add semi-private API to check for
+    transitions
+  * 0d7181b8f surface-actor-x11: Move window related unredirect logic to
+    MetaWindowX11
+  * 60bc67119 window/x11: Use G_DECLARE_DERIVABLE_TYPE()
+  * 04355dff8 drm-buffer/gbm: Support both surface and standalone
+    buffers
+  * 5b298db62 wayland/surface: Put buffer reference on heap
+  * df3325516 cogl: Add main header for Cogl
+  * 5319949a4 kms-impl-device: Clean up state if drm resources disappear
+  * aba0b9ef6 keybindings: Move common window grab code out of X-only if
+    statement
+  * 512bb7d1c wayland: Don't crash when trying to fullscreen on inert
+    wl_output
+  * d2a12ee0f crtc-xrandr: Compare right coordinate when checking
+    assignment
+  * 531a195cf monitor-config-manager: Respect layout mode when
+    calculating CRTC layout
+  * 509e9ca5a xwayland: Fix mime type atom list leak on DnD with more
+    than 3 types
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Mar 2020 01:15:57 +0100
+
 mutter (3.36.0+git2003101603.716dbdc3d~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
