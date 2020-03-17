@@ -1,3 +1,49 @@
+mesa (20.1.0~git2003161628.ac1dbd5ef81~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * ac1dbd5ef81 lima/gpir: fix crash in schedule_insert_ready_list()
+  * 2756b629171 lima/gpir: add better lowering for ftrunc
+  * b7d89476f1e lima/gpir: kill dead writes to regs in DCE
+  * 8c1bcc8555a lima/gpir: Optimize nots created from branch lowering
+  * 47dacf38671 lima/gpir: Optimize conditional break/continue
+  * 9fb0fda8e7b lima/gpir: Make lima_gpir_node_insert_child() useful
+  * 5c3f20a25ba panfrost: Fix gnu-empty-initializer error.
+  * 2d14a8f2372 aco: fix operand order for LS VGPR init bug workaround
+  * ded7a8bb462 aco: fix instruction encoding for LS VGPR init bug
+    workaround
+  * ee9e0d1ecae aco: set late kill for v_interp_p1_f32 for some APUs
+  * 1872759f553 aco: add a late kill flag
+  * c51348bd9b6 aco: move some register demand helpers into
+    aco_live_var_analysis.cpp
+  * e1b08b55ff4 radv/sqtt: handle thread trace capture in
+    sqtt_QueuePresentKHR()
+  * 4061ac859d0 anv: Push UBO ranges relative to the start of the
+    binding
+  * ae15b4fd733 anv: Fix the comparison in an assert
+  * 299fad5585c gitlab-ci: bump Vulkan CTS to 1.2.1.0
+  * af6d8dea008 gitlab-ci: do not set the number of deqp-parallel jobs
+    for RADV CTS
+  * 4668a08e9d7 gitlab-ci: allow deqp-runner to use the maximum number
+    of jobs
+  * 888b41f0ee0 gitlab-ci: remove useless 'patch' package in the VK test
+    image
+  * 3349fe9a26d tu: Rewrite border color handling
+  * f6dad10d047 meson: Avoid duplicate symbols.
+  * 4b61ad372d5 Revert "ci: Remove T820 from CI temporarily"
+  * bbdb4b1a6d9 gitlab-ci/lava:  fix handling of lava tags
+  * fd1436440bd iris: allow compression conditionally for images on
+    gen12
+  * d836f3fadfb isl: allow compression for storage images on gen12+
+  * cd132a8eed9 iris: determine aux usage during predraw and state setup
+  * d4c879e69e2 iris: move existing image format fallback as a helper
+    function
+  * fe2baf72e7b iris: provide dummy iris_image_view_aux_usage
+  * e8f0483ec40 intel/compiler: detect if atomic load store operations
+    are used
+  * 6dd654ba419 iris: use the images_used mask in resolve pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Mar 2020 01:11:51 +0100
+
 mesa (20.1.0~git2003101652.ba03e308b66~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
