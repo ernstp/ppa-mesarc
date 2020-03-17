@@ -1,3 +1,12 @@
+corectrl (1.1.0~git2003151729.249daae~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * 249daae Merge branch 'master' into 'master'
+  * c4ea47a Update README.md
+  * fcf004d Fix includes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Mar 2020 01:11:30 +0100
+
 corectrl (1.1.0~git2001261246.cbd2d1a~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
