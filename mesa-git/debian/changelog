@@ -1,3 +1,37 @@
+mesa (20.0.1+git2003161047.9a9413a7c5b~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 9a9413a7c5b meson: Avoid duplicate symbols.
+  * 3cfca286afc st/mesa: Fix signed integer overflow when using
+    util_throttle_memory_usage
+  * 872de20b213 .pick_status.json: Update to
+    ee9e0d1ecae307fa48200d2604d3114070253299
+  * 86a67114510 amd/llvm: Fix divergent descriptor indexing. (v3)
+  * 93b59199db7 .pick_status.json: Mark
+    b83c9aca4a5fd02d920c90c1799137fed52dc1d9 as backported
+  * 35dbf55ada1 gallium/cso_context: remove cso_delete_xxx_shader
+    helpers to fix the live cache
+  * e2db4624b78 glsl: do not crash if string literal is used outside of
+    #include/#line
+  * f2b5a72f4a4 glsl/tests: Fix waiting for disk_cache_put() to finish.
+  * 97f4d6bdf03 radv: Enable lowering dynamic quad broadcasts.
+  * 5f896ad529f nir: Add ability to lower non-const quad broadcasts to
+    const ones.
+  * a8fa654cbe4 gen_release_notes: fix version in "you should wait"
+    message
+  * b35d45f21ab ac/llvm: add missing optimization barrier for 64-bit
+    readlanes
+  * 1b2c982166b vulkan/wsi: fix cleanup when dup() fails
+  * 92242753b0e .pick_status.json: Update to
+    625d8705f02e211e2733c3fe12845505725c37d4
+  * ffbafd9c8b7 freedreno: android: fix build of perfcounters.
+  * b1b35d10339 freedreno: android: add a6xx-pack.xml.h generation to
+    android build
+  * b26ac839aa6 freedreno: android: fix build failure on android due to
+    python version
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Mar 2020 01:13:53 +0100
+
 mesa (20.0.1+git2003101840.155a550c60e~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
