@@ -1,3 +1,12 @@
+mutter (3.34.4+git2003122046.57992f37c~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 57992f37c wayland: Don't crash when trying to fullscreen on inert
+    wl_output
+  * 7655a63af kms-impl-device: Clean up state if drm resources disappear
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Mar 2020 01:16:14 +0100
+
 mutter (3.34.4+git2003101148.a5b5e95ad~e~gnome2) eoan; urgency=medium
 
   * New snapshot:
