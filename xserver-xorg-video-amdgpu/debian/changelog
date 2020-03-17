@@ -1,3 +1,21 @@
+xserver-xorg-video-amdgpu (19.1.0+git2003161425.42a3148~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 42a3148 Factor out common code to amdgpu_probe()
+  * eeaaf37 Introduce amdgpu_device_setup helper
+  * 1c9742e Kill off drmOpen/Close/drmSetInterfaceVersion in favour of
+    drmDevices
+  * 2dd7307 Use the device_id straight from gpu_info
+  * 655b3c5 Reuse the existing busid string
+  * b357a84 Store the busid string in AMDGPUEnt
+  * 2c0c154 Remove NULL check after a "cannot fail" function
+  * 16ae0d0 Fixup the amdgpu_bus_id() string format
+  * abbe23f Remove drmCheckModesettingSupported and kernel module
+    loading, on Linux
+  * 0b3bc7a Use ODEV_ATTRIB_PATH where possible for the device node.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Mar 2020 01:16:36 +0100
+
 xserver-xorg-video-amdgpu (19.1.0+git2002051108.edcbe5f~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
