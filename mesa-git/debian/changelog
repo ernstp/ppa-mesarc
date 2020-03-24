@@ -1,3 +1,57 @@
+mesa (20.0.2+git2003201559.f3766dada2d~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f3766dada2d radv: fix optional pSizes parameter when binding
+    streamout buffers
+  * 3ab95d18461 mesa/main: Fix overflow in validation of
+    DispatchComputeGroupSizeARB
+  * 52b2c501647 .pick_status.json: Update to
+    aee004a7c8900938d1c17f0ac299d40001b383b0
+  * 57e746cfc04 vc4_bufmgr: Remove duplicative VC definition
+  * 7e7722dca38 isl: drop min row pitch alignment when set by the driver
+  * b1cbf7d9fab isl: only apply main surface ccs pitch constraint with
+    CCS
+  * 18e76206b08 isl: properly filter supported display modifiers on
+    Gen9+
+  * 0414dba695e isl: implement linear tiling row pitch requirement for
+    display
+  * 29443dad40a .pick_status.json: Update to
+    3252041a7872c49e53bb02ffe8b079b5fc43f15e
+  * 4441e00be1a .pick_status.json: Mark
+    56de6f698e3f164d97f132203e8159ef0b8e9bb8 as denominated
+  * fb341213fab nir/gather_info: handle emit_vertex_with_counter
+  * 5e140372271 nir: fix clip/cull_distance_array_size in
+    nir_lower_clip_cull_distance_arrays
+  * 226ff465b7d anv: Swizzle fast-clear values
+  * 7eb4b33a9af intel/blorp: Add support for swizzling fast-clear colors
+  * 12ed35a395a soft-fp64: Split a block that was missing a cast on a
+    comparison
+  * d6b98e432c7 soft-fp64/fsat: Correctly handle NaN
+  * 6923ae24f4c st/mesa: disallow deferred flush if there are multiple
+    contexts
+  * 8c9b63ee408 .pick_status.json: Mark
+    c923de68dd0ab10a5a5fb3196f539707d046d897 as backported
+  * ee1ebc22aed .pick_status.json: Mark
+    672d10619980687acec329742f055f7f3796c1b8 as backported
+  * 7dc859e2edc .pick_status.json: Update to
+    cf62c2b2ac69637785f55b790fdd601c17e7e9d5
+  * 2af8aeb9a63 amd/addrlib: fix build on non-x86 platforms
+  * 3cabdc38fda gallium: hud_context: Fix scalar initializer warning.
+  * 41c56b6cbcc radv/gfx10: fix required ballot size with
+    VK_EXT_subgroup_size_control
+  * 66c3f0c0631 radv/gfx10: fix required subgroup size with
+    VK_EXT_subgroup_size_control
+  * 8647cdc7c3d docs/relnotes: Add sha256 sums for 20.0.2
+  * fa6e67066b9 VERSION: bump for 20.0.2 release
+  * 7a1423d41ab Docs: Add release notes for 20.0.2
+  * c15220de7e5 anv: Do an end-of-pipe sync before updating AUX table
+    entries
+  * 5d57fe5cb7b iris: Wait for the GPU to be idle before invalidating
+    the aux table.
+  * e5e0fdf50f9 iris: Split aux map initialization from invalidation.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 24 Mar 2020 19:54:37 +0100
+
 mesa (20.0.1+git2003161047.9a9413a7c5b~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
