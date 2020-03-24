@@ -1,3 +1,50 @@
+mesa (20.1.0~git2003241634.238e2ed2100~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 238e2ed2100 radv: enable VK_KHR_8bit_storage on GFX6-GFX7
+  * bd22a0f710c util/u_process: fix Windows build
+  * 6a4fadce129 pan/bi: Rewrite aligned vectors as well
+  * 5a3493c536b pan/bi: Lower combines to rewrites for scalars
+  * e0a51d5308f pan/bi: Ingest vecN directly (again)
+  * 04509dae7f7 turnip: implement depth clamp
+  * afe27d5345f turnip: fix znear clipping
+  * 07a8100aed6 freedreno/registers: more GRAS_CL_CNTL bits, Z_CLAMP
+  * 43918c9a7fc aco: implement 64-bit VGPR constant copies in
+    handle_operands()
+  * 21ba2bc5954 aco: remove dead code in handle_operands()
+  * 9f4ba2d2b4a nir/gather_info: fix per-vertex handling in
+    try_mask_partial_io
+  * f1cc13727c6 radeonsi: enable workarounds for YoYo engine based games
+  * 8f48e7b1e99 util/xmlconfig: add new sha1 application attribute
+  * f8f1413070a util/u_process: add util_get_process_exec_path
+  * 2cb965e5b60 util/os_file: extend os_read_file to return the file
+    size
+  * bd6234f24be radeonsi: clarify the conditions when FLUSH_AND_INV_DB
+    is needed
+  * 67a10ea2159 intel/dump_gpu: Handle a bunch of getparam in the no-HW
+    case
+  * 7fd41843782 intel/dump_gpu: Add an ensure_device_info helper
+  * be451f71ab3 anv: Stop fetching the timestamp frequency ourselves
+  * d63d0006860 egl/android: enable/disable KHR_partial_update correctly
+  * 41412cc4b74 ci: Ban the recent popular freedreno a630 intermittent
+    failure.
+  * 719063d4d07 st/mesa: fix use of uninitialized memory due to
+    st_nir_lower_builtin
+  * 17c7f4e30ed aco: fix boolean undef regclass
+  * 4ed12efb58c lima: Add missing source file to Android.mk
+  * 1182a3934a5 intel/tools/aubinator_error_decode: Decode ring buffers
+    from HEAD to TAIL
+  * 84e707e6f22 docs/features: Update virgl OpenGL 4.5 features
+    GL_ARB_clip_control and GL_KHR_robustness are now expose in the
+    guest.
+  * 49f9a0bb572 intel/tools/aubinator_error_decode: read HW Context
+    before other batches
+  * c40acdef52b iris: Set patch count threshold in 3DSTATE_HS
+  * 60c789543e3 anv: Set patch count threshold in 3DSTATE_HS
+  * 1a5ac646cef intel/compiler: Track patch count threshold
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 24 Mar 2020 19:52:25 +0100
+
 mesa (20.1.0~git2003161628.ac1dbd5ef81~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
