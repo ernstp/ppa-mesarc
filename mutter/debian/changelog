@@ -1,3 +1,14 @@
+mutter (3.34.5+git2003310117.1a3dfd811~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 1a3dfd811 Bump version to 3.34.5
+  * aeb781acd x11: Handle windowing errors while writing selection INCR
+    data
+  * 092591b87 core: Demote tiff and bmp image formats in the clipboard
+    manager
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 31 Mar 2020 08:02:56 +0200
+
 mutter (3.34.4+git2003122046.57992f37c~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
