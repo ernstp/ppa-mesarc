@@ -74,7 +74,7 @@ else
   endif
 
 	DRI_DRIVERS += r200, r100,
-	GALLIUM_DRIVERS += r600, r300,
+	GALLIUM_DRIVERS += r600, r300, iris,
 
   # LLVM is required for building r300g, radeonsi and llvmpipe drivers.
   # It's also required for building OpenCL support.
