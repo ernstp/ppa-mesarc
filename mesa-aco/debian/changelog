@@ -1,3 +1,41 @@
+mesa (20.1.0~git2003302357.6e672074dd1~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * 6e672074dd1 st/mesa: add environment variable pin_app_thread for
+    faster glthread on AMD Zen
+  * 4df3c7a2079 gallium/u_threaded: call the driver to pin threads to L3
+    immediately
+  * 4de35bed423 lima: also check tiled and depth case when import
+  * e46b2ef7243 lima: fix buffer import with offset
+  * 02ad147c5c8 pan/bi: Fix handling of constants with COMBINE
+  * bd19e763402 pan/bi: Handle fp16/abs scheduling restriction
+  * c88f816169c pan/bi: Handle abs packing for fp16/FMA add/min
+  * ba8e11f0f17 pan/bi: Handle core faddminmax16 packing
+  * 12a16f22476 pan/bi: Structify fadd/min/max16
+  * c12a208d782 pan/bi: Add v2f16 versions of rounding ops
+  * f81b67b857b pan/bi: Handle round opcodes in frontend
+  * c7170e97423 pan/bi: Assert out i16 related converts for now
+  * 2fd8b2e6d4c pan/bi: Add one-source f32->f16 op
+  * 197c6414ea4 pan/bi: Add bifrost_fma_2src generic
+  * 57a8e6e8d0e pan/bi: Handle standard FMA conversions
+  * 499e97b5196 pan/bi: Enumerate conversions
+  * 902f99a45d3 pan/bi: Expand out FMA conversion opcodes
+  * 73715124ea5 pan/bi: Pack outmod and roundmode with FMA
+  * 158f2452f23 pan/bi: Add FMA16 packing
+  * b5148b6b490 pan/bi: Fix missing type for fmul
+  * 5eb209a05f6 pan/bi: Finish FMA structures
+  * 375a7d0f32f pan/bi: Ignore swizzle in unwritten component
+  * aa77d8128e9 pan/bi: Handle f2f* opcodes
+  * c2a8ef907b5 panfrost: Enable PIPE_SHADER_CAP_FP16 on Bifrost
+  * 77e04eb2e2e pan/bi: Enable precision lowering in standalone compiler
+  * 683cd9b6f4f pan/bi: Fix off-by-one in scoreboarding packing
+  * f3726a08743 pan/bi: Fix overzealous write barriers
+  * 3d7166fa698 pan/bit: Begin generating a vertex job
+  * a0d1be30e1b pan/bit: Submit a WRITE_VALUE job as a sanity check
+  * 97029c773e8 panfrost: Stub out G31/G52 quirks
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 31 Mar 2020 07:58:22 +0200
+
 mesa (20.1.0~git2003241634.238e2ed2100~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
