@@ -1,3 +1,50 @@
+mesa (20.0.2+git2003302208.f44779d7eb1~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f44779d7eb1 vtn/opencl: fully enable OpenCLstd_Clz
+  * 243cc870322 pipebuffer: clean up cast-warnings
+  * 3facfb3435d aco: implement 64-bit VGPR constant copies in
+    handle_operands()
+  * 1e598bf8e0a radv/llvm: fix subgroup shuffle for chips without
+    bpermute
+  * db199be2c3e freedreno/ir3/ra: fix array liveranges
+  * 284f3ce6bc4 nir: fix packing of TCS varyings not read by the TES
+  * c16dfe1c63d glsl: fix varying packing for 64bit integers
+  * dfc0a5cc14d ac/nir: use llvm.amdgcn.rcp in ac_build_fdiv()
+  * 6e4db7e726c ac/nir: use llvm.amdgcn.rsq for nir_op_frsq
+  * f4179f1b17d ac/nir: use llvm.amdgcn.rcp for nir_op_frcp
+  * cbc7ba2e473 intel/fs/gen12: Fix interaction of SWSB dependency
+    combination with EU fusion workaround.
+  * c0927e9f72d glsl: set error_emitted true if type not ok for
+    assignment
+  * 08a2a2025b3 .pick_status.json: Update to
+    8970b7839aebefa7207c9535ac34ab4e8cc0ae25
+  * 96868b7297b etnaviv: Emit PE.ALPHA_COLOR_EXT* on GPUs with half-
+    float support
+  * 2e745e0ed35 rbug: do not return void-value
+  * 85c2780f789 .pick_status.json: Update to
+    05069e1f0794aadd40ce9269f858e50c64254388
+  * 64092f4de31 intel: Add TGL PCI ID
+  * fdd4beab686 intel: Update TGL PCI strings
+  * ead58ae0c87 intel: add new TGL pci ids
+  * d41c5951baa radv: enable VK_KHR_8bit_storage on GFX6-GFX7
+  * 9cdc30f837c nir/gather_info: fix per-vertex handling in
+    try_mask_partial_io
+  * c81092f789b st/mesa: fix use of uninitialized memory due to
+    st_nir_lower_builtin
+  * ca17bf0f812 aco: fix boolean undef regclass
+  * c2601fe16b2 aco: emit IR in IF's merge block instead if the other
+    side ends in a jump
+  * f130cbe7168 aco: improve check for unreachable loop continue blocks
+  * a1fd16e507b aco: skip NIR in unreachable merge blocks
+  * 275e9392999 aco: handle missing second predecessors at merge block
+    phis
+  * cb7517be47c aco: set has_divergent_branch for discards in loops
+  * 4c2f8b3dd6a ac: fix fast division
+  * d48baa3859a Revert "ci: Remove T820 from CI temporarily"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 31 Mar 2020 08:00:52 +0200
+
 mesa (20.0.2+git2003201559.f3766dada2d~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
