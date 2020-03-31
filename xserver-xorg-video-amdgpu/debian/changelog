@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu (19.1.0+git2003181747.cb27a5b~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * cb27a5b Handle NULL fb_ptr in pixmap_get_fb
+  * e2cd67a Bail from amdgpu_pixmap_get_handle with ShadowFB
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 31 Mar 2020 08:03:20 +0200
+
 xserver-xorg-video-amdgpu (19.1.0+git2003161425.42a3148~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
