@@ -1,3 +1,48 @@
+mesa (20.1.0~git2004041746.7af813d48a5~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 7af813d48a5 glx: use anonymous namespace to avoid -Wodr issues when
+    building with LTO enabled
+  * 17d783b2ed4 glx: fix 630 times -Wlto-type-mismatch when building
+    with LTO enabled
+  * a0a4df7e4f1 Revert "spirv: Rewrite CFG construction"
+  * 51492f20f7e Revert "gallivm: disable rgtc/latc SNORM accellerated
+    fetches"
+  * aa95b6aed5b gallivm/rgtc: enable fast path for snorm types.
+  * 03204dadbc1 gallivm/rgtc: fix the truncation to 8-bit
+  * 0b06adb7505 glsl: don't limit fp16 lowering to frag
+  * f054230ea3c freedreno: limit fp16 to frag and compute
+  * c0d56efa31e freedreno/ir3: also precompile compute shaders for
+    shaderdb
+  * 37e052c8b08 freedreno: fix missing locking
+  * f8fc690d1c2 freedreno/a6xx: add some compute logging
+  * 629c0cee0a4 freedreno/ir3/cf: use ssa-uses
+  * 72f6b03aec4 freedreno/ir3: add a pass to collect SSA uses
+  * 67dbe8088fd freedreno/ir3/cf: skip array load/store
+  * c2d0cc8b8d5 freedreno/ir3: fixup cat3 32b vs 16b
+  * e73a8a9703b freedreno/ir3/cf: handle widening too
+  * bf646488642 nir: fix definition of imadsh_mix16 for vectors
+  * 1d293096d0a aco: use MUBUF to load subdword SSBO
+  * 8cfddc91999 aco: implement 8bit/16bit store_ssbo
+  * 3df0a41c752 aco: implement 8bit/16bit load_buffer
+  * c70d0144550 aco: implement storagePushConstant8 &
+    storagePushConstant16
+  * 5718347c2b4 aco: implement vec2/3/4 with subdword operands
+  * 85521061d63 aco: prepare helper functions for subdword handling
+  * fe08f0ccf94 aco: add byte_align_scalar() & trim_subdword_vector()
+    helper functions
+  * 23ac24f5b1f aco: add missing conversion operations for small
+    bitsizes
+  * d223e4e8de8 aco: don't vectorize 8/16bit load/store_ssbo
+  * 0bb35376764 aco: don't assume split_vector(create_vector) has the
+    same number of elements when optimizing
+  * c436743b0c4 aco: don't propagate SGPRs into subdword PSEUDO
+    instructions
+  * 8f1712ba2f8 aco: lower subdword shuffles correctly.
+  * ca38c1f1f1c aco: add builder function for subdword copy()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 04 Apr 2020 22:33:00 +0200
+
 mesa (20.1.0~git2003302357.6e672074dd1~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
