@@ -1,3 +1,36 @@
+mesa (20.0.4+git2004041407.4c2c6e6119b~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 4c2c6e6119b gitlab-ci/lava:  fix handling of lava tags
+  * ce2921a9c3b gallium/auxiliary/vl: fix bob compute shaders for deint
+    yuv
+  * 9de8d58ab20 docs/relnotes: add sha256sum for 20.0.4
+  * d3586b5291e VERSION: bump to 20.0.4
+  * 882256534d4 docs: add release notes for 20.0.4
+  * 2120f106e0e Revert "spirv: Implement OpCopyObject and OpCopyLogical
+    as blind copies"
+  * 4601358fa30 .pick_status.json: Update to
+    c71c1f44b055c680f073a2608a3bf560b55f8974
+  * a6804815326 docs/relnotes: add sha256sum for 20.0.3
+  * 103f12d23e7 VERSION: bump to 20.0.3
+  * b04ae1f964c docs: add release notes for 20.0.3
+  * 5e85ed86eb7 svga, winsys/svga: Fix persistent memory discard maps
+  * 9c8dab082f8 nir: fix crash in varying packing on interface mismatch
+  * 84531156eea spirv: Implement OpCopyObject and OpCopyLogical as blind
+    copies
+  * 52aafdafb33 .pick_status.json: Update to
+    70ac7f5b0c46370075a35067c9f7dfe78e84b16d
+  * e51b749f1da anv: Account for the header in anv_state_stream_alloc
+  * 6ddc34f659d nir/lower_int64: Lower 8 and 16-bit downcasts with
+    nir_lower_mov64
+  * 99471dbddc7 util: fix u_fifo_pop()
+  * b571cfabb61 util/u_queue: fix race in total_jobs_size access
+  * 1a6ce0f9afe glsl: fix race in instance getters
+  * b97550253de .pick_status.json: Update to
+    5f4d9b419a1c931ad468b8b22b8a95b1216891e4
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 04 Apr 2020 22:35:12 +0200
+
 mesa (20.0.2+git2003302208.f44779d7eb1~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
