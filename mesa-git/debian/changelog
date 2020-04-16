@@ -1,3 +1,50 @@
+mesa (20.0.4+git2004151105.fc140276b4b~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * fc140276b4b glx: omit loader_loader() for macOS
+  * 88f89f7a109 aco: fix 1D textureGrad() on GFX9
+  * 8e81105741c iris: drop cache coherent cpu mapping for external BO
+  * 721648e2a30 swr: Remove Byte Order Mark.
+  * 8be0ceb13c7 .pick_status.json: Update to
+    13ce637f1b28381e72470763ff5e39dd3c562476
+  * c71cf856158 scons/windows: Support build with LLVM 10.
+  * 38e0d199cf3 meson: Link Gallium Nine with ld_args_build_id
+  * 3323a30266c meson: Specify the maximum required libdrm in dri.pc
+  * 2111ccfbd92 .pick_status.json: Update to
+    acf7e73be54c7f1cc52fcc9be38a9df26849200e
+  * 7f2539dcc08 gitlab-ci: re-enable mali400/450 and t820 jobs
+  * b637994b2cc gitlab-ci: add FILES_HOST_URL and move FILES_HOST_NAME
+    into jobs
+  * 5cbe73152de gitlab-ci: Serve files for LAVA via separate service
+  * 78a1deb958f gitlab-ci: Place files from the Mesa repo into the build
+    tarball
+  * 9d50c53e474 ci: Remove LLVM from ARM test drivers.
+  * 8980c580007 ci: Split out radv build-testing on arm64
+  * 8d1baa28546 glsl: stop processing function parameters if error
+    happened
+  * 6ae8c93bf39 i965: share buffer managers across screens
+  * 13a79c15221 i965: store DRM fd on intel_screen
+  * b5a8a2aee6d iris: make resources take a ref on the screen object
+  * 01bd048138e iris: share buffer managers accross screens
+  * 4bf1d033a6c iris: properly free resources on BO allocation failure
+  * e03687984ea .pick_status.json: Update to
+    28d36d26c2212276e1238fad8f0b12caab97fee8
+  * 9a0e6d64903 v3d: Primitive Counts Feedback needs an extra 32-bit
+    padding.
+  * 167e4344333 swr/rasterizer: Use private functions for min/max to
+    avoid namespace issues.
+  * 2de66086f66 .pick_status.json: Update to
+    65e2eaa4d3a7095ac438fafb09d1e36a4210966e
+  * 019bb88019b radv: Use correct buffer count with variable descriptor
+    set sizes.
+  * abdb320af44 radv: Consider maximum sample distances for entire grid.
+  * 26dfb62c251 radeonsi: don't lower constant arrays to uniforms in
+    GLSL IR
+  * d15f45ca312 radv: Store 64-bit availability bools if requested.
+  * d4ef9d6ac04 nir: fix wrong assignment to buffer in xfb_varyings_info
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Apr 2020 13:27:20 +0200
+
 mesa (20.0.4+git2004041407.4c2c6e6119b~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
