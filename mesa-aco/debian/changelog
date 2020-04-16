@@ -1,3 +1,44 @@
+mesa (20.1.0~git2004161110.e3e704c7e7e~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * e3e704c7e7e amd/addrlib: Use enum instead of sparse chars to
+    identify dimensions
+  * e58509cdecc gbm/dri: Propagate queryDmaBufModifiers return value
+  * b5b25ee0327 zink: be less picky about tiled resources
+  * 040a2643c08 st/dri: make sure software color-buffers are linear
+  * 1c4f68b089b virgl: Use ETC2 formats directly when possible.
+  * dcb1e8fef8a radeonsi: use thread_context::bytes_mapped_limit
+  * 15cf7d170b3 gallium/u_threaded: flush batch when hitting mapping
+    limit
+  * 35b39639288 radv: do not abort with unknown/unimplemented descriptor
+    types
+  * 11faaf646d1 aco: fix emitting stream output with tess eval shaders
+  * 91aa596ca7e aco: implement nir_op_f2i8/nir_op_f2u8
+  * 04a7ec7c8a7 nvc0: enable GL_NV_viewport_array2
+  * cd092bf9370 st/mesa: add support for GL_NV_viewport_array2
+  * b0d0a3c9165 gallium: add PIPE_CAP_VIEWPORT_MASK
+  * 8f191e0c373 gallium: add TGSI_PROPERTY_LAYER_VIEWPORT_RELATIVE
+  * 17308c10141 gallium: add TGSI_SEMANTIC_VIEWPORT_MASK
+  * 2d4787d77e3 mesa: add NV_viewport_array2 enable, attach to glsl
+  * cc6661bfc87 glsl: add NV_viewport_array2 support
+  * 54424a3d13f compiler: add VARYING_SLOT_VIEWPORT_MASK
+  * 3a9e66277af ir3: Handle load_ubo_ir3 when promoting to constants
+  * abcfb643706 ir3: Fix LDC offset units
+  * 2d489f76f48 Revert "nvc0: fix line width on GM20x+"
+  * 26a1adce5bd anv: Fix UBO range detection in
+    anv_nir_compute_push_layout
+  * b2e41571434 anv: Advertise SEND count through
+    VK_EXT_pipeline_executable_properties
+  * 2c82b13c8ff iris: make BATCH_SZ smaller by BATCH_RESERVED bytes
+  * 103cb32c794 iris: remove useless bo->gtt_offset assignment
+  * c586cb23e0a iris: remove unnecessary forward declaration
+  * f3f5016c0bf iris: remove hole from struct iris_bo
+  * 0158f73f086 Fix util/process test on Cygwin
+  * befe2ff3a61 llvmpipe/nir: free the nir shader
+  * cb0a2b3df68 draw/tess: free the NIR
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Apr 2020 13:33:52 +0200
+
 mesa (20.1.0~git2004041746.7af813d48a5~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
