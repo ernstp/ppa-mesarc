@@ -1,3 +1,51 @@
+mesa (20.1.0~git2004201512.c3c1f4d6bcc~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * c3c1f4d6bcc aco: move src1 to vgpr instead of using VOP3 for VOP2
+    instructions during isel
+  * be0bb7e1015 aco: fix 64bit fsub
+  * ad3ef6d0fc0 gitlab-ci: Test virgl driver
+  * d6b7439619c meson: do not disable incremental linking for debug-
+    builds
+  * ed29b24e233 gtest: Update to 1.10.0
+  * 59427b6d1d0 nir/opt_algebraic: lower 64-bit fmin3/fmax3/fmed3
+  * eed0ace466d nir/lower_int64: lower
+    imin3/imax3/umin3/umax3/imed3/umed3
+  * 17acff01a00 radeonsi: skip vs output optimizations for some outputs
+  * 839818332c1 nir/gcm: dont move movs unless we can replace them later
+    with their src
+  * e4e5beee8a4 nir/gcm: be more conservative about moving instructions
+    from loops
+  * bf4a6c99d24 nir/gcm: allow derivative dependent intrinisics to be
+    moved earlier
+  * 50a6dd0d653 nir/gcm: Prefer the instruction's original block
+  * d4cf2df01a1 nir/gcm: Delete dead instructions
+  * dca3f351e5b nir/gcm: Add a real concept of "progress"
+  * 5b1615fdb75 nir/gcm: Move block choosing into a helper function
+  * 1f60f1aa3d0 nir/gcm: Use an array for storing the early block
+  * 6006a9e2757 nir/gcm: Loop over blocks in pin_instructions
+  * 4d083b52c04 nir/dominance: Better handle unreachable blocks
+  * 425558bfd59 aco: use v_subrev_f32 for fsub with an sgpr operand in
+    src1
+  * adeef43d150 CI: Disable Lima jobs due to lab unhealthiness
+  * e6c7bdc8513 ci/windows: Make Chocolatey installs more reliable
+  * ec1b96fdc8b nir: Lower returns correctly inside nested loops
+  * 969aeb6a93a anv: Apply any needed PIPE_CONTROLs before emitting
+    state
+  * ffc84eac0d5 anv: Move vb_emit setup closer to where it's used in
+    flush_state
+  * 06c5875fd6b Fix promotion of floats to doubles
+  * 94cb129d514 ir3/ra: Fix off-by-one issues with live-range extension
+  * cdc43775917 util/sparse_free_list: manipulate node pointers using
+    atomic primitives
+  * 36d2a0eed69 glsl: only set stage ref when uniforms referenced in
+    stage
+  * 6afd0954e12 glsl: pull mark_array_elements_referenced() out into
+    common helper
+  * 5d992b539e9 glsl: fix block index in NIR uniform linker
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Apr 2020 17:49:58 +0200
+
 mesa (20.1.0~git2004161110.e3e704c7e7e~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
