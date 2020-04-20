@@ -1,3 +1,9 @@
+mutter (3.37.0+git2004170051.b7366b5b5~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Apr 2020 19:22:36 +0200
+
 mutter (3.36.0+git2003132304.0edcd574d~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
