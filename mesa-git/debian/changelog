@@ -1,3 +1,10 @@
+mesa (20.0.4+git2004191539.b5b56d89a16~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * b5b56d89a16 clover: fix build with single library clang build
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Apr 2020 17:56:04 +0200
+
 mesa (20.0.4+git2004151105.fc140276b4b~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
