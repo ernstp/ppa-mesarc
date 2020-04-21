@@ -1,3 +1,10 @@
+mesa (20.1.0~git2004210949.d29fea77b91~b~mesaaco6) bionic; urgency=medium
+
+  * New snapshot:
+  * d29fea77b91 docs: remove outdated sentence
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 21 Apr 2020 12:01:31 +0200
+
 mesa (20.1.0~git2004210916.56f174d14eb~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
