@@ -1,23 +1,27 @@
---- a/src/gallium/targets/opencl/meson.build
-+++ b/src/gallium/targets/opencl/meson.build
-@@ -33,6 +33,13 @@ llvm_libdir = dep_llvm.get_configtool_va
+Index: mesa/src/gallium/targets/opencl/meson.build
+===================================================================
+--- mesa.orig/src/gallium/targets/opencl/meson.build
++++ mesa/src/gallium/targets/opencl/meson.build
+@@ -31,6 +31,13 @@ endif
  
- opencl_libname = with_opencl_icd ? 'MesaOpenCL' : 'OpenCL'
+ llvm_libdir = dep_llvm.get_configtool_variable('libdir')
  
 +polly_dep = null_dep
 +polly_isl_dep = null_dep
 +if dep_llvm.version().version_compare('>=10.0.0')
-+  polly_dep = cpp.find_library('Polly', dirs : llvm_libdir, required : false)
-+  polly_isl_dep = cpp.find_library('PollyISL', dirs : llvm_libdir, required : false)
++  polly_dep = cpp.find_library('Polly', dirs : llvm_libdir, required : true)
++  polly_isl_dep = cpp.find_library('PollyISL', dirs : llvm_libdir, required : true)
 +endif
 +
- libopencl = shared_library(
-   opencl_libname,
-   [],
-@@ -56,6 +63,7 @@ libopencl = shared_library(
-     cpp.find_library('clangEdit', dirs : llvm_libdir),
-     cpp.find_library('clangLex', dirs : llvm_libdir),
-     cpp.find_library('clangBasic', dirs : llvm_libdir),
+ opencl_libname = with_opencl_icd ? 'MesaOpenCL' : 'OpenCL'
+ 
+ dep_clang = cpp.find_library('clang-cpp', dirs : llvm_libdir, required : false)
+@@ -61,7 +68,8 @@ libopencl = shared_library(
+   link_with : [libpipe_loader_dynamic, libgallium],
+   dependencies : [
+     idep_mesautil,
+-    dep_clock, dep_dl, dep_unwind, dep_elf, dep_clang
++    dep_clock, dep_dl, dep_unwind, dep_elf, dep_clang,
 +    polly_dep, polly_isl_dep,
    ],
    version : '@0@.0.0'.format(opencl_version),

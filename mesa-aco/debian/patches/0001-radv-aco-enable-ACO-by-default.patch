@@ -25,7 +25,7 @@ Index: mesa/src/amd/vulkan/radv_device.c
 ===================================================================
 --- mesa.orig/src/amd/vulkan/radv_device.c
 +++ mesa/src/amd/vulkan/radv_device.c
-@@ -582,6 +582,7 @@ static const struct debug_control radv_p
+@@ -550,6 +550,7 @@ static const struct debug_control radv_p
  	{"gewave32", RADV_PERFTEST_GE_WAVE_32},
  	{"dfsm", RADV_PERFTEST_DFSM},
  	{"aco", RADV_PERFTEST_ACO},
@@ -33,7 +33,7 @@ Index: mesa/src/amd/vulkan/radv_device.c
  	{NULL, 0}
  };
  
-@@ -719,6 +720,13 @@ VkResult radv_CreateInstance(
+@@ -690,6 +691,13 @@ VkResult radv_CreateInstance(
  	instance->perftest_flags = parse_debug_string(getenv("RADV_PERFTEST"),
  						   radv_perftest_options);
  
