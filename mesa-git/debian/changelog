@@ -1,3 +1,34 @@
+mesa (20.0.4+git2004201003.4dfb9d9fcee~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4dfb9d9fcee anv: Report correct SLM size
+  * e16cb98ce2e intel: Add _const versions of prog_data cast helpers
+  * 5bbf4cc54e6 nir: Lower returns correctly inside nested loops
+  * eb39c5fb4f8 util/sparse_free_list: manipulate node pointers using
+    atomic primitives
+  * 29200718b5b spirv: Handle OOB vector extract operations
+  * 5ef9dccff3f util/sparse_array: don't stomp head's counter on pop
+    operations
+  * 76dbcb1f5e4 st/mesa: Update shader info of ffvp/ARB_vp after
+    translation to NIR
+  * 9d052b2534b aco: fix exporting the viewport index if the fragment
+    shader needs it
+  * 5cd2b945df2 radv/llvm: fix exporting the viewport index if the
+    fragment shader needs it
+  * feb2f12db8b st/mesa: fix a crash due to passing a draw vertex shader
+    into the driver
+  * c447fcbcbe2 mesa/st: initialize all winsys_handle fields for memory
+    objects
+  * d13c6c251e4 radv: do not abort with unknown/unimplemented descriptor
+    types
+  * ded9c5c4900 Revert "nvc0: fix line width on GM20x+"
+  * 2f5509c44e0 llvmpipe/nir: free the nir shader
+  * b1f087965f1 draw: free the NIR IR.
+  * 01844f40af5 .pick_status.json: Update to
+    c3c1f4d6bcc210408f8b180727d269838b38193b
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 21 Apr 2020 10:29:39 +0200
+
 mesa (20.0.4+git2004191539.b5b56d89a16~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
