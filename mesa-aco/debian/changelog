@@ -1,3 +1,48 @@
+mesa (20.1.0~git2004210916.56f174d14eb~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 56f174d14eb st/omx: fix gcc warnings
+  * 07071cac7b9 gallium/utils: silence strncpy warning
+  * dbfeec62c38 mesa: fix crash in find_value
+  * 7c43b8ce1b8 nir: Delete the fnoise opcodes
+  * 4386c067705 glsl: Hard-code noise to zero in builtin_functions.cpp
+  * 95f555a93a8 st/glsl_to_nir: make use of nir linker for linking
+    uniforms
+  * 0f79e0f7c62 glsl: fix gl_nir_set_uniform_initializers() for bindless
+    textures
+  * 95464402277 glsl: add bindless support to nir uniform linker
+  * 57e65cabd4f pick-ui: show commit sha in the pick list
+  * 32451a15ecb pick-ui: make .pick_status.json path relative to the git
+    root instead of the script
+  * 26a26a35848 pick-ui: compute .pick_status.json path only once
+  * a4b36cd3dd3 intel/fs: Coalesce when the src live range is contained
+    in the dst
+  * 14b8d979db4 intel/fs: Rename block to scan_block in
+    can_coalesce_vars
+  * 064d39e620f radv: use common nir_convert_ycbcr
+  * 7870d714598 anv: use common nir_convert_ycbcr
+  * 71820c6b02d nir: convert_ycbcr: preserve alpha channel
+  * f8558fb1ce7 nir: add common convert_ycbcr for vulkan csc
+  * c2d8a4bf176 nir/linking: fix issue with two compact variables in a
+    row. (v2)
+  * a24ab26ff72 pick-ui: auto-scroll the feedback window
+  * 8b8a99ba567 bin/pick-ui: Add a new maintainer script for picking
+    patches
+  * 0123b8f6341 bin/gen_release_notes.py: Fix version detection for .0
+    release
+  * 4abf0837cdb anv: Add support for new MMAP_OFFSET ioctl.
+  * 0d387da0834 anv: Add anv_device parameter to anv_gem_munmap.
+  * d1c1ead7cd6 iris/bufmgr: Add support for MMAP_OFFSET ioctl.
+  * ae6f06c5093 i965/bufmgr: Add support for MMAP_OFFSET ioctl.
+  * 5bc3f52dd8c iris/bufmgr: Factor out GEM_MMAP ioctl from mmap_cpu and
+    mmap_wc.
+  * a42d7157849 i965/bufmgr: Factor out GEM_MMAP ioctl from mmap_cpu and
+    mmap_wc.
+  * 16be8ff0227 drm-uapi: Update headers from Linux 5.7-rc1.
+  * a1f6ae4744d spirv: Fix propagation of OpVariable access flags
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 21 Apr 2020 10:27:18 +0200
+
 mesa (20.1.0~git2004201512.c3c1f4d6bcc~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
