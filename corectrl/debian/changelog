@@ -1,3 +1,17 @@
+corectrl (1.1.0~git2004261701.6a458b6~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * 6a458b6 Merge branch 'feature-navi_support'
+  * 9f2fc5e Check for pp_od_clk_voltage quirks on advanced controls
+    factories
+  * 58151a1 Add function to check pp_od_clk_voltage quirks to amd utils
+  * 87746e5 Support navi vddc curve points
+  * 390ee08 Parse lines using regular expressions on amdutils
+  * d013dcb Merge branch 'tim77-patch-6' into 'master'
+  * 17ad9c9 Add 'include <QDBusPendingCall>'
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 May 2020 11:09:38 +0200
+
 corectrl (1.1.0~git2003151729.249daae~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
