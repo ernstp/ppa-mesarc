@@ -1,3 +1,48 @@
+mutter (3.34.6+git2004301713.48ffbb582~e~gnome0) eoan; urgency=medium
+
+  * New snapshot:
+  * 48ffbb582 Bump version to 3.34.6
+  * 129d13470 wayland: preserve `xkb_state` on VT switch
+  * 4078ba182 keybindings: Mask out the reserved modifiers mask
+  * fd8ccbac8 keybindings: Check the special modifiers specifically
+  * 93417d0ce compositor: Only include meta-window-actor-wayland.h when
+    building with wayland
+  * 3bafd2342 kms-impl/simple: Fix page_flip_data ref leak on fallback
+  * e328fcc37 kms: Make GSource ready by default
+  * e845bbd57 core: Add private function to get the current selection
+    owner
+  * 025730349 x11: Allow X11 clients to clear the selection
+  * f6d0af0c9 x11: Generalize x11 selection owner checks
+  * 8acff5309 x11: Clear X11 selection source after unsetting owner
+  * 0ab8b1743 x11: Forward current selection state when initializing X11
+    selections
+  * 50f383d2e x11-selection: Plug MetaSelectionSourceX11 leak
+  * 7fbba4ad1 wayland: Rely on MetaSelection::owner-changed for
+    .selection event emission
+  * eb6189d6b wayland: Do not cancel old data source when setting new
+    selection
+  * 668d13ffb wayland: Shuffle wl_data_source.cancelled version checks
+    on DnD
+  * 02947e787 core: Cater for reading selection in chunks
+  * ebfe5e44c x11: Do not trust there is task in error paths
+  * 8f64b3dca x11: Don't stall on write_async()
+  * 8de5b9512 x11: Fix iterative INCR property checks
+  * cedab9442 x11: Don't exceed transfer size in INCR chunks
+  * 7cc5ed96f x11: Don't invariably queue a pending delete request
+  * bb831f04c x11: Finish INCR transfers properly
+  * c92267feb x11: Wait till data is flushed before notifying on the
+    pending task
+  * 8240aba80 x11: Only send SelectionNotify on first INCR chunk
+  * 5f34a0f24 x11: Ensure flush() Flushes all output stream data
+  * 83eeb3dbd x11: Unset pending flush flag right before notifying on
+    task
+  * c25011ffb x11: Intern INCR atom
+  * abd67819f x11: Flag flushes despite having less than the element
+    size
+  * 6f3b7b733 x11: XMaxRequestSize returns 4-byte units
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 May 2020 11:15:21 +0200
+
 mutter (3.34.5+git2003310117.1a3dfd811~e~gnome0) eoan; urgency=medium
 
   * New snapshot:
