@@ -1,3 +1,50 @@
+mesa (20.2.0~git2005010751.cc2c3b41b86~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cc2c3b41b86 ci: fix reporting the number of unexpected/flakes
+  * 23daa49d4ca gitlab-ci: Use YAML anchor for llvmpipe paths in virgl
+    rules
+  * 60912f1ebd3 freedreno: we don't need aligned vbo's
+  * 9a7c179473f freedreno/a6xx: add some more formats
+  * 6f7d94580e3 pan/decode: Don't crash on missing payload
+  * bde19c0e7ba panfrost: Fix tiled texture "stride"s on Bifrost
+  * bbecbedb4ca panfrost: Fix norm coords on bifrost sampler
+  * 401409eff31 panfrost: Fix sampler wrap/filter field orders
+  * 6148d1be4bb panfrost: Fix size of bifrost sampler descriptor
+  * 884f8699925 panfrost: Fix texture field size
+  * d04be375ccd pan/bit: Add round tests
+  * 6bbedf8359a pan/bit: Interpret ROUND
+  * f1f4f1b816a pan/bit: Add framework forinterpreting double vs float
+  * 130a3fba1c7 pan/bi: Pack round opcodes (FMA, either 16 or 32)
+  * 5f35cdaa8dd pan/bi: Pipe multiple textures through
+  * fc634dc3b27 pan/bi: Add texture indices to IR
+  * f8424d3b999 freedreno/a6xx: fix LRZ hang
+  * 0e51082cfa7 freedreno/ir3: Leave bools as 1-bit, storing them in
+    full regs.
+  * 769adc9546a freedreno/ir3: Drop redundant IR3_REG_HALF setup in ALU
+    ops.
+  * bdd2f284d90 radeonsi: revert an accidental change in si_clear_buffer
+  * 5afec9bc9fb radeonsi: fix si_compute_clear_render_target with render
+    condition enabled
+  * 19db1a540c2 radeonsi: add a workaround to fix KHR-
+    GL45.texture_view.view_classes on gfx9
+  * d6acdbd9352 radeonsi: implement and use compute-based DCC
+    decompression on gfx9-10
+  * d3da73954a6 radeonsi: add SI_IMAGE_ACCESS_DCC_OFF to ignore DCC for
+    shader images
+  * 93d5c860812 radeonsi: bind shader images after DCC is disabled for
+    image stores
+  * 44d27fd6fba radeonsi: clean up and deduplicate code around internal
+    compute dispatches
+  * e58dcc47c3b radeonsi: unify and align down the max SSBO/TBO/UBO
+    buffer binding size
+  * b7ffa1560c3 tgsi_to_nir: handle TGSI_OPCODE_BARRIER
+  * d35c3dc80e8 tgsi_to_nir: handle TGSI_SEMANTIC_BLOCK_SIZE
+  * 2840bc3065b glthread: upload non-VBO vertices and indices for non-
+    Indirect non-IBM draws
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 May 2020 11:10:50 +0200
+
 mesa (20.1.0~git2004210949.d29fea77b91~b~mesaaco6) bionic; urgency=medium
 
   * New snapshot:
