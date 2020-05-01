@@ -1,3 +1,40 @@
+mutter (3.37.1+git2004291847.5dfd86ebe~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 5dfd86ebe Bump version to 3.37.1
+  * 9e41f687a remote-access-controller: Make it build with -
+    Dremote_desktop=false
+  * 61356caa0 keybindings: Mask out the reserved modifiers mask
+  * 4300f1f91 remote-access-controller: Allow inhibiting remote access
+  * d26dc4ae4 compositor: Only include meta-window-actor-wayland.h when
+    building with wayland
+  * bd45a00fa window-actor/x11: Cache the frame bounds
+  * 793a9d45e clutter/stage-cogl: Fix painting the redraw clip with the
+    damage region
+  * 43295bdcc Update German translation
+  * 43e12dab7 backend: Remove support for META_DUMMY_MONITORS variable
+  * c4535fdf8 screen-cast: Add RecordArea for screen cast arbitrary area
+  * d2c3272eb clutter/paint-context: Add 'no-cursors' paint flag
+  * 90c4b6492 stage: Only invoke paint phase callbacks when painting
+    views
+  * b7bf42e77 clutter/stage: Add API to paint to a custom target
+  * e849667be screen-cast-stream-src: Add getter for stride
+  * 424016d66 stage: Pass paint context in phase callbacks
+  * a4f55d498 clutter/paint-context: Allow passing redraw clip to
+    offscreen paint context
+  * 1b33a5a3a clutter/paint-context: Add paint flag
+  * 36111270a kms-impl/simple: Fix page_flip_data ref leak on fallback
+  * 6e0cfd3e5 kms: Make GSource ready by default
+  * 5671f0a28 x11: Allow X11 clients to clear the selection
+  * a7e63bea6 x11: Generalize x11 selection owner checks
+  * 94b3c334e x11: Clear X11 selection source after unsetting owner
+  * efb0addb6 tests/wayland: Add a test for meta-anonymous-file
+  * 988da215c wayland/keyboard: Use MetaAnonymousFile to share keymap
+    files
+  * 551a57ed7 Add read-only anonymous file abstraction MetaAnonymousFile
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 May 2020 11:15:01 +0200
+
 mutter (3.37.0+git2004170051.b7366b5b5~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
