@@ -1,3 +1,55 @@
+mesa (20.0.6+git2004291612.90934659dcf~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 90934659dcf intel/fs: Don't delete coalesced MOVs if they have a
+    cmod
+  * a0c046f5e7e mesa: report GL_INVALID_OPERATION for invalid
+    glTextureBuffer target
+  * 60c2ae0240a nir/copy_prop_vars: Report progress when deleting self-
+    copies
+  * b7c3e67ab19 .pick_status.json: Update to
+    2efa76f795cb2b2bf00b317c580aeeeddd1e9bc2
+  * e0cc731986c docs: Add SHA256 sums for 20.0.6
+  * 4c59d9944a8 VERSION: bump to 20.0.6
+  * dda9d5346ba docs: Add release notes for 20.0.6
+  * 4072515d579 anv: Expose CS workgroup sizes based on a maximum of 64
+    threads
+  * 002f718dfaf intel/devinfo: Compute the correct L3$ size for Gen12
+  * b7ef4447192 radv: Use actual memory type count for setting app-
+    visible bitset.
+  * 8191b916955 freedreno: Fix calculation of the const buffer cmdstream
+    size.
+  * 660e650dbcb .pick_status.json: Update to
+    6b551d9f360e45ba4e74867dbe79ae212e4766c5
+  * 373c5360e4c st/mesa: Treat vertex inputs absent in inputMapping as
+    zero in mesa_to_tgsi
+  * 109caeeb436 nir/lower_subgroups: Mask off unused bits in ballot ops
+  * 74e0db6171c anv: Drop an assert
+  * 2b01692b9ed spirv: Fix passing combined image/samplers through
+    function calls
+  * f1ccead5b8b nir/opt_deref: Remove certain sampler type casts
+  * 081efbbc79d turnip: Properly handle all sizes of specialization
+    constants
+  * 844b3828061 radv: Properly handle all sizes of specialization
+    constants
+  * ca9452e34c9 anv: Properly handle all sizes of specialization
+    constants
+  * cacb0c02681 spirv: Allow constants and NULLs in SpvOpConvertUToPtr
+  * a2776c24c7b meson: Use dependency.partial_dependency()
+  * 5cb1414707f .pick_status.json: Update to
+    42b1696ef627a5bfee29911a780fa0a4dbf04610
+  * ea37c93a6b4 intel/perf: Enable MDAPI queries for Gen12
+  * 96750187c18 intel/perf: move mdapi query definitions to their own
+    file
+  * 265c4537abf intel/perf: break GL query stuff away
+  * c4b110d33bd intel/perf: move register definition to special file
+  * b754deecb0a meson: correct windows-version define
+  * 86e586862f2 radv: Use TRUNC_COORD on samplers
+  * a2f0ee96644 radv: make sure to export the viewport index if FS needs
+    it
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 May 2020 11:12:56 +0200
+
 mesa (20.0.4+git2004201003.4dfb9d9fcee~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
