@@ -28,6 +28,7 @@ endif
 DRI_DRIVERS =
 GALLIUM_DRIVERS =
 VULKAN_DRIVERS =
+LLVM_VERSION = 10
 
 confflags_DRI3 = -Ddri3=false
 
@@ -142,6 +143,7 @@ confflags += \
 
 override_dh_clean:
 	rm -rf .pc
+	rm -rf meson-config.txt
 	rm -rf build
 	rm -rf configure bin/config.guess bin/config.sub config.h.in
 	rm -rf $$(find -name Makefile.in)
@@ -158,8 +160,9 @@ override_dh_clean:
 	dh_clean
 
 override_dh_auto_configure:
+	echo "[binaries]\nllvm-config = \"llvm-config-${LLVM_VERSION}\"" > meson-config.txt
 	$(buildflags) dh_auto_configure -- \
-		$(confflags)
+		$(confflags) --native-file=../meson-config.txt
 
 override_dh_auto_install:
 	dh_auto_install
@@ -186,6 +189,8 @@ override_dh_install:
 	rm debian/tmp/usr/lib/*/libglapi.so
 	rm debian/tmp/usr/lib/*/libEGL_mesa.so
 	rm debian/tmp/usr/lib/*/libGLX_mesa.so
+	rm -f debian/tmp/usr/lib/*/libGLESv2*
+	rm -f debian/tmp/usr/lib/*/pkgconfig/glesv2.pc
 
 	# Copy the hardlinked *_dri.so correctly.
 	install -m755 -d debian/libgl1-mesa-dri/usr/lib/${DEB_HOST_MULTIARCH}/dri/

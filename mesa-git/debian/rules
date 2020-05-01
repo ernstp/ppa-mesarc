@@ -28,6 +28,7 @@ endif
 DRI_DRIVERS =
 GALLIUM_DRIVERS =
 VULKAN_DRIVERS =
+LLVM_VERSION = 10
 
 confflags_DRI3 = -Ddri3=false
 
@@ -142,6 +143,7 @@ confflags += \
 
 override_dh_clean:
 	rm -rf .pc
+	rm -rf meson-config.txt
 	rm -rf build
 	rm -rf configure bin/config.guess bin/config.sub config.h.in
 	rm -rf $$(find -name Makefile.in)
@@ -158,8 +160,9 @@ override_dh_clean:
 	dh_clean
 
 override_dh_auto_configure:
+	echo "[binaries]\nllvm-config = \"llvm-config-${LLVM_VERSION}\"" > meson-config.txt
 	$(buildflags) dh_auto_configure -- \
-		$(confflags)
+		$(confflags) --native-file=../meson-config.txt
 
 override_dh_auto_install:
 	dh_auto_install
