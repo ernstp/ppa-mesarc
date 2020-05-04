@@ -53,7 +53,7 @@ else
 	SEPARATOR="+"
 fi
 
-GIT_VERSION=$(git show --date=format:%y%m%d%H%M -s --format=format:%cd.%h)
+GIT_VERSION=$(git show --date=format-local:%y%m%d%H%M -s --format=format:%cd.%h)
 GIT_REV=$(git show -s --format=format:%h)
 
 if [ "$1" = "-f" ]; then
