@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git2004211054.0732f81~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 0732f81 glamor: Make pixmap scanout compatible if its dimensions are
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 May 2020 16:51:55 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git2003181747.cb27a5b~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
