@@ -1,3 +1,12 @@
+corectrl (1.1.0~git2005041834.d849d29~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * d849d29 Update translations
+  * ef201a1 Simplify FVControl qml component
+  * 57aefda Rework vega20+ advanced powermanagement control
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 May 2020 19:13:00 +0200
+
 corectrl (1.1.0~git2004261701.6a458b6~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
