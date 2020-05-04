@@ -1,3 +1,44 @@
+mesa (20.2.0~git2005041406.cb1e0db23e3~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cb1e0db23e3 vulkan/wsi: Make wsi_swapchain inherit from
+    vk_object_base
+  * 32f20783a51 vulkan: Add run-time object type asserts in handle casts
+  * 7628585dd70 anv: Refactor setting descriptors with immutable sampler
+  * 73fb7cdbe1c vulkan,anv: Move the DEFINE_HANDLE_CASTS macros to
+    vk_object.h
+  * 682c81bdfb7 vulkan,anv: Add a base object struct type
+  * 369703774cf anv: Allocate CPU-side memory for events
+  * 4ac4e8e11f3 anv: Stop clflushing events
+  * a9158f79514 vulkan,anv: Add a common base object type for VkDevice
+  * 9d10bde5a87 vulkan: Allow destroying NULL debug report callbacks
+  * 46b3cb011fd st/mesa: destroy only own program variants when program
+    is released
+  * 7e7bb38bd8b radeonsi: fix export count
+  * af55bdd05d9 vtn/opencl: native sqrt support
+  * 337ff9c0889 vtn/opencl: native rsqrt support
+  * 2ab6a58c197 vtn/opencl: native recip support
+  * a698c2eedba vtn/opencl: native powr support
+  * 594c49be080 vtn/opencl: native divide support
+  * bce8a86b652 vtn/opencl: native variants of sin/cos
+  * f76b379a9a6 vtn/opencl: add native_tan-support
+  * aab1361d595 compiler/nir: move tan-calculation to helper
+  * 58bb8172574 mesa: check draw buffer completeness on
+    glClearBufferfv/glClearBufferuiv
+  * f1a40a26a90 Revert "ac/surface: remove
+    RADEON_SURF_TC_COMPATIBLE_HTILE and assume it's always set"
+  * ee8f60da19d i965: disable shadow batches when batch debugging.
+  * b2164320a06 i965: add support for gen 5 pipelined pointers to dump
+  * df9629e593e radv: Extend tiling flags to 64-bit.
+  * b5f7b0ce194 aco: add message to static_assert
+  * 8e02de4d7fc aco: remove use of f-strings
+  * 49cc9e95266 anv: Disable extensions based on Android versions
+  * a77cf797f12 anv: Limit vulkan version to 1.1 for Android
+  * 33c61eb2f10 iris: Implement ARB_compute_variable_group_size
+  * e645bc69397 intel: Let drivers call brw_nir_lower_cs_intrinsics()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 May 2020 16:46:53 +0200
+
 mesa (20.2.0~git2005010751.cc2c3b41b86~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
