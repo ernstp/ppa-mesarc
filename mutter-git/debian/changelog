@@ -1,3 +1,10 @@
+mutter (3.37.1+git2005032335.aedf692e0~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * aedf692e0 backends: move 'input_device' to HAVE_LIBWACOM scope
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 May 2020 16:51:40 +0200
+
 mutter (3.37.1+git2004291847.5dfd86ebe~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
