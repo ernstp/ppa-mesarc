@@ -1,3 +1,40 @@
+mesa (20.2.0~git2005041751.b97cc41aa20~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b97cc41aa20 Revert "ac: reassociate FP expressions for inexact
+    instructions for radeonsi"
+  * 5f01869f74a pan/bit: Add ICMP tests
+  * 9bc684cad83 pan/bit: Add more 16-bit fmod tests
+  * 041ba62e876 pan/bit: Add swizzles to round tests
+  * 35c806e701d pan/bi: Don't pack ICMP on FMA
+  * 5cbdf29b7e9 pan/bi: Pack ADD ICMP 16
+  * 5bd41722802 pan/bi: Pack ADD ICMP 32
+  * 336d5128f9b pan/bi: Structify ADD ICMP 16
+  * fdf154d24af pan/bi: Pack ADD.DISCARD
+  * 7a9b9859e72 pan/bi: Handle discard/branch in get_component_count
+  * 8ab5c97895d pan/bi: Fuse conditions into discard_if
+  * 201a11a13ad pan/bi: Add float-only mode to condition fusing
+  * 7d867f787f9 pan/bi: Emit discard (not if)
+  * c9ab73296c1 pan/bi: Handle discard_if in NIR->BIR naively
+  * 6627b20de35 pan/bi: Unwrap BRANCH into CONDITIONAL class
+  * 6e5d2072939 pan/bi: Remove BI_GENERIC
+  * 20cb039457d pan/bi: Structify DISCARD
+  * 5c03340fd1a pan/bi: Fix DISCARD ops in disasm
+  * 31a41bb6a62 pan/bi: Disable CSEL4 emit for now
+  * e14e3065a9f pan/bi: Fix incorrectly flipped swizzle
+  * 8415b3d5523 pan/bi: Fix missing swizzle
+  * c9634894a67 pan/bi: Fix double-abs flipping
+  * ef9b4b3a0be pan/bi: Set clause type for gl_FragCoord.z
+  * 47c84ee7354 pan/bi: Lower gl_FragCoord
+  * c5ef35c4334 pan/bi: Passthrough direct ld_var addresses
+  * 513c774d580 pan/bi: Print bad instruction on src packing fail
+  * 0561fe3a06d pan/bi: Futureproof COMBINE lowering against non-u32
+  * c48839086db pan/bi: Abort on unhandled intrinsics
+  * 94e6263c0b0 pan/bi: Abort on unknown op packing
+  * 5a415259fc7 pan/bi: Add clause type for gl_FragCoord.zw load
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 May 2020 19:27:13 +0200
+
 mesa (20.2.0~git2005041406.cb1e0db23e3~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
