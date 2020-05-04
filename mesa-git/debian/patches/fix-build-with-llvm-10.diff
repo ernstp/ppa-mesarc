@@ -2,10 +2,11 @@ Index: mesa/src/gallium/targets/opencl/meson.build
 ===================================================================
 --- mesa.orig/src/gallium/targets/opencl/meson.build
 +++ mesa/src/gallium/targets/opencl/meson.build
-@@ -31,6 +31,13 @@ endif
- 
- llvm_libdir = dep_llvm.get_configtool_variable('libdir')
- 
+@@ -43,6 +43,14 @@ clang_test_code = '''
+     return found_pos == ::std::string::npos ? 1 : 0;
+   }
+ '''
++
 +polly_dep = null_dep
 +polly_isl_dep = null_dep
 +if dep_llvm.version().version_compare('>=10.0.0')
@@ -13,16 +14,14 @@ Index: mesa/src/gallium/targets/opencl/meson.build
 +  polly_isl_dep = cpp.find_library('PollyISL', dirs : llvm_libdir, required : true)
 +endif
 +
- opencl_libname = with_opencl_icd ? 'MesaOpenCL' : 'OpenCL'
- 
- dep_clang = cpp.find_library('clang-cpp', dirs : llvm_libdir, required : false)
-@@ -61,7 +68,8 @@ libopencl = shared_library(
-   link_with : [libpipe_loader_dynamic, libgallium],
-   dependencies : [
-     idep_mesautil,
--    dep_clock, dep_dl, dep_unwind, dep_elf, dep_clang
-+    dep_clock, dep_dl, dep_unwind, dep_elf, dep_clang,
+ can_check_clang = (not meson.is_cross_build() or meson.has_exe_wrapper()) and cpp.has_link_argument(linker_rpath_arg)
+ if can_check_clang
+   test_run = cpp.run(clang_test_code, name : 'dep-clang-usable',
+@@ -66,6 +74,7 @@ if not (dep_clang.found() and dep_clang_
+     cpp.find_library('clangEdit', dirs : llvm_libdir),
+     cpp.find_library('clangLex', dirs : llvm_libdir),
+     cpp.find_library('clangBasic', dirs : llvm_libdir),
 +    polly_dep, polly_isl_dep,
-   ],
-   version : '@0@.0.0'.format(opencl_version),
-   install : true,
+   ]
+   # check clang once more
+   if can_check_clang
