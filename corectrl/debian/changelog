@@ -1,3 +1,10 @@
+corectrl (1.1.0~git2005041910.c49198f~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * c49198f Fix missing QStringLiteral compilation error on Qt 5.9
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 May 2020 19:26:45 +0200
+
 corectrl (1.1.0~git2005041834.d849d29~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
