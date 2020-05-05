@@ -1,3 +1,44 @@
+mesa (20.2.0~git2005051752.266fec1307b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 266fec1307b radeonsi: don't wait for idle at the end of gfx IBs
+  * ae4379d81e4 ac/nir: export some undef as zero
+  * 0ee1a724bf7 gallium: add a new cap PIPE_CAP_GLSL_ZERO_INIT
+  * ea289d1502d mesa: extend GLSLZeroInit semantics
+  * 679421628bf glsl: add a is_implicit_initializer flag
+  * fa6b22d36a9 glsl: rework zero initialization
+  * 84f58a08634 glsl: init gl_FragColor if zero_init=true
+  * 547e81655a0 radeonsi: don't print gs_copy_shader stats for shaderdb
+  * b0a7499d28d radv: enable shaderInt16 unconditionally with LLVM and
+    only GFX8+ with ACO
+  * 64662dd5bae radeonsi: add workaround for issue 2647
+  * 7983d97174d zink: use nir_lower_uniforms_to_ubo
+  * 4777ee1a62f nir: Always create UBO variable when lowering uniforms
+    to ubo
+  * 354474b9e5a mesa/st: consider NumUniformBlocks instead of num_ubos
+    when binding
+  * 8471f7a5fa1 compiler/glsl: explicitly store NumUniformBlocks
+  * 8059f206da8 glsl: rename has_implicit_uint_to_int_conversion to
+    *_int_to_uint_*
+  * 403eb507f58 driconf: add force_integer_tex_nearest option
+  * 12fb7d70086 mesa: add gl_coontext::ForceIntegerTexNearest
+  * 90d9f9a37ed aco: remove unecessary p_split_vector with v2b reg class
+  * b0cb38f3608 vulkan: Update Vulkan XML and headers to 1.2.140
+  * 785803a2e54 turnip: Remove RANGE_SIZE usage
+  * 24f9aea7707 radv: Remove RANGE_SIZE usage
+  * c4d11ea3c43 anv: Remove RANGE_SIZE usage
+  * 57796946985 android: iris: add iris_seqno.{c,h} to Makefile.sources
+  * c4cdef64ad6 ac/surface: fix MSAA crash with FORCE_SWIZZLE_MODE on
+    gfx9
+  * 1dcf291e3bf pan/bit: Add IMATH packing tests
+  * 8fcc23bf28d pan/bit: Factor out identity swizzle helper
+  * 36e4ffa382f pan/bit: Use swizzle helper for round
+  * 118d53bf93d pan/bit: Remove test names
+  * 52cdaaacbbb pan/bit: Interpret v4i8 ops
+  * 66163614dbf pan/bit: Interpret IMATH
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 May 2020 18:26:26 +0200
+
 mesa (20.2.0~git2005041751.b97cc41aa20~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
