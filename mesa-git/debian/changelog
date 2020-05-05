@@ -1,3 +1,47 @@
+mesa (20.1.0~rc1+git2005042337.b6f5c9bf102~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * b6f5c9bf102 ac/surface: fix MSAA crash with FORCE_SWIZZLE_MODE on
+    gfx9
+  * e27467ef813 Revert "ac: reassociate FP expressions for inexact
+    instructions for radeonsi"
+  * b1c8ab8b540 etnaviv: do not use int filter when anisotropic
+    filtering is used
+  * b0ef5d814ef etnaviv: fix SAMP_ANISOTROPY register value
+  * 0fa251560c3 vulkan: Allow destroying NULL debug report callbacks
+  * 2d3e962feb4 st/mesa: destroy only own program variants when program
+    is released
+  * 0038189e625 radeonsi: fix export count
+  * fd632882cee .pick_status.json: Update to
+    57796946985de60204189426ca8eb7bbfa97c396
+  * 7cfedfed799 Revert "ac/surface: remove
+    RADEON_SURF_TC_COMPATIBLE_HTILE and assume it's always set"
+  * 73a99f8fd3f radv: Extend tiling flags to 64-bit.
+  * 7d394d11eca aco: add message to static_assert
+  * d2ec7ff5cd2 aco: remove use of f-strings
+  * 548e5f63f8c anv,iris: Fix input vertex max for tcs on gen12
+  * 858f9e02709 intel/fs: Update location of Render Target Array Index
+    for gen12
+  * 9407f6ea430 panfrost: Add Bifrost texture trampoline BO to batch
+  * 7fabad5d89d ci: fix reporting the number of unexpected/flakes
+  * 744872160cc radeonsi: revert an accidental change in si_clear_buffer
+  * 3462ab6d342 radeonsi: unify and align down the max SSBO/TBO/UBO
+    buffer binding size
+  * a8cd6189cb9 iris: don't assert on unfinished aux import in copy
+    paths
+  * 6ec2564670d Revert "anv/gen12: Temporarily disable
+    VK_KHR_buffer_device_address (and EXT)"
+  * 8c0ad1d2dbc gitlab-ci: update tracie README after changes in main
+    script
+  * 4e710b3c37e intel/ir: Update performance analysis parameters for
+    memory fence codegen changes.
+  * 8229d22234e freedreno: fix buffer import
+  * 6236c976993 radv: Fix implicit sync with recent allocation changes.
+  * 1b0e98c295c .pick_status.json: Update to
+    af55bdd05d94eda59ee1c9331a50045000da5db5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 May 2020 18:28:48 +0200
+
 mesa (20.1.0~rc1+git2004300009.0865c5107f0~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
