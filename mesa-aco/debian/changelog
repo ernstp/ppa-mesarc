@@ -1,3 +1,53 @@
+mesa (20.2.0~git2005072240.37e89e30276~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 37e89e30276 aco: either copy-propagate or inline create_vector
+    operands
+  * c9e73624022 ac/surface: override all offsets including metadata
+    offsets
+  * 441eaef6a9e amd: unify code for overriding offset and stride for
+    imported buffers
+  * c164ea86e19 ac/surface,radeonsi: move the set/get_umd_metadata code
+    into ac_surface.c
+  * 7691de0dcef ac/surface,radeonsi: move the set/get_bo_metadata code
+    to ac_surface.c
+  * 56e37374ddb amd: assume HTILE is always rb/pipe_aligned, remove
+    ac_surface.u.gfx9.htile
+  * cf61f635ff6 amd: assume CMASK is always rb/pipe_aligned, remove
+    ac_surface.u.gfx9.cmask
+  * 127aaf0b9ac amd: remove duplicated definitions from amdgpu_drm.h
+  * 25edf9b1364 amd: update amdgpu_drm.h
+  * 89d4b6b5c85 llvmpipe: make sample position a global array.
+  * 3b6449d4531 nir/algebraic: Optimize some bfe patterns
+  * f46eabf84e6 nir/algebraic: Split ibfe and ubfe with two constant
+    sources
+  * 0d605a8bbfd nir/algebraic: Recognize open-coded byte or word extract
+    from bfe
+  * 58dfb38f784 gallium/swr: Fix crashes in sampling code
+  * 58b66f82e64 panfrost: Handle MALI_RGB8_UNORM in
+    panfrost_format_to_bifrost_blend
+  * 9c3e82296c8 panfrost: Don't trample on top of Bifrost-specific
+    unions
+  * 7e53cce3ba4 pan/decode: Fix flags_hi printing
+  * a4d41a15109 panfrost: Add checksum BOs to batch
+  * 4f17e9eef6f anv: don't expose VK_INTEL_performance_query without
+    kernel support
+  * 6d513eb0db2 tu: Support pipelines without a fragment shader
+  * 7ba2333cc17 util/os_memory: never use os_memory_debug.h
+  * 905edc376dd v3d: Include supported DXT formats to enable s3tc/dxt
+    extensions
+  * e3ecf48dda2 v3d: Fix swizzle in DXT3 and DXT5 formats
+  * 17ed4a01ee2 docs/envvars: update RADV_FORCE_FAMILY
+  * 5c6afd0f349 docs/envvars: document ACO_DEBUG
+  * 1aaec1f3f45 docs: add src/amd/ to sourcetree.html
+  * 38bbfd3a57d clover/nir: Check the result of spirv_to_nir
+  * abc4a828577 nir: make fsat return 0.0 with NaN instead of passing it
+    through
+  * d8a27c0bb30 compiler/spirv: flag nclamp/nmin/nmax as exact
+  * 9a11aa4ece6 docs/features: Add ARB_clear_texture to virgl
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 May 2020 23:13:33 +0200
+
 mesa (20.2.0~git2005051752.266fec1307b~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
