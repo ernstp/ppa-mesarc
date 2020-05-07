@@ -1,3 +1,25 @@
+mutter (3.37.1+git2005072204.322b51cde~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 322b51cde clutter: Remove ClutterAnimation
+  * b46bc98d4 tests/clutter/conform: Remove left-over ClutterAnimator
+    scripts
+  * da5be1fde clutter/animatable: Remove left-over vfunc
+  * bc18438cb clutter/box-layout: Make 'easing-mode' be an enum
+  * e3c0fcf7d tests/clutter: Add back redhand_alpha.png and light0.png
+  * 73cb96ddb clutter: Remove 'ClutterAlpha'
+  * 1cb59f44a clutter/layout-manager: Remove unused animation API
+  * a55a286b1 clutter: Remove deprecated 'ClutterState'
+  * 18e7b814f tests/wayland: Don't test file sealing on the fallback
+    case
+  * e07307611 backends/native: Unset the correct button codes when a
+    virtual device is destroyed
+  * 5d5815613 wayland/keyboard: Chain finalize up to the parent class
+  * c38fa4fa5 clutter: Remove CLUTTER_ACTOR_IN_REPARENT flag
+  * 5201d77b0 keybindings: Use current monitor for move-to-center
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 May 2020 23:17:51 +0200
+
 mutter (3.37.1+git2005032335.aedf692e0~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
