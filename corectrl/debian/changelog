@@ -1,3 +1,11 @@
+corectrl (1.1.0~git2005071800.0f886ff~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * 0f886ff Increase the contrast of axis elements on curve controls
+  * f56de05 Rename curve Style object
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 May 2020 23:13:14 +0200
+
 corectrl (1.1.0~git2005041930.eab2ff4~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
