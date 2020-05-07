@@ -1,3 +1,52 @@
+mesa (20.1.0~rc2+git2005071824.dc28a916e92~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * dc28a916e92 util/os_memory: never use os_memory_debug.h
+  * 348e84d2439 .pick_status.json: Update to
+    7ba2333cc17e7f0a1520866bcfd60a991d34295e
+  * bddee60734b v3d: Include supported DXT formats to enable s3tc/dxt
+    extensions
+  * 713135ec6b8 v3d: Fix swizzle in DXT3 and DXT5 formats
+  * c862a0f963f clover/nir: Check the result of spirv_to_nir
+  * c25426520e3 .pick_status.json: Update to
+    905edc376dd1ace6ac2af0fc351606210a0141a1
+  * e658e900bbb VERSION: bump to 20.1.0-rc2
+  * f7d67c99a6f radeonsi: fix compilation of monolithic PS
+  * b896c506b8c i965: Fix out-of-bounds access to
+    brw_stage_state::surf_offset
+  * fa1739113b4 radv: don't report error with other vendor DRM devices
+  * d4c1cb59c2f radv: report INITIALIZATION_FAILED when the amdgpu
+    winsys init failed
+  * 1ed51096acd zink: lower b2b to b2i
+  * a36b7d8c97e llvmpipo/nir: free compute shader NIR
+  * ebb656bfb32 draw/tess: free tessellation control shader i/o memory.
+  * b4e46da708f nir: add missing group_memory_barrier handling
+  * f2a012f987e radeonsi: don't print gs_copy_shader stats for shaderdb
+  * a25234047f7 driconf: add force_integer_tex_nearest option
+  * ae44a916ecc mesa: add gl_coontext::ForceIntegerTexNearest
+  * 6486ac1a4c5 .pick_status.json: Update to
+    29da52128090a1ef8ef782188c0f67c7f5ec8d19
+  * ad9b00ee4ef .pick_status.json: Mark
+    3fac55ce0d066d767d6c6c8308f79d0c3e566ec0 as denominated
+  * de3a2b29bca ac/surface: fix MSAA crash with FORCE_SWIZZLE_MODE on
+    gfx9
+  * 12d23b4a087 Revert "ac: reassociate FP expressions for inexact
+    instructions for radeonsi"
+  * 33a086f44ec etnaviv: do not use int filter when anisotropic
+    filtering is used
+  * 00001525f5f etnaviv: fix SAMP_ANISOTROPY register value
+  * 86629193f5d vulkan: Allow destroying NULL debug report callbacks
+  * e1e22e38e7e st/mesa: destroy only own program variants when program
+    is released
+  * 4af564cb920 radeonsi: fix export count
+  * 7a93e75a412 .pick_status.json: Update to
+    57796946985de60204189426ca8eb7bbfa97c396
+  * 4e07d00fa5a Revert "ac/surface: remove
+    RADEON_SURF_TC_COMPATIBLE_HTILE and assume it's always set"
+  * ec918aa04c2 radv: Extend tiling flags to 64-bit.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 May 2020 23:15:43 +0200
+
 mesa (20.1.0~rc1+git2005042337.b6f5c9bf102~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
