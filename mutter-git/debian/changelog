@@ -1,3 +1,14 @@
+mutter (3.37.1+git2005080008.132060db2~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 132060db2 ci: Save built artifacts only for the test build
+  * c7f2ae1b1 build: Add configuration summary line about coverage being
+    enabled
+  * 24a0e72ae ci: Remove the MALLOC_PERTURB_ definition
+  * 5c4938e47 ci: Enable coverage reports in test build
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 May 2020 00:43:05 +0200
+
 mutter (3.37.1+git2005072204.322b51cde~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
