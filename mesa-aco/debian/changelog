@@ -1,3 +1,38 @@
+mesa (20.2.0~git2005082237.1a59590e5d6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1a59590e5d6 ac/surface: fix broken pitch override on gfx8
+  * c9e8df61dc8 freedreno: Initialize the bo's iova at creation time.
+  * b3c4e6a597a freedreno: Rename append_bo() in case it doesn't get
+    inlined.
+  * e1c74f3facc freedreno: Clean up tests around ORing in the reloc
+    flags.
+  * 6c688ae81f4 freedreno: Deduplicate ringbuffer macros with
+    computerator/fdperf
+  * 094c7646a3a freedreno,tu: Don't request fragcoord components not
+    being read.
+  * ab5590e92bc vulkan/object: Always include the type
+  * d11e4738a86 anv/allocator: Add a start_offset to anv_state_pool
+  * 772b15ad322 util: Make process_test path compatible with mingw
+    native toolchains
+  * 696bafac40f CI: Disable Panfrost T7x0 jobs
+  * 78d267e6dad Linux: Change minimum priority threads from SCHED_IDLE
+    to nice 19 SCHED_BATCH.
+  * f66bf5ba444 docs/features: add zink features
+  * 8bcfce2fcd0 anv: fix alignments for uniform buffers
+  * f105b69464d radv: report correct backend IR in hang reports when ACO
+    is used
+  * 290d480c551 radv: do not print the LLVM version string twice in hang
+    reports
+  * b1ef1c12113 radv: remove the LLVM version string when ACO is used
+  * ee2aef3ea53 anv: call base finish only if pass given in
+    DestroyRenderPass
+  * a885ee52582 st/wgl: allocate and resolve msaa-textures
+  * 947bb04fcc0 st/wgl: pass st_context_iface into
+    stw_st_framebuffer_present_locked
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 May 2020 22:51:40 +0200
+
 mesa (20.2.0~git2005072300.808eb20186a~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
