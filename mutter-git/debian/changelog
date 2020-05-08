@@ -1,3 +1,35 @@
+mutter (3.37.1+git2005081152.1880e2222~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 1880e2222 clutter-actor: Remove unused
+    clutter_actor_get_allocation_vertices
+  * bd2858147 monitor-manager: Remove "supports-mirroring" from D-Bus
+    desciption file
+  * 82470cd40 tests/stacking: Add test checking the initial size
+  * b4972f573 tests/stacking: Add test for checking restored positions
+  * c97c409c5 tests/test-runner: Add 'move' and 'assert_position'
+  * 989e2ccc4 tests/restore-size: Also test that untiling restores
+    correctly
+  * e09e62d58 tests/test-runner: Add tile and untile commands
+  * 033f0d11b window: Set fall-back tile monitor if not set
+  * 668eb318c window: Add meta_window_untile()
+  * 449cbe153 tests/stacking: Test some maximize fullscreen interaction
+  * 9b8e5a05f tests/test-client: Add 'fullscreen' and 'unfullscreen'
+    commands
+  * d14c8cf9a tests/stacking: Check that unmaximize to new size works
+  * 4571de577 tests/stacking: Add test to verify we unmaximize correctly
+  * 62f449d7d tests/test-runner: Add a 'wait_reconfigure' command
+  * 476ef76de tests/test-runner: Add 'assert_size' command
+  * 48de81b63 tests/test-client: Remove shadow from X11 test client CSS
+    style
+  * 2ee3d5392 tests/test-client: Make 'resize' client command include
+    the titlebar
+  * 0f2a33cc9 tests/test-client: Add line breaks to warning messages
+  * 2ce622f05 tests/test-runner: Plumb "resize" command
+  * 76083d76a tests/test-client: Add commands to maximize/unmaximize
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 May 2020 22:55:57 +0200
+
 mutter (3.37.1+git2005080008.132060db2~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
