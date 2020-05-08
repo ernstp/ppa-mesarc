@@ -1,3 +1,25 @@
+mesa (20.1.0~rc2+git2005081831.c22388ed7ea~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c22388ed7ea anv: increase minUniformBufferOffsetAlignment to 64
+  * be882b566b1 radeonsi: Fix omitted flush when moving suballocated
+    texture
+  * 38f1cf4335d util: Make process_test path compatible with mingw
+    native toolchains
+  * dd42e825868 aco: either copy-propagate or inline create_vector
+    operands
+  * a603ee96b33 anv: don't expose VK_INTEL_performance_query without
+    kernel support
+  * 4628e95920e util/os_memory: never use os_memory_debug.h
+  * 77e06f9d4bc v3d: Include supported DXT formats to enable s3tc/dxt
+    extensions
+  * f060438be02 v3d: Fix swizzle in DXT3 and DXT5 formats
+  * 1dfbdca81d9 clover/nir: Check the result of spirv_to_nir
+  * a5d3bc88f41 .pick_status.json: Update to
+    772b15ad3227e08bb4e18932ac9ecf4c29271160
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 May 2020 22:53:52 +0200
+
 mesa (20.1.0~rc2+git2005071824.dc28a916e92~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
