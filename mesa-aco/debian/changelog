@@ -1,3 +1,38 @@
+mesa (20.2.0~git2005100932.56f955e4850~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 56f955e4850 etnaviv: drm: Normalize nano seconds
+  * 022327f7535 etnaviv: drm: Use NSEC_PER_SEC
+  * a92a483ff7f freedreno: android: add adreno-pm4-pack.xml.h generation
+    to android build
+  * 5dc3b22dd06 freedreno/drm: android: add libfreedreno_registers
+    static dependency
+  * e622e010fd8 lima/ppir: rework select conditions
+  * a0c58867cdd lima/ppir: add fallback mov option for const scheduler
+  * 8c476407313 lima/ppir: rework store output
+  * 570f1420dbf lima/ppir: rework emit nir to ppir
+  * 6b21b771f7b lima/ppir: remove unused clone functions
+  * 8c4157138f3 lima/ppir: duplicate consts in nir
+  * 5e6c3861182 lima/ppir: duplicate intrinsics in nir
+  * 09003ba0700 lima/ppir: combine varying loads in node_to_instr
+  * c6a3987f320 lima/ppir: do not assume single src for pipeline outputs
+  * 741aa3439d7 lima/ppir: fix lod bias register codegen
+  * cef1c736344 lima/ppir: introduce liveness internal live set
+  * 9e790fea7c1 genxml: pack: deal with default field not being simple
+    integers
+  * 942d4538a46 genxml: factor out utility functions
+  * d07f69413eb genxml: fix invalid end value for video fields
+  * af17e392b2e genxml: run sorting script
+  * 45c33313e6e intel/dev: Add device info for RKL
+  * 54996ad4927 intel/dev: Split .num_subslices out of GEN12_FEATURES
+    macro
+  * 07b0fbea92a panfrost: don't always build bifrost_compiler
+  * 727a0a53fdd radeonsi: remove emacs style config file
+  * 6c998c7adfd intel/dump_gpu: Fix name of LD_PRELOAD in env append
+    logic
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 May 2020 05:22:22 +0200
+
 mesa (20.2.0~git2005082237.1a59590e5d6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
