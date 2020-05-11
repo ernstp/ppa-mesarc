@@ -1,3 +1,12 @@
+mutter (3.37.1+git2005091147.6f62c5b57~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 6f62c5b57 core/place: Use work area when centering new window.
+  * d823a54b5 monitor-transform: Don't call abs on non-negative enum
+  * e06daa58c tests/monitor-transform: Test only valid enums
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 May 2020 05:26:42 +0200
+
 mutter (3.37.1+git2005081152.1880e2222~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
