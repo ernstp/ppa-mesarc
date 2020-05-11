@@ -1,3 +1,17 @@
+mesa (20.1.0~rc2+git2005110133.2ab04968429~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2ab04968429 docs/relnotes/new_features.txt: Add RKL to 20.1 release
+    notes
+  * c75ab0a241f intel/dev: Add device info for RKL
+  * 7d5074f4a63 intel/dev: Split .num_subslices out of GEN12_FEATURES
+    macro
+  * 096e06c56aa panfrost: don't always build bifrost_compiler
+  * 1e3e805b0c1 .pick_status.json: Update to
+    56f955e4850035d915a2a87e2ebea7fa66ab5e19
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 May 2020 05:24:37 +0200
+
 mesa (20.1.0~rc2+git2005081831.c22388ed7ea~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
