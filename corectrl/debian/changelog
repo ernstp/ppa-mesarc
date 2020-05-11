@@ -1,3 +1,12 @@
+corectrl (1.1.0~git2005091419.25306f6~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * 25306f6 Rework PMFVStateProfilePart state assigment function
+  * 8435479 Fixed memory frequency not being applied in FVVoltCurve
+    control
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 May 2020 05:22:03 +0200
+
 corectrl (1.1.0~git2005071800.0f886ff~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
