@@ -1,3 +1,51 @@
+mesa (20.2.0~git2005150549.ea62c237031~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * ea62c237031 nir: Use 8-bit types for most info fields
+  * 57e796a12a8 radv: Implement VK_EXT_custom_border_color
+  * 9e3c6a7ba76 radv: Provide a better error for permission issues with
+    priorities.
+  * e7458f19e1d freedreno/uuid: Generate meaningful device and driver
+    UUID
+  * 9623debf48a freedreno: Centralize UUID generation into new files
+    freedreno_uuid.c/h
+  * cdfede7336b aco: split operations that use a swap's definition
+  * f293d02dc44 tu: Advertise COLOR_ATTACHMENT_BLEND_BIT for blendable
+    formats
+  * adbdab3ee80 tu: Implement dual-src blending
+  * 078aa9df8da tu: Move RENDER_COMPONENTS setting to pipeline state
+  * 2a9d12d5133 ir3: Fixup dual-source blending slot
+  * 0e0580550e1 freedreno/a6xx: Document dual-src blending enable bits
+  * 4aeaef99c00 Revert "nir/validate: validate the stride for
+    deref_ptr_as_array"
+  * 2c6599d6d6d docs: update calendar, add news item, and link releases
+    notes for 20.0.7
+  * 212ee624f81 docs/relnotes Add sha256 sums to 20.0.7
+  * e5e9a0dfd7e docs: Add release notes for 20.0.7
+  * ceae09da156 intel: Silence unused parameter warning in
+    __intel_log_use_args
+  * 4cb2330e565 anv: Silence unused parameter warning in
+    anv_image_get_clear_color_addr
+  * b44eb50f2d1 anv/tests: Silence unused parameter warnings in main
+  * f4638cfdad3 anv/tests: Don't rely on assert or changing NDEBUG in
+    tests
+  * 66e3c74f9c7 aco: fix WQM coalescing
+  * 4151bddab5d anv: Fix descriptor set clean-up on BO allocation
+    failure
+  * 3f74c6a8815 anv: Call vk_object_base_finish for image views
+  * ed95f69dd54 zink: correct PIPE_SHADER_CAP_MAX_SHADER_IMAGES
+  * 50ebe5a991a zink: do not expose real value for
+    PIPE_CAP_MAX_VIEWPORTS
+  * adc63362734 meta: Remove support for multisample blits
+  * bb28ce79882 meta: Coalesce the GLSL and FF paths in meta_clear
+  * 5be77851907 meta: Use same vertex coordinates for GLSL and FF clears
+  * e5d2fbf3528 meta: Stop frobbing MatrixMode
+  * 29f10ede71f mesa: Add function to calculate an orthographic
+    projection
+  * c731f2ab63d mesa: Add matrix utility functions to load matrices
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 May 2020 08:07:37 +0200
+
 mesa (20.2.0~git2005100932.56f955e4850~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
