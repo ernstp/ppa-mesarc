@@ -1,3 +1,38 @@
+mesa (20.1.0~rc3+git2005141749.5d119ae1f8c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5d119ae1f8c anv: Fix deadlock in anv_timelines_wait
+  * 9f613f9734c anv: Translate relative timeout to absolute when calling
+    anv_timelines_wait
+  * cbcfa144a12 targets/opencl: fix build against LLVM>=10 with Polly
+    support
+  * 608c1f8039e post_version.py: stop adding release candidates to the
+    index and relnotes
+  * 0d389d4434c post_version.py: invert `is_point` into
+    `is_first_release` to make its purpose clearer
+  * 454f7321f79 post_version.py: fix branch name construction for
+    release candidates
+  * 1a90a85a0d4 .pick_status.json: Update to
+    667e14e7bd759a77e732c4de09fb978ee3816eaf
+  * c49fbacd944 VERSION: bump to 20.1.0-rc3
+  * ed872abd563 gitlab-ci: correct tracie behavior with replay errors
+  * d1e3c0b430c gitlab-ci: create always the "results" directory with
+    tracie
+  * 97e2965b07c etnaviv: Disable seamless cube map on GC880
+  * 8b409a429fd freedreno/ir3: fix indirect cb0 load_ubo lowering
+  * fef7d3c73e1 intel/compiler: fix alignment assert in
+    nir_emit_intrinsic
+  * 67c3c06541f radv: limit the Vulkan version to 1.1 for Android
+  * 464bbd6aaaf r600: Fix nir compiler options, i.e. don't lower IO to
+    temps for TESS
+  * 5c0738f9679 gallium/util: Fix leak in the live shader cache
+  * 750a0125dff nir/algebraic: Optimize ushr of pack_half, not ishr
+  * fa01a9397fb aco: fix 64-bit trunc with negative exponents on GFX6
+  * c4b59dbe818 .pick_status.json: Update to
+    c1c0cf7a66905e8d7ad506842a41b0ad0c5b10da
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 May 2020 08:10:04 +0200
+
 mesa (20.1.0~rc2+git2005110133.2ab04968429~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
