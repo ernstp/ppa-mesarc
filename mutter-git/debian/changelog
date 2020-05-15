@@ -1,3 +1,55 @@
+mutter (3.37.1+git2005140034.3c068ef13~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 3c068ef13 wayland/surface: Simplify state cleanup after merge
+  * 2becb3dd2 wayland: Add support for wayland-protocols primary
+    selection protocol
+  * 55f5177fe build: Build scaffolding for primary-selection wayland
+    protocol
+  * 037b68ab8 wayland: Rename gtk primary protocol files to "legacy"
+  * b45d5ef3f wayland: Send primary offer to all data devices from the
+    same client
+  * 7e4e37146 wayland: Send clipboard offers to all data devices from
+    the same client
+  * fbfa136bb clutter/stage-cogl: Cleanup damage history (un-)scaling a
+    bit
+  * 434845dbe clutter/stage-cogl: Don't loop through region rects twice
+  * 967511be6 clutter/stage-cogl: Don't intersect the damage region with
+    the view
+  * 43c7a8246 clutter/stage-cogl: Cleanup setting of the damage history
+  * 066e78c9b clutter/stage-cogl: Warn if the fb_clip_region is empty
+  * 08f47fee1 clutter/stage-cogl: Check for DISABLE_CLIPPED_REDRAWS
+    earlier
+  * afe4cd482 clutter/stage-cogl: Stop painting redraw clip outline
+  * 3fed768db clutter/stage-cogl: Don't push scissor clip with one clip
+    rectangle
+  * 8c52b431b clutter/stage-cogl: Stop doing subpixel compensation
+  * d9ffbf057 clutter/stage-cogl: Don't clip when clipped redraws are
+    disabled
+  * b0953b92b clutter/stage-cogl: Remove scale_and_clamp_rect() function
+  * 819f9afa3 shaped-texture: Fix typo in documentation
+  * 7a0bc5af7 background: Limit mipmap levels to avoid loss of visible
+    detail
+  * c5fbab6ba cogl: Add new function
+    cogl_pipeline_set_layer_max_mipmap_level()
+  * f4301b77f cogl: Generalize `maybe_update_max_level()` into
+    `set_max_level()`
+  * a3f27dfd8 cogl: Ensure GL_TEXTURE_MAX_LEVEL is set before using it
+  * 73ce9c2e8 cogl: Replace an outdated #ifdef
+  * fd27c7c44 cogl: Delete a duplicate (masked) variable declaration
+  * a51807fc1 tests: Move monitor test functions into common utils
+  * 3c35a7876 tests/monitor-store-unit-tests: Rename some structs
+  * ae7cb7a3b tests/monitor-unit-tests: Check test state outside of
+    common function
+  * 531b0ab30 tests/monitor-unit-tests: Use TestCaseExpect for checking
+    configuration
+  * 7cc604b9e tests/monitor-unit-tests: Use TestCaseSetup for building
+    TestSetup
+  * f3a65c9b3 tests/monitor-test-utils: Remove unused function
+    definition
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 May 2020 08:12:11 +0200
+
 mutter (3.37.1+git2005091147.6f62c5b57~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
