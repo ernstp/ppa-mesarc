@@ -1,3 +1,32 @@
+mesa (20.1.0~rc3+git2005162303.7830fa0dce9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 7830fa0dce9 radeonsi: Use TRUNC_COORD on samplers
+  * 5db3af3ad8b radeonsi: don't expose 16xAA on chips with 1 RB due to
+    an occlusion query issue
+  * fe2e2bd931d etnaviv: retarget transfer to render resource when
+    necessary
+  * a3506fe7ee1 zink: implement i2b1
+  * 5ca7b4416b9 radv: Provide a better error for permission issues with
+    priorities.
+  * c27f4be161f anv/tests: Don't rely on assert or changing NDEBUG in
+    tests
+  * df832672e86 anv: Fix deadlock in anv_timelines_wait
+  * 644ac80aea8 anv: Translate relative timeout to absolute when calling
+    anv_timelines_wait
+  * 0fe1d57df1f targets/opencl: fix build against LLVM>=10 with Polly
+    support
+  * c7fa879ca5c post_version.py: stop adding release candidates to the
+    index and relnotes
+  * e4daffff0a9 post_version.py: invert `is_point` into
+    `is_first_release` to make its purpose clearer
+  * d47db370462 post_version.py: fix branch name construction for
+    release candidates
+  * ba722a0eade .pick_status.json: Update to
+    632a921bd0dd40ad3167a0b8a74fe7054a78256a
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 17 May 2020 15:23:56 +0200
+
 mesa (20.1.0~rc3+git2005141749.5d119ae1f8c~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
