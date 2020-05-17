@@ -1,3 +1,10 @@
+mutter (3.37.1+git2005150930.1d5f9b691~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 1d5f9b691 backend-x11: Reintroduce XInitThreads
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 17 May 2020 15:26:02 +0200
+
 mutter (3.37.1+git2005140034.3c068ef13~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
