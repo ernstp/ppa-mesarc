@@ -1,3 +1,61 @@
+mesa (20.2.0~git2005170112.78615dcca19~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 78615dcca19 radv: use util_float_to_half_rtz
+  * 632a921bd0d lima/ppir: optimize tex loads with single successor
+  * a4b7699d849 lima/ppir: rework tex lowering
+  * 92611e21c19 lima/ppir: improve handling for successors in other
+    blocks
+  * 96c1d5f629b lima/ppir: handle failures on all ppir_emit_cf_list
+    paths
+  * fa3549c92b2 util/rand_xor: extend the urandom path to all non-
+    Windows platforms
+  * d76abe98cf1 util/rand_xor: fallback Linux to time-based instead of
+    fixed seed
+  * e0ce684aae8 util/rand_xor: drop unused header
+  * f50f26325f8 util/rand_xor: make it clear that
+    {,s_}rand_xorshift128plus take *exactly 2* uint64_t
+  * 576bff5c73f gitlab-ci: exclude scripts that don't affect the build
+  * 494b7ef0c1a gallium/auxiliary/vl: Fix compute shader scaling for non-
+    square pixels
+  * fd6a5e112aa gallium/u_threaded: execute transfer_unmap with
+    THREAD_SAFE directly
+  * c9ccceff109 radeonsi: test uncached clear/copy buffer performance
+    with compute shaders
+  * 5acf99e81f7 radeonsi: compute perf tests - don't test 1 wave/SA
+    limit, test no limit first
+  * c45a2145f5e radeonsi: disable the L2 cache for CPU read mappings of
+    buffers
+  * 7356144fe42 radeonsi: disable the L2 cache for most CPU mappings of
+    textures
+  * 36c01248049 winsys/amdgpu: add RADEON_FLAG_UNCACHED for faster blits
+    over PCIe
+  * cbbc18bc678 radeonsi: use display_dcc_offset for setting
+    displayable_dcc_cb_mask
+  * b5ac9d18d8f radeonsi: use vi_dcc_enabled instead of using tex-
+    >surface.dcc_offset directly
+  * 2c4c1b04996 radeonsi: rename SI_RESOURCE_FLAG_TRANSFER to
+    FORCE_LINEAR
+  * 4907bb44c3c radeonsi: simplify setting resource usage for
+    si_init_temp_resource_from_box
+  * f57276309b1 radeonsi: tweak clear/copy_buffer limits when to use
+    compute
+  * b158b117e1e radeonsi: optimize access pattern for compute blits with
+    linear textures
+  * 9f8089139f1 radeonsi: use correct clear value size for EQAA in
+    expand_fmask
+  * 2361e8e7227 ac/nir: honor ACCESS_STREAM_CACHE_POLICY for L1 and L0
+    caches too
+  * d573d1d8252 radeonsi: Use TRUNC_COORD on samplers
+  * 65c2362e885 iris: Use modfiy disables for 3DSTATE_WM_DEPTH_STENCIL
+    command
+  * 864d8acbfdb radeon: Fix whitespaces
+  * f80d653d701 radeonsi: don't expose 16xAA on chips with 1 RB due to
+    an occlusion query issue
+  * 844d561c580 spirv: handle OpCopyObject correctly with any types
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 17 May 2020 15:21:43 +0200
+
 mesa (20.2.0~git2005150549.ea62c237031~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
