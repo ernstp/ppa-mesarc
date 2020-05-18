@@ -1,3 +1,43 @@
+mesa (20.2.0~git2005182201.d50069ab08a~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * d50069ab08a r600: enable TEXCOORD semantic for TGSI.
+  * 68b3b5bcab9 ci: Switch the baremetal runner to be an x86 docker
+    image.
+  * 8094a9ab685 ci: Update versions of packages to remove from rootfses.
+  * 18fc6a95b67 ci: Make the create-rootfs more resilient.
+  * 588ea3184ce ci: Make cmake toolchain file for deqp cross build
+    setup.
+  * a65521145c0 ci: Autodetect whether we need cross setup in lava_arm
+    builds.
+  * 188916bd060 ci: Move cross file generation to a shared script.
+  * 34195d69ddd iris: Initialise stub iris_seqno to 0
+  * a6184eae312 freedreno/drm: handle ancient kernels
+  * 106c2a65dbd freedreno/drm: don't pass thru 'DUMP' flag on older
+    kernels
+  * e422f61e6ea freedreno/a3xx: fix rasterizer discard
+  * 5e105068343 freedreno/fdperf: add dependency on generated headers
+  * 4504d6374db ci: Fix TypoError error when traces in traces.yml is an
+    empty list
+  * e85dc9a2406 ci: Split test_tracie_skips_traces_without_checksum in
+    separate cases
+  * 550a4f77648 ci: Migrate tracie tests done in shell script to pytest
+  * 37621da7b14 ci: ArgumentParser receives the args from the main
+    parameters
+  * eb1f22fb014 ci: TRACES_DB_PATH and RESULTS_PATH defined as relative
+    paths
+  * 78c46c21261 etnaviv: don't expose timer queries
+  * b5accb3ff99 freedreno/a3xx: parameterize ubo optimization
+  * 475fb28377f freedreno: fix off-by-one in assertions checking for
+    const sizes
+  * 1c05e16666c freedreno/a3xx: fix const footprint
+  * 9048adbd246 freedreno/ir3: avoid applying (sat) on bary.f
+  * 8d86892ea3c freedreno/a3xx: reinstate rgb10_a2ui texture format
+  * ff4df32fae5 freedreno/a3xx: there's no r8i/ui rb format, only
+    rg8i/rg8ui
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 May 2020 23:25:13 +0200
+
 mesa (20.2.0~git2005170112.78615dcca19~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
