@@ -1,3 +1,16 @@
+mutter (3.36.2+git2005201328.493aeb65c~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 493aeb65c wayland: Send primary offer to all data devices from the
+    same client
+  * 36f5a0a49 wayland: Send clipboard offers to all data devices from
+    the same client
+  * 3daf91244 backends: Make uniform checks on remote desktop input dbus
+    methods
+  * fadfca2e1 backends: Ensure remote desktop dbus interface state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 22 May 2020 16:41:39 +0200
+
 mutter (3.36.2+git2005151249.b1df6d08a~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
