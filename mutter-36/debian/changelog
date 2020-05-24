@@ -1,3 +1,16 @@
+mutter (3.36.2+git2005230004.63fc71f05~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 63fc71f05 screen-cast-src: Notify about the stream being closed
+    after dispatch
+  * 31307720b stage-x11: Move view management to renderer
+  * cb7ba2e90 stage-x11: Clean up include macros
+  * ba1f4221e screen-cast-stream-src: Don't throttle if max framerate is
+    1/0
+  * 6e6183ec0 renderer: Change 'set_legacy_view()' to 'add_view()'
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 24 May 2020 12:10:21 +0200
+
 mutter (3.36.2+git2005201328.493aeb65c~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
