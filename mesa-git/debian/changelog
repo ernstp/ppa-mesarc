@@ -1,3 +1,52 @@
+mesa (20.1.0~rc4+git2005230120.f3ac8ec54d1~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f3ac8ec54d1 freedreno: Use the right amount of &'s
+  * 6c108c1b476 Properly check mmap return value
+  * 74df17a3d6c nir/copy_prop_vars: Record progress in more places
+  * 82c1fb40031 nir/opt_deref: Report progress if we remove a deref
+  * 014a437f6f3 nir/lower_double_ops: Rework the if (progress) tree
+  * f0afe33b087 mesa: Fix double-lock of Shared->FrameBuffers and usage
+    of wrong mutex
+  * 8b1d048c510 amd/addrlib: fix forgotten char -> enum conversions
+  * 479b5c8adbc meson: Disable GCC's dead store elimination for memory
+    zeroing custom new
+  * 544697800ac llvmpipe: compute shaders work better with all the
+    threads.
+  * fd9e69c9a0c dri_util: Update internal_format to GL_RGB8 for
+    MESA_FORMAT_R8G8B8X8_UNORM
+  * 6949853b332 i965/vec4: Ignore swizzle of VGRF for use by
+    var_range_end()
+  * 831e2d63710 anv/gen11+: Disable object level preemption
+  * b1d0912981c .pick_status.json: Update to
+    5f365affc906ed9b07857a6fafbb5d51f3f1a607
+  * d41ccffb63c VERSION: bump to 20.1.0-rc4
+  * 6328352ae6c tests: Make tests aware of meson test wrapper
+  * a18df71c678 panfrost: Enable PIPE_CAP_VERTEX_COLOR_UNCLAMPED
+  * 6b7e48f160b nir/opt_if: run opt_peel_loop_initial_if after all other
+    optimizations
+  * 5049d8518ec Expose EGL_KHR_platform_* when EXT is supported
+  * 1edaba5f4a7 r600/sfn: Fix printing vertex fetch instruction flags
+  * b5a7d4b68b3 Revert "gallium/gallivm: fix compilation issues with
+    llvm 11"
+  * b195f77730a Revert "ac,radeonsi: fix compilations issues with LLVM
+    11"
+  * 6e5158ff60e anv:gpu_memcpy: Emit 3DSTATE_VF_INDEXING on Gen8+
+  * d358af05035 radv: use util_float_to_half_rtz
+  * fa18ad0f648 radeonsi: Use TRUNC_COORD on samplers
+  * 04ff61811dd radeonsi: don't expose 16xAA on chips with 1 RB due to
+    an occlusion query issue
+  * 4dac0c36a48 etnaviv: retarget transfer to render resource when
+    necessary
+  * 8142a522555 zink: implement i2b1
+  * 5a6f40fd34b radv: Provide a better error for permission issues with
+    priorities.
+  * a6c55b1a5b5 anv/tests: Don't rely on assert or changing NDEBUG in
+    tests
+  * a31c646aee1 anv: Fix deadlock in anv_timelines_wait
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 24 May 2020 12:08:07 +0200
+
 mesa (20.1.0~rc3+git2005162303.7830fa0dce9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
