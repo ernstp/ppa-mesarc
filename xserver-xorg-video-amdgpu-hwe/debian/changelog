@@ -1,3 +1,15 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git2005271741.442efe7~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 442efe7 Make drmmode_crtc_scanout_create/destroy static
+  * 99f3c82 Drop struct drmmode_scanout altogether in favour of
+    PixmapPtrs
+  * cfce4b3 Drop bo/width/height members from struct drmmode_scanout
+  * 680b9a2 Fix return value check of drmIoctl()
+  * e923642 gitlab CI: update to use the latest CI templates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 May 2020 21:46:37 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (19.1.0+git2004211054.0732f81~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
