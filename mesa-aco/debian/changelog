@@ -1,3 +1,46 @@
+mesa (20.2.0~git2005271649.a91306677c6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * a91306677c6 ac/gpu_info: Correct Acturus cu bitmap
+  * 296c04d78c9 intel/fs: Work around dual-source blending hangs in
+    combination with SIMD16
+  * dd2bd68fa69 zink: use general-layout when blitting to/from same
+    resource
+  * d9eaac02e53 radeonsi/drirc: enable zerovram option for 7 Days to Die
+  * ddfd2e626a5 turnip: support
+    VkImageDrmFormatModifierExplicitCreateInfoEXT
+  * da409fb7b8c freedreno/layout: add explicit offset/pitch argument to
+    fdl6_layout
+  * f1acf492de9 glsl: fix slow linking of uniforms in the nir linker
+  * f6214750eb4 glsl: stop cascading errors if process_parameters()
+    fails
+  * 755c0400606 freedreno: Add missing va_end.
+  * e91108691d2 nir: Fix sources for image atomic fadd
+  * 247f2fb32ae pan/decode: Dump unknown2
+  * 6a19d49b2e8 pan/decode: Dump missing field on Bifrost
+  * c2c8b1ac579 pan/decode: Fix tiler warning
+  * 4bc7d521b13 pan/decode: Fix unused variable warning
+  * a6212357209 nouveau: Use SATURATE
+  * 9e535629805 etnaviv: Use SATURATE
+  * bb5e10af246 iris: Use SATURATE
+  * 17199107fd2 i965: Use SATURATE
+  * f59d02a86dc intel: Use SATURATE
+  * 7ea2ad0b399 softpipe: Use SATURATE
+  * 9983c4cd68e panfrost: Use SATURATE
+  * 82996a8cff7 glsl: Use SATURATE
+  * a024b394272 gallium/draw: Use SATURATE
+  * 747cb95e3c8 mesa/swrast: Use SATURATE
+  * 05bacdb9170 mesa: Use SATURATE
+  * 0f1fde1fafb util/format: Use SATURATE
+  * 35938c15e22 util: Add SATURATE macro
+  * 8cc7711924f intel/fs: Remove redundant assert()
+  * 462bc408fe9 intel/fs: Early return when can't satisfy explicit group
+    size
+  * 2a308ee4c79 intel/fs: Remove unused state from
+    brw_nir_lower_cs_intrinsics
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 May 2020 21:40:32 +0200
+
 mesa (20.2.0~git2005232300.4174a13459d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
