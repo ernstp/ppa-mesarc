@@ -1,3 +1,12 @@
+corectrl (1.1.0~git2005241414.b6d1335~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * b6d1335 Fixed formating and links on gitlab templates
+  * 7451de2 Add Issues writting guidelines to CONTRIBUTING.md
+  * 6ff88ed Add gitlab templates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 May 2020 21:40:04 +0200
+
 corectrl (1.1.0~git2005231426.97aacf6~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
