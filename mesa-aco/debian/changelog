@@ -1,3 +1,21 @@
+mesa (20.2.0~git2005282147.034329128b7~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 034329128b7 iris: Rename iris_seqno to iris_fine_fence
+  * 682e14d3eae nir: lower_tex: Don't normalize coordinates for TXF with
+    RECT
+  * f0c102c075f ci: Quick exit qpa extraction for non-matching qpas.
+  * 46d9b500f4f ci: Move baremetal DEQP_NO_SAVE_RESULTS setup to the
+    yml.
+  * 33e0821a99f ci: Add DEQP_EXPECTED_RENDERER support for VK tests.
+  * 6766d51c15f ci: Auto-detect the architecture for VK ICD filenames.
+  * 044f50b9fdb ci: Drop old comment about enabling --deqp-watchdog.
+  * c343d00edeb ci: Drop double ".txt" suffix on the unexpected results
+    file.
+  * 10c4a7cf597 spirv,radv,anv: implement no-op VK_GOOGLE_user_type
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 28 May 2020 23:37:33 +0200
+
 mesa (20.2.0~git2005281234.01ce7887bf0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
