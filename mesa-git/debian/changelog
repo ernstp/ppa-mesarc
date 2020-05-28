@@ -1,3 +1,19 @@
+mesa (20.1.0+git2005281626.2b70cc04919~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2b70cc04919 aco: preserve more fields when combining additions into
+    SMEM
+  * db272a92ad1 aco: check instruction format before waiting for a
+    previous SMEM store
+  * c9052720f9d aco: consider SDWA during value numbering
+  * 3fa00f0fdc4 aco: fix interaction with 3f branch workaround and
+    p_constaddr
+  * 1803fad3b3e pan/bi: Initialize struct fma_op_info member extended.
+  * a90e80e5bb6 .pick_status.json: Update to
+    01ce7887bf0d6ec4619e1851002d4774aaa28a90
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 28 May 2020 23:39:47 +0200
+
 mesa (20.1.0+git2005281224.25b2fe76d34~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
