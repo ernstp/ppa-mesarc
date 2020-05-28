@@ -1,3 +1,46 @@
+mesa (20.1.0+git2005281224.25b2fe76d34~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 25b2fe76d34 pan/bi: Initialize struct fma_op_info member extended.
+  * cd55668d5f4 .pick_status.json: Update to
+    1fc1b877622e3477272a17a43fd438453484bb79
+  * b62098e106e docs/relnotes add sha256 sums to 20.1.0
+  * 7de17e2520f VERSION: bump to 20.1.0 release
+  * 10f7779c54e docs: Add release notes for 20.1.0
+  * 9b7290d15c3 radv: update the list of allowed Android extensions
+  * 54db67ecb89 radv: handle different Vulkan API versions correctly
+  * e81c43540c4 intel/fs: Work around dual-source blending hangs in
+    combination with SIMD16
+  * d043d24654c zink: use general-layout when blitting to/from same
+    resource
+  * e5301cfeef5 glsl: fix slow linking of uniforms in the nir linker
+  * bcab0cc6d86 glsl: stop cascading errors if process_parameters()
+    fails
+  * f9c4314d355 freedreno: Add missing va_end.
+  * 9b3aa872279 freedreno: clear last_fence after resource tracking
+  * f2dd854bfe8 nir: fix lowering to scratch with boolean access
+  * ca0e70927d5 r600: Fix duplicated subexpression in r600_asm.c
+  * 2e817d95e69 r600/sfn: Use correct setter method.
+  * cf7dffbaaef radv: Implement vkGetSwapchainGrallocUsage2ANDROID.
+  * 5dabdf3eeff radv: Do not close fd -1 when NULL-winsys creation
+    fails.
+  * 9f86183f50b radv: Handle failing to create .cache dir.
+  * 167d4a59936 radv/winsys:  Remove extra sizeof multiply.
+  * f6412c24b33 r600/sfn: Initialize VertexStageExportForGS
+    m_num_clip_dist member variable.
+  * 57f400b0130 panfrost: Fix background showing when using discard
+  * 1fa0c121c88 tree-wide: fix deprecated GitLab URLs
+  * 0931bf60fd7 freedreno: Use the right amount of &'s
+  * cb5d60b7d97 Properly check mmap return value
+  * 8cb8c7f0f11 nir/copy_prop_vars: Record progress in more places
+  * cebdf2700f6 nir/opt_deref: Report progress if we remove a deref
+  * f9ecf907e4e nir/lower_double_ops: Rework the if (progress) tree
+  * c10e0616ed9 mesa: Fix double-lock of Shared->FrameBuffers and usage
+    of wrong mutex
+  * 1a6c365774a amd/addrlib: fix forgotten char -> enum conversions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 28 May 2020 15:38:03 +0200
+
 mesa (20.1.0~rc4+git2005262342.eb87ddbd38e~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
