@@ -1,3 +1,54 @@
+mesa (20.2.0~git2005281234.01ce7887bf0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 01ce7887bf0 aco: fix 64-bit shared_atomic_exchange
+  * 1f2fd9c62ee aco: don't reorder barriers in the scheduler
+  * e1900ee2c70 aco: preserve more fields when combining additions into
+    SMEM
+  * 95d5c1b8a1e aco: check instruction format before waiting for a
+    previous SMEM store
+  * 5ccc7c277c8 aco: consider SDWA during value numbering
+  * 8aa98cebc15 aco: fix interaction with 3f branch workaround and
+    p_constaddr
+  * 1fc1b877622 gitlab-ci: Pull in GCC 9 from Debian testing in x86_test-
+    gl/vk images
+  * c2366f01fd1 gitlab-ci: x86_test-base image as common base for
+    x86_test-gl/vk
+  * 43111ea7458 gitlab-ci: Also list arm/x86_build in needs: of test
+    jobs
+  * bccf2a25a89 intel: Add helper to calculate
+    GPGPU_WALKER::RightExecutionMask
+  * 78e400d4a51 iris, i965: Update limits for
+    ARB_compute_variable_group_size
+  * 46b428074f4 iris, i965: Drop max_variable_local_size
+  * 90ec26a800c intel/fs: Generate multiple CS SIMD variants for
+    variable group size
+  * 9b8347c9884 anv: Use new helper functions to pick SIMD variant for
+    CS
+  * 594374dd8d8 iris: Use new helper functions to pick SIMD variant for
+    CS
+  * c9f4bda6ce5 iris: Set CS KernelStatePointer at dispatch
+  * ee0fc0f6dcf i965: Use new helper functions to pick SIMD variant for
+    CS
+  * cb26d9c3119 intel/fs: Add helper to get prog_offset and simd_size
+  * 5b5e77caa7f intel/fs: Support INTEL_DEBUG=no8,no32 in compute
+    shaders
+  * 10d0f39beb2 intel/fs: Remove min_dispatch_width spilling decision
+    from RA
+  * 9526e14b5cc docs: update calendar, add news item, and link releases
+    notes for 20.1.0
+  * e94a811a462 docs: Add release notes for 20.1.0
+  * dff1bac6345 zink: always use logical eq ops in ntv with 1bit inputs
+  * df2c68ee4fd pan/bi: Initialize struct fma_op_info member extended.
+  * b3023055e07 lima/ppir: use a ready list in node_to_instr
+  * 9ae8b4af75e pan/bi: Suppress inf/nan for now
+  * 6f589f4e045 pan/bi: Add CSEL.16 packing tests
+  * 87ca1c1eeae pan/bi: Pack compact vertex texturing
+  * 6650fa22c79 pan/bi: Add f16 TEXC.vtx op
+  * 731dfc6066d pan/bi: Allow vertex txl with lod=0 as compact
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 28 May 2020 15:35:52 +0200
+
 mesa (20.2.0~git2005271649.a91306677c6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
