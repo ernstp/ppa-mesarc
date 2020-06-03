@@ -1,3 +1,44 @@
+mesa (20.1.0+git2006031030.1121cbb4122~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1121cbb4122 radv: enable zero VRAM for all VKD3D (DX12->VK) games
+  * a2511cbb175 radv: enable zero VRAM for Doom Eternal
+  * 4bd9d2a7756 zink: Use store_dest_raw instead of storing an uint
+  * aee6e991d08 radeonsi: add a hack to disable TRUNC_COORD for shadow
+    samplers
+  * a299fe90bae vulkan-overlay/meson: use install_data instead of
+    configure_file
+  * a4f8fecebf7 intel/dev: Don't consider all TGL SKUs as GT1 only
+  * 09df4d6b9aa r300g: Remove extra printf format specifiers.
+  * fe8af92ba80 nouveau: allow invalidating coherent/persistent buffer
+    backings
+  * 318f22f9889 intel/fs: Fix unused texture coordinate zeroing on Gen4-
+    5
+  * 3e9ba6da19c intel/vec4: Stomp the return type of RESINFO to UINT32
+  * 61e65207f5a radv: fix regression with builtin cache
+  * f789a9fde75 etnaviv: Fix memory leak on error path.
+  * 04a57730d2d pan/bi: Fix emit_if successor assignment
+  * d4b9431268d aco: fix register allocation for subdword instructions
+    on GFX10
+  * c159733a8bf zink: Check fopen result.
+  * 9dabb351fd1 util: Initialize pipe_shader_state for passthrough and
+    transform shaders
+  * 9bf5ef4f426 nir: lower_tex: Don't normalize coordinates for TXF with
+    RECT
+  * 4a211f60867 spirv,radv,anv: implement no-op VK_GOOGLE_user_type
+  * a71a3e6cd9f aco: preserve more fields when combining additions into
+    SMEM
+  * 60d1e24e673 aco: check instruction format before waiting for a
+    previous SMEM store
+  * 35f8209ee62 aco: consider SDWA during value numbering
+  * 4d7a289b6c6 aco: fix interaction with 3f branch workaround and
+    p_constaddr
+  * 3c0ba15819b pan/bi: Initialize struct fma_op_info member extended.
+  * 518c8be3c0a .pick_status.json: Update to
+    3ed2123d77d50ccb984fccdcc1cfa936a18819bf
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 Jun 2020 16:35:17 +0200
+
 mesa (20.1.0+git2005281626.2b70cc04919~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
