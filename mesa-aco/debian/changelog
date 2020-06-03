@@ -1,3 +1,51 @@
+mesa (20.2.0~git2006031234.a34cc97ca3e~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * a34cc97ca3e glsl: when NIR linker enable use it to resize uniform
+    arrays
+  * 7d1eadb7906 glsl: gather uniform dereference info before main
+    linking loop
+  * a13d8d48ce5 glsl: add update_array_sizes() helper to the NIR uniform
+    linker
+  * 6aea287b0a1 glsl: add struct to gather more info about uniform array
+    access
+  * d6d78f9b7ff util: add BITSET_LAST_BIT() helper
+  * f518508a817 i965: call brw_nir_lower_uniforms() after uniform
+    linking is complete
+  * 907bacea13f gbm: document that gbm_bo_map exposes a linear view
+  * 9f3956fea08 glsl: Don't replace lrp pattern with lrp if arguments
+    are not floats
+  * 3ed2123d77d spirv: Use scoped barriers for SpvOpControlBarrier
+  * 689acc73989 intel/compiler: Extract control barriers from scoped
+    barriers
+  * 345b5847b42 nir: Replace the scoped_memory barrier by a
+    scoped_barrier
+  * 94438a64bf7 spirv: Split the vtn_emit_scoped_memory_barrier() logic
+  * d3c937c0e4d radv: enable zero VRAM for all VKD3D (DX12->VK) games
+  * fd5ffd3a83e radv: enable zero VRAM for Doom Eternal
+  * c183ea94afd gitlab-ci: bump piglit checkout commit
+  * 7873276f689 glsl/spirv: remove dead uniforms in spirv nir linker
+  * a494b624101 glsl: remove dead uniforms in the nir linker
+  * 60bee4c70c0 glsl: add can_remove_uniform() helper to the NIR linker
+  * 04dbf709edf nir: add callback to nir_remove_dead_variables()
+  * bc79442f3fa nir: add glsl_get_ifc_packing() helper
+  * 7ac617c1172 pan/mdg: Don't double-replicate blend on T720
+  * edd56bad942 radv: Use common gfx10_format_table.h
+  * 560f095dd57 radv: Include gfx10_format_table.h only from a single
+    source file.
+  * b351a507638 radeonsi: Define gfx10_format in the common header.
+  * c98e52f88a1 amd/common,radeonsi: Move gfx10_format_table to common.
+  * d936f696772 radeonsi: Explicitly map Z16_UNORM_S8_UINT to None for
+    GFX10.
+  * 415c88eebcd Revert "CI: Disable Panfrost T720/T760"
+  * 2dfc241e368 ci: bare-metal: make it possible to use a script for
+    serial
+  * a21966837ac zink: Use store_dest_raw instead of storing an uint
+  * c310677a756 radv: Explicitly cast TIMESTAMP_NOT_READY value to
+    uin32_t where needed.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 Jun 2020 16:32:57 +0200
+
 mesa (20.2.0~git2005282147.034329128b7~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
