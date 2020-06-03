@@ -1,3 +1,26 @@
+mesa (20.2.0~git2006031935.0e73d879e3a~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 0e73d879e3a pan/bi: Handle vectorized load_const
+  * 1b09c6993dc pan/bi: Passthrough second argument of F32_TO_F16
+  * 8a4efe2d730 pan/bi: Pack second argument of F32_TO_F16
+  * 323eecaf139 pan/bi: Fix SEL.16 swizzle
+  * 9ed1ae4724c pan/bi: Handle SEL with vec3 16-bit
+  * afc18c62d79 panfrost: Passthrough NATIVE loads/stores
+  * 36af05bbdef pan/mdg: Handle regular nir_intrinsic_load_output
+  * 293d37e19d8 pan/mdg: Allow f2u8 and friends thru
+  * 0ae0141f5b2 pan/mdg: Handle f2u8
+  * f8b881f1611 pan/mdg: Fold roundmode into applicable instructions
+  * 93513cd9ff1 pan/mdg: Implement *_rtz conversions with roundmode
+  * 6290e83190a pan/mdg: Lower roundmodes
+  * 1bef7848674 pan/mdg: Add opcode roundmode property
+  * 2eb4c85e424 pan/mdg: Add roundmode enum
+  * 014d2e46a71 pan/mdg: Distinguish blend shaders in internal shader-db
+  * 99446c9f7d3 panfrost: Only use AFBC YTR with RGB and RGBA
+  * 9ac106defe3 panfrost: Decode AFBC flag bits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 Jun 2020 19:56:16 +0200
+
 mesa (20.2.0~git2006031234.a34cc97ca3e~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
