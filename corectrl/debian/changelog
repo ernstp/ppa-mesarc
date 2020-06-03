@@ -1,3 +1,10 @@
+corectrl (1.2.0~git2005311231.0faaa91~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * 0faaa91 Bump version to 1.2.0-dev
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 Jun 2020 16:32:36 +0200
+
 corectrl (1.1.0~git2005241414.b6d1335~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
