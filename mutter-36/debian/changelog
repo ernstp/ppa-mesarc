@@ -1,3 +1,17 @@
+mutter (3.36.3+git2006030827.0d9ded403~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 0d9ded403 renderer-native: Don't leak DMA buffer CoglFramebuffer
+  * dc75c7d29 Bump version to 3.36.3
+  * 33c008b90 clutter/actor: Sanity check new allocations
+  * 98a0c5cb3 screen-cast-src: Destroy hash dmabuf table after stream
+  * b425f1153 backends/native: Drop external keyboard detection for
+    ::touch-mode
+  * a1bc2e0ad backends/x11: Implement ClutterSeat::touch-mode for the
+    X11 backend
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 Jun 2020 16:37:33 +0200
+
 mutter (3.36.2+git2005230004.63fc71f05~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
