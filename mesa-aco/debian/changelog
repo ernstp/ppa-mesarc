@@ -1,3 +1,44 @@
+mesa (20.2.0~git2006050257.f1f81abfd44~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * f1f81abfd44 freedreno/a6xx: more early-z
+  * 4d7ee2749f5 ci: bump virglrenderer to latest version
+  * ec98cff6a9a turnip: Simplify vertex buffer bindings.
+  * 5c9728d9607 turnip: Don't bother clamping VB size.
+  * 52942f18c60 turnip: Move vertex buffer bindings to SET_DRAW_STATE.
+  * c8c7450fc73 llvmpipe: move coroutines out of noopt case
+  * 2d1688345a6 pan/mdg: Ensure ld_vary_16 is aligned
+  * de8be1de132 freedreno/a6xx: Fix VFD_CONTROL emit
+  * 202252566bf radv: Always expose non-visible local memory type on
+    dedicated GPUs
+  * 622e3a8510a pan/mdg: Legalize inverts with constants
+  * e61a98877cc nir: reuse existing psiz-variable
+  * 57e4d0aa1c1 i965: fix export of GEM handles
+  * aba3aed96e4 iris: fix export of GEM handles
+  * e41e820648b i965: don't forget to set screen on duped image
+  * 604a86e46f6 iris: fix BO destruction in error path
+  * c3025bde192 mesa: Fix NetBSD compiler macro.
+  * e9cda38031a freedreno/a6xx: also consider alpha-test for ztest-mode
+  * 1e3731e7119 freedreno/a6xx: add early-lrz-late-z mode
+  * 07887c9f34c freedreno/a6xx: re-work LRZ state tracking
+  * 27e501bcfc5 freedreno/a6xx: update depth-plane control regs
+  * f6307426ed5 freedreno/a6xx: sync registers from envytools
+  * ebcf3545db7 freedreno/ir3: split kill from no_earlyz
+  * 346bb81f405 docs/features.txt: Update for freedreno
+  * 5fb7cad95c2 freedreno/a6xx: Turn on robustness extensions
+  * 8b353524b04 vdpau: Fix wrong calloc sizeof argument.
+  * 8252bb0ec6d OPTIONAL: iris: Perform BLORP buffer barriers outside of
+    iris_blorp_exec() hook.
+  * 4b00338bdee iris: Remove iris_flush_depth_and_render_caches().
+  * 46adb83a293 iris: Emit single render target flush PIPE_CONTROL on
+    format mismatch.
+  * b9281884936 iris: Open-code iris_cache_flush_for_read() and
+    iris_cache_flush_for_depth().
+  * 74c774dce9e iris: Remove render cache hash table-based
+    synchronization.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 05 Jun 2020 04:35:47 +0200
+
 mesa (20.2.0~git2006031935.0e73d879e3a~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
