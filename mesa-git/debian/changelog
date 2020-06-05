@@ -1,3 +1,50 @@
+mesa (20.1.0+git2006041758.33c306bfa92~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 33c306bfa92 nir: reuse existing psiz-variable
+  * 83396e9ac2e iris: fix export of GEM handles
+  * e5fd6b6084a i965: fix export of GEM handles
+  * 25f62440a1d i965: don't forget to set screen on duped image
+  * 0c9b435c03a iris: fix BO destruction in error path
+  * 882afb1c845 mesa: Fix NetBSD compiler macro.
+  * 7369ffe1682 vdpau: Fix wrong calloc sizeof argument.
+  * 81d27aa7f07 glsl: Don't replace lrp pattern with lrp if arguments
+    are not floats
+  * de55c73f76f radv: enable zero VRAM for all VKD3D (DX12->VK) games
+  * e8247e1ab1c radv: enable zero VRAM for Doom Eternal
+  * fde055f5d5b zink: Use store_dest_raw instead of storing an uint
+  * f8df5693365 radeonsi: add a hack to disable TRUNC_COORD for shadow
+    samplers
+  * 22e29bb59dd vulkan-overlay/meson: use install_data instead of
+    configure_file
+  * 9daaf52e9a2 intel/dev: Don't consider all TGL SKUs as GT1 only
+  * 18b9a33a128 r300g: Remove extra printf format specifiers.
+  * 14340d78f7f nouveau: allow invalidating coherent/persistent buffer
+    backings
+  * b309050fbe2 intel/fs: Fix unused texture coordinate zeroing on Gen4-
+    5
+  * 945ec78c481 intel/vec4: Stomp the return type of RESINFO to UINT32
+  * f28169c5ee1 radv: fix regression with builtin cache
+  * ff831d91d43 etnaviv: Fix memory leak on error path.
+  * bbcf412e8ee pan/bi: Fix emit_if successor assignment
+  * dee817f00e5 aco: fix register allocation for subdword instructions
+    on GFX10
+  * cd49a44d51f zink: Check fopen result.
+  * ff108313cc6 util: Initialize pipe_shader_state for passthrough and
+    transform shaders
+  * 9bcb10594f0 nir: lower_tex: Don't normalize coordinates for TXF with
+    RECT
+  * 9f8f438c268 spirv,radv,anv: implement no-op VK_GOOGLE_user_type
+  * 25a96bedd8e aco: preserve more fields when combining additions into
+    SMEM
+  * 9bceba9d9a1 aco: check instruction format before waiting for a
+    previous SMEM store
+  * eb666458362 aco: consider SDWA during value numbering
+  * b398658c0d1 aco: fix interaction with 3f branch workaround and
+    p_constaddr
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 05 Jun 2020 04:38:06 +0200
+
 mesa (20.1.0+git2006031030.1121cbb4122~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
