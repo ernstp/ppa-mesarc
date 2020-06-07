@@ -1,3 +1,53 @@
+mesa (20.2.0~git2006071808.b3beb6207f1~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * b3beb6207f1 v3d_bufmgr: fix time_t printf
+  * d512028d06c pan_bo.h: add time.h include for time_t
+  * 07ba5e47e66 vc4_bufmgr: fix time_t printf
+  * e43ab7bb058 glsl: fix potential slow compile times for
+    GLSLOptimizeConservatively
+  * dd81f4853c8 llvmpipe: do not enable tessellation shader without llvm
+    coroutines support
+  * 990b3782bc5 intel/compiler: fix Android build
+  * 6a841dbf4e4 intel/genxml: Migrate from deprecated
+    xml.etree.ElementTree getchildren.
+  * 06650a771dc android: svga: fix build for GL4.1 support
+  * 0570c7a7b5b android: util: fix build for GL4.1 support
+  * faa339e666b Switch from cElementTree to ElementTree.
+  * a61532e4dbd Revert "panfrost: Keep cached BOs mmap'd"
+  * d97aaad1555 pan/midgard: Use a signed value for checking inline
+    constants
+  * 0bacb280a88 freedreno/ir3: Handle cases where we decide not to lower
+    UBO 0 loads.
+  * e349f502792 freedreno/ir3: Drop the max_const on a6xx to 512.
+  * 486b8943079 freedreno/ir3: Account for driver params in UBO max
+    const upload.
+  * a25347ab92b freedreno/ir3: Stop shifting UBO 1 down to be UBO 0.
+  * 9e58ab09ffb freedreno/ir3: Drop unnecessary alignment of pushed UBO
+    size.
+  * 07ec745014a freedreno/ir3: Stop pushing immediates once we've filled
+    the constbuf.
+  * ab29f2da42f freedreno/ir3: Refactor ir3_cp's lower_immed().
+  * 4065861807f freedreno: Upload gallium constbufs as needed when
+    referenced as a UBO.
+  * d1f9d1e26a2 freedreno/a6xx: Add support for ALPHA_TO_ONE.
+  * ac1ab9294ab turnip: Add support for alphaToOne.
+  * 79f3003445e turnip: Use tu_cs_emit_regs() for BLEND_CONTROL.
+  * 5d13c7477eb radv: set keep_statistic_info with
+    RADV_DEBUG=shaderstats
+  * 981d07c74a1 intel: fix gen_sort_tags.py
+  * bfff330f061 radv/aco: enable VK_KHR_shader_subgroup_extended_types
+    on GFX6-GFX7
+  * 6391f9ab4cb aco: fix nir_intrinsic_quad_* with 8-bit in GFX6-GFX7
+  * e1523b34c2a aco: fix sign-extend 8-bit subgroup operations on GFX6-
+    GFX7
+  * ee4bc13de2a aco: use v_bfe_u32 for unsigned reductions sign-
+    extension on GFX6-GFX7
+  * a874132cc41 intel/genxml: drop sort_xml.sh and move the loop
+    directly in gen_sort_tags.py
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Jun 2020 22:42:25 +0200
+
 mesa (20.2.0~git2006050257.f1f81abfd44~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
