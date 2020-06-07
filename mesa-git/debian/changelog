@@ -1,3 +1,50 @@
+mesa (20.1.0+git2006061652.333b8f6a60f~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 333b8f6a60f Switch from cElementTree to ElementTree.
+  * 195ec2cf276 intel/genxml: Migrate from deprecated
+    xml.etree.ElementTree getchildren.
+  * edda9947be7 intel: fix gen_sort_tags.py
+  * e1cdc924e5b freedreno/computerator: fix missing dependency on
+    generated header
+  * d54e66054d6 glapi: remove deprecated .getchildren() that has been
+    replace with an iterator
+  * 052287e54f7 radv: Always expose non-visible local memory type on
+    dedicated GPUs
+  * 9ae4397e671 nir: reuse existing psiz-variable
+  * 1b23720ac1f iris: fix export of GEM handles
+  * f1b805e0e6c i965: fix export of GEM handles
+  * 5266d54e541 i965: don't forget to set screen on duped image
+  * 0db726ccb59 iris: fix BO destruction in error path
+  * afded049561 mesa: Fix NetBSD compiler macro.
+  * 49c2b729591 vdpau: Fix wrong calloc sizeof argument.
+  * e2b660cba52 glsl: Don't replace lrp pattern with lrp if arguments
+    are not floats
+  * 9533119ce73 radv: enable zero VRAM for all VKD3D (DX12->VK) games
+  * 985a82b739f radv: enable zero VRAM for Doom Eternal
+  * c2a3977c7d8 zink: Use store_dest_raw instead of storing an uint
+  * 51b909b37bc radeonsi: add a hack to disable TRUNC_COORD for shadow
+    samplers
+  * 76436db2422 vulkan-overlay/meson: use install_data instead of
+    configure_file
+  * 64bbe512051 intel/dev: Don't consider all TGL SKUs as GT1 only
+  * e374e4a7926 r300g: Remove extra printf format specifiers.
+  * e44a5b543ce nouveau: allow invalidating coherent/persistent buffer
+    backings
+  * fec4cf933b2 intel/fs: Fix unused texture coordinate zeroing on Gen4-
+    5
+  * 21b053f43ba intel/vec4: Stomp the return type of RESINFO to UINT32
+  * c19b91fbc82 radv: fix regression with builtin cache
+  * dc102223953 etnaviv: Fix memory leak on error path.
+  * c9edcac28f1 pan/bi: Fix emit_if successor assignment
+  * 52984bfbc81 aco: fix register allocation for subdword instructions
+    on GFX10
+  * 263d3518014 zink: Check fopen result.
+  * 2db56a4b2c3 util: Initialize pipe_shader_state for passthrough and
+    transform shaders
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Jun 2020 22:44:40 +0200
+
 mesa (20.1.0+git2006041758.33c306bfa92~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
