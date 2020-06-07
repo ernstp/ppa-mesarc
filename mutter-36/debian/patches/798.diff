@@ -1,0 +1,3520 @@
+diff --git a/clutter/clutter/clutter-actor.c b/clutter/clutter/clutter-actor.c
+index 68e006ecb9193716c61d535512fb334fe2d5de1f..caab97b4e2b9729154c44e98a51f4a5843f383e1 100644
+--- a/clutter/clutter/clutter-actor.c
++++ b/clutter/clutter/clutter-actor.c
+@@ -19960,6 +19960,23 @@ clutter_actor_get_transition (ClutterActor *self,
+   return clos->transition;
+ }
+ 
++/**
++ * clutter_actor_has_transitions: (skip)
++ */
++gboolean
++clutter_actor_has_transitions (ClutterActor *self)
++{
++  const ClutterAnimationInfo *info;
++
++  g_return_val_if_fail (CLUTTER_IS_ACTOR (self), FALSE);
++
++  info = _clutter_actor_get_animation_info_or_defaults (self);
++  if (info->transitions == NULL)
++    return FALSE;
++
++  return g_hash_table_size (info->transitions) > 0;
++}
++
+ /**
+  * clutter_actor_save_easing_state:
+  * @self: a #ClutterActor
+diff --git a/clutter/clutter/clutter-mutter.h b/clutter/clutter/clutter-mutter.h
+index 2e3af31f1eeee21a2bd4c4a641e50a3a608a4747..5c652a4e3be43488a80affc368d0f09bd664f075 100644
+--- a/clutter/clutter/clutter-mutter.h
++++ b/clutter/clutter/clutter-mutter.h
+@@ -57,9 +57,16 @@ void clutter_stage_thaw_updates (ClutterStage *stage);
+ CLUTTER_EXPORT
+ void clutter_stage_update_resource_scales (ClutterStage *stage);
+ 
++CLUTTER_EXPORT
++void clutter_stage_view_assign_next_scanout (ClutterStageView *stage_view,
++                                             CoglScanout      *scanout);
++
+ CLUTTER_EXPORT
+ gboolean clutter_actor_has_damage (ClutterActor *actor);
+ 
++CLUTTER_EXPORT
++gboolean clutter_actor_has_transitions (ClutterActor *actor);
++
+ #undef __CLUTTER_H_INSIDE__
+ 
+ #endif /* __CLUTTER_MUTTER_H__ */
+diff --git a/clutter/clutter/clutter-stage-view-private.h b/clutter/clutter/clutter-stage-view-private.h
+index 3b0d419fcf7c8de215890899afc46555e00603b6..2e5ad4c5377fa5895a8b3260a9020d99c17f8dd6 100644
+--- a/clutter/clutter/clutter-stage-view-private.h
++++ b/clutter/clutter/clutter-stage-view-private.h
+@@ -43,4 +43,6 @@ const cairo_region_t * clutter_stage_view_peek_redraw_clip (ClutterStageView *vi
+ 
+ cairo_region_t * clutter_stage_view_take_redraw_clip (ClutterStageView *view);
+ 
++CoglScanout * clutter_stage_view_take_scanout (ClutterStageView *view);
++
+ #endif /* __CLUTTER_STAGE_VIEW_PRIVATE_H__ */
+diff --git a/clutter/clutter/clutter-stage-view.c b/clutter/clutter/clutter-stage-view.c
+index d93cf573ffcbfccd9560a8dac129071f65b8a65b..e4f10b5ac94079140a19fdc694eee5c94f8d3a01 100644
+--- a/clutter/clutter/clutter-stage-view.c
++++ b/clutter/clutter/clutter-stage-view.c
+@@ -24,6 +24,8 @@
+ #include <math.h>
+ 
+ #include "clutter/clutter-private.h"
++#include "clutter/clutter-mutter.h"
++#include "cogl/cogl.h"
+ 
+ enum
+ {
+@@ -52,6 +54,8 @@ typedef struct _ClutterStageViewPrivate
+   CoglOffscreen *shadowfb;
+   CoglPipeline *shadowfb_pipeline;
+ 
++  CoglScanout *next_scanout;
++
+   gboolean has_redraw_clip;
+   cairo_region_t *redraw_clip;
+ 
+@@ -407,6 +411,25 @@ clutter_stage_default_get_offscreen_transformation_matrix (ClutterStageView *vie
+   cogl_matrix_init_identity (matrix);
+ }
+ 
++void
++clutter_stage_view_assign_next_scanout (ClutterStageView *view,
++                                        CoglScanout      *scanout)
++{
++  ClutterStageViewPrivate *priv =
++    clutter_stage_view_get_instance_private (view);
++
++  g_set_object (&priv->next_scanout, scanout);
++}
++
++CoglScanout *
++clutter_stage_view_take_scanout (ClutterStageView *view)
++{
++  ClutterStageViewPrivate *priv =
++    clutter_stage_view_get_instance_private (view);
++
++  return g_steal_pointer (&priv->next_scanout);
++}
++
+ static void
+ clutter_stage_view_get_property (GObject    *object,
+                                  guint       prop_id,
+diff --git a/clutter/clutter/cogl/clutter-stage-cogl.c b/clutter/clutter/cogl/clutter-stage-cogl.c
+index d48e976417068abdb1a51e6b05c2227e22efe7e3..533d68154baa7b8c3cd7f9edd6e48f28f70c6ae4 100644
+--- a/clutter/clutter/cogl/clutter-stage-cogl.c
++++ b/clutter/clutter/cogl/clutter-stage-cogl.c
+@@ -959,6 +959,20 @@ clutter_stage_cogl_redraw_view (ClutterStageWindow *stage_window,
+     }
+ }
+ 
++static void
++clutter_stage_cogl_scanout_view (ClutterStageCogl *stage_cogl,
++                                 ClutterStageView *view,
++                                 CoglScanout      *scanout)
++{
++  CoglFramebuffer *framebuffer = clutter_stage_view_get_framebuffer (view);
++  CoglOnscreen *onscreen;
++
++  g_return_if_fail (cogl_is_onscreen (framebuffer));
++
++  onscreen = COGL_ONSCREEN (framebuffer);
++  cogl_onscreen_direct_scanout (onscreen, scanout);
++}
++
+ static void
+ clutter_stage_cogl_redraw (ClutterStageWindow *stage_window)
+ {
+@@ -971,11 +985,23 @@ clutter_stage_cogl_redraw (ClutterStageWindow *stage_window)
+   for (l = _clutter_stage_window_get_views (stage_window); l; l = l->next)
+     {
+       ClutterStageView *view = l->data;
++      g_autoptr (CoglScanout) scanout = NULL;
+ 
+       if (!clutter_stage_view_has_redraw_clip (view))
+         continue;
+ 
+-      swap_event |= clutter_stage_cogl_redraw_view (stage_window, view);
++      scanout = clutter_stage_view_take_scanout (view);
++      if (scanout)
++        {
++          clutter_stage_cogl_scanout_view (stage_cogl,
++                                           view,
++                                           scanout);
++          swap_event = TRUE;
++        }
++      else
++        {
++          swap_event |= clutter_stage_cogl_redraw_view (stage_window, view);
++        }
+     }
+ 
+   _clutter_stage_emit_after_paint (stage_cogl->wrapper);
+diff --git a/cogl/cogl/cogl-onscreen.c b/cogl/cogl/cogl-onscreen.c
+index 704e1c44bde2a607f90b5b2f5af911b3aa0f120f..892a0af3b46cd38fc61cd3df3a3f5211595da3c9 100644
+--- a/cogl/cogl/cogl-onscreen.c
++++ b/cogl/cogl/cogl-onscreen.c
+@@ -405,6 +405,27 @@ cogl_onscreen_get_buffer_age (CoglOnscreen *onscreen)
+   return winsys->onscreen_get_buffer_age (onscreen);
+ }
+ 
++void
++cogl_onscreen_direct_scanout (CoglOnscreen *onscreen,
++                              CoglScanout  *scanout)
++{
++  CoglFramebuffer *framebuffer = COGL_FRAMEBUFFER (onscreen);
++  const CoglWinsysVtable *winsys;
++  CoglFrameInfo *info;
++
++  g_return_if_fail (framebuffer->type == COGL_FRAMEBUFFER_TYPE_ONSCREEN);
++  g_return_if_fail (_cogl_winsys_has_feature (COGL_WINSYS_FEATURE_SYNC_AND_COMPLETE_EVENT));
++
++  info = _cogl_frame_info_new ();
++  info->frame_counter = onscreen->frame_counter;
++  g_queue_push_tail (&onscreen->pending_frame_infos, info);
++
++  winsys = _cogl_framebuffer_get_winsys (framebuffer);
++  winsys->onscreen_direct_scanout (onscreen, scanout);
++
++  onscreen->frame_counter++;
++}
++
+ #ifdef COGL_HAS_X11_SUPPORT
+ uint32_t
+ cogl_x11_onscreen_get_window_xid (CoglOnscreen *onscreen)
+diff --git a/cogl/cogl/cogl-onscreen.h b/cogl/cogl/cogl-onscreen.h
+index 40bd6780b8408851c3ea9df7f0fb623263016cea..8454703501730c9667d54c2af0e9603a610b4777 100644
+--- a/cogl/cogl/cogl-onscreen.h
++++ b/cogl/cogl/cogl-onscreen.h
+@@ -50,6 +50,8 @@ G_BEGIN_DECLS
+ typedef struct _CoglOnscreen CoglOnscreen;
+ #define COGL_ONSCREEN(X) ((CoglOnscreen *)(X))
+ 
++typedef struct _CoglScanout CoglScanout;
++
+ /**
+  * cogl_onscreen_get_gtype:
+  *
+@@ -284,6 +286,13 @@ cogl_onscreen_swap_buffers_with_damage (CoglOnscreen *onscreen,
+                                         const int *rectangles,
+                                         int n_rectangles);
+ 
++/**
++ * cogl_onscreen_direct_scanout: (skip)
++ */
++COGL_EXPORT void
++cogl_onscreen_direct_scanout (CoglOnscreen *onscreen,
++                              CoglScanout  *scanout);
++
+ /**
+  * cogl_onscreen_swap_region:
+  * @onscreen: A #CoglOnscreen framebuffer
+diff --git a/cogl/cogl/cogl-scanout.c b/cogl/cogl/cogl-scanout.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..759cd62a4c1527247020bbbe00c8600cbdd8aec6
+--- /dev/null
++++ b/cogl/cogl/cogl-scanout.c
+@@ -0,0 +1,27 @@
++/*
++ * Copyright (C) 2019 Red Hat Inc.
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2 of the License, or (at your option) any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with this library. If not, see <http://www.gnu.org/licenses/>.
++ */
++
++#include "cogl-config.h"
++
++#include "cogl-scanout.h"
++
++G_DEFINE_INTERFACE (CoglScanout, cogl_scanout, G_TYPE_OBJECT)
++
++static void
++cogl_scanout_default_init (CoglScanoutInterface *iface)
++{
++}
+diff --git a/cogl/cogl/cogl-scanout.h b/cogl/cogl/cogl-scanout.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..5f2f7e90766c197e406bbe85f80b49f8a59892fa
+--- /dev/null
++++ b/cogl/cogl/cogl-scanout.h
+@@ -0,0 +1,35 @@
++/*
++ * Copyright (C) 2019 Red Hat Inc.
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2 of the License, or (at your option) any later version.
++ *
++ * This library is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * Lesser General Public License for more details.
++ *
++ * You should have received a copy of the GNU Lesser General Public
++ * License along with this library. If not, see <http://www.gnu.org/licenses/>.
++ */
++
++#ifndef COGL_SCANOUT_H
++#define COGL_SCANOUT_H
++
++#include "cogl/cogl-types.h"
++
++#include <glib-object.h>
++
++#define COGL_TYPE_SCANOUT (cogl_scanout_get_type ())
++COGL_EXPORT
++G_DECLARE_INTERFACE (CoglScanout, cogl_scanout,
++                     COGL, SCANOUT, GObject)
++
++struct _CoglScanoutInterface
++{
++  GTypeInterface parent_iface;
++};
++
++#endif /* COGL_SCANOUT_H */
+diff --git a/cogl/cogl/cogl.h b/cogl/cogl/cogl.h
+index 6ad0227dff54217c53a10d0d745088f962782e6f..7eb6cfa741cce6abd43241481a41a243263b6258 100644
+--- a/cogl/cogl/cogl.h
++++ b/cogl/cogl/cogl.h
+@@ -122,6 +122,7 @@
+ #include <cogl/cogl-fence.h>
+ #include <cogl/cogl-glib-source.h>
+ #include <cogl/cogl-trace.h>
++#include <cogl/cogl-scanout.h>
+ /* XXX: This will definitly go away once all the Clutter winsys
+  * code has been migrated down into Cogl! */
+ #include <cogl/deprecated/cogl-clutter.h>
+diff --git a/cogl/cogl/meson.build b/cogl/cogl/meson.build
+index 54c4a1612292272cee8f3a2468b28d42e9ae4b1c..21f6d8c0cf9da5e1c38e2dae2f9086bfab9950f1 100644
+--- a/cogl/cogl/meson.build
++++ b/cogl/cogl/meson.build
+@@ -122,6 +122,7 @@ cogl_nonintrospected_headers = [
+   'cogl-version.h',
+   'cogl-gtype-private.h',
+   'cogl-glib-source.h',
++  'cogl-scanout.h',
+ ]
+ 
+ cogl_nodist_headers = [
+@@ -347,6 +348,7 @@ cogl_sources = [
+   'cogl-closure-list.c',
+   'cogl-fence.c',
+   'cogl-fence-private.h',
++  'cogl-scanout.c',
+   'deprecated/cogl-material-compat.c',
+   'deprecated/cogl-program.c',
+   'deprecated/cogl-program-private.h',
+diff --git a/cogl/cogl/winsys/cogl-winsys-private.h b/cogl/cogl/winsys/cogl-winsys-private.h
+index d849ef70507c151b792c0f3ce94d28a90d3fd8a5..01a45b7655231a2ec9daf530dff24c2e0061aa8e 100644
+--- a/cogl/cogl/winsys/cogl-winsys-private.h
++++ b/cogl/cogl/winsys/cogl-winsys-private.h
+@@ -33,6 +33,7 @@
+ 
+ #include "cogl-renderer.h"
+ #include "cogl-onscreen.h"
++#include "cogl-scanout.h"
+ 
+ #ifdef COGL_HAS_XLIB_SUPPORT
+ #include "cogl-texture-pixmap-x11-private.h"
+@@ -117,6 +118,10 @@ typedef struct _CoglWinsysVtable
+                                         const int *rectangles,
+                                         int n_rectangles);
+ 
++  void
++  (*onscreen_direct_scanout) (CoglOnscreen *onscreen,
++                              CoglScanout  *scanout);
++
+   void
+   (*onscreen_set_visibility) (CoglOnscreen *onscreen,
+                               gboolean visibility);
+diff --git a/src/backends/native/meta-drm-buffer-gbm.c b/src/backends/native/meta-drm-buffer-gbm.c
+index b446d64e149cbda8618cb254ec8e7fc252bef30c..3985e26bc7815f095f26d1ca26ac1673e212bda1 100644
+--- a/src/backends/native/meta-drm-buffer-gbm.c
++++ b/src/backends/native/meta-drm-buffer-gbm.c
+@@ -44,7 +44,12 @@ struct _MetaDrmBufferGbm
+   uint32_t fb_id;
+ };
+ 
+-G_DEFINE_TYPE (MetaDrmBufferGbm, meta_drm_buffer_gbm, META_TYPE_DRM_BUFFER)
++static void
++cogl_scanout_iface_init (CoglScanoutInterface *iface);
++
++G_DEFINE_TYPE_WITH_CODE (MetaDrmBufferGbm, meta_drm_buffer_gbm, META_TYPE_DRM_BUFFER,
++                         G_IMPLEMENT_INTERFACE (COGL_TYPE_SCANOUT,
++                                                cogl_scanout_iface_init))
+ 
+ struct gbm_bo *
+ meta_drm_buffer_gbm_get_bo (MetaDrmBufferGbm *buffer_gbm)
+@@ -53,22 +58,12 @@ meta_drm_buffer_gbm_get_bo (MetaDrmBufferGbm *buffer_gbm)
+ }
+ 
+ static gboolean
+-acquire_swapped_buffer (MetaDrmBufferGbm  *buffer_gbm,
+-                        gboolean           use_modifiers,
+-                        GError           **error)
++init_fb_id (MetaDrmBufferGbm  *buffer_gbm,
++            struct gbm_bo     *bo,
++            gboolean           use_modifiers,
++            GError           **error)
+ {
+   MetaGpuKmsFBArgs fb_args = { 0, };
+-  struct gbm_bo *bo;
+-
+-  bo = gbm_surface_lock_front_buffer (buffer_gbm->surface);
+-  if (!bo)
+-    {
+-      g_set_error (error,
+-                   G_IO_ERROR,
+-                   G_IO_ERROR_FAILED,
+-                   "gbm_surface_lock_front_buffer failed");
+-      return FALSE;
+-    }
+ 
+   if (gbm_bo_get_handle_for_plane (bo, 0).s32 == -1)
+     {
+@@ -99,21 +94,34 @@ acquire_swapped_buffer (MetaDrmBufferGbm  *buffer_gbm,
+                             use_modifiers,
+                             &fb_args,
+                             &buffer_gbm->fb_id, error))
++    return FALSE;
++
++  return TRUE;
++}
++
++static gboolean
++lock_front_buffer (MetaDrmBufferGbm  *buffer_gbm,
++                   gboolean           use_modifiers,
++                   GError           **error)
++{
++  buffer_gbm->bo = gbm_surface_lock_front_buffer (buffer_gbm->surface);
++  if (!buffer_gbm->bo)
+     {
+-      gbm_surface_release_buffer (buffer_gbm->surface, bo);
++      g_set_error (error,
++                   G_IO_ERROR,
++                   G_IO_ERROR_FAILED,
++                   "gbm_surface_lock_front_buffer failed");
+       return FALSE;
+     }
+ 
+-  buffer_gbm->bo = bo;
+-
+-  return TRUE;
++  return init_fb_id (buffer_gbm, buffer_gbm->bo, use_modifiers, error);
+ }
+ 
+ MetaDrmBufferGbm *
+-meta_drm_buffer_gbm_new (MetaGpuKms          *gpu_kms,
+-                         struct gbm_surface  *gbm_surface,
+-                         gboolean             use_modifiers,
+-                         GError             **error)
++meta_drm_buffer_gbm_new_lock_front (MetaGpuKms          *gpu_kms,
++                                    struct gbm_surface  *gbm_surface,
++                                    gboolean             use_modifiers,
++                                    GError             **error)
+ {
+   MetaDrmBufferGbm *buffer_gbm;
+ 
+@@ -121,7 +129,7 @@ meta_drm_buffer_gbm_new (MetaGpuKms          *gpu_kms,
+   buffer_gbm->gpu_kms = gpu_kms;
+   buffer_gbm->surface = gbm_surface;
+ 
+-  if (!acquire_swapped_buffer (buffer_gbm, use_modifiers, error))
++  if (!lock_front_buffer (buffer_gbm, use_modifiers, error))
+     {
+       g_object_unref (buffer_gbm);
+       return NULL;
+@@ -130,12 +138,39 @@ meta_drm_buffer_gbm_new (MetaGpuKms          *gpu_kms,
+   return buffer_gbm;
+ }
+ 
++MetaDrmBufferGbm *
++meta_drm_buffer_gbm_new_take (MetaGpuKms     *gpu_kms,
++                              struct gbm_bo  *bo,
++                              gboolean        use_modifiers,
++                              GError        **error)
++{
++  MetaDrmBufferGbm *buffer_gbm;
++
++  buffer_gbm = g_object_new (META_TYPE_DRM_BUFFER_GBM, NULL);
++  buffer_gbm->gpu_kms = gpu_kms;
++
++  if (!init_fb_id (buffer_gbm, bo, use_modifiers, error))
++    {
++      g_object_unref (buffer_gbm);
++      return NULL;
++    }
++
++  buffer_gbm->bo = bo;
++
++  return buffer_gbm;
++}
++
+ static uint32_t
+ meta_drm_buffer_gbm_get_fb_id (MetaDrmBuffer *buffer)
+ {
+   return META_DRM_BUFFER_GBM (buffer)->fb_id;
+ }
+ 
++static void
++cogl_scanout_iface_init (CoglScanoutInterface *iface)
++{
++}
++
+ static void
+ meta_drm_buffer_gbm_finalize (GObject *object)
+ {
+@@ -150,7 +185,12 @@ meta_drm_buffer_gbm_finalize (GObject *object)
+     }
+ 
+   if (buffer_gbm->bo)
+-    gbm_surface_release_buffer (buffer_gbm->surface, buffer_gbm->bo);
++    {
++      if (buffer_gbm->surface)
++        gbm_surface_release_buffer (buffer_gbm->surface, buffer_gbm->bo);
++      else
++        gbm_bo_destroy (buffer_gbm->bo);
++    }
+ 
+   G_OBJECT_CLASS (meta_drm_buffer_gbm_parent_class)->finalize (object);
+ }
+diff --git a/src/backends/native/meta-drm-buffer-gbm.h b/src/backends/native/meta-drm-buffer-gbm.h
+index b48cef06a12b4767cbe8e77ea0fb0205737906ad..b46925ecc96997cd7d44dd37c1d8e2b1052c246e 100644
+--- a/src/backends/native/meta-drm-buffer-gbm.h
++++ b/src/backends/native/meta-drm-buffer-gbm.h
+@@ -33,10 +33,16 @@ G_DECLARE_FINAL_TYPE (MetaDrmBufferGbm,
+                       META, DRM_BUFFER_GBM,
+                       MetaDrmBuffer)
+ 
+-MetaDrmBufferGbm * meta_drm_buffer_gbm_new (MetaGpuKms          *gpu_kms,
+-                                            struct gbm_surface  *gbm_surface,
+-                                            gboolean             use_modifiers,
+-                                            GError             **error);
++MetaDrmBufferGbm * meta_drm_buffer_gbm_new_lock_front (MetaGpuKms          *gpu_kms,
++                                                       struct gbm_surface  *gbm_surface,
++                                                       gboolean             use_modifiers,
++                                                       GError             **error);
++
++
++MetaDrmBufferGbm * meta_drm_buffer_gbm_new_take (MetaGpuKms     *gpu_kms,
++                                                 struct gbm_bo  *gbm_bo,
++                                                 gboolean        use_modifiers,
++                                                 GError        **error);
+ 
+ struct gbm_bo * meta_drm_buffer_gbm_get_bo (MetaDrmBufferGbm *buffer_gbm);
+ 
+diff --git a/src/backends/native/meta-renderer-native.c b/src/backends/native/meta-renderer-native.c
+index 8d82ad7c42100c7e585ef342557ee1e2a34e53e2..50e606f7e4cb3585fb8c4000934be0beb470d4cb 100644
+--- a/src/backends/native/meta-renderer-native.c
++++ b/src/backends/native/meta-renderer-native.c
+@@ -313,6 +313,12 @@ meta_gbm_device_from_gpu (MetaGpuKms *gpu_kms)
+   return renderer_gpu_data->gbm.device;
+ }
+ 
++MetaGpuKms *
++meta_renderer_native_get_primary_gpu (MetaRendererNative *renderer_native)
++{
++  return renderer_native->primary_gpu_kms;
++}
++
+ static MetaRendererNativeGpuData *
+ meta_create_renderer_native_gpu_data (MetaGpuKms *gpu_kms)
+ {
+@@ -1621,13 +1627,14 @@ copy_shared_framebuffer_gpu (CoglOnscreen                        *onscreen,
+       return;
+     }
+ 
+-  buffer_gbm = meta_drm_buffer_gbm_new (secondary_gpu_state->gpu_kms,
++  buffer_gbm =
++    meta_drm_buffer_gbm_new_lock_front (secondary_gpu_state->gpu_kms,
+                                         secondary_gpu_state->gbm.surface,
+                                         renderer_native->use_modifiers,
+                                         &error);
+   if (!buffer_gbm)
+     {
+-      g_warning ("meta_drm_buffer_gbm_new failed: %s",
++      g_warning ("meta_drm_buffer_gbm_new_lock_front failed: %s",
+                  error->message);
+       g_error_free (error);
+       return;
+@@ -2012,6 +2019,34 @@ retry:
+     }
+ }
+ 
++static void
++ensure_crtc_modes (CoglOnscreen  *onscreen,
++                   MetaKmsUpdate *kms_update)
++{
++  CoglOnscreenEGL *onscreen_egl = onscreen->winsys;
++  MetaOnscreenNative *onscreen_native = onscreen_egl->platform;
++  CoglContext *cogl_context = COGL_FRAMEBUFFER (onscreen)->context;
++  CoglRenderer *cogl_renderer = cogl_context->display->renderer;
++  CoglRendererEGL *cogl_renderer_egl = cogl_renderer->winsys;
++  MetaRendererNativeGpuData *renderer_gpu_data = cogl_renderer_egl->platform;
++  MetaRendererNative *renderer_native = renderer_gpu_data->renderer_native;
++  MetaRenderer *renderer = META_RENDERER (renderer_native);
++  MetaBackend *backend = meta_renderer_get_backend (renderer);
++  MetaMonitorManager *monitor_manager =
++    meta_backend_get_monitor_manager (backend);
++  MetaPowerSave power_save_mode;
++
++  power_save_mode = meta_monitor_manager_get_power_save_mode (monitor_manager);
++  if (onscreen_native->pending_set_crtc &&
++      power_save_mode == META_POWER_SAVE_ON)
++    {
++      meta_onscreen_native_set_crtc_mode (onscreen,
++                                          renderer_gpu_data,
++                                          kms_update);
++      onscreen_native->pending_set_crtc = FALSE;
++    }
++}
++
+ static void
+ meta_onscreen_native_swap_buffers_with_damage (CoglOnscreen *onscreen,
+                                                const int    *rectangles,
+@@ -2025,8 +2060,6 @@ meta_onscreen_native_swap_buffers_with_damage (CoglOnscreen *onscreen,
+   MetaRendererNative *renderer_native = renderer_gpu_data->renderer_native;
+   MetaRenderer *renderer = META_RENDERER (renderer_native);
+   MetaBackend *backend = meta_renderer_get_backend (renderer);
+-  MetaMonitorManager *monitor_manager =
+-    meta_backend_get_monitor_manager (backend);
+   MetaBackendNative *backend_native = META_BACKEND_NATIVE (backend);
+   MetaKms *kms = meta_backend_native_get_kms (backend_native);
+   CoglOnscreenEGL *onscreen_egl = onscreen->winsys;
+@@ -2035,7 +2068,6 @@ meta_onscreen_native_swap_buffers_with_damage (CoglOnscreen *onscreen,
+   CoglFrameInfo *frame_info;
+   gboolean egl_context_changed = FALSE;
+   MetaKmsUpdate *kms_update;
+-  MetaPowerSave power_save_mode;
+   g_autoptr (GError) error = NULL;
+   MetaDrmBufferGbm *buffer_gbm;
+   g_autoptr (MetaKmsFeedback) kms_feedback = NULL;
+@@ -2071,13 +2103,14 @@ meta_onscreen_native_swap_buffers_with_damage (CoglOnscreen *onscreen,
+       g_warn_if_fail (onscreen_native->gbm.next_fb == NULL);
+       g_clear_object (&onscreen_native->gbm.next_fb);
+ 
+-      buffer_gbm = meta_drm_buffer_gbm_new (render_gpu,
++      buffer_gbm =
++        meta_drm_buffer_gbm_new_lock_front (render_gpu,
+                                             onscreen_native->gbm.surface,
+                                             renderer_native->use_modifiers,
+                                             &error);
+       if (!buffer_gbm)
+         {
+-          g_warning ("meta_drm_buffer_gbm_new failed: %s",
++          g_warning ("meta_drm_buffer_gbm_new_lock_front failed: %s",
+                      error->message);
+           return;
+         }
+@@ -2093,18 +2126,7 @@ meta_onscreen_native_swap_buffers_with_damage (CoglOnscreen *onscreen,
+ 
+   update_secondary_gpu_state_post_swap_buffers (onscreen, &egl_context_changed);
+ 
+-  /* If this is the first framebuffer to be presented then we now setup the
+-   * crtc modes, else we flip from the previous buffer */
+-
+-  power_save_mode = meta_monitor_manager_get_power_save_mode (monitor_manager);
+-  if (onscreen_native->pending_set_crtc &&
+-      power_save_mode == META_POWER_SAVE_ON)
+-    {
+-      meta_onscreen_native_set_crtc_mode (onscreen,
+-                                          renderer_gpu_data,
+-                                          kms_update);
+-      onscreen_native->pending_set_crtc = FALSE;
+-    }
++  ensure_crtc_modes (onscreen, kms_update);
+ 
+   onscreen_native->pending_queue_swap_notify_frame_count = renderer_native->frame_counter;
+   meta_onscreen_native_flip_crtcs (onscreen, kms_update);
+@@ -2198,6 +2220,92 @@ meta_renderer_native_create_dma_buf (CoglRenderer  *cogl_renderer,
+   return NULL;
+ }
+ 
++gboolean
++meta_onscreen_native_is_buffer_scanout_compatible (CoglOnscreen *onscreen,
++                                                   uint32_t      drm_format,
++                                                   uint64_t      drm_modifier,
++                                                   uint32_t      stride)
++{
++  CoglOnscreenEGL *onscreen_egl = onscreen->winsys;
++  MetaOnscreenNative *onscreen_native = onscreen_egl->platform;
++  MetaDrmBuffer *fb;
++  struct gbm_bo *gbm_bo;
++
++  if (onscreen_native->crtc->config->transform != META_MONITOR_TRANSFORM_NORMAL)
++    return FALSE;
++
++  if (onscreen_native->secondary_gpu_state)
++    return FALSE;
++
++  if (!onscreen_native->gbm.surface)
++    return FALSE;
++
++  fb = onscreen_native->gbm.current_fb ? onscreen_native->gbm.current_fb
++                                       : onscreen_native->gbm.next_fb;
++  if (!fb)
++    return FALSE;
++
++  if (!META_IS_DRM_BUFFER_GBM (fb))
++    return FALSE;
++
++  gbm_bo = meta_drm_buffer_gbm_get_bo (META_DRM_BUFFER_GBM (fb));
++
++  if (gbm_bo_get_format (gbm_bo) != drm_format)
++    return FALSE;
++
++  if (gbm_bo_get_modifier (gbm_bo) != drm_modifier)
++    return FALSE;
++
++  if (gbm_bo_get_stride (gbm_bo) != stride)
++    return FALSE;
++
++  return TRUE;
++}
++
++static void
++meta_onscreen_native_direct_scanout (CoglOnscreen *onscreen,
++                                     CoglScanout  *scanout)
++{
++  CoglOnscreenEGL *onscreen_egl = onscreen->winsys;
++  MetaOnscreenNative *onscreen_native = onscreen_egl->platform;
++  MetaGpuKms *render_gpu = onscreen_native->render_gpu;
++  CoglContext *cogl_context = COGL_FRAMEBUFFER (onscreen)->context;
++  CoglRenderer *cogl_renderer = cogl_context->display->renderer;
++  CoglRendererEGL *cogl_renderer_egl = cogl_renderer->winsys;
++  MetaRendererNativeGpuData *renderer_gpu_data = cogl_renderer_egl->platform;
++  MetaRendererNative *renderer_native = renderer_gpu_data->renderer_native;
++  MetaRenderer *renderer = META_RENDERER (renderer_native);
++  MetaBackend *backend = meta_renderer_get_backend (renderer);
++  MetaBackendNative *backend_native = META_BACKEND_NATIVE (backend);
++  MetaKms *kms = meta_backend_native_get_kms (backend_native);
++  CoglFrameInfo *frame_info;
++  MetaKmsUpdate *kms_update;
++  g_autoptr (GError) error = NULL;
++
++  kms_update = meta_kms_ensure_pending_update (kms);
++
++  wait_for_pending_flips (onscreen);
++
++  frame_info = g_queue_peek_tail (&onscreen->pending_frame_infos);
++  frame_info->global_frame_counter = renderer_native->frame_counter;
++
++  renderer_gpu_data = meta_renderer_native_get_gpu_data (renderer_native,
++                                                         render_gpu);
++
++  g_return_if_fail (renderer_gpu_data->mode == META_RENDERER_NATIVE_MODE_GBM);
++
++  g_warn_if_fail (!onscreen_native->gbm.next_fb);
++  g_set_object (&onscreen_native->gbm.next_fb, META_DRM_BUFFER (scanout));
++
++  ensure_crtc_modes (onscreen, kms_update);
++
++  onscreen_native->pending_queue_swap_notify_frame_count =
++    renderer_native->frame_counter;
++  meta_onscreen_native_flip_crtcs (onscreen, kms_update);
++
++  meta_kms_post_pending_update_sync (kms);
++}
++
+ static gboolean
+ meta_renderer_native_init_egl_context (CoglContext *cogl_context,
+                                        GError     **error)
+@@ -2921,6 +3029,7 @@ get_native_cogl_winsys_vtable (CoglRenderer *cogl_renderer)
+       vtable.onscreen_swap_region = NULL;
+       vtable.onscreen_swap_buffers_with_damage =
+         meta_onscreen_native_swap_buffers_with_damage;
++      vtable.onscreen_direct_scanout = meta_onscreen_native_direct_scanout;
+ 
+       vtable.context_get_clock_time = meta_renderer_native_get_clock_time;
+ 
+diff --git a/src/backends/native/meta-renderer-native.h b/src/backends/native/meta-renderer-native.h
+index 7abe7c15218eb904d1b93fae729879f10f51386f..3ea2c9cc0d81fa0fdf70bcbb6716f89270a23cfd 100644
+--- a/src/backends/native/meta-renderer-native.h
++++ b/src/backends/native/meta-renderer-native.h
+@@ -51,8 +51,15 @@ MetaRendererNative * meta_renderer_native_new (MetaBackendNative  *backend_nativ
+ 
+ struct gbm_device * meta_gbm_device_from_gpu (MetaGpuKms *gpu_kms);
+ 
++MetaGpuKms * meta_renderer_native_get_primary_gpu (MetaRendererNative *renderer_native);
++
+ void meta_renderer_native_finish_frame (MetaRendererNative *renderer_native);
+ 
+ int64_t meta_renderer_native_get_frame_counter (MetaRendererNative *renderer_native);
+ 
++gboolean meta_onscreen_native_is_buffer_scanout_compatible (CoglOnscreen *onscreen,
++                                                            uint32_t      drm_format,
++                                                            uint64_t      drm_modifier,
++                                                            uint32_t      stride);
++
+ #endif /* META_RENDERER_NATIVE_H */
+diff --git a/src/compositor/compositor-private.h b/src/compositor/compositor-private.h
+index 8935732bae28b969ba53a88de509b60304557aa8..1917aa03dd2637db2162202f1a5f4fcd0dc38730 100644
+--- a/src/compositor/compositor-private.h
++++ b/src/compositor/compositor-private.h
+@@ -14,11 +14,14 @@
+ /* Wait 2ms after vblank before starting to draw next frame */
+ #define META_SYNC_DELAY 2
+ 
++typedef struct _MetaLaters MetaLaters;
++
+ struct _MetaCompositorClass
+ {
+   GObjectClass parent_class;
+ 
+-  void (* manage) (MetaCompositor *compositor);
++  gboolean (* manage) (MetaCompositor  *compositor,
++                       GError         **error);
+   void (* unmanage) (MetaCompositor *compositor);
+   void (* pre_paint) (MetaCompositor *compositor);
+   void (* post_paint) (MetaCompositor *compositor);
+@@ -26,6 +29,9 @@ struct _MetaCompositorClass
+                           MetaWindow     *window);
+ };
+ 
++gboolean meta_compositor_do_manage (MetaCompositor  *compositor,
++                                    GError         **error);
++
+ void meta_compositor_remove_window_actor (MetaCompositor  *compositor,
+                                           MetaWindowActor *window_actor);
+ 
+@@ -67,4 +73,6 @@ ClutterStage * meta_compositor_get_stage (MetaCompositor *compositor);
+ 
+ gboolean meta_compositor_is_switching_workspace (MetaCompositor *compositor);
+ 
++MetaLaters * meta_compositor_get_laters (MetaCompositor *compositor);
++
+ #endif /* META_COMPOSITOR_PRIVATE_H */
+diff --git a/src/compositor/compositor.c b/src/compositor/compositor.c
+index 111965797c4a4b0a97007964539f62d0d8ead782..7c94687dd2ef1a9844ec5fd532dedd5e8af25a02 100644
+--- a/src/compositor/compositor.c
++++ b/src/compositor/compositor.c
+@@ -62,5 +62,6 @@
+ #include "backends/x11/meta-stage-x11.h"
+ #include "clutter/clutter-mutter.h"
+ #include "cogl/cogl.h"
++#include "compositor/meta-later-private.h"
+ #include "compositor/meta-window-actor-x11.h"
+ #include "compositor/meta-window-actor-private.h"
+@@ -96,6 +97,15 @@ enum
+ 
+ static GParamSpec *obj_props[N_PROPS] = { NULL, };
+ 
++enum
++{
++  PRE_PAINT,
++
++  N_SIGNALS
++};
++
++static guint signals[N_SIGNALS];
++
+ typedef struct _MetaCompositorPrivate
+ {
+   GObject parent;
+@@ -131,6 +141,8 @@ typedef struct _MetaCompositorPrivate
+   int switch_workspace_in_progress;
+ 
+   MetaPluginManager *plugin_mgr;
++
++  MetaLaters *laters;
+ } MetaCompositorPrivate;
+ 
+ G_DEFINE_ABSTRACT_TYPE_WITH_PRIVATE (MetaCompositor, meta_compositor,
+@@ -550,8 +562,9 @@ meta_compositor_redirect_x11_windows (MetaCompositor *compositor)
+     redirect_windows (display->x11_display);
+ }
+ 
+-void
+-meta_compositor_manage (MetaCompositor *compositor)
++gboolean
++meta_compositor_do_manage (MetaCompositor  *compositor,
++                           GError         **error)
+ {
+   MetaCompositorPrivate *priv =
+     meta_compositor_get_instance_private (compositor);
+@@ -587,9 +600,21 @@ meta_compositor_manage (MetaCompositor *compositor)
+   clutter_actor_add_child (priv->stage, priv->top_window_group);
+   clutter_actor_add_child (priv->stage, priv->feedback_group);
+ 
+-  META_COMPOSITOR_GET_CLASS (compositor)->manage (compositor);
++  if (!META_COMPOSITOR_GET_CLASS (compositor)->manage (compositor, error))
++    return FALSE;
+ 
+   priv->plugin_mgr = meta_plugin_manager_new (compositor);
++
++  return TRUE;
++}
++
++void
++meta_compositor_manage (MetaCompositor *compositor)
++{
++  GError *error = NULL;
++
++  if (!meta_compositor_do_manage (compositor, &error))
++    g_error ("Compositor failed to manage display: %s", error->message);
+ }
+ 
+ void
+@@ -1108,7 +1133,8 @@ meta_compositor_pre_paint (MetaCompositor *compositor)
+ {
+   COGL_TRACE_BEGIN_SCOPED (MetaCompositorPrePaint,
+                            "Compositor (pre-paint)");
+-  META_COMPOSITOR_GET_CLASS (compositor)->pre_paint (compositor);
++
++  g_signal_emit (compositor, signals[PRE_PAINT], 0);
+ }
+ 
+ static gboolean
+@@ -1230,6 +1256,8 @@ meta_compositor_init (MetaCompositor *compositor)
+                                            meta_post_paint_func,
+                                            compositor,
+                                            NULL);
++
++  priv->laters = meta_laters_new (compositor);
+ }
+ 
+ static void
+@@ -1239,6 +1267,8 @@ meta_compositor_dispose (GObject *object)
+   MetaCompositorPrivate *priv =
+     meta_compositor_get_instance_private (compositor);
+ 
++  g_clear_pointer (&priv->laters, meta_laters_free);
++
+   g_clear_signal_handler (&priv->stage_after_paint_id, priv->stage);
+   g_clear_signal_handler (&priv->stage_presented_id, priv->stage);
+ 
+@@ -1280,6 +1310,14 @@ meta_compositor_class_init (MetaCompositorClass *klass)
+                          G_PARAM_CONSTRUCT_ONLY |
+                          G_PARAM_STATIC_STRINGS);
+   g_object_class_install_properties (object_class, N_PROPS, obj_props);
++
++  signals[PRE_PAINT] =
++    g_signal_new ("pre-paint",
++                  G_TYPE_FROM_CLASS (klass),
++                  G_SIGNAL_RUN_LAST,
++                  G_STRUCT_OFFSET (MetaCompositorClass, pre_paint),
++                  NULL, NULL, NULL,
++                  G_TYPE_NONE, 0);
+ }
+ 
+ /**
+@@ -1597,3 +1635,12 @@ meta_compositor_is_switching_workspace (MetaCompositor *compositor)
+ 
+   return priv->switch_workspace_in_progress > 0;
+ }
++
++MetaLaters *
++meta_compositor_get_laters (MetaCompositor *compositor)
++{
++  MetaCompositorPrivate *priv =
++    meta_compositor_get_instance_private (compositor);
++
++  return priv->laters;
++}
+diff --git a/src/compositor/meta-compositor-native.c b/src/compositor/meta-compositor-native.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..85929c03539187113d9ec9a5686fa95e58ba946f
+--- /dev/null
++++ b/src/compositor/meta-compositor-native.c
+@@ -0,0 +1,148 @@
++/*
++ * Copyright (C) 2019 Red Hat Inc.
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
++ * 02111-1307, USA.
++ *
++ */
++
++#include "config.h"
++
++#include "compositor/meta-compositor-native.h"
++
++#include "backends/meta-logical-monitor.h"
++#include "compositor/meta-surface-actor-wayland.h"
++
++struct _MetaCompositorNative
++{
++  MetaCompositorServer parent;
++};
++
++G_DEFINE_TYPE (MetaCompositorNative, meta_compositor_native,
++               META_TYPE_COMPOSITOR_SERVER)
++
++static MetaRendererView *
++get_window_view (MetaRenderer *renderer,
++                 MetaWindow   *window)
++{
++  GList *l;
++  MetaRendererView *view_found = NULL;
++
++  for (l = meta_renderer_get_views (renderer); l; l = l->next)
++    {
++      ClutterStageView *stage_view = l->data;
++      MetaRectangle view_layout;
++
++      clutter_stage_view_get_layout (stage_view, &view_layout);
++
++      if (meta_rectangle_equal (&window->buffer_rect,
++                                &view_layout))
++        {
++          if (view_found)
++            return NULL;
++          view_found = META_RENDERER_VIEW (stage_view);
++        }
++    }
++
++  return view_found;
++}
++
++static void
++maybe_assign_primary_plane (MetaCompositor *compositor)
++{
++  MetaBackend *backend = meta_get_backend ();
++  MetaRenderer *renderer = meta_backend_get_renderer (backend);
++  MetaWindowActor *window_actor;
++  MetaWindow *window;
++  MetaRendererView *view;
++  CoglFramebuffer *framebuffer;
++  CoglOnscreen *onscreen;
++  MetaSurfaceActor *surface_actor;
++  MetaSurfaceActorWayland *surface_actor_wayland;
++  g_autoptr (CoglScanout) scanout = NULL;
++
++  if (meta_compositor_is_unredirect_inhibited (compositor))
++    return;
++
++  window_actor = meta_compositor_get_top_window_actor (compositor);
++  if (!window_actor)
++    return;
++
++  if (meta_window_actor_effect_in_progress (window_actor))
++    return;
++
++  if (clutter_actor_has_transitions (CLUTTER_ACTOR (window_actor)))
++    return;
++
++  if (clutter_actor_get_n_children (CLUTTER_ACTOR (window_actor)) != 1)
++    return;
++
++  window = meta_window_actor_get_meta_window (window_actor);
++  if (!window)
++    return;
++
++  view = get_window_view (renderer, window);
++  if (!view)
++    return;
++
++  framebuffer = clutter_stage_view_get_framebuffer (CLUTTER_STAGE_VIEW (view));
++  if (!cogl_is_onscreen (framebuffer))
++    return;
++
++  surface_actor = meta_window_actor_get_surface (window_actor);
++  if (!META_IS_SURFACE_ACTOR_WAYLAND (surface_actor))
++    return;
++
++  surface_actor_wayland = META_SURFACE_ACTOR_WAYLAND (surface_actor);
++  onscreen = COGL_ONSCREEN (framebuffer);
++  scanout = meta_surface_actor_wayland_try_acquire_scanout (surface_actor_wayland,
++                                                            onscreen);
++  if (!scanout)
++    return;
++
++  clutter_stage_view_assign_next_scanout (CLUTTER_STAGE_VIEW (view), scanout);
++}
++
++static void
++meta_compositor_native_pre_paint (MetaCompositor *compositor)
++{
++  MetaCompositorClass *parent_class;
++
++  maybe_assign_primary_plane (compositor);
++
++  parent_class = META_COMPOSITOR_CLASS (meta_compositor_native_parent_class);
++  parent_class->pre_paint (compositor);
++}
++
++MetaCompositorNative *
++meta_compositor_native_new (MetaDisplay *display)
++{
++  return g_object_new (META_TYPE_COMPOSITOR_NATIVE,
++                       "display", display,
++                       NULL);
++}
++
++static void
++meta_compositor_native_init (MetaCompositorNative *compositor_native)
++{
++}
++
++static void
++meta_compositor_native_class_init (MetaCompositorNativeClass *klass)
++{
++  MetaCompositorClass *compositor_class = META_COMPOSITOR_CLASS (klass);
++
++  compositor_class->pre_paint = meta_compositor_native_pre_paint;
++}
+diff --git a/src/compositor/meta-compositor-native.h b/src/compositor/meta-compositor-native.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..d276a5905fd2ce7e59523d2089a1f422abfa97ad
+--- /dev/null
++++ b/src/compositor/meta-compositor-native.h
+@@ -0,0 +1,32 @@
++/*
++ * Copyright (C) 2019 Red Hat Inc.
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
++ * 02111-1307, USA.
++ *
++ */
++
++#ifndef META_COMPOSITOR_NATIVE_H
++#define META_COMPOSITOR_NATIVE_H
++
++#include "compositor/meta-compositor-server.h"
++
++#define META_TYPE_COMPOSITOR_NATIVE (meta_compositor_native_get_type ())
++G_DECLARE_FINAL_TYPE (MetaCompositorNative, meta_compositor_native,
++                      META, COMPOSITOR_NATIVE, MetaCompositor)
++
++MetaCompositorNative * meta_compositor_native_new (MetaDisplay *display);
++
++#endif /* META_COMPOSITOR_NATIVE_H */
+diff --git a/src/compositor/meta-compositor-server.c b/src/compositor/meta-compositor-server.c
+index 928501f8a798beb399e0f0dce21fdd5535824683..f61f55560bd38a7ee11339eadf62950218b7f960 100644
+--- a/src/compositor/meta-compositor-server.c
++++ b/src/compositor/meta-compositor-server.c
+@@ -22,16 +22,13 @@
+ 
+ #include "compositor/meta-compositor-server.h"
+ 
+-struct _MetaCompositorServer
+-{
+-  MetaCompositor parent;
+-};
+-
+ G_DEFINE_TYPE (MetaCompositorServer, meta_compositor_server, META_TYPE_COMPOSITOR)
+ 
+-static void
+-meta_compositor_server_manage (MetaCompositor *compositor)
++static gboolean
++meta_compositor_server_manage (MetaCompositor  *compositor,
++                               GError         **error)
+ {
++  return TRUE;
+ }
+ 
+ static void
+diff --git a/src/compositor/meta-compositor-server.h b/src/compositor/meta-compositor-server.h
+index 8bff05e7b297574c06457d5b917660abc5a7b25b..8b4a92748ad11696ced010382d1565d2b97bf4f4 100644
+--- a/src/compositor/meta-compositor-server.h
++++ b/src/compositor/meta-compositor-server.h
+@@ -24,8 +24,13 @@
+ #include "compositor/compositor-private.h"
+ 
+ #define META_TYPE_COMPOSITOR_SERVER (meta_compositor_server_get_type ())
+-G_DECLARE_FINAL_TYPE (MetaCompositorServer, meta_compositor_server,
+-                      META, COMPOSITOR_SERVER, MetaCompositor)
++G_DECLARE_DERIVABLE_TYPE (MetaCompositorServer, meta_compositor_server,
++                          META, COMPOSITOR_SERVER, MetaCompositor)
++
++struct _MetaCompositorServerClass
++{
++  MetaCompositorClass parent_class;
++};
+ 
+ MetaCompositorServer * meta_compositor_server_new (MetaDisplay *display);
+ 
+diff --git a/src/compositor/meta-compositor-x11.c b/src/compositor/meta-compositor-x11.c
+index 1737e97f5abed88b80136a7d016793a385cef517..211b907e9dd4ff425939cb8380753e2d7104ad6e 100644
+--- a/src/compositor/meta-compositor-x11.c
++++ b/src/compositor/meta-compositor-x11.c
+@@ -100,15 +100,39 @@ meta_compositor_x11_process_xevent (MetaCompositorX11 *compositor_x11,
+     meta_x11_handle_event (xevent);
+ }
+ 
+-static void
+-meta_compositor_x11_manage (MetaCompositor *compositor)
++static gboolean
++meta_compositor_x11_manage (MetaCompositor  *compositor,
++                            GError         **error)
+ {
+   MetaCompositorX11 *compositor_x11 = META_COMPOSITOR_X11 (compositor);
+   MetaDisplay *display = meta_compositor_get_display (compositor);
+-  Display *xdisplay = meta_x11_display_get_xdisplay (display->x11_display);
++  MetaX11Display *x11_display = display->x11_display;
++  Display *xdisplay = meta_x11_display_get_xdisplay (x11_display);
++  int composite_version;
+   MetaBackend *backend = meta_get_backend ();
+   Window xwindow;
+ 
++  if (!META_X11_DISPLAY_HAS_COMPOSITE (x11_display) ||
++      !META_X11_DISPLAY_HAS_DAMAGE (x11_display))
++    {
++      g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
++                   "Missing required extension %s",
++                   !META_X11_DISPLAY_HAS_COMPOSITE (x11_display) ?
++                   "composite" : "damage");
++      return FALSE;
++    }
++
++  composite_version = ((x11_display->composite_major_version * 10) +
++                       x11_display->composite_minor_version);
++  if (composite_version < 3)
++    {
++      g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
++                   "COMPOSITE extension 3.0 required (found %d.%d)",
++                   x11_display->composite_major_version,
++                   x11_display->composite_minor_version);
++      return FALSE;
++    }
++
+   meta_x11_display_set_cm_selection (display->x11_display);
+ 
+   compositor_x11->output = display->x11_display->composite_overlay_window;
+@@ -139,6 +163,8 @@ meta_compositor_x11_manage (MetaCompositor *compositor)
+   compositor_x11->have_x11_sync_object = meta_sync_ring_init (xdisplay);
+ 
+   meta_compositor_redirect_x11_windows (META_COMPOSITOR (compositor));
++
++  return TRUE;
+ }
+ 
+ static void
+diff --git a/src/compositor/meta-later-private.h b/src/compositor/meta-later-private.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..c8d0f80a8f95e650c71d52cc5ebb2ffe6a1541f4
+--- /dev/null
++++ b/src/compositor/meta-later-private.h
+@@ -0,0 +1,28 @@
++/*
++ * Copyright (C) 2020 Red Hat Inc.
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, see <http://www.gnu.org/licenses/>.
++ */
++
++#ifndef META_LATER_PRIVATE_H
++#define META_LATER_PRIVATE_H
++
++typedef struct _MetaLaters MetaLaters;
++typedef struct _MetaCompositor MetaCompositor;
++
++MetaLaters * meta_laters_new (MetaCompositor *compositor);
++
++void meta_laters_free (MetaLaters *laters);
++
++#endif /* META_LATER_PRIVATE_H */
+diff --git a/src/compositor/meta-later.c b/src/compositor/meta-later.c
+new file mode 100644
+index 0000000000000000000000000000000000000000..b68e59a5b04433370034af9283743ab6de692313
+--- /dev/null
++++ b/src/compositor/meta-later.c
+@@ -0,0 +1,349 @@
++/*
++ * Copyright (C) 2001 Havoc Pennington
++ * Copyright (C) 2005 Elijah Newren
++ * Copyright (C) 2020 Red Hat Inc.
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, see <http://www.gnu.org/licenses/>.
++ */
++
++#include "config.h"
++
++#include "compositor/meta-later-private.h"
++
++#include "cogl/cogl.h"
++#include "compositor/compositor-private.h"
++#include "core/display-private.h"
++#include "meta/meta-later.h"
++
++typedef struct _MetaLater
++{
++  unsigned int id;
++  unsigned int ref_count;
++  MetaLaterType when;
++
++  GSourceFunc func;
++  gpointer user_data;
++  GDestroyNotify destroy_notify;
++
++  guint source_id;
++  gboolean run_once;
++} MetaLater;
++
++#define META_LATER_N_TYPES (META_LATER_IDLE + 1)
++
++struct _MetaLaters
++{
++  MetaCompositor *compositor;
++
++  unsigned int last_later_id;
++
++  GSList *laters[META_LATER_N_TYPES];
++
++  ClutterTimeline *timeline;
++  gulong pre_paint_handler_id;
++};
++
++static MetaLater *
++meta_later_ref (MetaLater *later)
++{
++  later->ref_count++;
++  return later;
++}
++
++static void
++meta_later_unref (MetaLater *later)
++{
++  if (--later->ref_count == 0)
++    {
++      if (later->destroy_notify)
++        {
++          later->destroy_notify (later->user_data);
++          later->destroy_notify = NULL;
++        }
++
++      g_slice_free (MetaLater, later);
++    }
++}
++
++static void
++meta_later_destroy (MetaLater *later)
++{
++  g_clear_handle_id (&later->source_id, g_source_remove);
++  later->func = NULL;
++  meta_later_unref (later);
++}
++
++#ifdef COGL_HAS_TRACING
++static const char *
++later_type_to_string (MetaLaterType when)
++{
++  switch (when)
++    {
++    case META_LATER_RESIZE:
++      return "Later (resize)";
++    case META_LATER_CALC_SHOWING:
++      return "Later (calc-showing)";
++    case META_LATER_CHECK_FULLSCREEN:
++      return "Later (check-fullscreen)";
++    case META_LATER_SYNC_STACK:
++      return "Later (sync-stack)";
++    case META_LATER_BEFORE_REDRAW:
++      return "Later (before-redraw)";
++    case META_LATER_IDLE:
++      return "Later (idle)";
++    }
++
++  return "unknown";
++}
++#endif
++
++static gboolean
++meta_later_invoke (MetaLater *later)
++{
++  COGL_TRACE_BEGIN_SCOPED (later, later_type_to_string (later->when));
++  return later->func (later->user_data);
++}
++
++static gboolean
++remove_later_from_list (unsigned int   later_id,
++                        GSList       **laters_list)
++{
++  GSList *l;
++
++  for (l = *laters_list; l; l = l->next)
++    {
++      MetaLater *later = l->data;
++
++      if (later->id == later_id)
++        {
++          *laters_list = g_slist_delete_link (*laters_list, l);
++          meta_later_destroy (later);
++          return TRUE;
++        }
++    }
++
++  return FALSE;
++}
++
++static void
++run_repaint_laters (GSList **laters_list)
++{
++  g_autoptr (GSList) laters_copy = NULL;
++  GSList *l;
++
++  for (l = *laters_list; l; l = l->next)
++    {
++      MetaLater *later = l->data;
++
++      if (!later->source_id ||
++          (later->when <= META_LATER_BEFORE_REDRAW && !later->run_once))
++        laters_copy = g_slist_prepend (laters_copy, meta_later_ref (later));
++    }
++  laters_copy = g_slist_reverse (laters_copy);
++
++  for (l = laters_copy; l; l = l->next)
++    {
++      MetaLater *later = l->data;
++
++      if (!later->func)
++        remove_later_from_list (later->id, laters_list);
++      else if (!meta_later_invoke (later))
++        remove_later_from_list (later->id, laters_list);
++
++      meta_later_unref (later);
++    }
++}
++
++static void
++on_pre_paint (MetaCompositor *compositor,
++              MetaLaters     *laters)
++{
++  unsigned int i;
++  GSList *l;
++  gboolean keep_timeline_running = FALSE;
++
++  for (i = 0; i < G_N_ELEMENTS (laters->laters); i++)
++    run_repaint_laters (&laters->laters[i]);
++
++  for (i = 0; i < G_N_ELEMENTS (laters->laters); i++)
++    {
++      for (l = laters->laters[i]; l; l = l->next)
++        {
++          MetaLater *later = l->data;
++
++          if (!later->source_id)
++            keep_timeline_running = TRUE;
++        }
++    }
++
++  if (!keep_timeline_running)
++    clutter_timeline_stop (laters->timeline);
++}
++
++static void
++ensure_timeline_running (MetaLaters *laters)
++{
++  clutter_timeline_start (laters->timeline);
++}
++
++static gboolean
++invoke_later_idle (gpointer data)
++{
++  MetaLater *later = data;
++
++  if (!later->func (later->user_data))
++    {
++      meta_later_remove (later->id);
++      return FALSE;
++    }
++  else
++    {
++      later->run_once = TRUE;
++      return TRUE;
++    }
++}
++
++static unsigned int
++meta_laters_add (MetaLaters     *laters,
++                 MetaLaterType   when,
++                 GSourceFunc     func,
++                 gpointer        user_data,
++                 GDestroyNotify  notify)
++{
++  MetaLater *later = g_slice_new0 (MetaLater);
++
++  later->id = ++laters->last_later_id;
++  later->ref_count = 1;
++  later->when = when;
++  later->func = func;
++  later->user_data = user_data;
++  later->destroy_notify = notify;
++
++  laters->laters[when] = g_slist_prepend (laters->laters[when], later);
++
++  switch (when)
++    {
++    case META_LATER_RESIZE:
++      later->source_id = g_idle_add_full (META_PRIORITY_RESIZE,
++                                          invoke_later_idle,
++                                          later, NULL);
++      g_source_set_name_by_id (later->source_id, "[mutter] invoke_later_idle");
++      ensure_timeline_running (laters);
++      break;
++    case META_LATER_CALC_SHOWING:
++    case META_LATER_CHECK_FULLSCREEN:
++    case META_LATER_SYNC_STACK:
++    case META_LATER_BEFORE_REDRAW:
++      ensure_timeline_running (laters);
++      break;
++    case META_LATER_IDLE:
++      later->source_id = g_idle_add_full (G_PRIORITY_DEFAULT_IDLE,
++                                          invoke_later_idle,
++                                          later, NULL);
++      g_source_set_name_by_id (later->source_id, "[mutter] invoke_later_idle");
++      break;
++    }
++
++  return later->id;
++}
++
++/**
++ * meta_later_add:
++ * @when: enumeration value determining the phase at which to run the callback
++ * @func: callback to run later
++ * @data: data to pass to the callback
++ * @notify: function to call to destroy @data when it is no longer in use, or %NULL
++ *
++ * Sets up a callback  to be called at some later time. @when determines the
++ * particular later occasion at which it is called. This is much like g_idle_add(),
++ * except that the functions interact properly with clutter event handling.
++ * If a "later" function is added from a clutter event handler, and is supposed
++ * to be run before the stage is redrawn, it will be run before that redraw
++ * of the stage, not the next one.
++ *
++ * Return value: an integer ID (guaranteed to be non-zero) that can be used
++ *  to cancel the callback and prevent it from being run.
++ */
++unsigned int
++meta_later_add (MetaLaterType  when,
++                GSourceFunc    func,
++                gpointer       data,
++                GDestroyNotify notify)
++{
++  MetaDisplay *display = meta_get_display ();
++  MetaCompositor *compositor = display->compositor;
++
++  return meta_laters_add (meta_compositor_get_laters (compositor),
++                          when, func, data, notify);
++}
++
++static void
++meta_laters_remove (MetaLaters   *laters,
++                    unsigned int  later_id)
++{
++  unsigned int i;
++
++  for (i = 0; i < G_N_ELEMENTS (laters->laters); i++)
++    {
++      if (remove_later_from_list (later_id, &laters->laters[i]))
++        return;
++    }
++}
++
++/**
++ * meta_later_remove:
++ * @later_id: the integer ID returned from meta_later_add()
++ *
++ * Removes a callback added with meta_later_add()
++ */
++void
++meta_later_remove (unsigned int later_id)
++{
++  MetaDisplay *display = meta_get_display ();
++  MetaCompositor *compositor = display->compositor;
++
++  if (!compositor)
++    return;
++
++  meta_laters_remove (meta_compositor_get_laters (compositor), later_id);
++}
++
++MetaLaters *
++meta_laters_new (MetaCompositor *compositor)
++{
++  MetaLaters *laters;
++
++  laters = g_new0 (MetaLaters, 1);
++  laters->compositor = compositor;
++  laters->timeline = clutter_timeline_new (G_MAXUINT);
++
++  laters->pre_paint_handler_id = g_signal_connect (compositor, "pre-paint",
++                                                   G_CALLBACK (on_pre_paint),
++                                                   laters);
++
++  return laters;
++}
++
++void
++meta_laters_free (MetaLaters *laters)
++{
++  unsigned int i;
++
++  for (i = 0; i < G_N_ELEMENTS (laters->laters); i++)
++    g_slist_free_full (laters->laters[i], (GDestroyNotify) meta_later_unref);
++
++  g_clear_object (&laters->timeline);
++  g_clear_signal_handler (&laters->pre_paint_handler_id, laters->compositor);
++  g_free (laters);
++}
+diff --git a/src/compositor/meta-surface-actor-wayland.c b/src/compositor/meta-surface-actor-wayland.c
+index dbdd49017aad182169f70329668ba82a8ddc46c7..d63d8a7f9935dbbef344b46ee5c9a2112bf04da6 100644
+--- a/src/compositor/meta-surface-actor-wayland.c
++++ b/src/compositor/meta-surface-actor-wayland.c
+@@ -79,6 +79,40 @@ meta_surface_actor_wayland_is_opaque (MetaSurfaceActor *actor)
+   return meta_shaped_texture_is_opaque (stex);
+ }
+ 
++static void
++queue_frame_callbacks (MetaSurfaceActorWayland *self)
++{
++  MetaWaylandCompositor *wayland_compositor;
++
++  if (!self->surface)
++    return;
++
++  if (meta_surface_actor_is_obscured (META_SURFACE_ACTOR (self)))
++    return;
++
++  wayland_compositor = self->surface->compositor;
++  wl_list_insert_list (&wayland_compositor->frame_callbacks,
++                       &self->frame_callback_list);
++  wl_list_init (&self->frame_callback_list);
++}
++
++CoglScanout *
++meta_surface_actor_wayland_try_acquire_scanout (MetaSurfaceActorWayland *self,
++                                                CoglOnscreen            *onscreen)
++{
++  MetaWaylandSurface *surface;
++  CoglScanout *scanout;
++
++  surface = meta_surface_actor_wayland_get_surface (self);
++  scanout = meta_wayland_surface_try_acquire_scanout (surface, onscreen);
++  if (!scanout)
++    return NULL;
++
++  queue_frame_callbacks (self);
++
++  return scanout;
++}
++
+ void
+ meta_surface_actor_wayland_add_frame_callbacks (MetaSurfaceActorWayland *self,
+                                                 struct wl_list *frame_callbacks)
+@@ -92,14 +126,7 @@ meta_surface_actor_wayland_paint (ClutterActor        *actor,
+ {
+   MetaSurfaceActorWayland *self = META_SURFACE_ACTOR_WAYLAND (actor);
+ 
+-  if (self->surface &&
+-      !meta_surface_actor_is_obscured (META_SURFACE_ACTOR (actor)))
+-    {
+-      MetaWaylandCompositor *compositor = self->surface->compositor;
+-
+-      wl_list_insert_list (&compositor->frame_callbacks, &self->frame_callback_list);
+-      wl_list_init (&self->frame_callback_list);
+-    }
++  queue_frame_callbacks (self);
+ 
+   CLUTTER_ACTOR_CLASS (meta_surface_actor_wayland_parent_class)->paint (actor,
+                                                                         paint_context);
+diff --git a/src/compositor/meta-surface-actor-wayland.h b/src/compositor/meta-surface-actor-wayland.h
+index e1ad843f7a945cfc55ce805067dd14a2b51c6538..d61a4df5720037e0b07c1c54e25df19957b76ad9 100644
+--- a/src/compositor/meta-surface-actor-wayland.h
++++ b/src/compositor/meta-surface-actor-wayland.h
+@@ -52,6 +52,9 @@ void meta_surface_actor_wayland_get_subsurface_rect (MetaSurfaceActorWayland *se
+ void meta_surface_actor_wayland_add_frame_callbacks (MetaSurfaceActorWayland *self,
+                                                      struct wl_list *frame_callbacks);
+ 
++CoglScanout * meta_surface_actor_wayland_try_acquire_scanout (MetaSurfaceActorWayland *self,
++                                                              CoglOnscreen            *onscreen);
++
+ G_END_DECLS
+ 
+ #endif /* __META_SURFACE_ACTOR_WAYLAND_H__ */
+diff --git a/src/compositor/meta-surface-actor-x11.c b/src/compositor/meta-surface-actor-x11.c
+index 162568de1eb0b593fc3cd6d62aac05a43b9cc058..5d8eae9054ef76974ba29e8f9208bde3c733e014 100644
+--- a/src/compositor/meta-surface-actor-x11.c
++++ b/src/compositor/meta-surface-actor-x11.c
+@@ -260,33 +260,14 @@ meta_surface_actor_x11_is_opaque (MetaSurfaceActor *actor)
+ gboolean
+ meta_surface_actor_x11_should_unredirect (MetaSurfaceActorX11 *self)
+ {
+-  MetaWindow *window = self->window;
+-
+-  if (meta_window_requested_dont_bypass_compositor (window))
+-    return FALSE;
+-
+-  if (window->opacity != 0xFF)
+-    return FALSE;
+-
+-  if (window->shape_region != NULL)
+-    return FALSE;
+-
+-  if (!meta_window_is_monitor_sized (window))
+-    return FALSE;
+-
+-  if (meta_window_requested_bypass_compositor (window))
+-    return TRUE;
+-
+   if (!meta_surface_actor_x11_is_opaque (META_SURFACE_ACTOR (self)))
+     return FALSE;
+ 
+-  if (meta_window_is_override_redirect (window))
+-    return TRUE;
+-
+-  if (self->does_full_damage)
+-    return TRUE;
++  if (!self->does_full_damage &&
++      !meta_window_is_override_redirect (self->window))
++    return FALSE;
+ 
+-  return FALSE;
++  return TRUE;
+ }
+ 
+ static void
+diff --git a/src/compositor/meta-window-actor-x11.c b/src/compositor/meta-window-actor-x11.c
+index a8d137316c9e44c38b8a2eff9320d2d5975a65b5..82c89e93888e81779a505d36926e3750ae6e4fd9 100644
+--- a/src/compositor/meta-window-actor-x11.c
++++ b/src/compositor/meta-window-actor-x11.c
+@@ -39,6 +39,7 @@
+ #include "meta/meta-window-actor.h"
+ #include "meta/meta-x11-errors.h"
+ #include "meta/window.h"
++#include "x11/window-x11.h"
+ #include "x11/meta-x11-display-private.h"
+ #include "x11/window-x11.h"
+ 
+@@ -540,12 +541,18 @@ has_shadow (MetaWindowActorX11 *actor_x11)
+ gboolean
+ meta_window_actor_x11_should_unredirect (MetaWindowActorX11 *actor_x11)
+ {
++  MetaWindow *window =
++    meta_window_actor_get_meta_window (META_WINDOW_ACTOR (actor_x11));
++  MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+   MetaSurfaceActor *surface;
+   MetaSurfaceActorX11 *surface_x11;
+ 
+   if (meta_window_actor_is_destroyed (META_WINDOW_ACTOR (actor_x11)))
+     return FALSE;
+ 
++  if (!meta_window_x11_can_unredirect (window_x11))
++    return FALSE;
++
+   surface = meta_window_actor_get_surface (META_WINDOW_ACTOR (actor_x11));
+   if (!surface)
+     return FALSE;
+diff --git a/src/core/display.c b/src/core/display.c
+index 0917f4693a6a4974e10bff4222e71fc1f1985946..d49475dcb27b16e57473a657757834b291ddaadb 100644
+--- a/src/core/display.c
++++ b/src/core/display.c
+@@ -51,6 +51,7 @@
+ #include "backends/x11/meta-backend-x11.h"
+ #include "backends/x11/meta-event-x11.h"
+ #include "backends/x11/cm/meta-backend-x11-cm.h"
++#include "backends/x11/nested/meta-backend-x11-nested.h"
+ #include "clutter/x11/clutter-x11.h"
+ #include "compositor/compositor-private.h"
+ #include "compositor/meta-compositor-x11.h"
+@@ -81,6 +82,7 @@
+ #include "x11/xprops.h"
+ 
+ #ifdef HAVE_WAYLAND
++#include "compositor/meta-compositor-native.h"
+ #include "compositor/meta-compositor-server.h"
+ #include "wayland/meta-xwayland-private.h"
+ #include "wayland/meta-wayland-tablet-seat.h"
+@@ -572,44 +574,16 @@ static MetaCompositor *
+ create_compositor (MetaDisplay *display)
+ {
+ #ifdef HAVE_WAYLAND
+-  if (meta_is_wayland_compositor ())
++  MetaBackend *backend = meta_get_backend ();
++
++#ifdef HAVE_NATIVE_BACKEND
++  if (META_IS_BACKEND_NATIVE (backend))
++    return META_COMPOSITOR (meta_compositor_native_new (display));
++#endif
++  if (META_IS_BACKEND_X11_NESTED (backend))
+     return META_COMPOSITOR (meta_compositor_server_new (display));
+-  else
+ #endif
+-    return META_COMPOSITOR (meta_compositor_x11_new (display));
+-}
+-
+-static void
+-enable_compositor (MetaDisplay *display)
+-{
+-  MetaX11Display *x11_display = display->x11_display;
+-
+-  if (x11_display)
+-    {
+-      if (!META_X11_DISPLAY_HAS_COMPOSITE (x11_display) ||
+-          !META_X11_DISPLAY_HAS_DAMAGE (x11_display))
+-        {
+-          meta_fatal ("Missing %s extension required for compositing",
+-                      !META_X11_DISPLAY_HAS_COMPOSITE (x11_display) ?
+-                      "composite" : "damage");
+-          return;
+-        }
+-
+-      int version = (x11_display->composite_major_version * 10) +
+-                     x11_display->composite_minor_version;
+-      if (version < 3)
+-        {
+-          meta_fatal ("Your version of COMPOSITE (%d.%d) is too old. Version 3.0 or later required.",
+-                      x11_display->composite_major_version,
+-                      x11_display->composite_minor_version);
+-          return;
+-        }
+-    }
+-
+-  if (!display->compositor)
+-    display->compositor = create_compositor (display);
+-
+-  meta_compositor_manage (display->compositor);
++  return META_COMPOSITOR (meta_compositor_x11_new (display));
+ }
+ 
+ static void
+@@ -885,6 +859,8 @@ meta_display_open (void)
+   g_signal_connect (settings, "ui-scaling-factor-changed",
+                     G_CALLBACK (on_ui_scaling_factor_changed), display);
+ 
++  display->compositor = create_compositor (display);
++
+   meta_display_set_cursor (display, META_CURSOR_DEFAULT);
+ 
+   display->stack = meta_stack_new (display);
+@@ -922,7 +898,6 @@ meta_display_open (void)
+ 
+   display->last_focus_time = timestamp;
+   display->last_user_time = timestamp;
+-  display->compositor = NULL;
+ 
+   if (!meta_is_wayland_compositor ())
+     meta_prop_get_window (display->x11_display,
+@@ -930,7 +905,11 @@ meta_display_open (void)
+                           display->x11_display->atom__NET_ACTIVE_WINDOW,
+                           &old_active_xwindow);
+ 
+-  enable_compositor (display);
++  if (!meta_compositor_do_manage (display->compositor, &error))
++    {
++      g_error ("Compositor failed to manage display: %s",
++               error->message);
++    }
+ 
+   if (display->x11_display)
+     {
+diff --git a/src/core/util.c b/src/core/util.c
+index 3854b3737d08edf0ab83b8ce5945589ecbdc8664..f01ef39d7b82a4681bdb91df8fd9b55952dcf1cc 100644
+--- a/src/core/util.c
++++ b/src/core/util.c
+@@ -50,9 +50,6 @@ meta_topic_real_valist (MetaDebugTopic topic,
+                         va_list        args) G_GNUC_PRINTF(2, 0);
+ #endif
+ 
+-static gboolean
+-meta_later_remove_from_list (guint later_id, GSList **laters_list);
+-
+ static gint verbose_topics = 0;
+ static gboolean is_debugging = FALSE;
+ static gboolean replace_current = FALSE;
+@@ -715,288 +712,6 @@ meta_show_dialog (const char *type,
+   return child_pid;
+ }
+ 
+-/***************************************************************************
+- * Later functions: like idles but integrated with the Clutter repaint loop
+- ***************************************************************************/
+-
+-static guint last_later_id = 0;
+-
+-typedef struct
+-{
+-  guint id;
+-  guint ref_count;
+-  MetaLaterType when;
+-  GSourceFunc func;
+-  gpointer data;
+-  GDestroyNotify notify;
+-  int source;
+-  gboolean run_once;
+-} MetaLater;
+-
+-static GSList *laters[] = {
+-  NULL, /* META_LATER_RESIZE */
+-  NULL, /* META_LATER_CALC_SHOWING */
+-  NULL, /* META_LATER_CHECK_FULLSCREEN */
+-  NULL, /* META_LATER_SYNC_STACK */
+-  NULL, /* META_LATER_BEFORE_REDRAW */
+-  NULL, /* META_LATER_IDLE */
+-};
+-/* This is a dummy timeline used to get the Clutter master clock running */
+-static ClutterTimeline *later_timeline;
+-static guint later_repaint_func = 0;
+-
+-static void ensure_later_repaint_func (void);
+-
+-static void
+-unref_later (MetaLater *later)
+-{
+-  if (--later->ref_count == 0)
+-    {
+-      if (later->notify)
+-        {
+-          later->notify (later->data);
+-          later->notify = NULL;
+-        }
+-      g_slice_free (MetaLater, later);
+-    }
+-}
+-
+-static void
+-destroy_later (MetaLater *later)
+-{
+-  g_clear_handle_id (&later->source, g_source_remove);
+-  later->func = NULL;
+-  unref_later (later);
+-}
+-
+-#ifdef COGL_HAS_TRACING
+-static const char *
+-later_type_to_string (MetaLaterType when)
+-{
+-  switch (when)
+-    {
+-    case META_LATER_RESIZE:
+-      return "Later (resize)";
+-    case META_LATER_CALC_SHOWING:
+-      return "Later (calc-showing)";
+-    case META_LATER_CHECK_FULLSCREEN:
+-      return "Later (check-fullscreen)";
+-    case META_LATER_SYNC_STACK:
+-      return "Later (sync-stack)";
+-    case META_LATER_BEFORE_REDRAW:
+-      return "Later (before-redraw)";
+-    case META_LATER_IDLE:
+-      return "Later (idle)";
+-    }
+-
+-  return "unknown";
+-}
+-#endif
+-
+-static gboolean
+-call_later_func (MetaLater *later)
+-{
+-  COGL_TRACE_BEGIN_SCOPED (later, later_type_to_string (later->when));
+-  return later->func (later->data);
+-}
+-
+-static void
+-run_repaint_laters (GSList **laters_list)
+-{
+-  GSList *laters_copy;
+-  GSList *l;
+-
+-  laters_copy = NULL;
+-  for (l = *laters_list; l; l = l->next)
+-    {
+-      MetaLater *later = l->data;
+-      if (later->source == 0 ||
+-          (later->when <= META_LATER_BEFORE_REDRAW && !later->run_once))
+-        {
+-          later->ref_count++;
+-          laters_copy = g_slist_prepend (laters_copy, later);
+-        }
+-    }
+-  laters_copy = g_slist_reverse (laters_copy);
+-
+-  for (l = laters_copy; l; l = l->next)
+-    {
+-      MetaLater *later = l->data;
+-
+-      if (!later->func || !call_later_func (later))
+-        meta_later_remove_from_list (later->id, laters_list);
+-      unref_later (later);
+-    }
+-
+-  g_slist_free (laters_copy);
+-}
+-
+-static gboolean
+-run_all_repaint_laters (gpointer data)
+-{
+-  guint i;
+-  GSList *l;
+-  gboolean keep_timeline_running = FALSE;
+-
+-  for (i = 0; i < G_N_ELEMENTS (laters); i++)
+-    {
+-      run_repaint_laters (&laters[i]);
+-    }
+-
+-  for (i = 0; i < G_N_ELEMENTS (laters); i++)
+-    {
+-      for (l = laters[i]; l; l = l->next)
+-        {
+-          MetaLater *later = l->data;
+-
+-          if (later->source == 0)
+-            keep_timeline_running = TRUE;
+-        }
+-    }
+-
+-  if (!keep_timeline_running)
+-    clutter_timeline_stop (later_timeline);
+-
+-  /* Just keep the repaint func around - it's cheap if the lists are empty */
+-  return TRUE;
+-}
+-
+-static void
+-ensure_later_repaint_func (void)
+-{
+-  if (!later_timeline)
+-    later_timeline = clutter_timeline_new (G_MAXUINT);
+-
+-  if (later_repaint_func == 0)
+-    later_repaint_func = clutter_threads_add_repaint_func (run_all_repaint_laters,
+-                                                           NULL, NULL);
+-
+-  /* Make sure the repaint function gets run */
+-  clutter_timeline_start (later_timeline);
+-}
+-
+-static gboolean
+-call_idle_later (gpointer data)
+-{
+-  MetaLater *later = data;
+-
+-  if (!later->func (later->data))
+-    {
+-      meta_later_remove (later->id);
+-      return FALSE;
+-    }
+-  else
+-    {
+-      later->run_once = TRUE;
+-      return TRUE;
+-    }
+-}
+-
+-/**
+- * meta_later_add:
+- * @when:     enumeration value determining the phase at which to run the callback
+- * @func:     callback to run later
+- * @data:     data to pass to the callback
+- * @notify:   function to call to destroy @data when it is no longer in use, or %NULL
+- *
+- * Sets up a callback  to be called at some later time. @when determines the
+- * particular later occasion at which it is called. This is much like g_idle_add(),
+- * except that the functions interact properly with clutter event handling.
+- * If a "later" function is added from a clutter event handler, and is supposed
+- * to be run before the stage is redrawn, it will be run before that redraw
+- * of the stage, not the next one.
+- *
+- * Return value: an integer ID (guaranteed to be non-zero) that can be used
+- *  to cancel the callback and prevent it from being run.
+- */
+-guint
+-meta_later_add (MetaLaterType  when,
+-                GSourceFunc    func,
+-                gpointer       data,
+-                GDestroyNotify notify)
+-{
+-  MetaLater *later = g_slice_new0 (MetaLater);
+-
+-  later->id = ++last_later_id;
+-  later->ref_count = 1;
+-  later->when = when;
+-  later->func = func;
+-  later->data = data;
+-  later->notify = notify;
+-
+-  laters[when] = g_slist_prepend (laters[when], later);
+-
+-  switch (when)
+-    {
+-    case META_LATER_RESIZE:
+-      /* We add this one two ways - as a high-priority idle and as a
+-       * repaint func. If we are in a clutter event callback, the repaint
+-       * handler will get hit first, and we'll take care of this function
+-       * there so it gets called before the stage is redrawn, even if
+-       * we haven't gotten back to the main loop. Otherwise, the idle
+-       * handler will get hit first and we want to call this function
+-       * there so it will happen before GTK+ repaints.
+-       */
+-      later->source = g_idle_add_full (META_PRIORITY_RESIZE, call_idle_later, later, NULL);
+-      g_source_set_name_by_id (later->source, "[mutter] call_idle_later");
+-      ensure_later_repaint_func ();
+-      break;
+-    case META_LATER_CALC_SHOWING:
+-    case META_LATER_CHECK_FULLSCREEN:
+-    case META_LATER_SYNC_STACK:
+-    case META_LATER_BEFORE_REDRAW:
+-      ensure_later_repaint_func ();
+-      break;
+-    case META_LATER_IDLE:
+-      later->source = g_idle_add_full (G_PRIORITY_DEFAULT_IDLE, call_idle_later, later, NULL);
+-      g_source_set_name_by_id (later->source, "[mutter] call_idle_later");
+-      break;
+-    }
+-
+-  return later->id;
+-}
+-
+-static gboolean
+-meta_later_remove_from_list (guint later_id, GSList **laters_list)
+-{
+-  GSList *l;
+-
+-  for (l = *laters_list; l; l = l->next)
+-    {
+-      MetaLater *later = l->data;
+-
+-      if (later->id == later_id)
+-        {
+-          *laters_list = g_slist_delete_link (*laters_list, l);
+-          /* If this was a "repaint func" later, we just let the
+-           * repaint func run and get removed
+-           */
+-          destroy_later (later);
+-          return TRUE;
+-        }
+-    }
+-
+-  return FALSE;
+-}
+-
+-/**
+- * meta_later_remove:
+- * @later_id: the integer ID returned from meta_later_add()
+- *
+- * Removes a callback added with meta_later_add()
+- */
+-void
+-meta_later_remove (guint later_id)
+-{
+-  guint i;
+-
+-  for (i = 0; i < G_N_ELEMENTS (laters); i++)
+-    {
+-      if (meta_later_remove_from_list (later_id, &laters[i]))
+-        return;
+-    }
+-}
+-
+ MetaLocaleDirection
+ meta_get_locale_direction (void)
+ {
+diff --git a/src/core/window-private.h b/src/core/window-private.h
+index 07f316e900c598458368dac106c25e07a64d7465..9afe2085cde3db5c0c2137739f660557646cb5b1 100644
+--- a/src/core/window-private.h
++++ b/src/core/window-private.h
+@@ -65,13 +65,6 @@ typedef enum
+ 
+ #define NUMBER_OF_QUEUES 3
+ 
+-typedef enum
+-{
+-  _NET_WM_BYPASS_COMPOSITOR_HINT_AUTO = 0,
+-  _NET_WM_BYPASS_COMPOSITOR_HINT_ON = 1,
+-  _NET_WM_BYPASS_COMPOSITOR_HINT_OFF = 2,
+-} MetaBypassCompositorHintValue;
+-
+ typedef enum
+ {
+   META_MOVE_RESIZE_CONFIGURE_REQUEST = 1 << 0,
+@@ -539,9 +532,6 @@ struct _MetaWindow
+   /* The currently complementary tiled window, if any */
+   MetaWindow *tile_match;
+ 
+-  /* Bypass compositor hints */
+-  guint bypass_compositor;
+-
+   struct {
+     MetaPlacementRule *rule;
+     MetaPlacementState state;
+diff --git a/src/core/window.c b/src/core/window.c
+index ea721f79429ecba1ba547028cf91c08a8ce33af5..67dd0a5ba002ec085e2287f46a078c097338ae65 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -3018,30 +3018,6 @@ meta_window_is_on_primary_monitor (MetaWindow *window)
+   return window->monitor->is_primary;
+ }
+ 
+-/**
+- * meta_window_requested_bypass_compositor:
+- * @window: a #MetaWindow
+- *
+- * Return value: %TRUE if the window requested to bypass the compositor
+- */
+-gboolean
+-meta_window_requested_bypass_compositor (MetaWindow *window)
+-{
+-  return window->bypass_compositor == _NET_WM_BYPASS_COMPOSITOR_HINT_ON;
+-}
+-
+-/**
+- * meta_window_requested_dont_bypass_compositor:
+- * @window: a #MetaWindow
+- *
+- * Return value: %TRUE if the window requested to opt out of unredirecting
+- */
+-gboolean
+-meta_window_requested_dont_bypass_compositor (MetaWindow *window)
+-{
+-  return window->bypass_compositor == _NET_WM_BYPASS_COMPOSITOR_HINT_OFF;
+-}
+-
+ static void
+ meta_window_get_tile_fraction (MetaWindow   *window,
+                                MetaTileMode  tile_mode,
+diff --git a/src/meson.build b/src/meson.build
+index bb1b48b4489013dc0b656726d452fdf35d0267b9..8ecfc6efb5908635e4d581bb1e8ae85917207883 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -291,6 +291,8 @@ mutter_sources = [
+   'compositor/meta-background-group.c',
+   'compositor/meta-background-image.c',
+   'compositor/meta-background-private.h',
++  'compositor/meta-compositor-server.c',
++  'compositor/meta-compositor-server.h',
+   'compositor/meta-compositor-x11.c',
+   'compositor/meta-compositor-x11.h',
+   'compositor/meta-cullable.c',
+@@ -300,6 +302,7 @@ mutter_sources = [
+   'compositor/meta-dnd.c',
+   'compositor/meta-feedback-actor.c',
+   'compositor/meta-feedback-actor-private.h',
++  'compositor/meta-later.c',
+   'compositor/meta-module.c',
+   'compositor/meta-module.h',
+   'compositor/meta-plugin.c',
+@@ -476,8 +479,6 @@ if have_wayland
+     'compositor/meta-surface-actor-wayland.h',
+     'compositor/meta-window-actor-wayland.c',
+     'compositor/meta-window-actor-wayland.h',
+-    'compositor/meta-compositor-server.c',
+-    'compositor/meta-compositor-server.h',
+     'wayland/meta-cursor-sprite-wayland.c',
+     'wayland/meta-cursor-sprite-wayland.h',
+     'wayland/meta-pointer-confinement-wayland.c',
+@@ -675,6 +676,8 @@ if have_native_backend
+     'backends/native/meta-virtual-input-device-native.h',
+     'backends/native/meta-xkb-utils.c',
+     'backends/native/meta-xkb-utils.h',
++    'compositor/meta-compositor-native.c',
++    'compositor/meta-compositor-native.h',
+   ]
+ endif
+ 
+diff --git a/src/meta/meson.build b/src/meta/meson.build
+index 14caec58d3059845ad647b58058c60ba01912292..279a6d9b1f83f406e4fe1355f5c2aa3fb74da5c3 100644
+--- a/src/meta/meson.build
++++ b/src/meta/meson.build
+@@ -19,6 +19,7 @@ mutter_public_headers = [
+   'meta-idle-monitor.h',
+   'meta-inhibit-shortcuts-dialog.h',
+   'meta-launch-context.h',
++  'meta-later.h',
+   'meta-monitor-manager.h',
+   'meta-plugin.h',
+   'meta-remote-access-controller.h',
+diff --git a/src/meta/meta-later.h b/src/meta/meta-later.h
+new file mode 100644
+index 0000000000000000000000000000000000000000..4464fc3bdb4edf4b6f4a1c7cca0144a189ef9971
+--- /dev/null
++++ b/src/meta/meta-later.h
+@@ -0,0 +1,53 @@
++/*
++ * Copyright (C) 2001 Havoc Pennington
++ * Copyright (C) 2005 Elijah Newren
++ * Copyright (C) 2020 Red Hat Inc.
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ * General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, see <http://www.gnu.org/licenses/>.
++ */
++
++#ifndef META_LATER_H
++#define META_LATER_H
++
++/**
++ * MetaLaterType:
++ * @META_LATER_RESIZE: call in a resize processing phase that is done
++ *   before GTK+ repainting (including window borders) is done.
++ * @META_LATER_CALC_SHOWING: used by Mutter to compute which windows should be mapped
++ * @META_LATER_CHECK_FULLSCREEN: used by Mutter to see if there's a fullscreen window
++ * @META_LATER_SYNC_STACK: used by Mutter to send it's idea of the stacking order to the server
++ * @META_LATER_BEFORE_REDRAW: call before the stage is redrawn
++ * @META_LATER_IDLE: call at a very low priority (can be blocked
++ *    by running animations or redrawing applications)
++ **/
++typedef enum
++{
++  META_LATER_RESIZE,
++  META_LATER_CALC_SHOWING,
++  META_LATER_CHECK_FULLSCREEN,
++  META_LATER_SYNC_STACK,
++  META_LATER_BEFORE_REDRAW,
++  META_LATER_IDLE
++} MetaLaterType;
++
++META_EXPORT
++guint meta_later_add    (MetaLaterType  when,
++                         GSourceFunc    func,
++                         gpointer       data,
++                         GDestroyNotify notify);
++
++META_EXPORT
++void  meta_later_remove (guint          later_id);
++
++#endif /* META_LATER_H */
+diff --git a/src/meta/util.h b/src/meta/util.h
+index 86c53bb7c9fc8aba4853a22cdec6bfc63bae7d27..c413622db301ed79c907d78f7a1cd9a8ee2a31a0 100644
+--- a/src/meta/util.h
++++ b/src/meta/util.h
+@@ -27,6 +27,7 @@
+ #include <glib-object.h>
+ 
+ #include <meta/common.h>
++#include <meta/meta-later.h>
+ 
+ META_EXPORT
+ gboolean meta_is_verbose  (void);
+@@ -185,36 +186,6 @@ GPid meta_show_dialog (const char *type,
+ 
+ #endif /* !WITH_VERBOSE_MODE */
+ 
+-/**
+- * MetaLaterType:
+- * @META_LATER_RESIZE: call in a resize processing phase that is done
+- *   before GTK+ repainting (including window borders) is done.
+- * @META_LATER_CALC_SHOWING: used by Mutter to compute which windows should be mapped
+- * @META_LATER_CHECK_FULLSCREEN: used by Mutter to see if there's a fullscreen window
+- * @META_LATER_SYNC_STACK: used by Mutter to send it's idea of the stacking order to the server
+- * @META_LATER_BEFORE_REDRAW: call before the stage is redrawn
+- * @META_LATER_IDLE: call at a very low priority (can be blocked
+- *    by running animations or redrawing applications)
+- **/
+-typedef enum
+-{
+-  META_LATER_RESIZE,
+-  META_LATER_CALC_SHOWING,
+-  META_LATER_CHECK_FULLSCREEN,
+-  META_LATER_SYNC_STACK,
+-  META_LATER_BEFORE_REDRAW,
+-  META_LATER_IDLE
+-} MetaLaterType;
+-
+-META_EXPORT
+-guint meta_later_add    (MetaLaterType  when,
+-                         GSourceFunc    func,
+-                         gpointer       data,
+-                         GDestroyNotify notify);
+-
+-META_EXPORT
+-void  meta_later_remove (guint          later_id);
+-
+ typedef enum
+ {
+   META_LOCALE_DIRECTION_LTR,
+diff --git a/src/meta/window.h b/src/meta/window.h
+index dda5acea13407e4fbf99dfecf666eac208dfaa24..cb0f1afe67a38b9756a751bbf735b1d5b55967ee 100644
+--- a/src/meta/window.h
++++ b/src/meta/window.h
+@@ -283,12 +283,6 @@ gboolean          meta_window_is_monitor_sized (MetaWindow *window);
+ META_EXPORT
+ gboolean          meta_window_is_on_primary_monitor (MetaWindow *window);
+ 
+-META_EXPORT
+-gboolean          meta_window_requested_bypass_compositor (MetaWindow *window);
+-
+-META_EXPORT
+-gboolean          meta_window_requested_dont_bypass_compositor (MetaWindow *window);
+-
+ META_EXPORT
+ gboolean meta_window_get_icon_geometry (MetaWindow    *window,
+                                         MetaRectangle *rect);
+diff --git a/src/ui/frames.c b/src/ui/frames.c
+index 0f3bcbd2bab04daae8cc3f8b43db24d168228d1e..58d653543a62f82fbda3318fc5df85e1b4dc76e7 100644
+--- a/src/ui/frames.c
++++ b/src/ui/frames.c
+@@ -417,7 +417,7 @@ meta_ui_frame_calc_geometry (MetaUIFrame       *frame,
+   MetaFrameType type;
+   MetaButtonLayout button_layout;
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (frame->meta_window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaRectangle client_rect;
+ 
+   flags = meta_frame_get_flags (frame->meta_window->frame);
+   type = meta_window_get_frame_type (frame->meta_window);
+@@ -426,13 +426,15 @@ meta_ui_frame_calc_geometry (MetaUIFrame       *frame,
+ 
+   meta_prefs_get_button_layout (&button_layout);
+ 
++  client_rect = meta_window_x11_get_client_rect (window_x11);
++
+   meta_theme_calc_geometry (meta_theme_get_default (),
+                             frame->style_info,
+                             type,
+                             frame->text_height,
+                             flags,
+-                            priv->client_rect.width,
+-                            priv->client_rect.height,
++                            client_rect.width,
++                            client_rect.height,
+                             &button_layout,
+                             fgeom);
+ }
+@@ -1520,7 +1522,7 @@ meta_ui_frame_paint (MetaUIFrame  *frame,
+   int button_type = -1;
+   MetaButtonLayout button_layout;
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (frame->meta_window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaRectangle client_rect;
+ 
+   for (i = 0; i < META_BUTTON_TYPE_LAST; i++)
+     button_states[i] = META_BUTTON_STATE_NORMAL;
+@@ -1558,13 +1560,15 @@ meta_ui_frame_paint (MetaUIFrame  *frame,
+ 
+   meta_prefs_get_button_layout (&button_layout);
+ 
++  client_rect = meta_window_x11_get_client_rect (window_x11);
++
+   meta_theme_draw_frame (meta_theme_get_default (),
+                          frame->style_info,
+                          cr,
+                          type,
+                          flags,
+-                         priv->client_rect.width,
+-                         priv->client_rect.height,
++                         client_rect.width,
++                         client_rect.height,
+                          frame->text_layout,
+                          frame->text_height,
+                          &button_layout,
+diff --git a/src/wayland/meta-wayland-actor-surface.c b/src/wayland/meta-wayland-actor-surface.c
+index 6b030fa7b8fd357865f4414ba919883a2c47a201..faf170067083f5d98714daac91f4c4af96e9614d 100644
+--- a/src/wayland/meta-wayland-actor-surface.c
++++ b/src/wayland/meta-wayland-actor-surface.c
+@@ -156,7 +156,7 @@ meta_wayland_actor_surface_real_sync_actor_state (MetaWaylandActorSurface *actor
+   surface_actor = priv->actor;
+   stex = meta_surface_actor_get_texture (surface_actor);
+ 
+-  buffer = surface->buffer_ref.buffer;
++  buffer = surface->buffer_ref->buffer;
+   if (buffer)
+     {
+       CoglSnippet *snippet;
+diff --git a/src/wayland/meta-wayland-buffer.c b/src/wayland/meta-wayland-buffer.c
+index 6236579e74bf1b9d87734a513fc9a1b3fd792435..9c019550101bb63c66957c77a0b78f3056f202cb 100644
+--- a/src/wayland/meta-wayland-buffer.c
++++ b/src/wayland/meta-wayland-buffer.c
+@@ -58,6 +58,11 @@
+ #include "meta/util.h"
+ #include "wayland/meta-wayland-dma-buf.h"
+ 
++#ifdef HAVE_NATIVE_BACKEND
++#include "backends/native/meta-drm-buffer-gbm.h"
++#include "backends/native/meta-renderer-native.h"
++#endif
++
+ #ifndef DRM_FORMAT_MOD_INVALID
+ #define DRM_FORMAT_MOD_INVALID ((1ULL << 56) - 1)
+ #endif
+@@ -577,6 +582,93 @@ meta_wayland_buffer_process_damage (MetaWaylandBuffer *buffer,
+     }
+ }
+ 
++static CoglScanout *
++try_acquire_egl_image_scanout (MetaWaylandBuffer *buffer,
++                               CoglOnscreen      *onscreen)
++{
++#ifdef HAVE_NATIVE_BACKEND
++  MetaBackend *backend = meta_get_backend ();
++  MetaRenderer *renderer = meta_backend_get_renderer (backend);
++  MetaRendererNative *renderer_native = META_RENDERER_NATIVE (renderer);
++  MetaGpuKms *gpu_kms;
++  struct gbm_device *gbm_device;
++  struct gbm_bo *gbm_bo;
++  uint32_t drm_format;
++  uint64_t drm_modifier;
++  uint32_t stride;
++  MetaDrmBufferGbm *fb;
++  g_autoptr (GError) error = NULL;
++
++  gpu_kms = meta_renderer_native_get_primary_gpu (renderer_native);
++  gbm_device = meta_gbm_device_from_gpu (gpu_kms);
++
++  gbm_bo = gbm_bo_import (gbm_device,
++                          GBM_BO_IMPORT_WL_BUFFER, buffer->resource,
++                          GBM_BO_USE_SCANOUT);
++  if (!gbm_bo)
++    return NULL;
++
++  drm_format = gbm_bo_get_format (gbm_bo);
++  drm_modifier = gbm_bo_get_modifier (gbm_bo);
++  stride = gbm_bo_get_stride (gbm_bo);
++  if (!meta_onscreen_native_is_buffer_scanout_compatible (onscreen,
++                                                          drm_format,
++                                                          drm_modifier,
++                                                          stride))
++    {
++      gbm_bo_destroy (gbm_bo);
++      return NULL;
++    }
++
++  fb = meta_drm_buffer_gbm_new_take (gpu_kms, gbm_bo,
++                                     drm_modifier != DRM_FORMAT_MOD_INVALID,
++                                     &error);
++  if (!fb)
++    {
++      g_debug ("Failed to create scanout buffer: %s", error->message);
++      gbm_bo_destroy (gbm_bo);
++      return NULL;
++    }
++
++  return COGL_SCANOUT (fb);
++#else
++  return NULL;
++#endif
++}
++
++CoglScanout *
++meta_wayland_buffer_try_acquire_scanout (MetaWaylandBuffer *buffer,
++                                         CoglOnscreen      *onscreen)
++{
++  switch (buffer->type)
++    {
++    case META_WAYLAND_BUFFER_TYPE_SHM:
++      return NULL;
++    case META_WAYLAND_BUFFER_TYPE_EGL_IMAGE:
++      return try_acquire_egl_image_scanout (buffer, onscreen);
++#ifdef HAVE_WAYLAND_EGLSTREAM
++    case META_WAYLAND_BUFFER_TYPE_EGL_STREAM:
++      return NULL;
++#endif
++    case META_WAYLAND_BUFFER_TYPE_DMA_BUF:
++      {
++        MetaWaylandDmaBufBuffer *dma_buf;
++
++        dma_buf = meta_wayland_dma_buf_from_buffer (buffer);
++        if (!dma_buf)
++          return NULL;
++
++        return meta_wayland_dma_buf_try_acquire_scanout (dma_buf, onscreen);
++      }
++    case META_WAYLAND_BUFFER_TYPE_UNKNOWN:
++      g_warn_if_reached ();
++      return NULL;
++    }
++
++  g_assert_not_reached ();
++  return NULL;
++}
++
+ static void
+ meta_wayland_buffer_finalize (GObject *object)
+ {
+diff --git a/src/wayland/meta-wayland-buffer.h b/src/wayland/meta-wayland-buffer.h
+index 4a503b1830dbc6fc62dcf9b15b233f0327993c25..77e68e7247a5528ce213d387a76853b8ec93c6da 100644
+--- a/src/wayland/meta-wayland-buffer.h
++++ b/src/wayland/meta-wayland-buffer.h
+@@ -88,5 +88,7 @@ gboolean                meta_wayland_buffer_is_y_inverted       (MetaWaylandBuff
+ void                    meta_wayland_buffer_process_damage      (MetaWaylandBuffer     *buffer,
+                                                                  CoglTexture           *texture,
+                                                                  cairo_region_t        *region);
++CoglScanout *           meta_wayland_buffer_try_acquire_scanout (MetaWaylandBuffer     *buffer,
++                                                                 CoglOnscreen          *onscreen);
+ 
+ #endif /* META_WAYLAND_BUFFER_H */
+diff --git a/src/wayland/meta-wayland-dma-buf.c b/src/wayland/meta-wayland-dma-buf.c
+index ac412d2142f008042db85017081d218ae97ecd13..21560cd5432f515c71002aa2765660da3d4ac930 100644
+--- a/src/wayland/meta-wayland-dma-buf.c
++++ b/src/wayland/meta-wayland-dma-buf.c
+@@ -51,6 +51,11 @@
+ #include "wayland/meta-wayland-private.h"
+ #include "wayland/meta-wayland-versions.h"
+ 
++#ifdef HAVE_NATIVE_BACKEND
++#include "backends/native/meta-drm-buffer-gbm.h"
++#include "backends/native/meta-renderer-native.h"
++#endif
++
+ #include "linux-dmabuf-unstable-v1-server-protocol.h"
+ 
+ #ifndef DRM_FORMAT_MOD_INVALID
+@@ -178,6 +183,117 @@ meta_wayland_dma_buf_buffer_attach (MetaWaylandBuffer  *buffer,
+   return TRUE;
+ }
+ 
++#ifdef HAVE_NATIVE_BACKEND
++static struct gbm_bo *
++create_gbm_bo (MetaWaylandDmaBufBuffer *dma_buf,
++               MetaGpuKms              *gpu_kms,
++               int                      n_planes,
++               gboolean                *use_modifier)
++{
++  struct gbm_device *gbm_device;
++
++  gbm_device = meta_gbm_device_from_gpu (gpu_kms);
++
++  if (dma_buf->drm_modifier != DRM_FORMAT_MOD_INVALID ||
++      n_planes > 1 ||
++      dma_buf->offsets[0] > 0)
++    {
++      struct gbm_import_fd_modifier_data import_with_modifier;
++
++      import_with_modifier = (struct gbm_import_fd_modifier_data) {
++        .width = dma_buf->width,
++        .height = dma_buf->height,
++        .format = dma_buf->drm_format,
++        .num_fds = n_planes,
++        .modifier = dma_buf->drm_modifier,
++      };
++      memcpy (import_with_modifier.fds,
++              dma_buf->fds,
++              sizeof (dma_buf->fds));
++      memcpy (import_with_modifier.strides,
++              dma_buf->strides,
++              sizeof (import_with_modifier.strides));
++      memcpy (import_with_modifier.offsets,
++              dma_buf->offsets,
++              sizeof (import_with_modifier.offsets));
++
++      *use_modifier = TRUE;
++      return gbm_bo_import (gbm_device, GBM_BO_IMPORT_FD_MODIFIER,
++                            &import_with_modifier,
++                            GBM_BO_USE_SCANOUT);
++    }
++  else
++    {
++      struct gbm_import_fd_data import_legacy;
++
++      import_legacy = (struct gbm_import_fd_data) {
++        .width = dma_buf->width,
++        .height = dma_buf->height,
++        .format = dma_buf->drm_format,
++        .stride = dma_buf->strides[0],
++        .fd = dma_buf->fds[0],
++      };
++
++      *use_modifier = FALSE;
++      return gbm_bo_import (gbm_device, GBM_BO_IMPORT_FD,
++                            &import_legacy,
++                            GBM_BO_USE_SCANOUT);
++    }
++}
++#endif
++
++CoglScanout *
++meta_wayland_dma_buf_try_acquire_scanout (MetaWaylandDmaBufBuffer *dma_buf,
++                                          CoglOnscreen            *onscreen)
++{
++#ifdef HAVE_NATIVE_BACKEND
++  MetaBackend *backend = meta_get_backend ();
++  MetaRenderer *renderer = meta_backend_get_renderer (backend);
++  MetaRendererNative *renderer_native = META_RENDERER_NATIVE (renderer);
++  MetaGpuKms *gpu_kms;
++  int n_planes;
++  uint32_t drm_format;
++  uint64_t drm_modifier;
++  uint32_t stride;
++  struct gbm_bo *gbm_bo;
++  gboolean use_modifier;
++  g_autoptr (GError) error = NULL;
++  MetaDrmBufferGbm *fb;
++
++  for (n_planes = 0; n_planes < META_WAYLAND_DMA_BUF_MAX_FDS; n_planes++)
++    {
++      if (dma_buf->fds[n_planes] < 0)
++        break;
++    }
++
++  drm_format = dma_buf->drm_format;
++  drm_modifier = dma_buf->drm_modifier;
++  stride = dma_buf->strides[0];
++  if (!meta_onscreen_native_is_buffer_scanout_compatible (onscreen,
++                                                          drm_format,
++                                                          drm_modifier,
++                                                          stride))
++    return NULL;
++
++  gpu_kms = meta_renderer_native_get_primary_gpu (renderer_native);
++  gbm_bo = create_gbm_bo (dma_buf, gpu_kms, n_planes, &use_modifier);
++
++  fb = meta_drm_buffer_gbm_new_take (gpu_kms, gbm_bo,
++                                     use_modifier,
++                                     &error);
++  if (!fb)
++    {
++      g_debug ("Failed to create scanout buffer: %s", error->message);
++      gbm_bo_destroy (gbm_bo);
++      return NULL;
++    }
++
++  return COGL_SCANOUT (fb);
++#else
++  return NULL;
++#endif
++}
++
+ static void
+ buffer_params_add (struct wl_client   *client,
+                    struct wl_resource *resource,
+@@ -282,9 +398,12 @@ static const struct wl_buffer_interface dma_buf_buffer_impl =
+ MetaWaylandDmaBufBuffer *
+ meta_wayland_dma_buf_from_buffer (MetaWaylandBuffer *buffer)
+ {
++  if (!buffer->resource)
++    return NULL;
++
+   if (wl_resource_instance_of (buffer->resource, &wl_buffer_interface,
+                                &dma_buf_buffer_impl))
+-      return wl_resource_get_user_data (buffer->resource);
++    return wl_resource_get_user_data (buffer->resource);
+ 
+   return NULL;
+ }
+@@ -454,6 +573,15 @@ static const struct zwp_linux_dmabuf_v1_interface dma_buf_implementation =
+   dma_buf_handle_create_buffer_params,
+ };
+ 
++static gboolean
++should_send_modifiers (MetaBackend *backend)
++{
++  MetaSettings *settings = meta_backend_get_settings (backend);
++
++  return meta_settings_is_experimental_feature_enabled (
++           settings, META_EXPERIMENTAL_FEATURE_KMS_MODIFIERS);
++}
++
+ static void
+ send_modifiers (struct wl_resource *resource,
+                 uint32_t            format)
+@@ -476,6 +604,14 @@ send_modifiers (struct wl_resource *resource,
+   if (wl_resource_get_version (resource) < ZWP_LINUX_DMABUF_V1_MODIFIER_SINCE_VERSION)
+     return;
+ 
++  if (!should_send_modifiers (backend))
++    {
++      zwp_linux_dmabuf_v1_send_modifier (resource, format,
++                                         DRM_FORMAT_MOD_INVALID >> 32,
++                                         DRM_FORMAT_MOD_INVALID & 0xffffffff);
++      return;
++    }
++
+   /* First query the number of available modifiers, then allocate an array,
+    * then fill the array. */
+   ret = meta_egl_query_dma_buf_modifiers (egl, egl_display, format, 0, NULL,
+diff --git a/src/wayland/meta-wayland-dma-buf.h b/src/wayland/meta-wayland-dma-buf.h
+index b7f712d8d0b6f8ab99d87f5da1e79f1c2d2cda6c..cdc65aeb5bffbf6357d47f98114c013cdbf1b063 100644
+--- a/src/wayland/meta-wayland-dma-buf.h
++++ b/src/wayland/meta-wayland-dma-buf.h
+@@ -49,4 +49,8 @@ meta_wayland_dma_buf_buffer_attach (MetaWaylandBuffer  *buffer,
+ MetaWaylandDmaBufBuffer *
+ meta_wayland_dma_buf_from_buffer (MetaWaylandBuffer *buffer);
+ 
++CoglScanout *
++meta_wayland_dma_buf_try_acquire_scanout (MetaWaylandDmaBufBuffer *dma_buf,
++                                          CoglOnscreen            *onscreen);
++
+ #endif /* META_WAYLAND_DMA_BUF_H */
+diff --git a/src/wayland/meta-wayland-legacy-xdg-shell.c b/src/wayland/meta-wayland-legacy-xdg-shell.c
+index eba802e0ccb2cdbcd4796340117fb9fe52bf2dd6..9c5b02e1a42dfb38811b48b6f64f8a101d6cc01b 100644
+--- a/src/wayland/meta-wayland-legacy-xdg-shell.c
++++ b/src/wayland/meta-wayland-legacy-xdg-shell.c
+@@ -986,7 +986,7 @@ meta_wayland_zxdg_popup_v6_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   if (!pending->newly_attached)
+     return;
+ 
+-  if (!surface->buffer_ref.buffer)
++  if (!surface->buffer_ref->buffer)
+     return;
+ 
+   if (pending->has_acked_configure_serial)
+@@ -1348,7 +1348,7 @@ meta_wayland_zxdg_surface_v6_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   if (!priv->resource)
+     return;
+ 
+-  if (surface->buffer_ref.buffer == NULL && priv->first_buffer_attached)
++  if (!surface->buffer_ref->buffer && priv->first_buffer_attached)
+     {
+       /* XDG surfaces can't commit NULL buffers */
+       wl_resource_post_error (surface->resource,
+@@ -1357,7 +1357,7 @@ meta_wayland_zxdg_surface_v6_apply_state (MetaWaylandSurfaceRole  *surface_role,
+       return;
+     }
+ 
+-  if (surface->buffer_ref.buffer && !priv->configure_sent)
++  if (surface->buffer_ref->buffer && !priv->configure_sent)
+     {
+       wl_resource_post_error (surface->resource,
+                               ZXDG_SURFACE_V6_ERROR_UNCONFIGURED_BUFFER,
+@@ -1368,7 +1368,7 @@ meta_wayland_zxdg_surface_v6_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   if (!window)
+     return;
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     priv->first_buffer_attached = TRUE;
+   else
+     return;
+@@ -1413,7 +1413,7 @@ meta_wayland_zxdg_surface_v6_assigned (MetaWaylandSurfaceRole *surface_role)
+   priv->configure_sent = FALSE;
+   priv->first_buffer_attached = FALSE;
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     {
+       wl_resource_post_error (xdg_shell_resource,
+                               ZXDG_SHELL_V6_ERROR_INVALID_SURFACE_STATE,
+@@ -1957,7 +1957,7 @@ zxdg_shell_v6_get_xdg_surface (struct wl_client   *client,
+       return;
+     }
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     {
+       wl_resource_post_error (resource,
+                               ZXDG_SHELL_V6_ERROR_INVALID_SURFACE_STATE,
+diff --git a/src/wayland/meta-wayland-shell-surface.c b/src/wayland/meta-wayland-shell-surface.c
+index a1f5f36afcf4402bb8c8420021516392b8b97bc9..12d291043d5fb34ee617aa47281187ec5a9b02df 100644
+--- a/src/wayland/meta-wayland-shell-surface.c
++++ b/src/wayland/meta-wayland-shell-surface.c
+@@ -245,7 +245,7 @@ meta_wayland_shell_surface_surface_pre_apply_state (MetaWaylandSurfaceRole  *sur
+     meta_wayland_surface_role_get_surface (surface_role);
+ 
+   if (pending->newly_attached &&
+-      !surface->buffer_ref.buffer &&
++      !surface->buffer_ref->buffer &&
+       priv->window)
+     meta_window_queue (priv->window, META_QUEUE_CALC_SHOWING);
+ }
+@@ -271,7 +271,7 @@ meta_wayland_shell_surface_surface_apply_state (MetaWaylandSurfaceRole  *surface
+     META_WAYLAND_SURFACE_ROLE_CLASS (meta_wayland_shell_surface_parent_class);
+   surface_role_class->apply_state (surface_role, pending);
+ 
+-  buffer = surface->buffer_ref.buffer;
++  buffer = surface->buffer_ref->buffer;
+   if (!buffer)
+     return;
+ 
+diff --git a/src/wayland/meta-wayland-subsurface.c b/src/wayland/meta-wayland-subsurface.c
+index efa1da1b670ac097ce93a26a74030f68ee7148fa..1ec5b230b3b0e201ae552e90d082891af0558b1e 100644
+--- a/src/wayland/meta-wayland-subsurface.c
++++ b/src/wayland/meta-wayland-subsurface.c
+@@ -87,7 +87,7 @@ sync_actor_subsurface_state (MetaWaylandSurface *surface)
+   clutter_actor_set_position (actor, x, y);
+   clutter_actor_set_reactive (actor, TRUE);
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     clutter_actor_show (actor);
+   else
+     clutter_actor_hide (actor);
+diff --git a/src/wayland/meta-wayland-surface.c b/src/wayland/meta-wayland-surface.c
+index 7e5e8eb712ba188e2ce8c4b07a8d1e401dd7a542..fa84944bdf3b8e8dbbcea5b1fb07de61d2b623db 100644
+--- a/src/wayland/meta-wayland-surface.c
++++ b/src/wayland/meta-wayland-surface.c
+@@ -120,6 +120,58 @@ meta_wayland_surface_role_is_on_logical_monitor (MetaWaylandSurfaceRole *surface
+ static MetaWaylandSurface *
+ meta_wayland_surface_role_get_toplevel (MetaWaylandSurfaceRole *surface_role);
+ 
++static MetaWaylandBufferRef *
++meta_wayland_buffer_ref_new (void)
++{
++  MetaWaylandBufferRef *buffer_ref;
++
++  buffer_ref = g_new0 (MetaWaylandBufferRef, 1);
++  g_ref_count_init (&buffer_ref->ref_count);
++
++  return buffer_ref;
++}
++
++static MetaWaylandBufferRef *
++meta_wayland_buffer_ref_ref (MetaWaylandBufferRef *buffer_ref)
++{
++  g_ref_count_inc (&buffer_ref->ref_count);
++  return buffer_ref;
++}
++
++static void
++meta_wayland_buffer_ref_unref (MetaWaylandBufferRef *buffer_ref)
++{
++  if (g_ref_count_dec (&buffer_ref->ref_count))
++    {
++      g_warn_if_fail (buffer_ref->use_count == 0);
++      g_clear_object (&buffer_ref->buffer);
++      g_free (buffer_ref);
++    }
++}
++
++static void
++meta_wayland_buffer_ref_inc_use_count (MetaWaylandBufferRef *buffer_ref)
++{
++  g_return_if_fail (buffer_ref->buffer);
++  g_warn_if_fail (buffer_ref->buffer->resource);
++
++  buffer_ref->use_count++;
++}
++
++static void
++meta_wayland_buffer_ref_dec_use_count (MetaWaylandBufferRef *buffer_ref)
++{
++  MetaWaylandBuffer *buffer = buffer_ref->buffer;
++
++  g_return_if_fail (buffer_ref->use_count > 0);
++  g_return_if_fail (buffer);
++
++  buffer_ref->use_count--;
++
++  if (buffer_ref->use_count == 0 && buffer->resource)
++    wl_buffer_send_release (buffer->resource);
++}
++
+ static void
+ role_assignment_valist_to_properties (GType       role_type,
+                                       const char *first_property_name,
+@@ -364,31 +416,19 @@ meta_wayland_surface_queue_pending_state_frame_callbacks (MetaWaylandSurface
+ MetaWaylandBuffer *
+ meta_wayland_surface_get_buffer (MetaWaylandSurface *surface)
+ {
+-  return surface->buffer_ref.buffer;
++  return surface->buffer_ref->buffer;
+ }
+ 
+ void
+ meta_wayland_surface_ref_buffer_use_count (MetaWaylandSurface *surface)
+ {
+-  g_return_if_fail (surface->buffer_ref.buffer);
+-  g_warn_if_fail (surface->buffer_ref.buffer->resource);
+-
+-  surface->buffer_ref.use_count++;
++  meta_wayland_buffer_ref_inc_use_count (surface->buffer_ref);
+ }
+ 
+ void
+ meta_wayland_surface_unref_buffer_use_count (MetaWaylandSurface *surface)
+ {
+-  MetaWaylandBuffer *buffer = surface->buffer_ref.buffer;
+-
+-  g_return_if_fail (surface->buffer_ref.use_count != 0);
+-
+-  surface->buffer_ref.use_count--;
+-
+-  g_return_if_fail (buffer);
+-
+-  if (surface->buffer_ref.use_count == 0 && buffer->resource)
+-    wl_buffer_send_release (buffer->resource);
++  meta_wayland_buffer_ref_dec_use_count (surface->buffer_ref);
+ }
+ 
+ static void
+@@ -634,7 +674,13 @@ meta_wayland_surface_apply_state (MetaWaylandSurface      *surface,
+       if (surface->buffer_held)
+         meta_wayland_surface_unref_buffer_use_count (surface);
+ 
+-      g_set_object (&surface->buffer_ref.buffer, state->buffer);
++      if (surface->buffer_ref->use_count > 0)
++        {
++          meta_wayland_buffer_ref_unref (surface->buffer_ref);
++          surface->buffer_ref = meta_wayland_buffer_ref_new ();
++        }
++
++      g_set_object (&surface->buffer_ref->buffer, state->buffer);
+ 
+       if (state->buffer)
+         meta_wayland_surface_ref_buffer_use_count (surface);
+@@ -739,7 +785,8 @@ meta_wayland_surface_apply_state (MetaWaylandSurface      *surface,
+            * role the surface is given. That means we need to also keep a use
+            * count for wl_buffer's that are used by unassigned wl_surface's.
+            */
+-          g_set_object (&surface->unassigned.buffer, surface->buffer_ref.buffer);
++          g_set_object (&surface->unassigned.buffer,
++                        surface->buffer_ref->buffer);
+           if (surface->unassigned.buffer)
+             meta_wayland_surface_ref_buffer_use_count (surface);
+         }
+@@ -750,7 +797,7 @@ cleanup:
+    * be released if no-one else has a use-reference to it.
+    */
+   if (state->newly_attached &&
+-      !surface->buffer_held && surface->buffer_ref.buffer)
++      !surface->buffer_held && surface->buffer_ref->buffer)
+     meta_wayland_surface_unref_buffer_use_count (surface);
+ 
+   g_signal_emit (state,
+@@ -1278,7 +1325,7 @@ wl_surface_destructor (struct wl_resource *resource)
+   if (surface->buffer_held)
+     meta_wayland_surface_unref_buffer_use_count (surface);
+   g_clear_pointer (&surface->texture, cogl_object_unref);
+-  g_clear_object (&surface->buffer_ref.buffer);
++  g_clear_pointer (&surface->buffer_ref, meta_wayland_buffer_ref_unref);
+ 
+   g_clear_object (&surface->cached_state);
+   g_clear_object (&surface->pending_state);
+@@ -1544,6 +1591,9 @@ static void
+ meta_wayland_surface_init (MetaWaylandSurface *surface)
+ {
+   surface->pending_state = g_object_new (META_TYPE_WAYLAND_SURFACE_STATE, NULL);
++
++  surface->buffer_ref = meta_wayland_buffer_ref_new ();
++
+   surface->subsurface_branch_node = g_node_new (surface);
+   surface->subsurface_leaf_node =
+     g_node_prepend_data (surface->subsurface_branch_node, surface);
+@@ -1813,7 +1863,7 @@ meta_wayland_surface_calculate_input_region (MetaWaylandSurface *surface)
+   cairo_region_t *region;
+   cairo_rectangle_int_t buffer_rect;
+ 
+-  if (!surface->buffer_ref.buffer)
++  if (!surface->buffer_ref->buffer)
+     return NULL;
+ 
+   buffer_rect = (cairo_rectangle_int_t) {
+@@ -1922,3 +1972,38 @@ meta_wayland_surface_get_height (MetaWaylandSurface *surface)
+       return height / surface->scale;
+     }
+ }
++
++static void
++scanout_destroyed (gpointer  data,
++                   GObject  *where_the_object_was)
++{
++  MetaWaylandBufferRef *buffer_ref = data;
++
++  meta_wayland_buffer_ref_dec_use_count (buffer_ref);
++  meta_wayland_buffer_ref_unref (buffer_ref);
++}
++
++CoglScanout *
++meta_wayland_surface_try_acquire_scanout (MetaWaylandSurface *surface,
++                                          CoglOnscreen       *onscreen)
++{
++  CoglScanout *scanout;
++  MetaWaylandBufferRef *buffer_ref;
++
++  if (!surface->buffer_ref->buffer)
++    return NULL;
++
++  if (surface->buffer_ref->use_count == 0)
++    return NULL;
++
++  scanout = meta_wayland_buffer_try_acquire_scanout (surface->buffer_ref->buffer,
++                                                     onscreen);
++  if (!scanout)
++    return NULL;
++
++  buffer_ref = meta_wayland_buffer_ref_ref (surface->buffer_ref);
++  meta_wayland_buffer_ref_inc_use_count (buffer_ref);
++  g_object_weak_ref (G_OBJECT (scanout), scanout_destroyed, buffer_ref);
++
++  return scanout;
++}
+diff --git a/src/wayland/meta-wayland-surface.h b/src/wayland/meta-wayland-surface.h
+index 00b61c615233f2212b638d01a6ee217fc7f0879a..50736758a9a48b9a23bc92409157346fe55b4ffc 100644
+--- a/src/wayland/meta-wayland-surface.h
++++ b/src/wayland/meta-wayland-surface.h
+@@ -136,6 +136,13 @@ struct _MetaWaylandDragDestFuncs
+                       MetaWaylandSurface    *surface);
+ };
+ 
++typedef struct _MetaWaylandBufferRef
++{
++  grefcount ref_count;
++  MetaWaylandBuffer *buffer;
++  unsigned int use_count;
++} MetaWaylandBufferRef;
++
+ struct _MetaWaylandSurface
+ {
+   GObject parent;
+@@ -156,10 +163,7 @@ struct _MetaWaylandSurface
+   CoglTexture *texture;
+ 
+   /* Buffer reference state. */
+-  struct {
+-    MetaWaylandBuffer *buffer;
+-    unsigned int use_count;
+-  } buffer_ref;
++  MetaWaylandBufferRef *buffer_ref;
+ 
+   /* Buffer renderer state. */
+   gboolean buffer_held;
+@@ -342,6 +346,9 @@ void                meta_wayland_surface_update_outputs_recursively (MetaWayland
+ int                 meta_wayland_surface_get_width (MetaWaylandSurface *surface);
+ int                 meta_wayland_surface_get_height (MetaWaylandSurface *surface);
+ 
++CoglScanout *       meta_wayland_surface_try_acquire_scanout (MetaWaylandSurface *surface,
++                                                              CoglOnscreen       *onscreen);
++
+ static inline GNode *
+ meta_get_next_subsurface_sibling (GNode *n)
+ {
+diff --git a/src/wayland/meta-wayland-wl-shell.c b/src/wayland/meta-wayland-wl-shell.c
+index 3215f439431414d95d85bf052ebb018c85235d8b..7add5667da70363b7475fe983525f622eac4d8d0 100644
+--- a/src/wayland/meta-wayland-wl-shell.c
++++ b/src/wayland/meta-wayland-wl-shell.c
+@@ -598,11 +598,11 @@ wl_shell_surface_role_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   /* For wl_shell, it's equivalent to an unmap. Semantics
+    * are poorly defined, so we can choose some that are
+    * convenient for us. */
+-  if (surface->buffer_ref.buffer && !window)
++  if (surface->buffer_ref->buffer && !window)
+     {
+       create_wl_shell_surface_window (surface);
+     }
+-  else if (!surface->buffer_ref.buffer && window)
++  else if (!surface->buffer_ref->buffer && window)
+     {
+       if (wl_shell_surface->popup)
+         meta_wayland_popup_dismiss (wl_shell_surface->popup);
+diff --git a/src/wayland/meta-wayland-xdg-shell.c b/src/wayland/meta-wayland-xdg-shell.c
+index d8f63975787dc75e1ceacaa8f26319316603f9e6..ecad04e120519cc8a42e096912da070cc313900c 100644
+--- a/src/wayland/meta-wayland-xdg-shell.c
++++ b/src/wayland/meta-wayland-xdg-shell.c
+@@ -754,7 +754,7 @@ meta_wayland_xdg_toplevel_apply_state (MetaWaylandSurfaceRole  *surface_role,
+       return;
+     }
+ 
+-  if (!surface->buffer_ref.buffer && xdg_surface_priv->first_buffer_attached)
++  if (!surface->buffer_ref->buffer && xdg_surface_priv->first_buffer_attached)
+     {
+       MetaWaylandActorSurface *actor_surface =
+         META_WAYLAND_ACTOR_SURFACE (xdg_toplevel);
+@@ -1100,7 +1100,7 @@ meta_wayland_xdg_popup_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   if (xdg_popup->setup.parent_surface)
+     finish_popup_setup (xdg_popup);
+ 
+-  if (!surface->buffer_ref.buffer && xdg_surface_priv->first_buffer_attached)
++  if (!surface->buffer_ref->buffer && xdg_surface_priv->first_buffer_attached)
+     {
+       meta_wayland_xdg_surface_reset (xdg_surface);
+       meta_wayland_surface_cache_pending_frame_callbacks (surface, pending);
+@@ -1111,7 +1111,7 @@ meta_wayland_xdg_popup_apply_state (MetaWaylandSurfaceRole  *surface_role,
+     META_WAYLAND_SURFACE_ROLE_CLASS (meta_wayland_xdg_popup_parent_class);
+   surface_role_class->apply_state (surface_role, pending);
+ 
+-  if (xdg_popup->dismissed_by_client && surface->buffer_ref.buffer)
++  if (xdg_popup->dismissed_by_client && surface->buffer_ref->buffer)
+     {
+       wl_resource_post_error (xdg_popup->resource,
+                               XDG_WM_BASE_ERROR_INVALID_SURFACE_STATE,
+@@ -1127,7 +1127,7 @@ meta_wayland_xdg_popup_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   if (!pending->newly_attached)
+     return;
+ 
+-  if (!surface->buffer_ref.buffer)
++  if (!surface->buffer_ref->buffer)
+     return;
+ 
+   if (pending->has_acked_configure_serial)
+@@ -1524,7 +1524,7 @@ meta_wayland_xdg_surface_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   if (!window)
+     return;
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     priv->first_buffer_attached = TRUE;
+   else
+     return;
+@@ -1568,7 +1568,7 @@ meta_wayland_xdg_surface_assigned (MetaWaylandSurfaceRole *surface_role)
+   priv->configure_sent = FALSE;
+   priv->first_buffer_attached = FALSE;
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     {
+       wl_resource_post_error (xdg_wm_base_resource,
+                               XDG_WM_BASE_ERROR_INVALID_SURFACE_STATE,
+@@ -2254,7 +2254,7 @@ xdg_wm_base_get_xdg_surface (struct wl_client   *client,
+       return;
+     }
+ 
+-  if (surface->buffer_ref.buffer)
++  if (surface->buffer_ref->buffer)
+     {
+       wl_resource_post_error (resource,
+                               XDG_WM_BASE_ERROR_INVALID_SURFACE_STATE,
+diff --git a/src/wayland/meta-xwayland-surface.c b/src/wayland/meta-xwayland-surface.c
+index 4a4615a2c0de71fc110415e3af6b03f08cb8f916..c8625f414c9f0075d5dffc5f73c2d98fb6469891 100644
+--- a/src/wayland/meta-xwayland-surface.c
++++ b/src/wayland/meta-xwayland-surface.c
+@@ -182,7 +182,7 @@ meta_xwayland_surface_pre_apply_state (MetaWaylandSurfaceRole  *surface_role,
+   MetaXwaylandSurface *xwayland_surface = META_XWAYLAND_SURFACE (surface_role);
+ 
+   if (pending->newly_attached &&
+-      surface->buffer_ref.buffer &&
++      surface->buffer_ref->buffer &&
+       xwayland_surface->window)
+     meta_window_queue (xwayland_surface->window, META_QUEUE_CALC_SHOWING);
+ }
+diff --git a/src/x11/window-props.c b/src/x11/window-props.c
+index 3cad2cd1d9f4a4ad61ae58e8c52ba628e91b9802..f2208af947fdfbb8f2d77c6fb3350a1f9b3a6505 100644
+--- a/src/x11/window-props.c
++++ b/src/x11/window-props.c
+@@ -249,7 +249,7 @@ reload_net_wm_window_type (MetaWindow    *window,
+ {
+   MetaX11Display *x11_display = window->display->x11_display;
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+ 
+   if (value->type != META_PROP_VALUE_INVALID)
+     {
+@@ -291,7 +291,7 @@ reload_icon (MetaWindow    *window,
+              Atom           atom)
+ {
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+ 
+   meta_icon_cache_property_changed (&priv->icon_cache,
+                                     window->display->x11_display,
+@@ -596,7 +596,7 @@ set_window_title (MetaWindow *window,
+                   const char *title)
+ {
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+ 
+   char *new_title = NULL;
+ 
+@@ -619,7 +619,7 @@ reload_net_wm_name (MetaWindow    *window,
+                     gboolean       initial)
+ {
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+ 
+   if (value->type != META_PROP_VALUE_INVALID)
+     {
+@@ -644,7 +644,7 @@ reload_wm_name (MetaWindow    *window,
+                 gboolean       initial)
+ {
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+ 
+   if (priv->using_net_wm_name)
+     {
+@@ -784,7 +784,7 @@ reload_net_wm_state (MetaWindow    *window,
+ {
+   MetaX11Display *x11_display = window->display->x11_display;
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+ 
+   int i;
+ 
+@@ -1565,7 +1565,7 @@ reload_wm_hints (MetaWindow    *window,
+                  gboolean       initial)
+ {
+   MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
+-  MetaWindowX11Private *priv = window_x11->priv;
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
+   Window old_group_leader;
+   gboolean urgent;
+ 
+@@ -1755,23 +1755,28 @@ reload_bypass_compositor (MetaWindow    *window,
+                           MetaPropValue *value,
+                           gboolean       initial)
+ {
+-  int requested_value = 0;
+-  int current_value = window->bypass_compositor;
++  MetaWindowX11 *window_x11 = META_WINDOW_X11 (window);
++  MetaWindowX11Private *priv = meta_window_x11_get_private (window_x11);
++  MetaBypassCompositorHint requested_value;
++  MetaBypassCompositorHint current_value;
+ 
+   if (value->type != META_PROP_VALUE_INVALID)
+-      requested_value = (int) value->v.cardinal;
++    requested_value = (MetaBypassCompositorHint) value->v.cardinal;
++  else
++    requested_value = META_BYPASS_COMPOSITOR_HINT_AUTO;
+ 
++  current_value = priv->bypass_compositor;
+   if (requested_value == current_value)
+     return;
+ 
+-  if (requested_value == _NET_WM_BYPASS_COMPOSITOR_HINT_ON)
++  if (requested_value == META_BYPASS_COMPOSITOR_HINT_ON)
+     meta_verbose ("Request to bypass compositor for window %s.\n", window->desc);
+-  else if (requested_value == _NET_WM_BYPASS_COMPOSITOR_HINT_OFF)
++  else if (requested_value == META_BYPASS_COMPOSITOR_HINT_OFF)
+     meta_verbose ("Request to don't bypass compositor for window %s.\n", window->desc);
+-  else if (requested_value != _NET_WM_BYPASS_COMPOSITOR_HINT_AUTO)
++  else if (requested_value != META_BYPASS_COMPOSITOR_HINT_AUTO)
+     return;
+ 
+-  window->bypass_compositor = requested_value;
++  priv->bypass_compositor = requested_value;
+ }
+ 
+ static void
+diff --git a/src/x11/window-x11-private.h b/src/x11/window-x11-private.h
+index 906d44546125d53d58f25bfd89681b66f95fad7f..e12f83be0cd92a11cf5dbd155eb2ae4341f5cba0 100644
+--- a/src/x11/window-x11-private.h
++++ b/src/x11/window-x11-private.h
+@@ -25,26 +25,21 @@
+ 
+ #include "core/window-private.h"
+ #include "x11/iconcache.h"
++#include "x11/window-x11.h"
+ 
+ G_BEGIN_DECLS
+ 
+-typedef struct _MetaWindowX11Private MetaWindowX11Private;
+-
+-struct _MetaWindowX11Class
+-{
+-  MetaWindowClass parent_class;
+-
+-  void (*freeze_commits) (MetaWindow *window);
+-  void (*thaw_commits)   (MetaWindow *window);
+-  gboolean (*always_update_shape) (MetaWindow *window);
+-};
+-
+-struct _MetaWindowX11
++/*
++ * Mirrors _NET_WM_BYPASS_COMPOSITOR preference values.
++ */
++typedef enum _MetaBypassCompositorHint
+ {
+-  MetaWindow parent;
++  META_BYPASS_COMPOSITOR_HINT_AUTO = 0,
++  META_BYPASS_COMPOSITOR_HINT_ON = 1,
++  META_BYPASS_COMPOSITOR_HINT_OFF = 2,
++} MetaBypassCompositorHint;
+ 
+-  MetaWindowX11Private *priv;
+-};
++typedef struct _MetaWindowX11Private MetaWindowX11Private;
+ 
+ struct _MetaWindowX11Private
+ {
+@@ -79,8 +74,16 @@ struct _MetaWindowX11Private
+ 
+   /* Freeze/thaw on resize (for Xwayland) */
+   gboolean thaw_after_paint;
++
++  /* Bypass compositor hints */
++  MetaBypassCompositorHint bypass_compositor;
+ };
+ 
++MetaWindowX11Private * meta_window_x11_get_private (MetaWindowX11 *window_x11);
++
++void meta_window_x11_set_bypass_compositor_hint (MetaWindowX11            *window_x11,
++                                                 MetaBypassCompositorHint  requested_value);
++
+ G_END_DECLS
+ 
+ #endif
+diff --git a/src/x11/window-x11.c b/src/x11/window-x11.c
+index ed56bca5ff867ca93f2de79c6751f99616c40e97..1a3400499d1ff9d6dc0c10330bea027beaad44e4 100644
+--- a/src/x11/window-x11.c
++++ b/src/x11/window-x11.c
+@@ -73,7 +73,12 @@ meta_window_x11_maybe_focus_delayed (MetaWindow *window,
+ static void
+ meta_window_x11_init (MetaWindowX11 *window_x11)
+ {
+-  window_x11->priv = meta_window_x11_get_instance_private (window_x11);
++}
++
++MetaWindowX11Private *
++meta_window_x11_get_private (MetaWindowX11 *window_x11)
++{
++  return meta_window_x11_get_instance_private (window_x11);
+ }
+ 
+ static void
+@@ -4108,3 +4113,70 @@ meta_window_x11_surface_rect_to_client_rect (MetaWindow    *window,
+   client_rect->width -= borders.total.left + borders.total.right;
+   client_rect->height -= borders.total.top + borders.total.bottom;
+ }
++
++MetaRectangle
++meta_window_x11_get_client_rect (MetaWindowX11 *window_x11)
++{
++  MetaWindowX11Private *priv = meta_window_x11_get_instance_private (window_x11);
++
++  return priv->client_rect;
++}
++
++static gboolean
++has_requested_bypass_compositor (MetaWindowX11 *window_x11)
++{
++  MetaWindowX11Private *priv = meta_window_x11_get_instance_private (window_x11);
++
++  return priv->bypass_compositor == META_BYPASS_COMPOSITOR_HINT_ON;
++}
++
++static gboolean
++has_requested_dont_bypass_compositor (MetaWindowX11 *window_x11)
++{
++  MetaWindowX11Private *priv = meta_window_x11_get_instance_private (window_x11);
++
++  return priv->bypass_compositor == META_BYPASS_COMPOSITOR_HINT_OFF;
++}
++
++gboolean
++meta_window_x11_can_unredirect (MetaWindowX11 *window_x11)
++{
++  MetaWindow *window = META_WINDOW (window_x11);
++
++  if (has_requested_dont_bypass_compositor (window_x11))
++    return FALSE;
++
++  if (window->opacity != 0xFF)
++    return FALSE;
++
++  if (window->shape_region != NULL)
++    return FALSE;
++
++  if (!window->monitor)
++    return FALSE;
++
++  if (window->fullscreen)
++    return TRUE;
++
++  if (meta_window_is_screen_sized (window))
++    return TRUE;
++
++  if (has_requested_bypass_compositor (window_x11))
++    return TRUE;
++
++  if (window->override_redirect)
++    {
++      MetaRectangle window_rect;
++      MetaRectangle logical_monitor_layout;
++      MetaLogicalMonitor *logical_monitor = window->monitor;
++
++      meta_window_get_frame_rect (window, &window_rect);
++      logical_monitor_layout =
++        meta_logical_monitor_get_layout (logical_monitor);
++
++      if (meta_rectangle_equal (&window_rect, &logical_monitor_layout))
++        return TRUE;
++    }
++
++  return FALSE;
++}
+diff --git a/src/x11/window-x11.h b/src/x11/window-x11.h
+index d41d0d156a78f4b89496ae6869a90262666bc6b5..5e45adf57ba4000d3ebf09a2532e33aaf04056fe 100644
+--- a/src/x11/window-x11.h
++++ b/src/x11/window-x11.h
+@@ -25,24 +25,24 @@
+ 
+ #include <X11/Xlib.h>
+ 
++#include "core/window-private.h"
+ #include "meta/compositor.h"
+ #include "meta/window.h"
+ 
+ G_BEGIN_DECLS
+ 
+-#define META_TYPE_WINDOW_X11            (meta_window_x11_get_type())
+-#define META_WINDOW_X11(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), META_TYPE_WINDOW_X11, MetaWindowX11))
+-#define META_WINDOW_X11_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass),  META_TYPE_WINDOW_X11, MetaWindowX11Class))
+-#define META_IS_WINDOW_X11(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), META_TYPE_WINDOW_X11))
+-#define META_IS_WINDOW_X11_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass),  META_TYPE_WINDOW_X11))
+-#define META_WINDOW_X11_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj),  META_TYPE_WINDOW_X11, MetaWindowX11Class))
++#define META_TYPE_WINDOW_X11 (meta_window_x11_get_type())
++G_DECLARE_DERIVABLE_TYPE (MetaWindowX11, meta_window_x11,
++                          META, WINDOW_X11, MetaWindow)
+ 
+-GType meta_window_x11_get_type (void);
++struct _MetaWindowX11Class
++{
++  MetaWindowClass parent_class;
+ 
+-typedef struct _MetaWindowX11      MetaWindowX11;
+-typedef struct _MetaWindowX11Class MetaWindowX11Class;
+-
+-G_DEFINE_AUTOPTR_CLEANUP_FUNC (MetaWindowX11, g_object_unref)
++  void (*freeze_commits) (MetaWindow *window);
++  void (*thaw_commits)   (MetaWindow *window);
++  gboolean (*always_update_shape) (MetaWindow *window);
++};
+ 
+ MetaWindow * meta_window_x11_new           (MetaDisplay        *display,
+                                             Window              xwindow,
+@@ -95,4 +95,9 @@ void meta_window_x11_surface_rect_to_frame_rect  (MetaWindow    *window,
+ void meta_window_x11_surface_rect_to_client_rect (MetaWindow    *window,
+                                                   MetaRectangle *surface_rect,
+                                                   MetaRectangle *client_rect);
++
++MetaRectangle meta_window_x11_get_client_rect    (MetaWindowX11 *window_x11);
++
++gboolean meta_window_x11_can_unredirect          (MetaWindowX11 *window_x11);
++
+ #endif
