@@ -1,3 +1,23 @@
+corectrl (1.2.0~git2006072019.2aacf49~e~mesarc5) eoan; urgency=medium
+
+  * New snapshot:
+  * 2aacf49 Merge branch 'fix-kversion-parsing' into 'master'
+  * e9287be Add more info to distribution packages section on README.md
+  * 6d35ce3 Added Svg Qt component as required
+  * b74f5b2 Merge branch 'patch-1' into 'master'
+  * fcc3f4e Merge branch 'Xrey274/corectrl-master' into master
+  * 3b9f2f3 Add Russian translation to the shortcut comment
+  * 2223253 Add a few more translations and correct many old ones.
+  * c75121c fix parsing of kernel version
+  * 4aa6094 Add missing translations & update old translations
+  * b8fa2c6 Update lang_bg_BG.ts
+  * 197ac25 Update src/CMakeLists.txt
+  * dd543be Bulgarian Translation 98% finished(needs a little polish)
+  * 88b32d8 95% finished(ready for use)needs little polish
+  * 157d4da Initial Bulgarian translation. 1/3 complete
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Jun 2020 22:42:05 +0200
+
 corectrl (1.2.0~git2005311231.0faaa91~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
