@@ -10,6 +10,7 @@ Build-Depends:
  qml-module-qtquick2,
  qtdeclarative5-dev,
  libqt5charts5-dev,
+ libqt5svg5-dev,
  libkf5auth-dev,
  libkf5archive-dev,
  libbotan-2-dev,
