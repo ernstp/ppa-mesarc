@@ -1,3 +1,9 @@
+corectrl (1.2.0~git2006072019.2aacf49~e~mesarc6) eoan; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 09 Jun 2020 04:50:03 +0200
+
 corectrl (1.2.0~git2006072019.2aacf49~e~mesarc5) eoan; urgency=medium
 
   * New snapshot:
