@@ -1,3 +1,46 @@
+mesa (20.2.0~git2006111231.19b18e72196~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 19b18e72196 docs: update calendar, add news item, and link releases
+    notes for 20.1.1
+  * f94190e8b05 docs: Add release notes for 20.1.1
+  * 0b3e3442126 ac/surface: don't free dcc_retile_map on failure
+  * 56f2a77a414 ac/surface: enable DCC for the first level in the mip
+    tail on gfx10
+  * 7406ea37e6b ac/surface: require that gfx8 doesn't have DCC in order
+    to be displayable
+  * 374f6d568f6 ac/surface: don't set is_displayable if displayable DCC
+    is missing
+  * 0fcf55329be amd/addrlib: fix the C++ one definition rule violation
+  * 27b7b899225 iris: Better handle metadata in NIR passes
+  * 92cfbb7d0ce intel/nir: Call nir_metadata_preserve on !progress
+  * 2b676b2ce87 nir: Properly preserve metadata in more cases
+  * 5e1c42d85f2 nir: Call nir_metadata_preserve on !progress
+  * b0d1f9a72ff nir: Add a nir_shader_preserve_all_metadata helper
+  * e017ee95c11 nir: Add a nir_metadata_all enum value
+  * 30f94b3e7d3 gallivm/sample: fix texel type for stencil 8-bit
+  * 47c23180632 gallivm/conv: enable conversion min code. (v2)
+  * 45606ee8049 gallivm/format: convert unsigned values to float
+    properly.
+  * a2c16ecb2ee llvmpipe: fix subpixel bits reporting.
+  * f6ce962f00f gallivm/nir: add group barrier support
+  * 069aee7cc54 draw/gs: add more info to debugging.
+  * 092f6226ea6 draw/gs: fix emitting inactive primitives crash
+  * cc13ffffba4 ci: Leave a note as to what might be going on with a
+    test.
+  * d5e993af47f freedreno/a6xx: Fix clip_halfz support.
+  * af3c2f3cfd8 nvc0: initial support for tu1xx
+  * 268dc60d3a0 nvc0: initial support for gv100
+  * 839aeffb49e nvc0: remove hardcoded blitter vertprog
+  * 4f3fbfb82e6 nvc0: move setting of entrypoint for a shader stage to a
+    function
+  * 550f1c6d332 nvc0: use NVIDIA headers for GP100- compute QMD
+  * 443d369bd5f nvc0: use NVIDIA headers for GK104->GM2xx compute QMD
+  * 7458e21e2b9 nvir/gv100: enable support for tu1xx
+  * 78103abe878 nvir/gv100: initial support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 Jun 2020 17:17:54 +0200
+
 mesa (20.2.0~git2006071808.b3beb6207f1~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
