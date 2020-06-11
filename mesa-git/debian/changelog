@@ -1,3 +1,48 @@
+mesa (20.1.1+git2006102018.a0e35d8a41d~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * a0e35d8a41d docs/relnotes: add sha256 sums to 20.1.0
+  * 127c2be9c53 VERSION: bump to 20.1.1 release
+  * 834353e5eb8 docs: Add release notes for 20.1.1
+  * 05d10b257b2 ac/surface: fix epitch when modifying surf_pitch
+  * bd61a3d1e62 ac/surface: set SCANOUT if surf->is_displayable
+  * bbfdd64865f glsl: fix crash on glsl macro redefinition
+  * 63e7d62b243 i965: Work around incorrect usage of glDrawRangeElements
+    in UE4
+  * de036fc662c winsys/radeon: do not cast bo->va as void*
+  * d729e10c7c1 freedreno/a6xx: use nonbinning VS when GS is used
+  * c2957cdeceb glsl: inline functions with unsupported return type
+    before converting to nir
+  * 42cb15a7b36 nir/lower_explicit_io: fix NON_UNIFORM access for UBO
+    loads
+  * 57675526d69 llvmpipe: do not enable tessellation shader without llvm
+    coroutines support
+  * cfd734ef4c0 llvmpipe: move coroutines out of noopt case
+  * 9f67806f141 v3d_bufmgr: fix time_t printf
+  * eedeee00948 pan_bo.h: add time.h include for time_t
+  * ad81207d006 vc4_bufmgr: fix time_t printf
+  * ffca750b2ef glsl: fix potential slow compile times for
+    GLSLOptimizeConservatively
+  * 84b7f9dbc54 Switch from cElementTree to ElementTree.
+  * 4a503e35a12 intel/genxml: Migrate from deprecated
+    xml.etree.ElementTree getchildren.
+  * e9da335d70a intel: fix gen_sort_tags.py
+  * 7416eae609c freedreno/computerator: fix missing dependency on
+    generated header
+  * 78ad12b6abe glapi: remove deprecated .getchildren() that has been
+    replace with an iterator
+  * abac4859618 radv: Always expose non-visible local memory type on
+    dedicated GPUs
+  * 9532790a663 nir: reuse existing psiz-variable
+  * 5fcde355a5e iris: fix export of GEM handles
+  * 76991f59e56 i965: fix export of GEM handles
+  * 0db300ddea6 i965: don't forget to set screen on duped image
+  * be8f4197e13 iris: fix BO destruction in error path
+  * 7f8305a2bff mesa: Fix NetBSD compiler macro.
+  * 7a595a578e2 vdpau: Fix wrong calloc sizeof argument.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 Jun 2020 17:20:28 +0200
+
 mesa (20.1.0+git2006061652.333b8f6a60f~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
