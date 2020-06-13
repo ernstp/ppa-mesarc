@@ -1,3 +1,11 @@
+corectrl (1.2.0~git2006111908.5494701~e~mesarc6) eoan; urgency=medium
+
+  * New snapshot:
+  * 5494701 Add more emphasis on setup recommendations
+  * 99eb544 Add setup and more info sections to README.md
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Jun 2020 16:22:22 +0200
+
 corectrl (1.2.0~git2006072019.2aacf49~e~mesarc6) eoan; urgency=medium
 
   * New snapshot:
