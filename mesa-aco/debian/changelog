@@ -1,3 +1,42 @@
+mesa (20.2.0~git2006131242.ebb33b2c0aa~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * ebb33b2c0aa post_version.py: update script to the new rST way of
+    things
+  * 8bc055fc527 gen_release_notes.py: update script to the new rST way
+    of things
+  * 9d90791c19a docs/release-calendar: restore missing id
+  * 8077267026b bin/perf-annotate-jit.py: update internal reference
+  * cd01d0dee16 radv: update internal reference
+  * 7d497e4e098 docs/relnotes: update internal references
+  * f1fe74afb2c docs: update internal references
+  * ea91f4769ac README: update references to internal docs
+  * 0b4f5121f02 docs: drop news in favour of the introduction as index-
+    page
+  * 064fe5f3f44 gitlab-ci: build and deploy docs
+  * 381fc0eca56 docs: include specs into the generated docs
+  * dd3add1b197 docs: bundle extra files
+  * 62abe35e348 docs: use rst-note for highlighted text
+  * 29c95ff627b docs: reformat license table as rst table
+  * 84140a7c06c docs: use rst footnotes instead of manual ones
+  * 8342fe8302a docs: Add the favicon to the new page.
+  * 17aefa73a10 docs: do not copy source-files to site
+  * 21adb67048d docs: Remove version.
+  * 54e38882a12 docs: add xlibdriver to table-of-contents
+  * 14f2a81b6f6 docs: drop open-coded toc for articles
+  * d6be994ef8e docs: use code-blocks
+  * bf3f0f7a82e docs: format notes as rst-notes
+  * 5aea48001fc docs: include meson in the toctree
+  * 7039310ae39 docs: use code-block with caption instead of table
+  * dcaab1b311e docs: disable syntax-highlighting by default
+  * 00cd1346bf0 docs: use sphinx
+  * 0841da2fbb1 docs: fixup heading-levels
+  * a71f08b7152 docs: fixup broken rst
+  * 841a47fb286 docs: escape trailing underscores properly
+  * 2c0707d13db docs: escape asterisks
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Jun 2020 16:22:41 +0200
+
 mesa (20.2.0~git2006111231.19b18e72196~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
