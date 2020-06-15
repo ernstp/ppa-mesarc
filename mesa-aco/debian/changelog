@@ -1,3 +1,13 @@
+mesa (20.2.0~git2006151746.b5c810d68b2~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * b5c810d68b2 turnip: drop linking libfreedreno_drm
+  * 1a33faea8c5 freedreno/ir3: move the libdrm dependency out of shared
+    code
+  * 43e0062c5b3 freedreno/ir3: unify shader create/delete paths
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 15 Jun 2020 18:23:59 +0200
+
 mesa (20.2.0~git2006131242.ebb33b2c0aa~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
