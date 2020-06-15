@@ -1,3 +1,17 @@
+mesa (20.1.1+git2006132313.a9a61b91a87~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * a9a61b91a87 gallium/swr: Fix building swr with MSVC
+  * f73fd77eaa9 v3d: add missing unlock() in error path
+  * cd6c24f649e glsl: fix incorrect optimisation in
+    opt_constant_variable()
+  * edce822c64b radv: set DB_SHADER_CONTROL.CONSERVATIVE_Z_EXPORT
+    correctly
+  * bf7aff5227c .pick_status.json: Update to
+    356be07ce279e6ff2d468fd1321a2edb2d6b2df2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 15 Jun 2020 18:27:13 +0200
+
 mesa (20.1.1+git2006102018.a0e35d8a41d~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
