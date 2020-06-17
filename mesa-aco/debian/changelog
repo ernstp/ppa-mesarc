@@ -1,3 +1,44 @@
+mesa (20.2.0~git2006171732.f745ceecee6~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * f745ceecee6 turnip: use draw states for input attachments
+  * 159a1300ceb turnip: input attachment descriptor set rework
+  * 233610f8cf8 turnip: refactor draw states and dynamic states
+  * 62a4db4c0f1 turnip: delete dead dynamic state code
+  * aab3398b337 turnip: improve dirty bit handling a bit
+  * edb8c581db4 turnip: move descriptor set BO tracking to
+    CmdBindDescriptorSets
+  * 5ef0f9f6225 turnip: compute and graphics have completely separate
+    state
+  * a3464c567cc tu: Actually remove dead variables after io lowering
+  * 168c42290f9 ir3: Don't calculate num_samp ourselves
+  * 568e06b3a6f tu: Set num_components to 0 when building bindless
+    intrinsics
+  * 6fcbce3b996 tu: Remove tu_shader_compile_options
+  * 808992fc506 tu: Use the ir3 shader API
+  * b1700698a58 tu: Remove num_samp hack
+  * 6f2981176d9 ir3: Pass reserved_user_consts to ir3_shader_from_nir()
+  * 89c8393a163 pan/mdg: Reassociate adds for multiply-by-two
+  * a3348f88c87 pan/mdg: Canonicalize (x * 2.0) to (x + x)
+  * 6318e461416 pan/mdg: Allow scheduling "x + x" to multipliers
+  * bc356abea31 pan/mdg: Factor out unit check
+  * de7c6950b36 aco: fix sub-dword opsel/sdwa checks
+  * 1e791e51a65 aco: fix validation error from vgpr spill/restore code
+  * d37deebde57 turnip: fix cubic filtering with CmdBlitImage
+  * 198b13974a2 turnip: fix 3D path always being used for CmdBlitImage
+  * 1622787ee4d turnip: set VFD_INDEX_OFFSET in 3D clear/blit path
+  * 4d13e35315e spirv: do not set num_components for non-vectorized
+    mbcnt_amd intrinsic
+  * b2e9d21fdd6 st_glsl_to_nir: fix potential use after free
+  * 7e8e02d5432 glsl: small optimisation fix for uniform array resizing
+  * a5d3e061af9 glsl: fix uniform array resizing in the nir linker
+  * f63a5781008 anv: Add VK_EXT_custom_border_color to relnotes
+  * ed7bebc17b4 anv: enable VK_EXT_pipeline_creation_cache_control
+  * 23633f6c694 anv: implement
+    VK_PIPELINE_CREATE_FAIL_ON_PIPELINE_COMPILE_REQUIRED_BIT_EXT
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Jun 2020 17:56:13 +0200
+
 mesa (20.2.0~git2006151746.b5c810d68b2~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
