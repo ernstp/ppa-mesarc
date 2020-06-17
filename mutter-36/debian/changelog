@@ -1,3 +1,13 @@
+mutter (3.36.3+git2006161804.ecc2b9101~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * ecc2b9101 window-actor-x11: switch the signal callback argument and
+    data on shadow factory change
+  * b002343dc stage/x11: Check that message is WM_PROTOCOLS before
+    assuming so
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Jun 2020 18:00:44 +0200
+
 mutter (3.36.3+git2006030827.0d9ded403~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
