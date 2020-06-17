@@ -1,3 +1,19 @@
+mesa (20.1.1+git2006170203.b23172b1194~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * b23172b1194 meson: unbreak sysctl.h detection on BSDs
+  * ff3ed31a7c7 util: enable futex usage on BSDs after 7dc2f4788288
+  * fbc957987b0 .pick_status.json: Update to
+    63b81c9915ce438e73e14412cbf3a9154b415f35
+  * 00284315f0a gallium/hud: don't use user vertex buffers
+  * 9d0c86e58e6 Revert "gallium/hud: don't use user vertex buffers"
+  * 4e482262a76 spirv: fix using OpSampledImage with OpUndef instead of
+    OpType{Image,Sampler}
+  * 8044e11eeec .pick_status.json: Update to
+    fcdefa7e479541a92f02b1933f58439e0fd03a1f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Jun 2020 17:58:31 +0200
+
 mesa (20.1.1+git2006132313.a9a61b91a87~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
