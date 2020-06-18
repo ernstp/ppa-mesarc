@@ -1,3 +1,12 @@
+mutter (3.36.3+git2006172136.81deb9943~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 81deb9943 clutter/stage: Make paint_to_buffer use the correct
+    texture/buffer size
+  * f25417efc clutter/paint-context: Fix NO_PAINT_SIGNAL flag enum value
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Jun 2020 04:40:12 +0200
+
 mutter (3.36.3+git2006161804.ecc2b9101~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
