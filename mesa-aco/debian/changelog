@@ -1,3 +1,46 @@
+mesa (20.2.0~git2006180409.6269405a2ba~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 6269405a2ba virgl: replace all dup() with os_dupfd_cloexec()
+  * 526910e8faa svga: replace all dup() with os_dupfd_cloexec()
+  * 9ca2a4e6fc9 freedreno: replace all dup() with os_dupfd_cloexec()
+  * bd5cf70d3db etnaviv: replace all dup() with os_dupfd_cloexec()
+  * 419b446e1e0 egl: replace all dup() with os_dupfd_cloexec()
+  * 62797c30edb i965: replace all dup() with os_dupfd_cloexec()
+  * e0e9c2486d6 iris: replace all dup() with os_dupfd_cloexec()
+  * 00defe2e0a9 anv: replace all dup() with os_dupfd_cloexec()
+  * 405bffefe15 radv: replace all dup() with os_dupfd_cloexec()
+  * 69269a46f10 vulkan/wsi: replace all dup() with os_dupfd_cloexec()
+  * 4a8085d67ca replace all F_DUPFD_CLOEXEC with os_dupfd_cloexec()
+  * 0e5ea7a3639 util: introduce os_dupfd_cloexec() helper
+  * b00e1d9ea77 util/os_file: replace broken windows-detection code with
+    detect_os.h
+  * bf63da3e95a ci: disable the windows tests until the runner can be
+    stabilized again
+  * 3e37b7e6bba docs: remove plain-text copy of versions.rst
+  * 9706b7238c7 khronos-update.py: add script to simplify update of
+    Khronos headers & xml files
+  * e8ad52f7b0c zink: enable xfb extension in screen creation
+  * e5e657768c3 zink: switch to passing VkPhysicalDeviceFeatures2 in
+    VkDeviceCreateInfo
+  * 1983609212e zink: set PIPE_CAP_VIEWPORT_TRANSFORM_LOWERED and remove
+    POS special casing
+  * 37778fcd9a3 zink: implement transform feedback support to finish off
+    opengl 3.0
+  * 1b130c42b8d zink: implement streamout and xfb handling in ntv
+  * c3f6a59d57b zink: add spirv_builder methods for
+    OpVectorExtractDynamic and OpVectorInsertDynamic
+  * 14dbf51d7fd zink: add spirv builder util functions for emitting xfb
+    decorations
+  * f841d11c9fe zink: use '2' variants for device props/feats, check
+    features for ext enabling
+  * 9f24909b0b7 turnip: use u_format for packing gmem clear values
+  * 03e284ec9ec docs: fixup relnotes after rst-conversion
+  * 51fb3b09dc1 radv/aco: enable FP16 features/extensions on GFX9+
+  * abfe28a6bb6 aco: fix validation of opsel when set for the definition
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Jun 2020 04:35:47 +0200
+
 mesa (20.2.0~git2006171732.f745ceecee6~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
