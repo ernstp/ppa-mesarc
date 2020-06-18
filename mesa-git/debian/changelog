@@ -1,3 +1,21 @@
+mesa (20.1.1+git2006172032.d552a65be0b~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * d552a65be0b st_glsl_to_nir: fix potential use after free
+  * a8c104eb8f8 .pick_status.json: Update to
+    51fb3b09dc1cd096f727f712c18a023c3886f660
+  * a1f46ab788b ac/surface: don't free dcc_retile_map on failure
+  * 8103b6fec9d ac/surface: cache DCC retile maps (v2)
+  * 6ce00856667 ac/surface: add a wrapper structure to hold ADDR_HANDLE
+  * a9fe799704e amd/addrlib: remove unused members of
+    ADDR2_COMPUTE_DCC_ADDRFROMCOORD_INPUT
+  * 1c724dcc92a amd/addrlib: don't recompute DCC info for every
+    ComputeDccAddrFromCoord call
+  * 21b1f2975fe ac/surface: don't recompute the DCC retile map for
+    imported textures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Jun 2020 04:38:02 +0200
+
 mesa (20.1.1+git2006170203.b23172b1194~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
