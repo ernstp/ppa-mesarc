@@ -1,3 +1,44 @@
+mesa (20.2.0~git2006201246.c977567db65~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * c977567db65 radv: enable radv_no_dynamic_bounds for more Path of
+    Exile executables
+  * 08f64f91d12 gallium/util: add missing include
+  * 2d6059d8877 gallium/util: limit STACK_LEN on Windows
+  * e6fa8ed9685 graw/gdi: do not depend on UNICODE macro
+  * eda68414205 gallium/os: call "ANSI" version of GetCommandLine
+  * 04f77595f0b intel/compiler: Always apply sample mask on Vulkan.
+  * 19b2ac2bb9e radv: enable radv_no_dynamic_bounds for Path of Exile
+  * f4a643f65e3 radv: add new drirc option radv_no_dynamic_bounds
+  * 3915b56e39c iris: Support I915_FORMAT_MOD_Y_TILED_GEN12_RC_CCS
+  * 2305ab69382 iris: Refactor modifier_is_supported for gen12
+  * c19492bcdb9 iris: Handle importing aux-enabled surfaces on TGL
+  * 4ed6e43988e gallium/dri2: Support
+    I915_FORMAT_MOD_Y_TILED_GEN12_RC_CCS
+  * b25fedeff99 isl/drm: Support I915_FORMAT_MOD_Y_TILED_GEN12_RC_CCS
+  * 9dea3e1b477 iris: Use ISL_AUX_USAGE_GEN12_CCS_E on gen12
+  * 230952c2101 iris: Don't support sRGB + Y_TILED_CCS on gen9
+  * db5d98cde82 intel: Add ISL_AUX_USAGE_GEN12_CCS_E
+  * d9f7fce83c1 ci: Enable NIR validation on a630 GLES2 and VK tests.
+  * 6ee80d8e0cf ci: Bump vulkan CTS to 1.2.3.0.
+  * f8961ea0865 iris: Disable sRGB fast-clears for non-0/1 values
+  * 48a3f4c44b6 iris: Avoid fast-clear with incompatible view
+  * fbbf79377bc iris: Remove the CCS_D fallback
+  * e533232d8c8 iris: Drop can_fast_clear_color's format parameter
+  * 7b7d28ed6de docs: move "stable" tag explanation next to `Fixes:`
+  * a096d410941 docs: move `Fixes:` tag explanation to its own section
+  * 7488d491072 docs: make it clear that the tags needs to be in the
+    commit message
+  * 731465192a9 docs: reword a sentence a bit
+  * 5d27d5eb614 docs: add some formatting to the "backport merge
+    request" option
+  * 0e4eb7b86d9 docs: prefer `Fixes:` over `Cc: mesa-stable`
+  * 8fd98931235 docs: drop `git sendemail` instructions
+  * a29a1588b1c docs: reword "sending a patch revision" to "updating a
+    merge request"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jun 2020 13:12:45 +0200
+
 mesa (20.2.0~git2006180409.6269405a2ba~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
