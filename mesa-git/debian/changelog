@@ -1,3 +1,19 @@
+mesa (20.1.1+git2006192206.1602ffbdb06~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1602ffbdb06 st/mesa: make texture views inherit compressed_data
+    storage
+  * a2979f91620 mesa/main: fix inverted condition
+  * b7ba7e49fb6 aco: fix WQM handling in nested loops
+  * 101fe52a5cb st/mesa: account for "loose", per-mipmap level textures
+    in CopyImageSubData
+  * f91958b5180 radv: lower discards to demote to workaround a RDR2 game
+    bug
+  * e458ebcf8ed .pick_status.json: Update to
+    7b7d28ed6de5dadc3a6b121d3bb2fec69571c69b
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Jun 2020 13:15:02 +0200
+
 mesa (20.1.1+git2006172032.d552a65be0b~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
