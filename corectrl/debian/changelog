@@ -1,4 +1,4 @@
-corectrl (1.2.0~git2006141412.65ed038~e~mesarc6) eoan; urgency=medium
+corectrl (1.2.0~git2006141412.65ed038~b~mesarc6) eoan; urgency=medium
 
   * New snapshot:
   * 65ed038 Fix incorrect executable file name on profile dialog

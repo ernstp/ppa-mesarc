@@ -1,5 +1,5 @@
 GIT="https://gitlab.com/corectrl/corectrl.git"
-DISTROS="eoan focal"
+DISTROS="bionic eoan focal groovy"
 PREBUMP=1
-INC=6
+INC=9
 PPA=mesarc

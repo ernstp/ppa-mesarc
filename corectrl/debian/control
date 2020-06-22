@@ -3,6 +3,8 @@ Section: admin
 Priority: optional
 Maintainer: Ernst Sjöstrand <ernstp@gmail.com>
 Build-Depends:
+ gcc-9 | gcc-8,
+ g++-9 | g++-8,
  cmake,
  extra-cmake-modules,
  debhelper (>=11~),
