@@ -1,3 +1,10 @@
+mutter (3.36.3+git2006221816.44a335812~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 44a335812 shaped-texture: Reintroduce clip_region
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Jun 2020 23:48:46 +0200
+
 mutter (3.36.3+git2006172136.81deb9943~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
