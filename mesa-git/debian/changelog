@@ -1,3 +1,19 @@
+mesa (20.1.1+git2006221932.51ec16e0921~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 51ec16e0921 r600/sfn: Don't set num_components on TESS sysvalue
+    intrinsics
+  * 2acfb8231b2 radv: enable radv_no_dynamic_bounds for more Path of
+    Exile executables
+  * ccedd5374a6 radv: enable radv_no_dynamic_bounds for Path of Exile
+  * 631adc3de7b radv: add new drirc option radv_no_dynamic_bounds
+  * 3090516f31f vulkan/wsi: Really terminate DRM lease in
+    wsi_release_display().
+  * 2878c5be43c .pick_status.json: Update to
+    64ccb740281b019bb7e94053217cacdc72825042
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Jun 2020 23:46:39 +0200
+
 mesa (20.1.1+git2006192206.1602ffbdb06~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
