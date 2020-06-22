@@ -1,3 +1,49 @@
+mesa (20.2.0~git2006222319.6e24047573f~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 6e24047573f zink: use correct define value for reserved slot count
+    in ntv
+  * c323e0ddf3d intel/dev: Add device info for DG1
+  * 37a724e4ae0 anv/dg1: Don't use SET_TILING kernel uapi.
+  * e6588354360 iris/bufmgr: Do not use map_gtt or use set/get_tiling on
+    DG1
+  * 762e601f776 intel/devinfo: Add function to check for
+    DRM_I915_GEM_GET_TILING.
+  * 86617c08cc9 intel/l3: Return the URB size from devinfo for DG1
+  * 793b4092416 intel/isl: Update mocs for DG1
+  * 3daa8667512 intel/l3: Add DG1 L3 configuration
+  * 633dec7163e anv: Set L3 full way allocation at context init if L3
+    cfg is NULL
+  * e2e0521ecbb iris/l3: Enable L3 full way allocation when L3 config is
+    NULL
+  * 6054b24f584 intel/l3: Allow platforms to have no l3 configurations
+  * 49fe43e15fd intel/l3: Don't rely on cfg entry URB size being 0 as a
+    sentinal
+  * f1fba99695f intel/devinfo: Add is_dg1 to device info
+  * 64ccb740281 turnip: Enable tessellationShader physical device
+    feature
+  * 497671be35f ir3: Unconditionally enable MERGEDREGS on a6xx
+  * 7a836ec6319 turnip: Force sysmem for tessellation
+  * 2718353b381 turnip: Support tess for draws
+  * 08aaa3d4c46 turnip: Emit HS/DS user consts as draw states
+  * 8cb226b2588 turnip: Update VFD_CONTROL with tess system values
+  * f08a80dcd49 turnip: Allocate tess BOs as a function of draw size
+  * eefdca2e2f5 turnip: Parse tess state and support PATCH primtype
+  * ff16e72545b turnip: Offset by component when lowering gl_TessLevel*
+  * b09e690f3b7 turnip: Lower shaders for tessellation
+  * d2df0761200 nir: Add an option for lowering TessLevelInner/Outer to
+    vecs
+  * d2d4677b56e nir: Support sysval tess levels in SPIR-V to NIR
+  * ffc4d82438d v3d: Disable PIPE_CAP_PRIMITIVE_RESTART
+  * 1fc346d2bec mesa: Add PrimitiveRestartFixedIndex to gl_constants
+  * bb5fc90135f gallium: Add pipe cap for primitive restart with fixed
+    index
+  * bcf6a9ec635 nv50/ir/ra: fix memory corruption when spilling
+  * b8c77d4765d nv50/ir/ra: convert some for loops to Range-based for
+    loops
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Jun 2020 23:44:20 +0200
+
 mesa (20.2.0~git2006201246.c977567db65~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
