@@ -1,3 +1,47 @@
+mesa (20.2.0~git2006242255.01e2893cba4~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 01e2893cba4 turnip: implement depthBounds
+  * a9d866910c5 freedreno/registers: a6xx depth bounds test registers
+  * 4fc0499049f aco: remove outdated assert in handle_operands()
+  * 7cad27831d2 aco: ignore blocked registers when checking edges in
+    get_reg_impl()
+  * 91a82d00696 radv: fix checking the return value of cs_finalize()
+  * 86df5283a32 gitlab-ci: update the list of expected failures for
+    Pitcairn
+  * aa35670fd09 radv: Make radv_alloc_shader_memory static.
+  * 64a92ef7a26 radv/winsys: Distinguish device/host memory errors.
+  * a5cb88eea45 radv: Handle mmap failures.
+  * 04765e6a9a4 radv/winsys: Deal with realloc failures in BO lists.
+  * 519ddfd3126 aco: improve vectorization of 8/16-bit loads/stores
+  * ddffcf36277 aco: fix when sub-dword create_vector operand cannot be
+    placed perfectly
+  * 91fd53884dc aco: don't allow partial copies on GFX6/7
+  * 76b5d72921c aco: align swap operations to 4 bytes on GFX6/7
+  * 91d7e401763 aco: don't create byte-aligned short loads
+  * c3259b6e6a2 aco: add missing bld.scc() in byte_align_scalar()
+  * a0f6ca4393d aco: don't store byte-aligned short stores
+  * a18da83d184 aco: fix copy+paste error in split_buffer_store
+  * 841fdfcd453 radv/aco,aco: allow SMEM SSBO loads on GFX6/7
+  * 35b5e1fc7c5 aco: allow SMEM for some sub-dword accesses
+  * c702f8ed157 aco: only use SMEM if we can prove it's safe
+  * 0cfee26bee3 radv: fix image variable types in meta shaders
+  * c344c083fc7 spirv: set variables to restrict by default
+  * 1be67d610f4 android: freedreno/ir3: simplify generated sources rules
+  * 41683157e77 android: freedreno/ir3: add missing generated sources
+    and rules
+  * b41828c3375 android: freedreno: add fd5_layout.c to Makefile.sources
+  * 5f97dfc4c84 vulkan/wsi/x11: Ensure we create at least minImageCount
+    images.
+  * 7b3976d3f86 zink: clamp VkImageCreateInfo.arrayLayers to 1 for image
+    resource creation
+  * 994224bc293 gitlab-ci: update the list of expected CTS failures for
+    RADV/ACO
+  * 6a5fb31fefb nir: Fix divergence analysis for tessellation
+    input/outputs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 25 Jun 2020 00:04:50 +0200
+
 mesa (20.2.0~git2006222319.6e24047573f~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
