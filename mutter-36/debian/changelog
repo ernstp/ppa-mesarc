@@ -1,3 +1,37 @@
+mutter (3.36.3+git2006242202.b8bd39793~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * b8bd39793 wayland/data-device: Don't create and leak unused memory
+    on dnd
+  * 70072c39d wayland: Free selection streams streams after transfer
+  * bb4bd4b5c core: Free clipboard selection source on shutdown
+  * ef848f10d core: Fix memory selection source leak after clipboard
+    owner disappears
+  * 59cb259fd wayland: Add support for wayland-protocols primary
+    selection protocol
+  * 76e4b5de7 build: Build scaffolding for primary-selection wayland
+    protocol
+  * 9acb82360 wayland: Rename gtk primary protocol files to "legacy"
+  * d72175041 wayland: Send primary offer to all data devices from the
+    same client
+  * 1ec91cc8e wayland: Send clipboard offers to all data devices from
+    the same client
+  * 5c7b5ef0d wayland: Drop unused struct variable
+  * e98e1c13d wayland: Move the primary data device manager to its own
+    file
+  * 8b69e7902 wayland: Move primary data offers to their own file
+  * b52a0be28 wayland: Move MetaWaylandDataOffer to its own file
+  * 1eb0812f0 wayland: Move MetaWaylandDataSourcePrimary to its own file
+  * b98125a33 wayland: Split MetaWaylandDataSource into a separate file
+  * 78248d8dd Revert "wayland: Send clipboard offers to all data devices
+    from the same client"
+  * 849d8dfae Revert "wayland: Send primary offer to all data devices
+    from the same client"
+  * 1f896c973 gpu-kms: Fix compilation issues from backport
+  * cc617b059 gpu/kms: Turn off CRTCs as well for DPMS
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 25 Jun 2020 00:09:15 +0200
+
 mutter (3.36.3+git2006221816.44a335812~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
