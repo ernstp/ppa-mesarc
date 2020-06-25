@@ -1,3 +1,10 @@
+mesa (20.1.2+git2006250013.c368a593fea~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c368a593fea docs/relnotes: add sha256 sums to 20.1.2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 25 Jun 2020 17:13:59 +0200
+
 mesa (20.1.2+git2006242348.3e417e7cb66~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
