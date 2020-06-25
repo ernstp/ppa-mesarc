@@ -1,3 +1,44 @@
+mesa (20.2.0~git2006251615.7e98f2534c3~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 7e98f2534c3 gitlab-ci: add a list of expected failures for RADV/ACO
+    on NAVI14
+  * 63e1e7209c2 radv: enable ACO by default
+  * db0afb38007 radv: change use_aco -> use_llvm
+  * b78f64507e9 radv: introduce RADV_DEBUG=llvm option
+  * 37e7a5e746d zink: unify code for setting resource barriers
+  * a102896cff2 radv: lower 64-bit dfloor on GFX6 for fixing precision
+    issues
+  * c84f11e7b67 radv: lower 64-bit drcp/dsqrt/drsq for fixing precision
+    issues
+  * 82b46667836 iris: Honor scanout requirement from DRI
+  * ec7b55f4cc5 vulkan/overlay: fix crash on destroying NULL swapchain
+  * 8c962f5f61f gitlab-ci: add parallel-rdp fossils
+  * 6da06479878 freedreno/ir3/ra: fix pre-color edge case
+  * c5b990f435e turnip: disable early_z for VK_FORMAT_S8_UINT
+  * 04148f44111 turnip: fix update_stencil_mask
+  * 9c0ae5704d6 turnip: fix empty scissor case
+  * 7c008c293d7 freedreno: handle batch flush in resource tracking
+  * 16b4da3ba31 freedreno: split out batch clear tracking helper
+  * ad136945e6d freedreno: split out batch draw tracking helper
+  * d74554b1674 freedreno: make foreach_bit() declare it's cursor
+  * 1fd2bc10dc7 turnip: implement VK_EXT_vertex_attribute_divisor
+  * 8018b4b7071 docs: fix 20.1.2 relnotes
+  * 804c6ee0dfd docs: update calendar and link releases notes for 20.1.2
+  * e94f81e9df8 docs: Add release notes for 20.1.2
+  * 3065c4bf925 freedreno/ir3: switch PIPE_CAP_TGSI_TEXCOORD
+  * e6d650353a0 freedreno: convert builtin blit VS prog to ureg builder
+  * b5574c51654 freedreno/a3xx: use point-coord helper
+  * ba6e1514f59 freedreno/a4xx: use point-coord helper
+  * 3e8c6312c70 freedreno/a5xx: use point-coord helper
+  * a474d48e176 freedreno/a6xx: use point-coord helper
+  * 68d6aa3dd02 freedreno/a6xx: de-duplicate vinterp/vpsrepl state
+    building
+  * 022c363cfbb freedreno/ir3: add helper to determine point-coord
+    inputs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 25 Jun 2020 17:11:42 +0200
+
 mesa (20.2.0~git2006242255.01e2893cba4~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
