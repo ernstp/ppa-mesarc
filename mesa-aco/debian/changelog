@@ -1,3 +1,46 @@
+mesa (20.2.0~git2006290051.237d7284180~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 237d7284180 gallivm/nir: fix const loading on big endian systems
+  * 7d31bc9a34c freedreno/ir3: fix resinfo wrmask
+  * b1c16e52514 docs: use ref-links for internal references
+  * 5ee55b206af docs: fix internal references
+  * 1d250bf2916 docs: restore accidentally dropped labels
+  * 05e61a91573 docs: remove non-existent reference
+  * 3b74e6fa280 meson: Do not require shader cache for radv.
+  * c0c03f4772f rbug: Fix rbug_delete_vs_state lock acquisition.
+  * 583d7d3d8d0 v3d: moving v3d simulator to src/broadcom
+  * 4fccbd0ea60 turnip: Put VK_KHR_external_fence_fd stubs back
+  * 39f06e28485 iris: Implement pipe->texture_subdata directly
+  * 34630fe081b turnip: Properly return VK_DEVICE_LOST on queuesubmit
+    failures.
+  * 487576e3cfd turnip: Fix error handling of DRM_MSM_GEM_INFO ioctls.
+  * e67c2e1c96c turnip: Do better TU_DEBUG=startup logging of
+    drmGetDevices2() failure.
+  * aba8c579a97 turnip: semaphore support.
+  * 6283da34a91 ci/baremetal: Bump the kernel to a recent drm-msm-fixes
+    for msm semaphores.
+  * 5c0f82b0d72 aco: fix partial copies on GFX6/7
+  * 66482303f6d mapi: x86: Fix dynamic entries in x86 tsd stubs.
+  * 63805ccd3f0 ci/bare-metal: Fail early when we get stuck powering on
+    a cheza.
+  * 189a0fecf54 freedreno/ir3: move nir finalization to after cache miss
+  * f97acb4bb4b freedreno/ir3: disk-cache support
+  * 6aadb00e60f freedreno/ir3: build binning variant at same time as
+    draw variant
+  * 83b97bf161f freedreno/a6xx+ir3: stop generating pointless binning
+    shaders
+  * fdbe1ffaf74 freedreno/ir3: shuffle some variant fields
+  * c0f22c3d940 freedreno/ir3: add ir3_compiler_destroy()
+  * f1ab57359c7 freedreno/ir3: move finalize_nir to pscreen hook
+  * d3ae5593783 freedreno/ir3: add ir3_finalize_nir()
+  * e35b8971a74 zink: use OpFUnordNotEqual for nir_op_fne
+  * 765de33d3ce zink: set lower_mul_high and lower_rotate in ntv
+    compiler options
+  * 49c13fccf75 zink: handle isign alu in ntv
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 29 Jun 2020 02:10:12 +0200
+
 mesa (20.2.0~git2006251615.7e98f2534c3~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
