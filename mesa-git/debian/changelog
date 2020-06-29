@@ -1,3 +1,53 @@
+mesa (20.1.2+git2006272227.c2f7f6a78b9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c2f7f6a78b9 rbug: Fix rbug_delete_vs_state lock acquisition.
+  * a68580f7279 .pick_status.json: Mark
+    293221dddaedb410781d39fdecf3c93bb111475b as denominated
+  * e22a98dbf67 .pick_status.json: Update to
+    c0c03f4772fef361137bba5681b71215aca107d1
+  * 798cccaa752 ci: Rename x86_cross_arm_test to just arm_test.
+  * 40dd1aa1316 ci: Don't build an arm_test container now that the last
+    user is gone.
+  * 6ef41195124 ci: Switch cheza (freedreno a630) testing to baremetal.
+  * c49fdf36818 ci: Add scripts for controlling bare-metal chezas.
+  * 7290b3b559f ci: Build a cheza kernel.
+  * 9dc2a63d407 ci: Disable the firmware loader user helper option in
+    arm64 kernels.
+  * a757b7c7c4e ci: Quick exit qpa extraction for non-matching qpas.
+  * 678f9b69a1a ci: Move baremetal DEQP_NO_SAVE_RESULTS setup to the
+    yml.
+  * f83146e98f2 ci: Add DEQP_EXPECTED_RENDERER support for VK tests.
+  * a0df5b0882e ci: Auto-detect the architecture for VK ICD filenames.
+  * a6ea925cc4d ci: Drop old comment about enabling --deqp-watchdog.
+  * 03fb442a2f9 ci: Drop double ".txt" suffix on the unexpected results
+    file.
+  * 967bdab328a gitlab-ci: Also list arm/x86_build in needs: of test
+    jobs
+  * c7d771a1e71 gitlab-ci: Enable -Werror in `meson-s390x` job
+  * 141b505ade4 ci: Improve baremetal's logging of the job env var
+    passthrough.
+  * 026d829e5fb ci: Do an explicit NIR validation-enabled pass on
+    freedreno a630.
+  * 8e31a8c6f21 ci: Fix DEQP_CASELIST_FILTER (used by a630 noubo run)
+  * dfff49e32d0 ci: Disable SMP on the a5xx boards.
+  * 32ee6ea4956 ci: Switch the baremetal runner to be an x86 docker
+    image.
+  * 982a8830a8b ci: Update versions of packages to remove from rootfses.
+  * 5096aee3b02 ci: Make the create-rootfs more resilient.
+  * aa91442fe8d ci: Make cmake toolchain file for deqp cross build
+    setup.
+  * d6ba816cd91 ci: Autodetect whether we need cross setup in lava_arm
+    builds.
+  * b1e295475e0 ci: Move cross file generation to a shared script.
+  * 036a8654c18 ci: Fix TypoError error when traces in traces.yml is an
+    empty list
+  * e1fd12a764a ci: Split test_tracie_skips_traces_without_checksum in
+    separate cases
+  * 7d1b2075335 ci: Migrate tracie tests done in shell script to pytest
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 29 Jun 2020 02:12:29 +0200
+
 mesa (20.1.2+git2006250013.c368a593fea~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
