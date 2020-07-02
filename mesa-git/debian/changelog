@@ -1,3 +1,37 @@
+mesa (20.1.2+git2007021635.ad307a14415~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * ad307a14415 radv,vulkan: add a new x11 wsi drirc workaround for DOOM
+    Eternal
+  * 3f4077496d0 Revert "vulkan/wsi/x11: Ensure we create at least
+    minImageCount images."
+  * 5cc56a5d2f7 nir: add missing break to nir_opt_access()
+  * f51d4183699 gallivm: add missing break
+  * afc725b0166 st/mesa: do not clear NewDriverState for inactive states
+  * a299fe65ec6 gallium/docs: remove reference to non-existent label
+  * 3ed75390adb gallium/docs: fixup formatting of numbered lists
+  * ef77882b5c8 draw/llvm: fix big-endian mask adjusting
+  * 87fda77bf33 mesa/get: fix enum16 big-endian getting.
+  * 95dd7608f4f llvmpipe: fix occlusion queries on big-endian.
+  * 03ba348ad0c gallivm/nir: fix big-endian 64-bit splitting/merging.
+  * 6e979568b9e glsl: fix constant packing for 64-bit big endian.
+  * 0e577a9dc45 Revert "CI: Disable Panfrost Mali-T820 jobs"
+  * 8ab4786842e Revert "CI: Disable Lima jobs due to lab unhealthiness"
+  * 48a75889731 mesa/swrast: use logf2 instead of util_fast_log2
+  * 2ac1c46928f meson: Revert commit overriding C++ standard with
+    gnu++11 on ppc64el
+  * e0f790c2028 clover: Fix types collision between c++ and altivec
+  * 8c39286c261 radeonsi: don't flush in fence_server_sync
+  * 89317f478bd .pick_status.json: Update to
+    ab9ecb607b88dd4610815ac254205656918e408e
+  * 0033967f7b2 v3d/compiler: fix spill offset
+  * 58cd2fa0be0 gallivm/nir: fix const loading on big endian systems
+  * cbf6002ba11 meson: Do not require shader cache for radv.
+  * 46c44d90279 .pick_status.json: Update to
+    08c39a8a2931e587e4715d2ed12b2fe1990aa4c3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Jul 2020 21:01:10 +0200
+
 mesa (20.1.2+git2006272227.c2f7f6a78b9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
