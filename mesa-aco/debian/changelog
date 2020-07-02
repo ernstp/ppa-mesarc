@@ -1,3 +1,43 @@
+mesa (20.2.0~git2007021904.64cdc1311b9~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 64cdc1311b9 etnaviv: move ra into own file
+  * 027e9e8da37 etnaviv: move nir compiler related stuff into .c file
+  * f1df033fccd etnaviv: move functions that generate asm to own file
+  * 79427a01909 etnaviv: drop emit macro
+  * 624b8b4a928 etnaviv: merge struct etna_compile and etna_state
+  * 0f025e8b810 etnaviv: move liveness related stuff into own file
+  * 9ae96d32dd8 etnaviv: make more use of compile_error(..)
+  * 96670c81502 etnaviv: drop OPT_V define
+  * 1636e14cfd4 etnaviv: move etna_lower_alu(..) to etnaviv_nir.c
+  * 7460d4863df etnaviv: get rid of etna_compile dependency
+  * 12b15cbcbfa etnaviv: move etna_lower_io(..) to etnaviv_nir.c
+  * ea17cbf16fa etnaviv: convert enums
+  * 34f776386ca etnaviv: delete not used struct
+  * 3cdc0d50981 ci: Move deploy stage between container & build stages
+  * fc41ec16c8b ci: Use "when: always" for pages job
+  * ab9ecb607b8 radv,vulkan: add a new x11 wsi drirc workaround for DOOM
+    Eternal
+  * 311b9f25834 Revert "vulkan/wsi/x11: Ensure we create at least
+    minImageCount images."
+  * 11a6a96f8a5 radv: fix wide lines with multisample enabled
+  * efec833a188 CI: Disable Windows build due to unstable infrastructure
+  * f2f57ef9f78 zink: implement Vk_EXT_index_type_uint8
+  * 53372175c9b radv: fix wide points and lines
+  * 8b8ffb12b40 docs: update llvmpipe GL 4.0 status
+  * af7a7f6ce7b ci: fixup tests after all indirect images fixes.
+  * 0ecae0ac0b5 llvmpipe: handle indirect images properly
+  * b7b22b735d1 draw/sample: add support for indirect images
+  * e6f7fe33244 gallivm/nir: add support for indirect image loading
+  * bc1ac7dc3f3 gallivm/img: refactor out the texel return type (v2)
+  * 6e25a5a3756 gallivm/nir: refactor image operations for indirect
+    support.
+  * 3ca3b07fc1b gallivm/nir: support passing image index into image
+    code.
+  * f75c1e83e2e llvmpipe: pass number of images into image soa create
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Jul 2020 20:58:51 +0200
+
 mesa (20.2.0~git2006290051.237d7284180~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
