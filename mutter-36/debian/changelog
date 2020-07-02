@@ -1,3 +1,12 @@
+mutter (3.36.3+git2006302233.ae8acc998~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * ae8acc998 surface-actor: Add culling offset for geometry scale -
+    take 2
+  * 86d9cd1a6 remote-desktop: Check for screencast only when required
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Jul 2020 21:03:21 +0200
+
 mutter (3.36.3+git2006271231.3a70ba7ae~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
