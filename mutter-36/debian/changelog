@@ -1,3 +1,10 @@
+mutter (3.36.3+git2007031840.454875248~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 454875248 x11: Look up reason for selection clear events from XFixes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Jul 2020 12:24:53 +0200
+
 mutter (3.36.3+git2006302233.ae8acc998~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
