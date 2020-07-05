@@ -1,3 +1,23 @@
+mesa (20.1.2+git2007040154.bab7b977d8f~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * bab7b977d8f gallium,util: undef ALIGN on FreeBSD to prevent name
+    clash
+  * b689118ca1d i965: Explicitly cast value to uint64_t
+  * f3da74cc1d9 iris: Explicitly cast value to uint64_t
+  * a6c29e347bf meson: Do not enable USE_ELF_TLS for FreeBSD
+  * 4a43f88d462 meson: Add versioning for xvmc tracker
+  * 946ef010830 mesa: fix unintended fallthrough in glIsEnabled()
+  * 6d479349f14 mesa: fix fallthrough in glformats
+  * 67fd54b281d nir/algebraic: Don't distrubte absolute-value into dot-
+    products
+  * ec398b28205 .pick_status.json: Update to
+    0e7b7c3087026015b293e224f024dc4ba7aecb84
+  * be2619862c1 radv,vulkan: add a new x11 wsi drirc workaround for DOOM
+    Eternal
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Jul 2020 12:22:45 +0200
+
 mesa (20.1.2+git2007021635.ad307a14415~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
