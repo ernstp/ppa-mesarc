@@ -1,3 +1,44 @@
+mesa (20.2.0~git2007050624.ef11d5fc8bb~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * ef11d5fc8bb st/mesa: allow R8 to not be exposed as renderable by
+    driver
+  * 9e2afe4f05a mesa/glformats: make
+    _mesa_gles_error_check_format_and_type() more consistent
+  * a573c8cd47c drirc: Add picom to adaptive_sync exclusion list
+  * 19f3c79c7ed turnip: fix tess param bo size calculation
+  * 395511d1691 nir: Add nir_lower_clip_disable.c to SCons build.
+  * a1b89dbc8f4 gitlab-ci: Enable -Werror in `meson-classic` job
+  * ec8fdf8579d nouveau: fix pointer-sign warning
+  * b9e163fa67e util: Avoid strict aliasing bugs in xxhash.
+  * 29ce8060eb0 draw/clip: fix viewport index for geometry shaders
+  * 3366171d0ac draw/clip: cleanup viewport index handling code.
+  * 0e7b7c30870 turnip: vsc improvements
+  * 4ac851ea253 turnip: rework render_tiles loop
+  * 8898ebce1a1 turnip: make tiling config part of framebuffer state
+  * 31392f83711 Revert "loader/dri3: Check for window destruction in
+    dri3_wait_for_event_locked"
+  * 02d0b2d5604 meson: Add versioning for xvmc tracker
+  * a79ca675f3d st/program: use nir_lower_clip_disable instead of
+    nir_lower_clip_vs conditionally
+  * fb2fe802f63 nir: add lowering pass for clip plane enabling
+  * f8946bd705c v3d/tex: handle correctly coordinates for
+    cube/cubearrays images
+  * 0b6e03b8481 CI: reduce bandwidth for git pull
+  * 9190cc9b151 tu,radv: fix potentially wrong offset of flexible array.
+  * e2209e869a5 meson: turn on Wimplicit-fallthrough project wide
+  * 26aa02b5ab9 nv30: add missing fallthrough comment
+  * 651441c16fd mesa: update fallthrough comment so gcc can see it
+  * 9549443a8f0 svga: add missing fallthrough comments
+  * 7579414db24 r300: add and fix up fallthrough comments
+  * dfb9be6994f mesa: fix unintended fallthrough in glIsEnabled()
+  * 8b90310b401 mesa: add missing fallthrough comment to teximage.c
+  * d88447d5ce4 mesa/vbo: add some missing fallthrough comments
+  * cb8cd644113 spirv: add missing fallthrough comments
+  * 580fe899581 radeon: add missing fallthrough comments
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Jul 2020 12:20:24 +0200
+
 mesa (20.2.0~git2007021904.64cdc1311b9~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
