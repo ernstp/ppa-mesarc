@@ -1,3 +1,47 @@
+mesa (20.2.0~git2007091654.c8d848b2782~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * c8d848b2782 panfrost: Move pool routines to common code
+  * 1d88f078201 panfrost: Drop Gallium-local pan_bo_create wrapper
+  * ed1910dc68e panfrost: Move debug flags into the device
+  * 8958fbd29e2 panfrost: Expose pool-based allocation API
+  * 34e0954f1d2 panfrost: Track the device through the pool
+  * 6ef7c05746f panfrost: Allocate pool BOs against the pool
+  * 8882d6aad63 panfrost: Introduce pan_pool struct
+  * 5d1bff290af docs/features: Track Panfrost
+  * 9497a1fbe72 docs: fix a bunch of typos
+  * 49d35f3d882 glsl: declare gl_Layer/gl_ViewportIndex/gl_ViewportMask
+    as vs builtins
+  * 26b75daef57 turnip: fix active_desc_sets not being set for compute
+    pipeline
+  * ee99a7a1cfb docs: add some missing stuff to sourcetree.rst
+  * 27b09d293ba docs: update calendar and link releases notes for 20.1.3
+  * 6b4aee78aed docs: add release notes for 20.1.3
+  * 1e3aeda5281 glsl: only allow 32 bits atomic operations on images
+  * 233af4a412d glsl: don't expose imageAtomicIncWrap for signed image
+  * 438392243fb ac/llvm: remove the -1 hack from ac_atomic_inc_wrap
+  * 0c8873d85db glsl: reject size1x8 for image variable with floating-
+    point data types
+  * 315ac941071 gitlab-ci: Remove left-behind rules:
+  * 40526451ca5 radv: compute prim_vertex_count at draw time
+  * 972081c6887 radv: adjust IA_MULTI_VGT_PARAM.PARTIAL_VS_WAVE at draw
+    time
+  * 5f1b0f4b48a radv: adjust IA_MULTI_VGT_PARAM.WD_SWITCH_ON_EOP at draw
+    time
+  * 9f561feecc7 radv: store the primitive topology hardware value in the
+    pipeline
+  * 6f734324a5e radv: implement missing
+    VK_ACCESS_MEMORY_{READ,WRITE}_BIT
+  * 02a57896f66 nv50/ir: fix memset on non trivial types warning
+  * cd67e2c280a nine: remove unused var
+  * 8f6d66d5094 zink: fix missing fallthrough comment
+  * 20dff7dc6b0 v3d: remove redefine of VG(x)
+  * 03a5b3f6d5a freedreno: fix missing fallthrough comments
+  * 40e00c800cf amd/llvm: Mark pointer function arguments as 32-byte
+    aligned.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jul 2020 18:38:56 +0200
+
 mesa (20.2.0~git2007050624.ef11d5fc8bb~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
