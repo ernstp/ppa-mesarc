@@ -1,3 +1,49 @@
+mesa (20.1.3+git2007082235.f4fab05f9c6~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f4fab05f9c6 docs/relnotes: add sha256 sums to 20.1.3
+  * 663fa46287d VERSION: bump to release 20.1.3
+  * 201fec17eac docs: add release notes for 20.1.3
+  * aeecf2010dd radv: Use correct semaphore handle type for Android
+    import.
+  * 1f1ceb2e22e v3d/compiler: Fix sorting the gs and fs inputs
+  * 41fb8c1fd05 radeonsi: fix SI_NUM_ATOMS
+  * 18993a9a9e4 radv: enable zerovram for Quantic Dream games
+  * 726d841df92 anv: Handle clamping of inverted depth ranges
+  * 68155102fbc iris: Fix fast-clearing of depth via
+    glClearTex(Sub)Image
+  * f160966c6c2 anv: garbage collect timeline semaphore when querying
+    value
+  * 7220acf57a4 v3d: Use stvpmd for non-uniform offsets in GS
+  * c8a688b9406 v3d: Add missing macro for stvpmd instruction
+  * a9830de4a90 etnaviv: replace prims-emitted query
+  * 0da51ad79d6 freedreno/fdperf: better compatible string matching
+  * b77af0554b5 vulkan/wsi: Don't consider VK_SUBOPTIMAL_KHR to be an
+    error condition
+  * 822e03feebc radv: Always enable PERFECT_ZPASS_COUNTS.
+  * 447ba093577 radv: Set handle types in Android semaphore/fence
+    import.
+  * e3b7aa22c17 radv: disable FMASK compression when drawing with
+    GENERAL layout
+  * 8241167c317 iris: return max counter value for
+    AMD_performance_monitor
+  * f0036a872b7 st/mesa: fix reporting of float perf counters max value
+  * 7a4f938c59f nouveau: fix pointer-sign warning
+  * e0f87f0ace2 gallium,util: undef ALIGN on FreeBSD to prevent name
+    clash
+  * 6a9eaabeaa7 i965: Explicitly cast value to uint64_t
+  * ab052fba1d8 iris: Explicitly cast value to uint64_t
+  * 5d3669b21e4 meson: Do not enable USE_ELF_TLS for FreeBSD
+  * a35c4675a72 meson: Add versioning for xvmc tracker
+  * 0d63d16e451 mesa: fix unintended fallthrough in glIsEnabled()
+  * 338413892b0 mesa: fix fallthrough in glformats
+  * faacf8a83ab nir/algebraic: Don't distrubte absolute-value into dot-
+    products
+  * b0077b407e5 radv,vulkan: add a new x11 wsi drirc workaround for DOOM
+    Eternal
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jul 2020 18:42:13 +0200
+
 mesa (20.1.2+git2007040154.bab7b977d8f~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
