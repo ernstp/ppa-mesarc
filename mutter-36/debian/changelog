@@ -1,3 +1,11 @@
+mutter (3.36.4+git2007101526.1fd53c480~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 1fd53c480 screen-cast/src: Remove follow up timeout source on
+    disable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Jul 2020 12:54:01 +0200
+
 mutter (3.36.4+git2007081927.0c6ac287e~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
