@@ -1,3 +1,27 @@
+mesa (20.1.3+git2007132359.4afc5f4fbb5~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 4afc5f4fbb5 panfrost: Fix write to free'd memory
+  * b52fbdb1b52 panfrost: Fix fence leak
+  * 181c0c50a27 spirv: Allow block-decorated struct types for constants
+  * 8f9e4f9f626 spirv: Skip phis in unreachable blocks in the second phi
+    pass
+  * 1d5cd248d7a .pick_status.json: Update to
+    d4f4546ada7417b0164ceb4f93a652a41438b15b
+  * 948eb32f4a5 iris: fix fallback to swrast driver
+  * 22d72d8d61f .pick_status.json: Update to
+    b8df1c43d24a73740ddd8702d480eded11287b3f
+  * 92d4329230d st/mesa: set compressed_data to NULL when freed
+  * 5394bcbc728 glsl: only allow 32 bits atomic operations on images
+  * 7bd61c9e640 glsl: don't expose imageAtomicIncWrap for signed image
+  * 1ad6d99778e glsl: reject size1x8 for image variable with floating-
+    point data types
+  * 4520242547e freedreno/a2xx: fix compressed textures
+  * 39bf929ced3 .pick_status.json: Update to
+    50d20dc055decf43f956601d71572f825c2b2eca
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Jul 2020 12:51:53 +0200
+
 mesa (20.1.3+git2007082235.f4fab05f9c6~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
