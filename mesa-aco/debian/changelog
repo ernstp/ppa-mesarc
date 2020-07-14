@@ -1,3 +1,51 @@
+mesa (20.2.0~git2007141134.f95637f01a7~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * f95637f01a7 meson: fix android vulkan build
+  * 3ed104b2aa1 gitlab-ci: Drop dependencies:
+  * aa2457fc130 gitlab-ci: Remove indirect dependencies from needs:
+  * bf1376aba0e tu: Don't invalidate irrelevant state when changing
+    pipeline
+  * a16136796ff freedreno/a6xx: Add some documentation for shared consts
+  * e1fa740c4c1 freedreno/a6xx: Rename and document HLSQ_UPDATE_CNTL
+  * dad042b15a9 clover: implements clEnqueueFillBuffer
+  * fea109d40ff clover: add more cl_mem_object_type to
+    pipe_texture_target mapping
+  * ac642d8e6d4 radv: add the custom border color BO to the list of
+    buffers
+  * 684cfca7489 freedreno/registers: Rename SP_2D_SRC_FORMAT
+  * d5c82c3c5f2 freedreno/a6xx: Split clear and blit texture into
+    different functions
+  * f383b2c18ac freedreno/a6xx: Don't take pipe_blit_info in
+    emit_blit_dst
+  * 3158b8ba0ab freedreno/a6xx: Program RB_UNKNOWN_8C01 in setup helper
+  * 3ee89e6d03b freedreno/a6xx: Move CP_SET_MARKER to setup helper
+  * 3961fb7e28b freedreno/a6xx: Move REG_A6XX_SP_2D_SRC_FORMAT
+    programming to helper
+  * 03ad130bc9c freedreno/a6xx: Program
+    A6XX_SP_2D_SRC_FORMAT_COLOR_FORMAT based on dst format
+  * 5c3c0c5c7b4 freedreno/a6xx: Make blit_control helper a little more
+    helpful
+  * 77d4aa76876 freedreno/a6xx: Enable FMT6_10_10_10_2_UNORM blitting
+  * 1a58596258b freedreno/a6xx: Separate stencil sysmem clear fix
+  * ab61393bc75 freedreno/a6xx: Don't emit src state when clearing
+  * 416513d915b freedreno/a6xx: Consolidate computing blit_cntl
+  * b36c675858f freedreno/a6xx: Program SP_2D_SRC_FORMAT outside blit
+    loop
+  * 556cd8f3e18 freedreno/a6xx: Set src and dst rects outside blit loop
+  * 25bfc3b0494 freedreno/a6xx: Don't set unknown bit when tiling
+    differs
+  * def7e7426de freedreno/a6xx: Split out src and dst setup helpers for
+    blit
+  * bf0cf4c181f freedreno/a6xx: Move fd6_ifmt into fd6_blitter.c
+  * 094b68fa728 freedreno/a6xx: Don't blit with R2D_RAW
+  * 53e36cf062f turnip: drop GS clear path
+  * a1a80c38ea2 turnip: clean up primitive output state
+  * 7748afbb1ed freedreno/regs: update primitive output related
+    registers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Jul 2020 12:49:38 +0200
+
 mesa (20.2.0~git2007091654.c8d848b2782~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
