@@ -1,3 +1,48 @@
+mesa (20.2.0~git2007181821.912ad091125~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 912ad091125 freedreno/ir3/ra: fix array conflicts for split/merged
+  * b1465c382b5 freedreno/ir3/ra: assign vreg names to all array
+    elements
+  * 6317f7d574a freedreno/ir3/ra: debug msgs tweak
+  * c2d94aa365d freedreno/ir3: fix half-reg array stores
+  * 5be171b8886 freedreno/ir3: set array precision on creation
+  * 0472ca2aa5c freedreno/ir3/parser: half-precision relative regs
+  * 79b0651c245 freedreno: whitespace fix
+  * 835201dd76f freedreno: small comment re-word
+  * 2b343238a1f zink: free all ntv allocations after creating shader
+    module
+  * adc4f3896ae zink: free pipeline cache during program destroy
+  * 1ff2d195b04 zink: destroy descriptor pools on context destroy
+  * 7116decfce3 zink: destroy gfx program when a shader is freed
+  * 9e9c8e2f794 android: panfrost/encoder: add libmesa_nir static
+    dependency
+  * 0ef168d5130 panfrost: Fix calls to
+    panfrost_flush_batches_accessing_bo
+  * 858cc13eb28 panfrost: Make panfrost_bo_wait take a wait_readers bool
+  * 5b380483476 freedreno/ir3: Add unit tests for derivatives disasm.
+  * 3d7d5d220b5 freedreno/ir3: Fix duplicated fine derivatives
+    instructions.
+  * 862d85a63ff amd/addrlib: Clean up unused colorFlags argument
+  * a37aeb128d5 amd/common: Cache intra-tile addresses for retile map.
+  * f302ef3853b aco: use s_waitcnt_depctr to mitigate
+    VMEMtoScalarWriteHazard
+  * bcf94bb933e aco: properly recognize that s_waitcnt mitigates
+    VMEMtoScalarWriteHazard
+  * 33f33bb7d69 meson: Enable GCing of functions and data from
+    compilation units by default.
+  * 610af7e1acc panfrost: Enable FP16 by default
+  * e5169b1ca1a gitlab-ci: re-enable all a630 jobs
+  * 4080f8bf2b0 freedreno/a2xx: Fix compiler warning in disasm.
+  * cf55abe750f gitlab-ci: Re-add kernels for bare-metal
+  * 2aa507f87a6 nir: Set the alignment for SSBO lowering
+  * d735f075a6a intel/perf: Move perf query register programming to
+    static tables.
+  * d4e56930c25 intel/perf: Fix unused var warning in release builds.
+  * afe07c7fa7c intel: Fix release-build warnings about sf_entry_size.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Jul 2020 02:54:51 +0200
+
 mesa (20.2.0~git2007141134.f95637f01a7~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
