@@ -1,3 +1,10 @@
+mutter (3.36.4+git2007172336.ef3dac706~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * ef3dac706 Update Brazilian Portuguese translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Jul 2020 02:59:28 +0200
+
 mutter (3.36.4+git2007101526.1fd53c480~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
