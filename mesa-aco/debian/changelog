@@ -1,3 +1,11 @@
+mesa (20.2.0~git2007200714.41c7bb6ec04~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 41c7bb6ec04 llvmpipe: add framebuffer fetching support (v1.1)
+  * 0e0b6d477b9 llvmpipe/cs: respect render condition
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Jul 2020 10:59:23 +0200
+
 mesa (20.2.0~git2007181821.912ad091125~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
