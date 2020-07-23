@@ -1,3 +1,51 @@
+mesa (20.2.0~git2007232055.1610c69f34d~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 1610c69f34d tu: Enable VK_EXT_depth_clip_enable
+  * 1b3be07b5fa aco: ensure readfirstlane subdword operands are always
+    dword aligned
+  * 4c89bfc4ec0 aco: prevent infinite recursion in RA for subdword
+    variables
+  * 626081fe4bf aco: don't split store data if it was already split into
+    more elements
+  * bd75e992330 aco: ensure to not extract more components than have
+    been fetched
+  * 6bc5ce7a91d radv: Add timeline syncobj for timeline semaphores.
+  * 55d8022878f radv: Add winsys functions for timeline syncobj.
+  * 66e598d0a6f radv: Add winsys support for submitting timeline
+    syncobj.
+  * fb6b38d7800 radv: Add thread for timeline syncobj submission.
+  * fa97061a823 radv/winsys: Add binary syncobj ABI changes for timeline
+    semaphores.
+  * fb5237910b2 amd: Add detection of timeline semaphore support.
+  * ce4064fe2fe nir/ lower_int_to_float: Handle umax and umin
+  * 589d8665f01 ci: Use half as many parallel softpipe / virgl test jobs
+  * d9693c6620d ci: Do not mark container / pages jobs as interruptible
+  * e74933e8ab3 ci: Use FDO_CI_CONCURRENT in run-shader-db.sh as well
+  * 429ec827d4a ci: Namespace trace artifacts to the job number
+  * 772ed657a27 nir_ allow nir_lower_clip_halfz to run in tess eval
+    shader
+  * 09ecfd95ee1 nir: allow lower_psiz_mov to run in tessellation stages
+  * fced3c43e7a Revert "llvmpipe: Use the default behavior of
+    ALLOW_MAPPED_BUFFERS."
+  * be6c53bb9d3 llvmpipe/ms: fix sign extension bug in rasterizer.
+  * 4d73988f6fe intel/ir/gen12+: Work around FS performance regressions
+    due to SIMD32 discard divergence.
+  * 45d159cb410 glx: Fix build and warnings with -Dglx=dri -Dglx-
+    direct=false
+  * ba22f014f9d softpipe: Enable PIPE_CAP_TGSI_ANY_REG_AS_ADDRESS;
+  * 8e61fd92d4a softpipe: Enable PIPE_CAP_TGSI_TEXCOORD.
+  * 259a03b4f0b softpipe: Add support for reporting shader-db output.
+  * 991def0edc8 softpipe: Convert to comma-separated SOFTPIPE_DEBUG for
+    debug options.
+  * 86cfb62b87e softpipe: Refactor pipe_shader_state setup.
+  * e67da8d25fa llvmpipe: enable robust buffer access + GL 4.3, GLES 3.2
+    and robust buffer access behaviour
+  * 6d3cefe727f llvmpipe: add device reset query context hook.
+  * 3cb3d17312f glx/drisw: add robustness support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 24 Jul 2020 01:08:11 +0200
+
 mesa (20.2.0~git2007200714.41c7bb6ec04~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
