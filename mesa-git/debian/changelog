@@ -1,3 +1,48 @@
+mesa (20.1.4+git2007230022.654b7472fd4~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 654b7472fd4 radeonsi/gfx10: set the correct value for
+    OFFCHIP_BUFFERING
+  * 4bf85206032 radeonsi: add missing initialization of registers
+  * 49267731e30 ac: update register and packet definitions for
+    preemption
+  * c0f387ccd9a aco: fix scratch loads which cross element_size
+    boundaries
+  * a7c702826a8 .pick_status.json: Update to
+    04e38eb2e765aaa568b60af9a630be9f1161bad5
+  * ec9dbf95144 docs/relnotes: add sha256 sums to 20.1.4
+  * d6154f155b4 VERSION: bump to release 20.1.4
+  * 714aa7167d7 docs: add release notes for 20.1.4
+  * 96cde778462 nir/opt_if: Fix opt_if_simplification when else branch
+    has jump
+  * c334f84238e mesa/program: fix shadow property for samplers
+  * f9fdd9dfc17 nvc0: fix macro define for NVE4_COPY()
+  * ea013055895 anv: properly handle fence import of sync_fd = -1
+  * b3fe8cb8d96 meson: Add mising git_sha1.h dependency.
+  * f601c39bb30 egl/dri2: try to bind old context if bindContext failed
+  * eece36ecbad dri2: do not conflate unbind and bindContext() failure
+  * ceec2cfe4c9 dri2: dri2_make_current() fold multiple if blocks
+  * b91d522bd2f radv: replace discard with demote for Quantic Dream
+    games
+  * 804dbfc098d nir/lower_int64: lower 64-bit amul
+  * 0c1db924089 intel/fs: Use the correct logical op for global float
+    atomics
+  * 2d64914d00e ac/surface: adapt surf_size when modifying surf_pitch
+  * 6fc1bc19acf radv: fix destroying the syncobj when exporting a fence
+    FD
+  * 77b1dd655d3 panfrost: Revert "Disable frame throttling"
+  * a83d381e545 panfrost: Fix write to free'd memory
+  * 273b9a1ccc2 panfrost: Fix fence leak
+  * fd3caf58284 spirv: Allow block-decorated struct types for constants
+  * 32d2431a553 spirv: Skip phis in unreachable blocks in the second phi
+    pass
+  * d5fcf186141 iris: fix fallback to swrast driver
+  * c27aae4f5c1 st/mesa: set compressed_data to NULL when freed
+  * aa9b4e30d40 glsl: only allow 32 bits atomic operations on images
+  * 8e44e8cf2ce glsl: don't expose imageAtomicIncWrap for signed image
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 24 Jul 2020 01:10:28 +0200
+
 mesa (20.1.3+git2007171610.3e257132857~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
