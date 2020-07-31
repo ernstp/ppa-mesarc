@@ -1,3 +1,11 @@
+corectrl (1.2.0~git2007281512.367ba8a~b~mesarc9) bionic; urgency=medium
+
+  * New snapshot:
+  * 367ba8a Fix bulgarian translation
+  * a8ca3c1 Add workaround for bogus values on critical temperature
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 31 Jul 2020 15:50:51 +0200
+
 corectrl (1.2.0~git2007151807.cd07f04~b~mesarc9) bionic; urgency=medium
 
   * New snapshot:
