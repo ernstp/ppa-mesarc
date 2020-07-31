@@ -1,3 +1,43 @@
+mesa (20.2.0~git2007311414.cf8a8b764e5~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * cf8a8b764e5 ci: Set date in LAVA DUTs from NTP servers
+  * 7f40db42a2d docs: Explain how to set up a personal gitlab runner.
+  * 8e626879ddd freedreno/a6xx: Fix CP_BIN_SIZE_ADDRESS name
+  * 6c11a7994dd i965/i915: Add colorspace support to YUV sampling
+  * d8fdb8dab46 nir: Add colorspace support to YUV lowering pass
+  * f3509c07663 zink: add extension loading framework for spirv builder
+  * a91011c9eca pan/mdg: emit REGISTER_UNUSED on unused ALU src2
+  * a2065917cc8 mapi: Return NULL function pointers for
+    GL_EXT_debug_marker
+  * 258165bed4d egl: drop left-over function prototype
+  * ed3f1e04c7d egl: rename _eglMatchDriver() to _eglInitializeDisplay()
+  * 6d6b82a159c egl: inline _eglMatchAndInitialize() and refactor
+    _eglMatchDriver()
+  * a77050c0345 egl: fix _eglMatchDriver() return type
+  * f91851e6159 egl: drop unnecessary _eglGetDriver()
+  * d24e3ea8cb2 egl: replace _eglInitDriver() with a simple variable
+  * 3d4deb659e1 pan/mdg: remove ins->br_compact and ins->branch_extended
+  * 8150c1d6320 pan/mdg: defer branch packing
+  * 140185eb047 pan/mdg: refactor emit_alu_bundle
+  * 0f0f9ee710f pan/mdg: remove ins->alu
+  * 5299239c2ea pan/mdg: externalize mir_pack_mod
+  * 1a4d165683a pan/mdg: defer register packing
+  * bea6a652db5 pan/mdg: eliminate references to ins->load_store.op
+  * 92c808cd475 pan/mdg: eliminate references to ins->texture.op
+  * 83592de7ad2 pan/mdg: apply float outmods to textures
+  * 5011373e2b4 pan/mdg: eliminate references to ins->alu.outmod
+  * f34815c6bef pan/mdg: fix comment
+  * 5f7e0185cd9 pan/mdg: eliminate references to ins->alu.reg_mode
+  * f4c89bf9bdf pan/mdg: eliminate references to ins->alu.op
+  * 598527f2feb pan/mdg: prepare effective_writemask()
+  * b1b0ce04b3e pan/mdg: fix src_type in instructions that need a
+    implicit zero
+  * 75b1f3d39df drm-shim: Return -EINVAL instead of abort()ing on
+    unknown ioctls.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 31 Jul 2020 15:51:22 +0200
+
 mesa (20.2.0~git2007232055.1610c69f34d~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
