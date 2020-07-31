@@ -1,3 +1,50 @@
+mesa (20.1.4+git2007302207.5dfdd9b9f04~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5dfdd9b9f04 radv: fix build on Android 7 (v2)
+  * a9895eaf764 intel/vec4: fix out of bounds read
+  * d302002762d mesa: fix out of bounds access in
+    glGetFramebufferParameterivEXT
+  * 6a4460a1511 util: fix possible buffer overflow in
+    util_get_process_exec_path
+  * 07e82dd28c8 util: fix possible fd leaks in os_socket_listen_abstract
+  * 0a252a3155d freedreno/a6xx: fixup draw state earlier
+  * a6cb316fcdf egl/dri2: only take a dri2_dpy reference when binding a
+    new context/surfaces
+  * 2e2a315d351 iris: Delete shader variants when deleting the API-
+    facing shader
+  * 158babb8a69 .pick_status.json: Update to
+    c77a414ec2d3cfde3783300afcf59e4f87826b82
+  * 41e7c47e683 prevent multiply defined symbols
+  * 03a08efb45e anv: fix descriptor set free
+  * 55d4d57d365 nine: fix incorrect calculation of layer count for 3D
+    textures
+  * cfdf35b7d4a i965: propagate error from gen_perf_begin_query to
+    glBeginPerfQueryINTEL
+  * 5dfa11e79cc iris: propagate error from gen_perf_begin_query to
+    glBeginPerfQueryINTEL
+  * 10dc6dcfafa radv: Fix host->host signalling with legacy timeline
+    semaphores.
+  * 528b70db234 radv: Fix uninitialized variable in renderpass.
+  * 5f94d72fd9b .pick_status.json: Mark
+    1b3be07b5faf867f698668080b060a270c5f795e as denominated
+  * d24d1058620 .pick_status.json: Mark
+    bd75e9923302a3d389469b7b233968576a46f4de as denominated
+  * 93991d31868 .pick_status.json: Update to
+    903a7d0f87832886eb6d54730553c8901a6b1c7b
+  * d33a45f615c aco: prevent infinite recursion in RA for subdword
+    variables
+  * 9657d672a94 aco: don't split store data if it was already split into
+    more elements
+  * 927e22f866a intel/ir/gen12+: Work around FS performance regressions
+    due to SIMD32 discard divergence.
+  * f44f3cdf170 bin/gen_release_notes: automatically commit release
+    notes
+  * 31f4daa0ffe .pick_status.json: Update to
+    14a12b771d0a380defacafe5825362af77ff21bd
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 31 Jul 2020 15:53:44 +0200
+
 mesa (20.1.4+git2007230022.654b7472fd4~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
