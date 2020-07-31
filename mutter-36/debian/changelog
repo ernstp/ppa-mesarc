@@ -1,3 +1,12 @@
+mutter (3.36.4+git2007302034.eae21f01d~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * eae21f01d cogl-texture-2d: Flush the journal before mipmapping
+  * 4d8538d6a window-actor/wayland: Remove custom get_paint_volume()
+    vfunc
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 31 Jul 2020 15:56:00 +0200
+
 mutter (3.36.4+git2007172336.ef3dac706~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
