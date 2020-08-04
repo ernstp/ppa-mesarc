@@ -1,3 +1,24 @@
+mesa (20.1.4+git2008032030.99e7735280a~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 99e7735280a intel/eu: Use non-coherent mode (BTI=253) for stateless
+    A64 messages
+  * e20bf911956 pan/mdg: Test for SSA before chasing addresses
+  * 1a7ee493c2f pan/mdg: Mask spills from texture write
+  * 9b2eed8b054 mesa/st: Actually free the driver part of memory objects
+    on destruction.
+  * 4e1e9189442 .pick_status.json: Update to
+    3c2a1af660f13e3598069e07d2fdedffd350017c
+  * 17d249a0865 radv: fix build on Android 7 (v2)
+  * 0f8ffd6b020 intel/vec4: fix out of bounds read
+  * 71e4fd10210 mesa: fix out of bounds access in
+    glGetFramebufferParameterivEXT
+  * 8aca794ef32 util: fix possible buffer overflow in
+    util_get_process_exec_path
+  * e159634bf49 util: fix possible fd leaks in os_socket_listen_abstract
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Aug 2020 17:17:29 +0200
+
 mesa (20.1.4+git2007302207.5dfdd9b9f04~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
