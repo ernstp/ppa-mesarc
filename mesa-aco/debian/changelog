@@ -1,6 +1,12 @@
 mesa (20.2.0~git2008041558.9a9b35a3bb4~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Aug 2020 17:18:30 +0200
+
+mesa (20.2.0~git2008041558.9a9b35a3bb4~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
   * 9a9b35a3bb4 lima: Fix lima_screen_query_dmabuf_modifiers()
   * ee2c58dde46 tu: Implement VK_EXT_conditional_rendering
   * f226b198f5b tu: Reset has_tess after renderpass
