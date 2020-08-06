@@ -1,3 +1,10 @@
+mutter (3.36.4+git2008030829.3dab5120e~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 3dab5120e background-actor: Mipmap background texture rendering
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Aug 2020 14:43:54 +0200
+
 mutter (3.36.4+git2007302034.eae21f01d~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
