@@ -1,3 +1,55 @@
+mesa (20.1.5+git2008052308.2858b432f42~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2858b432f42 docs/relnotes: add sha256 sums to 20.1.5
+  * 3ba7f954b8a VERSION: bump to release 20.1.5
+  * 8a71ecb28bb docs: add release notes for 20.1.5
+  * d03bf3ece56 radeonsi: disable SDMA on gfx9
+  * 65a6b368026 anv: Pass device to setup_gralloc0_usage for error
+    reporting
+  * d1ac2ffeb6d nir/deref: Don't try to compare derefs containing casts
+  * d23bbc8c28b intel/eu: Use non-coherent mode (BTI=253) for stateless
+    A64 messages
+  * 8202415ebc7 pan/mdg: Test for SSA before chasing addresses
+  * 3be7fca3ee2 pan/mdg: Mask spills from texture write
+  * 440275b3e25 mesa/st: Actually free the driver part of memory objects
+    on destruction.
+  * 4fb918f4560 radv: fix build on Android 7 (v2)
+  * d7158dcc12b intel/vec4: fix out of bounds read
+  * 3af72354fee mesa: fix out of bounds access in
+    glGetFramebufferParameterivEXT
+  * f2de23e7855 util: fix possible buffer overflow in
+    util_get_process_exec_path
+  * 75e81ff0d77 util: fix possible fd leaks in os_socket_listen_abstract
+  * d0adfbc984a egl/dri2: only take a dri2_dpy reference when binding a
+    new context/surfaces
+  * 17991448a2e iris: Delete shader variants when deleting the API-
+    facing shader
+  * 414247c1ad3 prevent multiply defined symbols
+  * b1442e2a6b5 anv: fix descriptor set free
+  * 370bd3ba471 nine: fix incorrect calculation of layer count for 3D
+    textures
+  * 33d59a36093 i965: propagate error from gen_perf_begin_query to
+    glBeginPerfQueryINTEL
+  * e650150c812 iris: propagate error from gen_perf_begin_query to
+    glBeginPerfQueryINTEL
+  * 6c1358b0248 radv: Fix host->host signalling with legacy timeline
+    semaphores.
+  * 92c179f52aa radv: Fix uninitialized variable in renderpass.
+  * fcd612ba568 aco: prevent infinite recursion in RA for subdword
+    variables
+  * 692df26b7d1 aco: don't split store data if it was already split into
+    more elements
+  * 797ed40aa70 intel/ir/gen12+: Work around FS performance regressions
+    due to SIMD32 discard divergence.
+  * 33f8d25fa4c bin/gen_release_notes: automatically commit release
+    notes
+  * 402e0f1291f radeonsi/gfx10: set the correct value for
+    OFFCHIP_BUFFERING
+  * 684712ef732 radeonsi: add missing initialization of registers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Aug 2020 14:41:43 +0200
+
 mesa (20.1.4+git2008032030.99e7735280a~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
