@@ -1,3 +1,50 @@
+mesa (20.2.0~git2008061250.c6aadbae715~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * c6aadbae715 radv: Don't use both DCC and CMASK for single sample
+    images.
+  * e2c614a415b appveyor: Use Python3.
+  * 0f9fb7ffaae appveyor: Upgrade pip.
+  * 2e665458a90 util: Fix SCons build.
+  * 56ab105182e freedreno: Add more asserts for DST_OFF/NUM_UNIT in
+    indirect const uploads.
+  * 3e970de3603 freedreno: Increase the NUM_UNIT on compute's consts in
+    indirect dispatch.
+  * f07e25bc6d8 freedreno/ir3: Clean up instrlen setup.
+  * 8f637d66cc1 freedreno: Split ir3_const's user buffer and indirect
+    upload APIs.
+  * 154299934d8 freedreno: Rename emit_const_bo() to emit_const_ptrs().
+  * 51acfe22306 freedreno/ir3: Simpify the immediates from an array of
+    vec4 to array of dwords.
+  * e873c4da08d freedreno/ir3: Merge the redundant
+    immediate_idx/immediates_count fields
+  * 5e922fbc160 glsl_to_nir: fix bitfield_extract with 16-bit operands
+  * 92f5e94a937 glsl: improve precision determination for calls
+  * 282a1e6288f glsl: don't lower to mediump for desktop OpenGL
+  * 01e00856375 glsl: don't create conversion opcodes for array types
+  * 5020403c703 glsl: don't lower atomic functions to mediump
+  * 93076f60d3a glsl: don't inline intrinsics for mediump
+  * 48a6255186d glsl: fix constant expression evaluation for 16-bit
+    types
+  * f2d5f4851ab glsl: lower_precision - fix assertion failure with
+    dereferences of constants
+  * a88fd7bfdc6 docs: update calendar and link releases notes for 20.1.5
+  * 2d3f81f3207 docs: add release notes for 20.1.5
+  * a4c4e0103a5 glsl: remove LowerPrecisionTemporaries
+  * c4e0cae90c5 gallium: replace 16BIT_TEMPS cap with 16BIT_CONSTS
+  * 0a763c0c86b glsl/lower_precision: split out const lowering
+  * 4f060549be4 freedreno/ir3: lower local_index using local_id
+  * e0947903fc7 freedreno/ir3: ir3_cmdline updates
+  * 283ad85944b radeonsi: call
+    nir_split_array_vars/shrink_vec_array_vars/opt_find_array_copies
+  * 47beee2eb3f radeonsi: reorder NIR optimizations
+  * 0294eaed809 radeonsi: extend workaround for KHR-
+    GL45.texture_view.view_classes on gfx9
+  * caa98246a0e st/mesa: optimize DEPTH_STENCIL copies using fragment
+    shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Aug 2020 14:39:21 +0200
+
 mesa (20.2.0~git2008041558.9a9b35a3bb4~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
