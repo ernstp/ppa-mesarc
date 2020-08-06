@@ -1,3 +1,15 @@
+mesa (20.3.0~git2008061853.782ba8d3ae5~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 782ba8d3ae5 st/mesa: Treat vertex outputs absent in outputMapping as
+    zero in mesa_to_tgsi
+  * a92cfa66b4e Bump development version and clear new_features
+  * 7f06d194fd3 anv: Advertise shaderIntegerFunctions2
+  * 9e397956b09 panfrost: signal syncobj if nothing is going to be
+    flushed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Aug 2020 23:56:04 +0200
+
 mesa (20.2.0~git2008061250.c6aadbae715~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
