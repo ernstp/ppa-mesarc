@@ -160,7 +160,7 @@ override_dh_clean:
 	dh_clean
 
 override_dh_auto_configure:
-	echo "[binaries]\nllvm-config = \"llvm-config-${LLVM_VERSION}\"" > meson-config.txt
+	echo "[binaries]\nllvm-config = 'llvm-config-${LLVM_VERSION}'" > meson-config.txt
 	$(buildflags) dh_auto_configure -- \
 		$(confflags) --native-file=../meson-config.txt
 
