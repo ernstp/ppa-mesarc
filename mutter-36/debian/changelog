@@ -1,3 +1,17 @@
+mutter (3.36.4+git2008071319.e3b213f9d~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * e3b213f9d clutter: fix memleak in test error path
+  * eea81807e test-utils: Only initialize client when we're returning it
+  * fdb76593d group: Free group if returning early
+  * 143771441 cogl: Use autopointers to free structs on return
+  * 52a6b5df5 x11: Add STRING/UTF8_STRING targets for selection sources
+    lacking them
+  * 299569c3b x11: Handle selection windows being destroyed before new
+    selection
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 09 Aug 2020 12:53:29 +0200
+
 mutter (3.36.4+git2008030829.3dab5120e~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
