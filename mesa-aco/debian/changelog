@@ -1,3 +1,53 @@
+mesa (20.3.0~git2008081715.dd003abd2fc~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * dd003abd2fc meson: bump required glvnd version
+  * 7fbadfc385c driconf: fix force_gl_vendor description
+  * 800816d70be egl/entrypoint-check: add check that GLVND and plain EGL
+    have the same entrypoints
+  * 351d513e30b egl/entrypoint-check: split sort-check into a function
+  * 04bd58ff79e Correct a typo in threads_win32.h
+  * e3069c42577 pick-ui: specify git commands in "resolve cherry pick"
+    message
+  * b238d17a02f zink: Fix 32-bit compilation
+  * 08f3dcf2f6e i965: add support for force_gl_vendor
+  * ab92c117809 freedreno/ir3: don't install ir3_compiler cmdline tool
+  * 3b6e8670f81 freedreno/registers: add some missing regs to build
+  * 1e28745bc0d meson/freedreno: Fix lua requirement
+  * 0cdd411b6d7 radeonsi: various fixes for gfx10.3
+  * e2e700f6053 radeonsi: remove the NGG hack decreasing LDS usage to
+    deal with overflows
+  * 97456e847e0 radeonsi: add a common function for getting the size of
+    gs_ngg_scratch
+  * 68b3e92fef0 radeonsi: don't count unusable vertices to the NGG LDS
+    size
+  * 64c741ffb7a radeonsi: fix applying the NGG minimum vertex count
+    requirement
+  * 7a468fc0f6a radeonsi: increase minimum NGG vertex count requirement
+    per workgroup on gfx 10.3
+  * 633d2aa9157 radeonsi: use the same units for esgs_ring_size and
+    ngg_emit_size
+  * b6fb09fd843 radeonsi: use correct wave size in
+    gfx10_ngg_calculate_subgroup_info
+  * 61c671c97e8 Revert "radeonsi: honor a user-specified pitch on
+    gfx10.3"
+  * 15bd3f3712a ac/gpu_info: set num_tiles_pipes on gfx10+ too
+  * 9333a8570d2 radeonsi: enable ETC2 hw acceleration on Raven2
+  * 1185b3f32d9 zink: pre-hash gfx-pipeline-state
+  * 7be12df5e62 zink: rename zink_gfx_program::stages to 'modules'
+  * 6196f2aa937 zink: always compile shaders in pipeline order
+  * c312299316c zink: start using per-stage flags for new shaders,
+    refcount shader modules
+  * 76d3645dd2e zink: use ZINK_SHADER_COUNT instead of PIPE_SHADER_TYPES
+    - 1 everywhere
+  * 0f059d550bd zink: split up creating zink_shader objects and
+    VkShaderModule objects
+  * a03d17ede77 zink: refcount zink_gfx_program objects
+  * 8772c693c5a zink: adjust zink_shader struct to contain full
+    streamout info
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 09 Aug 2020 12:48:41 +0200
+
 mesa (20.3.0~git2008061853.782ba8d3ae5~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
