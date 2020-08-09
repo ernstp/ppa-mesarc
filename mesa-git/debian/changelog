@@ -1,3 +1,28 @@
+mesa (20.1.5+git2008081659.b044f25a570~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * b044f25a570 egl/entrypoint-check: add check that GLVND and plain EGL
+    have the same entrypoints
+  * ef5383469a6 egl/entrypoint-check: split sort-check into a function
+  * ac8db57a59c pick-ui: specify git commands in "resolve cherry pick"
+    message
+  * 49c56c275ad radeonsi: fix applying the NGG minimum vertex count
+    requirement
+  * 7eafd5a305a radeonsi: use correct wave size in
+    gfx10_ngg_calculate_subgroup_info
+  * 563ff554e93 .pick_status.json: Update to
+    800816d70be50b0b04669a016288121e1b11f0c8
+  * db3f58da077 anv: fix incorrect realloc failure handling
+  * a4a9ace3921 st/mesa: Treat vertex outputs absent in outputMapping as
+    zero in mesa_to_tgsi
+  * 53e48eb250e anv: Advertise shaderIntegerFunctions2
+  * 1ba42789df2 panfrost: signal syncobj if nothing is going to be
+    flushed
+  * 99d968c304b .pick_status.json: Update to
+    9333a8570d2174b73da63c3ee6f1a740ae487ab8
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 09 Aug 2020 12:51:09 +0200
+
 mesa (20.1.5+git2008052308.2858b432f42~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
