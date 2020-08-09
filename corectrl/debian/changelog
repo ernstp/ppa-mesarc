@@ -1,3 +1,10 @@
+corectrl (1.2.0~git2008082006.a7dc86a~b~mesarc9) bionic; urgency=medium
+
+  * New snapshot:
+  * a7dc86a Fixed wine executables are ignored on some cases
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 09 Aug 2020 12:48:16 +0200
+
 corectrl (1.2.0~git2007281512.367ba8a~b~mesarc9) bionic; urgency=medium
 
   * New snapshot:
