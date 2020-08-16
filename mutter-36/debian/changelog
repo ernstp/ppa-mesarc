@@ -1,3 +1,10 @@
+mutter (3.36.5+git2008112141.7d061a06d~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 7d061a06d Bump version to 3.36.5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Aug 2020 10:22:28 +0200
+
 mutter (3.36.4+git2008071319.e3b213f9d~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
