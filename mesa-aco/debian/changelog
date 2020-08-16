@@ -1,3 +1,47 @@
+mesa (20.3.0~git2008160827.a76423e481a~b~mesaaco3) bionic; urgency=medium
+
+  * New snapshot:
+  * a76423e481a spirv/vtn_cfg.c: Include util/debug.h for
+    env_var_as_boolean.
+  * 430e3310e2a llvmpipe: only read 0 for channels being read
+  * f1001a38275 CI: temp disable t720/t760 jobs.
+  * 031f9e17d2c anv: don't fail userspace relocation with perf queries
+  * dc667b1f192 nv50/ir/nir: fix smem size
+  * 384c4df23da clover/nir: fix mem_shared by using
+    address_format_32bit_offset
+  * aa8661141a0 android: util/format: fix generated sources rules
+  * b41e74ae4a7 spirv: Add a MESA_SPIRV_FORCE_UNSTRUCTURED environment
+    variable
+  * 217def3ac67 spirv: parse unstructured CFG
+  * 467b90fcc46 spirv: extract switch parsing into its own function
+  * 96dff31bc8f spirv: Move the emit a 'return value' store logic into
+    own function
+  * 4638de8b1b3 nir/lower_goto_if: Add some debug prints
+  * d57573dcd4a nir/lower_goto_if: Add a route::outside set
+  * d2bf850672b nir/lower_goto_if: Replace a tripple loop with a double
+    loop
+  * b892d473b4e nir/lower_goto_if: Add a block_for_singular_set helper
+  * 193765e26ba nir/lower_goto_if: Sort blocks in select_fork
+  * 0fad20f21b3 nir/lower_goto_if: Rework some set union logic
+  * d1617985896 nir/lower_goto_if: Rework handling of skip targets
+  * 2455d03c311 nir/lower_goto_if: Use util/list instead of exec_list
+  * f69d732fcab nir/lower_goto_if: Clean up ralloc usage
+  * 202b4df4aee nir/lower_goto_if: Document some data structures
+  * b273611bb17 nir: Add a structurizer
+  * 025bdbac3e0 nir: Add goto_if jump instruction
+  * 92db942fc6a nir: Add and use nir_foreach_block_unstructured helpers
+  * 4768ea1a77a nir: Add a structured flag to nir_shader
+  * 19f35735a09 spirv: rename vtn_emit_cf_list to
+    vtn_emit_cf_list_structured
+  * 16f858968f2 util/set: add _mesa_set_intersects
+  * acf756a64fe android: panfrost: Redirect cmdstream includes through
+    GenXML (v2)
+  * 92f65e28fee turnip: add missing tu_bo_list_add in CmdWriteTimestamp
+  * ddac5933f8f turnip: call packing functions directly for
+    pack_gmem_clear_value
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Aug 2020 10:18:00 +0200
+
 mesa (20.3.0~git2008081715.dd003abd2fc~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
