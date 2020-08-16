@@ -1,3 +1,31 @@
+mesa (20.1.5+git2008141409.df9c4ea203e~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * df9c4ea203e radv: When importing an image, redo the layout based on
+    the metadata.
+  * 4e8785adc28 nir/lower_idiv: Port recent LLVM fixes to emit_udiv
+  * 31135db306f anv/nir: Unify inputs_read/outputs_written between
+    geometry stages
+  * 00390ba08f3 .pick_status.json: Update to
+    0980d1d5ab0829fa78852d81651d5386874e528a
+  * 266af493eeb dri_util: Update internal_format to GL_RGB8 for
+    MESA_FORMAT_B8G8R8X8_UNORM
+  * afd4b8b88af aco: execute branch instructions in WQM if necessary
+  * c705840fc95 radv: limit LATE_ALLOC_GS to prevent a GPU hang on GFX10
+  * a71af282092 radv/gfx10: add missing initialization of registers
+  * b30f3eceadf etnaviv: completely turn off MSAA
+  * 29ecc269015 aco: set constant_data_offset correctly in the case of
+    merged shaders
+  * f6a7bab598b radv: Do not consider layouts fast-clearable on compute
+    queue.
+  * 1cf289efa6d intel/perf: fix performance counters availability after
+    glFinish
+  * c235ed07a2c driconf: fix force_gl_vendor description
+  * 468b4fc38ce .pick_status.json: Update to
+    371f6f42ad423509b83dae9109b295e4b3eb4852
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Aug 2020 10:20:17 +0200
+
 mesa (20.1.5+git2008081659.b044f25a570~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
