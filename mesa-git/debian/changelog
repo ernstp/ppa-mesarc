@@ -1,3 +1,47 @@
+mesa (20.2.0~rc2+git2008212155.c2a441c6a20~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c2a441c6a20 aco: fix non-rtz pack_half_2x16
+  * 831473e56e3 glsl: Eliminate out-of-bounds triop_vector_insert
+  * b3510789c29 clover/spirv: Remove unused tuple header
+  * 9a153901744 panfrost: Free batch->dependencies
+  * 83c32b9d900 panfrost: Use memctx for sysvals
+  * b4c5c7cbf54 pan/mdg: Free previous liveness
+  * f41a82869f9 panfrost: Free hash_to_temp map
+  * e26c08622be panfrost: Free NIR of blit shaders
+  * 3e0565c2624 panfrost: Free cloned NIR shader
+  * e834ac48633 panfrost: Fix blend leak for render targets 5-8
+  * f7a4d89b194 anv: null check for buffer before reading size
+  * d74b2bf797b nv50/ir/nir: fix global_atomic_comp_swap
+  * 99540aa4faa freedreno/ir3: Fix assertion failures dumping CS high
+    full regs.
+  * fc698d8ce74 freedreno/a6xx: fix occlusion query with more than one
+    tile
+  * 99d5727d2d8 egl/x11_dri3: enable & require xfixes 2.0
+  * 748a7e1a44b pan/mdg: Ensure barrier op is set on texture
+  * 7c47874d456 panfrost: Fix WRITES_GLOBAL bit
+  * 9ea9fbf6cbf android: freedreno: Another build fix
+  * bb2e75ec7dd llvmpipe/cs: update compute counters not fragment
+    shader.
+  * b6a1444ed1b spirv: Don't emit RMW for vector indexing in shared or
+    global
+  * 39cec65c220 radv: Fix handling of attribs 16-31.
+  * 9b09d4ca956 radv: Override the uniform buffer offset alignment for
+    World War Z.
+  * 17f9aa36b6e driconf: Support selection by Vulkan applicationName.
+  * 801e3a72bc4 llvmpipe: enable GL 4.5
+  * f79e81a38b5 .pick_status.json: Update to
+    ca7d66e847d08914cec0a5e003b400da9c0a2695
+  * 522e62ac5b3 spirv: Only require bare types to match when copying
+    variables
+  * 8cdfbd3a070 nir: Fix i64tof32 lowering
+  * 81b1dcf83a9 llvmpipe/blit: for 32-bit unorm depth blits just copy 32-
+    bit
+  * 2891ddb9969 panfrost: Set STRIDE_4BYTE_ALIGNED_ONLY
+  * a9024558ba9 ac/llvm: handle static/shared llvm init separately
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Aug 2020 10:16:37 +0200
+
 mesa (20.1.5+git2008141409.df9c4ea203e~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
