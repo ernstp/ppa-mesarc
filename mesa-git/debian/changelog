@@ -1,3 +1,9 @@
+mesa (20.2.0~rc2+git2008212155.c2a441c6a20~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Aug 2020 16:29:22 +0200
+
 mesa (20.2.0~rc2+git2008212155.c2a441c6a20~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
