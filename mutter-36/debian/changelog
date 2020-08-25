@@ -1,3 +1,12 @@
+mutter (3.36.5+git2008232317.d2747a128~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * d2747a128 wayland/subsurface: Add check for parent surface
+  * 32d130ddf meson_options: Use libGLESv2.so.2 for COGL_DRIVER=gles2,
+    not libGLESv2.so
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Aug 2020 10:18:48 +0200
+
 mutter (3.36.5+git2008112141.7d061a06d~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
