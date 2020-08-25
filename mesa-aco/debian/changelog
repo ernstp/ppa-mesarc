@@ -1,3 +1,13 @@
+mesa (20.3.0~git2008251315.0fd33207b77~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 0fd33207b77 radv: allocate the TMA BO into 32-bit addr space
+  * d243d21ffc9 radv: align the TMA BO size to 256
+  * 2dbb87282fe gitlab-ci: Test the traces from bgfx
+  * 88b935bb0c0 mesa: fix formatting of messages printed using _mesa_log
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Aug 2020 16:20:11 +0200
+
 mesa (20.3.0~git2008250913.fd10cb8cfcc~b~mesaaco3) bionic; urgency=medium
 
   * New snapshot:
