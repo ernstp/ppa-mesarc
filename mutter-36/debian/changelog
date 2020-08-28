@@ -1,3 +1,15 @@
+mutter (3.36.5+git2008270028.35353fa60~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 35353fa60 wayland/xdg-shell: Move popup role assignment behind
+    checks
+  * d37e728bb wayland/xdg-shell: Handle null-parent in get_popup()
+  * 4839aa6e2 wayland/xdg-shell: Add parent window validation in
+    get_popup()
+  * e370ec6f3 wayland/seat: Add seat_release interface
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 Aug 2020 03:25:35 +0200
+
 mutter (3.36.5+git2008232317.d2747a128~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
