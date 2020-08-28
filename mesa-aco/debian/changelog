@@ -1,3 +1,58 @@
+mesa (20.3.0~git2008280101.31f75aaeefe~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 31f75aaeefe nir/lower_discard_to_demote: Use
+    nir_shader_instructions_pass().
+  * 265dcb38367 nir/nir_lower_wrmasks: Use the
+    nir_lower_instructions_pass() helper.
+  * c5e64c041fd nir/lower_io_to_scalar: Convert to use
+    nir_shader_instructions_pass().
+  * dfb84653417 nir/opt_undef: Convert to use
+    nir_shader_instructions_pass().
+  * e5d4bbd8406 nir/lower_vec_to_movs: Convert to use
+    nir_shader_instructions_pass().
+  * a62098fff20 nir: Add a helper for general instruction-modifying
+    passes.
+  * a82f664d0a4 nir/opt_copy_prop_vars: Quiet valgrind warning about
+    overlapping memcpy.
+  * 98222db0da5 egl: document which driver hooks are only required by
+    extensions
+  * cf663d0d11c egl: move extension driver functions after core
+    functions
+  * 12c941808ff docs/egl: correct/update DRI2 mention with the shiny new
+    DRI3
+  * ab2e59750f2 docs/egl: add some more documentation
+  * 7897c315d4f docs/egl: add haiku driver
+  * c84d3049b01 docs/egl: complete list of dri2 platforms
+  * 3909e9d1ac9 docs/egl: move section around
+  * 3704b0250c9 docs/egl: fix typo
+  * 608c87afddd nir/vtn: SPIR-V bit count opcodes (core and extension)
+    dest size mismatches nir
+  * a54695ddcb2 nir: Add bit_count to lower_int64 pass
+  * d91f85f16e0 nir: Remove 32bit restriction for uadd_carry
+    optimization
+  * 9232887c699 nir: Implement mul_high lowering for bit sizes other
+    than 32
+  * ea715741b5b nir_lower_bit_size: Support lowering ops with differing
+    source/dest sizes
+  * 0d595f72b2c nir: Relax opt_if logic to prevent re-merging 64bit phis
+    for loop headers
+  * 43d22c8f201 nir: Add a lowering pass to split 64bit phis
+  * 6b1a56b908e iris: Drop stale syncobj references in fence_server_sync
+  * e98c7a66347 iris: Reorder the loops in iris_fence_await() for
+    clarity.
+  * 45793c00d29 ci: Fix up rules for post-merge / main project branch
+    pipelines
+  * 502b9daa7aa aco: add ACO_DEBUG=novn,noopt,nosched for debugging
+    purposes
+  * 4d40a719b07 radv: Fix 3d blits.
+  * 003ea78b774 st/mesa: remove useless code for lowered IO in
+    st_nir_assign_vs_in_locations
+  * 86840619758 ci: Test the KHR-GL* CTS cases with softpipe.
+  * d2cf6a8399e aco: sink get_alu_src() in bfe lowering
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 Aug 2020 03:23:08 +0200
+
 mesa (20.3.0~git2008251315.0fd33207b77~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
