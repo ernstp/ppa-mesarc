@@ -1,3 +1,10 @@
+mutter (3.36.5+git2008291102.1015dffc6~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 1015dffc6 startup: Fix possible crash in startup notifications
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 29 Aug 2020 11:30:55 +0200
+
 mutter (3.36.5+git2008270028.35353fa60~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
