@@ -1,3 +1,47 @@
+mesa (20.2.0~rc3+git2008282027.93659e4ed3d~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 93659e4ed3d iris: Drop stale syncobj references in fence_server_sync
+  * a020620c25f iris: Reorder the loops in iris_fence_await() for
+    clarity.
+  * 948a2fbec5f radv: Fix 3d blits.
+  * 17837b66377 aco: create long jumps
+  * 9a66f08cfed aco: reserve 2 sgprs for each branch
+  * 90ccdf42705 aco: keep loop live-through variables spilled
+  * ed64b3d8e98 aco: fix spills_entry heuristic for branch blocks in
+    init_live_in_vars()
+  * a024de19ac5 aco: fix regclass checks when fixing to vcc/exec with
+    Builder
+  * 643ae5ea249 aco: don't fix break condition for break+discard to exec
+  * 01c1323180a aco: don't consider the first partial spill if it's the
+    wrong type
+  * bbc9b56a670 aco: consider branch definitions in spiller
+  * 51c029f77a8 etnaviv: Add lock around pending_ctx
+  * 9699e42a3c5 etnaviv: Remove etna_resource_get_status()
+  * 75462d48ec3 v3d: set instance id to 0 at start of tile
+  * 42f6206a841 v3d/packet: fix typo on Set InstanceID/PrimitiveID
+    packet
+  * f63e1edefb1 gallium/dri2: Report correct YUYV and UYVY plane count
+  * b445b12c0d9 freedreno/gmemtool: add tile_alignw/h and a650
+  * 10571677e54 radeonsi: fix tess levels coming as scalar arrays from
+    SPIR-V
+  * d4056d25d19 radv: Update CTS version.
+  * bd1d4bba42e radv: Remove conformance warnings with ACO.
+  * 33653e6dde2 anv: fix transform feedback surface size
+  * c1e2e33752e meson: Fix lmsensors warning message.
+  * d27e1776e1d freedreno: handle case of shadowing current render
+    target
+  * 83df231acd2 st/mesa: don't generate NIR for ARB_vp/fp if NIR is not
+    preferred
+  * 786e6a2af8e clover/spirv: Don't call llvm::regularizeLlvmForSpirv
+  * dee7acec821 .pick_status.json: Mark
+    e93979ba599355c42df01a89073362b970489a3a as denominated
+  * db0a93de12e .pick_status.json: Update to
+    7fbded8b5821a47c26245b181446f972f920a96e
+  * dae7b5156f2 VERSION: bump for 20.2.0-rc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 29 Aug 2020 11:28:24 +0200
+
 mesa (20.2.0~rc2+git2008212155.c2a441c6a20~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
