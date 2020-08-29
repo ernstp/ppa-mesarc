@@ -1,3 +1,50 @@
+mesa (20.3.0~git2008290045.373e25e6b53~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 373e25e6b53 ci: Add a release build with -Werror enabled.
+  * 60fb460f9d7 virgl: Fix unused var warnings in release build from
+    assertions.
+  * c24f792c8b4 lima: Fix uninitialized var warning from using assert()
+    as unreachable().
+  * f6456d74ed0 lima: Fix unused var/function warnings in release build
+    from assertions.
+  * 65f484198a3 etnaviv: Fix unused var warning in release build from
+    assertions.
+  * ab6a09f25b9 zink: Fix unused var warnings in release build from
+    assertions.
+  * ca73c3bc596 nv50: Fix uninitialized var warnings from using assert()
+    as unreachable().
+  * 689e36ebfe4 vc4: Fix unused var warnings in release builds from
+    assertions.
+  * 26471264bf7 nvc0: Fix compiler warning about unused var that gets
+    asserted.
+  * b9972fb6f58 gallium/tests: Fix compiler warning about unused vars in
+    trivial tests.
+  * 4c24c8239a5 panfrost: Fix remaining release-build warnings.
+  * ecab580d48f panfrost: Fix OOB array access compiler warning.
+  * ccb5e0b02b2 drm-shim: Fix unused variable warnings from asserts in
+    release build.
+  * 8d1d0c126fd freedreno/a6xx: move ubwc clear to blitter
+  * 8d9ab0a33bb freedreno/a5xx+a6xx: use sysmem path for nondraw batches
+  * 21b90708a4c freedreno/batch: replace lrz_clear with prologue
+  * 28079970f2c freedreno/batch: split out helper for rb alloc
+  * 9522eb7be14 panfrost: Store transient BOs in a dynamic array
+  * d87ab72ce95 panfrost: Avoid accessing pan_pool fields directly
+  * 4047c691bff panfrost: Rename panfrost_create_pool() into
+    panfrost_pool_init()
+  * b8f2d71c404 CI: Disable Windows again
+  * 7fbded8b582 pan/decode: Drop prefix braces
+  * eb261a80187 panfrost: Remove mali_vertex_tiler_postfix
+  * 760289174b8 pan/decode: Use unpack for vertex_tiler_postfix_pre
+  * 2425bac8fee pan/decode: Use generation for vertex_tiler_postfix
+  * 80049069265 pan/decode: Fix awkward syntax
+  * c088a3b5542 pan/decode: Print shader-db even for compute
+  * 68552287261 pan/decode: Drop mali_vertex_tiler_postfix arg
+  * 38ae0885654 pan/decode: Drop scratchpad size dump
+  * c92be29a477 panfrost: Use nir_builder_init_simple_shader for blits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 29 Aug 2020 11:25:46 +0200
+
 mesa (20.3.0~git2008280101.31f75aaeefe~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
