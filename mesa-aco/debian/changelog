@@ -1,3 +1,42 @@
+mesa (20.3.0~git2008311502.7059708dcdb~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 7059708dcdb broadcom/qpu_instr: wait is not a read or write vpm
+    instruction
+  * efd29d429ea docs/features: Add missing Panfrost extensions
+  * 8ff6e7c7399 panfrost: Set PIPE_CAP_MAX_TEXTURE_GATHER_COMPONENTS
+  * 7dab5749c89 pan/mdg: Implement texture gathers
+  * 661123bb19d pan/mdg: Add disassembly for shadow gathers
+  * f6e19dd3f45 pan/mdg: Refactor texture op/mode handling
+  * 80ebf110aed pan/mdg: Implement nir_intrinsic_load_sample_mask_in
+  * 41184f89eb9 pan/mdg: Bounds check swizzle writing globals
+  * 2486fe6761d pan/mdg: Scalarize 64-bit
+  * 3e2cb21e53c pan/mdg: Implement i/umul_high
+  * fd41dece39c panfrost: Emit texture/sampler points for compute
+  * 55765f80b9c util/u_thread: include pthread_np.h if found
+  * c66c5b38e0a util: futex fixes for OpenBSD
+  * 0398caa97fa meson: conditionally include -ldl in gbm pkg-config file
+  * c97af23b13c meson: don't build with USE_ELF_TLS on OpenBSD
+  * 9ac16864227 meson: don't advertise TLS support if glx wasn't build
+    with it
+  * f9a7e6e854d meson: build with _ISOC11_SOURCE on OpenBSD
+  * 6e9c0661f85 util/anon_file: add OpenBSD shm_mkstemp() path
+  * 7eab6845e9d util: unbreak endian detection on OpenBSD
+  * 8301a43f272 radv: dump shader stats with
+    VK_KHR_pipeline_executable_properties
+  * 35a42ff9c59 vallium: disable VK_KHR_shader_float16_int8.
+  * 8f6eb35e097 gallivm/nir: add some f16 support
+  * b31e8460a6b gallivm/nir: allow 64-bit arit ops
+  * dc6313b0982 llvmpipe/fs: multisample depth/stencil bad ir generated
+  * 6d60cd44f3f llvmpipe: add array/3d clearing support
+  * 2d6385715da llvmpipe: blend has effects even if no colorbuffers.
+  * 727bb217be6 gallivm: use common code to select texel type
+  * 6596957641f gallivm/nir: add subpass sampler type support
+  * 21324c40366 gallivm/nir: lower frexp/ldexp
+  * d7aed02bcca gallivm/nir: fix const compact
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Aug 2020 15:38:52 +0200
+
 mesa (20.3.0~git2008290045.373e25e6b53~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
