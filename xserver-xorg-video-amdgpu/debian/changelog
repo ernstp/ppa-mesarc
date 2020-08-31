@@ -1,6 +1,12 @@
 xserver-xorg-video-amdgpu (19.1.0+git2007171246.2202cdf~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Aug 2020 15:54:03 +0200
+
+xserver-xorg-video-amdgpu (19.1.0+git2007171246.2202cdf~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
   * 2202cdf Replace a few more instances of "master"
   * 0d1d479 Fix build against ABI_VIDEODRV_VERSION 25.2
 
