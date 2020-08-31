@@ -1,3 +1,13 @@
+mutter (3.36.5+git2008310945.84512cb1f~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 84512cb1f clutter/text: Check if attributes are equal before
+    applying
+  * 02a46f370 streams: Don't bail out when cursor is outside the stream
+  * ea5af9fa4 screen-cast-stream-src: Properly unset cursor metadata
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Aug 2020 15:41:38 +0200
+
 mutter (3.36.5+git2008291102.1015dffc6~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
