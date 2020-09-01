@@ -1,3 +1,52 @@
+mesa (20.3.0~git2009011710.a6291b1b117~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * a6291b1b117 freedreno/ir3: rework setup_{input,output} to make
+    struct varyings work
+  * c694af40bf3 freedreno/ir3: improve handling of aliased inputs
+  * acb6163d5e6 freedreno/ir3: remove indirect input load
+  * 00973542ffe radv: Allow triggering thread traces by file.
+  * 0d862da1706 radv: Centralize enabling thread trace.
+  * b7a6333ee40 amd/registers: switch to new generated register
+    definitions
+  * e492a3195c2 amd/registers: add non-gfx10 register files generated
+    from kernel headers
+  * 48a7a24a69f amd/registers: add a script that generates json from
+    kernel headers
+  * b2f23afe668 amd/registers: sort registers by offset in json
+  * 843b4e631f0 amd/registers: expose the canonicalize.py program as a
+    function
+  * ec5e918ef49 vulkan/wsi/x11: wait for acquirable images in FIFO mode
+  * d0bc1ad3776 vulkan/wsi/x11: add sent image counter
+  * 68957a82562 aco: Add README which explains about what ACO is and how
+    it works.
+  * b4d4c548eb5 aco: Fixup markdown formatting of the README-ISA.
+  * 086fafc4e00 aco: Move README to README-ISA
+  * bc123c396a9 nir/algebraic: mark some optimizations with fsat(NaN) as
+    inexact
+  * a6c4db9798b ci: Restrict "success" job to pipelines for MRs
+  * d383133ce1d docs: Stop claiming to implement OpenVG
+  * 0308e639cf7 ci: Don't exclude "success" job from mesa/mesa pipelines
+    for MRs
+  * f13f32f83f3 ci: Create test-docs job in mesa/mesa pipelines for MRs
+  * 52cac068621 gallivm: fix build on LLVM 12 due to
+    LLVMAddConstantPropagationPass removal
+  * 8b1ab78985b radv: dump GPU info into the hang report
+  * aa675cdc91f radv: improve reporting faulty pipelines when a GPU hang
+    is detected
+  * dd1f035f6e7 radv: force RADV_DEBUG=syncshaders when RADV_TRACE_FILE
+    is used
+  * 004119d5b7d vulkan: Fix memory leaks.
+  * 50e14c3d258 radv/winsys: Fix memory leak.
+  * b778e7bd6c1 nir/vtn: Convert constant samplers to variables with
+    data
+  * 397730edd5b nir/vtn: Add intrinsics for CL image format/order
+    queries
+  * 5ce6821900f nir/vtn: ImageSizeLod op can be applied to images
+  * 701cb9d60c0 nir/vtn: Handle integer sampling coordinates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 01 Sep 2020 17:46:52 +0200
+
 mesa (20.3.0~git2008311502.7059708dcdb~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
