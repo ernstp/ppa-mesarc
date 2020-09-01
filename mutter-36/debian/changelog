@@ -1,3 +1,18 @@
+mutter (3.36.5+git2008312208.7e1d0ebd4~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 7e1d0ebd4 background: Limit mipmap levels to avoid loss of visible
+    detail
+  * 3890c487b cogl: Add new function
+    cogl_pipeline_set_layer_max_mipmap_level()
+  * ed22b3396 cogl: Generalize `maybe_update_max_level()` into
+    `set_max_level()`
+  * 55bfea245 cogl: Ensure GL_TEXTURE_MAX_LEVEL is set before using it
+  * 5dcb5950d cogl: Replace an outdated #ifdef
+  * 86512f2e6 cogl: Delete a duplicate (masked) variable declaration
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 01 Sep 2020 17:49:19 +0200
+
 mutter (3.36.5+git2008310945.84512cb1f~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
