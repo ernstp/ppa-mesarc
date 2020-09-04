@@ -1,3 +1,38 @@
+mesa (20.2.0~rc3+git2009012253.525a5b763d6~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 525a5b763d6 intel/fs: Fix MOV_INDIRECT and BROADCAST of Q types on
+    Gen11+
+  * 3d1a71aa2be vulkan/wsi/x11: wait for acquirable images in FIFO mode
+  * b6e4106024e vulkan/wsi/x11: add sent image counter
+  * fd1dbd904cb nir/algebraic: mark some optimizations with fsat(NaN) as
+    inexact
+  * 1629fe89a65 gallivm: fix build on LLVM 12 due to
+    LLVMAddConstantPropagationPass removal
+  * 7a63155052a vulkan: Fix memory leaks.
+  * 22b4120de4d pan/mdg: Fix perspective combination
+  * 4e57b4680d3 pan/mdg: Fix discard encoding
+  * 83dda7b35f5 turnip: Make sure we include the build id.
+  * 7518930a99d anv: VK_INTEL_performance_query interaction with
+    VK_EXT_private_data
+  * 57d65d2f76f util/u_thread: include pthread_np.h if found
+  * d37550f8e7a util: futex fixes for OpenBSD
+  * 43bd915ff56 meson: conditionally include -ldl in gbm pkg-config file
+  * db2fa8208c8 meson: don't build with USE_ELF_TLS on OpenBSD
+  * fe8d18e7525 meson: don't advertise TLS support if glx wasn't build
+    with it
+  * 8f4094bb1c4 meson: build with _ISOC11_SOURCE on OpenBSD
+  * 372f8f5c534 util/anon_file: add OpenBSD shm_mkstemp() path
+  * 3d0f9e3dc30 util: unbreak endian detection on OpenBSD
+  * 64039dffc4c intel/nir: Rewrite the guts of lower_alpha_to_coverage
+  * 367be430b51 intel/nir: Pass the nir_builder by reference in
+    lower_alpha_to_coverage
+  * eefc95d601f .pick_status.json: Update to
+    b9927c8c8d0c105699306a68773c015930ff9509
+  * fb53f1937a3 egl/x11_dri3: implement EGL_KHR_swap_buffers_with_damage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Sep 2020 16:34:22 +0200
+
 mesa (20.2.0~rc3+git2008282027.93659e4ed3d~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
