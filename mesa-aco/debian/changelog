@@ -1,3 +1,50 @@
+mesa (20.3.0~git2009041519.73eb24ab31a~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 73eb24ab31a aco: handle unaligned loads on GFX10.3
+  * a083560b09c nir/load_store_vectorizer: Add unit tests for alignment
+    handling.
+  * c6f72196620 nir/load_store_vectorizer: Use more imm helpers in the
+    tests.
+  * 91a8a07a5f0 nir/load_store_vectorize: rework alignment calculation
+  * 8faf85f6877 aco: fix byte_align_scalar for 3 dword vectors
+  * 663c4d53771 intel/fs: add hint how to get more info when shader
+    validation fails
+  * ab079260572 intel: add INTEL_DEBUG=shaders
+  * 7acc7ec33b3 ac/llvm: fix unaligned VS input loads on gfx10.3
+  * aaa492e6c6a nir: fix const-cast warning on MSVC
+  * 0f4d09443eb meson: drop leftover PTHREAD_SETAFFINITY_IN_NP_HEADER
+  * ebf2576862c radv,aco: disable opts if
+    VK_PIPELINE_CREATE_DISABLE_OPTIMIZATION_BIT
+  * bb80ed88737 panfrost: Fix gnu-empty-initializer errors.
+  * 3cf6325e724 iris: Fix aux assertion in resource_get_handle
+  * fd2ee49b216 ci/bare-metal: Use python for handling fastboot booting
+    and parsing
+  * 0453a46f668 ci/bare-metal: Fix capturing of serial output as job
+    artifacts.
+  * 24f5f117197 ci/bare-metal: Log why our run restarts when it does.
+  * 785d3cace47 ci/bare-metal: Include a timestamp in our serial reads.
+  * ff42b7e8041 ci/bare-metal: Fix detection of "POWER_GOOD not seen in
+    time" fails
+  * b7787ce18df ci/bare-metal: Use re.search() instead re.match() for
+    our line matching.
+  * 93c8777ace8 amd/common: Fix various non-critical integer overflows
+  * 2182bbf84f0 aco: Fix integer overflows when emitting parallel copies
+    during RA
+  * f18fc34c4d5 radv: Fix various non-critical integer overflows
+  * a99ae1943d8 aco: remove omod_success/clamp_success
+  * dc79152be97 aco: fix mad splitting after applying output modifiers
+  * fdadbdb513e radv: remove descriptor_indexing fails from expected
+    fails
+  * 21fbffc5425 anv: Set alignments on UBO/SSBO root derefs
+  * c7dec0548af spirv: Drop the OpenCL type layout code
+  * 796d3fe9e0f clover/nir: Use lower_vars_to_explicit for uniform and
+    global
+  * e1ed5a12c51 spirv: Stop counting inputs in entry_point_wrapper
+  * 8bea5aaa149 clover: Use args.size() to compute new var locations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Sep 2020 16:31:47 +0200
+
 mesa (20.3.0~git2009011710.a6291b1b117~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
