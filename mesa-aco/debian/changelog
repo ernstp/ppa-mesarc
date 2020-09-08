@@ -1,3 +1,60 @@
+mesa (20.3.0~git2009080706.171e94fe629~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 171e94fe629 mesa/st: enable EXT_color_buffer_half_float when formats
+    supported
+  * 8447b0f6518 mesa: add EXT_color_buffer_half_float plumbing
+  * 331e5f105eb mesa: refactor floating point texture fbo completeness
+    check on gles
+  * bb42deee362 egl/android: HAVE_DRM_GRALLOC path fixes (v2)
+  * 9d02d65f464 android: freedreno/common: add libmesa_git_sha1 static
+    dependency
+  * cc86a13b36e android: freedreno: Implement pipe screen's
+    get_device/driver_uuid()
+  * 9b3491870fc radeonsi: Work around Wasteland 2 bug.
+  * e4d75c22beb nir/opt_shrink_vectors: shrink image stores using the
+    format
+  * bd428162b6d nir/lower_io: Fix the unknown-array-index case in
+    get_deref_align
+  * 11bd64bdecd ci: Remove any existing results directory before running
+    piglit
+  * 013a2b123d7 spirv2nir: Rework argument handling
+  * a5e427fe644 spirv: Improve the "Entry point not found" error message
+  * 2c94a9788e7 swr: fix build with mingw
+  * c56fbed99b4 radeonsi: kill point size VS output if it's not used by
+    the rasterizer
+  * 234505162c1 radeonsi: deduplicate setting
+    key.mono.u.vs_export_prim_id
+  * 1dd243d4f50 radeonsi: use shader_info::cs::local_size_variable to
+    clean up some code
+  * 757f790ad84 radeonsi: remove redundant
+    si_shader_info::uses_derivatives
+  * f3f08bca238 radeonsi: remove redundant
+    si_shader_selector::max_gs_stream
+  * 2b4fa688089 radeonsi: remove redundant GS variables in
+    si_shader_selector
+  * 7960668dc95 radeonsi: remove redundant si_shader_info::writes_memory
+  * 83cdffd4358 radeonsi: rename num_memory_instructions ->
+    num_memory_stores
+  * c8ab5899c1b radeonsi: reduce type sizes in si_shader_selector
+  * 99c4e610840 radeonsi: remove redundant si_shader_info::uses_kill
+  * 8df349a31ec radeonsi: merge
+    uses_persp_opcode_interp_sample/uses_linear_opcode_interp_sample
+  * 7b3e24c2d87 radeonsi: remove unused
+    si_shader_info::uses_(vertexid|basevertex)
+  * f02cd0e0270 radeonsi: remove redundant si_shader_info:*(clip|cull)*
+    fields
+  * d15a7d16d6a radeonsi: remove redundant
+    si_shader_info::const_buffers_declared
+  * 0dabcb9e53f radeonsi: remove redundant
+    si_shader_info::images_declared
+  * c1af2f4bee1 radeonsi: remove redundant
+    si_shader_info::shader_buffers_declared
+  * cb63e4afc96 radeonsi: remove info::samplers_declared, image_buffers,
+    msaa_images_declared
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Sep 2020 09:56:38 +0200
+
 mesa (20.3.0~git2009041519.73eb24ab31a~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
