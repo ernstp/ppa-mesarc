@@ -1,3 +1,15 @@
+mutter (3.36.6+git2009072019.7d1e9e77a~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 7d1e9e77a Bump version to 3.36.6
+  * 2067ca7ac wayland: Reword comment
+  * 3228a6cf8 wayland: Flush text_input.done event after IM key event
+  * aee35275e clutter: Push commit/delete_sourrounding as IM events
+  * 2a7d8d6f9 clutter: Prepare input focus for IM event delivery
+  * 9de355a86 clutter: Add IM events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Sep 2020 09:59:07 +0200
+
 mutter (3.36.5+git2008312208.7e1d0ebd4~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
