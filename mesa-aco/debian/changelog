@@ -1,3 +1,52 @@
+mesa (20.3.0~git2009111447.ef980ac0c1c~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * ef980ac0c1c radeonsi: fix max syncobj wait timeout
+  * 3182209673f v3d/compiler: fix V3D double-rounding of .8 fixed-point
+    XY coordinates
+  * 367ac07efcc disk_cache: move cache item loading code into
+    disk_cache_load_item() helper
+  * 8598dc1a758 disk_cache: add new OS specific helper
+    disk_cache_evict_item()
+  * 7893dc405cd disk_cache: move get_cache_file() to an OS specific
+    helper
+  * 593ef166aed disk_cache: create new helper for writing cache items to
+    disk
+  * b4a3a80403e disk_cache: move evict_lru_item() to an OS specific
+    helper
+  * e1236470dc6 disk_cache: move munmap into an OS specific helper
+  * 889356e731e disk_cache: move index mmap into OS specific helper
+  * 62c43391183 disk_cache: add disk_cache_enabled() helper
+  * 4339ecde35c disk_cache: move cache dir generation into OS specific
+    helper file
+  * 65d0fa0852e nv50/ir: Remove duplicate mask assignment.
+  * a2a330a4eda nv50/ir: Add fallthrough statement.
+  * 50d335804fb nir/algebraic: add late optimizations that optimize out
+    mediump conversions (v3)
+  * b86305bb573 nir/algebraic: collapse conversion opcodes (many
+    patterns)
+  * cdd498bbe88 nir: add new mediump opcodes f2[ui]mp, i2fmp, u2fmp
+  * 385b4dbc394 nir: enforce 32-bit src type requirement for f2fmp and
+    i2imp
+  * 3d3df8dbffd nir: remove redundant opcode u2ump
+  * 26fc5e1f4a8 nir/algebraic: expand existing 32-bit patterns to all
+    bit sizes using loops
+  * 3c8934a644b nir/algebraic: add flrp patterns for 16 and 64 bits
+  * 3064feb2350 pan/mdg: Obey f2fmp size restriction in fuse_io_16
+  * 5cd62359586 blorp: Drop trailing whitespace in blorp_clear.c
+  * 1eff389bd3e blorp: Fix alignment test for HIZ_CCS_WT fast-clears
+  * 40f7afc1e97 nir: fix lower_mediump_outputs to not require variables
+  * c2ae39e0cea nir: add mediump flag to IO semantics
+  * 5e9e4573835 glx/dri3: Implement GLX_EXT_swap_control_tear
+  * 60ebeb4608a glx: Implement GLX_EXT_swap_control for DRI2 and DRI3
+  * b8239abdf86 glx: Reject glXSwapIntervalMESA greater than INT_MAX
+  * e648442ceb3 glx: Collect all the non-applegl extensions in the
+    GetProcAddress table
+  * 72a0f7496a7 glx: Use GLX_FUNCTION2 only for actually aliased
+    function names
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Sep 2020 18:08:53 +0200
+
 mesa (20.3.0~git2009080706.171e94fe629~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
