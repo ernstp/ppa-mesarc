@@ -1,3 +1,10 @@
+corectrl (1.2.0~git2009101321.bad0a0b~b~mesarc9) bionic; urgency=medium
+
+  * New snapshot:
+  * bad0a0b Ignore QT_STYLE_OVERRIDE environment variable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Sep 2020 18:07:51 +0200
+
 corectrl (1.2.0~git2008082006.a7dc86a~b~mesarc9) bionic; urgency=medium
 
   * New snapshot:
