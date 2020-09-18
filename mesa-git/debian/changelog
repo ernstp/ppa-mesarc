@@ -1,3 +1,48 @@
+mesa (20.2.0~rc4+git2009112321.6195f7b7030~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6195f7b7030 spirv: fix emitting switch cases that directly jump to
+    the merge block
+  * 8b1f2077202 spirv: extract switch parsing into its own function
+  * c8e3af56865 spirv: Deal with glslang bug not setting the decoration
+    for stores.
+  * 1be49cd0ba7 spirv: Add a vtn_get_mem_operands() helper
+  * 409c87a2975 gallivm: disable brilinear for lod bias and explicit
+    lod.
+  * ae25477194e intel/perf: fix raw query kernel metric selection
+  * b9b6ccc9138 intel/perf: export performance counters sorted by
+    [group|set] and name
+  * cb115979db7 intel/perf: split load_oa_metrics
+  * 0a67c03128e intel/perf: store query symbol name
+  * dc559b6177e glsl: Eliminate assigments to out-of-bounds elements of
+    vector
+  * 85721f885d6 radeonsi: fix max syncobj wait timeout
+  * 992e1d053bb blorp: Fix alignment test for HIZ_CCS_WT fast-clears
+  * abc8c94f38d anv: fix minor gen_ioctl(I915_PERF_IOCTL_CONFIG) error
+    handling issue
+  * 0aa0b2d495d svga: Fix unused printf argument.
+  * ce8184e3a33 freedreno: Fix file descriptor leak.
+  * 6667e2de463 pan/mdg: Fix spilling of non-32-bit types
+  * da0ed80410e nir: More NIR_MAX_VEC_COMPONENTS fixes
+  * 3a09792bfcf nir: More NIR_MAX_VEC_COMPONENTS fixes
+  * ae817c0f0f6 turnip: Fix truncation of iovas to 32 bits in queries.
+  * 102fed30b95 turnip: Fix truncation of CS shader iovas to 32 bits.
+  * fc5ea646abc freedreno: Make the pack struct have a .qword for wide
+    addresses.
+  * 068640e23b5 aco: don't apply constant to SDWA on GFX8
+  * f6f1995898b aco: fix v_writelane_b32 with two sgprs
+  * efd20aa5b27 llvmpipe: include gallivm perf flags in shader cache.
+  * 66a14f9c410 spirv: Run repair_ssa if there are discard instructions
+  * b617a523080 nir/opt_if: fix opt_if_merge when destination branch has
+    a jump
+  * fe13f9b8f51 aco: fix one-off error in Operand(uint16_t)
+  * 64ff6b112e8 android: freedreno/common: add libmesa_git_sha1 static
+    dependency
+  * 1a906eea252 radeonsi: Work around Wasteland 2 bug.
+  * 3850f6b578e swr: fix build with mingw
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Sep 2020 11:49:53 +0200
+
 mesa (20.2.0~rc3+git2009012253.525a5b763d6~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
