@@ -1,3 +1,46 @@
+mesa (20.3.0~git2009180952.090fc593b44~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 090fc593b44 mesa: fix glUniform* when a struct contains a bindless
+    sampler
+  * 77af1ca690f etnaviv: add disk cache
+  * 6a0d7f6316c etnaviv: shuffle some variant fields
+  * 12b8ad8f21f swr: fix _BitScanForward64 on unix
+  * 82c49a66c07 swr: missing _BitScanForward64 on 32 bits win
+  * 5805f5ab016 glsl: take EXT_gpu_shader4 in to account when adding
+    round
+  * cde5b86a88c turnip: Release bo_mutex lock before potential error
+    path.
+  * ffbdbd631ad panfrost: Delete debug allocated syncobj.
+  * fcc506e5206 radesonsi: Remove unsigned comparison to zero.
+  * 1b862716ddf disk_cache: Fix filename leak on error path.
+  * 183ca88a91d android: pan/bi: Use new packing
+  * 792b51713bf android: pan/bi: Use new disassembler
+  * d74fe471019 glx: Allow depth-30 pbuffers to work without a depth-30
+    pixmap format
+  * a163cba1e3a anv: Fix the target_bo assertion in anv_reloc_list_add
+  * 85cc2950a04 radv: initialize with expanded cmask if the destination
+    layout needs it
+  * 6f2b6952bef nir: remove ubo_r600 instrinsic since ubo_vec4 is used
+    now
+  * 18e97817148 r600/sfn: Use load_ubo_vec4 lowering pass
+  * 98eb00face9 r600: enable lowering uniforms to UBO
+  * 4ac4cdb5bfe aco: fix incorrect assertion in emit_vop3a_instruction()
+  * 207219d4356 turnip: Add support for a615.
+  * 45bff4e9890 util: Makefile.sources: Add disk_cache_os.{c,h}
+  * 2aaa1564ad0 nir/lower_io: don't reduce range if parent length is
+    zero
+  * a51aa6feb4d pan/bi: Drop *FMIN reference
+  * 865e252dd01 pan/bi: Remove unused packing data structures
+  * ec43629e8c0 pan/bi: Remove unused prints
+  * 2ff53879f21 pan/bi: Use new packing
+  * 3fadd823461 pan/bi: Move packing helpers to dedicated file
+  * d2158a5b301 pan/bi: Use src1/dest_invert instead of src_invert[]
+  * 08b105d7825 pan/bi: Use 8-bit shifts
+  * 3d63a476f7a pan/bi: Pass blend descriptor explicitly in IR
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Sep 2020 11:47:20 +0200
+
 mesa (20.3.0~git2009111447.ef980ac0c1c~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
