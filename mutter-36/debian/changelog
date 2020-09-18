@@ -1,3 +1,10 @@
+mutter (3.36.6+git2009150216.649627028~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 649627028 Update Portuguese translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Sep 2020 11:52:19 +0200
+
 mutter (3.36.6+git2009081038.95ed477f8~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
