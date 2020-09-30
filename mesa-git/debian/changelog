@@ -1,3 +1,52 @@
+mesa (20.2.0~rc4+git2009250017.f1b6e501080~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * f1b6e501080 radeonsi: Only call nir_lower_var_copies at the end of
+    the opt loop
+  * a2f1b6d268b zink: reorder create_stream_output_target to fix failure
+    case leak
+  * 01285ded24e .pick_status.json: Update to
+    472a20c5fc0feda0f074b4ff95fd7c7a6305c8cd
+  * 81a826636fb mesa: handle GL_FRONT after translating to it
+  * 0996ea1175d .pick_status.json: Update to
+    90b98c06493f8a9759e5496d5ec91fb60edf7b92
+  * 76b2f293c65 ci: Use ignore_scheduled_pipelines anchor in .radeonsi-
+    rules
+  * 98fa336d34f nir/lower_samplers: Clamp out-of-bounds access to array
+    of samplers
+  * c3eaad7e76d nir/large_constants: Eliminate out-of-bounds writes to
+    large constants
+  * 74e7c86189f nir/lower_io: Eliminate oob writes and return zero for
+    oob reads
+  * 6d31ec15439 st/mesa: Deal with empty textures/buffers in semaphore
+    wait/signal.
+  * cbe737040d6 intel/compiler: fixup Gen12 workaround for array sizes
+  * 3ec090f1acf radv: fix transform feedback crashes if
+    pCounterBufferOffsets is NULL
+  * 30fe359cbb6 radv,aco: fix reading primitive ID in FS after TES
+  * b1779e92e18 ac/surface: Fix depth import on GFX6-GFX8.
+  * 38b65b603dc amd/ac_surface: convert tabs to 3 spaces
+  * 5fbb4771a70 intel/fs/swsb: SCHEDULING_FENCE only emits SYNC_NOP
+  * 424203520fe radeonsi: fix user fence GPU address
+  * 6ca0035ffca glsl_type: Add packed to structure type comparison for
+    hash map
+  * 2ca018d0dda radv: fix vertex buffer null descriptors
+  * 02f652a58be radv: fix null descriptor for dynamic buffers
+  * 063bbeddc84 mesa: fix glUniform* when a struct contains a bindless
+    sampler
+  * 41d6216ddb8 panfrost: Delete debug allocated syncobj.
+  * 22dd8299fed radv: initialize with expanded cmask if the destination
+    layout needs it
+  * e41bd211e90 radeon/vcn: set dec->bs_ptr = NULL on unmap
+  * 27a7ceefc4a r600/uvd: set dec->bs_ptr = NULL on unmap
+  * 486827826b7 freedreno: Check file descriptor before write.
+  * dd665f27626 pan/bit: Set d3d=true for CMP tests
+  * 6394d945360 glsl: fix per_vertex_accumulator::fields size
+  * 2b496c9bd21 aco: Fix emit_boolean_exclusive_scan in wave32 mode.
+  * 39e1613c32c anv, iris: Set MediaSamplerDOPClockGateEnable for gen12+
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 30 Sep 2020 13:25:02 +0200
+
 mesa (20.2.0~rc4+git2009112321.6195f7b7030~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
