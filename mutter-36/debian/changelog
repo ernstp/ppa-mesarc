@@ -1,3 +1,19 @@
+mutter (3.36.6+git2009300015.3536ad08c~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 3536ad08c backends/x11: Set stage on logical keyboard device
+  * f5e4abd48 seat-native: Process device added/removed events as
+    ClutterEvents
+  * cf67dfb0a seat-x11: Translate device enabled/disabled into clutter
+    events
+  * 0444769a8 clutter-seat: Handle device events and emit signals
+  * e283b9209 clutter-event: Add device added/removed events
+  * 6853ceafb backend: Use connect-after to perform actions on device
+    removed
+  * e559e21cf backend: Don't emit last-device updates with no device
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 30 Sep 2020 13:27:22 +0200
+
 mutter (3.36.6+git2009150216.649627028~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
