@@ -1,3 +1,39 @@
+mesa (20.3.0~git2009301129.636f7702335~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 636f7702335 bin/gen_release_notes.py: escape special rST characters
+  * ae7975ecd43 docs: cpu -> CPU
+  * 5fe6124661d docs: Sandybridge -> Sandy Bridge
+  * 302fc318473 docs: vmware -> VMWare
+  * 37bb6ddcc25 docs: ubuntu -> Ubuntu
+  * 0c90662dfba docs: scons -> SCons
+  * 7f4f441465a docs: quote "git log"
+  * 50e26e5376e docs: git -> Git
+  * 24e8e53bac3 docs: android -> Android
+  * ca613a5a7ef docs: drm -> DRM
+  * 9f59b19ad04 docs: wayland -> Wayland
+  * 8d2090e79d0 docs: x11 -> X11
+  * 0db015294ea docs: cmake -> CMake
+  * b8b0e5ece02 docs: gpu -> GPU
+  * 12d925dc8d6 docs: visual studio -> Visual Studio
+  * 0e9d87eacc5 docs: windows -> Windows
+  * 0df19e3c6bf docs: linux -> Linux
+  * 557ee09c2ea docs: microsoft -> Microsoft
+  * d84420f5136 docs: mingw -> MinGW
+  * a14d64757b3 docs: ninja -> Ninja
+  * eb1e7e61e52 docs: chocolatey -> Chocolatey
+  * 0732efbda91 docs: mako -> Mako
+  * fafd1f44257 docs: bison -> Bison
+  * 1e75294e827 docs: flex -> Flex
+  * d95e2e48a9b docs: python3 -> Python 3
+  * e198fb64e10 docs: meson -> Meson
+  * 0835ee9e8da docs: correct reference to meson.build
+  * 5ed6432eebb docs: llvm -> LLVM
+  * a1904c96f3b docs: bpp -> BPP
+  * 647a8283674 docs: webservice -> web service
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 30 Sep 2020 13:22:28 +0200
+
 mesa (20.3.0~git2009180952.090fc593b44~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
