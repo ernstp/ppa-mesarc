@@ -1,3 +1,49 @@
+mesa (20.3.0~git2010041529.9a899e579a6~b~mesaaco4) bionic; urgency=medium
+
+  * New snapshot:
+  * 9a899e579a6 v3d: Update the TEXTURE_SHADER_STATE when there’s a new
+    buf for a tex
+  * e2f037e96cb v3d: Split the creating of TEXTURE_SHADER_STATE into a
+    helper function
+  * d25504dae01 v3d: Make the function to set tex dirty state for a
+    stage global
+  * ef918f0e335 turnip: remove pre-emption marker
+  * 3b3a3af9c76 glsl: Initialize ast_node member field location.path in
+    constructor.
+  * 81cd4c8f596 intel/vec4: Remove leftover code from Gen8+ removal.
+  * 0a7bd14dbb8 freedreno: Move rsc NULL check to before rsc
+    dereferences.
+  * 1b0fec444fd iris: Fix the constant data address calculation
+  * 23ff2a0e634 nv50/ir: Initialize Source members.
+  * 7e862670efb radv: Fix asserts using assign instead of compare.
+  * 9660427ab7b lima: Print usage if --help is any of the arguments.
+  * 2fb27499378 android: Disable the user XML config parsing.
+  * 7edb2aed551 util/xmlconfig: Drop use of XML_Char in parsing.
+  * 6f3352b6a76 driconf: Stop quoting true/false in boolean option
+    definitions.
+  * 8a05d6ffc65 driconf: Make the driver's declarations be structs
+    instead of XML.
+  * 9fbf206a137 driconf: Use DRI_CONF_OPT_I for remaining int options
+  * 23c3eb1fe16 driconf: Delete disjoint range support.
+  * 4f37161a8f2 util/xmlconfig: Indent to Mesa style.
+  * 91ccbb399f0 util/xmlconfig: Drop silly open-coded strdup.
+  * df3d3ea33e7 driconf: Make a DRI_CONF_OPT_S() for string options.
+  * 4a573849593 r200: Reuse DRI_CONF_OPT_F for texture_blend_quality.
+  * c47c08fa72b driconf: Fix extra quoting on "Jimenez'".
+  * b1e730b3b43 driconf: Eliminate the DRI_CONF_OPT_BEGIN_B macro.
+  * 8427e560672 intel/fs: Don't use NoDDClk/NoDDClr for split SHUFFLEs
+  * b23541c4d3a android: util: add log.c to Makefile.sources
+  * f9977f87296 panfrost: decode: Flag pandecode_log_typed() as
+    PRINTFLIKE
+  * 12b00b77c6f panfrost: decode: Fix decode_bifrost_constant()
+    prototype
+  * 7568c97df14 radv: Use atomics to read query results.
+  * 7cc55df938b pan/bi: Fix assert when writing vertex outputs
+  * 447cef4a71d zink: use sizeof(vec4) multiplier for
+    nir_lower_uniforms_to_ubo
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Oct 2020 02:57:00 +0200
+
 mesa (20.3.0~git2009301129.636f7702335~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
