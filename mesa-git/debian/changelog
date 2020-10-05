@@ -1,3 +1,34 @@
+mesa (20.2.0+git2009301911.b971b42b149~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * b971b42b149 radv,radeonsi: Disable compression on interop depth
+    images
+  * a4847597176 nir/cf: Better handle intra-block splits
+  * e2f99a7ab73 gallium/vl: add chroma_format arg to vl_video_buffer
+    functions
+  * e84d418bd15 gallium/vl: do not call transfer_unmap if transfer is
+    NULL
+  * 28cff4722da gallium/dri2: Move image->texture assignment after image
+    NULL check.
+  * a0238684de1 .pick_status.json: Update to
+    7dbb1f7462433940951ce6c3fa22f6368aeafd50
+  * 79263cda925 nir/lower_io_arrays: Fix xfb_offset bug
+  * 09c31b46d39 st/mesa: use roundf instead of floorf for lod-bias
+    rounding
+  * 0c9b64f9f4b meson/anv: Use variable that checks for --build-id
+  * e2ee71614f2 blorp: Ensure aligned HIZ_CCS_WT partial clears
+  * da7f4b5ada9 nir/liveness: Consider if uses in nir_ssa_defs_interfere
+  * 401e03925d0 radeonsi: fix indirect dispatches with variable block
+    sizes
+  * fbbd66dcad0 etnaviv: simplify linear stride implementation
+  * d82aa3bf603 .pick_status.json: Update to
+    291cfb1e41513008a5be08be95399373a7de206d
+  * 4f8488b857c docs: Add sh256 sums for 20.2.0
+  * 0ab255b82da docs: add release notes for 20.2.0
+  * 663d4643666 VERSION: bump for 20.2.0 release
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Oct 2020 02:59:30 +0200
+
 mesa (20.2.0~rc4+git2009250017.f1b6e501080~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
