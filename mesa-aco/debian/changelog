@@ -1,3 +1,10 @@
+mesa (20.3.0~git2010050409.961a8d71cdc~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 961a8d71cdc vc4: Avoid negative scissor caused by no intersection
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Oct 2020 06:22:18 +0200
+
 mesa (20.3.0~git2010041529.9a899e579a6~b~mesaaco4) bionic; urgency=medium
 
   * New snapshot:
