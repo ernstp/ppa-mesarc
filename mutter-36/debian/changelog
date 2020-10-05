@@ -1,3 +1,21 @@
+mutter (3.36.6+git2009301039.1e9a76921~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 1e9a76921 barriers: Free backend implementation at dispose time
+  * 74674ddcc barriers: Fix leak in meta_barrier_destroy
+  * f7c997d80 wayland: Drive frame callbacks from stage updates
+  * 231c2649a wayland/compositor: Pass backend when constructing
+  * 88c9aa9ea Reshuffle Wayland initailization
+  * dc71df1ee surface-actor: Move out some X11-ism to X11 subclass
+  * ed90af075 clutter/stage: Make clutter_stage_schedule_update() public
+    API
+  * bcca5ce81 clutter/stage: Make clutter_stage_schedule_update() always
+    schedule
+  * 4125acf8c wayland/window: Always flag acked move/resize as 'moved'
+    if moved
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Oct 2020 03:01:51 +0200
+
 mutter (3.36.6+git2009300015.3536ad08c~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
