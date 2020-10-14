@@ -1,3 +1,51 @@
+mesa (20.2.0+git2010140029.8c2ad9f9cba~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * 8c2ad9f9cba spirv: replace discard with demote for incorrect HLSL-
+    >SPIR-V translations
+  * 732b28c8b1c vc4: Enable lower_umax and lower_umin
+  * a66268d3f4f nir/algebraic: optimize iand/ior of (n)eq zero when
+    umax/umin not available
+  * f8953b4d810 ac/surface: fix valgrind warnings in DCC retile tile
+    lookups
+  * a83bb83a258 radv: Fix mipmap extent adjustment on GFX9+.
+  * d894f844a9b retab ac_surface.h so that backports apply
+  * 50d73a42baa scons: fix SPIR-V -> NIR build
+  * 0e076355cc7 aco: implement missing
+    nir_op_unpack_half_2x16_split_{x,y}_flush_to_zero
+  * d77dd2db8b4 android: fix SPIR-V -> NIR build
+  * 45e82b5fa17 radv: add missing u_atomic.h include
+  * d1083d469ef .pick_status.json: Update to
+    e1efc534e6c452e3e606d663864896a654acc185
+  * dd70375ee28 intel/fs: Disable sample mask predication for scratch
+    stores
+  * 365419d18ae spirv: add and use a generator id enum
+  * 5e0f0cce7eb pan/bi: Fix simple txl test
+  * d611e2fd71d pan/bi: Handle vector moves
+  * 21f7264ff48 anv: Enable multi-layer aux-map init for HIZ+CCS
+  * 374f82ba72c intel/nir: Don't try to emit vector load_scratch
+    instructions
+  * c6cc724a708 glsl/xxd.py: fix imports
+  * ea455f0465e etnaviv: stop leaking the dummy texure descriptor BO
+  * eebdf4d28c2 omx/tizonia: fix build
+  * 72c3e51c39f gallium/u_threaded_context: fix use-after-free in
+    transfer_unmap
+  * 332c00a5360 iris: Fix a fast-clear skipping optimization
+  * e29629de7db intel/perf: fix crash when no perf queries are supported
+  * a19b215ad6f .pick_status.json: Mark
+    4790811d78011d45830d9543ad6e7401391cfb15 as denominated
+  * 959a5d195ec .pick_status.json: Mark
+    b23013db0aa6845d661c2da5d4003615b064e01f as denominated
+  * adedbb1a9c5 .pick_status.json: Update to
+    b32a8f83dce3b8789f2e8790ab41b8a63c9bedc6
+  * 2e620304230 vc4: Avoid negative scissor caused by no intersection
+  * f3f44dbf637 freedreno: Move rsc NULL check to before rsc
+    dereferences.
+  * 6ea01cd07aa intel/fs: Don't use NoDDClk/NoDDClr for split SHUFFLEs
+  * b7c37137066 radv: Use atomics to read query results.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Oct 2020 07:55:30 +0200
+
 mesa (20.2.0+git2009301911.b971b42b149~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
