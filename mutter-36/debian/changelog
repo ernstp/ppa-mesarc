@@ -1,3 +1,21 @@
+mutter (3.36.7+git2010072007.dbc9cd1dd~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * dbc9cd1dd Bump version to 3.36.7
+  * e120c8eb0 surface-actor: Simplify culling logic
+  * 396d24adc wayland/actor-surface: Always set opaque region on alpha-
+    less textures
+  * e147c3fea backends: Ensure to clear the last updated device on
+    device removal
+  * 9042716c4 core: Do not update last device on
+    CLUTTER_DEVICE_ADDED/REMOVED
+  * 28c902006 backends: Do not use stack-allocated ClutterEvents
+  * 1bb144058 clutter: Do not use stack-allocated ClutterEvents
+  * 6721d6118 window/wayland: Offset position with size mismatch when
+    resizing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Oct 2020 07:57:52 +0200
+
 mutter (3.36.6+git2009301039.1e9a76921~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
