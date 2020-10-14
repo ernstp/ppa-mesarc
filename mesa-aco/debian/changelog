@@ -1,3 +1,47 @@
+mesa (20.3.0~git2010140056.77586647880~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 77586647880 radv: Only close local_fd when valid
+  * 4ca6faa933a util: Hide timespec_passed on Windows
+  * 1026e2ac0f7 radv: Increased const usage
+  * 1b551857f98 amd/addrlib: Fix warning list for msvc
+  * 5abac85177d intel/fs: Rework scratch handling on Gen9+
+  * e557af97811 intel/fs/ra: Use a set to track added spill/fill
+    instructions
+  * f650c4c0c6b intel/fs/ra: Sanity-check our IP counts
+  * d80d0a6ced9 intel/fs/ra: Store the last non-spill VGRF node
+  * 2af6528c334 intel/fs/ra: Refactor handling of Gen7 scratch reads
+  * 74a1843ca0f intel/fs/ra: Increment spill_offset as part of the
+    emit_spill loop
+  * 06ebf23283e intel/fs: Add a SCRATCH_HEADER opcode
+  * 24b64c8408b intel/fs: Copy the PTSS from g0 for scratch reads/writes
+  * f103012fad7 intel/batch_decoder: Don't clame vec4 vs/gs/tcs shaders
+    on Gen11+
+  * e1efc534e6c v3dv/device: Support loader interface version 3.
+  * 866f9493f4f v3dv: fix buffer copies to compressed images on the blit
+    path
+  * 82b9789f173 v3dv: drop a couple of obsolete comments
+  * ec78ee0342e v3dv: limit blit framebuffer dimensions to max
+    coordinates
+  * 43063d8de8f v3dv: generate proper UUIDs for device and driver
+  * c7814bcde3e v3dv: fix blit path for copies from 3D compressed images
+  * 24e46f70b9a v3dv: fixes for barriers in secondary command buffers
+  * 376b009104c v3dv: implement workaround for GFXH-1918
+  * 1e81bb05aeb v3dv: implement workaround for GFXH-1461
+  * 6fb45a04ab3 v3dv: flag tmu_dirty_rcl in primaries when linking
+    secondaries that have it set
+  * 30534fcb29c v3dv: only advertise one memory type
+  * 49549f43c7c v3dv: always program a reasonable internal depth type
+    for copies/clears
+  * 1ed8252514e v3dv/pipeline_cache: extend pipeline cache envvar
+  * 93e3b001c65 v3dv/pipeline_cache: set a max size for the pipeline
+    cache
+  * 7eb8eb10f6b v3d/compiler: allow to batch spills
+  * f7af9eb2118 v3dv: free noop job if needed when finishing the queue
+  * cec3d5e7660 v3dv: clean-up after obtaining an XCB connection
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Oct 2020 07:52:57 +0200
+
 mesa (20.3.0~git2010050409.961a8d71cdc~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
