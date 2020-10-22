@@ -1,3 +1,51 @@
+mesa (20.3.0~git2010221544.6694b4276b8~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6694b4276b8 ac/nir: abort when an unknown intrinsic is reached
+  * fa490cb6ac3 ac/nir: ignore set_vertex_and_primitive_count intrinsic
+  * b739bb71680 compile/nir: Correct printing dest_type
+  * 4e2fe34aa99 aco: fix determining if LOD is zero for
+    nir_texop_txf/nir_texop_txs
+  * 4735c8a522c nir/loop_analyze: adjust force unrolling to only include
+    interesting modes
+  * 542feb9ab6f ci: disable check commits job for now
+  * 8f9c5964ab3 v3dv: handle buffer to linear depth/stencil image copies
+    in blit path
+  * 61b8a49e86d v3dv: handle compressed image to buffer copies on the
+    blit path
+  * 462429b4b8b v3dv: fix Z coordinate for 3D blits
+  * a18411d9c60 v3dv: do not attempt to blit from a linear image source
+  * 2118c9b562d v3dv: fix multi-layered buffer to image copies on the
+    blit path
+  * 0a4fc196058 v3dv: skip unnecessary tile loads when blitting
+  * c83d6ffa322 gallivm/nir: handle nir_op_flt in lp_build_nir_llvm
+  * 91b64da3de5 driconf: allow higher compat version for Brink
+  * edd0b00c2be driconf: disable GLX_OML_swap_method by default on Brink
+  * d2cb3f862f2 driconf: add a way to override indirect-GL extensions
+  * 7eedc79658d driconf: add a way to override GLX extensions
+  * 97f6d5e3a99 glx: let users force-enable/disable indirect GL
+    extensions
+  * e19644967f2 glx: initial plumbing to let users force-enable/disable
+    extensions
+  * 74722c3ab91 glx: rework __glXCalculateUsableExtensions to be more
+    readable
+  * 1331b86299b glx: stop using hardcoded array sizes for bitfields
+  * af25f47bdce glx/extensions: split set_glx_extension into find_ and
+    set_
+  * 4ba255dfaaf dri/DRI2ConfigQueryExtension: add support for string
+    options
+  * f9763b20542 driconf: initialize the option value before using it
+  * 0e3a424f002 driconf: bump the maximum string size from 25 to 1024
+  * 81797fc863c android: util,ac,aco,radv: Cross-platform memstream API
+  * 025050bae73 glsl: Initialize ir_if_to_cond_assign_visitor members in
+    constructor.
+  * 8cf00244328 nir: Use a switch in nir_lower_explicit_io_instr
+  * 8033200560f docs/v3d: Add a little stub of v3d documentation.
+  * 97dd039191d docs/vc4: Add information on the hw documentation
+    available.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Oct 2020 17:47:29 +0200
+
 mesa (20.3.0~git2010140056.77586647880~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
