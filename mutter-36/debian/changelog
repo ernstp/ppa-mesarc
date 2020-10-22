@@ -1,3 +1,17 @@
+mutter (3.36.7+git2010192138.617ff01e4~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 617ff01e4 constraints: Use "orig" rectangle for interactive resize
+  * e78469165 window-props: Check for actual size hints changes
+  * b1ea828b4 window: Do not go past size hints on resize
+  * 9f8861075 window/wayland: Offset position with size mismatch when
+    finishing a resize
+  * f3d6cc3ae cally: fix state set leak
+  * a292a1767 compositor: Make sure _NET_WM_FRAME_DRAWN timestamp has
+    the right scope
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Oct 2020 17:52:40 +0200
+
 mutter (3.36.7+git2010072007.dbc9cd1dd~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
