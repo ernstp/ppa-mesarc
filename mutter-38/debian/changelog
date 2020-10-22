@@ -1,3 +1,9 @@
+mutter (3.38.1+git2010221442.7b2815077~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Oct 2020 18:16:27 +0200
+
 mutter (3.38.1-1ubuntu1) groovy; urgency=medium
 
   * Merge with debian, including new upstream version, remaining changes:
