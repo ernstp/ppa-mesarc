@@ -1,0 +1,80 @@
+From: =?utf-8?b?Ik1hcmNvIFRyZXZpc2FuIChUcmV2acOxbyki?= <mail@3v1n0.net>
+Date: Wed, 16 Jan 2019 13:08:47 +0100
+Subject: meson: add back default_driver option
+
+In autotools it was possible to pass the --with-default-driver option
+to force the usage of a specific cogl driver at build time.
+
+Expose this functionality in meson as well
+
+Origin: https://gitlab.gnome.org/GNOME/mutter/merge_requests/392
+Forwarded: yes
+---
+ cogl/cogl-config.h.meson | 3 +++
+ cogl/meson.build         | 4 ++++
+ meson.build              | 3 +++
+ meson_options.txt        | 6 ++++++
+ 4 files changed, 16 insertions(+)
+
+diff --git a/cogl/cogl-config.h.meson b/cogl/cogl-config.h.meson
+index 29ca429..85fd0c6 100644
+--- a/cogl/cogl-config.h.meson
++++ b/cogl/cogl-config.h.meson
+@@ -10,4 +10,7 @@
+ /* Enable unit tests */
+ #mesondefine ENABLE_UNIT_TESTS
+ 
++/* Default COGL driver */
++#mesondefine COGL_DEFAULT_DRIVER
++
+ #define COGL_CONFIG_H_INCLUDED 1
+diff --git a/cogl/meson.build b/cogl/meson.build
+index a3c61cf..c45614c 100644
+--- a/cogl/meson.build
++++ b/cogl/meson.build
+@@ -10,6 +10,10 @@ cdata.set('HAVE_COGL_GLES2', have_gles2)
+ cdata.set('HAVE_TRACING', have_profiler)
+ cdata.set('ENABLE_UNIT_TESTS', have_cogl_tests)
+ 
++if default_driver != 'auto'
++  cdata.set_quoted('COGL_DEFAULT_DRIVER', default_driver)
++endif
++
+ cogl_config_h = configure_file(
+   input: 'cogl-config.h.meson',
+   output: 'cogl-config.h',
+diff --git a/meson.build b/meson.build
+index c3d9d3c..b1f1fe9 100644
+--- a/meson.build
++++ b/meson.build
+@@ -224,6 +224,8 @@ if have_wayland_eglstream
+   endif
+ endif
+ 
++default_driver = get_option('default_driver')
++
+ have_sm = get_option('sm')
+ if have_sm
+   sm_dep = dependency('sm')
+@@ -486,6 +488,7 @@ output = [
+   '        Wayland EGLStream........ ' + have_wayland_eglstream.to_string(),
+   '        Native Backend........... ' + have_native_backend.to_string(),
+   '        EGL Device............... ' + have_egl_device.to_string(),
++  '        Default driver........... ' + default_driver,
+   '        Remote desktop........... ' + have_remote_desktop.to_string(),
+   '        gudev.................... ' + have_libgudev.to_string(),
+   '        Wacom.................... ' + have_libwacom.to_string(),
+diff --git a/meson_options.txt b/meson_options.txt
+index 601f0a7..7824c2d 100644
+--- a/meson_options.txt
++++ b/meson_options.txt
+@@ -158,3 +158,9 @@ option('xwayland_initfd',
+   value: 'auto',
+   description: 'Whether -initfd argument is passed to Xwayland to guarantee services (e.g. gsd-xsettings) startup before applications'
+ )
++
++option('default_driver',
++  type: 'combo',
++  choices: ['auto', 'gl', 'gl3', 'gles2', 'nop'],
++  value: 'auto'
++)

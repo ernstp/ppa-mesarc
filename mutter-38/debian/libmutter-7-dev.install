@@ -1,0 +1,5 @@
+usr/include
+usr/lib/${DEB_HOST_MULTIARCH}/libmutter-${env:MUTTER_API_VERSION}.so
+usr/lib/${DEB_HOST_MULTIARCH}/mutter-${env:MUTTER_API_VERSION}/*.so
+usr/lib/${DEB_HOST_MULTIARCH}/mutter-${env:MUTTER_API_VERSION}/*.gir
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/*mutter*-${env:MUTTER_API_VERSION}.pc

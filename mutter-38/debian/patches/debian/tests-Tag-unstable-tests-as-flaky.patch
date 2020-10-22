@@ -1,0 +1,45 @@
+From: Iain Lane <iainl@gnome.org>
+Date: Wed, 14 Aug 2019 16:08:48 +0100
+Subject: tests: Tag unstable tests as flaky
+
+Then test runners can run these ones non-fatally.
+
+This is Debian-only: for upstream these tests should be fixed.
+
+Forwarded: not-needed
+---
+ src/tests/clutter/conform/meson.build | 6 +++++-
+ src/tests/meson.build                 | 2 +-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/src/tests/clutter/conform/meson.build b/src/tests/clutter/conform/meson.build
+index 387360d..683400b 100644
+--- a/src/tests/clutter/conform/meson.build
++++ b/src/tests/clutter/conform/meson.build
+@@ -73,8 +73,12 @@ foreach test : clutter_conform_tests
+     install: false,
+   )
+ 
++  suites = ['clutter', 'clutter/conform']
++  if test in ['timeline', 'timeline-interpolate']
++    suites += ['flaky']
++  endif
+   test(test, test_executable,
+-    suite: ['clutter', 'clutter/conform'],
++    suite: suites,
+     env: test_env,
+     is_parallel: false,
+   )
+diff --git a/src/tests/meson.build b/src/tests/meson.build
+index 77ab3b5..7069a75 100644
+--- a/src/tests/meson.build
++++ b/src/tests/meson.build
+@@ -197,7 +197,7 @@ test('headless-start', headless_start_test,
+ )
+ 
+ test('stage-view', stage_view_tests,
+-  suite: ['core', 'mutter/unit'],
++  suite: ['core', 'mutter/unit', 'flaky'],
+   env: test_env,
+   is_parallel: false,
+   timeout: 60,
