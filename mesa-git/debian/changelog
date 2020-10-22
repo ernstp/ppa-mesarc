@@ -1,3 +1,40 @@
+mesa (20.2.1+git2010220116.17e7be7c791~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * 17e7be7c791 virgl: Fixes portal2 binary name in tweak config
+  * b9693aa8517 frontends/va/postproc: Un-break field flag
+  * a1f8f5e2417 glsl: relax rule on varying matching for shaders older
+    than 4.00
+  * bfa702dd0be .pick_status.json: Update to
+    025050bae73d0598d788e3c307328670a3bf51c1
+  * 0bc9a81733e vulkan/wsi: fix possible random stalls in
+    wsi_display_wait_for_event
+  * cdcf4542bde .pick_status.json: Update to
+    d0f8fe5909107aa342f62813ced9ce535ed6da32
+  * 1219eace69c isl: Fix the aux-map encoding for D24_UNORM_X8
+  * 07e1df3cd1e Revert "radeonsi/gfx10: disable vertex grouping"
+  * ae6b7d1e3ec intel/isl: Drop redundant unpack of unorm channels
+  * c6396afbacd st/mesa: Add missing sentinels in format_map[]
+  * a4e81dd7a2e .pick_status.json: Update to
+    3c87ac1f60875b5bbd4facca22fc426ee747997a
+  * 00cde893030 .pick_status.json: Update to
+    7c5129985bcac75053823a31674e8a1e2629230c
+  * 6f4d937c1f3 aco: add missing SCC clobber in get_buffer_size
+  * a6f351a666d vc4: Enable nir_lower_io for uniforms
+  * 3f1601a1e33 vc4: Add missing load_ubo set_align in yuv_blit fs.
+  * ca34f519ec8 aco/isel: Always export position data from VS/NGG
+  * fa22dff663d nir/opt_load_store_vectorize: don't vectorize stores
+    across demote
+  * a3b0904eb92 .pick_status.json: Update to
+    aea74eac3d7706ed8d870504b163356e3f104a4c
+  * 9b7dfc0a61b .pick_status.json: Update to
+    f29c81f863c9879a6a87724cbdae1e1818f3f6b4
+  * f0498ea8f50 docs: add SHA256 sums for 20.2.1
+  * 5eb82e14685 VERSION: bump for 20.2.1
+  * 0dcebc459f3 docs: add release notes for 20.2.1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Oct 2020 17:50:12 +0200
+
 mesa (20.2.0+git2010140029.8c2ad9f9cba~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
