@@ -1,3 +1,12 @@
+mutter (3.38.1+git2010240101.ced6b3341~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * ced6b3341 background-content: Assume background clones are always
+    transformed
+  * f0476f9cf window: Don't override tile monitor
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 24 Oct 2020 01:24:22 +0200
+
 mutter (3.38.1+git2010221442.7b2815077~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
