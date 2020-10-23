@@ -1,3 +1,43 @@
+mesa (20.3.0~git2010231934.f21dd3bc5a0~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * f21dd3bc5a0 scons: gallium/auxiliary: Unconditionally compile NIR
+    regardless of LLVM
+  * 3ba786f6243 spirv: Fix OpCopyMemorySized
+  * a071590b1d1 frontends/omx/h265: Check the pps set before the scaling
+    data
+  * 08762d5171b frontends/omx/dec: Use the known codec profile when
+    allocating buffers
+  * 56f90a6ac19 pan/bi: Account for bool32 ld_ubo reads
+  * 3cdca1514f6 panfrost: Don't advertise MSAA on Bifrost
+  * f0e65805cb8 panfrost: Drop PIPE_CAP_GLSL_FEATURE_LEVEL for Bifrost
+  * b9a136cdd1e panfrost: Implement BGRA textures
+  * 048e4315426 panfrost: Fix component order XML
+  * 25b66e61f73 panfrost: Calculate thread count on Bifrost
+  * fb32406e566 panfrost: Don't export queries
+  * f4ecc432bf7 panfrost: Record architecture major version
+  * 81b28ebcb5a pan/bi: Use nir_undef_to_zero
+  * 86b2b4eb768 panfrost: Move nir_undef_to_zero to common util/
+  * f0421099efc pan/bi: Pipe through tls_size
+  * b43b1535e25 pan/bi: Implement spilling
+  * e33b2976f3a pan/bi: Pack LOAD/STORE
+  * 74be83d876f pan/bi: Add bi_foreach_clause_in_block_safe helper
+  * 2ff54cacf0e pan/bi: Factor out singleton construction from scheduler
+  * 2d0f46a181b pan/bi: Implement bi_spill_register
+  * 82dbc4ea782 pan/bi: Add helpers for working with singletons
+  * 1db83fc75d9 pan/bi: Add bi_rewrite_index_src_single helper
+  * 9e915fd5f74 pan/bi: Add bi_fill
+  * 486a820bc67 pan/bi: Add bi_spill helper
+  * 171bf199171 pan/bi: Add spills/fills parameters
+  * 7246dd88cda pan/bi: Implement bi_choose_spill_node
+  * ab9abc9052f pan/bi: Add no_spill flag to IR
+  * ad8a8499c9b pan/bi: Stub spilling
+  * 8477678cfeb pan/bi: Fix handling of small constants in
+    bi_lookup_constant
+  * 82a62a6f331 pan/bi: Drop 64-bit constant support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 24 Oct 2020 01:21:46 +0200
+
 mesa (20.3.0~git2010221544.6694b4276b8~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
