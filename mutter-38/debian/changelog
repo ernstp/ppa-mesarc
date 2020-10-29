@@ -1,3 +1,11 @@
+mutter (3.38.1+git2010281136.d247c0b2f~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * d247c0b2f backend: Keep a refcount on backend's current_device
+  * d9e34ebbb Update Portuguese translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Oct 2020 14:47:13 +0100
+
 mutter (3.38.1+git2010240101.ced6b3341~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
