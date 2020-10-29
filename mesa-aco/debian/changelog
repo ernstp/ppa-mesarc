@@ -1,3 +1,51 @@
+mesa (20.3.0~git2010291349.daec83c7d61~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * daec83c7d61 intel/genxml: don't generate identical code for
+    different branches
+  * e96f33cd300 intel/tools: fix invalid type in argument to printf
+  * 13859c769f0 gallium/dri: fix dri2_from_planar for multiplanar images
+  * 6c118aebb11 gallium/dri: fix dri2_query_image for multiplanar images
+  * 0f3594cd7b0 gallium/dri: allow create image for formats that only
+    support SV or RT binding
+  * 25f984812be nv50/ir/nir: don't use designated initializers
+  * e07c5467633 v3dv/format: use XYZ1 swizzle for three-component
+    formats
+  * d8562b742ea virgl: Correctly align size of blobs
+  * 7dc17ae5abc glsl: Update loop_terminator constructor to accept
+    parameters.
+  * f74ef158798 aco/ngg: Incorporate GS invocations into workgroup size
+    calculation.
+  * 09b9e52c0d8 aco/ngg: Export a zero-area triangle when primitive
+    count is 0.
+  * 73449f9a623 aco: Add a few assertions about LDS usage.
+  * b6654adc0ea aco: Make emitting reduction instructions a bit more
+    convenient.
+  * 8d6246205ad aco: Add some validation for PSEUDO_REDUCTION
+    instructions.
+  * 260f9c503ad aco/ngg: Put shader query reduction operand into a VGPR.
+  * 9757c3cb6b8 aco: Assert that workgroup barriers are not used
+    inappropriately.
+  * 915f2919f64 ci/bare-metal: suppress 'No such file or directory'
+  * ecdcf22d5d8 aco: switch aco_print_asm to a FILE *
+  * a293fad4ef7 aco: refactor repeated instruction disassembly
+  * ed2449d55be aco: move individual instruction disassembly to its own
+    helper
+  * 7ded846ba92 docs/features: Update extensions for swr
+  * 2088f359ff8 docs/features: Update extensions for softpipe
+  * 483657de323 aco: use mubuf helper in select_gs_copy_shader
+  * ec7ecfe9cbf aco: use control flow creation helpers in
+    select_gs_copy_shader
+  * 57d977a23fb aco: round bytes_written to dwords if larger than 4
+    bytes
+  * 41839d38cf3 aco: default to a definition size of 32
+  * 768186e2af3 docs: s3tc -> S3TC
+  * d30470e999b docs: clang -> Clang
+  * f3095f9b40c docs: gcc -> GCC
+  * 4aded097346 docs: fbo -> FBO
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Oct 2020 14:44:17 +0100
+
 mesa (20.3.0~git2010231934.f21dd3bc5a0~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
