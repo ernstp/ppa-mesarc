@@ -1,3 +1,10 @@
+mutter (3.36.7+git2010281135.7306bbf01~f~gnomeredirect0) focal; urgency=medium
+
+  * New snapshot:
+  * 7306bbf01 backend: Keep a refcount on backend's current_device
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Oct 2020 14:46:57 +0100
+
 mutter (3.36.7+git2010192138.617ff01e4~f~gnomeredirect0) focal; urgency=medium
 
   * New snapshot:
