@@ -1,3 +1,11 @@
+mutter (3.38.1+git2010301047.01e2a54f3~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * 01e2a54f3 wayland/window: Don't lose precision in
+    MetaWaylandWindowConfiguration
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 30 Oct 2020 18:19:04 +0100
+
 mutter (3.38.1+git2010281136.d247c0b2f~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
