@@ -1,5 +1,0 @@
-usr/include
-usr/lib/*/lib*.so
-usr/lib/*/mutter-6/*.so
-usr/lib/*/mutter-6/*.gir
-usr/lib/*/pkgconfig/*.pc
