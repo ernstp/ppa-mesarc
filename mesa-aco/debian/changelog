@@ -1,3 +1,49 @@
+mesa (20.3.0~git2010301434.e54c7f4b1ac~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * e54c7f4b1ac android: aco: add aco_form_hard_clauses.cpp to
+    Makefile.sources
+  * a1d6c03e2f3 etnaviv: don't import allocated scanout resources via
+    from_handle
+  * 3862cec314d etnaviv: pass correct layout to etna_resource_alloc for
+    scanout resources
+  * ec21148311f etnaviv: simplify etna_screen_bo_from_handle
+  * 94ec412b268 etnaviv: do proper cpu prep/fini when clearing allocated
+    buffer
+  * 181790117bd etnaviv: cosmetic etna_resource_alloc fixes
+  * 98db7c4841c etnaviv: free tgsi tokens when shader state is deleted
+  * 3fd512440bf etnaviv: tex_desc: fix TS compression enable
+  * cf871e92327 etnaviv: update headers from rnndb
+  * 3ba753d9f58 etnaviv: blt: properly program surface TS offset for
+    clears
+  * 866bb22d6b9 etnaviv: drm: fix BO refcount race
+  * 8b0218beb59 etnaviv: drop etna_pipe_wait(..)
+  * b7501184b90 radeonsi: implement inlinable uniforms
+  * 6d058ac6c99 aco: Fix accidental copies, attempt two
+  * b03c86a71f3 intel/dev: Bump Max EU per subslice/dualsubslice
+  * 5957b0c1622 glthread: pin driver threads to the same L3 as the main
+    thread regularly
+  * d8ea5099658 util: completely rewrite and do AMD Zen L3 cache pinning
+    correctly
+  * 4f2c2307f9e util: add util_get_current_cpu using sched_getcpu and
+    Windows equivalent
+  * 9758b1d416a util: add util_set_thread_affinity helpers including
+    Windows support
+  * 3433d193e7c st/mesa: remove random L3 pinning heuristic for glthread
+  * 96d9f7761d4 util: consolidate thread_get_time functions
+  * 53a15925da5 util: remove unused util_get_L3_for_pinned_thread
+  * cc161132027 android: fix libsync dependencies (v2)
+  * a09717c4de0 glsl: add extra pp tokens workaround and enable for CoR
+  * ce0b72a13a2 intel/fs: Don't emit_uniformize when getting a constant
+    SSBO index
+  * 0fe5490724e v3d/format: use XYZ1 swizzle for three-component formats
+  * f7d1460418f gallivm: zero init the temporary register storage.
+  * 17613794815 aco: handle SDWA in the optimizer
+  * ecc5b59a706 aco: don't allow destination opsel for v_cvt_pknorm
+  * bb890f2e7c1 aco: fix combine_inverse_comparison()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 30 Oct 2020 18:16:27 +0100
+
 mesa (20.3.0~git2010291349.daec83c7d61~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
