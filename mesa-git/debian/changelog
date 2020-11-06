@@ -1,3 +1,42 @@
+mesa (20.2.1+git2011021648.f17e6fcb7ac~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * f17e6fcb7ac blorp: allow blits with floating point source layers
+  * 35b93d6f8aa anv: fix source/destination layers for 3D blits
+  * a7e169380da winsys/amdgpu: remove incorrect assertion check against
+    max_check_space_size
+  * 52ef9c22a0b radv: Fix variable name collision.
+  * e8b625bc963 etnaviv: free tgsi tokens when shader state is deleted
+  * 25bc222815c etnaviv: blt: properly program surface TS offset for
+    clears
+  * fd3c49bb788 etnaviv: drm: fix BO refcount race
+  * 833d68899a8 intel/dev: Bump Max EU per subslice/dualsubslice
+  * f401af6f186 gallivm: zero init the temporary register storage.
+  * 3e2245c4549 intel/tools: fix invalid type in argument to printf
+  * b540aaa0a8b radv: Do not access set layout during
+    vkCmdBindDescriptorSets.
+  * 7ccf2cf839c radv: Fix 1D compressed mipmaps on GFX9.
+  * 562e89ff0de aco: ignore the ACO-inserted continue in
+    create_continue_phis()
+  * 1ddbe3aa11f aco: update phi_map in add_subdword_operand()
+  * 63754d2b777 .pick_status.json: Update to
+    8077f3f4c4a3d8007caa30eed93fed1c6bbf3c5a
+  * bfa8ac8c675 freedreno: Disallow tiled if SHARED and not
+    QCOM_COMPRESSED
+  * 5afe855fde2 iris: fix the order of src and dst for fence memcpy
+  * cacca2aaa1c loader/dri3: Allocate up to 4 back buffers for page
+    flips
+  * fa73f34f79c loader/dri3: Keep current number of back buffers if
+    frame was skipped
+  * 86a542b0ab9 loader/dri3: Only allocate additional buffers if needed
+  * e12a581a3ac aco: fix determining if LOD is zero for
+    nir_texop_txf/nir_texop_txs
+  * 2f09ff3fc8d gallivm/nir: handle nir_op_flt in lp_build_nir_llvm
+  * 4f0bee67750 .pick_status.json: Update to
+    b92eadb29cc8ef09096d9196434d49e35a3eccaf
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 06 Nov 2020 04:35:54 +0100
+
 mesa (20.2.1+git2010220116.17e7be7c791~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
