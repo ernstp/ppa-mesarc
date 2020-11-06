@@ -1,3 +1,15 @@
+mutter (3.38.1+git2011052221.a0a4c3e52~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * a0a4c3e52 wayland/subsurface: Check for circular relationships
+  * 23a9fdf6d x11/output: Fix init tile info guard
+  * 0caae95ad clutter/actor: Queue redraw on no-layout parents when
+    unmapping
+  * 33605179a backend: Update cursor visibility on device added
+  * 32769c120 clutter/backend: Don't dispatch libinput events too early
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 06 Nov 2020 04:45:35 +0100
+
 mutter (3.38.1+git2010301047.01e2a54f3~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
