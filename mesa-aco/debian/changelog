@@ -1,3 +1,47 @@
+mesa (20.3.0~git2011060328.041e3147c05~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 041e3147c05 docs: Add MESA_pack_invert and
+    ANGLE_pack_reverse_row_order
+  * fd104096c61 mesa: Implement GL_ANGLE_pack_reverse_row_order
+  * 4506e4db4d6 mesa: Enable GL_MESA_pack_invert unconditionally
+  * 923577c0662 v3dv: Remove unsigned comparison to zero.
+  * 03683b9b2e6 nir: Handle ray-tracing intrinsics and storage classes
+    in copy-prop etc.
+  * 5a288932797 spirv,nir: Add ray-tracing intrinsics
+  * 21b1b915498 nir,spirv: Add support for the ShaderCallKHR scope
+  * 6b8fd65e840 spirv: Implement the new ray-tracing storage classes
+  * 84a8ca1db88 nir: Add new variable modes for ray-tracing
+  * aa4ea9c7ea6 nir: Add intrinsics for object to/from world RT sysvals
+  * 07635a3284c nir/builder: Add a select_from_ssa_def_array helper
+  * 46cd91bb45a spirv,nir: Add support for ray-tracing built-ins
+  * ed907e5d84c spirv: Add support for OpTypeAccelerationStructureKHR
+  * 2df055ab47f spirv: Pass the deref type to storage_class_to_mode for
+    non-forward pointers
+  * 2bef02696d4 spirv: Add a guard for OpTypeForwardPointer storage
+    classes
+  * aabe37b9694 spirv: Remove a redundant vtn_fail_if
+  * 3bcebe1b271 spirv: Add Ray Tracing execution models
+  * d8dbdf20de8 spirv: Add basic plumbing for ray-tracing capabilities
+  * f65182931db compiler: Add new Vulkan shader stages
+  * 1882a02d83b tu: Make sure spirv_to_nir knows we support
+    imageStorageWithoutFormat.
+  * 0b0f152c54e nir/clip_disable: handle 2x vec4 case
+  * 5e43ba39e11 nir/clip_disable: try for better no-op
+  * 1d23a88c6eb nir/clip_disable: write 0s instead of undefs for
+    disabled clip planes
+  * c84ae1523e0 iris: Move blit scissoring earlier.
+  * 0f96a9ab3b0 anv: restrict number of subgroups per group
+  * b2c719308c5 turnip: enable VK_EXT_image_drm_format_modifier
+  * f624692a57d turnip: don't always fallback to linear for mutable
+    formats
+  * 8c4426f519c turnip: remove unnecessary/redundant tu_image fields
+  * c64cd6988f1 turnip: remove useless tu_image asserts
+  * dfaa8b9ae72 turnip: LAYOUT_PREINITIALIZED is not different for
+    optimal tiling
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 06 Nov 2020 04:24:02 +0100
+
 mesa (20.3.0~git2010301434.e54c7f4b1ac~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
