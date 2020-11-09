@@ -1,3 +1,13 @@
+mutter (3.38.1+git2011071135.979eb80dc~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * 979eb80dc backends/x11: Emit CLUTTER_DEVICE_ADDED events for initial
+    devices
+  * 17daa3568 clutter/event: Do not filter out DEVICE_ADDED/REMOVED
+    events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 09 Nov 2020 21:16:06 +0100
+
 mutter (3.38.1+git2011052221.a0a4c3e52~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
