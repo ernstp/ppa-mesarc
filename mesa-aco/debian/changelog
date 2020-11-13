@@ -1,3 +1,47 @@
+mesa (21.0.0~git2011130427.3fa3bc19a28~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3fa3bc19a28 radeonsi: Add auxiliary plane support.
+  * 605140e4016 radeonsi: Do not try to disable displayable DCC with
+    modifiers.
+  * 23b59b6f87c radeonsi: Do not disable DCC when we have it as a
+    modifier.
+  * c786150dfa5 radeonsi: Add modifier support.
+  * f7a4051b836 radeonsi: Check pitch and offset for validity.
+  * 395dac7bf98 amd/common: Add modifier tests.
+  * 0833dd7d124 amd/common: Add support for modifiers.
+  * 2cc2b456889 drm-uapi: Add AMD modifiers.
+  * d4f7962d48b radeonsi: Add displayable DCC flushing without explicit
+    flushes.
+  * 3e2dcb3c076 amd/addrlib: Use signed char for INT_8.
+  * 9acfbe30226 radv: Do the sample check for tiling earlier.
+  * dad6b625768 turnip: Fix file descriptor return.
+  * fe3b5241a48 radeonsi: enable GL_EXT_demote_to_helper_invocation
+  * aa757f4f8c3 ac/llvm: fix demote inside conditional branches
+  * cb20d58f45c nir: optimize nir_lower_discard_to_demote to lower
+    discard/demote both ways
+  * d5039f99b4f nir: gather shader_info::needs_all_helper_invocations
+  * baa5807e363 nir: rename needs_helper_invocations to
+    needs_quad_helper_invocations
+  * 96c12b7dc20 nir: optionally shuffle local invocation IDs for compute
+    quad derivatives
+  * 99e17b0c4ad radeon: fix license in header
+  * 0b4825c8725 gallium/draw: Fix rasterizer_discard for wide
+    points/lines.
+  * 9edb6e1be0f mesa: Fix vertex_format_to_pipe_format index.
+  * 6e6dab47990 nir: handle float atomics in copy propagation pass
+  * 8de279f8dbc freedreno/drm: Add some locking asserts
+  * 9eb2ae5d21f radv/winsys: set has_dedicated_vram in the null winsys
+  * f6359d2dc32 nir: Fix nir_validate fail after nir_lower_tex
+  * 53660e4c4ed Add EGL xcb platform
+  * 8bb1a75b4f0 anv: fix a build race between generating a header and
+    using it
+  * 5d2e9d76c1d d3d12: fix code after simple-shader helper changes
+  * 5f999625407 zink: fix build on windows
+  * db9d13b4ffd aco: optimize v_add_u32(v_mul_lo_u16) -> v_mad_u32_u16
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 13 Nov 2020 07:59:50 +0100
+
 mesa (20.3.0~git2011092051.1c5271346af~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
