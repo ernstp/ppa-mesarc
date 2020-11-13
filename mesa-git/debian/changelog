@@ -1,3 +1,47 @@
+mesa (20.3.0~rc1+git2011100130.f44896c12ac~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f44896c12ac bump version for 20.3-rc1
+  * 3c4e43e72be intel: Pointer to SCISSOR_RECT array should be 64B
+    aligned
+  * a1a365e8188 broadcom/compiler: Allow spills of temporaries from TMU
+    reads
+  * 1c5271346af nir/algebraic: optimize bitfield_select(a, b, 0) to
+    iand(a, b)
+  * d47969eb5ed pan/bi: Add support for load_instance_id
+  * 5cd1d8c1ed9 pan/bi: Add support for load_vertex_id
+  * 255f7842c7c panfrost: Allow linear ZS resources on Bifrost
+  * 4995a4c03aa pan/bi: Add support for ushr
+  * af70987b363 pan/bi: Add support for ishr
+  * 3257ad21f34 pan/bi: Fix ARSHIFT definitions
+  * 2a80b2d0cd1 pan/bi: Move bitwise op packing out of bi_pack_fma()
+  * cc0950722c0 pan/bi: Get rid of bi_emit_ld_uniform()
+  * fd265fa0206 pan/bi: Lower uniforms to UBO
+  * 09da82cbdc3 pan/bi: Add support for load_ubo
+  * 87e2169cb90 pan/bi: Fix swizzle handling in bi_copy_src()
+  * 2522f509a3d pan/bi: Support centroid and sample interpolations
+  * ca5a00a70ca pan/bi: Extract LD_VAR sample field from ins-
+    >load_vary.interp_mode
+  * 1692088d053 panfrost: Expose GLES3 features on Bifrost when
+    PAN_MESA_DEBUG=deqp
+  * 23dbf7964b7 panfrost: Force late pixel kill when depth/stencil is
+    written from the FS
+  * 956228da3a1 radeon/vcn : Corrected dpb_size calculation for VP9_2
+  * 68092df8d88 intel/nir: Lower 8-bit ops to 16-bit in NIR on Gen11+
+  * b98f0d3d7c3 intel/nir: Lower 8-bit scan/reduce ops to 16-bit
+  * 3ad2d85995e intel/nir: Refactor lower_bit_size_callback
+  * f95665cfebb nir/lower_bit_size: Add support for lowering subgroup
+    ops
+  * 2c4b47184da nir/lower_bit_size: Pass a nir_instr to the callback
+  * 15c6e05a725 nir/lower_bit_size: Don't cast comparison results
+  * 86ef139bf46 radv: implement VK_EXT_shader_image_atomic_int64
+  * 9f432687726 ac/nir: implement 64-bit images
+  * 5b81e80fb6c aco: implement 64-bit images
+  * 8570de72f51 amd/common: add PIPE_FORMAT_R64_{UINT,SINT} to GFX10
+    format table
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 13 Nov 2020 08:02:24 +0100
+
 mesa (20.2.1+git2011021648.f17e6fcb7ac~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
