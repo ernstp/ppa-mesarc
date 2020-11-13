@@ -1,3 +1,13 @@
+mutter (3.38.1+git2011121507.067af969c~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * 067af969c wayland/xdg-shell: Imitate undefined behavior Qt relies
+    upon
+  * 29776c99a window/wayland: Warn when attempted to resend
+    uninitialized state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 13 Nov 2020 08:04:46 +0100
+
 mutter (3.38.1+git2011071135.979eb80dc~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
