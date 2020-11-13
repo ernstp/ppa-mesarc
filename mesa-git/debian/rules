@@ -34,6 +34,10 @@ COMMA := ,
 
 confflags_DRI3 = -Ddri3=false
 
+ifeq (,$(filter $(DEB_HOST_ARCH), arm64))
+  confflags += -Db_lto=true
+endif
+
 # hurd doesn't do direct rendering
 ifeq ($(DEB_HOST_ARCH_OS), hurd)
 	EGL_PLATFORMS = x11
