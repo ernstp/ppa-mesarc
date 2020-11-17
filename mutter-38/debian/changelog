@@ -1,3 +1,13 @@
+mutter (3.38.1+git2011170836.17e9cbe8c~g~gnome0) groovy; urgency=medium
+
+  * New snapshot:
+  * 17e9cbe8c renderer/native: Add udev rule to select primary GPU
+  * a61d3b683 cursor-sprite/xcursor: Fall back to gray square if missing
+    theme
+  * 965c94d46 backend: Don't pull generated headers (indirectly)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Nov 2020 19:49:03 +0100
+
 mutter (3.38.1+git2011121507.067af969c~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
