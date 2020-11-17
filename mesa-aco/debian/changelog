@@ -1,3 +1,52 @@
+mesa (21.0.0~git2011171936.87dc3106b07~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 87dc3106b07 anv/image: Define anv_image_get_aux_addr (v3)
+  * 5fa0e5b87df anv/image: Check surface offsets after adding each
+    surface
+  * 9f0abc2a224 anv/image: Rewrite check_surfaces() [v2]
+  * 15642a52ce2 anv/image: Further split add_*_surface funcs (v2)
+  * 9f2073c76ef anv/image: Define add_all_surfaces()
+  * 2bfd43ba0bf anv/image: Add more asserts to choose_isl_tiling_flags
+  * 8636adf856e anv/image: Move some DRM code in
+    anv_get_image_format_properties()
+  * 40ac4c9cdc3 anv/image: Emit error message for non-2D DRM images
+  * c892e242589 anv/image: Drop redundant rejection of YCbCr formats
+    with modifiers
+  * c9f2a74b5a5 anv/image: Respect VkImageFormatListCreateInfo for
+    VkImageFormatProperties (v2)
+  * ce4f6bda66e anv/image: Fail earlier in
+    anv_get_image_format_properties
+  * 8c5b4b1e1db anv/image: Minor refactor of
+    VkImageFormatProperties::sampleCounts
+  * 2b3ec91326b anv/image: Rename
+    get_wsi_format_modifier_properties_list()
+  * 57d416d4236 anv/image: Fix VkExternalMemoryProperties for images
+    (v5)
+  * a2aa56905c6 anv/image: Delete the list of modifier-compatible
+    formats
+  * 146f41e608c anv/image: Refactor iteration over modifiers
+  * 6835cb7f862 isl: Make public the list of modifiers
+  * 51eefbaae6d anv/image: Fill drmFormatModifierTilingFeatures (v2)
+  * 1f39b3e48da anv/image: Teach anv_get_image_format_features() about
+    modifiers (v3)
+  * 486ae7c655e isl: Add isl_format_layout::uniform_channel_type
+  * f665bae4eb3 anv/image: Use isl_drm_modifier_get_score()
+  * 01bad67a940 isl: Define isl_drm_modifier_get_score() [v3]
+  * b50275a4b63 anv/image: Fix isl_surf_usage_flags for stencil images
+  * 51a19c83b00 anv/image: Check DISJOINT in
+    vkGetPhysicalDeviceImageFormatProperties2 (v2)
+  * 19906022e22 zink: more accurately track supported blits
+  * 465a48a048c zink: always insert barriers for general-layout
+  * 11ebe2a572f zink: mark general layout as transfer-read/write
+  * 249aed1ff06 v3dv: rename playout and dslayout fields to use
+    underscores.
+  * ba2e979b5ce v3dv: blit shader clean-ups
+  * 840ba2513a2 v3dv: initialize pipeline layouts for meta operations at
+    driver initialization
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Nov 2020 19:44:03 +0100
+
 mesa (21.0.0~git2011130427.3fa3bc19a28~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
