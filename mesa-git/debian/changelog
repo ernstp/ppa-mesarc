@@ -1,3 +1,40 @@
+mesa (20.3.0~rc1+git2011131906.004b8b105ff~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 004b8b105ff aco: disallow various v_add_u32 opts if modifiers are
+    used
+  * 46ab4f91710 aco: fix combine_constant_comparison_ordering() NaN
+    check with 16/64-bit
+  * afe279ad861 aco: don't combine precise max(min()) to med3
+  * cdb5bcc0598 turnip: Fix file descriptor return.
+  * 0724abde7a3 gallium/draw: Fix rasterizer_discard for wide
+    points/lines.
+  * 0e3bb4aa913 mesa: Fix vertex_format_to_pipe_format index.
+  * 7762b3cda4c nir: handle float atomics in copy propagation pass
+  * fe8c524c826 intel/fs: Fix use of undefined value in
+    fixup_nomask_control_flow
+  * 51d4d91f7d2 ci: Only install kernel modules for LAVA devices.
+  * a442fc2955e llvmpipe: just use draw_regions in draw/line setup.
+  * bc3e92a1df1 lavapipe: disable SNORM blending for now
+  * 0e4e0a0d09a lavapipe: enable alpha to one.
+  * 3ee324d4ec1 u_blitter: port radv 3D blit coords logic.
+  * 4de4f552289 gallium: handle empty cbuf slots in framebuffer samples
+    helper
+  * f4d976d5917 util/set: Fix the _mesa_set_clear function to not leave
+    tombstones.
+  * 966b55c6dae freedreno: Protect gmem_cache ralloc allocations
+  * 60ffcfe6a98 st/mesa: fix use-after-free when updating shader info in
+    st_link_nir
+  * 46c08b73dea softpipe: correct signature of get_compiler_options
+  * 23f4120491d panfrost: Fix ->reads_frag_coord assignment
+  * f3ff1265ba7 panfrost: Fix Bifrost blend descriptor emission
+  * 5c167e8d923 pan/bi: Model writemasks correctly
+  * 2940fb13eba panfrost: Fix AFBC blits of resources with faked RGTC
+  * 5634699a2c0 .pick_status.json: Update to
+    bf5cea7232f9ee2934c212211ebefb6fe766526d
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Nov 2020 19:46:38 +0100
+
 mesa (20.3.0~rc1+git2011100130.f44896c12ac~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
