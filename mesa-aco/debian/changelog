@@ -1,3 +1,49 @@
+mesa (21.0.0~git2011181826.17ebce2f130~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 17ebce2f130 d3d12: transition the right planes
+  * 968e360e470 zink: track custom border color samplers and verify
+    against device limits
+  * 4d498f5eaca zink: handle arbitrary border colors using
+    VK_EXT_custom_border_color
+  * f493fc5fa2b spirv: workaround setjmp/longjmp crash on MinGW
+  * 9e4f588318f llvmpipe: fix arith-test build on msvc
+  * 03cfc93ab5e winsys/d3d12: Use MakeWindowAssociation to remove DXGI's
+    alt+enter handling
+  * 81adf127016 d3d12: also reject GDI-supporting pixel-formats
+  * 8bbc31aba2f d3d12: Release swapchain buffers before resizing them
+  * be4475c4a73 d3d12: Implement winsys framebuffer
+  * e74b3e570a6 wgl: Wrap stw_pixelformat.h into extern C
+  * 584061bdcdb wgl: Create third buffer when drawing to front buffer
+  * ece2cc3352f wgl: Wait for fence when not using winsys framebuffer
+  * f49ff1548be wgl: Call flush_resource() before presenting
+  * 0e79ee3741d wgl: Flush in-between resolving buffer and presenting
+  * d60913e3925 wgl: Use winsys framebuffer interface if present
+  * 23bfe035674 wgl: Add winsys framebuffer object
+  * acf8af458f5 wgl: Add PFD flags based on stw_winsys callback response
+  * c28eb3c6aac wgl: Add stw_winsys callback to check which PFD flags
+    should be added
+  * bb9cc7ede4d d3d12: Add D3D12 WGL winsys
+  * 3b034e97716 wgl: Implement get_adapter_luid callback
+  * f6d2d3cb580 wgl: Marshal HDC into screen creation and LUID querying
+  * 494bd9cfa66 d3d12: Pipe adapter LUID from callbacks to D3D12 screen
+    init
+  * 29996b88c2b d3d12: Add glon12 target which only includes d3d12
+    driver
+  * fd361dde655 d3d12: Support WINSYS_HANDLE_TYPE_D3D12_RES
+  * 7145cd6e735 mesa/st: Introduce WINSYS_HANDLE_TYPE_D3D12_RES
+  * 5c305c8e36a v3dv: use VkSurface to retrieve an authenticated display
+    fd
+  * 0fcd379184d aco: fix combining max(-min(a, b), c) if a or b uses the
+    neg modifier
+  * ff22fcf4500 radeonsi: fix scan_instruction for bindless
+    inc_wrap/dec_wrap atomics
+  * d0657ee8379 radeonsi: fix NGG streamout regression
+  * be905b74f74 radeonsi: don't add num_vbos_in_user_sgprs to the shader
+    cache key for non-VS
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 18 Nov 2020 19:11:59 +0100
+
 mesa (21.0.0~git2011171936.87dc3106b07~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
