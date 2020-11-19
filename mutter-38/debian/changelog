@@ -1,3 +1,9 @@
+mutter (3.38.1+git2011170836.17e9cbe8c~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Nov 2020 01:28:15 +0100
+
 mutter (3.38.1+git2011170836.17e9cbe8c~g~gnome0) groovy; urgency=medium
 
   * New snapshot:
