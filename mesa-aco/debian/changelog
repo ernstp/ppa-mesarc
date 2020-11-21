@@ -1,3 +1,45 @@
+mesa (21.0.0~git2011210255.ba9906fc8f2~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * ba9906fc8f2 clover: Initialize command_queue member _props.
+  * f8dc22bf61c meson: drop deprecated EGL platform build options
+  * 4da8323a14b gitlab-ci: drop deprecated platforms that snuck in when
+    nobody was watching
+  * 14186a1b845 aco/tests: add Builder::v_mul_imm() tests
+  * aab507c6b05 aco: use v_mul_imm() for some nir_op_imul
+  * 02c5519e6c6 aco: try harder to not create v_mul_lo_u32
+  * 8ca23bcf396 aco: copy constant to sgpr in Builder::v_mul_imm()
+  * 756bb29391b aco: create vgpr constant copies using v_bfrev_b32
+  * 4d93fc25f06 aco: count v_mul_lo_u32 as 16 cycles
+  * 70d665d981b aco: don't create v_mov_b32 in v_mul_imm()
+  * 35613c752f5 radeon/vce: Bitrate not updated when changing framerate
+  * a59b1b18a95 glx, egl: Add LIBGL_DRI2_DISABLE environment variable
+  * 27612984a4d gallium/vl: Set modifier field for winsys handle.
+  * 8c3abcab6d8 nir/copy_prop_vars: avoid a duplicate lookup if src ==
+    vec_src
+  * 33eeb994be1 nir/copy_prop_vars: use nir_deref_and_path
+  * abc32259274 nir/deref: add helpers to lazily create paths
+  * 7d8c06d484f nir/search: check for changes before adding uses to
+    worklist
+  * 556a20afe6a nir/search: check instr type before adding to worklist
+  * 4832262560d nir/loop_analyze: initialize loop variables on demand
+  * be7b20135e5 nir/copy_prop_vars,nir/dead_write_vars: ignore read-only
+    loads
+  * 276e241b579 nir: add nir_var_vec_indexable_modes
+  * fb01882ddbb nir: add nir_phi_get_src_from_block() helper
+  * 8d477baa4f9 nir: allow for cheap intrinsics in
+    nir_opt_peephole_select()
+  * 5cc29fccbeb radv/winsys: Fix use of nonexisting struct type in
+    sizeof
+  * 9eda7f475cf radv/query: Avoid hardcoding array size constants
+  * b4d6131c156 radv,aco: Compile with -Wshadow when available
+  * cba6ec309ab radv: Fix -Wshadow warnings
+  * a978602d1f2 aco/tests: Fix -Wunused warnings in release mode
+  * 5231c788ff0 aco/tests: Fix -Wshadow warnings
+  * 2bb88743203 aco: Fix -Wshadow warnings
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 21 Nov 2020 05:33:36 +0100
+
 mesa (21.0.0~git2011181826.17ebce2f130~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
