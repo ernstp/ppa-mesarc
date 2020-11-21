@@ -1,3 +1,21 @@
+mutter (3.38.1+git2011192106.bd42c9c23~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+  * bd42c9c23 clutter/stage-cogl: Avoid copying fb_clip_region
+  * c8f1e8529 region-utils: Always use FLT_EPSILON when comparing
+    floating point values
+  * 2dc9bdb19 region-utils: Reduce temporary allocations
+  * 30a0ef477 wayland/compositor: Only emit frame callbacks for the
+    primary stage view
+  * 5a8d16e83 surface-actor-wayland: Add API to pick a primary stage
+    view
+  * 6ae413db1 surface-actor: Add API to check obscuredness per stage
+    view
+  * a1db1dfa2 clutter/stage-view: Make get_refresh_rate() public
+  * adb14b14a window-props: Also check for actual values change
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 21 Nov 2020 05:38:28 +0100
+
 mutter (3.38.1+git2011170836.17e9cbe8c~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
