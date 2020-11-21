@@ -1,3 +1,38 @@
+mesa (20.3.0~rc2+git2011202137.43697f6c5fc~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 43697f6c5fc intel/compiler: Rotate instructions ROR and ROL cannot
+    have source modifiers
+  * 2d1e15236b0 .pick_status.json: Update to
+    a59b1b18a95af1f8edb0093baf508e974e3251a2
+  * d8e73329ded ac: Don't negate strstr return values in
+    ac_query_gpu_info
+  * 84e77da244e intel/fs: Fix sampler message headers on Gen11+ when
+    using scratch
+  * e1697827104 freedreno: Fix warning about uninit size for the size==0
+    special case.
+  * 650e2a15ad3 radeonsi: fix scan_instruction for bindless
+    inc_wrap/dec_wrap atomics
+  * 2ce2c22d1ad radeonsi: fix NGG streamout regression
+  * 5bf5eb452f5 ac: fix min/max_good_num_cu_per_sa on gfx10.3 with
+    disabled SEs
+  * 32b5779ade5 ac: fix detection of Pro graphics
+  * f396e154f1d radeonsi: add options.inline_uniforms to the shader
+    cache key
+  * d247a0720af radeonsi: determine correctly if switching from normal
+    launch to fast launch
+  * cd3cd167838 radeonsi: only do VGT_FLUSH for fast launch if previous
+    draw was normal launch
+  * fe27a78d315 radeonsi: do VGT_FLUSH when switching NGG -> legacy on
+    Sienna Cichlid
+  * 825a8846cc4 radeonsi: fix min_direct_count value
+  * 40e3de32e13 bump VERSION for 20.3.0-rc2 release
+  * 0201fc95e7f glcpp: Handle bison-3.6 error message changes
+  * 827c0cc14f7 .pick_status.json: Update to
+    bac6cc586fe4c1b24351e0574d3a961eb631f6ae
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 21 Nov 2020 05:36:05 +0100
+
 mesa (20.3.0~rc1+git2011171957.654376faad6~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
