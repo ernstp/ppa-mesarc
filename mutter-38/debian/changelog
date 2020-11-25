@@ -1,3 +1,10 @@
+mutter (3.38.1+git2011250926.c70610c43~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+  * c70610c43 gschema/wayland: Do not disable the X Security extension
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Nov 2020 11:26:38 +0100
+
 mutter (3.38.1+git2011231507.4e4d261ba~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
