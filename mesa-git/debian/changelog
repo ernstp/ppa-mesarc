@@ -1,3 +1,41 @@
+mesa (20.3.0~rc2+git2011250710.e1e31f6126c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * e1e31f6126c radv: Fix RB+ blending for
+    VK_FORMAT_E5B9G9R9_UFLOAT_PACK32.
+  * b2c70c3b116 spirv: Call repair SSA for OpTerminateInvocation
+  * deccfbc0d77 zink: fall back to util_blitter for scaled resolves
+  * 0464d64d6ce gallium: fix missing bit field in p_state.h
+  * e9cdf398fa2 lavapipe: enable pipeline stats queries
+  * 10a9d8a10f4 lavapipe: fixup mipmap precsion bits
+  * 092a65b0d13 llvmpipe: fix multisample lines.
+  * 7e90c4d148e llvmpipe: fix multisample point rendering.
+  * ad4d87a5373 llvmpipe/setup: move point stats collection earlier.
+  * 904811faacc lavapipe: fix wsi acquire fences
+  * 6e3894d52d1 lavapipe: fixup device allocate + enable private data
+  * c7fdc10cbad zink: fix layered resolves
+  * 0a393505726 meson: Don't add extra values to shader-cache
+  * f998d5bddbd .pick_status.json: Update to
+    9fa1cdfe7ffd9e7ebd83055e2008f3e4b8ada549
+  * 162a0678ac3 aco: fix combining add/sub to b2i if a new dest needs to
+    be allocated
+  * 8464a6e3d7b v3dv/cmd_buffer: missing (uint8_t *) casting when
+    calling memcmp
+  * 60bf76735c8 ac/nir: fix a typo in
+    ac_are_tessfactors_def_in_all_invocs
+  * 6adf918d341 r600/sfn: lower bool to int32 only after common
+    optimizations
+  * 29f1078c18c nir: fix gathering patch IO usage with lowered IO
+  * 33d70876820 nir: fix gathering TCS cross invocation access with
+    lowered IO
+  * 48bcf3bcc39 meson: drop deprecated EGL platform build options
+  * 921bd0eabed gitlab-ci: drop deprecated platforms that snuck in when
+    nobody was watching
+  * f56cbdf9951 .pick_status.json: Update to
+    a92f597b98bb032b904c7c8a8c3a9fe798b51915
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Nov 2020 07:33:03 +0100
+
 mesa (20.3.0~rc2+git2011202137.43697f6c5fc~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
