@@ -1,3 +1,17 @@
+mutter (3.38.1+git2011231507.4e4d261ba~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+  * 4e4d261ba surface-actor-wayland: Optimize get_current_primary_view
+    for single view
+  * 2c863f1e7 backends/native: Wait to have an stage before emitting
+    CLUTTER_DEVICE_ADDED
+  * b5651e663 window: Fix size hints with CSD
+  * 4419509ef core/window: Move size hints to dedicated function
+  * 51f06dcd3 clutter/text: Check if attributes are equal before
+    applying
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Nov 2020 07:35:27 +0100
+
 mutter (3.38.1+git2011192106.bd42c9c23~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
