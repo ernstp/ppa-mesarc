@@ -1,3 +1,28 @@
+mesa (21.0.0~git2011251044.ecebc263f5b~b~mesaaco6) bionic; urgency=medium
+
+  * New snapshot:
+  * ecebc263f5b Revert "util: Add helpers for various one-time-init
+    patters"
+  * 86662655ece Revert "nir: Use get_once() helper for one-time init's"
+  * 5461e212456 Revert "freedreno/ir3: Use get_once() for one-time init"
+  * b8fb95ce01c Revert "gallium/hud: Use do_once for one-time init"
+  * f20192f7c33 Revert "mesa/st: Use do_once for one-time init"
+  * 410b6518593 Revert "util: Fix helgrind complaint about one-time
+    init"
+  * 8fffcbce9bc Revert "mesa: Fix helgrind complaint about one-time
+    init"
+  * 1f6e03c3bf5 Revert "gallium/trace: Fix helgrind complaint about one-
+    time init"
+  * f57f040f13c Revert "tgsi: Fix helgrind complaint about one-time
+    init"
+  * 8da98beb5d6 radv: always use 32-bit predication on compute queues
+  * 62d9ca696e0 radv: use 32-bit predication for conditional rendering
+    on GFX10.3+
+  * b1558ec3ec9 ac: add gpu_info::has_32bit_predication
+  * 472e81ed805 v3dv: Wayland WSI support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Nov 2020 11:24:05 +0100
+
 mesa (21.0.0~git2011250637.9fa1cdfe7ff~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
