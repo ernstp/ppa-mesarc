@@ -3,5 +3,5 @@ GIT="https://gitlab.freedesktop.org/mesa/mesa.git"
 GITBRANCH="master"
 DISTROS="bionic focal groovy"
 PREBUMP=1
-INC=5
+INC=6
 PPA=mesaaco

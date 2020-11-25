@@ -48,7 +48,7 @@ ifeq ($(DEB_HOST_ARCH_OS), hurd)
 	DRI_DRIVERS = swrast
 	with_libva = 
 else
-	EGL_PLATFORMS = x11 surfaceless wayland drm
+	EGL_PLATFORMS = x11 wayland
 
   ifeq ($(DEB_HOST_ARCH_OS), linux)
 	confflags_DRI3 = -Ddri3=true
