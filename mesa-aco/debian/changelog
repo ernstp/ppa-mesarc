@@ -1,3 +1,54 @@
+mesa (21.0.0~git2011250637.9fa1cdfe7ff~b~mesaaco5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9fa1cdfe7ff intel/rt: Implement push constants as global memory
+    reads
+  * f7e24e559fb intel/rt: Add support for hit attributes
+  * 96fde5518b5 intel/rt: Add a helper to create the raygen trampoline
+    shader
+  * 303378e1dd4 intel/rt: Add lowering for combined intersection/any-hit
+    shaders
+  * cb261b03e5a intel/rt: Add lowering for ray-walk intrinsics in any-
+    hit shaders
+  * c3ddefa000e intel/rt: Add support for shader buffer record memory
+  * 9ba7d459a3a intel/rt: Implement the new ray-tracing system values
+  * 7ce7c93755f intel/rt: Implement traceRay()
+  * 75209d5bd1f intel/fs: Add and implement intel-specific ray-tracing
+    intrinsics
+  * 1f6ae809ef0 intel/rt: Implement support for shader call payloads
+  * 72354b0e9dd intel/rt: Add a helper to create a trivial return shader
+  * fad81a39681 intel/rt: Add a pass to lower shader call instructions
+  * ca88cd8e5a6 intel/rt: Add return instructions at the end of ray-
+    tracing shaders
+  * 49778a7253d intel/rt: Add support for scratch in ray-tracing shaders
+  * 2b3f6cdc6cf intel/rt: Add lowering functions for each ray-tracing
+    stage
+  * c7660918d77 intel/rt: Add a pass to lower the new ray-tracing
+    intrinsics
+  * 6e50db4edac intel/rt: Add builder helpers for accessing RT data
+    structures
+  * 1f6e70c85a8 intel/fs: Add and implement a load_global_const_block
+    intrinsic
+  * 6d5b57aeb7d intel/rt: Add a brw_rt.h header with #defines for basic
+    RT data structures
+  * 7280b0911d8 intel/compiler: Add support for bindless shaders
+  * 27f44116fe0 intel/debug: Add a debug flag for ray-tracing shaders
+  * a7dd172aaa1 nir/lower_io: Support shader_call_data in
+    vars_to_explicit_types
+  * 477d2f03794 nir/lower_io: Allow ray_hit_attrib in
+    lower_vars_to_explicit_types
+  * bbbb0600f64 nir: Add a helper to get the live set at a cursor
+  * c7eccb9ca2a intel/genxml: Add BVH data structures
+  * 980950c5210 intel/genxml: Add RT_DISPATCH_GLOBALS and
+    RT_*_SBT_HANDLE structs
+  * 858d565eea4 intel/genxml: Support truncated addresses
+  * ba9c714cacd intel/genxml/pack: Stash the cloned address field
+  * 9d16d973a70 intel/genxml: Add the BINDLESS_SHADER_RECORD data
+    structure
+  * 5faf859ebbe intel/dev: Add a gen_device_info::has_ray_tracing bit
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Nov 2020 07:30:29 +0100
+
 mesa (21.0.0~git2011210255.ba9906fc8f2~b~mesaaco5) bionic; urgency=medium
 
   * New snapshot:
