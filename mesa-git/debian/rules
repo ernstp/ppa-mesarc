@@ -5,10 +5,12 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+dpkg_late_eval ?= $(or $(value DPKG_CACHE_$(1)),$(eval DPKG_CACHE_$(1) := $(shell $(2)))$(value DPKG_CACHE_$(1)))
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
 DEB_HOST_ARCH      ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_ARCH_OS   ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 DEB_HOST_ARCH_CPU  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
+DEB_DISTRIBUTION   ?= $(call dpkg_late_eval,DEB_DISTRIBUTION,dpkg-parsechangelog -SDistribution)
 
 ifeq (,$(filter $(DEB_HOST_ARCH), armhf sh3 sh4))
 buildflags = \
@@ -35,7 +37,9 @@ COMMA := ,
 confflags_DRI3 = -Ddri3=false
 
 ifeq (,$(filter $(DEB_HOST_ARCH), arm64))
+ifneq ($(DEB_DISTRIBUTION),bionic)
   confflags += -Db_lto=true
+endif
 endif
 
 # hurd doesn't do direct rendering
