@@ -1,3 +1,10 @@
+mesa (20.3.0~rc2+git2011252054.45f5e8d4559~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 45f5e8d4559 appveyor: disable for now
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Nov 2020 21:12:00 +0100
+
 mesa (20.3.0~rc2+git2011250710.e1e31f6126c~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
