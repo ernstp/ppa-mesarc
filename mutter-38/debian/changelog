@@ -1,3 +1,12 @@
+mutter (3.38.1+git2011261318.a54d38e03~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+  * a54d38e03 screen-cast: Fix segfault when drawing cursor
+  * 8e0e8ce6e clutter/frame-clock: Schedule a frame at least once per
+    second
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Nov 2020 21:14:22 +0100
+
 mutter (3.38.1+git2011250926.c70610c43~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
