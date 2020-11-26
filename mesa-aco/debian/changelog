@@ -1,3 +1,47 @@
+mesa (21.0.0~git2011262038.85647152535~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * 85647152535 docs: document new zink-flag
+  * 313db572b7a nir: make intrinsic order in nir_print consistent
+  * fb0385b57cc radv: use intrinsic builders
+  * 9b040737d30 nir: use intrinsic builders
+  * ddb81f5da32 glsl_to_nir: use intrinsic builders
+  * eafc7eee579 spirv: use intrinsic builders
+  * c9bcad25737 nir: add generated intrinsic builders
+  * b3c65f97ad1 nir: move nir_load_system_value() to nir_builder.h
+  * f8ee599dfb1 nir: remove useless nir_builder_opcodes.h include
+  * a2b9e3f715f nir: add destination bit-size information to more
+    intrinsics
+  * 3ec217a8498 nir: add bit_size_src for when the destination bit size
+    matches a source
+  * 898d7c1f493 nir: use a single canonical list of intrinsic indices
+  * f6407b9b7d3 nir: fix sampler_lod_parameters_pan indices
+  * a569ffeb83d freedreno/a6xx: Fix typo in height alignment calculation
+    in a6xx layout
+  * f7b2165b19c freedreno/a6xx: add support for dual-source blending
+  * efba865c4c9 nir/lower_non_uniform: improve code with the same
+    texture, sampler indices
+  * 5d55ca9c300 anv: fix descriptor pool leak in VMA object
+  * df940760f9d aco/optimizer: Propagate scc_needed label through p_wqm.
+  * 8bd3fefb74b aco/optimizer: Only set scc_needed when it is actually
+    needed.
+  * a941618a1fc glsl: avoid an out-of-bound access while setting up a
+    location for variable
+  * df143fa1ef6 glsl: Drop mingw -O1 workaround for GCC>=7.3
+  * bf2bcfe4457 scons: Fix build with llvm-12.
+  * 954739fd18e radv/winsys: fix the sysmem submission path for GFX6
+  * 05799844df5 radv: Const aco_compiler_statistic_info usage
+  * bb9b7d0a687 radv: fix missing initialization of the predication
+    value
+  * d1ff00cb768 v3dv: remove non-conformant warning
+  * 4adb643a0ad docs/features: update list of v3dv supported features
+  * e5ff2a357ea ac: use bigger storage for ac_arg::arg_index /
+    ac_shader_args::arg_count
+  * 0b3bd7c5167 radeonsi/gfx10: flush gfx cs on ngg -> legacy transition
+  * 33a78948283 util,radv: Cross-platform monotonic condition variable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Nov 2020 21:09:25 +0100
+
 mesa (21.0.0~git2011251044.ecebc263f5b~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
