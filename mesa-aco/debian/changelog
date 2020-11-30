@@ -1,3 +1,44 @@
+mesa (21.0.0~git2011301342.b14679ab226~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * b14679ab226 v3dv: check return value of drmGetMagic
+  * 124ea8debf9 v3dv: expand format coverage in TFU path for buffer to
+    image copies
+  * b3f212c52e2 v3dv: fix base layer for 3D blits in the TFU path
+  * ece8dbe68f0 v3dv: add a TFU path for image copies
+  * f9e53c6e514 v3dv: add a format parameter to emit_tfu_job
+  * d60a3ccf52b v3dv: support compressed formats with TFU unit
+  * 14e7361c4a7 v3dv: remove obsolete disabled code
+  * 04ea3d65018 radv: disable WGP_MODE for NGG on GFX10.3
+  * bf36cfced18 radv: only mask 1 CU for GS/VS waves on GFX10.3
+  * 7729ea3d677 radv: only disable CU2 & CU3 when NGG is enabled
+  * 750591f4cbc radv: enable NGG on GFX10.3 APUs by default
+  * b9ee0cd69a0 ci: Make test-docs job depend on sanity job
+  * 94f4497a790 ci: Squash "check mr/commits" jobs into a single sanity
+    job
+  * 988dfc944dc ci: Move sanity stage to the beginning of the pipeline
+  * 8749fc42614 ci: Use ci-fairy docker image instead of local
+    git_archive one
+  * cfe45f3bd50 ci: Update to current ci-templates
+  * cc80415a41b ci: Drop ci-templates-sha anchor
+  * 4e074a6d527 vulkan: Portable wsi_common_get_current_time()
+  * 142d7b0f360 vulkan: Replace pthread mutex with mtx_t
+  * 440952f152a vulkan: Remove GCC pragmas by fixing warnings
+  * d1768b23b50 radv: save and dump vertex descriptors during GPU hang
+    detection
+  * 9f3e7a6502f radv: fix using bitfields for debug/perftest options
+  * 3a90641b0d6 mesa/st_vdpau: set surface winsys handle modifier
+  * b3504f41733 amd/common: Check with_tests before adding test
+  * 40ede410358 r600/sfn: remove leftover debug message
+  * 09313506734 r600/sfn: remove unused file
+  * 166657a736c r600/sfn: Fix a few warnings in release builds
+  * 261f42f0c87 r600/sfn: fix definition of priority queue
+  * feaecbeeabb r600/sfn: correct error signalling in switch default
+    case
+  * de353c1fbe2 amd: Fix declaration mismatch
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Nov 2020 16:31:00 +0100
+
 mesa (21.0.0~git2011262038.85647152535~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
