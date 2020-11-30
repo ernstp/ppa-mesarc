@@ -1,3 +1,15 @@
+mutter (3.38.1+git2011271822.8bfb103d1~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+  * 8bfb103d1 barrier: Complain loudly if bogus barriers are created
+  * 48d4153c0 seat-native: Fix has_touchscreen becoming FALSE when a non
+    touchscreen device gets added
+  * 4bb5ff39a backends/native: Don't crash if keymap is misconfigured
+  * f6a13ef7a monitor-config-manager: Handle multiple builtin panels
+    gracefully
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Nov 2020 16:34:08 +0100
+
 mutter (3.38.1+git2011261318.a54d38e03~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
