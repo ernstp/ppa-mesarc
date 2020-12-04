@@ -1,3 +1,11 @@
+mutter (3.38.2+git2012041634.87cb57f24~g~gnome1) groovy; urgency=medium
+
+  * New snapshot:
+  * 87cb57f24 Update Norwegian Bokmål translation
+  * 9b9051c21 Bump version to 3.38.2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Dec 2020 19:17:26 +0100
+
 mutter (3.38.1+git2011271822.8bfb103d1~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
