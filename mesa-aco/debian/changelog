@@ -1,3 +1,46 @@
+mesa (21.0.0~git2012041733.f66236617cd~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * f66236617cd clover/core: Fix x86 build
+  * e476c181963 .mailmap: add and update aliases for Danylo Piliaiev
+  * 76106301248 aco: coalesce constant copies
+  * f53d4e5f608 aco: use v_lshrrev_b64 for 64-bit VGPR copies on GFX10+
+  * 8c02a8e2d20 aco: add get_const/is_constant_representable helpers
+  * b10de4c1d8f aco: allow 64-bit literals if they can be sign/zero-
+    extended from 32-bit
+  * 24ee0f55f2d aco: remove sign-extension in constantValue64()
+  * 8451911156c aco: test self-intersecting copies when src=higher
+  * 2c40846ab6f aco: don't assume src=lower when splitting self-
+    intersecting copies
+  * 741921e2ffa panfrost: Update the resource layout before calling
+    util_copy_rect()
+  * 90515f90c85 iris: store copy of the border color in the border color
+    hash table
+  * 055aff2613a radv: reduce maxTransformFeedbackBufferDataSize to 512
+  * da164256907 util: Add os_get_page_size support for macOS.
+  * ba42de95da4 radeon/vcn: support hevc SAO enc for VCN2+
+  * c56a1898d73 radeon/vcn: use cdw to calculate slice header index
+  * e37cd34ea6b radeon/vcn: add 0x02 to enc emulation prevention
+  * cf7bf7fadeb amd/addrlib: Initialize Lib members in constructors.
+  * df0157dc697 meson: Make the glvnd vendor name configurable
+  * 9a3aaffeb80 radv: Don't invalidate the SCACHE for image barriers.
+  * 6d751860083 st/mesa: move cso_context next to the other pointers
+  * a07cb9a1ef7 st/mesa: put pipe_screen * into st_context and use it
+  * d23f45577ee cso: inline struct cso_cache to remove dereferences
+  * 8904fcca6db gallium: inline struct u_suballocator to remove
+    dereferences
+  * 0b22def5f84 cso: remove unused code
+  * d0bc10affb3 vbo: remove gl_context dereferences when we can just
+    subtract the pointer
+  * 03e7c93b828 freedreno: Remove fd_log()
+  * d5bc39c9d0e freedreno: Add trace-parser.py
+  * a02dcb970ff freedreno: Add GPU tracepoints
+  * 7a70f28de2b freedreno: Don't emit log/trace points in gmem for
+    nondraw
+  * 552dbd4470d freedreno: Remove unused fxn
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Dec 2020 19:09:51 +0100
+
 mesa (21.0.0~git2011301342.b14679ab226~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
