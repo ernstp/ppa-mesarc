@@ -1,3 +1,50 @@
+mesa (20.3.0~rc3+git2012030010.404c4400156~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 404c4400156 freedreno: Break out of "should we free the entry" loop
+    once we've freed.
+  * 01f9a5e8227 gallium: Fix leak of currently bound UBOs at CSO context
+    destruction.
+  * faeaa8171e3 gallivm: Fix max const buffer count.
+  * 8258c5867af gallium: Fix leak of bound SSBOs at CSO context
+    destruction.
+  * d0d3a589a18 freedreno: Fix leak of u_transfer_helper.
+  * 0ee24d08fa2 gallium: Fix leak of the merged driconf options.
+  * 531b15c22ad zink: do not require VK_KHR_external_memory
+  * cddf1bf5f9b freedreno: Add missing dependency to build
+  * 12c40b04770 radv: Fix leak in radv_amdgpu_winsys_destroy()
+  * 1578dde278d radeonsi: disable WGP mode on gfx10.3 to prevent hangs
+  * 2b9da404c1a radeonsi: fix a nasty bug in si_pm4.c
+  * b7659c5ed76 radeonsi: fix a memory leak in si_create_dcc_retile_cs
+  * 4e39cdaa508 .pick_status.json: Update to
+    d3c67d7e7ec6b9cf10fbea0d08e92751b7b0fbae
+  * bcbc20bf6ec nir/algebraic: Avoid creating new fp64 ops when using
+    softfp64
+  * 7a4f33b1f5b aco: Fix NGG GS assert failure from the WG scan.
+  * f4a059eb988 etnaviv/drm: fix evil-twin etna_drm_table_lock
+  * b52bb0dc5c0 st/mesa: fix uninitialized/random clip plane state vars
+    in lower_ucp
+  * 770f46c7811 mesa: call FLUSH_VERTICES before changing sampler
+    uniforms
+  * ded8b21e2a4 radv: Deal with unused attachments in mip flush
+  * db68b97f255 r600/sfn: fix component loading from fixed buffer ID
+  * 5355ff37441 radv: Fix a hang on CB change by adding flushes.
+  * 25f01a7d4b7 docs: document new zink-flag
+  * 3e2a3b402bb nir: fix sampler_lod_parameters_pan indices
+  * 1891d300310 freedreno/a6xx: Fix typo in height alignment calculation
+    in a6xx layout
+  * bf76f2b21c1 anv: fix descriptor pool leak in VMA object
+  * 099804865ad aco/optimizer: Only set scc_needed when it is actually
+    needed.
+  * 6e72700f842 glsl: avoid an out-of-bound access while setting up a
+    location for variable
+  * 0eabed30a43 radeonsi/gfx10: flush gfx cs on ngg -> legacy transition
+  * bfb711b2099 nir/unsigned_upper_bound: fix buffer overflow in
+    search_phi_bcsel
+  * 9c6e0fb4761 aco: fix v_mul_hi_u32_u24 format
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Dec 2020 19:13:47 +0100
+
 mesa (20.3.0~rc2+git2011252054.45f5e8d4559~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
