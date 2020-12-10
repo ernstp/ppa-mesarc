@@ -1,3 +1,39 @@
+mesa (20.3.0+git2012081847.a8d5e57590b~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * a8d5e57590b iris: fix memleak for query_buffer_uploader
+  * 1c83ec979f5 aco: use UINT64_C on 64 bit constant arguments
+  * 0c2b29e3ac3 radv: disable alphaToOne feature
+  * ee83c989f6b zink: Cap PIPE_SHADER_CAP_MAX_CONST_BUFFERS to 32
+  * c5ffe9e0f2a zink: fix channel ordering in format-mapping
+  * 17ef9b55d09 gallium: do not reset buffers for unsupported stages
+  * d77d3caeca6 .pick_status.json: Update to
+    f93b7d14d66d8ba70d44772d1a1b6696310b7d17
+  * 0cde14200a4 ci: Drop x86_build_old image
+  * b3bfb017189 radv: fix exporting multiviews with NGG
+  * 33c288361c2 radv: mark GFX10.3 as a non-conformant Vulkan
+    implementation
+  * 44bed805065 radeonsi: fix regression on gpus using the radeon
+    winsys.
+  * dfadf838aef meson: Fix Clang microsoft-enum-value detection.
+  * 03e8cc7ca9b .pick_status.json: Update to
+    ec3828add38a83b8c09fd5896265abc9d766162e
+  * 13e7057e790 aco: don't assume src=lower when splitting self-
+    intersecting copies
+  * bd95f95dc56 iris: store copy of the border color in the border color
+    hash table
+  * 03802858b47 .pick_status.json: Update to
+    72b68bd2a62d193e26bd6b31123182d7dbae3098
+  * ec22eb7efbc .pick_status.json: Mark
+    a5e0a2e101bcda0132185a82c3e8c9b4c90ce94c as denominated
+  * 9465b0eb8ca .pick_status.json: Update to
+    872c4bcd27db7b7ca26abe9fc090ae26d502156f
+  * a8650e97230 docs: Add sha256 sums for 20.3.0
+  * 08169ff176b bump version for 20.3.0 final
+  * b9d2f63f2f8 docs: add release notes for 20.3.0
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Dec 2020 01:08:44 +0100
+
 mesa (20.3.0~rc3+git2012030010.404c4400156~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
