@@ -1,3 +1,48 @@
+mesa (21.0.0~git2012092328.04c7fce799a~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * 04c7fce799a iris: Drop res variable in resolve_sampler_views
+  * 1f7427f9721 iris: Fix resource ptr in resolve_sampler_views
+  * 4ba884b8140 softpipe: Fix swizzled texture gather of int textures.
+  * 2b09bde1f54 radeonsi: use a C++ template to decrease draw_vbo
+    overhead by 13 %
+  * 6347b0b5c4d radeonsi: rename si_state_draw.c to .cpp
+  * 639b1366d02 radeonsi: resolve a tricky C++ failure with goto jumping
+    over initializations
+  * fe839baf6af radeonsi: fix future C++ compile failures and warnings
+  * 85af48b0ee9 radeonsi: allow including a few files from C++
+  * fc212dcaa58 amd/llvm: fix C++ compile failures
+  * f95fb3ab9c2 gallium/util: allow including a few files in C++
+  * ea23ca8869a compiler: fix glsl_types.h compile failures when
+    including as C++ in drivers
+  * 3d417121937 ac/llvm: handle no_(un)signed_wrap NIR flags
+  * 3b67c6451f2 ac: unify shader arguments that are duplicated
+  * 248268fb7d3 radeonsi: move si_llvm_compiler_shader and deps into
+    si_shader_llvm.c
+  * 8cd15226221 radeonsi: move si_build_main_function into
+    si_shader_llvm.c
+  * 273be1686ef radeonsi: move si_create_function into si_shader_llvm.c
+  * d9c1a47d48e radeonsi: split ac_shader_args initialization from LLVM
+    code
+  * 4a50096ab47 ac: add shader return values into ac_shader_args
+  * 2cf44ad30ae ac: correct ac_shader_args types, remove sgpr_count
+  * 50dad7366ee radeonsi: fix a crash in si_fence_server_sync
+  * b08343c404b aco: rename s_subb_u32 operands to borrow
+  * f4e649a205b aco: fix various s_subb_u32 operands to SCC
+  * 1a535722d31 v3d: use job's nr_cbufs field
+  * e95465ae0ef panfrost: Fix provoking vertex selection for lines
+  * 6b9f943df67 panfrost: Preload SampleID when reloading multisample
+    FBs
+  * dec4d15e677 panfrost: Take the number of samples into account in
+    blend shaders
+  * e27052281aa pan/mdg: Add support for multi sample iteration writeout
+  * 29f938a0ece panfrost: Fix fencing
+  * 387221e4f2b panfrost: Make sure we always add a reader -> write
+    dependency when needed
+  * c30af744b1f st/mesa: enable compute shader derivatives in SPIR-V
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Dec 2020 01:06:11 +0100
+
 mesa (21.0.0~git2012041733.f66236617cd~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
