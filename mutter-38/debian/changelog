@@ -1,3 +1,9 @@
+mutter (3.38.2+git2012072225.2d69e27a2~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Dec 2020 15:25:05 +0100
+
 mutter (3.38.2+git2012072225.2d69e27a2~g~gnome1) groovy; urgency=medium
 
   * New snapshot:
