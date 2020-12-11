@@ -19,7 +19,8 @@ export MUTTER_SONAME
 ifeq ($(DEB_HOST_ARCH_OS),linux)
 CONFFLAGS = \
 	-Degl_device=true \
-	-Dwayland_eglstream=true
+	-Dwayland_eglstream=true \
+	-Dcore_tests=false
 else
 CONFFLAGS += \
 	-Dudev=false \
