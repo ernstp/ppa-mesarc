@@ -1,3 +1,45 @@
+mesa (21.0.0~git2012111444.fd49ba59a38~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * fd49ba59a38 aco/ra: use get_reg_specified() for p_extract_vector
+  * 731f8fc9dd5 aco: Use program->num_waves as maximum in scheduler.
+  * b5485128135 nir/opt_access: don't ignore infer_non_readable
+  * fe669ff4a02 zink: replace old code with generated zink_instance
+  * 52138ea9b38 zink: hook zink_instance to build
+  * 2b4fcf0a063 zink: generate instance creation code with a python
+    script
+  * 12656de341a zink: factor out GET_PROC_ADDR and friends to
+    zink_screen.h
+  * 2f58d933ea8 zink: allow Extension/Version to be shared across files
+  * 4ad7541cf07 mesa: check for extension instead of desktop GL
+  * 47eb9b865d0 mesa: do not allow es2-extension enums for es1
+  * 4eaff8dba72 .gitlab-ci: verify that Get-Content worked
+  * 9eea5213910 gitlab-ci: copy piglit expected results to artifacts
+  * 83d1e2efd0e android: fix build failure with libbacktrace
+  * 42fd7e3457b v3d: extend the list of formats supported by the TFU
+    unit
+  * 4117f08226f panfrost: Fix several depth/stencil format mappings
+  * 7ca72f17267 gallium/util: Fix depth/stencil blit shaders
+  * e15fd6c36ee panfrost: Reload depth/stencil when they are read
+  * 94009cbebc7 panfrost: Force ->s_writeback_base to -
+    >zs_writeback_base for Z24S8 buffers
+  * 27d622cffe3 panfost: Fix depth/stencil writeback on Bifrost v7
+  * 27af1352803 panfrost: Allow 2DMS arrays
+  * 727cc80fe3e pan/mdg: Fix texture handling for 2DMS arrays
+  * 77b67a747ef vulkan: Enable VK_KHR_performance_query on android
+  * 574429f9528 intel/blorp: Drop support for STC_CCS resolves
+  * 0f369e14724 iris: Stop using blorp_hiz_stencil_op
+  * ac0d393eb18 CI: add lavapipe vulkan testing
+  * cf3fc79cd0a st/mesa: Replace mesa_to_tgsi() with prog_to_nir() and
+    nir_to_tgsi().
+  * e11513b7409 ci: Make sure that osmesa stays warnings-clean in
+    release builds.
+  * ee802372180 mesa: Retire classic OSMesa.
+  * 6ffc5611c8a docs: Fix the documentation of the OSMesa path.
+  * 7497917cfd8 osmesa/test: Clear the stencil bits in the depth test.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Dec 2020 15:16:09 +0100
+
 mesa (21.0.0~git2012092328.04c7fce799a~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
