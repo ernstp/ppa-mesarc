@@ -1,3 +1,43 @@
+mesa (20.3.0+git2012110010.4631f3848c3~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4631f3848c3 radv: do VGT_FLUSH when switching NGG -> legacy on
+    Sienna Cichlid
+  * 7bf1fbea733 radv: fix applying the NGG minimum vertex count
+    requirement
+  * 317526ec2f4 radv: don't count unusable vertices to the NGG LDS size
+  * 7b1ee981570 radv: disable SQTT support for unsupported GPUs
+  * 2ae373152ae radv: ignore other blend targets if dual-source blending
+    is enabled
+  * 67a3b8ec236 aco: fix combining max(-min(a, b), c) if a or b uses the
+    neg modifier
+  * bd7ccbf214d zink: fail if set failed to create
+  * bd01bc1f681 radeonsi: fix si_get_draw_start_count count value
+  * 4691bc5d201 ci: .lava-test:amd64 template needs arm_build
+  * c763926c763 anv: fix calculation of buffer size in case dynamic size
+    is used
+  * e0d212c856d .pick_status.json: Update to
+    cf3fc79cd0ab55776bbbabe76237c272ab07133e
+  * 18fd2554021 turnip: no linear_to_srgb for alpha channel for gmem
+    clear value packing
+  * 5d24ae64c9f iris: Fix resource ptr in resolve_sampler_views
+  * 7f485f1e8f8 softpipe: Fix swizzled texture gather of int textures.
+  * 4e05bd1d134 panfrost: Fix fencing
+  * 93ac6a935fe panfrost: Make sure we always add a reader -> write
+    dependency when needed
+  * c8655229124 iris: update depth value for stages after fast clear
+    depth
+  * c20c50e6efc android: spirv: fix '::' typo in gen rules
+  * b9dbeb597f3 turnip: always set LRZ registers to zero for 3d
+    clear/blit
+  * e9407a0a4f8 turnip: move up LRZ invalidate in CmdClearAttachments
+  * 4c32042db77 turnip: always emit LRZ draw state in DIRTY_DRAW_STATE
+    path
+  * 51e8c7ec9a2 .pick_status.json: Update to
+    3f0da800eb4b8184c24707c52d5a519abe948898
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Dec 2020 15:18:40 +0100
+
 mesa (20.3.0+git2012081847.a8d5e57590b~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
