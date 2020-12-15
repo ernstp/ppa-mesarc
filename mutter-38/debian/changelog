@@ -1,3 +1,10 @@
+mutter (3.38.2+git2012122028.1830486d2~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 1830486d2 Update Romanian translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Dec 2020 05:53:43 +0100
+
 mutter (3.38.2+git2012072225.2d69e27a2~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
