@@ -1,3 +1,25 @@
+mesa (20.3.0+git2012142101.8264c0b4e1c~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 8264c0b4e1c aco: fix DCE of rematerializable phi operands
+  * 7d5c0483867 radv: fix access to uninitialized radeon_bo_metadata
+  * c04030308db st/pbo: fix pbo uploads without
+    PIPE_CAP_TGSI_VS_LAYER_VIEWPORT
+  * 62eea2b34ca zink: really fix direct image mapping offset (I mean it
+    this time)
+  * f9bc767bdc5 nir: Redefine start/end_ip of blocks to fix NIR-to-TGSI
+    liveness bugs.
+  * f5246efd8df zink: fix direct image mapping offset
+  * 07d6fa2aba9 .pick_status.json: Update to
+    a7fb3954a1318a6b27e1405a9e799dd8f06eaa34
+  * 200a2f24551 aco/ra: use get_reg_specified() for p_extract_vector
+  * 5e65a36a7f8 aco: Use program->num_waves as maximum in scheduler.
+  * ac1145f704a android: fix build failure with libbacktrace
+  * 18d5fe46e53 .pick_status.json: Update to
+    84c8a35aa2ca4d4de66192933735094ed07b4aaa
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Dec 2020 05:51:19 +0100
+
 mesa (20.3.0+git2012110010.4631f3848c3~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
