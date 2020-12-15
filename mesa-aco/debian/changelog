@@ -1,3 +1,49 @@
+mesa (21.0.0~git2012150031.9ac8f8f490d~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * 9ac8f8f490d gallium: Add optional pipe_context to flush_frontbuffer
+  * 23488c35152 aco: allow divergent mbcnt_amd masks
+  * feee375db99 aco: fix mbcnt_amd with wave32
+  * 2ffae5a439b xmlconfig: Disable WITH_XMLCONFIG on Windows
+  * a7fb3954a13 glx: fix spelling issues
+  * 618e480f385 glx: lets compare drawing command sizes using MIN3
+  * ef4101d6d73 aco/spill: only prevent rematerializable vars from being
+    DCE'd if they haven't been renamed
+  * 0bccfd86f6e aco: fix DCE of rematerializable phi operands
+  * a791c1f3a71 radv: advertise VK_KHR_fragment_shading_rate on GFX10.3+
+  * 77343576ebd aco: implement a workaround for gl_FragCoord.z with VRS
+    on GFX10.3
+  * 45524afe95d radv/llvm: implement a workaround for gl_FragCoord.z
+    with VRS on GFX10.3
+  * 7a464f4296a radv: track if VRS is enabled to apply a workaround on
+    GFX10.3
+  * c587eaadf6f aco: implement fragment shading rate
+  * 0bac0b7f19b radv/llvm: implement fragment shading rate
+  * bf69d89b5a7 radv: implement VK_KHR_fragment_shading_rate
+  * d8c1931ca93 radv: add VK_KHR_fragment_shading_rate but leave it
+    disabled
+  * 9770ffb07cc amd/registers: add missing VRS registers
+  * c4217ef2fc7 aco: don't create dead exec mask phis on merge blocks
+  * a5f4be4fcd5 etnaviv: remove imm_ prefix from
+    etna_shader_uniform_info members
+  * fefbafb6ff3 etnaviv: rename from immedaite to uniform in some places
+  * ad19b0714a8 radv: fix access to uninitialized radeon_bo_metadata
+  * 614c77772ac st/pbo: fix pbo uploads without
+    PIPE_CAP_TGSI_VS_LAYER_VIEWPORT
+  * dfd0f042e0d zink: really fix direct image mapping offset (I mean it
+    this time)
+  * ab79e6b8e33 ci: skip failing test on lavapipe
+  * 6a34a686ea9 zink: fix property detection
+  * d7911f9c6b0 mesa: Remove cmd_size < 0 check.
+  * 56cb5cf34e8 intel/genxml: Avoid generating identical 12.5 and 12
+    branches.
+  * 73c33803359 mesa: Remove extra texObj.
+  * d3d28f6c2d1 nir: Redefine start/end_ip of blocks to fix NIR-to-TGSI
+    liveness bugs.
+  * 6916d1d9247 gallium/ntt: Drop reindexing of SSA defs and regs.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Dec 2020 05:48:47 +0100
+
 mesa (21.0.0~git2012111444.fd49ba59a38~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
