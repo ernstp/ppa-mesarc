@@ -1,3 +1,24 @@
+mesa (20.3.1+git2012162009.4a87e444134~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4a87e444134 aco/spill: only prevent rematerializable vars from being
+    DCE'd if they haven't been renamed
+  * c9497e286d3 aco: fix DCE of rematerializable phi operands
+  * 5636ec0acec st/mesa: set drawpixels swizzle before creating sampler
+    view
+  * cf0f7d243e0 zink: fix 8 bit index handling code
+  * e53124546b2 .pick_status.json: Update to
+    2d78e28ba702d366becabb8e241b861e6711c76e
+  * 3ae62ab7720 docs: Add sha256 sums for 20.3.1
+  * d90622910ba VERSION: bump for 20.3.1
+  * d4f4d29a6cf docs: add release notes for 20.3.1
+  * adb6c1cc0ab gallium/dri2: Don't forget protected content flag
+  * 6c2b0d7a810 anv: Add DRM_RDWR flag in anv_gem_handle_to_fd
+  * 7c0e171c970 .pick_status.json: Update to
+    ada9be1ec9e14fc045086411fbf2d3cb0efbbe2f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Dec 2020 20:57:09 +0100
+
 mesa (20.3.0+git2012142101.8264c0b4e1c~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
