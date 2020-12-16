@@ -1,3 +1,44 @@
+mesa (21.0.0~git2012162000.96f1c542667~b~mesaaco7) bionic; urgency=medium
+
+  * New snapshot:
+  * 96f1c542667 docs: update calendar and link releases notes for 20.3.1
+  * 066689cb590 docs: Add sha256 sums for 20.3.1
+  * 245145f3c38 docs: add release notes for 20.3.1
+  * e8360051946 docs: update calendar and link releases notes for 20.2.5
+  * b8005592bdc docs: add sha256 sums for 20.2.5
+  * 8c12442ba39 docs: add release notes for 20.2.5
+  * 2d78e28ba70 d3d12: Flush and wait in flush_frontbuffer
+  * 0507da62c47 gallium/dri: Add D3D12 software driver option
+  * eb4353838d7 d3d12: Don't require DXIL for WSL
+  * 0b60d6a24d4 d3d12: Support Linux eventfds for fences
+  * ee4c80f77df d3d12: Only support DXGI and GDI APIs on Windows
+  * ed286325a0e d3d12: Only play DLL path tricks on Windows
+  * dfeb5ecd4ac d3d12: Use u_dl instead of Windows DLL APIs
+  * 29ccbd9b1e5 d3d12: Add forward declaration for LUID
+  * 738564a7531 d3d12: Scope down wrl includes to just client.h
+  * af2e212c598 d3d12: Use IID_PPV_ARGS instead of __uuidof
+  * e1e05ad772e d3d12: Include dxguids/dxguids.h in files that need
+    __uuidof
+  * da9b6a21f4d d3d12: Include wsl/winadapter.h when not compiling for
+    Windows
+  * 8fc2676e47d winsys_handle: Change D3D12 resource handle type to
+    void*
+  * 4ee55769d6d microsoft/compiler: Pick up new dxcapi.h
+  * f6736480035 d3d12: Add DXCore screen variation
+  * 50fab5da93a d3d12: Refactor screen to abstract DXGI details
+  * bc5f69faee9 d3d12: Use DirectX-Headers wrap for d3d12.h
+  * c37d8ae82b9 egl/wayland: add a NULL guard for the authenticate
+    callback
+  * a709d99bfd7 st/mesa: set drawpixels swizzle before creating sampler
+    view
+  * ba74e1be22f zink: fix 8 bit index handling code
+  * 008bf6ca610 zink: ralloc spirv_shader
+  * 03ccd3c4687 zink: use emit_bitcast helper
+  * 134df0069fb zink: use shader-read-only-optimal for samplers
+  * 1a4c4cd1103 driconf: add workaround for Enter The Gungeon
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Dec 2020 20:53:15 +0100
+
 mesa (21.0.0~git2012150031.9ac8f8f490d~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
