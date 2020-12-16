@@ -1,3 +1,10 @@
+mutter (3.38.2+git2012152033.00e247ed7~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 00e247ed7 xwayland: Set xrandr primary output
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Dec 2020 21:00:49 +0100
+
 mutter (3.38.2+git2012122028.1830486d2~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
