@@ -1,3 +1,24 @@
+mesa (21.0.0~git2012170207.daf339a4795~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * daf339a4795 docs: Add a stub page for Panfrost
+  * 434da21a7c8 meson: add missing dependency on generated git_sha1.h
+  * 818031afd1c docs: update calendar and link releases notes for 20.2.6
+  * 5c164e361b7 docs: Add sha256 sums for 20.2.6
+  * aade49f9567 docs: add release notes for 20.2.6
+  * 2a627e7a03d pan/decode: Fix "Access to unknown memory" message
+    formatting
+  * 1baddfcff6f panfrost: Fix negative LOD bias support on Bifrost
+  * 3a2a0054046 pan/gen_pack: Fix signed integer packing
+  * e541aa76e29 panfrost: Split up batches with many jobs
+  * 720a2d8f29e zink: map some more formats
+  * 74132b761cd zink: add format test
+  * d788a1d6f4e zink: fix format-mapping
+  * 123f3d0d647 zink: make zink_format all about raw format-translation
+  * d66df61bf78 zink: convert x8-formats in zink_get_format
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 17 Dec 2020 04:36:16 +0100
+
 mesa (21.0.0~git2012162000.96f1c542667~b~mesaaco7) bionic; urgency=medium
 
   * New snapshot:
