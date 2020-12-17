@@ -48,7 +48,7 @@ ifeq ($(DEB_HOST_ARCH_OS), hurd)
 
 	confflags_DIRECT_RENDERING = -Dglx-direct=false
 	confflags_GBM = -Dgbm=false
-	confflags_OSMESA = -Dosmesa=classic
+	confflags_OSMESA = -Dosmesa=false
 	DRI_DRIVERS = swrast
 	with_libva = 
 else
@@ -93,7 +93,7 @@ else
 	GALLIUM_DRIVERS += radeonsi swrast
 	confflags_GALLIUM += -Dllvm=true
 	confflags_GALLIUM += -Dgallium-opencl=icd
-	confflags_OSMESA = -Dosmesa=gallium
+	confflags_OSMESA = -Dosmesa=true
 
 	# nine makes sense only on archs that build wine
 	ifneq (,$(filter $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 kfreebsd-i386 powerpc))
@@ -102,7 +102,7 @@ else
   else
 	DRI_DRIVERS += swrast
 	confflags_GALLIUM += -Dllvm=false
-	confflags_OSMESA = -Dosmesa=classic
+	confflags_OSMESA = -Dosmesa=false
   endif
 
   # radv needs LLVM and the Vulkan loader, so only build on the subset of
