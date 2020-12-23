@@ -1,3 +1,51 @@
+mesa (20.3.1+git2012231915.b41a3c8a1d4~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * b41a3c8a1d4 turnip: use ir3_compiler_destroy instead of ralloc_free
+  * b4cbf3776a7 panfrost: Fix panfrost_small_padded_vertex_count for 17
+    vertices
+  * 6e75f406f80 .pick_status.json: Update to
+    a22b85ce5e825275533ca1be9fbd47667e991356
+  * fb689963da6 radv: Don't skip layout transitions that only differ in
+    render loop.
+  * e2789cd78eb ir3: Allow tesselation to use all 32 varying slots
+  * 633f60ee573 freedreno/a6xx: Fix assert which checks the count of
+    shader outputs
+  * eec213d2adc mesa: fix layered framebuffer attachment target check
+  * 27e6dfb06a1 .pick_status.json: Update to
+    8db0775f4520e08b3c539f9bd2d1f567639c088c
+  * 50b977737e6 freedreno/a6xx: Flush depth at the end of bypass
+    rendering, too.
+  * d54de72aa0e spirv: Remove more dead variables
+  * a46b833725f nir: Consider pointer initializers in
+    nir_remove_dead_variables
+  * d5a9377096a .pick_status.json: Mark
+    f65750d2215242b17309b5aa8845b717bb913e77 as backported
+  * d9063a077ff .pick_status.json: Update to
+    b9fccafed616aa2906dad3c77dca0c67af5017b8
+  * a5f47bc43d6 spirv: Implement OpArrayLength for OpenGL
+  * f99fc9e73e3 zink: fix format-mapping
+  * c00c8d8c91d mesa/st: Finalize the texture before BlitFramebuffer
+    from it.
+  * 8232610da2d nir/opt_if: split ALU from Phi more aggressively
+  * 79c2aeabebf .pick_status.json: Update to
+    f65750d2215242b17309b5aa8845b717bb913e77
+  * 4ba1dba7acb aco: add block to worklist in mark_block_wqm()
+  * 19b92b771a9 tu: pCounterBuffers can be NULL in
+    vkCmd*TransformFeedbackEXT()
+  * 81421b7dd4e tu: Ignore pTessellationState if there is no tesselation
+    shaders
+  * abfbaa8476f radv: add missing DB flush after depth/stencil resolve
+    operations
+  * 8217078f007 aco/ra: fix phi operand renaming
+  * 59a94717ff0 egl: fix EGL_EXT_protected_content/surface mixup
+  * cf1af4a6631 .pick_status.json: Update to
+    661922f6ac9576fc2077c5d50b53ef7edf9e8a18
+  * 840a9a6c67b radeonsi: fix small primitive culling with MSAA force-
+    disabled and smoothing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 23 Dec 2020 23:59:34 +0100
+
 mesa (20.3.1+git2012162009.4a87e444134~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
