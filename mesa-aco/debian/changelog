@@ -1,3 +1,41 @@
+mesa (21.0.0~git2012232310.6af87193c4f~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 6af87193c4f lavapipe: add basic vulkan device group support.
+  * 7de0d93fcd6 llvmpipe: enable lower device id to zero
+  * de10428770e llvmpipe: add support for grid base
+  * c16239b4a66 gallium: add grid base to dispatch info
+  * d0684c1914e zink: zero VkMemoryRequirements on init
+  * 16fb5044023 ci/deqp: Move the load reporting to a quiet block.
+  * 302b4f77244 ci/deqp: Upgrade the runner, enable junit output.
+  * 35e91434283 ci/deqp: Move .shader_cache artifacts exclusion to the
+    yml.
+  * 872cfe2beb6 ci: Disable the now flaky Portals.trace on a630.
+  * 2f41afeac1a mesa/st: Fix use-after-free of the draw VS.
+  * 5dd5fb1926c softpipe: count CS invocations for pipeline stats
+    queries.
+  * eb7e20b378b pan/bi: Add builder data structure
+  * e8c687b15b8 pan/bi: Add cursor data structures
+  * dd11e5076e6 pan/bi: Add new bi_instr data structure
+  * e364e110208 pan/bi: Add bi_{abs, neg} helpers
+  * 7e6be656d34 pan/bi: Add bi_imm_u{8, 16} helpers
+  * f4b1c12bab1 pan/bi: Add imm_f32 helper
+  * 372787020d4 pan/bi: Add bi_half and bi_byte selectors
+  * 06f52fe0b1a pan/bi: Add node_to_index helper
+  * b85f317017d pan/bi: Add a helper to convert to old-style nodes
+  * 2d9147dae45 pan/bi: Add helpers to generate bi_index from NIR
+  * fc760e7d66b pan/bi: Add bi_temp{_reg} for new-style bi_index
+  * 903a818f33e pan/bi: Add helper to extract a word from an index
+  * 3a63b5d7cf3 pan/bi: Add nullity/equality helpers for bi_index
+  * 5dd756afede pan/bi: Add bi_index constructors
+  * 99152b60457 pan/bi: Add bi_index data structure
+  * f9cd6f0500c pan/bi: Add bi_swizzle enum
+  * d93995fd2bc pan/bi: Make BIR_INDEX_ZERO less special
+  * 0f0bb87e9d4 pan/bi: Remove BIR_INDEX_UNIFORM
+  * 98fabee2139 pan/bi: Merge BIR_INDEX_FAU and BIR_INDEX_BLEND
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 23 Dec 2020 23:57:00 +0100
+
 mesa (21.0.0~git2012170207.daf339a4795~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
