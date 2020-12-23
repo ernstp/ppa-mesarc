@@ -1,3 +1,13 @@
+mutter (3.38.2+git2012182243.fbb9a34f2~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * fbb9a34f2 tests/stacking: Add test hiding a modal with a not shown
+    parent
+  * 5fab0e100 core: Be more selective looking for a focusable ancestor
+  * e4d8e4b9f core: Make sure focus_default_window() worked
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 24 Dec 2020 00:01:59 +0100
+
 mutter (3.38.2+git2012152033.00e247ed7~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
