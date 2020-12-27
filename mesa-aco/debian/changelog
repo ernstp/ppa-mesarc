@@ -1,3 +1,30 @@
+mesa (21.0.0~git2012250008.7d8d99ea129~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 7d8d99ea129 turnip: Remove unsigned nonnegative check.
+  * 512ca3464dd d3d12: Initialize TransitionableResourceState
+    m_SupportsSimultaneousAccess.
+  * 28a9c9e573f d3d12: Fix memory leak if state is NULL.
+  * 671e1571d9f nir/tests: Initialize nir_serialize_test member dup.
+  * 2472f52e738 zink: handle 0 as valid pipeline hash value
+  * fc34f684d6c zink: handle null ubos
+  * 9c176a7e63d Revert "radv: use 32-bit predication for skipping FCE on
+    GFX10.3+"
+  * 7da33b68b0f v3d: Fix typos.
+  * 2f8237754b8 zink: fix debug utils init
+  * 0ce7c4a7c98 gallivm: Use the proper enum for the texture target
+    bitfield.
+  * 0a179bb6e26 st/mesa: Generate NIR for ATI_fragment_shader instead of
+    TGSI.
+  * 5875cfcc2ff mesa/ati_fs: Clean up writemask handling.
+  * 06a081c6319 mesa/prog_to_nir: Factor out the texture-target-to-
+    sampler-dim helper.
+  * f0606cafe83 mesa/st: Update FP state when textures change with an
+    ATI_fs bound.
+  * 69487c754c4 radeon/vcn: fix hevc 10bit profile error
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Dec 2020 19:37:00 +0100
+
 mesa (21.0.0~git2012232310.6af87193c4f~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
