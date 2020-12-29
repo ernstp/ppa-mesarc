@@ -1,3 +1,41 @@
+mesa (21.0.0~git2012290958.accc2222174~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * accc2222174 virgl: fix BGRA emulation artifacts during window resize
+  * 46d2f4b75e3 svga: Fix typos in comments.
+  * 4dbcf24f682 microsoft/clc: Hook up printf
+  * 76788353b2b clover/nir: hookup printf (v3)
+  * 3f779013423 nir: Add an algebraic optimization for float->double-
+    >float
+  * 24669a672f3 nir: Add a printf lowering pass (v5)
+  * 9524e9dbd08 nir/vtn: Implement printf opcode in terms of intrinsic
+    (v9)
+  * 2a3fe68c332 nir: Add intrinsic and string ptrs
+  * 0a6e1cf383d clover: add core clover printf support (v12)
+  * 95527fe2292 clover/module: add a printf support to module (v5)
+  * 77b70fa35d4 util: add printf specifier shared helper code.
+  * 9ef23e428bd panfrost: Fix discard behaviour on Bifrost
+  * 5a1518e86b4 zink: add support for VK_EXT_4444_formats
+  * 0f5726c5035 zink: fix more instance detection stuff
+  * 122da9bd2da freedreno/ir3: remap FRAG_RESULT_COLOR to _DATA* for
+    dual-src blending
+  * 174070942b8 ci/deqp: Fix inverted meaning of DEQP_NO_SAVE_RESULTS.
+  * 017edcd63dd android: pan/bi: Generate bi_opcodes.{c,h}
+  * c0bae8d67fa android: pan/bi: Add explicit dependency on the ISA
+    helpers
+  * 2e7f35a8bcb r600/sfn: merge SpecialValue and InlineConstValue
+  * a7be48bdae9 mesa: glProgramBinary add resource_hash
+  * 72390f063f2 virgl: next_handle variable modify to atomic inc in
+    virgl_object_assign_handle
+  * 746a0f502ae gallium/ntt: Fix check for "is there anything in the
+    else block?"
+  * 358d5a270d9 ci/softpipe: Include a piglit run.
+  * cb5ee80ee80 ci/piglit: Include the updated piglit results list in
+    the job results.
+  * 829e9105a62 softpipe: Enable GLSL 400 for compat contexts too.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Dec 2020 16:53:11 +0100
+
 mesa (21.0.0~git2012250008.7d8d99ea129~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
