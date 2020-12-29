@@ -1,3 +1,18 @@
+mesa (20.3.1+git2012290142.009e2aa5460~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 009e2aa5460 zink: handle null ubos
+  * b0e8fb53ba9 ci/deqp: Fix inverted meaning of DEQP_NO_SAVE_RESULTS.
+  * 373b6eba5f2 mesa/st: Update FP state when textures change with an
+    ATI_fs bound.
+  * 7c74888039a radeon/vcn: fix hevc 10bit profile error
+  * 2fd551d4f3c softpipe: count CS invocations for pipeline stats
+    queries.
+  * cc7a1ab3456 .pick_status.json: Update to
+    9ef23e428bd18c412499471b4e3550a489b72c3f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Dec 2020 16:55:45 +0100
+
 mesa (20.3.1+git2012231915.b41a3c8a1d4~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
