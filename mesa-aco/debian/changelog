@@ -1,3 +1,57 @@
+mesa (21.0.0~git2101050447.a0314083be5~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * a0314083be5 mesa: fix a second bug in merging light state parameters
+    with unpacked uniforms
+  * 45acf9b49ad mesa: fix a bug in merging light state parameters with
+    unpacked uniforms
+  * 4db8b171a51 mesa: add STATIC_ASSERTs to the STATE_LIGHT_ATTRIBS case
+  * 6549caf2c23 st/mesa: fix a defect when st_validate_state was invoked
+    for unused states
+  * 1f17f8bb6de st/mesa: simplify checking whether to pin threads to L3
+  * a0467b7fa16 util: replace UTIL_MAX_CPUS by
+    util_cpu_caps.num_cpu_mask_bits
+  * c7486c996e1 glsl/builtin_functions: Rename int64 function to
+    int64_avail
+  * cd2f3627a6c meson: Add _GNU_SOURCE for Haiku to activate non-posix
+    functions
+  * 76eb3478cf9 radeonsi: take color interpolation into account for
+    shader variants
+  * 31240a875c0 radeonsi: add driconf options to enable/disable Smart
+    Access Memory
+  * b94626d3eea ac,radeonsi: limit Smart Access Memory to Zen 3 and
+    GFX10.3 due to perf issues
+  * e4fa7c440d2 util: add AMD CPU family enums and enable L3 cache
+    pinning on Zen3
+  * 8457be14972 radeonsi: Fix typos.
+  * 539c25c2daf nir/algebraic: Move the flrp -> bcsel rule earlier
+  * ec16f935fe3 nir/algebraic: Mark comparisons generated from lowered
+    fsign precise
+  * 9771af5ddec nir/algebraic: Fix broken NaN and -0.0 behavior
+  * 010e663cc34 spir-v: Mark floating point comparisons exact
+  * 55621c6d1c0 nir/algebraic: Add some compare-with-zero optimizations
+    that are exact
+  * 9167324a86b nir/algebraic: Mark some logic-joined comparison
+    reductions as exact
+  * 71961c73a94 nir: Correctly constant fold fsign(NaN) and fsign(-0)
+  * fe3c5182775 nir/algebraic: Don't add reordered version of patterns
+    for commutative instructions
+  * 314a40c902c Revert "nir: Replace an odd comparison involving fmin of
+    -b2f"
+  * aec0547838f nir/algebraic: Make some notes about comparison
+    rearrangements versus infinity
+  * 363efc28234 nir: Make some notes about fsign versus NaN
+  * 5ae7d40648c st/mesa: don't affect original st_CompressedTexSubImage
+    parameters
+  * 0cf5d1f2262 gallium: remove PIPE_CAP_INFO_START_WITH_USER_INDICES
+    and fix all drivers
+  * 85b6ba136bd st/mesa: implement Driver.DrawGallium callbacks
+  * 8ebabfe2b3b virgl: fix handling draw info
+  * a36d1b1c6e6 v3d: don't use index_bias if not indexed
+  * dca8a71ff0e vc4: don't use index_bias if indexed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Jan 2021 08:41:40 +0100
+
 mesa (21.0.0~git2012290958.accc2222174~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
