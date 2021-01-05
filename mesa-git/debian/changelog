@@ -1,3 +1,37 @@
+mesa (20.3.2+git2101041822.da6fb037775~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * da6fb037775 aco: fix incorrect address calculation for
+    load_barycentric_at_sample
+  * 2f9e5cae2bc nir: fix missing nir_lower_pntc_ytransform.c in the
+    makefile
+  * 9e1e67b35b8 nir: account for point-coord origin when lowering it
+  * d7c09d09aa0 etnaviv: Fix rework ZSA into a derived state
+  * b83d96666dd .pick_status.json: Update to
+    b2d000513e4a9b06d3b073913741dae47a00526e
+  * 99ff47e8538 st/mesa: don't do glCopyPixels via blit if depth bounds
+    test is enabled
+  * 636a917ca4c pan/mdg: Fix promoted uniform moves with 64-bit types
+  * c7430bbc3eb nir: fix determining if an addition might overflow for
+    phi sources
+  * 2b66910037b gallium/draw: Fix intermittent failure to bind new
+    geometry shaders.
+  * 2f6f5b3ba24 .pick_status.json: Update to
+    9ef2c44ce682b7981bd7a68c65f338f1e33bb001
+  * 6d2e76d2425 docs: Add sha256 sum for 20.3.2
+  * b3877e880ba Bump version for 20.3.2 release
+  * d9d99af1560 docs: add release notes for 20.3.2
+  * 7ca951d11ad glsl: default to compat shaders in compat profile
+  * e8a6bf6e103 st/pbo: fix pbo uploads without
+    PIPE_CAP_TGSI_VS_LAYER_VIEWPORT and skip gs
+  * f892a46cc54 virgl: fix BGRA emulation artifacts during window resize
+  * b62bd28ec86 .pick_status.json: Update to
+    6c8cc9be12dc5d6c0d2386d6addb69d8f2fb5399
+  * b21d6928056 .pick_status.json: Mark
+    967ae12931e0dc12855de903851222b2f0607878 as denominated
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Jan 2021 08:44:16 +0100
+
 mesa (20.3.1+git2012290142.009e2aa5460~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
