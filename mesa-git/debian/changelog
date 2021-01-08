@@ -1,3 +1,23 @@
+mesa (20.3.2+git2101061835.9000c044fbd~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 9000c044fbd zink: dot leak dummy_buffer
+  * 39c386c0fdc nir/algebraic: Fix broken NaN and -0.0 behavior
+  * 72233905e36 Revert "nir: Replace an odd comparison involving fmin of
+    -b2f"
+  * 588cf800be8 gallium/util: do not perform n^2 stencil blits
+  * cf5fe357d6b gallium/ntt: Fix emitting UBO declarations.
+  * 071a87ac7f9 ac/nir: use llvm.readcyclecounter for LLVM9+
+  * e9146fe6fb4 util: add AMD CPU family enums and enable L3 cache
+    pinning on Zen3
+  * 20a067a837a spir-v: Mark floating point comparisons exact
+  * f121623020b st/mesa: don't affect original st_CompressedTexSubImage
+    parameters
+  * 773d683a898 .pick_status.json: Update to
+    96ceca33c1dd69a1feed13b0e19bfc38e6f7d979
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 Jan 2021 16:14:24 +0100
+
 mesa (20.3.2+git2101041822.da6fb037775~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
