@@ -1,3 +1,45 @@
+mesa (21.0.0~git2101081603.317ec8b5011~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 317ec8b5011 zink: disable render_condition_enable during blit
+  * 7ef2046065f radv: only set BO metadata for the first plane
+  * 4e3e7f35f7e zink: clamp shader input/output max values
+  * d95fe8a25e7 radv: support SpvCapabilitySparseResidency
+  * 4c67423e99d radv: implement is_sparse_texels_resident and
+    sparse_residency_code_and
+  * 6d5e26752c6 ac/nir: implement sparse image/texture loads
+  * 55aeac7af46 ac/nir: implement nir_op_vec5
+  * a502aa7b043 aco: form sparse load clauses
+  * 0bd14be962c aco: implement sparse image loads
+  * 382f50ad2ca aco: implement sparse texture fetches
+  * 5a4f6313b10 aco: implement nir_op_vec5
+  * 962c917cea9 aco: move MIMG VDATA to its own operand
+  * 2aaf52bb85b aco: fix MIMG_instruction::lwe comment
+  * 816b7fb5cb6 aco: fix unreachable() for uniform 8/16-bit nir_op_mov
+    from VGPR
+  * 10431c89647 ci: Add *ignore_scheduled_pipelines to mesa/gallium
+    rules templates
+  * 6bde5cf276e ci: Rule out scheduled pipelines in .windows-build-rules
+  * 3fb4755d48d util: Disable memstream for Apple builds
+  * f40a7d3c93d radv: fix performance regression by restoring TC-compat
+    HTILE in GENERAL
+  * 0ae1cf46a6c radv: fix enabling TC-compat HTILE in GENERAL for writes
+    on GFX10+
+  * 20683461e3c radv: configure the texture descriptor for TC-compat
+    CMASK on GFX10+
+  * e248119a82e r300: Fix typos.
+  * f1b51d472a7 gallium/ntt: lower uniforms to ubo
+  * 28a141e3250 iris: Blit stencil according to aspect_mask
+  * 1148da34364 iris: Use single-aspect formats more in iris_blit
+  * db2cdc4277b iris: Blit non-stencil according to aspect_mask
+  * b73e903f961 iris: Loop through an aspect mask in iris_blit
+  * 776074d66c8 iris: Increase use of pipe_resources in iris_blit
+  * 51d26e2edf8 iris: Use texture preparation helper in iris_blit
+  * 04d73e2dc20 iris: Move depth-format assertion out of iris_blit
+  * ce3a6dfa795 iris: Don't prepare depth for stencil-aspect blits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 Jan 2021 16:11:39 +0100
+
 mesa (21.0.0~git2101050447.a0314083be5~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
