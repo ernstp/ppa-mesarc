@@ -1,3 +1,15 @@
+mutter (3.38.2+git2101120320.feb11d997~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * feb11d997 clutter: Fix build with clang
+  * d29a0f4c6 monitor-manager-xrandr: Disable CRTCs if there is no
+    monitor
+  * ed1ab1e4f monitor-manager-kms: Disable CRTCs if there is no monitor
+  * c05815f8c renderer/native: Refactor modeset boilerplate into new
+    helpers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Jan 2021 04:24:12 +0100
+
 mutter (3.38.2+git2012182243.fbb9a34f2~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
