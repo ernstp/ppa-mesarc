@@ -1,3 +1,46 @@
+mesa (21.0.0~git2101120251.f7527f7f652~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * f7527f7f652 glcpp: disable 'windows' tests
+  * c53a886ba86 frontends/omx: fix build warning
+  * 059ae7cb923 nouveau: add drm-shim support
+  * 28a781323fb nouveau: change fence destruction logic on screen
+    destroy
+  * c7e1ef7c0c5 panfrost: Advertise ES3.0 on Bifrost
+  * bb1b3cc9b03 panfrost: Test GLES3 on Bifrost
+  * abca80cf308 panfrost: Disable AFBC of 3D, 2D arrays
+  * 0b590c2e8ca panfrost: Promote 8b to 16b for blend descriptors
+  * bef3fedc814 pan/bi: Lower 8bit fragment outputs to 16bit
+  * 455cde2562b pan/bi: Assert immediate indices fit
+  * 77209e05001 pan/bi: Parametrize intrinsic immediate limits
+  * b15f3a1107f pan/bi: Use TEXC for indices >= 8
+  * 3705ad96aa9 pan/bi: Implement scalar i2i8/u2u8
+  * 6b4f2d85296 pan/bi: Allow passing thorugh 8-bit scalars
+  * fc3ac6fe557 pan/bi: Don't suppress Inf/NaN
+  * d0c35f46afc pan/bi: Fix ATEST with pure integers
+  * bf7fe304364 pan/bi: Pull out bi_dontcare helper
+  * 231c27adaf4 intel/common: Build mi_builder_test for gen 12.5
+  * aa7a86c78aa r600: Support TGSI_OPCODE_I64NEG
+  * e012161aeef pan/bi: Allow non-terminal BLEND operations
+  * 4439757db23 pan/bi: Use the interference mechanism to describe blend
+    shader reg use
+  * f61be082d32 pan/bi: Restrict registers to r0-r15 when compiling
+    blend shaders
+  * de0fa4de5fd pan/bi: Port bi_collect_blend_ret_addr() to the new
+    compiler infra
+  * 424c22fc326 pan/bi: Pass bundle pointers to bi_pack_tuple()
+  * a6f1500bedd pan/bi: Workaround BLEND precolour with explicit moves
+  * 372a3a14104 panfrost: Set the RT index when emitting a Bifrost blend
+    descriptor
+  * 20853814329 vulkan/overay: fix violation of VUID-VkDeviceCreateInfo-
+    pNext-00373
+  * 14e6f541b16 nv50: use 2d blit when m2mf doesn't support the copy
+  * ec668e2fd14 nv50,nvc0: serialize between before/after using a zeta
+    surface as color
+  * f763d0f1952 nv50: fix instancing of client-side vertex buffers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Jan 2021 04:21:31 +0100
+
 mesa (21.0.0~git2101081603.317ec8b5011~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
