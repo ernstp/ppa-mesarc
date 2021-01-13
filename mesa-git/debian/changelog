@@ -1,3 +1,40 @@
+mesa (20.3.2+git2101130046.24c7a4df3a8~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 24c7a4df3a8 vulkan/overlay: fix vkGetInstanceProcAddr self-resolving
+  * b439d0e679c radv: Add Android module info to linker script.
+  * 3261d99b9c0 mesa/st: Free the NIR builtins TGSI tokens after passing
+    to the driver.
+  * ed87818eddb gallium/ntt: Fix leak of the per-instr liveness
+    information.
+  * adf09c9bf0e radv: set invariantgeom for Shadow of the Tomb Raider
+  * f8033bdc6d6 radv: add RADV_DEBUG=invariantgeom
+  * 97365ce754e vulkan/overay: fix violation of VUID-VkDeviceCreateInfo-
+    pNext-00373
+  * 945bffe0087 vulkan/device-select: fix vkGetInstanceProcAddr self-
+    resolving
+  * c5f73e66ed6 radv/winsys: Fix offset in range merging.
+  * 107e4eea53e radv/winsys: Fix inequality for sparse buffer remapping.
+  * bf4e0a4b3e1 .pick_status.json: Mark
+    52b6adfbfb51a3b1a54964cbcb2adb0299d1252b as backported
+  * bbb85a7be00 util: Avoid pthread_setaffinity_np on NetBSD
+  * 76ecdf2c322 aco: fix unreachable() for uniform 8/16-bit nir_op_mov
+    from VGPR
+  * 6a006c35675 util: Disable memstream for Apple builds
+  * e6aa51a84d5 radv/llvm,aco: always split typed vertex buffer loads on
+    GFX6 and GFX10+
+  * a29f08b1e20 aco: fix creating the dest vector when 16-bit vertex
+    fetches are splitted
+  * eec614e0f31 nir/load_store_vectorize: don't ignore subgroup memory
+    barriers
+  * 2c5b5920ca6 .pick_status.json: Update to
+    d9c8422c4168c7433f68b97065283ebf26631d56
+  * aef8fc860c2 drirc: radeonsi workaround for CS:GO
+  * ae1c5dc6b68 radv: disable TC-compat HTILE in GENERAL for Detroit:
+    Become Human
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 13 Jan 2021 12:54:52 +0100
+
 mesa (20.3.2+git2101061835.9000c044fbd~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
