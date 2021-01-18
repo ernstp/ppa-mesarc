@@ -1,3 +1,53 @@
+mesa (21.0.0~rc1+git2101151819.22fff81b4bd~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 22fff81b4bd intel/mi_builder: fix self modifying batches
+  * c077276c150 v3d: fix dest offset in TFU setup
+  * ba3d2c3a4c2 android: r600/sfn: add sfn_nir_lower_64bit.cpp to
+    Makefile.sources
+  * 73ea60139d6 radv: do not invalidate the L2 metadata cache on compute
+    queues
+  * a6ace60672b mesa: always set valid index bounds for non-indexed
+    draws for classic drivers
+  * 99ad50617ac iris: Fix android build due to missing link to
+    libmesa_iris_gen125
+  * 9a81b1820c9 iris: only set point sprite overrides if actually using
+    points
+  * 0b66e5b6a1d .pick_status.json: Update to
+    c27347b2e1883a30e023347a36bdcf86cdec4a7c
+  * 074631dd678 radeonsi: invalidate compute sgprs in si_rebind_buffer
+  * 8d2bc1e60b9 anv: add transfer usage for color/depth/stencil
+    attachments
+  * e1465cd5ec5 lavapipe: Defer lavapipe warning to CreateDevice
+  * d14f279cfd4 .pick_status.json: Update to
+    184bbef33d1fff3520958c130f2b8e4fce17379c
+  * 82e845ba67d nir/loop_unroll: unroll more aggressively if it can
+    improve load scheduling
+  * 3aaf5188fe0 aco: remove divergent branches which only jump over very
+    few instructions
+  * 0d63d9463e8 aco: propagate swizzles when optimizing packed clamp &
+    fma
+  * 71a58f02e52 aco: optimize v_pk_fma_f16 -> v_pk_fmac_f16 on GFX10
+  * 4562f9f8940 aco: optimize packed fneg
+  * 3760fdf7e6f aco: optimize packed clamp
+  * 28df87bbe2b aco: optimize packed mul+add to v_pk_fma_f16
+  * 7f40dc9760e aco: simplify multiply-add combining
+  * 12c0bfaaf9c radv: vectorize 16bit instructions
+  * 6a7552aa105 aco: emit packed 16bit instructions
+  * 01a7662154f aco: create helpers to emit vop3p instructions
+  * 65288fe496f aco: change usesModifiers() considering opsel_hi on
+    packed instructions
+  * 03196956456 aco: allow SGPRs on every src position for VOP3P
+  * 126cc30440a aco: allow constants/literals on every src position for
+    VOP3P
+  * 3714b68ec1f aco/RA: fix subdword operands on VOP3P instructions
+  * ac4caa502f0 aco: fix VOP3P assembly, VN and validation
+  * b10e32f8404 .pick_status.json: Update to
+    dfe429eb414511170f3dfc960d247c4aa295f924
+  * fe1a419e428 VERSION: bump for 21.0.0-rc1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Jan 2021 23:44:57 +0100
+
 mesa (20.3.3+git2101151817.1d0a7bb5203~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
