@@ -1,3 +1,58 @@
+mesa (21.1.0~git2101181851.087ef91c85c~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 087ef91c85c nvc0: index_bias is now only set for indexed draws
+  * 111c0733eae cso: set index_bounds_valid = true for arrays draws
+  * 333730405de zink: handle NULL views in zink_set_sampler_views
+  * b50b28cd33f turnip: disable UBWC on Z24_S8 MSAA images on A630
+  * 63a431b81c8 anv: Add a trivial implementation of
+    VK_KHR_deferred_host_operation
+  * af1aef10f9a radv: Do not use a pipe offset for aliased sparse
+    images.
+  * 23f2e777105 wsi/x11: Use get_screen_resources_current in
+    wsi_x11_detect_xwayland
+  * b06f3c52bfb radeonsi: trim the size of si_vgt_param_key and
+    si_vgt_stages_key
+  * f1e34f125d9 radeonsi: don't use si_get_vs_state in most places
+  * 4088b6f2936 radeonsi: rearrange condition for streamout workaround
+    on gfx7 and gfx8
+  * eb22bd2072f radeonsi: get out of si_emit_vs_state early for blit
+    vertex shaders
+  * 73709143d22 radeonsi: remove MRT-draw-calls, spill-draw-calls, spill-
+    compute-calls
+  * f2a51487015 radeonsi: make sctx->vertex_elements always non-NULL
+  * 961aa67adf6 radeonsi: add a specialized function for CP DMA L2
+    prefetch
+  * 0eca4660a55 radeonsi: make cik_emit_prefetch_L2 templated and move
+    it to si_state_draw.cpp
+  * c43d00dc915 radeonsi: fix si_num_prims_for_vertices for
+    PIPE_PRIM_POLYGON
+  * 6682c1603ce radeonsi: don't compute average vertex count in
+    si_draw_vbo
+  * 295106c3e74 radeonsi: don't pass pipe_draw_info into
+    si_emit_derived_tess_state
+  * 6f74105a343 radeonsi: translate pipe_prim_type only when it changes
+  * d0d4c4ba1d7 radeonsi: don't pass pipe_draw_info into
+    si_emit_ia_multi_vgt_param
+  * 53f9bb860b2 radeonsi: don't pass pipe_draw_info into
+    si_emit_vs_state
+  * 4056e953fe4 radeonsi: move emit_cache_flush functions into
+    si_gfx_cs.c
+  * 1ceec51b128 radeonsi: don't clear unaligned bits when unbinding
+    vertex buffers
+  * df456312c2a radeonsi: constant buffer cleanups
+  * b53d404aa73 android: freedreno/ir3: Switch over to new
+    encoder/decoder
+  * 7c0298e2fe4 android: freedreno/hw/isa: Add description of ir3 ISA
+  * a183ee2ed7f zink: remove excessive checks for loader version
+  * c85902d60d4 zink/codegen: find promotion version using vulkan
+    registry
+  * 833b6ab4432 zink/codegen: adding/fixing comments and copyright
+    notice
+  * a454c562d67 zink/codegen: codegen-ize load_instance_extensions()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Jan 2021 19:51:59 +0100
+
 mesa (21.0.0~git2101120251.f7527f7f652~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
