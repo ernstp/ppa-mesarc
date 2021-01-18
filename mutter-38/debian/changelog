@@ -1,3 +1,11 @@
+mutter (3.38.3+git2101132253.9f9c26be9~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 9f9c26be9 Bump version to 3.38.3
+  * 429491c75 wayland: Ensure pointer constraint region consistency
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Jan 2021 19:58:59 +0100
+
 mutter (3.38.2+git2101120320.feb11d997~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
