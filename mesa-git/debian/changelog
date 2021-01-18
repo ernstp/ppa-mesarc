@@ -1,3 +1,26 @@
+mesa (20.3.3+git2101151817.1d0a7bb5203~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1d0a7bb5203 intel/mi_builder: fix self modifying batches
+  * d4a0136e268 v3d: fix dest offset in TFU setup
+  * d5ee8416e27 iris: only set point sprite overrides if actually using
+    points
+  * 851d753c1b6 .pick_status.json: Update to
+    c27347b2e1883a30e023347a36bdcf86cdec4a7c
+  * 205e8cd0935 radeonsi: invalidate compute sgprs in si_rebind_buffer
+  * bfb6f66934f anv: add transfer usage for color/depth/stencil
+    attachments
+  * cb24282b01f lavapipe: Defer lavapipe warning to CreateDevice
+  * 3398f1c862a frontends/va: Return an error if non-interlaced buffer
+    is not supported
+  * 8d20fc6a855 .pick_status.json: Update to
+    184bbef33d1fff3520958c130f2b8e4fce17379c
+  * 326d21431c4 docs: Add sha256sum for 20.3.3
+  * 7e4d536e630 VERSION: bump to 20.3.3
+  * 884c86d74e0 docs: add release notes for 20.3.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Jan 2021 19:55:33 +0100
+
 mesa (20.3.2+git2101130046.24c7a4df3a8~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
