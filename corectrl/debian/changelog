@@ -1,3 +1,9 @@
+corectrl (1.2.0~git2009101321.bad0a0b~b~mesarc10) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Jan 2021 20:00:25 +0100
+
 corectrl (1.2.0~git2009101321.bad0a0b~b~mesarc9) bionic; urgency=medium
 
   * New snapshot:
