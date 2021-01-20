@@ -1,3 +1,55 @@
+mesa (21.1.0~git2101202253.bc0508ad38d~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * bc0508ad38d radeonsi: allow instance_count == 0 on chips that handle
+    it correctly
+  * 76d6351dab7 radeonsi: don't validate inlinable uniforms at draw time
+  * 185a2472a4c radeonsi: move variables closer to their use in most
+    draw state functions
+  * ae5df516f1e radeonsi: clear dirty_atoms and dirty_states only if we
+    entered the emit loop
+  * 2206840f6c1 radeonsi: enable the GS tri strip adj workaround with
+    primitive_restart
+  * 888a45a3621 radeonsi: evaluate si_get_vs in si_draw_vbo at compile
+    time
+  * c5d3341b6e1 radeonsi: inline the last use of si_get_vs_state
+  * 5f7715083bf radeonsi: evaluate sh_base in si_emit_vs_state at
+    compile time
+  * e8ccb6f0f39 radeonsi: add si_get_user_data_base selecting user data
+    registers
+  * 88a02d80deb radeonsi: don't set context_roll for non-gfx9 in
+    templated functions
+  * 581a96bc449 radeonsi: don't pass pipe_draw_info into
+    si_emit_draw_registers
+  * ac2b4aa08f5 radeonsi: unify uploaders on APUs too
+  * facd34431b7 docs/freedreno: Fix a few typos
+  * 13b21156e47 nir: Work around MSVC x86 internal compiler error
+  * 28207669d03 anv: Fix stencil layout in render passes
+  * f79f382c81f nir_to_tgsi: Store directly to TGSI outputs when
+    possible.
+  * f6e35e5fd08 ci/freedreno: Fix xfail setup for
+    sampler3d_float_vertex.
+  * 914c61d6c09 radv,aco: don't use MUBUF for multi-channel loads on
+    GFX8 with robustness2
+  * 4eec0fb55c1 radv: remove redundant check in
+    depth_view_can_fast_clear()
+  * 27d4a155289 radv: remove unnecessary radv_image::tc_compatible_htile
+  * c30f010e8fa radv: remove redundant check in
+    radv_process_depth_stencil()
+  * d245d7b6b8b virgl: Cache depth and stencil buffers
+  * af9977a3d5f aco: add affinity for non-sequential MIMG operands
+  * 4015b3651ac aco: only require texture coordinates to be in WQM if
+    NSA is used
+  * c353895c922 aco: use non-sequential addressing
+  * faf3e9a27f4 aco: move VADDR to the end of the operand list
+  * cd29210fcee aco: add emit_mimg() helper
+  * 9890dabb1b2 aco: have emit_wqm() take Builder instead of
+    isel_context
+  * 489aa8c7cb7 aco: fix num_waves on GFX10+
+  * 12ea0143de6 radv: fix max_waves estimation on GFX10.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Jan 2021 23:39:19 +0100
+
 mesa (21.1.0~git2101181851.087ef91c85c~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
