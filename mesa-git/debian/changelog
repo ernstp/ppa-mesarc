@@ -1,3 +1,55 @@
+mesa (21.0.0~rc2+git2101202015.5b1408b9526~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5b1408b9526 st/mesa: fix pbo upload/download for arrays of textures
+    with only 1 layer
+  * f16cb1c5c98 ci: exclude one CTS test that timeout most of the time
+    for RADV CI
+  * e63774d093b r600/sfn: fix use of b32all/and
+  * ddf994791fe Revert "mesa: allow half float textures based on
+    ARB_half_float_pixel"
+  * 3ffa16bee6a tnl: Reset nr_bos to 0 between map/unmap cycles.
+  * 14e0ee34791 tnl: Respect `start` when converting indices to GLuint
+  * f2fdb35f393 tnl: Try not to botch index buffer munging when start >
+    0.
+  * e8c31e03677 vbo: Only mark merged line strips as lines when actually
+    converting them
+  * 8d07282a200 vbo: Don't set node->min_index = max_index =
+    indices_offset when merging
+  * 664f6976b24 radv: flush L2 for images affected by the pipe
+    misaligned issue on GFX10+
+  * 0acff8c6f22 radv: restore invalidating the vector cache for internal
+    meta operations
+  * 70e8dafb642 .pick_status.json: Update to
+    af9977a3d5f3378c297965e21389e36491f47e1b
+  * 8dc038e80e6 VERSION: bump for 21.0.0-rc2
+  * b98745871b1 aco: fix convert_to_SDWA() check in
+    add_subdword_definition()
+  * 24b733aebd3 radeonsi: inhibit clockgating when using SQTT
+  * 3994f5db483 radv: flush L2 metadata as part of CB/DB flush instead
+    of CS_DONE on GFX9
+  * 1d2827379d5 mesa: fix alpha channel of ETC2_SRGB8 decompression for
+    !bgra
+  * d64870e8740 pan/bi: Iterate from zero when setting RA interference
+  * 98c1bf6d184 pan/bi: Fix printing of node 0
+  * a6b63210e01 pan/bi: Fix RA of node 0
+  * 080c433715e pan/bi: Fix 64-bit SSBO addresses
+  * be774d18252 pan/mdg: Fix spilling when scratch memory is used
+  * 4dee39f04d0 nvc0: index_bias is now only set for indexed draws
+  * 9fc330f27ba cso: set index_bounds_valid = true for arrays draws
+  * 5e436d9f2db zink: handle NULL views in zink_set_sampler_views
+  * 380c7edbc23 radv: Do not use a pipe offset for aliased sparse
+    images.
+  * be4b6186061 wsi/x11: Use get_screen_resources_current in
+    wsi_x11_detect_xwayland
+  * 7d2ccf574ce glsl: only expose int64 atomics when extension is
+    enabled
+  * 98706b7754b ac/surface: Fix GFX9 sparse mip info.
+  * b024d311b0b lavapipe: fix missing piece of
+    VK_KHR_get_physical_device_properties2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Jan 2021 23:42:49 +0100
+
 mesa (21.0.0~rc1+git2101151819.22fff81b4bd~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
