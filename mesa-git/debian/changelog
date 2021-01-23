@@ -1,3 +1,43 @@
+mesa (21.0.0~rc2+git2101221848.d50b941c464~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * d50b941c464 zink: respect fragment-shader depth-layout
+  * c767383b23a zink: require vulkan memory model for tesselation
+  * c849e15c44d radv: fix separate depth/stencil layout in render pass
+  * 20fd3fb938e zink: make all xfb caps depend on extension
+  * 4146d84a1f6 zink: respect feature-cap for multi-draw indirect
+  * 442128549e5 zink: respect feature-cap for sample-shading
+  * 156edb5fea0 zink: respect feature-cap for independent blending
+  * 291eebfaa42 radv: inhibit clock gating when tracing with SQTT
+  * acfd179fe34 radv: fix overflow when computing the SQTT buffer size
+  * 31ef7441cd5 aco: don't consider a phi trivial if same's register
+    doesn't match the def
+  * be80839ac52 iris: Consider resolves after changing a resource's aux
+    state
+  * b25f6bb63e2 .pick_status.json: Update to
+    3ef89b245e3e1ac4e67fea9c1b13ebeda75769d0
+  * 20c0159608a ci: correct the trace image URLs in the piglit summary
+  * fb30e941fe7 ci: recover tracie dashboard URLs for failing traces
+  * e84c17c9daf nvc0/ir: add fixup to deal with interpolateAtSample with
+    non-MSAA
+  * a025e00d0ce .pick_status.json: Update to
+    64f55b82c7f1652e4fae478c0af325fc38b9b53b
+  * 83bb5dee16d nv50/ir: clear dnz flag when converting mul/mad to
+    simpler ops
+  * 4956c6bfc57 st/mesa: fix broken moves for u2i64 and related ops
+  * 7f76e0d4b22 zink: fix vertex-stride wrangling
+  * eaefaa9610a radv: fix a sync issue with geometry shader primitives
+    query on GFX10+
+  * d47d44e4f66 pan/decode: Free mapped memory objects on BO unreference
+  * e60e3ef8410 nir: Work around MSVC x86 internal compiler error
+  * 06c9ae6d3fe anv: Fix stencil layout in render passes
+  * 8ba9bb139ca radv,aco: don't use MUBUF for multi-channel loads on
+    GFX8 with robustness2
+  * 0a19201a497 .pick_status.json: Update to
+    c3dbc4df194a15aa1cf09493a3100b59e37e48fe
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 23 Jan 2021 01:55:39 +0100
+
 mesa (21.0.0~rc2+git2101202015.5b1408b9526~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
