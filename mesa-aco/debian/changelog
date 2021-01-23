@@ -1,3 +1,48 @@
+mesa (21.1.0~git2101230047.53d9beb9b88~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 53d9beb9b88 gallium/u_inlines: add helper for simplifying
+    pipe_context::resource_copy_region
+  * cacb3e18267 zink: enable PIPE_CAP_SAMPLER_VIEW_TARGET
+  * d37124b065c virgl: add support for VIRGL_CAP_V2_UNTYPED_RESOURCE
+  * 41366ba4942 virgl: update headers
+  * fb65285629c docs/zink: add GL 4.2 requirements
+  * d0e7a7d58de docs/zink: add GL 4.1 requirements
+  * c3d7de47cd6 docs/zink: add GL 4.0 requirements
+  * 4374e8e99f1 docs/zink: fix phrasing of GL 3.3 requirements
+  * 02c43eb975d docs/zink: document the independentBlend requirement for
+    GL3
+  * fb5d7d60e7e docs/zink: add two missing required features
+  * a640588a416 docs/zink: add missing colon
+  * 9565c1d83c9 nv50/ir: Initialize RegAlloc member func in constructor.
+  * 92ec7b577c8 zink: clone shader before lowering clip_halfz
+  * 5282210c0b9 zink: check correct caps for
+    PIPE_CAP_IMAGE_LOAD_FORMATTED
+  * d31f2200b35 ci: Enable process isolation for softpipe & freedreno
+    piglit jobs
+  * cca257d5961 anv: Advertise shaderInt64 on Gen11+
+  * 8c2543d0377 intel/fs: Implement umin/umax shuffle
+  * a6500236e39 intel/fs: Refactor our shuffle emit code
+  * 44571c6a68a intel/fs: Properly lower 64-bit MUL on 64-bit-incapable
+    platforms
+  * c80db6611aa intel/fs: Support 64-bit CLUSTER_BROADCAST on Gen11+
+  * b90921ec0c4 intel/fs: Support 64-bit SHUFFLE on Gen11+
+  * cdedc82329c intel/fs: Support 64-bit SEL_EXEC on Gen11+
+  * 58bcb5401d8 intel/fs: QUAD_SWIZZLE requires packed data
+  * 69a3559efd6 intel/reg,fs: Handle immediates properly in subscript()
+  * e797daba538 intel/compiler: Move brw_reg_type_for_bit_size to
+    brw_reg_type.h
+  * 4c8cbe9b134 intel/compiler: Return 1 for immediates in regs_read
+  * 178820212b7 nir/lower_int64: Lower 64-bit vote_ieq
+  * 731adf1e17a nir/lower_int64: Add lowering for 64-bit iadd
+    shuffle/reduce
+  * bf7a1142465 nir/lower_int64: Add lowering for some 64-bit subgroup
+    ops
+  * da331f814fd nir/lower_int64: Fix lowering of f2[ui]64 for 16-bit
+    float
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 23 Jan 2021 01:52:16 +0100
+
 mesa (21.1.0~git2101202253.bc0508ad38d~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
