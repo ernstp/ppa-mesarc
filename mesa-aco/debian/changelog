@@ -1,3 +1,51 @@
+mesa (21.1.0~git2101261627.4099cdc97f2~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 4099cdc97f2 compiler/nir: Add support for lowering stores with
+    nir_lower_instruction
+  * e3f56601e0c radv: fix divide by zero with no tesselation params
+  * 9a49760e820 aco: fix VCC hint on boolean subgroup operations
+  * b729cd58d76 nir/algebraic: eliminate exact a*0.0 if float execution
+    mode allow it
+  * 614ab26afd0 nir/algebraic: optimize out exact a+0.0 if it's used
+    only as a float
+  * 2f0d480c73b aco: optimize out a*1.0 if it's used as a float
+  * 54a09545ec6 aco: optimize a*0.0
+  * 2849f0b5aac nir/algebraic: optimize out exact a*1.0 if it's used
+    only as a float
+  * 0c3d8e8e2e8 aco: disable a*1.0 optimization if the instruction is
+    precise
+  * 8da467f4fef ci: make piglit runner less noisy and show a better
+    failure message
+  * be330831411 ci/vc4: Add piglit job
+  * a825919dc6c ci/vc4: rename stage to Broadcom
+  * ea88e1c820c ci/vc4: allow custom timeout values for activity
+  * 23461897fe1 radv: add support for emitting PS_DONE/CS_DONE on GFX6-8
+  * cbcb9e7e1b5 radv: Fix struct initialization for MSVC
+  * 28c4960ca57 radv: Use typed outarray API
+  * 6992f5419a5 radv: Disable calibrated timestamps on Windows
+  * 2e81ed2a471 radv: Pointer arithmetic on char/uint8_t, not void
+  * 879b5f41f4c radv: Modify radv_descriptor_set for MSVC legality
+  * c0b4b8fc748 radv: Stub sections that don't have _WIN32 support
+  * 146e3262757 radv: Remove unnecessary headers
+  * b7db6ceb9a7 radv: Use linker pragma to simulate weak functions
+  * 10b3eecd361 spirv: Don't remove variables used by resource indexing
+    intrinsics
+  * cb7352ae95a nir: Add a data pointer to the callback in
+    nir_remove_dead_variables
+  * f1cffe23940 clover: Add constructor for global_argument.
+  * 001722b3a30 anv: Skip CCS ambiguate which preceed fast-clears
+  * e2c5ef6cd65 intel/gen12: Fix memory corruption issues in fused Gen12
+    parts.
+  * 1d967132f3c panfrost: Use normal malloc/free instead of ralloc for
+    surfaces
+  * 46e98004084 freedreno/a6xx: Fix 3dmark misrendering with unwritten
+    MRTs
+  * aa1ddb6fe3c freedreno: Skip some batch dependency tracking if !ctx-
+    >dirty.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 26 Jan 2021 17:16:44 +0100
+
 mesa (21.1.0~git2101230047.53d9beb9b88~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
