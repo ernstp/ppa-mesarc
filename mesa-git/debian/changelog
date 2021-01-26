@@ -1,3 +1,26 @@
+mesa (21.0.0~rc2+git2101251907.1f6ae40f9e7~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1f6ae40f9e7 mesa/main: remove leftover bumpmap code
+  * 51ff50ef309 radv,aco: fix shifting input VGPRs for the LS VGPR init
+    bug on GFX9
+  * f59b95c7b39 glx: Provide glvnd wrapper for glXSwapIntervalEXT
+  * 7a4e04f3f8b .pick_status.json: Update to
+    9052819ebbff07d82c3eb9adf414144df4868644
+  * 219407fd013 zink: clone shader before lowering clip_halfz
+  * 88a5bbb3419 intel/fs: QUAD_SWIZZLE requires packed data
+  * b01aa90cabf intel/compiler: Return 1 for immediates in regs_read
+  * 9bbb5639b47 .pick_status.json: Mark
+    45bebc7a9c73f3add08c2290fa1eac237edf5a34 as backported
+  * a4e7e0e77a1 .pick_status.json: Mark
+    8c7d9716669a74159d2eec86490c756c274f663c as backported
+  * f5e5225dec8 .pick_status.json: Update to
+    d37124b065c2b6c99c042fb402c6a23ce16b034e
+  * 72e527d5342 frontends/va/context: don't set max_references with
+    num_render_targets
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 26 Jan 2021 17:20:24 +0100
+
 mesa (21.0.0~rc2+git2101221848.d50b941c464~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
