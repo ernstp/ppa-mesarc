@@ -1,3 +1,50 @@
+mesa (21.0.0~rc3+git2101281753.d27c65945e9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * d27c65945e9 i965: Don't parse driconf again
+  * 1c0cfc597ae radeonsi: fix centroid with VRS coarse shading
+  * e51293a06b0 .pick_status.json: Update to
+    9003735b9141fb156d3b2e1133b94cdf14f63424
+  * 87d20549c86 iris: Disable aux as needed in iris_flush_resource
+  * 587d1f75fbe gallium: Flush GL API resources in eglCreateImage
+  * 88f2c1ab026 gallium: Map _DRI_IMAGE_FORMAT_NONE to NULL
+  * 1c4a92a7cdb aco: fix nir_intrinsic_ballot with wave32
+  * 343f1aba202 compiler: Use util/bitset.h for system_values_read
+  * de78b1c88d5 nir/algebraic: mark more optimization with fsat(NaN) as
+    inexact
+  * 172ae306024 radv: Only enable sparse features on Polaris and newer.
+  * 032b9c41679 .pick_status.json: Update to
+    86ff78e8fe55b424c6b853ead6979bcd46820d81
+  * 59417ecc847 VERSION: bump for 21.0.0-rc3
+  * bd506cb19ca aco/optimizer: don't copy-prop logical phis
+  * 215266234b5 aco/optimizer: don't propagate subdword temps of
+    different size
+  * 5d8a6fd48d7 nir: Add a data pointer to the callback in
+    nir_remove_dead_variables
+  * 96de6d77548 spirv: Don't remove variables used by resource indexing
+    intrinsics
+  * f0bb52cf522 radv: fix divide by zero with no tesselation params
+  * 72dcdac82b3 anv: Skip CCS ambiguate which preceed fast-clears
+  * 70887f253c2 intel/gen12: Fix memory corruption issues in fused Gen12
+    parts.
+  * 85bb7eff533 panfrost: Use normal malloc/free instead of ralloc for
+    surfaces
+  * 90f8855080f anv: Invalidate the correct AUX-TT entry
+  * a9faff69f6e anv: fix invalid programming of BLEND_STATE
+  * fd5c91e656a radv: Use stricter HW resolve swizzle compat check.
+  * fcb61d4b460 etnaviv: handle NULL views in set_sampler_views
+  * dacf8a517b0 gallium: Fix leak of shader images on context
+    destruction.
+  * a132e464f8a panfrost: Stub out set_shader_images().
+  * 9a332e1a293 swr: Don't report support for shader images.
+  * 80302b96f44 zink: flag gfx pipeline dirty using newer mechanism
+  * e721f4c8f14 Revert "virgl: fix BGRA emulation artifacts during
+    window resize"
+  * 54f2af0770c .pick_status.json: Update to
+    f01ea0aef8a50d2732eb0c64153903e52ed2a757
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Jan 2021 10:48:05 +0100
+
 mesa (21.0.0~rc2+git2101251907.1f6ae40f9e7~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
