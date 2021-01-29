@@ -1,3 +1,11 @@
+mutter (3.38.3+git2101281613.75c3fc560~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 75c3fc560 window: Guard can_ping() against unmanaging windows
+  * dd2f4963d window: Do not handle ungrabbed events when unmanaging
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Jan 2021 10:51:33 +0100
+
 mutter (3.38.3+git2101132253.9f9c26be9~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
