@@ -1,3 +1,51 @@
+mesa (21.1.0~git2101290944.5dc823304b1~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 5dc823304b1 radeonsi/sqtt: forward string markers to sqtt
+  * 3bd5120a57c radeonsi/sqtt: allow AMD_THREAD_TRACE_TRIGGER to be a
+    frame number
+  * 80c3ed147bb radeonsi/sqtt: fix SQTT bo size overflow
+  * f2d57d28ed6 radeonsi/sqtt: use more event identifier
+  * a77834cecf2 ci: split src/mesa/**/* matching rule
+  * 84a38ec1336 iris: Enable PIPE_CAP_SHAREABLE_SHADERS.
+  * 1afed51445c iris: Store a list of shader variants in the shader
+    itself
+  * 578cd00d936 iris: Refcount shader variants
+  * bef0af3f216 microsoft: Fix comma in variadic macro for MSVC
+  * 3c7062417be gallium/tessellator: Fix warning suppression
+  * 4fec6c94481 panfrost: Add the tiler heap to fragment jobs
+  * d860b61f091 glapi: guard against invalid XML definitions for
+    glthread
+  * b5a0714aaeb glthread: fix glVertexAttribDivisor calls not being
+    tracked by non-VBO uploads
+  * 76c322a48de glthread: fix interpreting vertex size == GL_BGRA for
+    vertex attribs
+  * b308d56e207 ci: Update baremetal kernel to 5.11-rc5 plus patches.
+  * 97fbe2d45f9 iris: Move VS draw parameter dirty flagging to
+    iris_bind_vs_state
+  * fdbb5d4dd9a iris: Minor code restyling in iris_bind_vs_state
+  * ddfdd944688 iris: Use shader_info rather than vs_prog_data for draw
+    parameter checks
+  * d938fcefb96 radv: Expose VK_KHR_workgroup_memory_explicit_layout.
+  * 7d0c940d703 freedreno: Remove duplicate bc invalidate on
+    flush_write_batch().
+  * f179594cf9a freedreno: Early-out from the resource write path when
+    we're the writer.
+  * d1a0eba2417 freedreno: Use a real type instead of void * for the
+    fd_batch->key.
+  * 695d3bcb12d mapi: Undefine MemoryBarrier
+  * 92f1b6bad58 glapi: Undefine MemoryBarrier
+  * 4656be70dd7 anv: Support multiple engines with
+    DRM_IOCTL_I915_GEM_CONTEXT_CREATE_EXT
+  * c5e7c91487b anv: Add anv_gem_count_engines
+  * 5d84c764fde anv: Gather engine info from i915 if available
+  * c0d07c838a9 anv: Support i915 query (DRM_IOCTL_I915_QUERY) from
+    Linux v4.17
+  * 8d07f719181 anv: Print queue number with INTEL_DEBUG=bat
+  * 9fd08066215 anv: Turn device->queue into an array
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Jan 2021 10:44:24 +0100
+
 mesa (21.1.0~git2101261627.4099cdc97f2~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
