@@ -1,3 +1,43 @@
+mesa (21.1.0~git2101300514.205e737f51b~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * 205e737f51b docs: update calendar for 21.0.0-rc3
+  * 41997bb8602 docs: update calendar for 21.0.0-rc2
+  * ea6f5ef779a docs: update calendar and link releases notes for 20.3.4
+  * 98d21ee5e1f docs: Add sha256sum for 20.3.4
+  * ea26354ce79 docs: add release notes for 20.3.4
+  * 1869072c80d spirv: Store SPIR-V version of the module
+  * a0d73ca65c0 spirv: Don't remove dead variables in `create_library`
+    mode
+  * fd44bcf9a84 spirv: Don't bother counting num_images/num_textures
+  * 55e853d823e mesa/st: Allocate the gl_context with 16-byte alignment.
+  * 25c70a9a1ef lavapipe: add missing loader interface negoitation
+  * f026345b34a microsoft/compiler: Make resource_state_manager only
+    build with_gallium_d3d12
+  * 8deca5a72ea CI: windows: Force using LLVM 12
+  * a69ab2ae369 CI: windows: split the layers to meet new registry
+    requirements
+  * 0ef1f418bb9 CI: windows: augment the timeout of building the windows
+    container
+  * d76f51d6fd6 glsl: support 64bit integer loop iterators
+  * 234ba13f100 pan/bi: Add packing format tests
+  * 9497d8025f4 pan/bi: Test pack_sync
+  * e0a5e5eb157 pan/bi: Test pack_tuple_bits
+  * 7898decbd32 pan/bi: Test pack_upper
+  * e383af639a9 pan/bi: Test pack_literal
+  * 80157fac68b pan/bi: Add packing unit test group
+  * 4379f7bad27 pan/bi: Pack multiple tuples per clause
+  * 9362a139821 pan/bi: Calculate pos for constant packing
+  * 51f13185c84 pan/bi: Add pack_format helper
+  * 0e9a05c0041 pan/bi: Add subword 4 or 7 pack
+  * 1adb996acc3 pan/bi: Add subword 5/6 pack
+  * 038bb8eabe6 pan/bi: Add tuple/embedded constant pack
+  * 2258acf5caf pan/bi: Add bi_pack_sync
+  * 5f523c60fc6 pan/bi: Add bi_pack_tuple_bits
+  * 0812a5204ba pan/bi: Add bi_pack_upper
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 30 Jan 2021 18:52:00 +0100
+
 mesa (21.1.0~git2101290944.5dc823304b1~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
