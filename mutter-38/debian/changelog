@@ -1,3 +1,17 @@
+mutter (3.38.3+git2101291841.d881fcdec~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * d881fcdec screen-cast/area-src: Handle monitors changes here too
+  * d3b386c5f screen-cast/monitor-stream: Don't fall apart when monitor
+    changes
+  * 6724bbe49 screen-cast-stream: Add getter for stream src
+  * 93a210fd2 workspace: Downgrade assert to warning when adding window
+  * 015acbbc3 tests/monitor-config: Improve debugging output
+  * 8af95b4c4 monitor-config: Free `meta_monitor_spec` safely
+  * c5617502c monitor-config-store: Properly escape monitor spec
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 30 Jan 2021 18:55:39 +0100
+
 mutter (3.38.3+git2101281613.75c3fc560~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
