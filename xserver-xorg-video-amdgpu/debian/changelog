@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (19.1.0+git2102021245.6ed4863~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 6ed4863 Drop dri.h includes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Feb 2021 21:09:31 +0100
+
 xserver-xorg-video-amdgpu (19.1.0+git2012140406.6234a1b~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
