@@ -1,3 +1,35 @@
+mesa (21.0.0~rc3+git2102042308.76ba9da6911~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 76ba9da6911 i965: use aligned malloc for context instead of ralloc
+  * e2a27c14387 turnip: don't always use 3d ops for blit_image
+  * 9cab7e39887 radv: correctly enable WGP_MODE for tessellation control
+  * a0fe068d9e4 radv: correctly enable WGP_MODE for NGG and GS
+  * ed4d51e33a2 radv: round-up num_records division in
+    radv_flush_vertex_descriptors
+  * 0b9988c507e nir: Drop the lower_mem_constant_vars declaration
+  * 98e928ea6a3 panfrost: Fix tiler job injection (again)
+  * 06faacb8b1a nir/from_ssa: consider defs in sibling blocks
+  * 3dd7df6c24f radv: move queue object to a common base object
+  * 6753936d0e4 radv: Do not hash vk_object_base in descriptor set
+    layout.
+  * 78107eaaac9 .pick_status.json: Update to
+    b609d4677d3f910c546c1d94d8ddfe4511e2f065
+  * e307e3df0c7 mesa: Remove _mesa_destroy_context()
+  * 33127367ef7 mesa: flush glBegin/End before changing
+    GL_DEPTH_STENCIL_TEXTURE_MODE
+  * 7bd9982ba12 mesa/st: Allocate the gl_context with 16-byte alignment.
+  * 4169bef1b66 pan/bi: Fix M1/M2 decoding in disassembler
+  * 26f58508108 radv: fix centroid with VRS coarse shading
+  * b913f2b0972 gallium/tessellator: Fix warning suppression
+  * cdebbc18468 panfrost: Add the tiler heap to fragment jobs
+  * 5f2c793c81a glthread: fix interpreting vertex size == GL_BGRA for
+    vertex attribs
+  * c2a8ca14683 .pick_status.json: Update to
+    e8707961134daa9b91599840ad5698366a6229b7
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Feb 2021 21:05:58 +0100
+
 mesa (21.0.0~rc3+git2101281753.d27c65945e9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
