@@ -1,3 +1,56 @@
+mesa (21.1.0~git2102071844.a4c11385b71~b~mesaaco8) bionic; urgency=medium
+
+  * New snapshot:
+  * a4c11385b71 nouveau/nv50: fix linear buffer alignment for scan-
+    out/cursors
+  * 6650c53e641 nouveau/nvc0: fix linear buffer alignment for scan-
+    out/cursors
+  * 92f12952f32 nouveau: reinstate fencing on screen destroy
+  * 0464117ad9b ci: remove nouveau from shader-db runs
+  * 862b6a9a97a radv: Improve spilling on discrete GPUs.
+  * 8a9162c85a7 android: iris: implement iris layer of INTEL_MEASURE
+  * 5445e287493 android: anv: implement anv layer of INTEL_MEASURE
+  * 9664bb1f3bb android: intel: Print GPU timing data based on
+    INTEL_MEASURE
+  * e5fc8a28dc7 winsys/amdgpu: try not to skip any code with
+    RADEON_NOOP=1 to test CPU perf
+  * ccaad7d8442 winsys/amdgpu: don't set unused usage for backing BOs of
+    sparse BOs
+  * 7d76b912bc3 winsys/amdgpu: don't inc/dec num_active_ioctls for
+    backing BOs of sparse BOs
+  * 77d111fcbf8 winsys/amdgpu: move amdgpu_winsys_bo::use_reusable_pool
+    to the u.real union
+  * 04f02e573ce winsys/amdgpu: move amdgpu_winsys_bo::is_user_ptr to the
+    u.real union
+  * 96c188d023f winsys/amdgpu: move amdgpu_winsys_bo::is_shared to the
+    u.real union
+  * 4bb9df366a7 winsys/amdgpu: move amdgpu_winsys_bo::cpu_ptr into the
+    u.real union
+  * c3778b8fe14 winsys/amdgpu: pack amdgpu_winsys_bo::is_shared and
+    protect it by a mutex
+  * ff311df6b54 winsys/amdgpu: remove
+    amdgpu_winsys_bo::num_cs_references to remove atomics
+  * 06b9dedfd91 winsys/amdgpu: optimize out conditionals in
+    amdgpu_lookup_buffer
+  * c9bc23d27ac targets/libgl-xlib: add support for virgl
+  * 75c7e4b2f8b virgl: Convert errno to string.
+  * 09ce403b2d7 radv: zero the bo descriptor array when allocating a new
+    set
+  * 2f534c2e2ee radv: null bo list pointer for null descriptors on
+    update
+  * 021bc4f8683 nv50,nvc0: clear internal vbo masks based on the
+    trailing slots
+  * eff837c7c2d pan/bi: Implement ACMPXCHG
+  * d400d5e150f pan/bi: Implement AXCHG
+  * b0a2a0af757 pan/bi: Respect side effects in DCE
+  * f5709f17a27 pan/bi: Add side_effects helper
+  * 836c1c6fb10 pan/bi: Fix NULL deref with empty shader
+  * 855e29cd78f pan/bi: Make sure we never branch to an non-existing
+    clause
+  * dbce99a809d pan/bi: Add an is_terminal_block() helper
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Feb 2021 21:02:33 +0100
+
 mesa (21.1.0~git2101300514.205e737f51b~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
