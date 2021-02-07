@@ -1,3 +1,17 @@
+mutter (3.38.3+git2102061548.22ab643c5~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 22ab643c5 compositor/dnd-actor: Take geometry scale into account on
+    DnD-cancel
+  * 5628d0423 wayland/dnd-surface: Use new API to set geometry scale of
+    feedback actor
+  * 989ef121f feedback-actor: Add API to set and get geometry scale
+  * 2d424a739 window/x11: Check before freezing commits
+  * 2d47adc10 window-actor: Add a new can_freeze_commits() API
+  * f68f06073 window: Freeze stack when calculating showing state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Feb 2021 21:09:11 +0100
+
 mutter (3.38.3+git2101291841.d881fcdec~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
