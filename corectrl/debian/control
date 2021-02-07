@@ -39,7 +39,7 @@ Depends:
  util-linux,
  hwdata,
  mesa-utils,
- vulkan-tools
+ vulkan-tools | vulkan-utils
 Description: Core control application
  CoreCtrl is a Free and Open Source GNU/Linux application that
  allows you to control with ease your computer hardware using
