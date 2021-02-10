@@ -1,3 +1,49 @@
+mesa (21.1.0~git2102101325.ed7e6eb54bd~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * ed7e6eb54bd radv: fix memory leaks if a submission fails
+  * bf5713d7368 zink: handle vote intrinsics in ntv
+  * e35612e45f0 zink: add spirv_builder wrapper for vote intrinsics
+  * cf6901809e8 ci: Add trailing slash to path for documentation preview
+  * f758b1a25bf v3dv: support for depthBiasClamp
+  * f7575fa71fb aco: fix adjust_vertex_fetch_alpha
+  * 19711b0f44a radv: stop allocating useless ESGS scratch BO on GFX10+
+  * caafedf38f1 radv: fix double free when creating a fence failed
+  * cd03f1c6f6d gallium: Document behavior of more lowering pipe caps.
+  * bcb5f9f94ac v3d: Stop advertising support for flat shading.
+  * ff805f8ac79 v3d: Stop advertising support for
+    PIPE_CAP_*_COLOR_CLAMPED.
+  * 2992dc7386d v3d: Stop advertising support for
+    PIPE_CAP_TWO_SIDED_COLOR.
+  * 5ddc2f916fb v3d: Clean up vestiges of alpha test lowering.
+  * b9a9cd59ff8 vc4: Stop advertising support for VS color clamping.
+  * e584d4f6dd8 vc4: Stop advertising support for
+    PIPE_CAP_TWO_SIDED_COLOR.
+  * cc0841c82ae vc4: Remove vestiges of alpha test lowering.
+  * 9aa7a2d10ce mesa/st: Assume that the default variant is always first
+    in the list.
+  * 1d5ce66b020 mesa/st: Always precompile the first shader variant.
+  * 659916d6742 freedreno/a5xx: Don't forget to count our custom blits
+    against queries.
+  * 881ce0f0a4f freedreno: Remove FD_STAGE_* in favor of a "disable_all"
+    flag.
+  * 4cc3956193d freedreno: Force updating active queries on batch
+    reordering.
+  * 1bab56e1ba5 ci/virgl: Fix GLES31 testing on desktop GL.
+  * 697fb11cfc0 features: mark off GL 4.3 for zink
+  * cb80609bb06 zink: GLSL 430
+  * 7909c642b16 zink: enable compute
+  * c5cf5ad6f09 zink: export compute-specific shader/compute caps
+  * a2771967cbc zink: add launch_grid pipe_context hook for compute
+    handling
+  * ce6d08a0e76 zink: flush gfx/compute batches when the other pipeline
+    needs resource sync
+  * dac99517ff2 zink: handle descriptor set updates for compute
+    operations
+  * e20a43ec354 zink: handle memory barriers for compute batch
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 10 Feb 2021 13:45:35 +0100
+
 mesa (21.1.0~git2102071844.a4c11385b71~b~mesaaco8) bionic; urgency=medium
 
   * New snapshot:
