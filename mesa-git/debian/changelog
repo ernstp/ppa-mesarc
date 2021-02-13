@@ -1,3 +1,44 @@
+mesa (21.0.0~rc4+git2102110011.d851b07fefa~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * d851b07fefa osmesa: Pacify MSVC in the test code
+  * fd7be16bd36 v3d: Clean up vestiges of alpha test lowering.
+  * 6723819cc28 vc4: Remove vestiges of alpha test lowering.
+  * a7abc65a584 anv: only signal wsi fence BO on last command buffer
+  * a6dd1fda4e2 aco: do not flag all blocks WQM to ensure we enter all
+    nested loops in WQM
+  * 0bb75ccf28d radv: Fix vram override with fully visible VRAM.
+  * e28d43f1081 spirv: Allow variable pointers pointing to an array of
+    blocks
+  * 40f3ce141a8 pan/bi: Fix FLOG_TABLE modifier handling
+  * bcde7c14c68 nir/algebraic: Fix a >> #b << #b for sizes other than 32-
+    bit
+  * 7d9947458d7 nouveau/nv50: fix linear buffer alignment for scan-
+    out/cursors
+  * 0a1f910f71e nouveau/nvc0: fix linear buffer alignment for scan-
+    out/cursors
+  * 6a526efcfbb nouveau: reinstate fencing on screen destroy
+  * a1248b811e1 radv: Improve spilling on discrete GPUs.
+  * 0ea5fe87ae5 radv: zero the bo descriptor array when allocating a new
+    set
+  * bde380bde9e radv: null bo list pointer for null descriptors on
+    update
+  * bb2aea8ded6 aco: always set exec_live=false
+  * 00b62f387c7 panfrost: Fix a polygon list corruption in the multi-
+    context case
+  * 664a5ef70b9 drisw: Disable automatic use of layered drivers with
+    LIBGL_ALWAYS_SOFTWARE
+  * bf0b3c65c50 zink: don't pick a cpu device ever.
+  * 60f12ee1772 radv: fix waiting on the last enabled RB for occlusion
+    queries
+  * ca39949a27d vulkan: Make vk_debug_report_callback derive from
+    vk_object_base
+  * a181bc63ae4 .pick_status.json: Update to
+    8ed874d73fafcfbcb54730dc5c20e58f24d55f5e
+  * 392b1722c25 bump version for 21.0-rc4
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Feb 2021 01:12:07 +0100
+
 mesa (21.0.0~rc3+git2102042308.76ba9da6911~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
