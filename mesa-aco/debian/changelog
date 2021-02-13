@@ -1,3 +1,45 @@
+mesa (21.1.0~git2102130025.3fc8da13f62~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 3fc8da13f62 zink: flag exact alu op results in ntv with
+    NoContraction
+  * 8b793f95671 aco: remove dead code for the handling of exec
+    temporaries
+  * a56ddca4e80 aco: make all exec accesses non-temporaries
+  * 5d7b3bf1a73 aco: handle non-temp phi definitions and operands
+  * e663a15098f aco: don't create unnecessary exec phi on merge blocks
+  * 3f614c6f7cb v3dv/meta_copy: get tlb compatible BC compressed formats
+    for copies
+  * 6fdf375a909 v3dv/formats: expose support for BC1-3 compressed
+    formats
+  * fcb229cbe07 v3dv/device: clarify that we can't expose
+    textureCompressionBC
+  * 643873a94f6 docs/features: gl_HelperInvocation on Panfrost
+  * 2f70317e0d9 docs/features: Mark sample shading done on Panfrost
+  * 2193d768bd7 docs/features: Mark some ES3.1 done on Panfrost
+  * 0308095af7d docs/features: Mark more TBO exts done on panfrost
+  * 2e33dfafbe6 panfrost: Advertise OES_standard_derivatives
+  * f21e13301a5 panfrost: Bump advertised ESSL feature level
+  * ea289ee1db3 panfrost: Bump max SSBO count
+  * 6bba718027e panfrost: Advertise SAMPLE_SHADING
+  * 9aede94711b panfrost: Assert on indirect compute shaders
+  * 4b00d311e7f panfrost: Remove stale TODOs
+  * 5d83442f8ea panfrost: Simplify bind_compute_state
+  * 856f0abd2b7 pan/{mdg, bi}: Lower load_sample_pos
+  * 00c1d5da347 pan/{mdg, bi}: Lower load_helper_invocation
+  * 00df2745863 pan/bi: Implement coverage mask updates
+  * ae8b1fa7db0 pan/bi: Decouple sysval loading from NIR
+  * 1e7b5f38263 pan/bi: Implement
+    nir_intrinsic_load_sample_positions_pan
+  * ca0f50ec6aa pan/bi: Implement load_sample_mask_in
+  * 92569f5d6ec pan/bi: Fix gl_SampleID read
+  * 56240f6e85a pan/bi: Lower ifind_msb
+  * ad06e0592aa pan/bi: Implement ufind_msb
+  * 2ef97a079aa pan/bi: Implement bitfield_reverse
+  * 06d6dd1b405 pan/bi: Support bit_count()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Feb 2021 01:08:39 +0100
+
 mesa (21.1.0~git2102101325.ed7e6eb54bd~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
