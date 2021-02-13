@@ -1,3 +1,16 @@
+mutter (3.38.3+git2102112204.2818cfda8~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 2818cfda8 wayland: Avoid automatically decoupling source/offer after
+    grab
+  * 6f5832da9 wayland: Manually detach source/offer on failure paths
+  * ee26aea10 wayland: Plug XDnD drag source leak
+  * 26008c452 wayland: Make XDnD grab unlink source/offer manually
+  * 78c61f557 clutter/timeline: Clear stage view listener when actor
+    destroyed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Feb 2021 01:15:24 +0100
+
 mutter (3.38.3+git2102061548.22ab643c5~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
