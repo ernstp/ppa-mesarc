@@ -1,3 +1,55 @@
+mesa (21.1.0~git2102171823.2104135f38c~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 2104135f38c nir: Fix grammar error
+  * 8e97fc3a291 radv: do not allow to capture SQTT on the compute queue
+  * 6d8516bd748 radv: stop emitting pipeline bind markers
+  * de542784f8c radv: make sure to allocate enough space when emitting
+    SQTT userdata
+  * 80709d11d29 radv: remove an outdated TODO about SQTT cache flushes
+  * 09b23c42f9c radv: move SQTT parameters initialization to
+    radv_thread_trace_init()
+  * 388bde7e824 radv: create the start/stop CS for SQTT dynamically
+  * 0f7379e3089 ci: tracie dashboard URLs only in the failure after the
+    testcase
+  * 73933036373 ci: correct artifacts location for piglit's runner
+    messages
+  * 87153b8f1c1 ci: make sure piglit's artifacts are not overwritten
+  * 4ae5b84a676 ci: correct piglit's HTML summary location for artifacts
+    upload
+  * 88a6c6a4385 ci: clean paths used in the piglit runner
+  * 90d6365ad4a radeonsi: force dcc clear to use compute clear
+  * 1d64a1045ea radeonsi: enable dcc image stores on gfx10+
+  * f18bceac72b radeonsi: replace force_cp_dma arg of si_clear_buffer by
+    enum
+  * 1a0b0e8460c radv,aco: allow unaligned LDS access on GFX9+
+  * c2d57f55a83 radv: relax shared alignment requirements in
+    mem_vectorize_callback
+  * 4feca7ecde9 gallium/trace: add a pipe_screen::get_compiler_options
+    method
+  * c59fd3acb9e glthread: ignore the return value of glUnmapBuffer,
+    don't sync, and return true
+  * 638a1848490 glthread: don't sync when using pixel buffer objects
+  * 0b6739ef807 glthread: don't declare pointers with const in unmarshal
+    functions
+  * 2804d489e37 glthread: assume all parameters are fixed if
+    marshal_sync is present
+  * 8288882965b radeonsi: set MEM_ORDERED optimally
+  * e9e385b084f radeonsi: gather shader info about VMEM usage for
+    MEM_ORDERED
+  * 27e22f025ca radeonsi: gather shader info about indirect
+    UBO/SSBO/samplers/images
+  * d47c44add80 radeonsi: gather info about bindless images and memory
+    stores with strstr(intr)
+  * 5e47d6fc73a radeonsi: fix the value of uses_bindless_samplers
+  * 19e6601413a radeonsi: do late NIR optimizations after uniform
+    inlining
+  * 33ac9dec91d radeonsi: allocate filled_size for streamout targets in
+    set_streamout_buffers
+  * 9db4b331f9f radeonsi: improve comments in si_emit_derived_tess_state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Feb 2021 18:48:28 +0100
+
 mesa (21.1.0~git2102130025.3fc8da13f62~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
