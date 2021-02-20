@@ -1,3 +1,51 @@
+mesa (21.0.0~rc4+git2102182342.202ff54b4d6~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 202ff54b4d6 aco: Fix LDS statistics of tess control shaders.
+  * c6f1d33ae03 aco: Disallow LSHS temp-only I/O when VS output is
+    written indirectly.
+  * dde6de9cbf1 radv/llvm: Fix reporting LDS stats of tess control
+    shaders.
+  * 7047adf43b3 anv/formats: Advertise linear sampling on depth formats
+  * 811f4b21daf intel/anv: Fix condition for planar yuv surface
+  * 47cffe6da37 intel/compiler: Use CMPN for min / max on Gen4 and Gen5
+  * 56a31d5210c intel/compiler: Make the CMPN builder work like the CMP
+    builder
+  * 674a5368258 intel/compiler: Enable the ability to emit CMPN
+    instructions
+  * 291b34ef0c3 intel/anv: Fix condition to set MipModeFilter for YUV
+    surface
+  * 07029efa5da gallium/trace: add a pipe_screen::get_compiler_options
+    method
+  * c6140fb09df etnaviv: Fix memory leak in
+    etna_vertex_elements_state_create.
+  * eeb7cb93d2d intel/fs: Shuffle can't handle source modifiers
+  * 2b5651e0027 nir: Fix parameter order in the bcsel-of-shuffle
+    optimization
+  * 1d23aa2618a nir: Don't optimize bcsel-of-shuffle across blocks
+  * eca7fc490c6 pan/bi: Use the correct size for UBO loads
+  * 379d31bc6cf radv: Do pipe misalignment check per plane.
+  * d03634d438d radv: only apply the MRT output NaN fixup to non-meta
+    shaders
+  * fe83bea3555 zink: handle 1bit undef values in ntv
+  * 0ba7fae4918 zink: fix slot mapping for legacy gl io with tess stages
+  * 9b7500dff03 freedreno: Add missing dep on freedreno tracepoints.
+  * 25a9312d233 panfrost: Set tiler descriptor sampler pattern
+  * 714e9a02d1d panfrost: Add panfrost_sample_pattern helper
+  * 8e8ba3402a2 aco: fix shared VGPR allocation on RDNA2
+  * f9a57d53c92 zink: fix streamout for tess stage
+  * 93be7a0aee4 wgl: Disable automatic use of layered drivers with
+    LIBGL_ALWAYS_SOFTWARE
+  * fb2f644bae3 d3d12: Fail screen creation if a shader validator is
+    needed and can't be created
+  * aa7a38dd446 wgl: Add a loop for screen creation with an ordered list
+    of fallbacks
+  * 83f99bbb4f0 wgl: Refactor screen creation to a function
+  * 63d0fbb07b3 pan/bi: Fix empty shader handling
+  * 67db4ad07f7 radv: Ignore WC flags for VRAM.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Feb 2021 18:14:44 +0100
+
 mesa (21.0.0~rc4+git2102110011.d851b07fefa~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
