@@ -1,3 +1,50 @@
+mesa (21.1.0~git2102200231.3250e04d25e~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 3250e04d25e nir/algebraic: Add some max/min optimizations with 3
+    variables
+  * d9b5bce85ad nir/algebraic: Remove some redundant b2f logic-op
+    reduction patterns
+  * 7e127c1fca6 nir/algebraic: Fix some min/max of b2f replacements
+  * a983a87a5f1 freedreno/ir3/print: Improve branch printing
+  * 03762a956ea freedreno/ir3/print: More sane ssa src/dst display
+  * 1516b6bd9a5 st/mesa: fix PBO download for TEXTURE_1D_ARRAY textures
+  * 4c4a91abe59 iris: Reference the shader variant for last_vue_map as
+    well
+  * 0fa7ec14734 turnip,freedreno/a6xx: tell hw the size of shared mem
+    used by CS
+  * dab845d457e ci: Move specific driver testing to separate files in
+    separate dirs.
+  * 8a3dbf1ca6b microsoft/clc: Add a test with an unused kernel arg
+  * 11061c4e286 microsoft/clc: Re-order dead variable removal after
+    uniform vars_to_explicit_types
+  * 14a00042326 turnip: consider tile_max_h when calculating tiling
+    config
+  * c763d238c6c xlib: Fix build regression since 99e25d183d9
+  * 455ca9226ae ac/rgp: set gfxip in elf_hdr.e_flags
+  * 9ce8b5024ae ac/rgp: dump co, col, pso database to rgp profile file
+  * 5d51ccd7d16 ac/rgp,radeonsi,radv: pass struct thread_trace_data to
+    ac_sqtt_dump_data()
+  * c544e56fb50 ac/rgp: expose data structure to populate co, col, pso
+    database
+  * 110bb2c77dd ac/rgp: add helper function to write rgp elf oject
+  * 12515d6b59f ac/rgp: add rgp co, col, pso data structures
+  * 27ff46bde66 ac/rgp: add ac_msgpack.h/c
+  * 34d6ce28e38 util: fix gcc vsnprintf overflow
+  * b6b3b38434a turnip: consider HW limit on number of views when apply
+    multipos opt
+  * 88f42ea93e0 radv: emit the trap handler registers earlier
+  * 2c6104d3d1f radv: make the TMA/TBA BOs resident buffers
+  * 918838cd24e radv: make the trace BO a resident buffer
+  * d96c0a22639 radv: make the border color BO a resident buffer
+  * 834b69d1ef4 zink: fix win32 build
+  * e3bdf815b79 radv: set correct value for OFFCHIP_BUFFERING on GFX10+
+  * bf535c082bf nv50/ir: Initialize Instruction members.
+  * 31dd0a4a1e5 zink: use vkGetFenceStatus when we're obviously checking
+    for status
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Feb 2021 18:12:15 +0100
+
 mesa (21.1.0~git2102171823.2104135f38c~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
