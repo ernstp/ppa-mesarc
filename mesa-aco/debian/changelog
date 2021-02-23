@@ -1,3 +1,45 @@
+mesa (21.1.0~git2102231901.c80ddf9d740~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * c80ddf9d740 zink: Remove NULL checks after GET_PROC_ADDR_INSTANCE().
+  * c43e8da5350 zink: Use mesa_loge() for should-never-be-reached
+    initialization errors.
+  * d53fa9d9ff3 ci/zink: Add tests of gles2, gles3, and gl33 on
+    lavapipe.
+  * a77eedd6bb6 docs: Document USE_ELF_TLS can work on Windows too
+  * ba141b95a79 glapi: Support "ELF" TLS on Windows
+  * d7e1f492bc4 radv: Disable displayable DCC for GFX8 properly.
+  * 5edbc6148d7 zink: disable some builtin-gl-sample-mask sample shading
+    tests on ci
+  * e346f61a912 mesa: update vao _EnabledWithMapMode in
+    copy_array_object
+  * b0b1bf99573 anv: Fix wait_count missing increment
+  * 97ff5160d19 ac/rgp: define EM_AMDGPU if missing for compatibility
+  * ec35c4b57c7 ac: prefer system EM_AMDGPU definition
+  * dba692c6187 etnaviv: use nir_lower_uniforms_to_ubo(..)
+  * 1837135f7ca etnaviv: nir: add ubo lowering pass
+  * ffebe480133 aco: don't rematerialize exec
+  * 337ba88293e vc4: let st lower rect tex
+  * 9c673245421 etnaviv: let st lower rect tex
+  * 06f409a8c1f etnaviv: nir: support
+    nir_intrinsic_load_texture_rect_scaling
+  * 7c40e9a3229 ttn: lower rectangle textures if not supported
+  * 08e072015a3 gallium/st: lower rectangle textures if not supported
+  * 758a2d5343c gallium: add PIPE_CAP_TEXRECT
+  * 8cb52f67351 nir/lower_tex: wider usage of
+    nir_tex_instr_src_index(..)
+  * a403ff4d703 nir/lower_tex: 'txs free' tex_rect lowering
+  * 3fbde2fd936 nir: add has_txs flag
+  * b0e23c92b30 nir: add load_texture_rect_scaling
+  * 765097eac46 radv: add support for instruction timing with RGP
+  * a72b7a9b6c6 radv: add support for exporting pipelines with RGP
+  * 884e14d7845 radv: store a pointer to the code in radv_shader_variant
+  * 7acb30de8ac radv: Enable displayable DCC.
+  * f848f2adfae radv: Use ac_surface DCC settings for shareable images.
+  * 0e189dd3fde radv: Add DCC info to the metadata.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 23 Feb 2021 19:21:35 +0100
+
 mesa (21.1.0~git2102200231.3250e04d25e~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
