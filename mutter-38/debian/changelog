@@ -1,3 +1,11 @@
+mutter (3.38.3+git2102231324.2d34ee088~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 2d34ee088 core: Account for the globally active input case
+  * cb7ac99fe window: Add "is_focus_async" API
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 23 Feb 2021 19:23:59 +0100
+
 mutter (3.38.3+git2102112204.2818cfda8~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
