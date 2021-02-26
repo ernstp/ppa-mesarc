@@ -1,3 +1,54 @@
+mesa (21.0.0~rc4+git2102262047.10611abc193~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 10611abc193 android: pan/bi: reorder static dependencies in
+    gallium/dri
+  * fc2132abda3 radv: do not scale the depth bias for D16_UNORM depth
+    surfaces
+  * 4482dc269b7 nouveau_vieux: use align_calloc for the context to fix
+    m32 crashes
+  * 4350d977580 radeon,r200: use align_calloc for the context to fix m32
+    crashes
+  * 50cd4585a58 i915: use align_calloc for the context to fix m32
+    crashes
+  * 716651a9815 anv: Fix wait_count missing increment
+  * 6b722466dd2 aco/lower_phis: fix all_preds_uniform with
+    continue_or_break
+  * 3f53525e3b2 anv: don't wait for completion of work on
+    vkQueuePresent()
+  * 5d31b4896a9 anv: reset binary syncobj to be signaled before
+    submission
+  * 0da957d0e40 Adjust dylib compatibility versions to match what was
+    set by mesa-18.3's autotools-based builds
+  * 552c80c186d glx: proposed fix for setSwapInterval
+  * d48b8d338ab panfrost: Don't advertise OES_copy_image
+  * 9dc551f3757 .pick_status.json: Mark
+    38ce8d4d00c2b0e567b6dd36876cf171acb1dbc7 as backported
+  * a983ff51dce panfrost: Raise TEXTURE_BUFFER_OFFSET_ALIGNMENT
+  * f65884192ca radv: Don't use dedicated memory info to indicate
+    sharing.
+  * 7ebc941a87c Fall back on clock_gettime when timespec_get() is
+    unavailable
+  * 786fec1f530 aco: Initialize ds_state.front.writeMask.
+  * 048efe01c9f lima: fix max sampler views
+  * 7928d97c48c nir/algebraic: Fix some min/max of b2f replacements
+  * 670f2694644 st/mesa: fix PBO download for TEXTURE_1D_ARRAY textures
+  * a59d4e79778 radv: set correct value for OFFCHIP_BUFFERING on GFX10+
+  * 24f7b491851 pan/bi: Use explicit move even for RT#0 of MRT
+  * bd0b2006900 microsoft/clc: Use driver_location for metadata instead
+    of re-computing offsets
+  * 2d2ce5226bf microsoft/clc: Move inline samplers to the end of the
+    variable list
+  * bc0c0b641c6 microsoft/clc: Fix wrap modes for inline samplers for
+    integer textures
+  * 7c83faad085 microsoft/clc: Let lower_vars_to_explicit_types fill
+    kernel input driver_location
+  * d8794b143b2 .pick_status.json: Update to
+    4ded99f99ddbd1103ffddfd9935638fc12e0ecfd
+  * cc2b9ccacdd vulkan/device_select: Stop using device properties 2.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 26 Feb 2021 21:16:08 +0100
+
 mesa (21.0.0~rc4+git2102182342.202ff54b4d6~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
