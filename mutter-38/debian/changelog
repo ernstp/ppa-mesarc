@@ -1,3 +1,11 @@
+mutter (3.38.3+git2102231414.95b683ae2~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 95b683ae2 clutter/stage-view: Disable double buffered shadow
+    buffering
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 04 Mar 2021 19:56:46 +0100
+
 mutter (3.38.3+git2102231324.2d34ee088~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
