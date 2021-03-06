@@ -1,3 +1,43 @@
+mesa (21.1.0~git2103060132.efd7711e0e1~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * efd7711e0e1 st/mesa: Update constants on alpha test change if it's
+    lowered
+  * 24ce0862fe0 zink/ci: update results after layer extensions enabled
+    in lavapipe
+  * d061e21b7e8 lavapipe: enable EXT_shader_viewport_index_layer
+  * dad5d5099a7 llvmpipe: add support for shader viewport layer
+  * 4cf898b988b draw/prim_assembler: write correct decomposed primitive
+    lengths
+  * 52dc22055f9 draw: fix uses viewport index for tess eval shader
+  * cdffa3e1140 vbo: Fix vbo_sw_primitive_restart for start > 0
+  * cf468b7ad89 zink: more and better debug printfs
+  * f3aa2f15c20 r600/sfn: eliminate loading unused component loads from
+    shared memory
+  * 9f8a0b797ed radv: cache pipeline statistics
+  * 7c7e8942f82 radv,aco: remove aco_compiler_statistics
+  * b4d1764b465 .mailmap: resolve duplicates for Yogesh Mohan Marimuthu
+  * 4752ef50390 .mailmap: resolve duplicates for Satyeshwar Singh
+  * 8481d5f4d02 .mailmap: resolve duplicates for Mun Gwan-gyeong
+  * cc1da67fd13 .mailmap: resolve duplicates for Maya Rashish
+  * a3d4c485979 .mailmap: resolve duplicates for Matthias Lorenz
+  * abd9b0d7d81 .mailmap: resolve duplicates for Matthias Hopf
+  * 4fd9f4beb63 .mailmap: resolve duplicates for Mark Menzynski
+  * 00aefdfea6d .mailmap: resolve duplicates for Lin Johnson
+  * 028ae10694e .mailmap: resolve duplicates for Jan Zielinski
+  * 6c9660e4242 .mailmap: resolve duplicates for James Xiong
+  * 64b415d96c4 .mailmap: resolve duplicates for Indrajit Das
+  * 75f5fc3435b .mailmap: resolve duplicates for Emmanuel Vadot
+  * cd4dfc157b2 .mailmap: resolve duplicates for Christopher Li
+  * 9e34049e46e .mailmap: resolve duplicates for Icecream95
+  * bd8193fb4ca .mailmap: colapse duplicates for Timothy Arceri
+  * 8955d179d3e anv: fix MI_PREDICATE_RESULT write
+  * 718bfdb3dad pan/bi: Implement fsin/fcos
+  * 253b7954516 pan/bi: Allow negating constants
+  * 362756ad094 pan/bi: Use replace_index in more places
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 06 Mar 2021 12:51:37 +0100
+
 mesa (21.1.0~git2102231901.c80ddf9d740~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
