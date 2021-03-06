@@ -1,3 +1,28 @@
+mesa (21.0.0~rc4+git2103052024.a7c33ae3350~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * a7c33ae3350 radeonsi: properly set SPI_SHADER_PGM_HI_ES
+  * 3273a9258d3 radv: don't set sx_blend_opt_epsilon for
+    V_028C70_COLOR_10_11_11
+  * 10db16421fb lavapipe: fix pipeline vp/scissor mixup.
+  * 0a825d34fbe radv: don't shrink image stores for The Surge 2
+  * 8ce27facc54 nir/opt_shrink_vectors: add option to skip shrinking
+    image stores
+  * 696d48d51e6 aco: add missing usable_read2 check
+  * e87b70c4b28 glsl/float64: Bump #version to 400
+  * 745f16de008 mesa/st: clamp scissored clear regions to fb size
+  * 1f6ac53b413 panfrost/lcra: Fix constraint counting
+  * 00ca1580766 frontends/va: Use correct size for secondary planes.
+  * 92a4c0ce6f9 radv: Expose robustBufferAccessUpdateAfterBind
+    correctly.
+  * 6e836431c4f util/u_queue: Ensure num_cpu_mask_bits is valid
+  * 7977ed1376f Revert "gallium/u_upload_mgr: allow use of
+    FLUSH_EXPLICIT with persistent mappings"
+  * 40b679e6594 .pick_status.json: Update to
+    9f8a0b797ed9b8ad9bf49af8269a337b1152a744
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 06 Mar 2021 12:55:03 +0100
+
 mesa (21.0.0~rc4+git2102262047.10611abc193~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
