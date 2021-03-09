@@ -1,3 +1,46 @@
+mesa (21.1.0~git2103091136.1399ee5cf93~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 1399ee5cf93 anv: Drop anv_extensions.py
+  * 6905122999b intel/tools: Show unknown instructions in decoded state.
+  * f532202f2d5 etnaviv: use nir_lower_idiv(..) before opt loop
+  * 279ef45db55 zink: unref ctx->framebuffer on context destroy
+  * 8937b5f2685 zink: don't pass so_info to ntv at all unless it's
+    necessary
+  * 7ed57e60fcb zink: only export necessary xfb outputs to ntv
+  * 1f42ff77dff zink: use slightly stricter check for update_so_info()
+    callsite
+  * 0fb7680b266 zink: pass so_info directly to update_so_info()
+  * 0d741b8dfe3 zink: use info.has_transform_feedback_varyings to
+    determine xfb enablement
+  * eebd00329f3 zink: rename variable in update_so_info()
+  * 5c5e1abea24 zink: evaluate existing slot map during program init and
+    force new map as needed
+  * 6d40db84c9d zink: handle direct xfb output from output variables
+  * 7cef91dd436 zink: stop allocating xfb slot map
+  * 086262fc53a zink: run more nir passes for tess shaders
+  * 6d8b5e7f09c zink: fix location usage for explicit xfb outputs
+  * 96024a8dc96 zink: fix slot mapping for fat io variables
+  * 1b25e3a7019 zink: fix streamout emission for super-enhanced layouts
+  * 9ff01d724a0 zink: remove ntv streamout assert
+  * fe90bcf11ae microsoft/compiler: Don't separate phis while inserting
+    upcasts
+  * ef0d2a5b4b9 nir: Add a nir_after_instr_and_phis helper
+  * 25020c125a9 intel/mi_builder: Fix a couple of #ifs
+  * 62c64e7b9d6 intel/mi_builder: Fix some indentation
+  * 45e5c6b6411 anv: Add mem heap/type support for local-mem
+  * 7c41ae0a810 anv: Put cache memory type first on non-llc platforms
+  * fd98721cbaf anv: Restructure mem heap/type init code
+  * 835c257f645 anv: Add anv_memregion structure
+  * a41c3ed3849 spirv: Update a couple of comments in variable handling
+  * 3a7bb38b70d spirv: Explicitly break when finished handling
+    SpvDecorationBuiltIn
+  * 94d2a51453d spirv: Reuse nir_is_per_vertex_io()
+  * f301eec9a39 nir-to-tgsi: Fix handling of partial writemasks on
+    SSA/REG decls.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 09 Mar 2021 13:42:22 +0100
+
 mesa (21.1.0~git2103060132.efd7711e0e1~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
