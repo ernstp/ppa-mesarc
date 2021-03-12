@@ -1,3 +1,15 @@
+mutter (3.38.3+git2103092045.30c542ddc~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 30c542ddc frame: Fix crash when clicking below titlebar with broken
+    gtk themes
+  * 894a6d093 window-actor/x11: Queue full actor redraw when redraw
+    queued
+  * b4192c455 compositor/x11: Notify the sync ring about frames on
+    updates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 12 Mar 2021 19:21:58 +0100
+
 mutter (3.38.3+git2102231414.95b683ae2~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
