@@ -1,3 +1,51 @@
+mesa (21.1.0~git2103121837.862671369d9~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 862671369d9 vulkan: fix CreateRenderPass prototype
+  * bf0c5988b26 zink: ci updates
+  * 980a8b3fc0e zink: implement an extremely dumb resource memory cache
+  * 6205400612a st/nine: Fix compilation issue in nine_debug
+  * 378bb07110d zink: optimize pipeline hashing
+  * da08d673645 zink: move vertex_buffers_enabled_mask to non-hashed
+    part of pipeline state
+  * 1aabfc77d3d radv: fix initialization of disable_compression when
+    clearing color image
+  * 0f7d32073da zink: ci updates
+  * a5984bdf78a zink: fix arrays of texel buffer descriptors
+  * 929a748401f zink: avoid hashing states without descriptors
+  * 72a06746bfc zink: remove image layouts from descriptor states
+  * 5700cbfa1a4 zink: always use
+    VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL for sampler bindings
+  * e4421c4b829 zink: don't create descriptor barrier hash tables for
+    cached descriptor set
+  * 38e6e442624 zink: remove struct zink_descriptor_resource from
+    descriptor updating
+  * 4a3b344b235 zink: directly use resource count from pool instead of
+    accumulating every time
+  * 201cd1a8c02 zink: track resource count on descriptor pool object
+  * d9793a8a606 zink: reuse descriptor barriers across draws
+  * c55e2fb59c1 zink: move descriptor binding out of the update codepath
+  * dc020db7239 zink: pre-size descriptor transition hash table
+  * 80d9f3aa347 zink: simplify check for knowing whether descriptor
+    updating is needed
+  * fe31566fbbe zink: remove intermediate func for descriptor set
+    getting
+  * 141ff0e0911 zink: allow reuse of zink_descriptor_pools between
+    programs
+  * ee40550b87b zink: move descriptor type to pool object from set
+  * 58500979a85 zink: track number of sets currently allocated per
+    descriptor pool
+  * 871022dc84a zink: change program pointer on struct
+    zink_descriptor_set to pool pointer
+  * 817de3c7769 zink: break out all the descriptor pool/layout stuff
+    into a new struct
+  * 3d4e6c641be zink: break out descriptor stuff into new files
+  * eee488abadf zink: deduplicate VkWriteDescriptorSet setup
+  * ce0524f0096 zink: break out image descriptor updating
+  * eb375dc9391 zink: break out sampler descriptor updating
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 12 Mar 2021 19:14:40 +0100
+
 mesa (21.1.0~git2103091136.1399ee5cf93~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
