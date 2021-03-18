@@ -1,3 +1,37 @@
+mesa (21.0.0+git2103172244.1dd817ff30d~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 1dd817ff30d ci: disable panfrost and radeonsi while the runners are
+    struggling
+  * 69129097c0d .pick_status.json: Update to
+    2407952ec99ab1c2a16e01a9e300f799e4d53320
+  * 02b999708de .pick_status.json: Mark
+    8955d179d3e47982ccd67b8aecb0f5bed73d60b6 as backported
+  * 710ecbadf75 anv: Lower ViewIndex to zero when multiview is disabled
+  * afafb94bc6a frontends/va: fix protected slice data buffer read size
+  * df545c771e9 lavapipe: fix push descriptor set indexing
+  * 9286242e96b glsl: fix declarations of gl_MaxVaryingFloats
+  * 5e6748c06c4 intel/fs: Handle payload node interference in
+    destinations
+  * 266cc44c577 Revert "glsl: default to compat shaders in compat
+    profile"
+  * 6a06e22c3d0 aco: set compr for fp16 exports
+  * 0f84de9cbb1 spirv: Ignore WorkgroupSize in non-compute stages
+  * a9c5d72c707 .pick_status.json: Mark
+    db67d9c0d11c886c5b960126b8bf0a230e65d980 as backported
+  * c1a4dee5c63 .pick_status.json: Mark
+    a67d3e7c9e2c1ae9b05153a281cf73926b9f6af7 as backported
+  * 492a04a7441 .pick_status.json: Mark
+    bddc0e023c2c87d3248691ea62b77626704cc5a4 as backported
+  * b3f92eef8ad .pick_status.json: Update to
+    b1ab69f467b7b10e383f3b6bb957c7e6669a3772
+  * 018419c7db5 anv: fix MI_PREDICATE_RESULT write
+  * 6790ed421c7 docs: update calendar and link releases notes for 21.0.0
+  * 1896a0674f4 VERSION: bump for 21.0 release
+  * ba13001733a docs: add release notes for 21.0.0
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Mar 2021 08:39:03 +0100
+
 mesa (21.0.0~rc5+git2103112312.7e55bddf30b~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
