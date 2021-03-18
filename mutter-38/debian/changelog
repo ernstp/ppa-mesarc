@@ -1,3 +1,12 @@
+mutter (3.38.4+git2103151934.ffd8b25c9~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * ffd8b25c9 Bump version to 3.38.4
+  * 695be17a1 wayland/subsurface: Move placement ops to the parents
+    pending state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Mar 2021 08:42:19 +0100
+
 mutter (3.38.3+git2103092045.30c542ddc~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
