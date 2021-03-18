@@ -1,3 +1,56 @@
+mesa (21.1.0~git2103180520.cc314361e3a~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * cc314361e3a nir_to_tgsi: Fix indices for CMP in nir_to_tgsi for
+    nir_op_fcsel
+  * 4258ab45b75 nir_to_tgsi: Respect
+    PIPE_SHADER_CAP_TGSI_SQRT_SUPPORTED.
+  * 5d031d8f31a zink: clear framebuffer state on context destroy
+  * 321a5696562 zink: move fence reset to zink_fence_init()
+  * bb90c8b926f zink: remove query batch-tracking init from
+    begin_query()
+  * cb701327789 zink: use macro to streamline batch struct member init
+  * 89dce254d80 zink: move other batch-tracking implementations to
+    unified codepath
+  * 57021b1d4a5 zink: also move batch destructor into zink_batch.c
+  * 56452230abb zink: move batch init into zink_batch.c
+  * fc27594943f zink: move active query pruning to batch reset
+  * 6aa791f626d zink: split out batch resource-set clearing into
+    separate function
+  * ecb50b37a98 zink: return enum zink_queue from
+    zink_batch_reference_resource_rw()
+  * 870e0e73d70 zink: abstract zink_get_resource_usage() and move it to
+    be internal
+  * 62b10ad1b8b zink: convert ZINK_RESOURCE_ACCESS defines to enum
+  * c5390b2ef78 zink: refactor resource_sync_writes_from_batch_usage()
+    to manage batch id internally
+  * 304ee56cabf zink: add enum for different queues
+  * 49efef9d554 zink: add a pipe_context::fence_server_sync hook
+  * 6d005ba3fc1 zink: more consolidation for null sampler/image view
+    hashing
+  * c22e56f454c zink: ci updates
+  * e02d1eb9507 zink: always use requested format for sampler view
+    creation
+  * c6c532faa8c gallium/u_vbuf: use updated pipe_draw_start_count while
+    using draw_vbo
+  * 1b9d8d7fdfa android: util: create some standalone compression
+    helpers
+  * edbbf4537bf mesa: set states in fast path for restoring light
+    attributes
+  * df5607d2efc anv: Use fallback paths if DRM_I915_QUERY_ENGINE_INFO
+    fails
+  * 91192696e66 intel/fs: Add support for 16-bit A64 float and integer
+    atomics
+  * a572471edc6 spirv: Add support for
+    SPV_EXT_shader_atomic_float_min_max
+  * 1ba9c262fd9 nir: Add image atomic_fmin/fmax intrinsics
+  * 302183d6354 nir: Handle deref_atomic_fadd in a couple of passes
+  * ba8ef1df9b4 spirv: Update headers and metadata from latest Khronos
+    commit
+  * 23100f3b653 lavapipe: bump maxMemoryAllocationCount
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Mar 2021 08:35:33 +0100
+
 mesa (21.1.0~git2103121837.862671369d9~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
