@@ -1,3 +1,49 @@
+mesa (21.1.0~git2103221958.a30d091a10f~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * a30d091a10f iris: Delete stale comment in iris_lost_context_state
+  * 05fb5e85f2a .mailmap: fix email for Daniel Schürmann
+  * a5b37c64d18 turnip: expose several already implemented extensions
+  * d8a2abe3481 freedreno/computerator: Add script for finding reg file
+    size
+  * 50d5ed1e5e8 freedreno: Report max_waves in shaderdb output
+  * d274649799b freedreno/computerator: Use threadsize calculated by ir3
+  * 2ecb9700e84 freedreno: Use threadsize calculated by ir3
+  * 7ecc70b31cb turnip: Use threadsize calculated by ir3
+  * fd7960e1915 ir3: Calcuate max_waves and threadsize
+  * cbc68c79a51 freedreno: Add local_size to ir3_shader_variant
+  * 74785346b42 v3dv: Add support for the on-disk shader cache
+  * cf71280d74d v3dv/device: avoid unused-result warning with asprintf
+  * 2bee6ffec3f v3dv/pipeline: compute sha1 for no-op fragment shaders
+    correctly
+  * 9a4099858bc v3dv/pipeline: don't create a variant if compilation
+    failed
+  * e354c528015 v3dv/pipeline: try to get the shader variant directly
+    from the cache
+  * 6afb8a9fecc v3dv/pipeline: use broadcom_shader_stage as
+    pipeline/variant stage type
+  * 0b98f203106 v3dv: define broadcom shader stages
+  * d7f40383744 v3dv/pipeline: remove v3d_key from shader_variant and
+    pipeline stage
+  * b8c73c512a3 v3dv/pipeline: remove compiled_variant_count field
+  * ebb2297a910 v3dv/pipeline: move topology to pipeline
+  * dd72c99d774 v3dv/pipeline: use driver_location_map instead of nir
+    utilities
+  * b71fd5587e0 broadcom/compiler: add driver_location_map at vs prog
+    data
+  * 2be0c367750 broadcom/compiler: add local_size in
+    v3d_compute_prog_data
+  * ab252d73a9c v3dv/pipeline: remove pipeline->use_push_constants
+  * f276efb2f8e v3dv/pipeline: remove pregenerate_variant
+  * 098816fc9a4 v3dv/pipeline_cache: add more details when dumping debug
+    info
+  * ad241b15a9e vk: consolidate dynamic descriptor binding sorting
+  * b992b38de6d docs: Add calendar entries for 21.1 release candidates.
+  * 4a2d123aafc docs: Extend calendar entries for 21.0 by 1 releases.
+  * 97e2d96e224 docs: missing lvp win32surface ext in features.txt
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Mar 2021 20:30:27 +0100
+
 mesa (21.1.0~git2103180520.cc314361e3a~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
