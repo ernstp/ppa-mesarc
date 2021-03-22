@@ -1,3 +1,37 @@
+mesa (21.0.0+git2103191927.3074d8a05be~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 3074d8a05be aco: implement 64-bit VGPR {u,i}find_msb
+  * 588015eab6c CI: Use a sha for the Windows SPIRV-LLVM-Translator
+    dependency
+  * 1e5f33d1f8d CI: Try really hard to get updated Windows TLS certs
+  * 296053b9e4e CI: windows: Force using LLVM 12
+  * 92af3add353 CI: windows: split the layers to meet new registry
+    requirements
+  * 914f5308c74 CI: windows: augment the timeout of building the windows
+    container
+  * 22272d00b9c aco/tests: Use _exit in child process
+  * 6b0d4b8d074 zink: fix emulation of no mipfilter
+  * 2e7f59ef87b compiler/spirv: fix image sample queries
+  * a9536794c33 aco: Fix constant address offset calculation for
+    ds_read2 instructions.
+  * 74af2631b9e gallium/st: fix shader_has_one_variant
+  * d3887f23bea gallium/st: fix shader_has_one_variant
+  * aafc4fe93e7 zink: always use requested format for sampler view
+    creation
+  * d2f8d08e9d5 gallium/u_vbuf: use updated pipe_draw_start_count while
+    using draw_vbo
+  * cb2aa9054ad mesa: set states in fast path for restoring light
+    attributes
+  * b442f8cb7bc intel/fs/vec4: add missing dependency in write-on-write
+    fixed GRFs
+  * ffb2068e03c ir3: fix has_src() to return correctly in
+    ir3_nir_lower_tex_prefetch
+  * 06333996e60 .pick_status.json: Update to
+    e3f703e4646b57534e49e0975cc3df20bf7b4a54
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Mar 2021 20:34:11 +0100
+
 mesa (21.0.0+git2103172244.1dd817ff30d~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
