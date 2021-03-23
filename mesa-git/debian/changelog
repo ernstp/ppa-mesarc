@@ -1,3 +1,9 @@
+mesa (21.0.0+git2103191927.3074d8a05be~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 23 Mar 2021 16:56:13 +0100
+
 mesa (21.0.0+git2103191927.3074d8a05be~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
