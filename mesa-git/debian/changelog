@@ -1,3 +1,22 @@
+mesa (21.0.0+git2103242029.5aa81b2f0df~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 5aa81b2f0df ci: mark a couple of LLVMPIPE tests as expected pass
+  * df950594831 Revert "ci: disable panfrost and radeonsi while the
+    runners are struggling"
+  * d2005c8943a android: anv: add libcutils shared dependency
+  * 63dfc50c962 nv50: initialize target for blit source surfaces
+  * ee858c68aac radv: Fix improper max_index_count argument for indexed
+    draws
+  * d18eb577a5b gallium,st: add missing viewport swizzles
+  * 0174e19ff88 panfrost: Add a Meson dependency on bi_opcodes.h for
+    bifrost_compiler
+  * f4a9a0c95b4 i965/gen11: Fix must-be-ones bit positions in 3D_MODE
+  * b223a1e831f .pick_status.json: Update to
+    277ea7a015cd7df10a9dc65d5def0762cf2e9599
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 24 Mar 2021 23:54:21 +0100
+
 mesa (21.0.0+git2103191927.3074d8a05be~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
