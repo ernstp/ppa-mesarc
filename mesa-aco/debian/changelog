@@ -1,3 +1,47 @@
+mesa (21.1.0~git2103312018.a442e3ff551~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * a442e3ff551 gallivm: increase size of texture target enum bitfield
+  * 0be9a40225b ci/freedreno: Demote a630-asan to a manual test for now.
+  * d448bf8cdd4 docs: fix incorrect possessive form
+  * 807d86718f7 docs: dfsm -> DFSM
+  * ece806d07a6 docs: lex / yacc -> Lex / Yacc
+  * bd6dbbecb47 docs: lod -> LOD
+  * 2988729d1bd docs: nops -> NOPs
+  * 2f42c21221c docs: Xorg -> X.Org
+  * 9c1b8ce7aaa docs: opencl -> OpenCL
+  * 35bf5c4dca5 docs: optimisation -> optimization
+  * 5c8a7fa6318 radv: only set WRITE_COMPRESS_ENABLE for storage image
+    descriptors
+  * 00d6ccebf95 ir3/isa: account for randomly set by blob lowest bit of
+    ibo atomics
+  * f181e613750 ci: Bump the llvmpipe test timeout to 240 seconds
+  * 70066fb036b zink: do not request scoped memory barriers
+  * 71e39c79fda radv: don't reset vertex state params on pipeline bind
+    if reg layout matches
+  * df1c45890d4 radv: don't emit baseinstance and drawid if neither is
+    used
+  * d67c1bc74d2 radv: reorder vertex shader params
+  * da7ffc3b976 radv: make vertex param sgpr count more explicit
+  * 4e0a3c25274 radv: break out vertex shader param emission into
+    separate function
+  * 0a8b0919225 radv: track whether baseinstance is used on the pipeline
+    struct
+  * b1b867033e7 radv: track whether drawid is used on the pipeline
+    struct
+  * eed676c42ad radv: set gfx pipeline vtx_emit_num to the number of
+    sgprs
+  * 65626eba295 radv: simplify vs draw param counting during setup
+  * 1ffa6154444 radv: track whether gl_BaseInstance is used
+  * 75a2476dfb6 radv: refactor draw dispatch
+  * d0ef28d85ea radv: stop zeroing radv_draw_info during draw
+  * 049f56fc4e3 freedreno/a6xx: fix primitive counters debug output
+  * 4ce7d2138ab freedreno/a6xx: copy full 64bit of primitive counter
+  * 70813c1c13b meson: Remove kmsro from gallium-drivers
+  * 43232799846 broadcom/cle: do not leak spec
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Mar 2021 20:54:40 +0200
+
 mesa (21.1.0~git2103221958.a30d091a10f~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
