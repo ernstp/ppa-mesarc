@@ -1,3 +1,56 @@
+mesa (21.0.1+git2103302006.0a76e30fc7a~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 0a76e30fc7a llvmpipe: increase PIPE_CAP_MAX_TEXTURE_BUFFER_SIZE
+    value
+  * d30cea2b9ba compiler/glsl: avoid null-pointer deref
+  * 5bcbe14854d pipe-loader,gallium/drm: Fix the kmsro pipe_loader
+    target
+  * da38b604e3f intel/fs/copy_prop: check stride constraints with actual
+    final type
+  * 540172fa43f r600: don't set an index_bias for indirect draw calls
+  * ca86b94e552 .pick_status.json: Update to
+    3c64c090e0d2250d7ee880550f8cbeac0052c8d9
+  * fe9e25b29a1 util: rework AMD cpu L3 cache affinity code.
+  * b6123cd4d55 lavapipe: fix array texture region copies
+  * f5444d504ab .pick_status.json: Update to
+    ee14bec09a92e4363ef916d00d4d9baecfb09fa9
+  * 5de93ffed85 aco/isel: Don't emit unsupported i16<->f16 conversion
+    opcodes on GFX6/7
+  * 9a439ebcac0 Revert "egl: Don't add hardware device if there is no
+    render node v2."
+  * f1ec9335a8b egl: only take render nodes into account when listing
+    DRM devices
+  * 4e4962b4649 egl: fix software flag in _eglAddDevice call on DRM
+  * bca2aa6e481 mesa/st: fix lower_tex_src_plane in multiple samplers
+    scenario
+  * d4e0e7c0f00 .pick_status.json: Update to
+    a7c0cf500b335069bfe480c947b26052335f897e
+  * ffd661d50bc panfrost: Disable early-z when alpha test is used
+  * a6a79fb31e0 lavapipe: fix CmdCopyQueryPoolResults for partial
+    pipeline statistics queries
+  * 090239c2440 util/bitscan: add u_foreach_bit macros
+  * 2ac46f95bd7 aco: implement image_deref_samples
+  * f0b620307ea lavapipe: use the passed offset for
+    CmdCopyQueryPoolResults
+  * 8d32c55d932 .pick_status.json: Mark
+    75951a44ee9f25d29865f3dd60cdf3b8ce3f7f0c as backported
+  * 2733a9c7121 util/set: stop leaking u32 key sets which pass a mem ctx
+  * 3260a85b5c8 .pick_status.json: Update to
+    8e43abcd2c29366d77fff804a7845b61fb97ca5c
+  * aa8bff051ea Revert "glsl/test: Don't run whitespace tests in
+    parallel"
+  * 8d9ec9cd119 intel/tools: Use subprocess.Popen to read output
+    directly from a pipe
+  * e37442f1b80 lavapipe: fix templated descriptor updates
+  * 770b0185ab3 .pick_status.json: Update to
+    9be24c89c8c298069eaa3ff600ba556b9a4557e9
+  * 63267e018de docs: Add 21.0.1 hashes
+  * b2493a5158f VERSION: bump for 21.0.1
+  * c370b02fc07 docs: add release notes for 21.0.1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Mar 2021 20:58:16 +0200
+
 mesa (21.0.0+git2103242029.5aa81b2f0df~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
