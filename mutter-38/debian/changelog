@@ -1,3 +1,12 @@
+mutter (3.38.4+git2103181746.f51c06d8f~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * f51c06d8f xwayland: Check permissions on /tmp/.X11-unix
+  * dbfdde192 xwayland: Use defines for X11 directory and path
+  * d5bc6891b xwayland: Make sure /tmp/.X11-unix/ exists
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Mar 2021 21:01:47 +0200
+
 mutter (3.38.4+git2103151934.ffd8b25c9~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
