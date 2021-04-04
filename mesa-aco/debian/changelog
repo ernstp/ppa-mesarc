@@ -1,3 +1,44 @@
+mesa (21.1.0~git2104032118.11010b932b2~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 11010b932b2 pan/bi: Lower large arrays to scratch
+  * f5d1a8bf6f6 pan/bi: Split writemasks for memory stores
+  * 52863f2e60f pan/bi: Enable all nir_opt_move/sink optimizations
+  * 0bd01e86f32 ci/bare-metal: no need to use tee
+  * 06ebbde6304 vulkan: Deduplicate mesa stage conversion
+  * 7ace3f3ef0d panfrost: Only check blend work count on midgard
+  * 5cef39acbeb panfrost: Deduplicate Bifrost fau_count
+  * 3fdd3be8d6c panfrost: Deduplicate UBO count assignment
+  * 6a9936f5b51 pan/bi: Remove stale todo/assert
+  * 10b736f1604 pan/bi: Remove TODO: RA warnings
+  * 93cdb072a82 pan/bi: Only run DCE once
+  * b7a339bc972 pan/bi: Only run copyprop once
+  * 69666723f81 pan/bi: Handle 16-bit blend sr_count
+  * d91bf7257d9 pan/bi: Add bi_foreach_block_rev
+  * 8fde30925d9 pan/bi: Document register conventions
+  * 0ec495e3c96 turnip: handle format list for compressed formats
+  * e4e476c9a5c gallium: Fix broken trace XML output
+  * 004ca762382 r600/sfn: Only fetch the constants that are needed in
+    fdd*
+  * dee89af505d ci: Uprev piglit to 6a4be9e9946d ("piglit: NOTE! Default
+    branch is now main")
+  * 1b35cc29dd2 ci: Uprev deqp runner to 0.6.5.
+  * f67b6f9c477 ci/freedreno: Fix up the a5xx border color flake
+    annotation.
+  * 051b7e19259 intel: Rename WA_### to Wa_###
+  * f96c3b8b63a intel: Rename GEN:BUG:### to Wa_###
+  * 69c3578c8b0 intel: Rename GEN_{ALL, LT, ..} macros to GFX_{ALL, LT,
+    ..}
+  * ddb04b31fdc intel: Remove unused MAKE_GEN macro
+  * 81e85f9434d intel: Make line wrapping changes due to
+    IS_GFX_VER_BETWEEN
+  * efc863f9a10 intel: Rename IS_GEN* macros to IS_GFX_VER*
+  * e7e55af4d62 intel: Rename GENx keyword to GFXx
+  * 1d296484b4f intel: Rename Genx keyword to Gfxx
+  * b75f095bc73 intel: Rename genx keyword to gfxx in source files
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 04 Apr 2021 13:34:52 +0200
+
 mesa (21.1.0~git2103312018.a442e3ff551~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
