@@ -1,3 +1,10 @@
+mesa (21.0.1+git2104062055.759ce9f053e~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 759ce9f053e frontend/va/image: add pipe flush for vlVaPutImage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Apr 2021 00:52:40 +0200
+
 mesa (21.0.1+git2104061841.a3a27832374~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
