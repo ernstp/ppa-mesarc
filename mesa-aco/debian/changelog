@@ -1,3 +1,10 @@
+mesa (21.1.0~git2104062221.33b2daab1a1~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 33b2daab1a1 intel/compiler: lower bit sizes in NIR postprocessing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Apr 2021 00:51:28 +0200
+
 mesa (21.1.0~git2104062135.d01628d24d0~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
