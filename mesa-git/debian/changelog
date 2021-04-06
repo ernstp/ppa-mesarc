@@ -1,3 +1,24 @@
+mesa (21.0.1+git2104061841.a3a27832374~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * a3a27832374 drisw: move zink down the list below the sw drivers.
+  * b96b1db3899 radv: Flush caches for shader read operations.
+  * 882d47fae4a mesa/st: fix st_nir_lower_tex_src_plane arguments
+  * 1665f478acb nir/lower_tex: ignore texture_index if tex_instr has
+    deref src
+  * 6a0f0a34fe2 docs: docker: minor stale documentation fix
+  * 11585bb0038 radeonsi: disable sparse buffers on gfx7-8
+  * 816fd2cf5f0 ac/llvm: don't set unsupported xnack options to fix LLVM
+    crashes on gfx6-8
+  * a1328ea7816 .pick_status.json: Update to
+    1e0a69afa72c61e5f5841db3e5e7f6bb846a0fab
+  * c5c7d6a05a1 iris: clamp PointWidth in 3DSTATE_SF like i965 does
+  * 99a47874de3 gallivm: increase size of texture target enum bitfield
+  * ed60dec381a .pick_status.json: Update to
+    fb5615af40a5878b127827f80f4185df63933f34
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 06 Apr 2021 22:47:32 +0200
+
 mesa (21.0.1+git2103302006.0a76e30fc7a~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
