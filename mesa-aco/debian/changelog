@@ -1,3 +1,50 @@
+mesa (21.1.0~git2104062135.d01628d24d0~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * d01628d24d0 pan/bi: Remove conversion lowering
+  * 266de379c24 pan/bi: Generalize f2i16, f2u16
+  * be74b84e6f8 pan/bi: Fill in some more conversions
+  * 435800e7502 pan/bi: Lower swizzles
+  * e3e2c5b5945 pan/bi: Optimize MKVEC.v2i16 generation
+  * f9bc168bd3f pan/bi: Add bi_swz_16 helper
+  * 6bc7a0b3668 radeonsi: fix si_compute_copy_image if DCC decompression
+    happens before a copy
+  * fc7ce9b636d zink: drop VK_PIPELINE_CREATE_DISABLE_OPTIMIZATION_BIT
+    from compute path
+  * 84d6ee0920b mesa: Remove unused gl_config::mutableRenderBuffer
+  * fa425511ed7 mesa: Make _mesa_initialize_visual return void
+  * 9dd0d68d268 mesa: Remove unused _mesa_create_framebuffer
+  * a6f1d56b7b1 radeon: Exchange one curious idiom for another in
+    radeonMakeCurrent
+  * 6d81b9c9722 gallium: Remove curious st_visual::no_config
+  * 421fbb5f5e9 zink: flag DYNAMIC resources as coherent
+  * 6ff6d01c377 zink: don't use cached mem for staging resources
+  * 7499f84956f radv: fix format feature reporting for modifiers
+  * 292ac71a4a8 nir/lower_tex: handle deref casts
+  * 00fc85a0119 zink: reset queries when suspending if >50% of total
+    pool is used
+  * f5dc4db35f4 zink: defer timestamp query pool resets to end_query
+  * 24923b4640b zink: check last_finished first in fence_finish early
+    out case
+  * d3734ae2ddc zink: relax maybe_flush batch count threshold
+  * 1ba6dcb40f8 zink: relax maybe_flush mem threshold
+  * e4426d78285 zink: split total_mem off to total_video_mem, use
+    total_mem for tc
+  * c6244899689 zink: move cmdpool reset to batch state reset
+  * a565ead64a2 zink: only use host mem for staging resources with
+    linear tiling
+  * 6433661cdad zink: use 2 variant to check image format props during
+    create
+  * 733e07565f8 zink: use vkGetPhysicalDeviceFormatProperties2 when
+    available
+  * 3fa7ce4d46d zink: use better usage flags for staging resources
+  * 12f93a73779 zink: hook up cs push constant for
+    nir_intrinsic_load_work_dim
+  * 796e95d6a70 util/threaded_context: support
+    pipe_context::set_sample_locations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 06 Apr 2021 22:44:07 +0200
+
 mesa (21.1.0~git2104032118.11010b932b2~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
