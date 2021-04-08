@@ -1,3 +1,47 @@
+mesa (21.1.0~git2104080613.6528cd762d0~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 6528cd762d0 zink: support ARB_fragment_shader_interlock
+  * 7580a698444 zink: hook up EXT_fragment_shader_interlock
+  * 91148636090 zink: use explicit subpass deps
+  * 6536d5a947b zink: use set_foreach_remove()
+  * c7e4f28a162 zink: simplify clear-apply on fb state change
+  * f19946ca6ec zink: stop unmapping resources
+  * eab985d070c zink: fix conditional when assigning tess variable io
+  * 8ebdb8c687d zink: bypass separate stencil path in
+    resource_reference_rw when not a zs image
+  * 40e8328ce5f zink: remove atomic usage from batch tracking
+    comparisons
+  * 15f2c1f6612 zink: add env var to force uniform inlining
+  * 7f28775edcc zink: implement uniform inlining
+  * b47815c772e zink: add a pipe_screen::finalize_nir hook
+  * 193c02e0cfc aux/trace: add GALLIUM_TRACE_TRIGGER mode
+  * ad88e2f959d microsoft/spirv_to_dxil: Use non-zero exit code on
+    failed compilations
+  * 5756f2cd2c9 microsoft/spirv_to_dxil: Add support for
+    load_vulkan_descriptor
+  * 31e546a762b util/hash_table: add macro for destructively iterating
+    entries
+  * 759cc914501 util/set: add macro for destructively iterating set
+    entries
+  * 539c7ca5084 aux/trace: add a bunch of methods for lavapipe
+  * c1270d4845d aux/trace: add screen deduplication for zink+lavapipe
+    tracing
+  * f89c8ba4101 docs: update lavapipe bits for 1.1
+  * e1ba6158c06 zink: export PIPE_CAP_PREFER_BLIT_BASED_TEXTURE_TRANSFER
+  * e1eb72ae3cf lavapipe: enable Vulkan 1.1 support
+  * 7b79db11c2e lavapipe: enable correct workgroup sizing
+  * 34525bb088d lavapipe: enable subgroups features
+  * 50049bd241c gallivm: add compute shader subgroup system values
+    support
+  * bf6fd9a2eb7 gallivm: add subgroup lowering support
+  * 8dc398848a4 gallivm: add subgroup read invocation support
+  * 2d6a0a8620b gallivm: add subgroup ballot support
+  * 7b3073ad44a gallivm: add subgroup reduction + in/ex scan support
+  * 2e1266d1fe9 gallivm: add subgroup elect intrinsic support.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Apr 2021 06:32:01 +0200
+
 mesa (21.1.0~git2104062221.33b2daab1a1~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
