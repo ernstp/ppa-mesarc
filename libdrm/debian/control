@@ -10,6 +10,7 @@ Build-Depends:
  docbook-xsl,
  libx11-dev,
  pkg-config,
+ python3-docutils,
  xutils-dev (>= 1:7.6+2),
  libudev-dev [linux-any],
  libpciaccess-dev,
