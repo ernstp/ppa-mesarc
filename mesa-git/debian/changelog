@@ -1,3 +1,57 @@
+mesa (21.0.2+git2104141916.9a145502514~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 9a145502514 turnip: consider HW limit on number of views when apply
+    multipos opt
+  * c748e6ae429 .pick_status.json: Mark
+    363c1ef0c0e10781799abe87ace5cc87621eb3bf as backported
+  * 446170d0f7e .pick_status.json: Mark
+    e4ef5f043315e9f06bfb082b867dc08efe310d55 as backported
+  * c493e6da007 .pick_status.json: Mark
+    32eb74e1e181303544f395bbe1fe2847a783c881 as backported
+  * b70d65b30bc .pick_status.json: Update to
+    165a69d2f74aefe80b070209e77950446a97c8b5
+  * 94fbc683be4 compiler/glsl: do not cast struct to string
+  * 9629b8a27d4 compiler/glsl: drop rogue argument to _mesa_glsl_error
+  * feba40a0da3 nir_opt_deref: ptr_as_array(deref_cast<T*>(x))[0] isn't
+    the same as x[0] if the cast has alignment
+  * ac529a241f6 iris: Set BO maps to NULL in bo_free
+  * 643db8729fb panfrost: Only add resource checksum BOs to the batch
+    once
+  * 04dbc7d552c lima: use passed surface to get mipmap level for reload,
+    not cbuf
+  * ebdcad7e54e nv50/ir: fix texture size for msaa textures
+  * d04cfc3bdd6 panfrost: Enable AFBC buffer sharing
+  * cb6a6fb84a9 panfrost: Fix AFBC body_size for shared resources
+  * 4d096c75d46 gallium/st: correct range for int16
+  * 36335d48bf6 gallium/st: correct range for float16
+  * ca1eba81141 glsl: fix int16 type
+  * 0de766cb8d1 glsl: fix is_integer_16_32
+  * 2796b52f1a6 anv: Clean up anv_semaphore::base on the error path
+  * d89765f5e2a anv: Clean up anv_descriptor_pool::base on the error
+    path
+  * c9da7a37920 anv: Clean up anv_device_memory::base on failure
+  * c1c8f2fbcb5 etnaviv: don't try to copy PIPE_BUFFER with the 3D
+    engine
+  * 7c7da6dd810 .pick_status.json: Mark
+    1df3a00dcd5c4c86527e1bdc5c800cc09457d1a5 as backported
+  * ed00ac205f5 .pick_status.json: Mark
+    33d87eeb5ab0b26f7cbd36cdc030213fad17e382 as backported
+  * 86594620a5c .pick_status.json: Mark
+    3257ab9f23fcaa3233882e6e40b365c5a1ac84c1 as backported
+  * 494ec203c33 .pick_status.json: Mark
+    0a939e788f47734a8a1e7771a3acdf1ea507afde as backported
+  * 5836cbe30be .pick_status.json: Mark
+    abc724e440ea1809c7c53cee42a99b68afbb1b11 as backported
+  * 584085b66ad .pick_status.json: Mark
+    30cf07cc8ac1f2432b78336774ee43a7ef8d19e8 as backported
+  * 24cf2b436d9 .pick_status.json: Mark
+    61cf77583ac44ee267a23be7f14740392b0e23f5 as backported
+  * 3dce215c2ca .pick_status.json: Mark
+    fe53c22294900142c358b75d39c43710ccfd414e as backported
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 15 Apr 2021 08:48:23 +0200
+
 mesa (21.0.1+git2104062055.759ce9f053e~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
