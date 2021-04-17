@@ -1,3 +1,11 @@
+mutter (3.38.4+git2104142235.607803c4b~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 607803c4b output/kms: Only add common modes for single mode
+    connectors
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Apr 2021 20:59:31 +0200
+
 mutter (3.38.4+git2103301010.7615d3fac~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
