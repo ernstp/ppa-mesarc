@@ -1,3 +1,48 @@
+mesa (21.1.0~rc1+git2104142147.764cb454b09~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 764cb454b09 VERSION: bump to 21.1.0-rc1
+  * 23c4b59b46e anv: bump internal descriptor index fields to 32bits
+  * 97e7b21c422 ac: add missing BUF_DATA_FORMAT_10_11_11 vertex format
+    on GFX10+
+  * 2deead184cf ir3/sched: Don't schedule too many tex/SFU instructions
+  * 7821e5a3f8d ir3/sched: Don't penalize uses of already-waited tex/SFU
+  * 5362adf68dc zink: verify that source-format support linear-filter
+  * 0ba3cf1f953 zink: verify that src/dst support blitting
+  * 8ddbac03770 radv/winsys: Remove use_local_bos
+  * 284bc57a491 radv: Use VRAM cmdbuffers in more situations.
+  * 057ec395a41 radv: Refactor cs_domain to be a winsys function.
+  * 9de05fd36bc zink: do not dereference NULL pointer
+  * f3e004cb56a aco: Add a simple heuristic to decide early or late
+    primitive export.
+  * 5dbab03a809 aco: Emit fewer branches for NGG VS/TES with late
+    primitive export.
+  * af7d5f5b866 aco: Set block_kind_export_end in create_vs/fs_exports.
+  * 2b312a4fd77 aco: Extract ngg_nogs_export_prim_id to a separate
+    function.
+  * 231ef14b3db aco: Use s_setprio 3 at the beginning of every VS and
+    TES.
+  * 4c86c7aa15b aco: Remove useless s_setprio near gs_alloc_req.
+  * 1cf6b8d4616 zink: fall back from cached to non-cached memory
+  * 75cd43741a8 aco: Align NGG scratch size to 16 so a single ds_read
+    can always read it.
+  * c1346e5c220 aco: Optimize workgroup exclusive scan to better avoid
+    bank conflicts.
+  * c8c6e0ff6fa panfrost: Fix pan_blitter_get_blit_shader()
+  * 1c51c533bd7 zink: do not clear on cpu
+  * 3c15dba46d6 ci: Update to latest ci-templates
+  * a436b276f78 ci: Do not append ci-templates commit hash to Windows
+    docker image tag
+  * db4ddced5fd ci: Install Rust & cargo from Debian for x86_test*
+    images
+  * b0ab534c2d8 ci: Install GLVND from Debian bullseye
+  * 0155881d828 ci: Install llvm-spirv from Debian bullseye
+  * 711b89454bb ci: Install spirv-tools from Debian bullseye
+  * c743421f4ed ci: Install librenderdoc from Debian bullseye
+  * af0fde955c5 ci: Move docker images from Debian buster to bullseye
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Apr 2021 21:01:24 +0200
+
 mesa (21.0.2+git2104141916.9a145502514~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
