@@ -1,3 +1,53 @@
+mesa (21.2.0~git2104171738.c74d93cf018~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * c74d93cf018 freedreno/fdl: Re-indent
+  * 60509762329 freedreno/perfcntrs: Re-indent
+  * d26a224ca90 freedreno/ir2: Re-indent
+  * 2dbf09c2b4f freedreno/drm-shim: Re-indent
+  * 45856c5fbc6 freedreno/decode: Re-indent
+  * 3894bc96642 freedreno/computerator: Re-indent
+  * ccd68b672aa freedreno/common: Re-indent
+  * f5918f750f5 freedreno/afuc: Re-indent
+  * b94db11708c freedreno/drm: Re-indent
+  * a1653854f50 radeonsi: fix automatic DCC retiling after compute image
+    stores
+  * 4d7dd094e36 radeonsi: fix automatic DCC retiling after DCC clear and
+    DCC decompression
+  * a0771e6b27e radeonsi: fix incorrect comments in culling code and NIR
+    lowering
+  * e0ffd1f9281 radeonsi: don't decompress DCC for float formats in
+    si_compute_copy_image
+  * ec1ddb976a1 amd/registers: rename IMG_FORMAT to GFX10_FORMAT to
+    disambiguate the meaning
+  * 3e0ce4af4f6 amd/registers: clean up gfx103.json
+  * a142925b7a0 amd/registers: fix the kernel header parser with latest
+    headers
+  * 418da19f910 venus: add vn_wsi_create_scanout_image
+  * b7db6598df1 venus: add vn_image_create
+  * e1787ec77dc venus: add vn_image_init_memory_requirements
+  * 5de3cbbb2e6 nir: Generate load_ubo_vec4 directly for
+    !PIPE_CAP_NATIVE_INTEGERS
+  * 71d6d1b1ab9 nir_to_tgsi: Use ARL instead of UARL in the
+    !native_integers case.
+  * 5b9c3cb7b9d zink: compare against screen batch id when determining
+    which semaphore to use
+  * 20e2c7308f6 iris/gen12: Work around push constant corruption on
+    context switch.
+  * aea6f8effc2 microsoft/compiler: Propagate access when lowering SSBO
+    loads
+  * 474824bf3d8 microsoft/compiler: Support raw SRVs in addition to
+    typed SRVs
+  * a5f402f002f microsoft/compiler: Store nir_shader in the ntd_context
+  * 50d7e97c1d6 microsoft/compiler: Better support UBO/SSBO references
+    to descriptors
+  * d6b5aaaff8b microsoft/compiler: Split Vulkan resource_index /
+    descriptor processing
+  * 8a821e2b8bc microsoft/compiler: Emit SSBO variables
+  * 15de7122706 microsoft/compiler: Emit CBVs via variables for Vulkan
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Apr 2021 20:57:15 +0200
+
 mesa (21.1.0~git2104080613.6528cd762d0~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
