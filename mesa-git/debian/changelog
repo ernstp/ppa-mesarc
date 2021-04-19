@@ -1,3 +1,59 @@
+mesa (21.1.0~rc1+git2104182213.7e8c906197b~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 7e8c906197b radeonsi: fix automatic DCC retiling after compute image
+    stores
+  * 3a04f9ec5ec radeonsi: fix automatic DCC retiling after DCC clear and
+    DCC decompression
+  * 742188d95a6 radeonsi: don't decompress DCC for float formats in
+    si_compute_copy_image
+  * 8636a1220c2 nir: Generate load_ubo_vec4 directly for
+    !PIPE_CAP_NATIVE_INTEGERS
+  * 743b02f9394 nir_to_tgsi: Use ARL instead of UARL in the
+    !native_integers case.
+  * b0ac2df0444 zink: compare against screen batch id when determining
+    which semaphore to use
+  * c8935e0399f iris/gen12: Work around push constant corruption on
+    context switch.
+  * 269da9f4265 st/nine: Fix compilation error on non-x86 platforms
+  * a51a51b408b anv: disable baked in pipeline bits from dynamic
+    emission path
+  * efcedfc99e2 anv: fix 3DSTATE_MULTISAMPLE emission on gen8+
+  * 61660ee4e09 radv: fix clearing DCC-compressed e5b9g9r9 images
+  * 7e32a899021 radv: keep DCC compressed for clears on compute with
+    image stores
+  * 8e397212544 Revert "intel/compiler: Silence unused parameter warning
+    in update_inst_scoreboard"
+  * f6e8543ff77 mesa: texparam: Add a clamping macro to handle out-of-
+    range floats returned as integers.
+  * d7e97223822 gallium/xlib: Fix for recent gl_config changes
+  * c94c36ece03 panfrost: Unset shared/scanout binding flags for staging
+    resources
+  * 48f8188985e Revert "glx: Lift sending the MakeCurrent request to top-
+    level code"
+  * 8a52fed6ba3 freedreno: Fix YUV sampler regression.
+  * 50b926566c3 tu: Correctly preserve old push descriptor contents
+  * b571fef9e2e ir3: Fix list corruption in legalize_block()
+  * d90e5fe88ae radv: fix barrier in radv_decompress_dcc_compute shader
+  * da74e86cb73 radv: Allocate buffer list for MUTABLE descriptor types
+    as well.
+  * 31ada2b7cfa radv: Take image alignment into account when allocating
+    MUTABLE pool.
+  * e80952634bd v3dv: fix descriptor set limits
+  * e3ef541f953 panfrost: Don't advertise AFBC mods when the format is
+    not supported
+  * 09151387c54 aco/ra: remove live-in temporary from live_out_per_block
+    when moving it
+  * 6b385bf6ad2 aco/ra: use original names when renaming loop carried
+    phi operands
+  * 170e8ea824d .pick_status.json: Update to
+    c74d93cf0187e07cdfacc448a947a8cae485eb41
+  * b6a1e3a3934 freedreno: Add missing foreach macros and update
+    indentation
+  * 979ec228f2d freedreno: Manual fixups
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 19 Apr 2021 20:05:37 +0200
+
 mesa (21.1.0~rc1+git2104142147.764cb454b09~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
