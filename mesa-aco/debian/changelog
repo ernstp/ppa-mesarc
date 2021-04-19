@@ -1,3 +1,47 @@
+mesa (21.2.0~git2104192207.899dd8e60a5~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 899dd8e60a5 nir: Update some comments referring to imov
+  * 44f744be423 zink: Enable PIPE_CAP_PACKED_UNIFORMS.
+  * 24d7c413fe7 panfrost: Enable packed uniforms.
+  * ff007afce25 zink: document requirement of VK_EXT_custom_border_color
+  * a144fa608d6 radv: Fix memory leak on descriptor pool reset with
+    layout_size=0.
+  * 63c2dfe1324 android: panfrost/lib: add pan_cs.c to Makefile.sources
+  * 588a52869e1 venus: refactor vn_queue_submission_count_semaphores
+  * 9c689ef3957 gallium: Define PIPE_ARCH_AARCH64 for MSVC arm64 builds
+  * 80923e8d58c util/format: Add some NEON intrinsics-based
+    u_format_unpack.
+  * 2b5178ee482 util: Switch the non-block formats to unpacking rgba
+    rows instead of rects.
+  * 921b05f5828 mesa: Remove dead _mesa_unpack_rgba_block().
+  * 9b7814779b2 radeonsi: Report multi-plane formats as unsupported
+  * 64367f2359e turnip: implement VK_KHR_shader_terminate_invocation
+  * 9dd9424a85f turnip: implement
+    VK_EXT_shader_demote_to_helper_invocation
+  * f17b41ab4f0 nir: add lowering pass for helperInvocationEXT()
+  * 360df6fbfe1 ci/lava: Point the shader cache at tmpfs.
+  * 09a23851aec ci/piglit: Always include the HTML summary in a run.
+  * 7f9f3455798 ci/lava: Return the run's results/ artifacts from the
+    DUTs.
+  * 95b9ea85f56 ci/lavapipe: Don't include deqp's shader_cache in the
+    artifacts.
+  * 9434675d607 aco: fix opquantize2f16 on GFX6-7
+  * 08499369d01 ir3: Assemble and disassemble swz/gat/sct
+  * d48d43039af ir3: Improve cat1 modifier disassembly
+  * 4c5b696cc3a ir3/parser: Fix oob write with immediates array
+  * 8c140006e2a microsoft/clc: If local size isn't specified either in
+    the shader or at runtime, set it to (1,1,1)
+  * b460d4da607 virgl: resources without any binding can be cached
+  * 78869838352 nir/lower_tex: do not stumble on 16-bit inputs
+  * bd1b0c32662 lavapipe: implement VK_EXT_custom_border_color
+  * a20e0b8a977 lavapipe: resolve border-color when creating sampler
+  * 33e117ed7f3 st/pbo: use cso_set_vertex_buffers_and_elements() for
+    st_pbo_draw
+  * 001c6f82016 zink: fix tcs input reservation for user vars
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 19 Apr 2021 22:38:03 +0200
+
 mesa (21.2.0~git2104171738.c74d93cf018~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
