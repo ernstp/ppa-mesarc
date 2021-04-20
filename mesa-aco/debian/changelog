@@ -1,3 +1,46 @@
+mesa (21.2.0~git2104201629.874535752b4~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 874535752b4 zink: force scanout sync when mapping scanout resource
+  * 2138aef7c92 zink: merge copy-to-scanout path into non-deferred flush
+    path
+  * 05cf1e7f36c iris: enable GL_EXT_memory_object feature
+  * 772dc50d162 iris: hook up resource creation from memory object
+  * cdb5a727644 iris: hook up memory object creation from handle
+  * 58e93711412 anv: do not support image export with stencil aspect set
+  * 4b2c7f286ff panfrost: Fix RSD emission on Bifrost v6
+  * 6aaa325f89d radv: remove radv_image_iview::multiplane_planes
+  * 8198aeac8d9 radv: remove radv_image_iview::bo
+  * 9da4590df8b amd/common: Use cap to test kernel modifier support.
+  * 8d9b52f45a6 panfrost: Reserve thread storage descriptor in
+    panfrost_launch_grid()
+  * 57ff43499bb ci/softpipe: run KHR-GLESxx tests
+  * fbc0c05c53a ci/llvmpipe: run KHR-GLES2.* tests
+  * 0dde87457e6 ci/v3d: add KHR-GLES test jobs
+  * 01debec88b1 ci: support KHR-GLES testing
+  * b2a60c157e4 turnip: add LRZ early-z support
+  * af049b6668f turnip: fix setting dynamic state mask for
+    VK_DYNAMIC_STATE_STENCIL_OP_EXT case
+  * 88c7aa0b3e0 turnip: group all geometry constant draw states in one
+  * 2c0c696f163 turnip: update LRZ state based on stencil test state
+  * ff8e3547b3c turnip: implement LRZ direction
+  * 1d3542694bd radv: fix emitting depth bias when beginning a command
+    buffer
+  * e4c0724dc6e radv: fix fast clearing depth-only or stencil-only
+    aspects with HTILE
+  * 00ff60f799c gallivm: add 16-bit integer support
+  * 1c82c05d585 gallivm: run nir_opt_algebraic_late
+  * da5f346e6c6 gallivm: handle 16-bit input in i2b32
+  * 106da39b19b ci/radeonsi: Add expected failures due to #4674 having
+    slipped in
+  * 9fc5da54b4d ci: Drop hack to disable all modules from defconfig
+  * a47e4016c10 ci: Use a single kernel+rootfs for both baremetal and
+    LAVA jobs
+  * 79c65217a19 ci: Test RadeonSI with piglit's quick_gl
+  * f475b9fd514 ci/lava: Start Xorg on request, for Piglit
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Apr 2021 17:07:49 +0200
+
 mesa (21.2.0~git2104192207.899dd8e60a5~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
