@@ -1,3 +1,51 @@
+mesa (21.2.0~git2104212226.57603866540~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 57603866540 radv: only set robust_modes if robustBufferAccess2 is
+    enabled
+  * 8408d0312fa radv: improve vectorization callback for small bit sizes
+  * 89b759c4f95 nir/opt_load_store_vectorize: loop internally
+  * 447820d0037 nir/opt_load_store_vectorize: ignore
+    load_vulkan_descriptor
+  * 6ca11b4a66e nir/opt_load_store_vectorize: improve handling of
+    swizzles
+  * 4df3654c791 nir/load_store_vectorize: assume CAN_REORDER ops don't
+    alias with stores
+  * 839af6545bf mesa: Replace _mesa_pack_ubyte_rgba_row() with
+    pack_ubyte_rgba_8unorm().
+  * 1a36b11a66a mesa: Remove dead _mesa_pack_ubyte_rgba_rect().
+  * 580a1ba7065 mesa: Move per-pixel Z pack functions to swrast.
+  * 84db6255331 msea: Move z24s8-to-z24s8 packing fastpath to swrast.
+  * 698c8b5022d mesa: Remove dead _mesa_get_pack_float_z_func().
+  * 90f98b56f85 mesa: Deduplicate _mesa_pack_uint_z_row().
+  * 8a773d770e0 mesa: Deduplicate _mesa_pack_float_z_row().
+  * 0e20f6a1e99 mesa: Deduplicate _mesa_pack_ubyte_stencil_row()
+  * 8bd91d13688 util: Fix big-endian handling of z/s formats.
+  * 3ccd0891d34 nir/lower_fragcolor: set outputs_written for fragdata
+    members
+  * 577c9de659d docs: update calendar and link releases notes for 21.0.3
+  * 8e821001c55 docs: update sha256 sum for mesa 21.0.3
+  * 2655ccc30e7 docs: add release notes for 21.0.3
+  * 4f12a42841f docs: write basic meta-documentation
+  * bbeee415eeb zink: Learn about VK_KHR_swapchain
+  * fcb5ba58165 Revert "ci/radeonsi: Add expected failures due to #4674
+    having slipped in"
+  * 58ee3347a8e Revert "st/pbo: use
+    cso_set_vertex_buffers_and_elements() for st_pbo_draw"
+  * 8acf361db41 intel: Fix GEN_GEN macro checks
+  * 9967dabe919 freedreno/regs: add 5nm DSI PHY/PLL regs
+  * 1de393fec53 panfrost: Fix ZS reloading on Bifrost v6
+  * 52d3f6b1230 gallium: when tracing is enabled for threaded drivers,
+    trace the driver thread
+  * 04241e826ea zink: add clear-on-flush mechanic deeper into flush
+    codepath
+  * be6532ecdfa zink: directly set batch->state->flush_res from
+    flush_resource hook
+  * 7af40bb5958 zink: move wsi flush info conditional to queue
+    submission
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Apr 2021 23:22:49 +0200
+
 mesa (21.2.0~git2104201629.874535752b4~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
