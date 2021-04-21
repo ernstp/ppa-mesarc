@@ -1,3 +1,56 @@
+mesa (21.1.0~rc2+git2104212235.09d505a3ab7~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 09d505a3ab7 .pick_status.json: Mark
+    8acf361db4190aa5f7c788019d1e42d1df031b81 as denominated
+  * c40e1896b24 VERSION: bump for 21.1.0-rc2
+  * 80be401ef8c zink: add clear-on-flush mechanic deeper into flush
+    codepath
+  * 9988f53d51d zink: directly set batch->state->flush_res from
+    flush_resource hook
+  * 687a8bf579c zink: move wsi flush info conditional to queue
+    submission
+  * 5f748f1e11f zink: add a flag indicating whether scanout object needs
+    updating
+  * d5869ccc75c zink: move scanout sync to end of batch
+  * c0e63f4abec zink: use undefined layout for first scanout obj
+    transition
+  * a8ee300289c panfrost: Fix ZS reloading on Bifrost v6
+  * 3c35559eaf8 panfrost: Fix indirect draws
+  * 0c5b2aa4295 aco: allow SDWA sels smaller than the operand size
+  * 7ab251c71ac aco: don't update register demand during RA validation
+  * a87b2fcfbc3 Revert "radeonsi: set TRUNC_COORD=0 for Total War:
+    WARHAMMER to fix it"
+  * 70e8b11f37e ac/nir: set TRUNC_COORD=0 for nir_texop_tg4
+  * ef12d4ebb4f aco: set TRUNC_COORD=0 for nir_texop_tg4
+  * 8a598d76ec7 .pick_status.json: Update to
+    fcb5ba58165cd407408f8dd9a102f0c5e16a9956
+  * 1d0fc4ef054 ci/virgl: Mark a couple of new Crash tests as flakes.
+  * 35e318f2fab zink: force scanout sync when mapping scanout resource
+  * 4f8cf816acd zink: merge copy-to-scanout path into non-deferred flush
+    path
+  * c835bfc52a4 amd/common: Use cap to test kernel modifier support.
+  * 3ed9152fd17 panfrost: Reserve thread storage descriptor in
+    panfrost_launch_grid()
+  * 2c21bc476fc radv: fix emitting depth bias when beginning a command
+    buffer
+  * de8c1ab62a7 radv: fix fast clearing depth-only or stencil-only
+    aspects with HTILE
+  * 87fe4028c34 gallivm: handle 16-bit input in i2b32
+  * 46b9602c75d xmlconfig: Fix MSVC warning C4334 (32bit shift cast to
+    64bit)
+  * 87b50c6f268 llvmpipe: Fix MSVC warning C4334 (32bit shift cast to
+    64bit)
+  * 0ead3bc2808 gallium/aux: Fix MSVC warning C4334 (32bit shift cast to
+    64bit)
+  * 70687cdbe62 shader_enums: Fix MSVC warning C4334 (32bit shift cast
+    to 64bit)
+  * 6a5ad328d16 microsoft/compiler: Fix MSVC warning C4334 (32bit shift
+    cast to 64bit)
+  * 5a9a89ae077 microsoft/clc: Fix undeclared function warning
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Apr 2021 23:26:37 +0200
+
 mesa (21.1.0~rc1+git2104182213.7e8c906197b~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
