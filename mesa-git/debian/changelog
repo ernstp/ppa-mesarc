@@ -1,3 +1,48 @@
+mesa (21.1.0~rc2+git2104262032.891eeea222b~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 891eeea222b anv: Use the same re-order mode for streamout as for GS
+  * e8d30fa9eca zink: correct image cap checks
+  * 5edae4604e6 zink: do not require vulkan memory model for shader-
+    images
+  * 5dfe95bb25b radv: disable VK_FORMAT_R64_SFLOAT
+  * 00f2f212b15 mesa: fix incomplete GL_NV_half_float implementation
+  * 26dcb7f8632 .pick_status.json: Update to
+    72eca47c660b6c6051be5a5a80660ae765ecbaa5
+  * f999b510705 tgsi_exec: Fix NaN behavior of min and max
+  * 3521f768067 tgsi_exec: Fix NaN behavior of saturate
+  * 975ab701d77 pan/decode: Allow frame shader DCDs to be in another BO
+    than the FBD
+  * 695def8e078 panfrost: Fix shader texture count
+  * 2e6cf74e637 panfrost: Fix formats converting uninit from AFBC
+  * a0614e11356 radv: make sure CP DMA is idle before executing
+    secondary command buffers
+  * 71a46b9a9dc radv/winsys: fix resetting the number of padded IB words
+  * cebc8191a81 radv/winsys: fix allocating the number of CS in the
+    sysmem path
+  * db1b0741101 radv: fix emitting default depth bounds state on GFX6
+  * b74e7421b3e zink: when performing an implicit reset, sync qbos
+  * 3234ef85385 zink: only reset query on suspend if the query has
+    previously been stopped
+  * 95994bc0b11 zink: use cached memory for staging resources
+  * 246c6ec7ab6 zink: restore previous semaphore (prev_sem) handling
+  * a693bc1b992 zink: track persistent resource objects, not resources
+  * 5b34892630d softpipe: ci updates
+  * 7ebbd4c6541 softpipe: fix streamout queries
+  * 4d28c2b0864 softpipe: fix render condition checking
+  * a24924bb60e pan/bi: Skip nir_opt_move/sink for blend shaders
+  * 7a8e3ca3be9 .pick_status.json: Update to
+    7e905bd00f32b4fa48689a8e6266b145662cfc48
+  * 315df0a7d73 r600: don't set an index_bias for indirect draw calls
+  * ac7b6c9dc87 Revert "r600: Don't advertise support for scaled int16
+    vertex formats"
+  * ecba845c0d4 intel/compiler: Don't insert barriers for NULL sources
+  * ce04ac4e54d zink: do not read outside of array
+  * e430e991dbf aco: Mark VCC clobbered for iadd8 and iadd16 reductions
+    on GFX6-7.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 27 Apr 2021 16:43:07 +0200
+
 mesa (21.1.0~rc2+git2104212235.09d505a3ab7~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
