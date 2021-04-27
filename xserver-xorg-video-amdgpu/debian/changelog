@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (19.1.0+git2104271106.aedbf47~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * aedbf47 Include xf86drm.h instead of sarea.h
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 27 Apr 2021 16:46:54 +0200
+
 xserver-xorg-video-amdgpu (19.1.0+git2102021245.6ed4863~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
