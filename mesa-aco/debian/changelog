@@ -1,3 +1,41 @@
+mesa (21.2.0~git2104271326.4ec8533f69a~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * 4ec8533f69a zink: fix shader-image requirements
+  * 0b5c898c226 docs: remove out-of-date versions doc
+  * d93153a5643 glsl: ignore interface precision qualifier on desktop GL
+  * bc3625f5a2e zink: fixup bad indentation
+  * bef99f8caa4 zink: remove stray semicolons
+  * fd73a2ec04e zink: make zink_binding private
+  * 1bc43492b60 radv: implement VK_EXT_provoking_vertex
+  * 4c2add8cbab aco: adjust NGG if provoking vertex mode is last
+  * 937a18a6af7 radv/llvm: adjust NGG if provoking vertex mode is last
+  * d21ffa9c7db radv: add the provoking vertex mode to the
+    pipeline/shader keys
+  * 337957956e2 pan/mdg: improve tex opcode decoding and add missing ops
+  * 6a12ea02fee pan/mdg: properly encode/decode ldst instructions
+  * 4b933260d94 pan/mdg: print names of non-work registers
+  * d2119073de1 pan/mdg: improve ldst opcode names and add missing ops
+  * a567f60b3ee pan/mdg: add helpers for load/store special read regs
+  * 733d25cfcee pan/mdg: misc cleanups
+  * 291df07edba pan/mdg: print special alu arg outmods
+  * cefa2e27da3 pan/mdg: remove register prefixes
+  * 0ef3efb7fa8 pan/mdg: improve mask decoding
+  * 7abeee1effc pan/mdg: fix midgard.h indentation
+  * cb7527a9ef8 pan/mdg: stop using size disambiguation suffixes
+  * ce445c0e472 pan/mdg: print input data type for ALU opcodes
+  * 5d8301977b4 pan/mdg: stop querying datatype by reading opcode name
+  * fdae70b8070 pan/mdg: fix/change ALU opcodes descriptions and add
+    some missing ops
+  * 94c03264d89 pan/mdg: improve swizzle decoding
+  * 7f0bf3d82d8 pan/mdg: improve input modifier printing
+  * baea01816a6 pan/mdg: add midgard_src_expand_mode validation
+  * b6c7da98bec pan/mdg: encode/decode expand_mode properly
+  * f8a8dc16450 pan/mdg: add proper expand_mode enum
+  * 77e05b6a86a pan/mdg: refactor mir_pack_swizzle
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 27 Apr 2021 16:39:25 +0200
+
 mesa (21.2.0~git2104212226.57603866540~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
