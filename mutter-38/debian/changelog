@@ -1,3 +1,14 @@
+mutter (3.38.4+git2104212322.8c43a8ce6~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * 8c43a8ce6 shaped-texture: Fix damage propagation for rotated
+    transforms with viewport
+  * c4b21091c wayland/subsurface: Avoid placement ops for detached
+    subsurfaces
+  * 2a95d0e9f window-actor/wayland: Cleaner subsurface reordering
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 27 Apr 2021 16:46:34 +0200
+
 mutter (3.38.4+git2104142235.607803c4b~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
