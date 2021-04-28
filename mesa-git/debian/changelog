@@ -1,3 +1,25 @@
+mesa (21.1.0~rc3+git2104281836.0d5e73d205b~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 0d5e73d205b i965/bufmgr: fix invalid assertion
+  * 6b1197e7283 vulkan/wsi/display: don't report support if there is no
+    drm fd
+  * d501b039cc0 .pick_status.json: Update to
+    cbd6e5f2e592a9834a03004a473537f25aea4336
+  * 5eb41d49a6a VERSION: bump for 21.1.0-rc3
+  * fb4d89a85ee zink: fix shader-image requirements
+  * dff02e24c47 radv: fix various CMASK regressions on GFX9
+  * 7ba683d4901 radeonsi: make the gfx9 DCC MSAA clear shader depend on
+    the number of samples
+  * c575dae37a2 android: amd/common: add nir include path
+  * 734c940bb4f android: gallium/radeonsi: add nir include path
+  * a840d01c57a nir/lower_clip_disable: Fix store writemask
+  * 0a1b6f7cc4c ir3: Prevent oob writes to inputs/outputs array
+  * 269e8b5ff51 .pick_status.json: Update to
+    ee9b744cb5d1466960e78b1de44ad345590e348c
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 28 Apr 2021 20:50:11 +0200
+
 mesa (21.1.0~rc2+git2104262032.891eeea222b~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
