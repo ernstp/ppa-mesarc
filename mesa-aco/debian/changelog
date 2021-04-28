@@ -1,3 +1,41 @@
+mesa (21.2.0~git2104281834.ce2706fc92e~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * ce2706fc92e docs: update calendar for 21.1.0-rc3
+  * c7dd23ff614 docs: update calendar for 21.1.0-rc2
+  * 82484b9787b docs: update calendar for 21.1.0-rc1
+  * cbd6e5f2e59 freedreno/ci: Skip texsubmimage cube_map_array
+  * 1d19325483a freedreno/ci: Disable counterstrike trace on a306 for
+    now
+  * f92f31455a4 freedreno/drm: Assume explicit fences if in_fence_fd
+  * e9a9ac6f77f freedreno/drm: Async submit support
+  * 2c9e8db28d3 freedreno/drm: pipe should hold reference to device
+  * ad9654a4c15 freedreno/drm: fd_submit should hold ref to fd_pipe
+  * 55eb75d3e6d freedreno: Avoid flushing deferred submits for u_trace
+  * cccdc513e3e freedreno/drm/sp: Implement deferred submit merging
+  * c7dc5cf3cb3 freedreno/drm/sp: Split submit prep and finish
+  * 62a6773d804 freedreno/drm: Add pipe tracking for deferred submits
+  * aafcd8aacb8 freedreno: Re-work fd_submit fence interface
+  * d531c8d22a5 freedreno/drm: Reference count submits
+  * 9cb264f966c freedreno: Drop unused create_fence() arg
+  * 7f4b85c7cfd freedreno: Move fence struct to header
+  * c3f4835b99c freedreno: last_fence optimization for TC async flushes
+  * 807bfa6be89 freedreno/batch: Don't create fences for every batch
+  * 49852ace2a7 freedreno/drm: Inline the fence-table
+  * 7dabd624649 freedreno/drm: Userspace fences
+  * df78934cdf9 freedreno/drm: Add locked version fd_{bo,pipe}_del()
+  * 8f5c89350f0 freedreno/drm: Move the growable array helper
+  * c98ada6ad12 freedreno/drm: Add FD_BO_PREP_FLUSH
+  * 8ab227c3738 freedreno/drm: Cleanup bo cpu_prep flags
+  * 7f0abd9048b freedreno/drm: Cleanup bo allocation flags
+  * ef0c5007f25 freedreno/drm: Move submit->primary to base class
+  * c64bc095e71 freedreno: Allow resource shadowing for TC
+  * ecd4793d6cb freedreno: Add a couple debug traces
+  * a8d43028251 freedreno: Make sure we actually flush if we need a
+    fence
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 28 Apr 2021 20:46:39 +0200
+
 mesa (21.2.0~git2104271326.4ec8533f69a~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
