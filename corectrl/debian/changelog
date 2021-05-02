@@ -1,3 +1,16 @@
+corectrl (1.2.0~git2105022000.5296784~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 5296784 Update catch2
+  * a5c99e1 Make path to pci.ids configurable at build time
+  * 145d65c Make path to pci.ids configurable at build time
+  * c978200 Merge branch 'installdirs' into 'master'
+  * b7b9508 Fixed header width of mode selector controls
+  * 90969f8 Use KDEInstallDirs instead of hardcoded paths to install
+    resources
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 03 May 2021 00:11:51 +0200
+
 corectrl (1.2.0~git2009101321.bad0a0b~b~mesarc11) bionic; urgency=medium
 
   * New snapshot:
