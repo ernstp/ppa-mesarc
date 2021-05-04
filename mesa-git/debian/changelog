@@ -1,3 +1,46 @@
+mesa (21.1.0~rc3+git2105032355.010f9027f2f~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * 010f9027f2f glx: revert "Downgrade sRGB-ful fbconfigs"
+  * 42559426547 radv,ac/llvm: use a dword alignment for descriptor loads
+  * ccef1f34ae5 tu: Fix SP_GS_PRIM_SIZE for large sizes
+  * 42b5f565830 radv: Only require DRM 3.23.
+  * 5f48cd7041a radv/winsys: fix executing huge secondary command
+    buffers on GFX6
+  * 37c88be5ea1 aco/spill: Fix improper handling of exec phis
+  * 7c2ee1d626a radv: check if DCC is enabled when resolving different
+    levels
+  * be5cc7cdd9e util: disable glthread in CSGO
+  * d6c5525526a .pick_status.json: Update to
+    f5d6a1b916fb163ee72e6a6f356937b1fbac53e0
+  * c269aa387f5 glx: Assign unique serial number to GLXBadFBConfig error
+  * 3f78ccb7bad panfrost: Fix viewport scissor for preload draws
+  * f53f73b8dfe .pick_status.json: Update to
+    f3d2fade82c168a7ffffa4bd7bf22585c45c711b
+  * dd20621ac36 intel/isl: Fix isl_color_value_unpack to match the
+    prototype
+  * 4c0b3b5d9e3 pan/mdg: Fix calculation of available work registers
+  * baaf7cfb822 intel/compiler: Fix INTEL_DEBUG=hex
+  * f5ce440e1b7 v3d: DRM_FORMAT_MOD_BROADCOM_SAND128 only available for
+    NV12 format.
+  * 563c41a44a2 v3d: YUV formats at query_dmabuf_modifiers are
+    external_only
+  * e633a4a3a86 v3d: YUV formats at is_dmabuf_modifier_supported are
+    external_only
+  * 4496db61e96 .pick_status.json: Update to
+    b80720acb13e1014aea89e6bd25f22d43df85356
+  * df0202feafd util/hash_table: do not leak u64 struct key
+  * 2c8eba7188d radv: fix use-after-free upon GS copy shader cache hits
+  * 5ddac7c5e7d vulkan: fix use-after-free in
+    vk_common_DestroyDebugReportCallbackEXT
+  * a3237b0dd37 radv: fix computation of the number of user SGPRS for
+    NGG GS state
+  * d0fa20ba176 driconf: add workaround for Golf With Friends
+  * 5440acb8fc1 .pick_status.json: Update to
+    ede0b3c643279f4126fb10552a2f1d00be27f16d
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 May 2021 18:41:30 +0200
+
 mesa (21.1.0~rc3+git2104281836.0d5e73d205b~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
