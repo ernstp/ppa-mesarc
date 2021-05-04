@@ -1,3 +1,14 @@
+mesa (21.1.0~rc3+git2105042109.3707ffe7bc7~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * 3707ffe7bc7 util: fix (re-enable) L3 cache pinning
+  * 8f8ce535ef0 intel/nir: Set lower txs with non-zero LOD
+  * 31836d7f111 ir3/postsched: Fix dependencies for a0.x/p0.x
+  * b0f5108c846 .pick_status.json: Update to
+    1d418e79b8a0f4270775277b7115b88ac4c77113
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 May 2021 23:03:57 +0200
+
 mesa (21.1.0~rc3+git2105032355.010f9027f2f~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
