@@ -1,3 +1,45 @@
+mesa (21.2.0~git2105052121.a1c56b80915~b~mesaaco9) bionic; urgency=medium
+
+  * New snapshot:
+  * a1c56b80915 mesa: NOTE! Default branch is now main
+  * 57897b40953 docs: Rename master branch to main
+  * 2ec9cd31042 docs/releasing.rst: Rename master branch to main
+  * 26a1ddd2021 issue_templates/Bug Report: Rename master branch to main
+  * 3356488c8a8 .gitlab-ci.yml: Use main branch for gitlab ci
+  * 6e86d1f503d bin/pick: Rename master branch to main
+  * 82f73775efa commit_in_branch_test.py: Rename branch master to main
+  * 44a4e34d52e docs: remove doxygen support
+  * e20897a8aa6 ci/lavapipe: Add fractional NIR stress test job.
+  * f2cb18abd9b ci/llvmpipe: Add testing of gles3/31/gl.
+  * 7bcda214410 turnip: Demote API version to 1.1.
+  * 0c94b3f55bc venus: populate VK_ERROR_OUT_OF_HOST_MEMORY if applied
+  * 13667b157aa freedreno/a5xx: Remove ppgtt hack
+  * ace28308bb2 aux/cso_cache: add handling for save/restore of compute
+    states
+  * f08c14138ae panfrost: Fix format definitions to match gallium
+    expectations
+  * 9235c2cd8f8 android: pan/bi: add bi_opt_constant_fold.c to
+    Makefile.sources
+  * b13d0eea127 anv: Allow storage on all formats that support typed
+    writes
+  * df0580312a1 isl: document format fields
+  * 9301b637cfe anv: Check offset instead of alloc_size for freeing
+    surface states
+  * a2d091694f8 gallium/u_vbuf: avoid dereferencing NULL pointer
+  * c05e48308b4 radeon/vcn: Use the correct pitch for chroma surface.
+  * d8ab0ec8e4d turnip: implement VK_KHR_vulkan_memory_model
+  * a898828a636 ir3: update bar/fence bits in accordance to blob
+  * cb8a00791cc ir3: memory_barrier also controls shared memory access
+    order
+  * 27363702944 docs: do not generate redirects on error
+  * 5a1675a0303 zink: only emit ImageBuffer cap if needed
+  * dcb9e4ddb4b zink: emit cap early
+  * 9e460570f23 zink: emit sample-shading cap early
+  * 30eca96a867 zink: remove needless shader-info from context
+  * 74f9f3937a0 zink: emit cap early
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 May 2021 11:08:09 +0200
+
 mesa (21.2.0~git2104281834.ce2706fc92e~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
