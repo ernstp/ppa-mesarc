@@ -1,3 +1,11 @@
+mutter (3.38.4+git2105010043.d76c2e75b~g~gnome3) groovy; urgency=medium
+
+  * New snapshot:
+  * d76c2e75b output/kms: Add back common modes on non-single mode
+    outputs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 May 2021 11:14:58 +0200
+
 mutter (3.38.4+git2104212322.8c43a8ce6~g~gnome3) groovy; urgency=medium
 
   * New snapshot:
