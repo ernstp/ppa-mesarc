@@ -1,3 +1,48 @@
+mesa (21.2.0~git2105090034.2736ae0454d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2736ae0454d android: nir: add nir_lower_fragcolor.c to
+    Makefile.sources
+  * d81a6e5f1d3 broadcom/compiler: change register allocation policy for
+    accumulators
+  * 24043d215f6 lavapipe: Fix lvp_pipeline_compile's nir_xfb_info leak.
+  * c1609c35311 lavapipe: Fix lvp_execute_cmds'
+    pipe_stream_output_target leak.
+  * 38de1cd5f00 nv50/ir: Initialize CodeEmitterNV50 member progType.
+  * b1f6aa6e488 nv50/ir: Initialize BuildUtil member tail.
+  * 9b50ebfb2d8 nvc0: Remove unnecessary bsp_bo NULL check.
+  * 2ba50c1a011 nv50/ir: Initialize Graph::Node member tag.
+  * edd06995d75 zink: never use LINEAR for VK_EXT_4444_formats
+  * 291aff3fcbc gallium: Remove unused st_visual::render_buffer
+  * ca3dbecea66 nv50: Fix use of initializers on older compilers
+  * daad8f2245a freedreno/a5xx: SP_BLEND_CNTL has per-mrt blend enable
+    bit
+  * 14da2444a96 turnip,freedreno/a6xx: SP_BLEND_CNTL has per-mrt blend
+    enable bit
+  * 39a938ecf41 lavapipe: fix fsum with swizzle
+  * aa765c54bdd pan/bi: Add divergent intrinsic lowering pass
+  * 4055b99de46 pan/bi: Add "lanes per warp" accessor
+  * 7e4ee9bd2f6 pan/bi: Map load_subgroup_invocation to FAU
+  * 754c192e041 pan/bi: Drop load_sampler_lod_parameters_pan
+  * db2f6b87a3f nir/divergence_anlysis: Add intrinsics for Bifrost
+  * 54b0cfb061e radv: fix extending the dirty bits to 64-bit
+  * e0419c29cc3 panfrost: Use common blend lowering
+  * f3de2bd6c2d nir: Add blend lowering pass
+  * 0cde5ddc795 pan/lower_framebuffer: Fix bitsize mismatch
+  * 91bd4fc6139 zink: add a pipe_context::clear_buffer hook
+  * f94f2e1223a mesa: add an extension MESA_bgra
+  * 0ab2336f3fe panfrost: Use pan_blit() when PAN_MESA_DEBUG=panblit
+  * 6197c3afd1a panfrost: Extend pan_blitter to support blit/resolve
+    operations
+  * c1df85ded57 panfrost: Stop assuming the viewport will always cover
+    the framebuffer
+  * 09e65df92e9 panfrost: Don't select the blit shader fragout type
+    twice
+  * 666072c91f4 panfrost: Shrink the number of args passed to
+    prepare_{bifrost,midgard}_rsd()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 09 May 2021 21:47:10 +0200
+
 mesa (21.2.0~git2105052121.a1c56b80915~b~mesaaco9) bionic; urgency=medium
 
   * New snapshot:
