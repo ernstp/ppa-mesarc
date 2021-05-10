@@ -1,3 +1,46 @@
+mesa (21.2.0~git2105100707.181beece3c0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 181beece3c0 nir: skip assert check with empty structs
+  * 15b55731940 agx: Set reads_tib appropriately
+  * d0f566a90d8 agx: Implement load_output
+  * 1b9b2f90464 agx: Condition writeout ops on already being emitted
+  * 41d8db33a22 agx: Assume lower_fragcolor has been called
+  * 1164c992cff agx: Add ld_tile opcode
+  * 07fdc0015e2 agx: Rename blend -> st_tile
+  * 06fe6651b31 agx: Implement blend constant color sysvals
+  * 5fd489a6bdb agx: Return agx_instr* from emit_intrinsic
+  * dd64463d5f7 asahi: Pass through "reads tilebuffer?" bit
+  * e2332dea058 asahi: Fix shader key hash function
+  * bedf1019beb asahi: Call nir_lower_fragcolor
+  * d76ab2b5d67 asahi: Add blend constant system value
+  * 30d1223247f asahi: Implement set_blend_color
+  * 6b7cc1fa8f3 asahi: Garbage collect bind_state
+  * 91b9839bf70 asahi: Call nir_lower_blend with selected key
+  * f2179ed4f33 asahi: Augment Gallium key with blend state
+  * 77f1f12000e asahi: Translate blend CSO to lower_blend options
+  * 564519dc84c zink: rework memory_barrier hook again (third time's the
+    charm)
+  * 25ab2347f8f zink: fix texture barriers for real this time
+  * 4ebae25e17f zink: break out draw dispatch into separate functions
+  * 9e5d927d222 zink: remove compute cruft from resource mapping
+  * b0c51cdc9ea zink: add debug assert to verify that
+    zink_clear_framebuffer() is accurate
+  * 5ac6c70214d zink: break zs clear loop once both bits are set when
+    beginning renderpass
+  * 94aeb1041f8 zink: handle in-renderpass clears in
+    fb_clears_apply_internal()
+  * b715aaa5f1e zink: only set layer info for samplerviews if there are
+    multiple layers
+  * 3c1ecb93d32 zink: simplify samplerview surface creation
+  * b243b1d9636 zink: add a target param to create_ivci()
+  * 438f0b31e27 zink: clamp 3D surface viewtype to 2D only in the
+    create_surface hook
+  * 0c2453bb590 zink: make ZINK_INLINE_UNIFORMS more standardized in
+    function
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 May 2021 09:18:30 +0200
+
 mesa (21.2.0~git2105090034.2736ae0454d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
