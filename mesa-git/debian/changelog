@@ -1,3 +1,26 @@
+mesa (21.1.0+git2105102144.7c15b0458dd~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 7c15b0458dd gallium/u_vbuf: avoid dereferencing NULL pointer
+  * 13ff6ad8f71 ir3: memory_barrier also controls shared memory access
+    order
+  * 45f06d953f2 docs: do not generate redirects on error
+  * 1296faca59a Revert "gallium/u_threaded: align batches and call slots
+    to 16 bytes"
+  * b72197768a2 nir: Move shared_memory_explicit_layout bit into common
+    shader_info
+  * c4e924531f0 panfrost: Don't clobber RT0 if RTn is disabled
+  * 8d150d69dab freedreno/a6xx: Fix SP_GS_PRIM_SIZE for large sizes
+  * 1947597f748 .pick_status.json: Update to
+    a1c56b80915a1105c5a62aa6ff3ac71c1edd143d
+  * f08e0a2016b meson/vulkan: fix linkage on windows
+  * c51a8d12734 meson: link vulkan_util with link_whole on mingw
+  * 62e4fe2300f vulkan: fix duplicate win32 def
+  * 7257be4d702 lavapipe: fix unused variable warning
+  * 0fff844cf9d gallium: fix uninitialized variable warning
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 May 2021 22:34:25 +0200
+
 mesa (21.1.0+git2105051905.19ed21fba9b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
