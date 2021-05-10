@@ -1,3 +1,10 @@
+corectrl (1.2.0~git2105101939.49791af~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 49791af Fix usage of unsafe flags on arch installation instructions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 May 2021 22:33:49 +0200
+
 corectrl (1.2.0~git2105022000.5296784~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
