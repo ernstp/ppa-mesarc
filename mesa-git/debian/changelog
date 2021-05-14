@@ -1,3 +1,38 @@
+mesa (21.1.0+git2105122139.6ba5eb1ecb6~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6ba5eb1ecb6 aco: fix additional register requirements for spilling
+  * 382ffa60959 nir: handle float atomics in nir_lower_memory_model
+  * 00ede5f1632 .pick_status.json: Update to
+    e8640fef9089bb31a9e602a8894ae4fe84086118
+  * d25ff22af39 iris: refcount separate screen objects for resource
+    tracking
+  * 83e3a129c6b v3d: fix resource leak in error path
+  * de9c715784e egl/x11: don't forget to exit the attrib list loop
+  * 96307752bb3 clover/memory: fix data race in buffer subclasses
+  * 4ee7244c27a android: nir: add nir_lower_fragcolor.c to
+    Makefile.sources
+  * 79b43881561 radv: fix extending the dirty bits to 64-bit
+  * 09890e9cb9f gallivm: handle texture arrays in non-fragment shaders
+    with lod.
+  * 4f99759370e Revert "gallium/util: Fix depth/stencil blit shaders"
+  * 7c3ec53a123 radv: fix missing ITERATE_256 for D/S MSAA images that
+    are TC-compat HTILE
+  * 7ccaf809209 .pick_status.json: Update to
+    584145ea882b710027ce620a5d505bd25ab284b1
+  * b125ee559a3 bin/pick: Rename master branch to main
+  * da315007b81 gallium/u_vbuf: avoid dereferencing NULL pointer
+  * fb696bbbe26 ir3: memory_barrier also controls shared memory access
+    order
+  * ceafcf3daf2 docs: do not generate redirects on error
+  * db3c2cdf824 Revert "gallium/u_threaded: align batches and call slots
+    to 16 bytes"
+  * bb746def48d nir: Move shared_memory_explicit_layout bit into common
+    shader_info
+  * 2ceb11aaa83 freedreno/a6xx: Fix SP_GS_PRIM_SIZE for large sizes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 May 2021 02:51:43 +0200
+
 mesa (21.1.0+git2105102144.7c15b0458dd~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
