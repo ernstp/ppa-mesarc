@@ -1,3 +1,50 @@
+mesa (21.2.0~git2105132344.719e4fb369a~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 719e4fb369a zink: fix DrawParameters shader cap usage
+  * 8e2ac24482d zink: stop overwriting buffer map pointers for stream
+    uploader
+  * c0dc6affdc5 intel/compiler: Clarify why VUE is recomputed by FS
+  * 5a133ef1f23 ci/turnip: drop fail annotation for
+    image.extend_operands_spirv1p4.*
+  * 9a477ccbead ci/turnip: drop fail annotation for float_control tests
+  * 2cebb1b5b3e anv: fix perf query pass with command buffer batching
+  * 2c2de4d60ef intel/mi_builder: fix resolve call
+  * f88dd7ed4d2 i915g: add HW atomic counters as unsupported
+  * 80ee9d39471 aco/scheduler: Verify register demand invariants in
+    debug mode
+  * 50ba919d372 aco/scheduler: Fix register demand computation for
+    upwards moves
+  * c528af10761 aco/scheduler: Fix register demand computation for
+    downwards moves
+  * c7d679f0f7e aco: relax validation rules for p_reduce dst RegType
+  * 343d90b6ab5 isl: require hiz for depth surface in
+    isl_surf_get_ccs_surf
+  * 6bb7d3bbc05 wgl: Remove opengl32.mingw.def.
+  * 4791738d1d0 zink: always do maybe_flush after draw/compute
+  * 9fc2b47870a zink: check for a work_count-based stall in
+    zink_maybe_flush_or_stall()
+  * afb837523dd zink: flush every 100k draws/computes
+  * 5aabc912739 glsl: add missing support for explicit components in
+    interface blocks
+  * 1a71d6aa6e1 glsl: create validate_component_layout_for_type() helper
+  * 2908aba828c Update release notes with mention that x87 is no longer
+    used on x86
+  * a57d9376546 Switch u_format_test to passed on i386
+  * 855ffa7c465 Default enable SSE2 on mesa builds.
+  * 57721591dec nv50/ir: Add ConstantFolding constructor.
+  * c8924121110 nvc0/ir: Initialize CodeEmitterGK110 member progType in
+    constructor.
+  * 77d959814c7 venus: get rid of #ifdef's in vn_CreateImage
+  * f46aa1b9d7c intel/fs: use the final destination type for regioning
+    restrictions
+  * e1959f0f599 panfrost: Add GPU IDs for G52 1-Core-2EE (RK3568/RK3566)
+  * 01ef56a7e49 pan/mdg: Use smaller LD_UNIFORM instructions
+  * df3edfc7299 panfrost: Don't upload empty push uniform table
+  * 5c069ff5126 panfrost: Clean up cases for emit_fbd
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 May 2021 02:48:12 +0200
+
 mesa (21.2.0~git2105100707.181beece3c0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
