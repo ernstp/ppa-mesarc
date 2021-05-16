@@ -1,3 +1,55 @@
+mesa (21.2.0~git2105170105.fb7be7870c2~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * fb7be7870c2 vulkan: Support 32-bit "weak" symbols on MSVC
+  * a5a86adc231 freedreno/a6xx: Add a few registers
+  * 0c30ad402d0 freedreno/regs: split DSI PHY registers to separate xml
+    files.
+  * 6df187df136 nir/builder: add nir_pad_vector and nir_pad_vec4 util
+    functions
+  * 6fcf3314d00 venus: Fix zero-initialized fd causing apps to
+    hang/crash
+  * 855cb78d463 radv: Handle unnormalized samplers in YCbCr lowering
+  * fc765d6a8d0 iris: fix assert to reflect correct limit for encoded
+    size
+  * b3499435ec8 r600/sfn: Ignore precision when linking
+  * 4c045ad11ed nir/linker: add option to ignore the IO precisions for
+    better varying packing
+  * 629e8347ad2 ci: Update VK-GL-CTS to 1.2.6.1
+  * 172c719baf6 llvmpipe: fix non-multisampled rendering to multisampled
+    framebuffer
+  * bcdebf4ff8f iris: Avoid sampling some MCS surfaces with clear
+  * eef4c708b3f anv: Avoid sampling some MCS surfaces with clear
+  * 608c1316389 anv: Add clear_supported to anv_layout_to_aux_state
+  * b3eb87aa654 radv: call nir_copy_prop() after load-store
+    vectorization
+  * d659ce0d6c5 aco/ra: prevent underflow register for p_create_vector
+    operands
+  * 341ecb2dfc3 ci/freedreno: Skip refract on a306 now that it
+    hangchecks sometimes.
+  * 09984fd02f1 nir: Rename nir_is_per_vertex_io to nir_is_arrayed_io
+  * e418710f8bd compiler/nir: check whether var is an input in
+    lower_fragcoord_wtrans
+  * 0f04a90ea33 zink: emit some barriers out of renderpass where
+    possible
+  * f1ec655e472 zink: add flags for determining whether to update
+    framebuffer and renderpass
+  * b11b1968eeb zink: add a flag for tracking/validating renderpass
+    clears
+  * a7d3636d030 zink: split out base renderpass begin into separate
+    function
+  * a50d5b13be6 util: tune signatures of generated enum operators
+  * c0f4bb9a22d util: add support for defining bitwise operators on
+    strongly typed enums
+  * df5b14969f9 intel: Add 2 ADL-S pci-ids
+  * c62d58c80f1 driconf: set vk_x11_strict_image_count for Metro: Exodus
+  * 776ddfc8582 util/queue: don't require a fence when adding a job
+  * 4da88060d0a panfrost: Skip blit shader labelling if the buffer has
+    no space
+  * 938e52a6e83 anv: handle spirv parsing failure
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 May 2021 01:57:43 +0200
+
 mesa (21.2.0~git2105132344.719e4fb369a~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
