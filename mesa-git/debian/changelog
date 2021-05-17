@@ -1,3 +1,43 @@
+mesa (21.1.0+git2105162219.b62ba79be77~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * b62ba79be77 venus: Fix zero-initialized fd causing apps to
+    hang/crash
+  * ce1d083d8a4 radv: Handle unnormalized samplers in YCbCr lowering
+  * 3a26e1ca47f iris: Avoid sampling some MCS surfaces with clear
+  * 6f3f81c830e anv: Avoid sampling some MCS surfaces with clear
+  * fe84a363147 anv: Add clear_supported to anv_layout_to_aux_state
+  * ef03fd6f993 radv: call nir_copy_prop() after load-store
+    vectorization
+  * f26514304f2 aco/ra: prevent underflow register for p_create_vector
+    operands
+  * 5798ecdda92 compiler/nir: check whether var is an input in
+    lower_fragcoord_wtrans
+  * ee9e5d5fa0c intel: Add 2 ADL-S pci-ids
+  * 7070bbf886b driconf: set vk_x11_strict_image_count for Metro: Exodus
+  * dc0d24f7dad anv: handle spirv parsing failure
+  * a1c1c1ce29e intel/dev: Add device info for ADL GT2
+  * 13b2ff15732 intel/isl: Add Wa_22011186057 to disable CCS on ADL GT2
+    A0
+  * 8ca726ae1d0 lavapipe: fix fencing when submitting multiple cmdbufs
+  * 120ad4b2609 zink: stop overwriting buffer map pointers for stream
+    uploader
+  * e2992b0242f anv: fix perf query pass with command buffer batching
+  * f52babe907f intel/mi_builder: fix resolve call
+  * a78476b7767 i915g: add HW atomic counters as unsupported
+  * 2a0fd5bebbc aco/scheduler: Fix register demand computation for
+    upwards moves
+  * b765f7c5ad4 aco/scheduler: Fix register demand computation for
+    downwards moves
+  * 3a322a12994 isl: require hiz for depth surface in
+    isl_surf_get_ccs_surf
+  * abd02124ecd glsl: add missing support for explicit components in
+    interface blocks
+  * 6e47e0f90f5 .pick_status.json: Update to
+    0c30ad402d0011c957576681d2aaf9b2e68c318e
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 May 2021 02:01:22 +0200
+
 mesa (21.1.0+git2105122139.6ba5eb1ecb6~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
