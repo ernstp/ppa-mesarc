@@ -1,3 +1,18 @@
+mesa (21.1.0+git2105171821.9ed009f4741~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9ed009f4741 aco/ra: initialize temp_in_scc earlier
+  * 4f7bb0d5d96 aco/ra: also prevent overflow register for
+    p_create_vector operands
+  * 59653e1721f anv: require rendering support for blit destination
+    feature
+  * 28fca0b42a6 vulkan: Support 32-bit "weak" symbols on MSVC
+  * 484f34c7024 glsl: create validate_component_layout_for_type() helper
+  * b69466281fc .pick_status.json: Update to
+    6d56c16c9ceb864af6bb71d0bdcdd21064d94307
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 May 2021 20:26:07 +0200
+
 mesa (21.1.0+git2105162219.b62ba79be77~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
