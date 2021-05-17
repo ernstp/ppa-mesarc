@@ -1,3 +1,53 @@
+mesa (21.2.0~git2105171958.958f11d5373~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 958f11d5373 midgard: Fix type for vertex_builtin_arg() and
+    compute_builtin_arg().
+  * 54258555627 panfrost: Limit the number of active batch to 32
+  * a6af15aa5b6 panfrost: Simplify the dependency tracking logic
+  * 82571f977ae panfrost: Avoid duplicate entries in access->readers
+  * 3c684d10be8 panfrost: Don't freeze blit batches
+  * 3e74bbf631f i915g: fix implicit fallthrough
+  * 6d56c16c9ce radv: dump the trap handler shader with
+    RADV_DEBUG=metashaders
+  * 77d04989135 panfrost: Fix major flaw in BO cache
+  * 22a750465d9 ci: Build asahi in meson-gallium job
+  * 2a46fcaf025 Revert "CI: Disable all Panfrost/AMD/Iris automatic
+    jobs"
+  * fb31dda9093 aco/ra: use flags instead of booleans for
+    update_renames()
+  * 6fd6374e276 aco/ra: fix get_reg_for_operand() with vector operands
+  * c08bfa110cc aco/ra: fix get_reg_for_operand() when the blocking var
+    is a vector
+  * bc95d55e1f4 aco/ra: fix get_reg_for_operand() with no free registers
+  * 4e459df0fcb aco/ra: initialize temp_in_scc earlier
+  * d517996ae55 zink: add even more validation for linear images before
+    creation
+  * df6ab67e992 zink: populate images with u_blitter if transfer_dst
+    isn't available
+  * 6a67315d8a6 zink: don't multiply cube array image layers
+  * b960169257e aco/ra: also prevent overflow register for
+    p_create_vector operands
+  * dc525cbe0c3 ci: remove expected robustness2 fails for Renoir
+  * 3828081c929 util: add thread-safe version of idalloc
+  * 6fed423ade7 gallium/u_threaded: don't reference resource in
+    pipe_transfer
+  * 6ac085966bb gallium/u_threaded: always map idle buffers
+    unsynchronized
+  * e8b27794554 gallium/u_threaded: don't invalidate idle buffers
+  * 89bd06f57a1 gallium/u_threaded: add driver-internal flush tracking
+    for buffer lists
+  * e9c41b32148 gallium/u_threaded: add buffer lists - tracking of
+    buffers referenced by tc
+  * 88b97567d41 gallium/u_threaded: query shader resource limits
+  * 39447cc8944 gallium/u_threaded: track whether TCS, TES, or GS have
+    ever been used
+  * ec77a2d43a1 gallium/u_threaded: add callbacks and documentation for
+    resource busy checking
+  * ab58fce7b92 gallium/u_threaded: merge draws in tc_call_draw_single
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 May 2021 20:22:40 +0200
+
 mesa (21.2.0~git2105170105.fb7be7870c2~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
