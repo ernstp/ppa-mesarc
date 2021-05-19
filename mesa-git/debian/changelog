@@ -1,3 +1,53 @@
+mesa (21.1.0+git2105191151.dd696cea548~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * dd696cea548 panfrost: Always write reloaded tiles when making CRC
+    data valid
+  * ca191e1254d panfrost: Make pan_select_crc_rt a non-static function
+  * 16c4d7357f1 radv: Use correct border swizzle on GFX9+.
+  * b22b11ffa45 etnaviv: fix vertex sampler setup
+  * 4cdf191b02c i965: export GEM handle with RDWR access rights
+  * 66dc7dbb33c iris: export GEM handle with RDWR access rights
+  * db18d9c2474 nir/opt_access: fix getting variables in presence of
+    similar bindings/desc
+  * 98fbae2cee9 .pick_status.json: Update to
+    5be00fe88abb618454e1c448e6e61c8dea49c27f
+  * f85a1f05793 nir/lower_fragcolor: Fix driver_location assignment
+  * 899f030fd3c panfrost: Fix format definitions to match gallium
+    expectations
+  * 154114bf815 midgard: Fix type for vertex_builtin_arg() and
+    compute_builtin_arg().
+  * ce8b08b7e3a i915g: fix implicit fallthrough
+  * 54bea47de9c .pick_status.json: Update to
+    e17e3df476ec0f3f537f0169ccd5488f27802bf6
+  * 896b02031bf llvmpipe: fix non-multisampled rendering to multisampled
+    framebuffer
+  * 914f4e943bc panfrost: Fix major flaw in BO cache
+  * d87dc12a41f panfrost: Relax the stride check when importing
+    resources
+  * 06f5c009da1 panfrost: Don't clobber RT0 if RTn is disabled
+  * cb7b9f08e8d aco/ra: initialize temp_in_scc earlier
+  * 3838cc60106 aco/ra: also prevent overflow register for
+    p_create_vector operands
+  * 33d52db1f0a anv: require rendering support for blit destination
+    feature
+  * ffdbd58d58e vulkan: Support 32-bit "weak" symbols on MSVC
+  * 791ef86daa7 glsl: create validate_component_layout_for_type() helper
+  * 8c9b65c8beb .pick_status.json: Update to
+    6d56c16c9ceb864af6bb71d0bdcdd21064d94307
+  * 3a0ba0f05ae venus: Fix zero-initialized fd causing apps to
+    hang/crash
+  * 3514ef15ba2 radv: Handle unnormalized samplers in YCbCr lowering
+  * 85822fb7c11 iris: Avoid sampling some MCS surfaces with clear
+  * 5df6ee6693c anv: Avoid sampling some MCS surfaces with clear
+  * e266136b383 anv: Add clear_supported to anv_layout_to_aux_state
+  * 443854ecec9 radv: call nir_copy_prop() after load-store
+    vectorization
+  * fbc49e91164 aco/ra: prevent underflow register for p_create_vector
+    operands
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 May 2021 19:22:57 +0200
+
 mesa (21.1.0+git2105171821.9ed009f4741~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
