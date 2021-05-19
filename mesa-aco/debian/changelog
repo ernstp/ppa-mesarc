@@ -1,3 +1,43 @@
+mesa (21.2.0~git2105191638.ebba3cad816~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * ebba3cad816 intel/vec4: Add support for UBO pushing
+  * 89fd196f6b5 intel/vec4: Add support for masking pushed data
+  * a881f2295f8 intel/vec4: Set up push ranges before we emit any code
+  * c35501ffe8f intel/vec4: Update nr_params in pack_uniform_registers
+  * 3d1ac996d0c intel/vec4: Add some asserts to move_push_to_pull
+  * 2db88679432 intel/vec4: Don't spill fp64 registers more than once
+  * 7138249675a anv: Push at most 32 regs for vec4 shaders
+  * c01354d5c44 anv: Support pushing shader constants
+  * 24b3e71fa90 anv: Plumb the shader into push constant helpers
+  * 3013670dfda aco: disallow SGPRs on DPP instructions
+  * 4191eb291bf d3d10umd: Avoid duplication in CreateDevice.
+  * bd161335722 d3d10sw: Add a sanity test.
+  * 54b8137141a d3d10umd,d3d10sw: Initial import.
+  * 3927a2d9463 draw: Plug leak when combining tessellation with
+    primitive assembly.
+  * 790ff1ceac8 anv: fixup physical device properties of fragment
+    shading rate
+  * 1bbbdfe590d radv: enable DCC stores on RDNA2
+  * 7bd88dfaa21 panfrost/ci: Test Panfrost on the Mali G72 GPU
+  * e77163295a3 ci: Update kernel to v5.13-rc2
+  * 250605c57d8 draw: Allocate extra padding for extra shader outputs.
+  * 0df249f542c util/primconvert: add C++ guards to header
+  * de40016d8be panfrost: Express viewport in terms of the batch
+  * c2d571934d6 panfrost: Simplify panfrost_bind_sampler_states
+  * a9a3f55519b panfrost: Mark job_index > 10000 as unlikely
+  * 24eccad4a78 panfrost: Remove silly assertion
+  * 35dfaaf1c36 panfrost: Pass batch to
+    panfrost_get_index_buffer_bounded
+  * 7561cd5825b panfrost: Deduplicate some code from indirect/direct
+    draws
+  * 4b3ac29bb9b panfrost: Move batch_set_requirements to the CSO
+  * bfd76ab5019 panfrost: Pack draw-time RSD all-at-once
+  * 8f2b2bcff48 panfrost: Hoist part of shader_reads_tilebuffer
+  * 876de2831f3 panfrost: Pull erratum workaround into own function
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 May 2021 18:50:32 +0200
+
 mesa (21.2.0~git2105171958.958f11d5373~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
