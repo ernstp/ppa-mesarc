@@ -1,3 +1,11 @@
+mesa (21.1.1+git2105192017.abac12bc758~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * abac12bc758 VERSION: bump for 21.1.1
+  * e0c130b6a92 docs: add release notes for 21.1.1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 May 2021 11:49:39 +0200
+
 mesa (21.1.0+git2105191151.dd696cea548~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
