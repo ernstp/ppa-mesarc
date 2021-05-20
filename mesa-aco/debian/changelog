@@ -1,3 +1,54 @@
+mesa (21.2.0~git2105200930.66935c1d05d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 66935c1d05d aux/trace: pipe_screen::get_dmabuf_modifier_planes
+  * bcfcd547d2a aux/trace: propagate pipe_screen::transfer_helper
+    pointer
+  * ce687c91606 aux/trace: pipe_context::is_dmabuf_modifier_supported
+  * 1f97a4ac1fa aux/trace: pipe_screen::query_dmabuf_modifiers
+  * b4929c986d8 aux/trace: support pipe_screen::query_memory_info
+  * 2e4994526a5 v3d: take TLB blit framebuffer dimensions from smallest
+    surface dimensions
+  * aa4f132d514 ci/intel: Add test jobs for dEQP.
+  * d9e64cb2d72 ci/deqp: Make DEQP_EXPECTED_RENDERER a required regex
+    for VK like for GLES.
+  * d246c31ec1a nir/algebraic: Add algebraic opt for float comparisons
+    with identical operands.
+  * 64bcfc3a170 nir/algebraic: Rearrange some logic-joined comparisons
+    and reduce
+  * adc28356462 nir/algebraic: Mark some more logic-joined comparison
+    reductions as exact
+  * 23bbf3932bb nir/algebraic: Mark some more comparison reductions
+    exact
+  * 7d85dc4f350 nir/algebraic: Equality comparison inversions require
+    sources be numbers
+  * 4246c2869c3 nir/algebraic: Invert comparisons less often
+  * 49177b9e2fc nir/algebraic: Tautology replacements require sources be
+    numbers
+  * d69ba58644d nir/algebraic: Remove some optimizations of comparisons
+    with fsat
+  * 088c7c61cfa ci: Uprev piglit to 9d87cc3d79e ("framework/replay: send
+    backend's subprocess stderr to sys.stderr")
+  * 12082905582 d3d12: Sets all SRV descriptors as data-static
+  * bb1d0025d89 d3d12: Fixes stale context bindings after copy, resolve,
+    and clear
+  * 59c22727bbb ci/freedreno: Mark two more recent intermittent a530
+    flakes.
+  * a8b96930930 iris: Prefer more GPU-based uploads for compression
+  * 88903ba64d4 isl: Add isl_aux_usage_has_compression
+  * 6dc049fdf48 docs/release-calendar: add the schedule for the 21.1
+    branch
+  * 59597f59628 docs: update calendar and link releases notes for 21.1.1
+  * 072ffbc9593 docs: update calendar and link releases notes for 21.1.0
+  * bcf65e656d4 docs: add release notes for 21.1.1
+  * 1b46c2efaec docs: add release notes for 21.1.0
+  * e894e83e478 ir3/cf: Rewrite pass
+  * 17861aff961 radeonsi: enable glsl_correct_derivatives_after_discard
+    by default
+  * 76404790288 radeonsi/nir: enable nir_opt_move_discards_to_top pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 May 2021 11:46:06 +0200
+
 mesa (21.2.0~git2105191638.ebba3cad816~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
