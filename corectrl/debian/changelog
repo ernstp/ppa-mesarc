@@ -1,3 +1,12 @@
+corectrl (1.2.0~git2105221355.655aaa7~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 655aaa7 Rework AMD fan sensors creation logic
+  * 5dc0691 Clean unused code
+  * cf5feb1 Fix fan1_input validation on fan speed rpm sensor
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 May 2021 08:39:44 +0200
+
 corectrl (1.2.0~git2105101939.49791af~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
