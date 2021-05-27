@@ -1,3 +1,55 @@
+mesa (21.2.0~git2105270705.82bd970a0cf~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 82bd970a0cf Revert "util: disable glthread in CSGO"
+  * 4a3c715bb46 virgl:Fix the leak of hw_res used as fence
+  * b8d59e68beb gallium/u_vbuf: add a fast path to skip refcounting for
+    uploaded user buffers
+  * bbbcf143118 radeonsi: clamp clear_buffer values using new util
+    helper
+  * c4d3d210248 zink: clamp clear_buffer values
+  * fb2fb0d4fed gallium/aux: add helper for pre-clamping clear_buffer
+    value to dword
+  * 8418334efe5 lavapipe: also ignore multiple pipeline barriers in
+    succession
+  * df47ed074d3 lavapipe: skip "pipeline barriers" if they're first or
+    last in a cmdbuf
+  * 08a7cfce5e7 llvmpipe: stop accessing pipe_resource::screen
+    internally
+  * 09019fb4560 llvmpipe: store a screen pointer in resource struct
+  * 621b8788bbf llvmpipe: only dump tgsi shaders if they're actually
+    tgsi shaders
+  * 9f5e4ccdb9b llvmpipe: split out scene surface init into separate
+    function
+  * a2d1b6d14f2 llvmpipe: split out scene surface info into separate
+    struct
+  * 614fcdc8c7a lavapipe: moar @optimize
+  * 5925f2ea399 llvmpipe: remove clamping to [0,1] for tri offset
+  * 26677008b9a ci/freedreno: Turn off default a530 quick_gl testing, do
+    full quick_shader.
+  * 7adb9c42e01 venus: advertise
+    VK_ANDROID_external_memory_android_hardware_buffer
+  * 47bf8be024d venus: support AHB external format for sampler YCbCr
+    conversion
+  * 78b30a06961 venus: implement
+    vn_GetMemoryAndroidHardwareBufferANDROID
+  * 7370f339531 venus: implement AHB allocation and import (part 2/2)
+  * 1743892f24f venus: implement AHB allocation and import (part 1/2)
+  * 4958ce582cf venus: refactor device memory fd import
+  * 910c0602c4a venus: implement image creation for ahb handle type
+  * 19b7b09885c venus: prepare image creation helpers for AHB
+  * 53e35f716e2 venus: fix AHB image format properties query
+  * 7f52544f6f6 venus: fix vn_GetAndroidHardwareBufferPropertiesANDROID
+  * 8c06f018a4b venus: complete the format conversion between AHB and
+    Vulkan
+  * c82e836490c venus: tiny refactor of
+    vn_android_get_gralloc_buffer_info
+  * b9ff51f7504 radv: move all game workarounds to drirc
+  * 25a6c35bbcd util/drirc: use application_name_match for the SotTR
+    RADV workaround
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 May 2021 08:40:16 +0200
+
 mesa (21.2.0~git2105200930.66935c1d05d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
