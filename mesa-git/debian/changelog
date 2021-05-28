@@ -1,3 +1,51 @@
+mesa (21.1.1+git2105271325.c2bdd37ba38~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * c2bdd37ba38 virgl:Fix the leak of hw_res used as fence
+  * f336d95d92d intel/gfx12+: Add Wa_14013840143
+  * 8d86c1937d1 zink: remove weird lod hack for texturing
+  * aa29e52067a radv: workaround incorrect depthBiasConstantFactor by
+    Path of Exile
+  * c5b414ce950 radv: add radv_absolute_depth_bias
+  * c1b937baa0f aco: fix emitting discard when the program just ends
+  * bf1b654b6ee intel/isl: Fix HiZ+CCS comment about ambiguates
+  * eea5538daa9 anv,iris: Port the D16 workaround stalls to BLORP
+  * 8786b86a440 radeonsi: disable DFSM on gfx9 by default because it
+    decreases performance a lot
+  * 9dfc038dbd8 radeonsi: add a gfx10 hw bug workaround with the barrier
+    before gs_alloc_req
+  * 5b0580bdda0 ac/gpu_info: set has_zero_index_buffer_bug for Navi12
+    too
+  * 8ec8c4d3ab8 panfrost: Increase tiler_heap max allocation to 64MB
+  * 995806af2d2 .pick_status.json: Update to
+    3179daf61393ee8a0fac943b94335b114e34873b
+  * aa3c13f5a8b panfrost: fix GL_EXT_multisampled_render_to_texture
+    regression
+  * 4e8e36e02e2 panfrost: Fix polygon list size computations
+  * 87019cb375c radv: fix fast clearing DCC if one level can't be
+    compressed on GFX10+
+  * 1dff0aa7414 aux/trace: fix set_inlinable_constants hook
+  * 01185febe44 iris: Check data alignment for copy_mem_mem
+  * 3dc91ff4b50 aux/vbuf: prevent uint underflow and assert if no vbs
+    are dirty
+  * df133b6c864 vc4: initialize array
+  * cf1c9528864 frontends/va/picture:Fix wrong reallocation even surface
+    is protected
+  * b6327f49a0b util/prim_restart: fix util_translate_prim_restart_ib
+  * 90b63f384ca iris: Don't advertise Y-tiled modifiers for scanout
+    buffers on Gfx8
+  * 1363d4f2d8b i965: Don't advertise Y-tiled modifiers for scanout
+    buffers on Gfx8-
+  * 568a8ebc8b2 i915g: Stop advertising support for indirect addressing
+    in the FS.
+  * 67168688b17 i915g: Add support for the .Absolute flag on TGSI srcs.
+  * 139205debac i915g: Disable 3D-pipeline clears.
+  * af2327b32b7 radv: Fix compatible image handle type for dmabufs.
+  * b8ef35632d7 aco: fix derivatives/intrinsics with SGPR sources
+  * f0131939571 nir/algebraic: Invert comparisons less often
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 May 2021 07:57:18 +0200
+
 mesa (21.1.1+git2105251016.d2e8b64f28c~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
