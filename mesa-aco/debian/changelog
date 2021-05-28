@@ -1,3 +1,37 @@
+mesa (21.2.0~git2105272322.a4e15017704~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * a4e15017704 mesa/st: Don't assert !unify_interfaces in the
+    passthrough edge flags case
+  * 9d28bac9d0a turnip: Make sure that SNORM blits don't clamp ambiguous
+    -1.0 values.
+  * 69df1e8650b turnip: Reorganize copy_format()'s switch statement.
+  * 8169d709c4c nv50/ir: don't optimize shl(mul_hi, a) to mul_hi
+  * e7485f12949 nv50/ir: when constant folding shl(mul, a) we need to
+    copy muls type
+  * 5e88a1caca4 panfrost: Performance configuration
+  * fece367e9e7 panfrost: Counter definitions
+  * ee669227adf st/mesa: fix clearing of 1D array textures
+  * e381bc0e671 ci/freedreno: Skip Portal 2 trace on a630, due to
+    flakiness
+  * 380742b9f32 radv: fix missing default state for DB_DFSM_CONTROL
+  * caa99c2064e zink: improve unsupported feature warning message
+  * 76138372061 zink: use actual const for const offset
+  * 3179daf6139 v3dv: add v3dv_GetImageSparseMemoryRequirements back
+  * c289e88809a docs: drop clayton from intel-ci notice
+  * e710b9bd7bc docs: update another IRC reference
+  * bc1240ce94c docs: update another IRC reference
+  * 6cd37e4bf0f Partial revert of "ci: Add a manual job for tracking the
+    performance of Freedreno"
+  * e531755451b v3dv: trivially handle
+    VK_STRUCTURE_TYPE_EXPORT_MEMORY_ALLOCATE_INFO_KHR
+  * 597b448967b v3dv: implement VK_KHR_dedicated_allocation
+  * e60b009271f v3dv: keep track of whether an image may be backed by
+    external memory
+  * d87afc1acc3 v3dv: implement VK_KHR_get_memory_requirements2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 28 May 2021 07:53:45 +0200
+
 mesa (21.2.0~git2105270705.82bd970a0cf~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
