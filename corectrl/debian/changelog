@@ -1,3 +1,10 @@
+corectrl (1.2.0~git2105282059.be1fa69~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * be1fa69 Log data format errors of fan sensors when data is read
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 May 2021 17:35:05 +0200
+
 corectrl (1.2.0~git2105221355.655aaa7~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
