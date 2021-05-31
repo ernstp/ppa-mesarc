@@ -1,3 +1,42 @@
+mesa (21.2.0~git2105311658.5a4384c2bc4~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5a4384c2bc4 kmsro: Fix confusing comma expression
+  * 9ff54d408ba Revert "zink: call tc_driver_internal_flush_notify() on
+    flush"
+  * 6dd02a5139a zink: stop using util_set_vertex_buffers_mask()
+  * f4bae3fe5e1 zink: ref vertex buffers during set_vertex_buffers
+  * 962b1627661 zink: update scissor only when necessary
+  * dbc59aedb92 zink: only update viewport state when necessary
+  * 59b6f5db360 zink: only rebind vertex buffers when necessary
+  * 906371153cb zink: handle rebinds for vertex buffers
+  * 6d6ef97035a zink: only rebind pipelines when necessary
+  * 1a7045acafd zink: mark some draw functions inline
+  * c2973213d76 zink: remove barriers/refs from descriptor cache
+  * 62ad23239c2 zink: reapply program refs automatically
+  * a64ef1cd126 zink: reapply resource/surface refs after app flushes
+  * 234e1b7356e v3dv: implement VK_KHR_device_group
+  * c672b238574 v3dv: implement interactions of VK_KHR_device_group with
+    VK_KHR_swapchain
+  * bf60ba6e7f9 v3dv: create a helper for image creation
+  * f07c797e939 v3dv: implement vkCmdDispatchBase
+  * 816be7d46fc radv: enable RADV_DEBUG=invariantgeom for Monster Hunter
+    World
+  * f285a1220ea asahi: Implement scissors and scissor to viewport
+  * 6fbc1cb52a0 asahi: Update viewport descriptor depth fields
+  * f43bb36cacc asahi: Enable depth culling
+  * 9392e2b2754 asahi: Add unknown bits seen with the GL driver
+  * 5de49375ecd asahi: Expose PIPE_CAP_CLIP_HALFZ
+  * acfeba4010f agx: Add scissor upload BO
+  * 6d9242e109e asahi: Skip draws if the scissor culls everything
+  * 861109e4413 asahi: Mark scissor dirty if rast->scissor changes
+  * be5ea29237c asahi: Track scissor states
+  * 38a9c59377c asahi: Dirty track viewport descriptor
+  * b659c53f95f asahi: Defer viewport pack
+  * f99f7e70d7b asahi: Add scissor enable bit
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 May 2021 17:35:45 +0200
+
 mesa (21.2.0~git2105272322.a4e15017704~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
