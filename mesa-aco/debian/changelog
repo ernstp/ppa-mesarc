@@ -1,3 +1,45 @@
+mesa (21.2.0~git2106020814.67af3b6bba6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 67af3b6bba6 ci/lava: Switch LAVA jobs to x86 runners
+  * 09935c0ddee freedreno/afuc: Print uintptr_t with PRIxPTR
+  * 148723ce641 ci/android: Update to building for SDK 29 by default.
+  * 0d8e431871b android: Fix ELF TLS support.
+  * 75a9cb1033a util: Add a helper macro for defining initial-exec
+    variables.
+  * 4a68b16a524 aux/draw: if pipe_draw_info::index_bias_varies is not
+    set, ignore index_bias for N>1
+  * 2ee09122738 aux/trace: dump resource for samplerview and surface
+  * d058ce7e880 docs/gallium: Document the index buffer format
+    convention
+  * a86deb1e72e si: Use Rn_UINT instead of In_UINT for index buffers
+  * 0790bc41ed6 lima: Use Rn_UINT instead of In_UINT for index buffers
+  * 3058545d949 freedreno: Use Rn_UINT instead of In_UINT for index
+    buffers
+  * b92a6edf824 etnaviv: Use Rn_UINT instead of In_UINT for index
+    buffers
+  * 1560f24da51 v3d: Use Rn_UINT instead of In_UINT for index buffers
+  * a0b74bad623 vc4: Use Rn_UINT instead of In_UINT for index buffers
+  * 24b03aeecc3 zink: ci updates
+  * e3192367ac1 zink: optimize buffer rebinds
+  * 31083444032 zink: unify more resource bind count tracking code
+  * 91d2fc191f6 zink: unify code for updating res->bind_count values
+  * bfdd1d8d890 zink: add a second descriptor manager
+  * 80bf7bdcef6 panfrost/ci: Report flakes on IRC
+  * 9283875f930 ci: Move the flakes channels to OFTC
+  * e414718aef2 ci: Add known-flake handling for the IRC flake reports
+  * 5515d3aec5e anv: fix availability for copying timestamp query
+    results
+  * 478ae974a15 panfrost: Eliminate reserve_* functions
+  * ae93796cc0a panfrost: Elucidate thread group split field
+  * 71f069bd7ae panfrost: Bubble up errors
+  * ff3e54b4322 panfrost: Minor changes to draw_vbo
+  * 8b305ce32a0 panfrost: Write translate_index_size better
+  * 8f13eb812db panfrost: Dirty track stack sizes
+  * e95abff4de4 panfrost: Don't allocate empty varying buffer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 02 Jun 2021 10:13:40 +0200
+
 mesa (21.2.0~git2105311658.5a4384c2bc4~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
