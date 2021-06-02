@@ -1,3 +1,54 @@
+mesa (21.1.1+git2105312248.b84b2bcd758~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * b84b2bcd758 radv: enable RADV_DEBUG=invariantgeom for Monster Hunter
+    World
+  * c53194d8766 util/prim_restart: revert part of bad fix
+  * 524341f1092 svga: fix texture rectangle sampling when no sampler
+    view declaration is defined
+  * 7d95e4f406e svga: Use shader_key info to declare resources if TGSI
+    shader is missing it
+  * fda533a4c0e svga: Add target and sampler_return_type info into
+    shader key
+  * de318a580ff .pick_status.json: Update to
+    1199d86b2cccc38a101e63bdf9b60a7391f96092
+  * 70aa6c66216 zink: use actual const for const offset
+  * 96a12c97abb .pick_status.json: Update to
+    761383720617b46617bd278ec6015c9520f43f5c
+  * 5b46963935b virgl:Fix the leak of hw_res used as fence
+  * 3cda0c35bf9 intel/gfx12+: Add Wa_14013840143
+  * 7ce1dcb5eb2 zink: remove weird lod hack for texturing
+  * 134d32a218c radv: workaround incorrect depthBiasConstantFactor by
+    Path of Exile
+  * 77c7f65e627 radv: add radv_absolute_depth_bias
+  * be1dcc875ad aco: fix emitting discard when the program just ends
+  * 8bb7b888581 intel/isl: Fix HiZ+CCS comment about ambiguates
+  * fbc0a0b36d2 anv,iris: Port the D16 workaround stalls to BLORP
+  * ed48415d105 radeonsi: disable DFSM on gfx9 by default because it
+    decreases performance a lot
+  * ba88b06a7cd radeonsi: add a gfx10 hw bug workaround with the barrier
+    before gs_alloc_req
+  * ec77157deac ac/gpu_info: set has_zero_index_buffer_bug for Navi12
+    too
+  * a12b11ef0e9 panfrost: Increase tiler_heap max allocation to 64MB
+  * a22ff198337 .pick_status.json: Update to
+    3179daf61393ee8a0fac943b94335b114e34873b
+  * f7e7bea4903 panfrost: fix GL_EXT_multisampled_render_to_texture
+    regression
+  * c0c43709eaf panfrost: Fix polygon list size computations
+  * 90c441eceb3 radv: fix fast clearing DCC if one level can't be
+    compressed on GFX10+
+  * 284299176ea aux/trace: fix set_inlinable_constants hook
+  * 3bb1a795985 iris: Check data alignment for copy_mem_mem
+  * 08aca803aac aux/vbuf: prevent uint underflow and assert if no vbs
+    are dirty
+  * 6e2514cd1bb vc4: initialize array
+  * 0a41394453c frontends/va/picture:Fix wrong reallocation even surface
+    is protected
+  * a0cfc718fbc util/prim_restart: fix util_translate_prim_restart_ib
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 02 Jun 2021 10:17:19 +0200
+
 mesa (21.1.1+git2105271325.c2bdd37ba38~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
