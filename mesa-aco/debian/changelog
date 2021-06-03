@@ -1,3 +1,42 @@
+mesa (21.2.0~git2106031134.e64e5e82ed8~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * e64e5e82ed8 docs: add links to documented drivers
+  * db8b1b788d1 docs: clean up freedreno links
+  * 2c9bf33737f docs: split out layered driver to its own list
+  * b17d504baaf docs: clean up openswr links
+  * 8cc0b75e71a docs: clean up software-drivers list
+  * 65258457cb3 docs: move swrast to deprecated drivers list
+  * 6d2a3e6da2f docs: clean up list of deprecated systems
+  * 601a7bd2b2d docs: rename vmware-guest article
+  * 54e7353fa60 docs: update llvm requirement
+  * d8c46655af9 docs: update list of apis to match website
+  * bd68ea37029 docs: do not list all gles major versions
+  * 0e856b95c59 loader: allocate VRAM in display GPU in case of prime
+  * 55d1b8f929b glx: create DRI screen for display GPU incase of prime
+  * dac2c210d64 glx: Keep display fd open for prime
+  * 41eaa07823a turnip/kgsl: Fix to build on android.
+  * 8baa77c8139 radeonsi: fix encryption check for buffers
+  * b377da91225 radeonsi: allow write-only mapping of encrypted textures
+  * fcdfe91efa3 frontend/dri: fix bool/int comparison
+  * 5e6f92f82cb frontend/dri: set PIPE_BIND_PROTECTED later
+  * 736e24bdce3 venus: use vk_default_allocator
+  * 567a18dade4 anv: use vk_default_allocator
+  * 3ba3681b58f tu: use vk_default_allocator
+  * 8615653c0eb v3dv: use vk_default_allocator
+  * 7ebd658e283 radv: use vk_default_allocator
+  * d3acc734555 vulkan/util: add vk_default_allocator
+  * 5054f74ce1f venus: initial AHB support for multi-planar format
+  * 380ac288911 ac: import performance counters from RadeonSI
+  * 7af915b4a0c radv: enable RADV_DEBUG=invariantgeom for SotTR
+    DX11/DX12 versions
+  * 06ae2723d10 intel/vec4: Also use MOV_FOR_SCRATCH for swizzle
+    resolves
+  * 889a8df5bda venus: enable wsi image ownership transfer for common
+    wsi
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 03 Jun 2021 13:48:15 +0200
+
 mesa (21.2.0~git2106020814.67af3b6bba6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
