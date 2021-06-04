@@ -1,6 +1,12 @@
 mesa (21.1.2+git2106022205.330bb9df1a7~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Jun 2021 15:37:49 +0200
+
+mesa (21.1.2+git2106022205.330bb9df1a7~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
   * 330bb9df1a7 zink: ci updates
   * 3e59d54daad VERSION: bump for 21.1.2
   * 1a75caf7923 docs: add release notes for 21.1.2
