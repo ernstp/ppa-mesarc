@@ -1,3 +1,46 @@
+mesa (21.2.0~git2106041458.cbaba3f1b98~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cbaba3f1b98 docs: add VK_EXT_extended_dynamic_state2 features.txt
+    entry
+  * 0d031d1da34 anv: toggle on VK_EXT_extended_dynamic_state2
+  * 75ad0e4b087 anv: support blending logic op dynamic state
+  * e0c60553512 anv: centralize vk_to_intel_logic_op array
+  * 1c718952c8d anv: support primitive restart enable dynamic state
+  * 496b5084035 anv: support depth bias enable dynamic state
+  * 4d531c67dfd anv: support rasterizer discard dynamic state
+  * 284290a876a anv: introduce new dynamic states
+  * 56714238ba6 radeon/vcn/enc: use surface swizzle mode instead of
+    linear
+  * 700d4ce68f4 frontends/va: Derive image from interlaced buffers for
+    h26[4/5]encode
+  * d198e26a1eb broadcom/common: move v3d_tiling to common
+  * a2d6a5f8852 zink: Fix MacOS compiling issues
+  * 3102892fb8f gallium/dri: Guard DRI driver global variables on MacOS
+    if Zink is enabled.
+  * 18e8ec5f37f zink: Correct compiler issue with have_moltenvk member
+    having been moved.
+  * 6add9b2753f v3dv: expose KHR_relaxed_block_layout
+  * a9b51a4a3a6 v3dv: increase number of supported SSBOs
+  * e4e4b6bc16d android: aco: add aco_optimizer_postRA.cpp to
+    Makefile.sources
+  * 60e134e83ef android: ac: add include src/util path
+  * 2dea82fc073 android: ac: add ac_nir_lower_ngg.c to Makefile.sources
+  * 8e10d548048 intel: Rename GFX 12.5 to XE_HP
+  * 0e94b17dd13 docs/install: remove one extra when
+  * b5bcc490870 swr: fix uninitialized variable warnings
+  * 10a3e388a44 zink: fix win32 build
+  * ae4ef6491db venus: query experimental features in one call
+  * d08930f2fa2 venus: support AHB prop query with host dma_buf size
+  * d10d09e7ad4 venus: update to the latest venus protocol
+  * 34e4c1d2be7 gitlab-ci: enable testing on Intel Kaby Lake as
+    experimental
+  * 551d7032dfc venus: silence compiler warnings
+  * a8e75bb73c6 Revert "virgl: Cache depth and stencil buffers"
+  * aff92f50c6f ac: add ac_thread_trace::data
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Jun 2021 15:23:07 +0200
+
 mesa (21.2.0~git2106031134.e64e5e82ed8~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
