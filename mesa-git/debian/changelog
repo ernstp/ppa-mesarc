@@ -1,3 +1,32 @@
+mesa (21.1.2+git2106052310.c5b2d57d33f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * c5b2d57d33f radeonsi: add a gfx10 bug workaround for NOT_EOP
+  * 90bcb5a11a4 zink: Correct compiler issue with have_moltenvk member
+    having been moved.
+  * 806009f18e4 docs/install: remove one extra when
+  * 627c3da8dae radeonsi: fix encryption check for buffers
+  * 29b19d83d9d frontend/dri: fix bool/int comparison
+  * dd5aa66b9ea frontend/dri: set PIPE_BIND_PROTECTED later
+  * 87ab76f27c6 radv: enable RADV_DEBUG=invariantgeom for SotTR
+    DX11/DX12 versions
+  * 13894695217 intel/vec4: Also use MOV_FOR_SCRATCH for swizzle
+    resolves
+  * 20c957803c0 util/format: Change the pointer offset.
+  * f74f86547b3 aco: don't create 4 and 5 dword NSA instructions on
+    GFX10
+  * 0d224336f78 aco: do not clause NSA instructions
+  * 33681771435 llvmpipe: add the interesting bit of cpu detection to
+    the cache.
+  * 9f2d803317b sparc: Avoid some redefinition warnings
+  * 5ac128a23c2 panfrost: Use first_tiler to check if tiling is needed
+  * ff4455af781 anv: fix availability for copying timestamp query
+    results
+  * b6c9c31a899 .pick_status.json: Update to
+    db83dc619c96c35a039f2d8a32e1a179c0f00d64
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Jun 2021 09:48:49 +0200
+
 mesa (21.1.2+git2106022205.330bb9df1a7~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
