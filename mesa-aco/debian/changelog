@@ -1,3 +1,48 @@
+mesa (21.2.0~git2106070921.cd9be8741ff~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cd9be8741ff radeonsi: dirty msaa_config on rs->multisample_enable
+    change
+  * 017a1509842 v3dv: expose VK_KHR_storage_buffer_storage_class
+  * 71b2ae66c22 v3dv: document VK_KHR_relaxed_block_layout as
+    implemented
+  * 29e3a11d78f d3d12: Add mechanism for D3D12 Adapter Selection
+  * 108f34a165a nv50: expose GL ES 3.1 for nva3+ hardware
+  * 73a49c84d79 nv50: expose images/buffers/compute
+  * 503d97445a9 st/mesa: allow hardware to claim ES 3.1 without hw
+    indirect draws
+  * 08fe7d72d14 mesa/get: allow image/buffer/atomic variables to be
+    fetched in es3.1
+  * a5379ef4a7e st/mesa: properly encode OES_geometry_shader requirement
+  * 584799d6a3c mesa: relax ES 3.1 compute shader requirements
+  * 00c46fec432 st/mesa: avoid enabling image/buffer/compute extensions
+    for weak hardware
+  * 7d49a6f23c4 nouveau: improve video limit reporting
+  * d50e43c8a17 vdpau: allow state tracker to report a lower number of
+    macroblocks
+  * c7e877b0bfd nvc0: fix 3d images
+  * 729020c7e09 nv50: fix streamout queries
+  * c51bdac7420 v3dv: Fix assert.
+  * 5bc47c9cc2e venus: unify VkNativeBufferANDROID and AHardwareBuffer
+    image create info
+  * 3a894d00bc2 venus: refactor gralloc buffer and drm modifier
+    properties query
+  * 0e2293a52b3 agx: Handle load_back_face_agx
+  * c21168a26c2 agx: Lower front face to back face
+  * 75cafd84722 agx: Pack SR immediate
+  * 307b8f1b2f2 agx: List sr enum in Python
+  * cc8fec8b74b agx: Generate enums from Python
+  * 223476aff32 agx: Model get_sr
+  * f70068583cd asahi: Mark special fragment inputs as sysvals
+  * c5098789718 nir: Add nir_intrinsic_load_back_face_agx
+  * cac88b5f060 freedreno/regs: split old/not used phy registers to
+    separate DB
+  * 80b1e042e48 freedreno: Don't return a flushed batch
+  * ad375d05797 freedreno: Fix typo
+  * db83dc619c9 i915: Implement __DRI2_FLUSH version 4
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Jun 2021 09:45:20 +0200
+
 mesa (21.2.0~git2106041458.cbaba3f1b98~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
