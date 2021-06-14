@@ -1,3 +1,45 @@
+mesa (21.2.0~git2106140826.42b351370da~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 42b351370da v3dv: handle Vulkan 1.1 feature and property queries
+  * 1a773c00097 turnip: add missing VKAPI_ATTR/CALL
+  * ce04fd10b88 ci: add crocus to the build tests
+  * f3630548f1d crocus: initial gallium driver for Intel gfx 4-7
+  * 8da92b5c0a3 intel/compiler: add flag to indicate edge flags vertex
+    input is last
+  * 5f03570eaa8 intel: reorder base program key.
+  * 4de8ba15b47 intel/decode: handle gen4/5 WM state fragment shaders
+  * 11d3cebab49 st/mesa: also disable other int textures
+  * 0aa6674389f freedreno/a6xx: Improve UBWC demotion logic
+  * 0c3079ce2d0 freedreno/a6xx: Handle non-UBWC surface views
+  * 2964f32cc9d freedreno/a6xx: Fix r16_snorm blits
+  * ed1e729aa08 freedreno/ci: Sort a630 piglit xfails
+  * b5d344c3af8 zink: move extension function verification to when it is
+    used
+  * a0122385f07 anv: fix Android WSI VkFence
+  * aa14851340f nv50: use the no-mipmap texture type for 2d ms views
+  * 5e4ff4ef1ff venus: add support for external semaphores on Android
+  * e2ac01aaac8 venus: add support for external fence on Android
+  * 74a0c0c08bd venus: update venus-protocol headers
+  * 823d889b21c venus: simplify vn_renderer_sync creation
+  * 517828784c4 venus: move vn_renderer_sync_ops to vn_renderer
+  * eddbb3193f3 ci/iris: Enable piglit testing on AML-Y.
+  * a042211bcbb aux/cso: set flatshade_first onto vbuf when binding
+    rasterizer
+  * f679ba562c8 util/vbuf: add flatshade_first to vbuf context and api
+  * 2432455390a util/primconvert: add function for setting
+    flatshade_first
+  * ca5131638d9 aux/cso: store flatshade_first state from rasterizer
+  * e23b55c3f02 i965: Use nir_lower_passthrough_edgeflags
+  * eff418fe577 nir/edgeflags: update outputs written when lowering edge
+    flags.
+  * 00dc4e0d832 intel/isl: Use a 4D physical total extent for size
+    calculations
+  * dc764916d9c intel/isl: Make tile logical extents four dimensional
+  * a4dafe1fadd intel/isl: Make the offset helpers four dimensional
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Jun 2021 09:14:44 +0200
+
 mesa (21.2.0~git2106070921.cd9be8741ff~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
