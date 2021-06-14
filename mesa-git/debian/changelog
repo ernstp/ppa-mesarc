@@ -1,3 +1,31 @@
+mesa (21.1.2+git2106101331.c0754a1fc37~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * c0754a1fc37 zink: fix caching of shader variants with inlined
+    uniforms
+  * 9ce9cbecad1 radv: do not launch an IB2 for secondary cmdbuf with
+    INDIRECT_MULTI on GFX7
+  * 6084c735752 util/vbuf: fix buffer overrun in attribute conversions
+  * 1f5c2d2898c classic/xlib: Fix the build after !9817
+  * d9c4ac6c046 aco: use v1b/v2b for ds_read_u8/ds_read_u16
+  * a72f9745a71 aco: fix emitting literal offsets with SMEM on GFX7
+  * e31f9c0883b aco: fix range checking for SSBO loads/stores with SGPR
+    offset on GFX6-7
+  * 23cb39dc66f freedreno/ir3: Fix use after free
+  * 3c7b57988f5 anv: Handle OOM in the pinned path in anv_reloc_list_add
+  * b03dbc2d895 aco/ra: Fix off-by-one-error in print_regs
+  * 23432781b00 radv: emit PA_SC_CONSERVATIVE_RASTERIZATION_CNTL only on
+    GFX9+
+  * deb5aafdda5 egl: zero is a valid fd
+  * f5f9e42e5ef winsys/amdgpu: don't read bo->u.slab.entry after
+    pb_slab_free
+  * 14755c8a867 radeonsi: dirty msaa_config on rs->multisample_enable
+    change
+  * 82c059f71ed .pick_status.json: Update to
+    f884c2e3be363903a59dbee01868c7ad0bf0f346
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Jun 2021 09:18:20 +0200
+
 mesa (21.1.2+git2106052310.c5b2d57d33f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
