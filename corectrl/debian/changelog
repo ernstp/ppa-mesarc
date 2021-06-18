@@ -1,3 +1,10 @@
+corectrl (1.2.0~git2106161324.d31dc6b~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * d31dc6b Format code
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Jun 2021 19:16:29 +0200
+
 corectrl (1.2.0~git2105282059.be1fa69~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
