@@ -1,3 +1,30 @@
+mesa (21.1.3+git2106181835.07ebfa36c89~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 07ebfa36c89 VERSION: bump for 21.1.3 release
+  * 11ff9f39f41 docs: add release notes for 21.1.3
+  * 98d235a60d4 travis: Download XQuartz from GitHub.
+  * 61d145ba790 util: Zero out all of mask in util_set_thread_affinity
+  * cd306105a11 anv: Clear all pending stall after pipe flush
+  * a13c8e9cc2a radv: Allow DCC images to be compressed with foreign
+    queues.
+  * a48779fffa6 radv: Actually return correct value for read-only DCC
+    compressedness.
+  * bd6bc1165a9 radv: Don't skip barriers that only change queues.
+  * 869a3193133 zink: fix typo that's definitely not at all embarrassing
+    or anything like that
+  * 97c35a1932c zink: use scissor region for discarding clears during
+    blit
+  * 14e94e44581 llvmpipe: fix edge-rule logic for lines
+  * 575b3a63141 radv: fix aligning the image offset by using align64()
+  * 27681b45a33 svga: Initialize pipe_shader_state for transform shaders
+  * fe5b61abd0d .pick_status.json: Update to
+    561f9ae74b2b7da06bb4830aaca8d017a3dd2746
+  * c2e611e1a45 zink: fix caching of shader variants with inlined
+    uniforms
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Jun 2021 19:20:38 +0200
+
 mesa (21.1.2+git2106101331.c0754a1fc37~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
