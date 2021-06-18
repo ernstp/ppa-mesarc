@@ -1,3 +1,54 @@
+mesa (21.2.0~git2106181827.977355c6e5e~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 977355c6e5e radv: fix dynamic culling and depth/stencil related
+    dynamic states
+  * 651c6b16ff0 radv: move pipe_misaligned and l2_coherent image checks
+    to flags set on init
+  * e1af22d9dd7 radeon/vcn: allocate non-tmz context buffer for VCN2+
+  * 796358e2f56 radeon/vcn: move calc_dpb_size into create_decoder
+  * b97dedd365f docs/isl: Add detailed documentation about CCS
+    compression
+  * 6b15ce9fa2d docs/isl: Add detailed documentation about tiling on
+    Intel GPUs
+  * 0f6ebd2b732 docs/isl: Add detailed documentation about isl formats
+  * 3894e42590a docs/isl: Document ISL's units
+  * d07ec294bb3 isl: Document more members of isl_surf
+  * 831750b40b6 docs: Begin documenting ISL
+  * d3a63149dad zink: remove inlinable_uniforms_dirty_mask
+  * 78f820acd7d zink: remove duplicated bitflag filtering for inline
+    uniforms
+  * 60348360a2d radv: create only one pipeline for decompressing
+    depth/stencil images
+  * 213c4c5f44f radv: always decompress both aspects of a depth/stencil
+    image
+  * 50233d0daa3 radv: reject binding buffer/image when the device memory
+    is too small
+  * 66dbd16f38e radeonsi: skip instance_count==0 draws on <= GFX9
+  * 2624765e66e nvc0/ir: Initialize Limits members in constructor.
+  * 5f771134ad0 intel/vec4: Add missing break statement.
+  * 2b3fc26da8b i915g: Switch to using nir-to-tgsi.
+  * 934d2c8f7f5 i915g: Handle fragment depth being in OUT[1] not OUT[0].
+  * 026452fe466 nir_to_tgsi: Support integer sysvals on !CAP_INTEGERS
+    hardware.
+  * baa8d33908c nir_to_tgsi: Fix internal handling of NIR uints for
+    !CAP_INTEGERS
+  * 47804f53f99 nir: Do peephole select on other instructions if the
+    limit is ~0.
+  * aba8b6675ae nir/lower_int_to_float: Make sure the cursor is in the
+    right spot.
+  * 31ab2735dbc i915g: Allow fragment coord conventions TGSI properties
+    to be set.
+  * 942f62a9b28 i915: Drop assertion failure about seeing each const
+    decled once.
+  * 7378c647927 i915: Disable vertex texturing and delete the code.
+  * 87f35032a66 anv: enable multi-planar support for drm format modifier
+  * ec70092d55c anv: support multi-planar format in
+    add_all_surfaces_explicit_layout
+  * 345a4e98710 anv: fix some log formats
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Jun 2021 19:17:02 +0200
+
 mesa (21.2.0~git2106140826.42b351370da~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
