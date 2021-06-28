@@ -1,3 +1,58 @@
+mesa (21.2.0~git2106282012.e094f75bd0b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * e094f75bd0b intel: PAGE_SIZE used in allocators shouldn't be defined
+    on FreeBSD
+  * 49e8b77fd9a intel: struct bitset is renamed to brw_bitset
+  * 91b83dce0a0 util: Removed unused statement from FreeBSD build
+  * 32b94df23e1 util: replaced ENODATA with ENOATTR for non-Linux
+    systems
+  * d8bbb9daa20 util/vbuf: flag fallback_always if any prim types are
+    missing from restart modes
+  * 00272aa4a1b util/vbuf: always claim support for PATCHES in restart
+    modes
+  * fd5293cc439 turnip: Short-circuit if ladder generation for constant
+    index SSBO/UBOs.
+  * 0afab39af9b nir: Add a helper for chasing movs with
+    nir_ssa_scalar().
+  * 9133999430e ir3/sched: Speed up live_effect
+  * 56dc84b95cd freedreno/computerator: Fix local_size typo
+  * 502b06c4f50 nir/opt_load_store_vectorize: fix check_for_robustness()
+    with deref access
+  * 86fe8db4aae anv: expose primary node to VK_EXT_physical_device_drm
+    even when VK_KHR_display is not enabled
+  * 24292cc003a radeonsi: move the accepting code into the bbox cull
+    branch in prim discard CS
+  * b141e502827 radeonsi: add optimal multi draws and draw-level
+    splitting for prim discard CS
+  * 81365c86f95 radeonsi: fix issues with draw-level splitting for the
+    prim discard CS
+  * 9fa0d2cf350 radeonsi: change how the prim discard CS is enabled and
+    splitting limits
+  * 06da7113508 radeonsi: remove the GDS variants of compute-based
+    primitive discard
+  * 2cf189cc88e intel/fs: use stack for temporary array
+  * 5c66fb7e6e5 intel/blorp: initialize BLEND_STATE using braced
+    initializer list
+  * 5c5423e6eef intel/tools: fix potential memory leaks
+  * 14227b3364c intel/tools: fix invalid type in argument to printf
+    format specifier
+  * f2a3c9de677 intel/tools: fix int-to-pointer/pointer-to-int cast
+    warnings on 32-bit
+  * 53c49ce41f3 intel/tools: fix left shift overflow on 32-bit
+  * d19cf7d5721 anv: fix potential integer overflows
+  * 365c7cc87cb intel/decoder: add assert for register size
+  * 11528b621cc mesa/shaderapi: add an optional shader override
+    mechanism
+  * 5582c52a055 mesa/shaderapi: change construct_name signature
+  * 9c25107495a Update libva requirement
+  * fb586a8e3c7 mesa: lower GL_CLAMP in texture and sampler functions
+    instead of st/mesa
+  * 8403e068d42 mesa: add IsBorderColorNonZero to skip border color
+    update for st/mesa faster
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 28 Jun 2021 21:32:21 +0200
+
 mesa (21.2.0~git2106181827.977355c6e5e~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
