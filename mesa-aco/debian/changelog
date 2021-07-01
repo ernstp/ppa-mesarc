@@ -1,3 +1,45 @@
+mesa (21.2.0~git2107011357.669b6889e4b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 669b6889e4b gallium/u_threaded: do not apply start twice
+  * 28e1b02a6f1 radv: disable DCC for DOOM 2016 and Wolfenstein II
+  * d9c0687a542 zink: drop getenv hacking now that gallium is fixed.
+  * 75a82465631 gallium/sw: add sw_vk bit to avoid having to futz with
+    env vars for lavapipe
+  * ed123a03be1 radv: enable VK_KHR_shader_subgroup_uniform_control_flow
+  * a9c4a31d8d8 aco: handle NIR loops without breaks
+  * fd5c787958c ci: update VK-GL-CTS to 1.2.6.2
+  * 0c09498fe9e Revert "CI: Disable LAVA devices for maintenance"
+  * 9507705693a turnip/kgsl: new flag TU_USE_KGSL
+  * 73c71a37f43 venus: fix AHB VkBuffer memory requirement
+  * 4f2b98dc400 venus: handle ahb backed VkBuffer creation properly
+  * 3527146a26b venus: prepare vn_CreateBuffer for AHB
+  * 0ea726b5fdf venus: add more logs for Android WSI debugging
+  * 5951d2abacd lavapipe: implement EXT_vertex_input_dynamic_state
+  * 87b089c711a lavapipe: hook up some bits for handling dynamic line
+    stipple state
+  * 85de6302737 anv: remove dead code
+  * 4300853edc3 freedreno: Flush the shadowed resource's write batch up
+    front.
+  * 88161ced8d0 freedreno: Swap needs_ubwc_clear when shadowing.
+  * ed1f1dea285 freedreno: Stop manually marking blit dst buffers as
+    valid.
+  * 514aa018537 freedreno/a5xx: Make sure to mark blit read/write access
+    in the BC.
+  * f413b30ad48 freedreno: swap ->valid when shadowing resources.
+  * 172082f235b freedreno: Update comments about PIPE_BUFFER shadowing.
+  * 90071dc47cc docs/release-calendar: add a few more 21.1 releases
+  * 830ff5a697d docs: update calendar and link releases notes for 21.1.4
+  * f37e4820134 docs: add release notes for 21.1.4
+  * c094765a016 aco: remove resource flags
+  * fcc41b06314 i915g: Set up the cube map texture wrap modes.
+  * 25ce136d23f i915g: Add curly braces for normal mesa style (and helps
+    clang-format)
+  * afe627ea70a i915g: Delete redundant i915_hw_sampler_views atom.
+  * 7e75b1ca495 i915g: Fix FS debug dumping for declarations.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 01 Jul 2021 15:49:08 +0200
+
 mesa (21.2.0~git2106282012.e094f75bd0b~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
