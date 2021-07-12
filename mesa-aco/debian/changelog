@@ -1,3 +1,39 @@
+mesa (21.2.0~git2107130112.57da082a203~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 57da082a203 panfrost: Only access blitter from per-gen
+  * 88dc4db6be7 panfrost: Init/destroy blitter from per-gen file
+  * 345778fa6f3 panfrost: Remove pan_blitter integration
+  * eddb81c3268 panfrost: Avoid GenXML enum dependences
+  * 7308536f41d panfrost: Remove reference to mali_blend_equation_packed
+  * d0b036ff713 panfrost: Use generic delete for ZSA
+  * 8db1c0e5091 panfrost: Pin an architecture for blending
+  * 86c0073206f panfrost: Give WLS Instances a default
+  * c3592498bb2 panfrost: Use smaller sizes in blend table
+  * d8eef119fd8 panfrost: Specialize blendable_formats for v6
+  * 262d96d3dfb panfrost: Compile format table multiple times
+  * e11d0d25c6e panfrost: Add GenXML macros
+  * 214d56644f9 panfrost: Remove panfrost_bifrost_swizzle
+  * a23603c89d0 panvk: Don't use panfrost_bifrost_swizzle
+  * 92d27236723 panfrost: Move arch-independent pan_format code
+  * fc49ff9a8c9 panfrost: Inline panfrost_get_z_internal_format
+  * 616d7d09052 panfrost: Assert that injected jobs are for blits
+  * 583d8aaea7d panfrost: Inline away pan_invocation.c
+  * 581bbe1c0e0 panfrost: Express pack_work_groups more concisely
+  * 5bff4992c1c panfrost: Inline away pan_pool.c
+  * 7494bb0c86f panfrost: Move panfrost_vertex/instance_id to per-gen
+  * 840ebf0b93d panfrost: Inline flip_compare_func into pan_encoder.h
+  * 1ac29863a94 lavapipe: expose strict-lines feature
+  * 29ceb808345 lavapipe: re-expose line-rasterization extension
+  * fda906566b8 llvmpipe: respect rectangular_lines
+  * 7221f2d6821 draw: respect line_rectangular state
+  * 1c2690ec204 gallium: explicitly specify line rasterization mode
+  * e0472217b03 lavapipe: fix disable_multisample condition
+  * e555e2b0019 lavapipe: do not disable multisampling for smooth lines
+  * 7a31567db3d aco/meson: remove inc_gallium from include_directories
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 13 Jul 2021 01:30:58 +0200
+
 mesa (21.2.0~git2107011357.669b6889e4b~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
