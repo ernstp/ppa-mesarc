@@ -1,3 +1,45 @@
+mesa (21.1.4+git2107130130.4fcd2fdc0f9~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 4fcd2fdc0f9 st/xa: Mark default xa_get_pipe_format case unreachable.
+  * f4bcc955e8e broadcom/compiler: fix add vs. mul
+  * 30e517afb2b radeonsi,radv: fix a late alloc deadlock with <= 6 CUs
+    per SA
+  * b506aa0db43 ac/surface/tests: fix the ARM build
+  * 3c766d45b63 ir3: Fix infinite loop in scheduler when splitting
+  * 00e4af664bc aco: fix shared_atomic_comp_swap if the second source
+    isn't a VGPR
+  * 8fcdf489522 st/mesa: fix size miss match for some check
+  * eb522f28717 softpipe: add missing sentinel to debug option array
+  * 8ed5eec1ab1 util/radeonsi: add radeonsi workaround for Nuclear
+    Throne
+  * 52c1e307532 iris: Don't leak the surface if uncompressed re-interp
+    fails
+  * 5fa1babdea9 ac/surface: Handle non-retiled displayable DCC correctly
+    for modifiers.
+  * 864781a8742 glsl: Prohibit implicit conversion of mem parameter in
+    atomicOP functions
+  * d0978c00427 draw: fix tessellation output vertex size calculation
+  * 6e09d3077f7 nir/ifind_msb_rev: fix input check
+  * 05409f7b2c6 Fix up leftover "state_trackers" references to
+    "frontends"
+  * 768deb86b9d nir: Fix constant folding for irhadd/urhadd
+  * cb32d540320 freedreno/a6xx: Fix framebuffer_barrier crash
+  * b47926649af intel: fix leaking memory on shader creation
+  * f5518143d33 glsl: force_glsl_version to shaders with no defined
+    version
+  * 4432c2c1c35 Convert most remaining free-form fall-through comments
+    to FALLTHROUGH
+  * 143bd1fd32d .pick_status.json: Mark
+    e5d158881b3e12270521d7081b4bba0ac2108d2e as denominated
+  * 5007e7fcf08 radv: disable DCC for DOOM 2016 and Wolfenstein II
+  * 007f8a8a58b .pick_status.json: Update to
+    c704bb630d21e0a30500e9d8f42493ede3cc55ae
+  * fa850012b16 zink: mark a bunch of zink-piglit-quick_gl tests as
+    flakes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 13 Jul 2021 01:34:41 +0200
+
 mesa (21.1.4+git2106302212.24e2a9a4267~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
