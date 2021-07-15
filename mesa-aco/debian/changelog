@@ -1,3 +1,46 @@
+mesa (21.3.0~git2107150306.4a3269dff65~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 4a3269dff65 lima: handle fp16 vertex formats
+  * 12d18abfe7a venus: refactor vn_EndCommandBuffer
+  * f144d914966 lavapipe: fix multi-draw regression in shader parameters
+    test
+  * bedbe35d6bb pan/gen_pack: Use 1U for unpacking log2 to avoid
+    undefined behaviour
+  * 04c02418d74 pan/decode: Avoid undefined behaviour on shift in bits()
+  * 6642749458b intel/dev: Add a max_cs_workgroup_threads field
+  * 915e5a8cc30 intel/dev: Handle BSW naming issues
+  * 56d70ba6861 intel/dev: Put the device name in intel_device_info
+  * c24ba6cecba intel/dev: Handle CHV CS thread weirdness in
+    get_device_info_from_fd
+  * 17443727144 lavapipe: Use common Vulkan format helpers
+  * 376fb4f55f0 docs: drop duplicate `21.1` branch name from release
+    calendar
+  * e1fe0bb0ca2 docs: update calendar and link releases notes for 21.1.5
+  * cd3d8f0f7ab docs: add release notes for 21.1.5
+  * 6689c3917e8 lavapipe: increment drawid for multidraws
+  * d08c84ab0c3 zink: improve detection for broken drawids
+  * 28c5e88931a docs: update calendar for 21.2.0-rc1
+  * a3271b3f73d lvp: fixup multi draw memcpys
+  * a18f434d58b panfrost: Warn on transitions to linear
+  * d5fc0ceafda panfrost: Warn on get_fresh_batch
+  * f2e3ac5c627 panfrost: Warn on get_fresh_batch_for_fbo
+  * a266a0fbbb1 panfrost: Log reasons for flushes
+  * bcd915622b2 panfrost: Warn on going out of AFBC
+  * 5bd91a632bb panfrost: Warn on software conditional rendering
+  * 256f4a5b02a panfrost: Add perf_debug macros
+  * fae28b0fce7 docs/relnotes/new_features: empty for next release cycle
+  * 1a05c595a3a VERSION: bump version for 21.3 development cycle
+  * 3cb203303c3 intel/compiler: Update block IPs once in
+    opt_cmod_propagation
+  * 8f1052938d5 intel/compiler: Update block IPs once in
+    register_coalesce
+  * f3f3817307c intel/compiler: Update block IPs once in
+    dead_code_eliminate
+  * 8ca1bc5f947 intel/compiler: Add cfg_t::adjust_block_ips() method
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 15 Jul 2021 06:53:10 +0200
+
 mesa (21.2.0~git2107130112.57da082a203~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
