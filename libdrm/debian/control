@@ -11,6 +11,7 @@ Build-Depends:
  libx11-dev,
  pkg-config,
  python3-docutils,
+ python3-setuptools,
  xutils-dev (>= 1:7.6+2),
  libudev-dev [linux-any],
  libpciaccess-dev,
