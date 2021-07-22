@@ -1,3 +1,45 @@
+mesa (21.3.0~git2107221117.2f5cd08ede0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2f5cd08ede0 llvmpipe: add support for time elapsed queries.
+  * d8bfad70dc1 Revert "CI: Disable LAVA devices"
+  * e42bb25ee26 zink: fix cached descriptor allocation clamping
+  * 8db2d53418c zink: improve lazy descriptor pool handling
+  * 849c5208874 zink: add define for descriptor alloc clamping
+  * 559e009af19 zink: clamp descriptor allocation bucket sizing to
+    defined limit
+  * 2736bf4e179 zink: split mem cache per type
+  * 7aca74e219c zink: inline mem cache hash table
+  * fdfa155f2ba zink: move mem cache to sub-struct
+  * d8905446d65 zink: rework oom flushing
+  * 0dc77c8aa53 zink: add a param to check_batch_completion for toggling
+    lock-taking
+  * e7f958d8413 zink: use a local var for draw mode during draw
+  * 10e7cb58883 zink: make batch_rp and norp static inlines
+  * 2795537d5c2 zink: make zink_end_render_pass public
+  * 1ffe73c71a8 zink: split draw_count checking to local variable
+  * 49ee703e112 zink: split and move maybe_flush_or_stall mechanic
+  * 9823b970fb5 zink: handle vertex buffer offset overflows
+  * d5dd1259c56 zink: change vbo_bind_count to a mask of slots
+  * ba3c4ce3852 zink: add mechanism for generating VkBuffers for
+    rebinding
+  * 47946855f19 meson: allow egl_native_platform to be specified
+  * 384181921c2 egl/surfaceless: try kms_swrast before swrast
+  * 43ccc6c091a llvmpipe: always use draw_regions intersection
+  * ba7fd5b5614 llvmpipe/linear: don't try to use tgsi analysis for nir
+    shaders
+  * f90b6c875a6 llvmpipe: add some extra linear rast checks.
+  * fd9cc1d0070 llvmpipe/linear: fix ppc64/s390 build
+  * 5a1d3bcf26d llvmpipe: Add a linear rasterizer optimized for 2D
+    rendering.
+  * 4dc81cc6318 anv: Advertise support for VK_EXT_shader_atomic_float2
+  * a3e53495a9d vulkan: Update XML and headers to 1.2.185
+  * baefdceeaf8 spirv: Implement SPV_EXT_shader_atomic_float16_add
+  * 8c29891fa46 intel/compiler: Remove cube array size lowering in
+    compiler backend
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Jul 2021 12:15:04 +0200
+
 mesa (21.3.0~git2107150306.4a3269dff65~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
