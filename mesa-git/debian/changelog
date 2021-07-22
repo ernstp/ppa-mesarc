@@ -1,3 +1,49 @@
+mesa (21.2.0~rc1+git2107212053.9d0be7b6132~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9d0be7b6132 nir/gcm: Clear out pass_flags before starting
+  * f2bdec9ecd9 aco: include <cstddef> in aco_util.h
+  * 83d94cfe718 egl/wayland: Allow EGLSurface to outlive wl_egl_window
+  * 8447b1d52b7 egl/wayland: Error on invalid native window
+  * ba9e463c657 ci: actually run piglit tests with virgl
+  * f62606c8250 crocus/gen4-5: fix ff gs emit on VS vue map change.
+  * 25b8c5e4b0d zink: Fix unused-variable warning
+  * 00b732a5662 broadcom/compiler: emit TMU flush before a jump
+  * cea26a98132 st/mesa: always use PIPE_USAGE_STAGING for
+    GL_MAP_READ_BIT usage
+  * 3b1f5b2d5ad radeonsi: Check aux_context on si_destroy_screen()
+  * 400c224efe3 mesa: fix bindless uniform samplers update
+  * d341882e132 aco/optimizer: ensure to not erase high bits when
+    propagating packed constants
+  * 588ee0fd3fa v3d/driconf: Expose non-MSAA texture limits for mutter
+    and gnome-shell
+  * 8e00c1956d7 nv50/ir/nir: fix smem size for GL
+  * 4be9824dc90 softpipe/aniso: move DDQ calculation to after scaling.
+  * 3cb96be239a glsl: replace some C++ code with C
+  * 04e8aeac6d0 mesa: fix incorrect comment in draw_gallium_multimode
+  * 742c35d17c2 util/foz: stop crashing on destroy if prepare hasn't
+    been called
+  * 3c5987e2b4a anv: fix feature/property/sizes reported for fragment
+    shading rate
+  * 2193a19631b radeonsi: don't expose no-attachment MSAA 16x on all 1
+    RB chips due to issues
+  * 8653cbd0aac .pick_status.json: Update to
+    27534a49cf3872646cb8ef9371707d74a81b1986
+  * bfd3fcd3aff freedreno: fix wrong tile aligment for 3 CCU gpu
+  * 5be2d785ae2 iris: Use intel_i915_query for meminfo
+  * 9af1aa306fb anv: Use intel_i915_query_alloc for memory regions
+  * 22941ec612f intel: Pull anv_i915_query into common code
+  * bbeb420157e anv: Handle errors properly in anv_i915_query
+  * a63d23c4c2d radv: Remove num_viewports from radv_skip_ngg_culling.
+  * c5110142057 radv: Don't compile NGG culling into shaders that write
+    viewport index.
+  * c84ea77f76a iris: Re-emit MEDIA_VFE_STATE for variable group size
+    shaders
+  * 91f9753405e radv: fix specifying the stencil layout for separate
+    depth/stencil layouts
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Jul 2021 12:19:00 +0200
+
 mesa (21.1.5+git2107142342.fd630afd32f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
