@@ -1,3 +1,10 @@
+mesa (21.2.0~rc2+git2107262116.bfefde2248f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * bfefde2248f nv30: fix emulated vertex index buffers
+
+ -- Ernst Sjöstrand <ernst@pop-os.localdomain>  Tue, 27 Jul 2021 04:53:59 +0200
+
 mesa (21.2.0~rc1+git2107212053.9d0be7b6132~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
