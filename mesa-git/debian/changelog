@@ -2,6 +2,38 @@ mesa (21.2.0~rc2+git2107262116.bfefde2248f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
   * bfefde2248f nv30: fix emulated vertex index buffers
+  * f9bae7e537a radv: allow unused VkSpecializationMapEntries
+  * 55761919e4d v3dv: assert job->cmd_buffer is valid
+  * d054db55e67 isl: fix mapping of format->stringname
+  * f2a07762df1 teximage: return correct desktop GL error for
+    compressedteximage
+  * cb9df156a6d agx: Plug memory leak in register allocator
+  * 053b80c70f4 agx: Fix mismatched units in load_ubo
+  * cee6a91d699 asahi: Fix sampler filtering flag
+  * 5bd5f235792 nir/lower_tex: Rework invalid implicit LOD lowering
+  * a7bf3f52621 pan/mdg: Garbage collect silly quirk
+  * 765ef56f34a targets/graw-xlib: Add missing dep_x11
+  * 277718fa8ca glsl: relax rule on varying matching for shaders older
+    than 4.20
+  * 84be95c6340 draw/llvmpipe: multiply polygon offset units by 2
+  * a408f780c11 freedreno: Lock access to msm_pipe for RB object
+    suballocation.
+  * b850f726286 aco: don't create v_madmk_f32/v_madak_f32 from
+    v_fma_legacy_f16
+  * 0342e7f91f5 util: add workaround for Full Bore
+  * a7199a03aba llvmpipe: add support for time elapsed queries.
+  * 5a49aee6b32 meson: allow egl_native_platform to be specified
+  * 08781845fed egl/surfaceless: try kms_swrast before swrast
+  * 98d88943e38 .pick_status.json: Update to
+    b45cddda183230232937387f91d009500b2372c9
+  * b47de6e919a VERSION: bump for 21.2-rc2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 27 Jul 2021 04:59:43 +0200
+
+mesa (21.2.0~rc2+git2107262116.bfefde2248f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * bfefde2248f nv30: fix emulated vertex index buffers
 
  -- Ernst Sjöstrand <ernst@pop-os.localdomain>  Tue, 27 Jul 2021 04:53:59 +0200
 
