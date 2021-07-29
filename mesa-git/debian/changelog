@@ -1,3 +1,33 @@
+mesa (21.2.0~rc3+git2107282029.bfc6597375c~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * bfc6597375c ir3: Preserve gl_ViewportIndex in the binning shader
+  * d06433f883b loader/dri3: create linear buffer with scanout support
+  * 5577fb807e8 gallium/vl: don't leak fd in vl_dri3_screen_create
+  * 6705d498f49 lavapipe: do not assert on more than 32 samplers
+  * d8402f2ff08 vulkan/wsi/x11: do not inherit last_present_mode
+  * 0e7985a7deb etnaviv: fix gbm_bo_get_handle_for_plane for multiplanar
+    images
+  * 1b886f20a7c gallium: Reset {d,r}Priv in dri_unbind_context
+  * b795fc4a281 .pick_status.json: Update to
+    dff0d9911d176802b54890c796e19f56c50f24e1
+  * 731f9891354 VERSION: bump for 21.2.0-rc3
+  * 319818e9fdd glsl: Properly handle .length() of an unsized array
+  * 0028e826c59 glsl: Add operator for .length() method on implicitly-
+    sized arrays
+  * fc9650d1f39 lima: avoid crash with negative viewport values
+  * 0eb551f658e dlist: don't handle unmerged draws as merged
+  * f27415c2239 venus: suballocate memory in more cases
+  * 83ddb66d8a6 venus: clean up vn_AllocateMemory
+  * fdc5858caf7 llvmpipe: fix nir dot products (fsum op)
+  * d23a2a0128a freedreno/a6xx: Add missing PC_CCU_INVALIDATE_x
+  * fe2d7f3089d zink: use array size in spirv bo length calculations
+  * 25b71cfa10c crocus/gen4: restrict memcpy mapping to gen5
+  * acbcb4f093b .pick_status.json: Update to
+    49908c602ffd2d84063effa7ddd0ee842be41a89
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Jul 2021 11:01:05 +0200
+
 mesa (21.2.0~rc2+git2107262116.bfefde2248f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
