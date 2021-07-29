@@ -1,3 +1,19 @@
+corectrl (1.2.0~git2107281627.7de9973~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 7de9973 Merge branch 'master' into 'master'
+  * bd60c2e fix memusage more 4gb
+  * 8cc9346 Increase the size of the sensor list
+  * 899a421 Merge branch 'add-junction-memory-sensors'
+  * 7338825 Add memory temperature sensor
+  * feade75 Add junction temperature sensor
+  * fb446cc Rework sensor colors
+  * d7f930f Profiles: don't export / import sensor color
+  * e57df5d Update translation files
+  * 9ed6158 Add GPU voltage sensor
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Jul 2021 10:56:59 +0200
+
 corectrl (1.2.0~git2106231834.e14870b~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
