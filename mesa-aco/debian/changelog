@@ -1,3 +1,49 @@
+mesa (21.3.0~git2107290548.86111fdc9c8~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 86111fdc9c8 spirv: set medium precision with RelaxedPrecision
+    decorator
+  * 476dc3c050d vulkan: add vk_spec_info_to_nir_spirv util method
+  * fec1a04c53d microsoft/compiler: Correctly flag when using raw
+    buffers
+  * 1295c5cb334 microsoft/compiler: Add support for arrays to
+    image_store
+  * 16ef26ffcb1 nir_lower_readonly_images_to_tex: Fix typeo on image
+    arrays
+  * 486e236c338 glsl/standalone: Lower COMPUTE shader precision
+  * 09d9b8cf9a3 features: mark off timelines for lavapipe
+  * 94a49828051 lavapipe: implement timeline semaphores
+  * 326253786e0 lavapipe: use consistent semaphore variable naming
+  * 032d4a0e7d5 lavapipe: rework queue to use u_queue
+  * 461662bf3c9 zink: simplify some dumb code in invalidate_buffer (v2)
+  * 2668489cf95 Revert "zink: simplify some dumb code in
+    invalidate_buffer"
+  * d413fd02190 gallivm: Always take the per-pixel LOD path for
+    cubemaps.
+  * 371cf5d06af gallivm: Default brilinear filtering to off.
+  * 7e3bad0f8ec nir/lower_shader_calls: adding missing stack offset
+    alignment
+  * a94192f69d1 venus: print warnings when stuck in busy waits
+  * 7d0fe5863f2 zink: force threadsafe mapping for query results when
+    necessary
+  * d972326c458 pan/bi: Teach meson about format pack tests
+  * 8a6c214b6a5 pan/bi: Teach meson about Bifrost packing test
+  * 9bb731012ef pan/bi: Teach meson about scheduler predicate test
+  * ca36943466b pan/bi: Add BIT_ASSERT helper for unit testing
+  * 9358d1fca67 pan/bi: Expose unit tested scheduler predicates
+  * 0d08ce287bf pan/bi: Remove dated ASSERTED properties
+  * 526ae8979e7 pan/bi: Inline away bi_must_last
+  * 097cf3952bf freedreno/ir3: Add build id to the disassembler test
+  * 5ff0f4a901c zink: never use staging buffer for unsynchronized buffer
+    maps
+  * 3d64a97cf69 mesa/main: Check for fbo attachments when importing EGL
+    images to textures
+  * dff0d9911d1 iris: Split iris_upload_shader in two
+  * 42c34e1ac8d iris: Enable threaded shader compilation
+  * 9011cc74056 iris: add sync_compile option
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Jul 2021 10:57:34 +0200
+
 mesa (21.3.0~git2107221117.2f5cd08ede0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
