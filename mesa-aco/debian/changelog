@@ -1,3 +1,48 @@
+mesa (21.3.0~git2108031605.10541d1fade~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 10541d1fade gallium/hud: initialize query
+  * ad83c06a5f8 radv: fix missing cache flushes when clearing HTILE
+    levels on GFX10+
+  * ebea075feb8 radv: fix selecting the first active CU when profiling
+    with SQTT
+  * f395057a828 gallivm: remove pointless no_filter_hacks flag
+  * 4f56ded3626 ci: Stop disabling filter hacks for llvmpipe.
+  * 34423391e02 gallivm: make rho-approximation opt-in instead of opt-
+    out
+  * 6538b3e5661 nir: add heuristic for instructions in loops with GCM
+  * a7f2e683ded nir: move nir_block_ends_in_break() to nir.h
+  * a9ed4538abf nir: add indirect loop unrolling to compiler options
+  * a654e39f155 intel/compiler: make sure swizzle is applied to if
+    condition
+  * 4f7043fc0ce v3d/simulator: implement performance counters
+  * 685281278eb v3d: implement performance counter queries
+  * e928aece508 v3d: add fence wait function
+  * c59d8a17983 v3d: move queries to pipe queries
+  * 99697035472 v3d: attach performance monitor to jobs
+  * 6b9fcb01930 v3d: check if device supports performance monitors
+  * ca13868098e drm-uapi: add v3d performance counters
+  * a49b3970412 ac/surface: implement CmaskAddrFromCoord in NIR
+  * eedc0b59b71 ac/surface: copy the CMASK equation to radeon_surf
+  * 1f12c3ccc1d ac/surface: store CMASK pitch and height to radeon_surf
+  * 132b2055662 ac/surface: add tests for CmaskAddrFromCoord prototype
+    outside of addrlib
+  * 96e12644f3a amd/addrlib: expose CMASK address equations to drivers
+    on GFX9
+  * 501db877793 ac: introduce a structure to store DCC address equations
+    for GFX9
+  * b705114d9cd iris: mark the workaround_bo as asynchronous
+  * b9129496a29 freedreno: Unleash the dragon!
+  * 8813dfab830 freedreno: Support per-device driconf overrides
+  * 7094cc78a44 driconf: Add force_gl_renderer override
+  * 6edf0d8e902 driconfig: Add support for device specific config
+  * b080aa94664 gallium/driconf: Allow the driver to parse the driconf
+    options.
+  * fdf9ebf317d gallium/dri2: Make dri_init_options just init DRI
+    options.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 Aug 2021 17:20:55 +0200
+
 mesa (21.3.0~git2107290548.86111fdc9c8~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
