@@ -1,3 +1,52 @@
+mesa (21.2.0~rc3+git2108022230.58bf0165ca0~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 58bf0165ca0 crocus: add support for set alpha to one with blt.
+  * 9fc8ae0cd52 intel/genxml: fix raster operation field in blt genxml
+  * 5b99334ba3c crocus/gen45: fix mapping compressed textures
+  * 76a317170ea venus: cache ahb backed buffer memory type bits
+    requirement
+  * 97955560fd2 drm-shim: implement stat/fstat when xstat variants are
+    not there
+  * 149473db821 meson: dont use missing dumpbin path
+  * 720645a5b36 pan/mdg: Analyze helper termination after scheduling
+  * 7c2c2b9d2a3 zink: make codegen compatible with python 3.5
+  * 075ec9e608f .pick_status.json: Update to
+    842b8c8965327615f4692384a905dd63f1fba63d
+  * 538e9f93c5f pan/bi: Remove incorrect errata workaround
+  * 2ca05ac2939 pan/bi: Restrict swizzles on same cycle temporaries
+  * 5b17ed97816 amd/registers: fix fields conflict detection
+  * ce0e8e022d3 gallium/va: don't use key=NULL in hash tables
+  * 14f09b60e5d intel/fs: restrict max push length on older GPUs to a
+    smaller amount
+  * ca5fbe85170 v3d, vc4: Fix dmabuf import for non-scanout buffers
+  * 39ffd918cd2 lima: fail in get_handle(TYPE_KMS) without a scanout
+    resource
+  * 4bb8e29a28c panfrost: fail in get_handle(TYPE_KMS) without a scanout
+    resource
+  * 4524e8bff8f freedreno: fail in get_handle(TYPE_KMS) without a
+    scanout resource
+  * bda17c7388f etnaviv: fail in get_handle(TYPE_KMS) without a scanout
+    resource
+  * 1396ddcc4e2 etnaviv: fix renderonly check in etna_resource_alloc
+  * 8b4a8972a88 nine: Fix assert in tx_src_param
+  * 4f7b4ba7f85 .pick_status.json: Update to
+    87b0962fef4e447a2ea9c76a611aa20b109a259d
+  * 940cb9ebe96 .pick_status.json: Mark
+    8cb795b4772f882024b20c4d4b051b2411dd1a8c as denominated
+  * f3a523a9be9 anv: fix submission batching with perf queries
+  * f9107dbf71b lavapipe: do not mark unsupported tests as crashing
+  * ebcd6570991 broadcom: remove v3dv3 from neon library
+  * 72eeeba3339 nir/lower_shader_calls: adding missing stack offset
+    alignment
+  * 947fd891bfe freedreno/ir3: Add build id to the disassembler test
+  * cfe3e2ff532 mesa/main: Check for fbo attachments when importing EGL
+    images to textures
+  * ad0ba789348 .pick_status.json: Update to
+    b8e29e89366a5264391dc7c10e778330b7add66a
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 Aug 2021 17:24:30 +0200
+
 mesa (21.2.0~rc3+git2107282029.bfc6597375c~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
