@@ -1,3 +1,52 @@
+mesa (21.3.0~git2108081606.3cafe333e99~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 3cafe333e99 frontends/va/postproc: Keep track of deinterlacing
+    method being used
+  * 5dace8e0fb9 gallium/util: add half texel offset param to
+    util_compute_blit
+  * 675508dd81d gallium/auxiliary/vl: Add additional deinterlace enum
+    and tracking
+  * 30a359d633f util/fossilize_db: Add extra flock mutex.
+  * 75266ee44a0 util/fossilize_db: Unlock the cache file if the entry
+    already exists.
+  * 1c4dce1aa75 util/fossilize_db: Use uint64_t for file size.
+  * d2d642cc014 util/fossilize_db: Only allocate entries after full
+    read.
+  * 96bfefe8d12 util/fossilize_db: Be conservative about header length
+    check for locking.
+  * 3091277052c util/fossilize_db: Flush files after header write.
+  * 57ca07455ce util/fossilize_db: Reset file position to parsed_offset
+    on cache_offset read failure.
+  * 3c51a3aa954 util/fossilize_db: Update parsed_offset correctly.
+  * 87efa1ee225 spirv_to_dxil: Fix missing-prototypes build error.
+  * e5311eae0c6 ci/freedreno: Add jobs to manually do a full VK on
+    freedreno.
+  * 2af172e8264 ci/freedreno: Skip the slow dEQP-
+    VK.ubo.random.all_shared_buffer.48 in CI.
+  * 71b38ef0362 ci/freedreno: Clean up and fill out the tess timeout
+    annotations.
+  * 9c3b72e1b51 ci/freedreno: Generalize the spirv_ids_abuse skips.
+  * fd291175516 ci/freedreno: Organize, fill out, and document our VK
+    xfails.
+  * da000ea2efc venus: free queues after vkDestroyDevice is emitted
+  * 4e28dfe58e8 freedreno: Device matching based on chip_id
+  * a1c4f11f4c1 freedreno: Make chip_id 64b
+  * 7806843866a freedreno/all: Introduce fd_dev_id
+  * 7ba6100c2ae freedreno/ir3/lower_io_offsets: Drop gpu_id param
+  * cc72eeb0776 freedreno/ir3: Reduce use of compiler->gpu_id
+  * f92877b7b8e freedreno: Reduce use of screen->gpu_id
+  * f100acd0c5e freedreno: Drop device_id
+  * 7a11cc42e7f freedreno: Move generated device table to .h
+  * 2f665e52e1a nine: enable tc
+  * 740752d2327 nine: track bound sampler count to optimize unbinds
+  * 7a170230f1c nine: update bound sampler mask directly during texture
+    updates
+  * 9205a45da50 nine: split enabled/dummy texture binds into separate
+    iterators
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 08 Aug 2021 21:07:08 +0200
+
 mesa (21.3.0~git2108031605.10541d1fade~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
