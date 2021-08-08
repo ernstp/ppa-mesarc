@@ -1,3 +1,50 @@
+mesa (21.2.0+git2108062018.3e228bc8a90~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3e228bc8a90 wl/shm: don't fetch formats if not requested.
+  * a7f1ebda2c7 aux/draw: Check for preferred IR to take nir-to-tgsi
+    path in draw module
+  * 3fd0ced5413 aux/draw: use nir_to_tgsi for draw shader in llvm path
+  * 8d64d80d0a2 radv: Write RSRC2_GS for NGGC when pipeline is dirty but
+    not emitted.
+  * 57dfde801d8 st/pbo: set nir_tex_instr::is_array field
+  * 54ba58e68e2 st/pbo: only use x coord when reading a PIPE_TEXTURE_1D
+  * da56d74a458 anv: don't try to access Android swapchains
+  * 8e592e75818 .pick_status.json: Update to
+    0165fde82c41f94c5d6f432f9f444871405a7d49
+  * 10142724522 iris, crocus: add idep_genxml to per_hw target
+    dependencies
+  * a96c2c5d7af bin/gen_release_notes: Fix commits with multiple Closes:
+  * 8e3b3f93a76 bin/gen_release_notes: Don't consider issues for other
+    projects
+  * d65d0603e33 bin/gen_release_notes: Add basic tests for parsing
+    issues
+  * 3cb4a9ec0cc ci: Drop "success" job
+  * 260d1ecf1e0 zink: simplify else clause for mem info gathering
+  * d634d31c329 zink: sum available memory heaps instead of assigning
+  * 77c2a702df2 .pick_status.json: Update to
+    6ccf11ac2b951963407601b5b1109b45a972e48e
+  * 84dde64fd33 aco: Use Navi 10 empty NGG output workaround on NGG
+    culling shaders.
+  * 217ed59b5d4 virgl: disable anisotropic filtering.
+  * a4e7d73f7a9 .pick_status.json: Update to
+    8918a809ced3551f822abb45d751d31b54ad67da
+  * e2889fb2d14 docs: Add sha256 sum for 21.2.0
+  * 33595f88d6f VERSION: bump for 21.2.0 release
+  * c0623dbe160 docs: clear new_features for 21.2.0 release
+  * 2eb92dec110 docs: add release notes for 21.2.0
+  * 18b65515a69 intel/disasm: fix missing oword index decoding
+  * ecfa127381d clover/nir: Set constant buffer pointer size to host
+  * 90645f3eea3 clover/spirv: Properly size 3-component vector args
+  * 432964005be d3d12: split up root parameter update and set
+  * a5dec10d836 gallium/hud: initialize query
+  * 1d02d0743d6 radv: fix missing cache flushes when clearing HTILE
+    levels on GFX10+
+  * 5b4b4b9ef61 radv: fix selecting the first active CU when profiling
+    with SQTT
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 08 Aug 2021 21:10:51 +0200
+
 mesa (21.2.0~rc3+git2108022230.58bf0165ca0~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
