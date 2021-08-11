@@ -1,3 +1,41 @@
+mesa (21.3.0~git2108112316.89c22ef230b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 89c22ef230b docs: update calendar and link releases notes for 21.1.7
+  * d6cfc971566 docs: add release notes for 21.1.7
+  * 8a81d14271a intel/vec4: sel.cond writes the flags on Gfx4 and Gfx5
+  * 38807ceeaeb intel/fs: sel.cond writes the flags on Gfx4 and Gfx5
+  * 593ad9294be crocus: align staging resource pitch on gen4/5 to allow
+    BLT usage.
+  * 58e95f99bd5 crocus/blt: add pitch/offset checks to fix blt
+    corruption
+  * cb2e712b9e4 pan/bi: Unit test DISCARD+FCMP fusing
+  * d74ab1e4d9c pan/bi: Fuse DISCARD with conditions
+  * 4f347e96b82 pan/bi: Add fclamp unit tests
+  * ac636f5adb5 pan/bi: Use FCLAMP pseudo op for clamp prop
+  * a98790fa963 pan/bi: Add optimizer unit tests
+  * 89e452883a5 pan/bi: Use FABSNEG pseudo ops for modifier prop
+  * b2b0dca4ce1 pan/bi: Add shader equality helper for unit tests
+  * f3d8ec14842 pan/bi: Fuse abs/neg more on Valhall
+  * c27af4ad36a pan/bi: Simplify bi_compose_clamp
+  * cfd73b4542d pan/bi: Unit test new constant folding patterns
+  * ec76119dfb9 pan/bi: Constant fold texturing lowerings
+  * 6fa14794792 pan/va: Document IEEE 754 conformance of clamps
+  * cdfb5d37883 panfrost: Test src*dst + dst*src blending
+  * 0228ccf8579 panfrost: Leverage Bifrost's 2*src blend factor
+  * 95e306dc84c panfrost: Add basic fixed-function blending tests
+  * 95187c03f1f panfrost: Simplify blend_factor_constant_mask
+  * 01a1b253b43 panfrost: Fix is_opaque when blend_enable=false
+  * b7af56f2ad1 panfrost: Add blend helper packing the equation
+  * 7eb2559198d panfrost: Use _PU for non-dithered formats
+  * 07607c84432 panfrost: Remove unused #defines
+  * 3ec5e2b6a70 panfrost: Add LINEAR debug option
+  * 3958f00215c pan/bi: Add a noopt debug option
+  * ff03f096bfa pan/bi: Make bi_opt_push_ubo optional
+  * 01b0935d315 nir/lower_shader_calls: remove empty phis
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Aug 2021 00:29:44 +0200
+
 mesa (21.3.0~git2108081606.3cafe333e99~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
