@@ -1,3 +1,45 @@
+mesa (21.2.0+git2108102016.403e7213b28~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 403e7213b28 radv: Use correct signedness in misalign test.
+  * b17e7ddbaee glsl: evaluate switch expression once
+  * de052dfae4a etnaviv: always try to create KMS side handles for
+    imported resources
+  * c8812a86b29 renderonly: don't complain when GPU import fails
+  * 936b18f89e0 .pick_status.json: Update to
+    0dd0a92b243487e83d8d96532873f319719248e5
+  * ae1c19cc9e3 frontends/va/postproc: Keep track of deinterlacing
+    method being used
+  * 50c6394450b gallium/util: add half texel offset param to
+    util_compute_blit
+  * 94acf7bfaf2 gallium/auxiliary/vl: Add additional deinterlace enum
+    and tracking
+  * 2c5f49cb3d5 radv: flush caches before performing separate
+    depth/stencil aspect init
+  * 292c7163c8d radv: Allocate space for inline push constants.
+  * 8d018d2dba1 panfrost: Fix pan_blitter_emit_bifrost_blend()
+  * 8446f10145b nir/algebraic: fix imod by negative power-of-two
+  * c63674ee712 radv: fix initializing the DS clear metadata value for
+    separate aspects
+  * ee5df9e7448 radeonsi: don't create an infinite number of variants
+  * ccf4743977b util/fossilize_db: Add extra flock mutex.
+  * 07581c4842b util/fossilize_db: Unlock the cache file if the entry
+    already exists.
+  * 7b2a1152251 util/fossilize_db: Use uint64_t for file size.
+  * ee56d2c88a3 util/fossilize_db: Only allocate entries after full
+    read.
+  * 8441124d0bd util/fossilize_db: Be conservative about header length
+    check for locking.
+  * b2d326fba11 util/fossilize_db: Flush files after header write.
+  * 15df61065d7 util/fossilize_db: Reset file position to parsed_offset
+    on cache_offset read failure.
+  * 8d52e3cd38a util/fossilize_db: Update parsed_offset correctly.
+  * 568bbe0dd20 venus: free queues after vkDestroyDevice is emitted
+  * 366abaca177 .pick_status.json: Update to
+    7ae3881a4bf989436b602b30b9a91602435e47a6
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 12 Aug 2021 00:33:36 +0200
+
 mesa (21.2.0+git2108062018.3e228bc8a90~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
