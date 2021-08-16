@@ -1,3 +1,45 @@
+mesa (21.3.0~git2108162006.441e490f5a1~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 441e490f5a1 v3dv: initialize CL submission structure
+  * 795f3b73185 ci: update trace hashes
+  * cfc4433015d nir,glsl_to_nir: use nir_fdot()
+  * f6f9000f84d spirv: create ffma more often
+  * 28acc4120f7 nir: lower fdot to ffma if lower_ffma=false
+  * 174a4f36f9c nir: create ffma from builders more often
+  * ed70b256cea nir: add ffma creation helpers
+  * 4ec4d862c2a nir/algebraic: add is_used_once to dot product
+    reassociation optimization
+  * f95a16be722 nir/algebraic: reassociate add chains for more MAD/FMA-
+    friendly code
+  * 110bcb49193 nir/algebraic: add various ffma optimizations
+  * b0238191ca2 spirv: swap fadd operands in build_asin() and
+    matrix_multiply()
+  * 82d0600ba21 nir: swap fadd operands in nir_atan()
+  * d42e53c77a2 panfrost: Unit test clear colour packing
+  * 8dfbbee0546 panfrost: Mark R5G6B5 as blendable
+  * 62e902101b1 panvk: Use pan_pack_color
+  * b9c095cc2c6 panfrost: Rewrite the clear colour packing code
+  * 0624346a206 panfrost: Only allow colour blit shaders to be killed
+  * 76377de99bf panfrost: Fix leak of render node fd
+  * dab97fe2277 panfrost: Add nocache debug flag for disabling the BO
+    cache
+  * e8b97dcdb24 panfrost: Fill tiler job padding again
+  * 191824ec8e4 pan/mdg: Reduce size of tex_opcode_props
+  * 10a344a857a panfrost: Free NIR when deleting shader state
+  * d349448717d panfrost: Free TGSI tokens
+  * 98165aa9f2f panfrost: Fix memory leaks for compute state
+  * a9ab168e16e pan/bi,pan/mdg: Fix memory leak of hash tables
+  * b85ff566960 panfrost: Call primconvert and u_transfer_helper destroy
+    functions
+  * f378799d9dd CI: Update Windows quick_gl baseline for mysterious new
+    passes
+  * 1564ff72a01 tu: Fix xfb when there is a hole at the end
+  * 86196eff98a AOSP: Add panfrost vulkan library suffix
+  * 21de785562b AOSP: Update timestamps of target binaries
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 Aug 2021 20:50:53 +0200
+
 mesa (21.3.0~git2108112316.89c22ef230b~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
