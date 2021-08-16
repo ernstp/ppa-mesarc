@@ -1,3 +1,46 @@
+mesa (21.2.0+git2108131928.9ed17f74651~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9ed17f74651 radv: fix build with mingw
+  * 809b4d1356f anv/android: handle image bindings from gralloc buffers
+  * ac87f88cffd nir: Initialize evaluate_cube_face_index_amd dst.x.
+  * 8c26804eea4 meson: Remove duplicate xvmc in build summary.
+  * f7e77b7708c util: Fix translate from block compressed to rgba
+  * 449df77f5eb .pick_status.json: Update to
+    04bd2a12451160609b6f163e1a86437948a48fcd
+  * 996946b3fee aux/cso: try harder to keep cso state in sync on cso
+    context unbind
+  * e1b3eff8d2f intel/fs: sel.cond writes the flags on Gfx4 and Gfx5
+  * 9b619ba386e crocus: align staging resource pitch on gen4/5 to allow
+    BLT usage.
+  * 76a0aced29d crocus/blt: add pitch/offset checks to fix blt
+    corruption
+  * 39a91b3d3ac .pick_status.json: Update to
+    688d11e4e821ec3934abe571de9899390beceb54
+  * 5fb386c48dc Revert "nir/algebraic: Convert some f2u to f2i"
+  * 6d2727b2dc3 nir/lower_shader_calls: remove empty phis
+  * bcf16071a7b nir/builder: invalidate metadata per function
+  * 1e4967c1846 pan/bi: Use the computed scale for fexp NaN propagation
+  * c64a3bc1483 pick-ui: show commit date
+  * e2d700117bd pick-ui: show nomination type in the UI
+  * 56c084a749d pick-ui: drop assert that optional argument is passed
+  * 0a1f12a4886 nir/lower_mediump: Fix metadata in all passes
+  * 4b0f88e7e54 nir/lower_mediump_io: Don't remap base unless needed
+  * b750b385cf4 .pick_status.json: Update to
+    01b0935d315347cfd06bb5d8bb1a6b59913f94cc
+  * 71876890b6b crocus: disable depth and d+s formats with memory
+    objects
+  * 962178d5ab6 crocus: take a reference to memobj bo in
+    crocus_resource_from_memobj
+  * 51310d7c30f intel/vec4: sel.cond writes the flags on Gfx4 and Gfx5
+  * e71eb0f2ead intel/fs: sel.cond writes the flags on Gfx4 and Gfx5
+  * c24604acb85 crocus: align staging resource pitch on gen4/5 to allow
+    BLT usage.
+  * d9287281d11 crocus/blt: add pitch/offset checks to fix blt
+    corruption
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 Aug 2021 20:54:37 +0200
+
 mesa (21.2.0+git2108102016.403e7213b28~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
