@@ -1,3 +1,11 @@
+corectrl (1.2.0~git2108122354.5ab63d3~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 5ab63d3 Propagate clean once to aggregated controls of ControlGroup
+  * 6f86a5f Clean aggregated controls of ControlGroup when it's dirty
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 Aug 2021 20:50:20 +0200
+
 corectrl (1.2.0~git2108021849.1913fca~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
