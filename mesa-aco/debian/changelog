@@ -1,3 +1,44 @@
+mesa (21.3.0~git2108192137.a6a449837b1~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * a6a449837b1 anv: Set CONTEXT_PARAM_RECOVERABLE to false
+  * 4a7714ab7ba aco/tests: add tests for post-RA DPP combining
+  * 12be7c8feb5 aco/tests: add tests for pre-RA DPP combining
+  * 4ac47ad1cd7 aco: combine DPP into VALU after RA
+  * 2e6834d4f6c aco: combine DPP into VALU before RA
+  * b97cfd72afc aco: handle DPP in the optimizer
+  * 2e56e234209 aco: make optimize_postRA() work across blocks
+  * 1d894a8c850 aco: move a bunch of helpers into aco_ir.h/aco_ir.cpp
+  * 3db31963794 aco: add can_use_DPP() and convert_to_DPP()
+  * a9562fd0d61 aco: fix validation of DPP v_cndmask_b32/v_addc_co_u32
+  * 6494b084075 i915g: clang-format fixup.
+  * c38cb5d4d8c i915g: Add comments explaining various xfails.
+  * ab2645b54c7 i915g: Clear some xfails that are now skips.
+  * e00a749759b i915g: Reduce ARB_fp max tex indirections to match
+    i915c.
+  * 8ebd0f8317c i915g: Correct PIPE_SHADER_CAP_MAX_TEMPS.
+  * da3f20a3ab4 i915g: Fix polygon offset by telling draw the Z format.
+  * 8e5e70bb3de frontends/va: add num_temporal_layers check
+  * 4081516b3e4 radeon/vcn: set min value for num_temporal_layers
+  * 59f2c85845c nir: return false for loops in contains_other_jump()
+  * 8de086e12f5 v3d: implement resource_get_param
+  * b1fbceac6f8 vc4: implement resource_get_param
+  * 99fc6f7271c panfrost: implement resource_get_param
+  * b5919b0b106 etnaviv: add stride, offset and modifier to
+    resource_get_param
+  * 63529782d33 gallium/nir/tgsi: initialize file_max for inputs
+  * 46746980081 gallium/nir/tgsi: fixup indentation
+  * bb4db22ff43 turnip: apply workaround for depth bounds test without
+    depth test
+  * 7faee1430a8 freedreno: rename Z_TEST_ENABLE->Z_READ_ENABLE, Z_ENABLE-
+    >Z_TEST_ENABLE
+  * d37aa08f611 draw: fix stippling of fractional lines
+  * a3d400a0164 turnip: use nir_shader_instructions_pass in tu_lower_io
+  * 8892d276d2d r600: preserve all metadata when passes don't make
+    progress
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Aug 2021 23:17:10 +0200
+
 mesa (21.3.0~git2108162006.441e490f5a1~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
