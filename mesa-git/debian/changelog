@@ -1,3 +1,49 @@
+mesa (21.2.1+git2108192015.889b4c04786~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 889b4c04786 panfrost: Handle non-dithered clear colours
+  * 2a88afe58a2 v3d: implement resource_get_param
+  * 5d99b0869ae vc4: implement resource_get_param
+  * 5aa0faf5123 panfrost: implement resource_get_param
+  * e26269535d0 etnaviv: add stride, offset and modifier to
+    resource_get_param
+  * 099a7f6ff93 gallium/nir/tgsi: initialize file_max for inputs
+  * 33ace70ae1e gallium/nir/tgsi: fixup indentation
+  * 1a3180d595f mesa: don't return errors for gl_* GetFragData* queries
+  * fb321556ec3 .pick_status.json: Update to
+    8e5e70bb3de7f75ab1b039e2cec2975ba59e4af7
+  * fa069379b47 nir/lower_vectorize_tess_levels: set num_components for
+    vectorized loads
+  * 1133671ea3b gallivm: fix texture-mapping with 16-bit result
+  * 8e0d61e1c7c iris: declare padding for iris_vue_prog_key
+  * 1225326046a radv: fix fast clearing depth images with mips on GFX10+
+  * 22406c6316a .pick_status.json: Update to
+    35c3f5f08b7b11f3896412fb5778f127be329615
+  * cb6d87170a3 docs: add SHA256 sum for mesa 21.2.1
+  * f5d4509d364 VERSION: bump for 21.2.1 release
+  * d33e59a1cdb docs: add release notes for 21.2.1
+  * d63b0c4e491 CI: Update Windows quick_gl baseline for mysterious new
+    passes
+  * c202ad46069 .pick_status.json: Update to
+    35c3f5f08b7b11f3896412fb5778f127be329615
+  * 384184ac70d intel/isl: Add a missing assert in
+    isl_tiling_get_intratile_offset_sa
+  * 9c01036e774 intel/isl: Explicitly set offset_B = 0 in
+    get_uncomp_surf for arrays
+  * 7afc784345f lima: Implement lima_resource_get_param() callback
+  * 8d4f8e7e6a0 glsl/opt_algebraic: disable invalid optimization
+  * 40bdd9aad58 .pick_status.json: Update to
+    726fdf3385428b52b773e9049ce6033d02c631c1
+  * 1bfddefadf9 panfrost: Rewrite the clear colour packing code
+  * 8d5da6b0b47 panfrost: Only allow colour blit shaders to be killed
+  * 4637f20a349 panfrost: Fix leak of render node fd
+  * b8ec9da966a AOSP: Update timestamps of target binaries
+  * 0702cd06854 AOSP: Extract version from libdrm instead of hardcoding
+    it.
+  * 50c489f2a0d isl: drop left-over comment
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Aug 2021 23:20:52 +0200
+
 mesa (21.2.0+git2108131928.9ed17f74651~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
