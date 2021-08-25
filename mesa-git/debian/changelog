@@ -1,3 +1,24 @@
+mesa (21.2.1+git2108250511.e3bcce01d98~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * e3bcce01d98 panfrost: Disable shader-assisted indirect draws
+  * 4d3e06e55c9 panfrost: Handle non-dithered clear colours
+  * 12f77679a69 lavapipe: fix reported subpixel precision for lines
+  * 76d1828b97d freedreno: Require C++17.
+  * cc3e149f80b vulkan/wsi/sw: wait for image fence before submitting to
+    queue
+  * 56f21793dec radv: fix copying depth+stencil images on compute
+  * 8f18e97dd73 glsl: fix variable scope for instructions inside case
+    statements
+  * 387039e4d06 ir3/ra: Handle huge merge sets
+  * 8e4d6692f30 ir3/ra: Fix available bitset for live-through collect
+    srcs
+  * e64eeb52401 anv: Set CONTEXT_PARAM_RECOVERABLE to false
+  * f2b61f35386 .pick_status.json: Update to
+    572ed2249465acd4c5f8a229d504a48cbddf95a5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Aug 2021 06:42:30 +0200
+
 mesa (21.2.1+git2108192015.889b4c04786~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
