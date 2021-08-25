@@ -1,3 +1,41 @@
+mesa (21.3.0~git2108250530.ad786430610~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * ad786430610 crocus: add missing fs dirty on reduced prim change.
+  * 6b7a68b7c21 crocus: add missing line smooth bits.
+  * 560dc4f7907 zink: fix pipeline caching
+  * 712a4d2fd25 zink: fix program init flag
+  * 4237aa3a7eb spirv_to_dxil: Run nir_lower_tex during compilation
+  * 4c260f017c1 crocus: drop u_primconvert header.
+  * ea18b0930bc zink: add better TODO note for surface swizzles
+  * 6ff5eaa7d59 zink: make void swizzle clamping util public
+  * 52032d5efae zink: make component mapping function a static inline
+  * 08bad3b2b87 zink: move void format detection function to zink_format
+  * e645e3c523a nine: replace unnecessary dynamic-sized array with
+    bitfield
+  * 16b49164327 panfrost: Take a ctx when submitting/destroying
+  * fe956d0182a spirv: Add support for SPV_KHR_integer_dot_product
+  * 652d304ee95 spirv: Update headers and metadata from latest Khronos
+    commit
+  * a6db40605e8 nir/algebraic: Add some extract optimizations
+  * 839495efc67 nir/algebraic: Add lowering for dot_4x8 instructions
+  * 0f809dbf404 intel/compiler: Basic support for DP4A instruction
+  * 806cd2341c8 nir/algebraic: Basic patterns for dot_4x8
+  * 6c18a3b497a nir/opcodes: Add integer dot-product opcodes
+  * 7d8bf7c167d nir/lower_bit_size: Support add_sat and sub_sat
+  * 8503cab2e00 panfrost: Replace writers pointer with hash table
+  * afebbadda8d panfrost: Remove writer = NULL assignments
+  * e7eb28fed0a panfrost: Remove rsrc->track.users
+  * e98aa554130 panfrost: Prefer batch->resources to rsrc->users
+  * 5c4fbae571f panfrost: Add foreach_batch iterator
+  * 79dd1a4e634 panfrost: Maintain a bitmap of active batches
+  * b8da5b1b7f4 panfrost: Cache number of users of a resource
+  * 2f63ccd0803 panfrost: Switch resources from an array to a set
+  * 8e2159a57fa zink: stop referencing framebuffers
+  * 1af66186941 zink: defer deletion of no-attachment framebuffers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 25 Aug 2021 06:38:54 +0200
+
 mesa (21.3.0~git2108192137.a6a449837b1~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
