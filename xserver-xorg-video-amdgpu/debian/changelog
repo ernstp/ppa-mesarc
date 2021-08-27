@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu (21.0.0+git2108271336.6936552~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 6936552 glamor: Set AMDGPU_CREATE_PIXMAP_SCANOUT on DRI2 and shared
+    pixmaps
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 Aug 2021 22:12:04 +0200
+
 xserver-xorg-video-amdgpu (21.0.0+git2107301502.0d68a91~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
