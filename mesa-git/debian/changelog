@@ -1,3 +1,44 @@
+mesa (21.2.1+git2108271921.2427115b4e2~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 2427115b4e2 panfrost: v7 does not support RGB32_UNORM textures
+  * dc1431d3671 iris: fix layer calculation for TEXTURE_3D ReadPixels()
+    on mip-level>0
+  * 64720c0a3cb nir: fix ifind_msb_rev by using appropriate type
+  * 1b9a3aa5d78 nir: fix shadowed variable in nir_lower_bit_size.c
+  * 71a2d809806 nir: prevent peephole from generating invalid NIR
+  * ce5be91818c nir: move nir_block_ends_in_break() to nir.h
+  * 18581c3a30f glsl: fix explicit-location ifc matching in presence of
+    array types
+  * ad37d530ce5 intel/blorp: Fix Gfx7 stencil surface state valign
+  * 894627ec890 panfrost: Raise maximum texture size
+  * 2f1bc2bb606 aco: Fix to_uniform_bool_instr when operands are not
+    suitable.
+  * 554e47b603f crocus: add missing fs dirty on reduced prim change.
+  * 1c89b990a64 crocus: add missing line smooth bits.
+  * be328711105 zink: fix pipeline caching
+  * 47bc609b622 .pick_status.json: Update to
+    9bc61108d73db4e614dda2a27750ff80165eedbb
+  * 44896842699 panfrost: Replace writers pointer with hash table
+  * ee6739d4d0a panfrost: Remove writer = NULL assignments
+  * 57163a98478 panfrost: Remove rsrc->track.users
+  * a29b083bbe7 panfrost: Prefer batch->resources to rsrc->users
+  * 22dd50563e2 panfrost: Add foreach_batch iterator
+  * 6b788b88704 panfrost: Maintain a bitmap of active batches
+  * ca3c31add86 panfrost: Cache number of users of a resource
+  * 2987bf8761a panfrost: Switch resources from an array to a set
+  * a56b5e1fcd8 panfrost: Move bo->label assignment into the lock
+  * a8c39e9a688 panfrost: Don't use ralloc for resources
+  * b389e1580c6 panfrost: Protect the variants array with a lock
+  * e5f2a4a4169 .pick_status.json: Update to
+    71e748ad2443c373bb090fa1da2626da367b1d20
+  * 68df13f3ceb crocus: copy views before adjusting
+  * ece6458c04e panfrost: Fix NULL dereference in allowlist code
+  * c90937aa10f panfrost: Zero initialize blend_shaders
+  * 0d34c23d376 pan/mdg: Insert moves before writeout when needed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 Aug 2021 22:08:29 +0200
+
 mesa (21.2.1+git2108250511.e3bcce01d98~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
