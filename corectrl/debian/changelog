@@ -1,3 +1,45 @@
+corectrl (1.2.0~git2108251950.9b1ac55~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 9b1ac55 Merge branch 'refactor-modular_overdrive_controls'
+  * a656a8f Remove old overdrive control implementations
+  * c23f244 Add PMFreqVolt overdrive control
+  * 76c9b15 Add PMVoltCurve overdrive control
+  * 871efc5 Return full point range on
+    Utils::AMD::parseOverdriveVoltCurveRange
+  * 0422837 Add PMFreqRange overdrive control
+  * 35e858a Setup all multi-instanced childs on control group impl forms
+  * d45c0c0 Tweak PMOverdrive form layout
+  * 1a8fad0 Add support for multiple instances of the same Item to
+    ControGroup
+  * a57a460 Add a method to get the instance ID from an Item
+  * 1546f88 Inherit Item on IProfilePartXMLParser
+  * 925512d Return lists from sensor and control providers methods
+  * 02078ba Allow the load of legacy settings on sub-components of
+    PMOverdrive
+  * d36e551 Allow specialization of ControlGroupXMLParser::loadPartFrom
+    method
+  * d5d811d Add ItemIDs of legacy overdrive controls to PMOverdrive
+  * f16537d Improve consistency of several parseOverdrive functions on
+    amdutils
+  * 7c33c12 Add getOverdriveClkControlCmdId to amdutils
+  * f0c6fc2 Add parseOverdriveClkControls to amdutils
+  * 28271f5 Inline quirks check on PMOverdriveProvider
+  * c370227 Add clock capability to GPUInfoPMOverdrive
+  * b55deed Rename GPUInfoPMOverdrive capabilities IDs
+  * c90646c Use overdrive control inspection functions on
+    GPUInfoPMOverdrive
+  * 027cf34 Add overdrive control inspection functions to amdutils
+  * 991c3a5 Handle end of line on amdutils parse*Line functions
+  * 9ace800 Rename GPUInfoPMODCV to GPUInfoPMOverdrive
+  * ae522ad Add PMOverdrive control
+  * 24198db Add count method to ICommandQueue
+  * 8e0bce4 Don't force clean controls of ControlGroup
+  * dfac28b Use app name on qml types URIs
+  * f82d81f Remove unused code
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 Aug 2021 22:04:13 +0200
+
 corectrl (1.2.0~git2108122354.5ab63d3~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
