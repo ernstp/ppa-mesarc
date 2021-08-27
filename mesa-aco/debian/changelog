@@ -1,3 +1,44 @@
+mesa (21.3.0~git2108272138.b8c26e89fe8~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b8c26e89fe8 freedreno: ci updates
+  * 9c6938dbfd4 freedreno: remove primconvert
+  * 744ef862b8d freedreno: export supported primtypes
+  * 80b5f4ff088 Fix building AMD MM/GL with EL7
+  * 4b8f2b99e85 zink: avoid generating nonsensical code
+  * a00fccce0c6 zink: reduce scope of version-struct hack
+  * 2b82f2b78b1 zink: clean up const-value handling for get_ssbo_size
+  * 3e22fc27af9 zink: remove incorrect ASSERTED macro
+  * a3092bc7196 zink: remove needless scope
+  * f417a4c1ba3 zink: give each major intrinsic it's own emit function
+  * 55e8857a80e zink: avoid checking if src is const twice
+  * 75b5f12407e zink: avoid memcmping null pointers
+  * d3a795b5284 zink: remove needless NULL-check
+  * 077a9c74789 zink: return false on failure
+  * 40f704f2f30 zink: pctx can't be null here
+  * 4cc3554d85b zink: do not dereference null-pointer
+  * 3fde1c42422 zink: do not try to dereference null-key
+  * e3239dff05c zink: avoid overflow when calculating size
+  * c96afa9fc8d zink: initialize pQueueFamilyIndices
+  * 64c558ab830 zink: do not warn about rare features until used
+  * 28b3563a95a Revert "zink: always init bordercolor value for sampler"
+  * bcd9db327d6 i965: Enable RGBX8888_SRGB format.
+  * 589ccf3d777 aco: Consider maximum number of workgroups per CU/WGP on
+    Navi.
+  * c8698199a11 aco: Consider LDS usage by PS inputs in MaxWaves
+    calculation.
+  * 9bc61108d73 zink: remove extra program ref from cached descriptor
+    updates
+  * 5c3db42d1d3 zink: avoid pulling in unused push descriptors for
+    cached ubo0
+  * 9e314a68224 iris/ci: Correctly set freq governors to max
+  * 1f1dc495319 freedreno/ci: Correctly set freq governors to max
+  * 5a4fcb42f76 panvk: Fix panvk_copy_fb_desc()
+  * d84dedc48f3 panvk: Make the per-arch static lib depend on
+    panvk_entrypoints.h
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 Aug 2021 22:04:48 +0200
+
 mesa (21.3.0~git2108250530.ad786430610~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
