@@ -1,3 +1,20 @@
+corectrl (1.2.0~git2108301058.c231f2b~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * c231f2b Match height of volt curve control with freq range controls
+  * 5393ba9 Layout overdrive controls with Row instead RowLayout
+  * f0b508c Merge branch 'feature-overdrive_volt_offset_control'
+  * 21131a7 Add PMVoltOffset overdrive control
+  * b45983b Add support for overdrive voltage offset to
+    GPUInfoPMOverdrive
+  * d6719cd Add overdrive voltage offset functions to amdutils
+  * a3d10bf Fix text input alignment on vertical frequency and voltage
+    controls
+  * 20449a9 Increase size of voltage curve control
+  * bfd0555 Improve FreqState control appearance
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Aug 2021 15:26:05 +0200
+
 corectrl (1.2.0~git2108251950.9b1ac55~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
