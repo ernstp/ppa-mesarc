@@ -1,3 +1,44 @@
+mesa (21.3.0~git2108300959.1c9b0b853e6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1c9b0b853e6 panvk/ci: Build-test panvk
+  * 23ef0fb2776 radv: do not allocate a clear value for images that
+    support comp-to-single
+  * df688e6941b radv: do not load/store the clear value for comp-to-
+    single images
+  * 0c550a5fe69 radv: disable DCC image stores on Navi12-14 for
+    displayable DCC corruption
+  * a069b4e9b9a vulkan/wsi/sw: add mit-shm support for pixmap allocation
+  * 1f55f9a97a5 vulkan/wsi/sw: add support for using host_ptr for shm
+    pixmaps.
+  * b5c390c113d vulkan/wsi: add support for detecting mit-shm pixmaps.
+  * eacf50c27b7 freedreno/ci: Take fd farm offline for moving day
+  * 8f784c8fed4 freedreno/ci: Add a status variable for CI farm
+  * b34f9740cac spirv: Implement non-Multiview parts of
+    SPV_NV_mesh_shader
+  * 10a03e30cf7 nir: Allow Task/Mesh to lower compute system values
+  * 4f52681a2dd nir: Don't lower Task/Mesh I/O to temporaries
+  * 27697d5eb8d nir/divergence_analysis: Handle Task/Mesh shaders
+  * bf5f6add01c nir/lower_io: Identify Mesh output as arrayed
+  * 9631d24c3f6 compiler: Add Task/Mesh to shader_info
+  * 813d41829da compiler: Add new non-Multiview Task/Mesh builtins
+  * cd394017c85 nir: Add per-primitive I/O intrinsics
+  * f95daad3a2c nir: Add a way to identify per-primitive variables
+  * 927584fa67b nir: Update documentation for location to mention
+    Task/Mesh
+  * 3c3b75a2b7e isl/docs/tiling: Add Tile4 docs
+  * cfb0d931f27 aco: Emit zero for the derivatives of uniforms.
+  * 1454955e5d5 zink: only update inlinable constants when they change
+  * 2eeaaabb8ec aco/optimizer: combine v_pk_mul_u16 + v_pk_add_u16 ->
+    v_pk_mad_u16
+  * be16ebc5caf aco/optimizer: fuse v_mul_f64 + v_add_f64 -> v_fma_f64
+  * 8e27ca9953e aco/optimizer: combine v_mul_lo_u16 + v_add_u16 ->
+    v_mad_u16
+  * 23d5865f422 aco: refactor nir_op_imul selection
+  * d8eef134d84 aco: only apply extract if not used more than 4 times
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Aug 2021 15:27:07 +0200
+
 mesa (21.3.0~git2108272138.b8c26e89fe8~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
