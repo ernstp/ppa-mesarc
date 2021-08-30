@@ -1,3 +1,10 @@
+mesa (21.2.1+git2108272159.a5abb4eba7f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * a5abb4eba7f panfrost: v7 does not support RGB32_UNORM textures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Aug 2021 15:30:33 +0200
+
 mesa (21.2.1+git2108271921.2427115b4e2~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
