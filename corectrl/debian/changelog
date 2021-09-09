@@ -1,3 +1,22 @@
+corectrl (1.3.0~git2109051912.0049cd9~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 0049cd9 Bump version to 1.3.0-dev
+  * 1fbae41 Bump version to 1.2.0
+  * 7eb1cde Reformat files
+  * 3864661 Merge branch 'feature-add_noop_control'
+  * 0bd13ca Add Noop control to top-level mode controls
+  * 5ce5117 Add Noop control
+  * bf50a5a Register PMPowerState control on PMPowerStateMode control
+  * a5729eb Add PMPowerStateMode control
+  * 29eca0a Register CPUFreq control on CPUFreqMode control
+  * 438a9db Add CPUFreqMode control
+  * afc1f13 Prepare ControlModeXMLParser::loadPartFrom for
+    specialization
+  * de1d16e Update translations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Sep 2021 08:56:35 +0200
+
 corectrl (1.2.0~git2108301058.c231f2b~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
