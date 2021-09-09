@@ -1,3 +1,50 @@
+mesa (21.2.1+git2109082325.02252789d8b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 02252789d8b aco: Skip code paths to emit copies when there are no
+    copies.
+  * a85cdda14b8 aco: Use Builder reference in emit_copies_block.
+  * 0ff85a144b7 aco/spill: add temporary operands of exec phis to
+    next_use_distances_end
+  * a31df83f962 aco: fix p_insert lowering with 16bit sources
+  * 8b677626ef8 radv: fix determining the maximum number of waves that
+    can use scratch
+  * 7e5083961dc aco: Fix invalid usage of std::fill with std::array.
+  * d3701f91bbb glx: Prevent crashes when an extension isn't found
+  * d3f8c5ff902 glsl: break out early if compound assignment's operand
+    errored out
+  * 5facfec8455 glsl: propagate errors from *=, /=, +=, -= operators
+  * a290407077a glsl: fix variable scope for do-while loops
+  * d830feb8277 glsl: handle scope correctly when inlining loop
+    expression
+  * 73d24f9fa84 glsl: fix variable scope for loop-expression
+  * 645ad452a69 mesa: fix mesa_problem() call in
+    _mesa_program_state_flags()
+  * c3da924b865 util/primconvert: force restart rewrites if original
+    primtype wasn't supported
+  * 998766f6cc2 llvmpipe: Fix leak of CS local memory with 0 threads.
+  * cd6ef859f0a llvmpipe: Free CS shader images on context destroy.
+  * 7ed05f3216a ir3/lower_pcopy: Set entry->done in the swap loop
+  * f842868e32d ir3/lower_pcopy: Use right flags for src const/immed
+  * 57dad5c2d74 winsys/radeonsi: Set vce_encode = true when VCE found
+  * 89f35c68f41 turnip: re-emit vertex params after they are invalidated
+  * b56bfb8e5fe freedreno: use OUT_WFI for emit_marker
+  * fddc8ddd413 util/fossilize_db: Don't corrupt keys during entry read.
+  * 1f3067cebfc gallium/osmesa: fix buffer resizing
+  * 12ca003fc80 tgsi_to_nir: force int type for LAYER output
+  * 26171c9769d util/format: NEON is not available with the soft-float
+    ABI
+  * 27bb508dcce radeonsi: disable DCC stores on Navi12-14 for
+    displayable DCC to fix corruption
+  * 039fd5c63cd zink: destroy shader modules on program free to avoid
+    leaking
+  * a8d20a871e0 radeonsi: fix a memory leak in si_get_shader_binary_size
+  * 3b028036841 mesa: skip draw calls with unaligned indices
+  * b387d54238a mesa: fix gl_DrawID with indirect multi draws using user
+    indirect buffer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Sep 2021 09:00:47 +0200
+
 mesa (21.2.1+git2108272159.a5abb4eba7f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
