@@ -1,3 +1,41 @@
+mesa (21.3.0~git2109090342.1fd3cf990eb~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1fd3cf990eb mesa: fix glthread deadlock when EGL multi thread shared
+    context
+  * be4f5f1c926 mesa: add ValidateEGLImage driver callback
+  * 41455326717 gallium/api: add validate_egl_image interface
+  * d45d749e8b3 gallium/dri: add dri_screen egl image validate hooks
+  * 27d91fec044 gbm/dri: implement image lookup extension version 2
+  * dcf38724c74 egl/dri2: seperate EGLImage validate and lookup
+  * 5d74c33aaaf docs: update calendar and link releases notes for 21.1.8
+  * 996e50a60aa docs: add release notes for 21.1.8
+  * 44b9e11ddbb gl.h: Remove dllimport
+  * 5ab27ad01e3 aux/trace: dump more pipe_vertex_element members
+  * b4cbc47b3c8 mesa/st: use uint for instance_divisor instead of int
+  * e38c58c808f venus: raise the ring buffer size to 64KB
+  * 79b8498c050 venus: update venus-protocol headers
+  * c9eedba75dc venus: make ring buffer size configurable
+  * eb88c8e1d45 venus: rework vn_instance_submission
+  * 862244ccc6d venus: add and use VN_CS_ENCODER_INITIALIZER
+  * 0641a230a0c venus: init experimental features before the ring
+  * e5a005dd0c5 venus: support reply shmem without ring
+  * 68eb682a238 venus: add vn_renderer_submit_simple_sync
+  * 2996c707cfb venus: init roundtrip fields in vn_instance later
+  * 3bba38ab71f venus: reorder version fields in vn_instance
+  * 076c8f041a6 docs: Update Windows llvmpipe doc for driver split
+  * f36921effec wgl: Refactor drivers to a libgallium_wgl.dll
+  * e2bb111e02f wgl: Make overridden entrypoints local to
+    stw_ext_context
+  * 739fb1057d1 wgl: Move wgl* non-extension definitions to libgl-gdi
+  * a153c78d6e8 wgl: Move opengl32.def to target instead of frontend
+  * 675775b140e wgl: Don't use BUILD_GL32 for wgl frontend
+  * 2a76c976d1c static-glapi: Fix MSVC preprocessor definitions
+  * 03006926de1 wgl: Fix unit test when using shared glapi
+  * 92f515ad6ed mapi: Fix shared-glapi build with MSVC
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Sep 2021 08:57:09 +0200
+
 mesa (21.3.0~git2108300959.1c9b0b853e6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
