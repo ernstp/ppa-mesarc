@@ -1,3 +1,12 @@
+mesa (21.2.1+git2109091814.289eb46bdda~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 289eb46bdda nir: fix serialization of loop/if control
+  * 38d30c07b8b .pick_status.json: Update to
+    b58d6eaf1174aab296c4230e3895c65cba4bd9e3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Sep 2021 21:12:34 +0200
+
 mesa (21.2.1+git2109082325.02252789d8b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
