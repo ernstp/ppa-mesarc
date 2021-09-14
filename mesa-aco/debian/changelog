@@ -1,3 +1,59 @@
+mesa (21.3.0~git2109141953.aed4c0b5a9b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * aed4c0b5a9b nir: Drop the unused instr arg for src/dest copy
+    functions.
+  * 879a569884b nir: Switch from ralloc to malloc for NIR instructions.
+  * feee5e69740 nir/tests: Fix transmuting an SSA dest to be non-SSA
+  * 1edff520e2e nir/lower_phis_to_scalar: Use nir_instr_free() to free
+    instrs.
+  * d1a2870f782 nir: Add all allocated instructions to a GC list.
+  * 22788d68eb6 nir: Consistently pass the instr to nir_src_copy().
+  * 5e37cfb7fe3 nir: Consistently pass the shader to the shader arg of
+    instr creation.
+  * 7a4bbe60c12 nir/from_ssa: Use nir_instr_free() to free instrs
+    instead of ralloc.
+  * b99efb8af06 nir: Pull the instr list free function out to a helper.
+  * 36d9bdca0b1 nir: Add a nir_instr_free() to replace
+    ralloc_free(instr).
+  * 7956a701d83 nir/lower_gs_intrinsics: Make nir_lower_gs_intrinsics be
+    idempotent
+  * edf357b2330 nir/lower_gs_intrinsics: Return progress if
+    append_set_vertex_and_primitive_count makes progress
+  * 7b4427b199f radeonsi: enable NGG passthrough when LDS is used,
+    document the real constraints
+  * 70c975fd136 radeonsi: fix incorrect comments about
+    VGT_SHADER_STAGES_EN
+  * 0b5c1537aa0 radeonsi: don't set edgeflags for TES and blit VS
+  * b330c7cb2a3 radeonsi: use a trick to extract and pack edgeflags
+    using fewer instructions
+  * 2d8dfb91116 radeonsi: convert gfx10_emit_ge_pc_alloc to
+    radeon_opt_set_uconfig_reg
+  * edb5fa4d59d radeonsi: eliminate redundant SPI_SHADER_PGM_RSRC3/4_GS
+    register writes
+  * 3df035d08cc radeonsi: put si_pm4_state at the beginning of si_shader
+  * 73c82570cbf radeonsi: move setting one GS shader key field out of
+    si_shader_selector_key
+  * 99c5e039862 radeonsi: move setting most TCS shader key fields out of
+    si_shader_selector_key
+  * fb04378e769 radeonsi: set prefer_mono outside of
+    si_shader_selector_key
+  * 5824ab569e1 radeonsi: precompute more spi_map code
+  * dba914de85d radeonsi: unroll loops in si_emit_spi_map using 33 C++
+    template instantiations
+  * 3264372539a radeonsi: inline si_get_ps_input_cntl because it has
+    only one use
+  * 5f090891e94 radeonsi: simplify si_emit_spi_map for back-face colors
+  * 57f9452b466 radeonsi: precompute num_interp for si_emit_spi_map
+  * 46802f7b608 radeonsi: interleave si_shader_info::input_* in memory
+    for faster emit_spi_map
+  * 11d1309d827 radeonsi: restructure si_get_ps_input_cntl for future
+    refactoring
+  * b59bb9c07ae radeonsi: force flat for PrimID early in
+    si_nir_scan_shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Sep 2021 21:08:53 +0200
+
 mesa (21.3.0~git2109090342.1fd3cf990eb~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
