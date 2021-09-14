@@ -1,3 +1,25 @@
+corectrl (1.3.0~git2109141259.e908e4a~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * e908e4a Add PMFreqRange overdrive control quirks
+  * 9b8d436 Merge branch 'refactor-split_overdrive_control_quirks'
+  * 41af3f6 Remove old ppOdClkVoltageHasKnownQuirks function
+  * f03d4cb Use overdrive known quirks functions on overdrive controls
+  * 9126e1a Split ppOdClkVoltageHasKnownQuirks per overdrive control
+  * 361be83 Use PMFixedFreq control as fallback overdrive control
+  * 4fc6a8d Fix typo and link to issues writing guidelines on issue
+    templates
+  * f7aaf44 Fix typo
+  * 3c2be61 Update trompeloeil to v41
+  * 5d36827 Update catch2 to 2.13.7
+  * c0b5a54 Update pugixml to 1.11.4
+  * 6e33e78 Update fmt to 8.0.1
+  * 6a159a6 Update easyloggingpp to 9.97.0
+  * 941dd1a Merge branch 'fr_translation' into 'master'
+  * 17929de voltage translation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Sep 2021 21:08:18 +0200
+
 corectrl (1.3.0~git2109051912.0049cd9~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
