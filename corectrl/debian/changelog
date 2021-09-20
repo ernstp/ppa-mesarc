@@ -1,3 +1,23 @@
+corectrl (1.3.0~git2109161904.b8db5d0~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * b8db5d0 Merge branch 'refactor-commands_reordering_and_fixes'
+  * b2fd28f PMPowerProfile: avoid performance level commands when
+    already synced
+  * 39a9f8a PMOverdrive: avoid performance level commands when already
+    synced
+  * ad5fa24 Remove unused ICommadQueue::count method
+  * 3fd43e3 Overdrive: pack controls commands and avoid spurious commit
+    command
+  * 68a7411 Add command pack functionality to CommandQueue
+  * 0270b05 Rename CommandQueue::pack to CommandQueue::toRawData
+  * 8a2c50a Add missing cleaning call to aggregated overdrive controls
+  * 877a509 Reorder overdrive post-init commands generation
+  * 3294c75 Add performance level handling to PpDpmHandler
+  * a24f648 Discard thread exec and exit events on proc connector
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Sep 2021 13:44:14 +0200
+
 corectrl (1.3.0~git2109141259.e908e4a~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
