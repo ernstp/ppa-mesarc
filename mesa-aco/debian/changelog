@@ -1,3 +1,52 @@
+mesa (21.3.0~git2109201321.8805509fff8~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 8805509fff8 panfrost: RGB332_UNORM is not a valid texture format on
+    v6+
+  * b1172540f34 panfrost: Drop the R and T flags on SCALED formats
+  * bab84c62d5a panfrost: RGB10_A2_SNORM is not a valid texture format
+    on v6+
+  * 8651dfbeb48 panfrost: Fix the Z32_S8X24 and X32_S8X24 definitions
+  * eed57ada6e0 panfrost: Patch Z32_S8X24 format when creating a sampler
+    view
+  * 75dbb404393 ac/nir: Remove byte permute from prefix sum of the
+    repack sequence.
+  * 966cff9cfa4 aco/isel: Fix emit_vop2_instruction to apply 16/24-bit
+    flags properly.
+  * f2e41eda9ee aco: Add ability to optimize v_lshl + v_sub into
+    v_mad_i32_i24.
+  * 1a6c01a61b1 mesa: fix timestamp enum with EXT_disjoint_timer_query
+  * 90c6eec0c1b bin/khronos-update.py: add upstream for
+    vulkan_directfb.h & vulkan_screen.h
+  * 8e0b0ce3eb3 bin/khronos-update.py: update the branch name
+    (s/master/main/)
+  * 6f9f350622b radeonsi: fix ps SI_PARAM_LINE_STIPPLE_TEX arg
+  * 2a0a9b189a1 freedreno/computerator/a4xx: Fix enum mismatch warning
+  * b308ccf4fb9 freedreno/ir3: Fix generation check
+  * 24326f25b91 freedreno/ir3: Cleanup liveness lifetime
+  * 344683c932f freedreno/ir3: Fix sched debug msgs
+  * 0e15d5af81b fdno/resource: Rewrite layout selection for allocation
+  * f8a37832df5 lima: fix leak of the screen hash table
+  * e7e762635dc docs/panfrost: Remove obsolete note on Android.mk
+  * 6b5e9352ef7 aco: cleanup assignment of unique_ptrs
+  * 592aa9375c5 radv: Expose modifiers that support DCC image stores
+    with STORAGE_IMAGE_BIT
+  * 92ade3df054 ac/surface: Add ac_modifier_supports_dcc_image_stores
+    helper
+  * fd08758bb15 ac/surface: Add modifiers capable of DCC image stores
+  * 897bb9a2225 iris: Add finalize_nir
+  * b042c71ac12 iris: Move iris_set_max_shader_compiler_threads and
+    iris_is_parallel_shader_compilation_finished
+  * aaf2e6a9f5f iris: Eliminate iris_uncompiled_shader::needs_edge_flag
+  * d7ba52cce9e nir/edgeflags: Add a flag to indicate the edge flag
+    input is needed
+  * 3281ccf4b14 iris: Calculate uses_atomic_load_store after all
+    lowering
+  * e33055874b7 iris: crocus: Use shader_info::is_arb_asm flag
+  * bf74d58f219 freedreno/a6xx: Pre-bake SO-disable stateobj
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Sep 2021 13:44:47 +0200
+
 mesa (21.3.0~git2109141953.aed4c0b5a9b~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
