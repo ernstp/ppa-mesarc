@@ -1,3 +1,30 @@
+mesa (21.2.1+git2109161905.577d5332284~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 577d5332284 freedreno: Use correct key for binning pass shader
+  * 4ef91ffba51 intel/compiler: INT DIV function does not support source
+    modifiers
+  * b4af71448df aco/optimize_postRA: Use iterators instead of operator[]
+    of std::array.
+  * aca7ab664bd aco: don't coalesce constant copies into non-power-of-
+    two sizes
+  * a46d95bd706 zink: fix ZINK_MAX_DESCRIPTORS_PER_TYPE to stop
+    exploding the stack
+  * ddb5243ccd3 broadcom/compiler: force a last thrsw for spilling
+  * bf7543fcefa radv/llvm: fix using Wave32
+  * 910e3faa5cf nir/lower_gs_intrinsics: Return progress if
+    append_set_vertex_and_primitive_count makes progress
+  * 6222be278c4 crocus/gen7: add missing IVB/GT2 geom shader workaround.
+  * 11195ad7fe4 intel/isl: Enable MOCS 61 for external surfaces on TGL
+  * 87edf61fc79 radeonsi: strengthen the VGT_FLUSH condition in
+    begin_new_gfx_cs
+  * 656659a4cc8 nir: Avoid visiting instructions multiple times in
+    nir_instr_free_and_dce.
+  * 4a94de804d1 .pick_status.json: Update to
+    7244aa19806cec5265e1e219cac1a99b0d3c62c6
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 20 Sep 2021 13:48:13 +0200
+
 mesa (21.2.1+git2109091814.289eb46bdda~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
