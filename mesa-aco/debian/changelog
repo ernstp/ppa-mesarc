@@ -1,3 +1,50 @@
+mesa (21.3.0~git2109222237.978a5ec5d28~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 978a5ec5d28 turnip: Move to common DEFINE_HANDLE_CASTS casting macro
+  * 1a33dca3aeb virgl: Add an option to disable coherent
+  * c1e2dfb3655 venus: amend supported extensions list
+  * 363ffdaf796 zink: don't use legacy scanout with modifiers
+  * 30a9bbe8f64 ci/vc4,i915g: Add links to VK-GL-CTS issues for some of
+    our xfails.
+  * e470d9fae5d mesa: Fix missing CopyTexImage formats for
+    OES_required_internalformat.
+  * 705b62d559a docs: update vn extension list
+  * 400da4900e2 zink: fix ci skips
+  * 0c2f7a16bf7 pan/mdg: Remove use of global variables in disassembler
+  * d47a8789f90 pan/decode: Fix DCD size in Pre frame decoding
+  * d4174f5f052 iris: Disable I915_FORMAT_MOD_Y_TILED_GEN12* on adl-
+    p/display 13
+  * c746bf4c5c8 intel/dev: Add display_ver and set adl-p to 13
+  * 039ed2de94d zink: always use type size for query result copy stride
+  * 13384b96262 mesa: Prioritize checking for GLES2's uniform transpose
+    error.
+  * 5a39938b000 mesa: Throw an error for compressed glGenerateMipmap on
+    GLES2 contexts.
+  * 8a3e94c6192 turnip: Move physical device 1.2 properties to a helper
+    function.
+  * c0c5c0d5579 tu: Support
+    VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROTECTED_MEMORY_PROPERTIES.
+  * fa5cc38f5b1 tu: Move VK 1.1 core properties to a helper function and
+    use macros for exts.
+  * 24a539e94c7 tu: Add GetPhysicalDeviceFeatures2() support for more VK
+    1.2 core features.
+  * ab5e77d8547 tu: Deduplicate extension/core feature flags.
+  * 14eb5ca3cd9 tu: Move core features definitions to a helper function.
+  * 895cfca6413 spirv: Identify non-temporal memory access
+  * 47f7b262e1d anv: Refactor subgroup_size_type rules into a single
+    function
+  * 9add809e7fb anv: Simplify subgroup_size_type rules for compute
+    shaders
+  * ca0f892191b compiler/isaspec: add alignment support
+  * eae96d0c4c4 compiler/isaspec: keep track of written data
+  * f0104a6c723 compiler/isaspec: add print(..) helper
+  * bc2e806b0f1 freedreno/isa: move isaspec to a new home
+  * 6801c300a8e freedreno/isa: add shbang and make executable
+  * b63becc4302 freedreno/isa: update documentation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Sep 2021 08:23:34 +0200
+
 mesa (21.3.0~git2109201321.8805509fff8~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
