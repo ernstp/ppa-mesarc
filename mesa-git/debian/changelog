@@ -1,3 +1,57 @@
+mesa (21.2.2+git2109221815.b04d75a6511~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * b04d75a6511 intel/dev: Add display_ver and set adl-p to 13
+  * 74e314e4ee9 iris: Disable I915_FORMAT_MOD_Y_TILED_GEN12* on adl-
+    p/display 13
+  * e12e2067876 svga: fix render target views leak
+  * cbfae5dafb1 .pick_status.json: Update to
+    400da4900e2d72ee807cc3eedac9ace1dfd5dfba
+  * 4dd007b42c8 .pick_status.json: Mark
+    a810e58051b4a065b0aade86c45bf7ed254fc726 as denominated
+  * dee5347b888 .pick_status.json: Mark
+    eb7d2ef070a8819c2859c10559496836275848e2 as denominated
+  * 7cdbc61b5af .pick_status.json: Mark
+    6373dd814a74d84becbbbfc42673df147adb6e9b as denominated
+  * 82586b983e5 pan/blit: Fix a NULL dereference in the preload path
+  * 75080375848 nir: Exclude non-generic patch variables from
+    get_variable_io_mask.
+  * 70fb1270055 ac/nir: Fix match_mask to work correctly for VS outputs.
+  * e519df28cba X11: Ensure that VK_SUBOPTIMAL_KHR propagates to user
+    code
+  * 00d88f4645e panfrost: fix null deref when no color buffer is
+    attached
+  * 340a2ca2349 panfrost: RGB332_UNORM is not a valid texture format on
+    v6+
+  * eeb37a2ef9d panfrost: RGB10_A2_SNORM is not a valid texture format
+    on v6+
+  * 1e5becfd370 mesa: fix timestamp enum with EXT_disjoint_timer_query
+  * ab996bc0f75 freedreno/drm: Don't return shared/control bo's to cache
+  * 6008fce04a5 freedreno: Handle timeout == PIPE_TIMEOUT_INFINITE and
+    rollover
+  * 6d612acf8e5 .pick_status.json: Mark
+    268158a758551a46feb120af3f3cff5fb9292310 as backported
+  * a23c31679e7 .pick_status.json: Mark
+    f241bd3749cec55ca5fac9cb24f17553ab31c0e1 as backported
+  * 8381b8485a3 .pick_status.json: Mark
+    e0533ebf16edcb8b9f0687d3155417e6c1c53d35 as backported
+  * 21e15a4e3ed .pick_status.json: Mark
+    a79ac1bee14d6600cde2788bf136aa59b69a786f as backported
+  * c4c1e0e97e9 .pick_status.json: Update to
+    d3511e8af21ac11b8e7f5305942624d1ae29a73a
+  * fbf76abbc50 freedreno: Use correct key for binning pass shader
+  * 362a808f4c7 intel/compiler: INT DIV function does not support source
+    modifiers
+  * c9befde00eb aco/optimize_postRA: Use iterators instead of operator[]
+    of std::array.
+  * 95d63a1069e aco: don't coalesce constant copies into non-power-of-
+    two sizes
+  * 6ee414e4539 docs/relnotes/21.2.2: Add SHA256 sum
+  * 15c8aeef1d5 VERSION: bump for 21.2.2 release
+  * 32cf8bc0815 docs: add release notes for 21.2.2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Sep 2021 08:27:11 +0200
+
 mesa (21.2.1+git2109161905.577d5332284~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
