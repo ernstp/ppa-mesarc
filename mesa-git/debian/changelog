@@ -1,3 +1,30 @@
+mesa (21.2.2+git2109282131.00b88496e1e~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 00b88496e1e radeonsi: fix clearing index_size for NGG fast launch
+  * ccf0bd1aa64 radeonsi: fix a depth texturing performance regression
+    on gfx6-7
+  * f7c6226405d nir: fix opt_memcpy src/dst mixup
+  * f46692422e5 radv: don't require a GS copy shader to use the cache
+    with NGG VS+GS
+  * c4ca2fc7eb4 v3d: add R10G10B10X2_UNORM to format table
+  * a7e18d47747 .pick_status.json: Update to
+    fbbe00c0b7f7aa5aca42a82358332eb2de56b9af
+  * 0f066dbc362 ac/nir/nggc: Don't reuse uniform values from divergent
+    control flow.
+  * 134d11e4c2e ac/nir/nggc: Refactor save_reusable_variables.
+  * bb48243d274 .pick_status.json: Update to
+    ecc6d78b0541d66765d434dd4158066d6c664f8e
+  * e83db91ff3c aco/tests: add idep_amdgfxregs_h
+  * afd99909e98 .pick_status.json: Update to
+    b653164973bbd3053d3b9ed37c4362af96346900
+  * e08581fd73d mesa: Fix missing CopyTexImage formats for
+    OES_required_internalformat.
+  * e9162c77bc8 .pick_status.json: Update to
+    dc354b8fda928861b7dfff3f8f53159e0053f9f5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Sep 2021 17:27:16 +0200
+
 mesa (21.2.2+git2109221815.b04d75a6511~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
