@@ -1,3 +1,52 @@
+mesa (21.3.0~git2109291600.5c35040da17~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5c35040da17 aco: Don't write m0 register for LDS instructions on
+    GFX9+.
+  * 3e2a8178bf2 mesa: validate texture format against GL/ES ctx
+  * e0efc1eafee radv: remove radv_shader_variant_key completely
+  * ac774b73fee radv: stop using vs_common_out.{as_es/as_ls/as_ngg*}
+    shader keys
+  * 9aaf51639a2 radv: use the pipeline key more when possible
+  * 1eb428fa9fd radv: pass the pipeline key to the shader info pass
+  * 0753615d101 radv: remove vs_common_out:export_clip_dists
+  * d17e7528573 radeonsi: disable PIPE_CAP_PREFER_BACK_BUFFER_REUSE
+  * 09dc0fb2eed loader/dri3: avoid reusing the same back buffer with
+    DRI_PRIME
+  * e67083caf4e gallium: add PIPE_CAP_PREFER_BACK_BUFFER_REUSE
+  * d89ba3f2a9a virgl: Set GL_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION
+    to 1
+  * 77d2bdb0a27 pps: Avoid duplicate elements in with_datasources array.
+  * fd71ccf4d7e ci: Uprev deqp-runner to 0.9.0
+  * 049c3663782 radeonsi: don't set DX10_DIAMOND_TEST_ENA for better
+    performance
+  * 1898ee54931 v3d/v3dv: add unlikely for any V3D_DEBUG check
+  * 0e5601e6f3e broadcom/common: remove unused debug helper
+  * 6db14344806 lavapipe: fixup image binding flags.
+  * 3010c860944 lavapipe: cleanup image create function.
+  * 0793b259b09 panvk: Switch to common GetDeviceQueue and
+    DeviceWaitIdle
+  * 06ac3b1bea8 lavapipe: Switch to common GetDeviceQueue and
+    DeviceWaitIdle
+  * f3040c6e057 lavapipe: Simplify DeviceWaitIdle
+  * 01622bee5eb v3dv: Use the common GetDeviceQueue implementation
+  * c6210d5aa9a turnip: Switch to common GetDeviceQueues2 and
+    DeviceWaitIdle
+  * 7416c6f0a4a radv: Switch to common GetDeviceQueues2 and
+    DeviceWaitIdle
+  * cc9f34cdd69 anv: Switch to common GetDeviceQueues2 and
+    DeviceWaitIdle
+  * 0e4266260ae vulkan/device: Add a common DeviceWaitIdle
+    implementation
+  * 3b535d28d2f vulkan/device: Add a common GetDeviceQueue2
+    implementation
+  * 0d80799ccd6 panvk: Drop panvk_queue::flags/queue_family_index
+  * 713af72048c v3dv: Drop v3dv_queue::flags
+  * 8619c6df62a turnip: Drop
+    tu_queue::flags/queue_family_index/queue_idx
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Sep 2021 17:23:28 +0200
+
 mesa (21.3.0~git2109222237.978a5ec5d28~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
