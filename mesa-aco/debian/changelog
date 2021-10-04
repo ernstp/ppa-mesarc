@@ -1,3 +1,48 @@
+mesa (21.3.0~git2110042145.53917ab4036~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 53917ab4036 zink: Disable TC syncs for get_device_reset_status()
+  * 5b7c81fd132 freedreno: Disable TC syncs for
+    get_device_reset_status()
+  * 75808934f8c gallium/u_threaded: Get reset status without sync
+  * 1a20cfb7d6a anv: Identify code paths specific to graphics primitive
+    pipeline
+  * a63aa9ad41b anv: Move together primitive pipeline emit calls
+  * 1f1ad5a9b43 anv: Use input assembly state only when pipeline has
+    vertex stage
+  * d79c518a32b anv: Set graphics pipeline active_stages earlier
+  * bc2545fc57a anv: Validate vertex related states only when VS is
+    present
+  * 82c69c9a9dc compiler/clc: Preserve OCL kernel arg type metadata on
+    LLVM13
+  * 3a752256f54 compiler/clc: Null extensions should mean all supported,
+    not all
+  * b8cafaa91df lima: use nir_shader_instructions_pass in
+    lima_nir_split_load_input
+  * aa30e586003 wsi/x11: Fix a misunderstanding about how
+    xcb_get_geometry works
+  * ac783acd747 freedreno: Handle PIPE_FORMAT_NONE buffers
+  * 9e74f458a8a freedreno: Handle cso==NULL in bind_sampler_states
+  * 96b37b9546f freedreno/ir3: Remove used unused
+  * 748583d8088 freedreno: Fix some indentation
+  * 6223f29a87e freedreno: Optimize no-op submits
+  * 383df599871 freedreno: Get shader variant msgs in perf debug output
+  * ad60fffd49d pan/mdg: Use the correct swizzle for condition moves
+  * d34c1dc93d7 panvk: Support clearing ZS attachments
+  * c3ebd8ddaca panvk: Allow clear_attachment of RTs > 0
+  * 555e6626c2a panvk: Pass the render target index to
+    panvk_meta_clear_attachment()
+  * 3ba34f66336 panvk: Fix wls_size retrieval
+  * 4692baacfb3 panvk: Don't use panfrost_get_default_swizzle() on v7+
+  * 8acc8f6a0e1 panvk: Fix allocation of BOs bigger than the slab size
+  * 4e58d30d981 radv: Add force_emulate_rt perftest option
+  * 26826a7d607 radv: Enable raytracing extensions on older generations
+  * 548382de42f radv: Implement software emulation for intersect_ray
+  * a0f51921a64 radv: Implement build_node_to_addr for GFX8 and below
+  * ff087dd6011 radv: Do not pass result to insert_traversal_aabb_case
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 Oct 2021 22:26:33 +0200
+
 mesa (21.3.0~git2109291600.5c35040da17~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
