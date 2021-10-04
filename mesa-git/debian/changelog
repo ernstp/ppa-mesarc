@@ -1,3 +1,16 @@
+mesa (21.2.3+git2109292217.9a5ae63909d~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9a5ae63909d docs" Add SHA256 sum for mesa 21.2.3
+  * 5da276cf339 VERSION: bump for 21.2.3 release
+  * 0904da02e84 docs: add release notes for 21.2.3
+  * a6ac82dcc66 auxiliary/indices: convert primitive type
+    PIPE_PRIM_PATCHES
+  * 33f262cace8 radeonsi: fix ps SI_PARAM_LINE_STIPPLE_TEX arg
+  * 7d3660db5df lavapipe/ci: Add additional failing test
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 Oct 2021 22:30:15 +0200
+
 mesa (21.2.2+git2109282131.00b88496e1e~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
