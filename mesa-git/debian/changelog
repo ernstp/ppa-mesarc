@@ -1,3 +1,50 @@
+mesa (21.2.3+git2110121944.63dbbb3e814~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 63dbbb3e814 radeonsi: add back a workaround for DCC MSAA on gfx9 due
+    to conformance issues
+  * 06bbb6e6c0c spirv: deal with null pointers
+  * ac341a01af2 gallivm/format: clamp SINT conversion rather than
+    truncate.
+  * f730509b793 panfrost: Don't set
+    CAP_TGSI_FS_COORD_PIXEL_CENTER_INTEGER
+  * 84f8a144c0d crocus/gen6: don't reemit the svbi when debugging
+  * 6a9aba25728 radv: Handle copying zero queries.
+  * 88b83076cc6 ac/nir/cull: Accept NaN and +/- Inf in face culling.
+  * 6721dcfd4ec amd/common: Add fallback for misreported clocks for RGP.
+  * e0d782d4049 ir3: Fix check for immediate range
+  * ca235ce4320 .pick_status.json: Update to
+    783f8f728ce8e77885adbc7b2c12c39c3e3e5198
+  * a285a9d0f4e crocus/gen5: add dirty flags for urb fences.
+  * e74e0807dc0 crocus/gen5: reemit shaders on gen5 after new program
+    cache bo.
+  * 45e9cb35dd2 aco: fix load_barycentric_at_{offset,sample}
+  * 7dcced8e740 freedreno/drm: Move pipe unref after fence removal
+  * d48f9240630 crocus: Honor scanout requirement from DRI
+  * a283721514e mesa: signal driver when buffer is bound to different
+    texture format
+  * c9688bd22f1 .pick_status.json: Update to
+    ced950e42f4a95ef410e63c2d26a2119e0c3c40b
+  * 346083fac02 anv: add missing transition handling bits
+  * 1b254bb4938 .pick_status.json: Update to
+    3a18963b0876af2aa0d60dd9917e69d409ce4d6e
+  * b9c1d7c96dc ir3: Use source in ir3_output_conv_src_type()
+  * b8c9d9268ee device_select: close dri3 fd after using it.
+  * f78e5086a34 i915g: Check for the scanout-layout conditions before
+    setting level info.
+  * cfacc7a11ba panfrost: Fix off-by-one in varying count assert
+  * d6c75bfa02d panfrost: Move special_varying to compiler definitions
+  * b8781575ca8 llvmpipe: fix crash when doing FB fetch + gl_FragDepth
+    write in one shader
+  * 966a515e8af .pick_status.json: Update to
+    729991e09cd28550001ae63710ab929d95b115bc
+  * 3dea42b3404 crocus/query: don't loop on ready status after gpu hang.
+  * 0da4403f2c4 anv: enable UBO indexing
+  * e46efe260dc pan/mdg: Use the correct swizzle for condition moves
+  * 76ffda7c855 r300: implement forgotten tgsi's cases of textures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Oct 2021 23:53:49 +0200
+
 mesa (21.2.3+git2109292217.9a5ae63909d~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
