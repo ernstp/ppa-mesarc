@@ -1,3 +1,13 @@
+corectrl (1.3.0~git2110081925.91d5fa5~b~mesarc12) bionic; urgency=medium
+
+  * New snapshot:
+  * 91d5fa5 Refactor profile add / remove managing session code
+  * c16144e Fix profile not being monitored after editing its executable
+  * fc4d022 Fix missing profile icon after editing its executable name
+  * c6e855e Resolve process executable file name by reading its symlink
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Oct 2021 23:49:32 +0200
+
 corectrl (1.3.0~git2109161904.b8db5d0~b~mesarc12) bionic; urgency=medium
 
   * New snapshot:
