@@ -1,3 +1,46 @@
+mesa (21.3.0~git2110122250.d071a241f43~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * d071a241f43 ci/freedreno: Disable the minetest trace due to flaky
+    shader code.
+  * d7e836443a5 iris: Tile cache flush for depth before fast clear
+  * 10be870c727 anv: Tile cache flush for depth before fast clear
+  * 81e9c25c1bf anv: Allow HIZ_CCS_WT with subpass self-dependencies
+  * 42185966714 ir3/freedreno: handle non-uniform a1en instructions
+  * f0d469e85fe ir3/freedreno: handle non-uniform resinfo
+  * ca6ef505ff9 aco/optimizer: Skip SDWA on v_lshlrev when unnecessary
+    in apply_extract.
+  * 5de91cfc04b ac/nir/nggc: Write undef to variables in non-repacked ES
+    threads.
+  * 783f8f728ce ac/nir/cull: Accept NaN and +/- Inf in face culling.
+  * 33065149c14 amd/common: Add fallback for misreported clocks for RGP.
+  * f8e9a503224 ir3: Fold ldc src immediates
+  * 470bf75ff86 ir3: Fix handling cat6 immediates
+  * bf3c8e37051 ir3: Fix check for immediate range
+  * 6dc56f18bcf ir3/legalize: handle WAR for special regs
+  * 1ed9a2f50cc ir3: Handle special regs in regmask
+  * a37f9602b7a ir3: Remove separate regmask.h
+  * 548377bcf3b ir3: Always create barycentrics in the input block
+  * 38a84723f16 ir3: Make ir3_create_collect() take a block
+  * 8fb99b58dfb ir3: Fix printing branch type
+  * b516208a559 nir/lower_ubo_vec4: Fix align_mul=8 special case
+  * 751f425c378 ir3/cp: Fix inlining 32->16 const into meta instructions
+  * ab0a665615a ir3/cp: Add missing const promotion check
+  * 1d9bd8b2623 radv: Do early and late tests for fast clears
+  * 49c3a88fadd radv: implement VK_KHR_format_feature_flags2
+  * 5dee0d9da96 radv: switch to
+    VK_FORMAT_FEATURE_2_XXX/VkFormatProperties3KHR
+  * cd4a52b52c6 radv: remove duplicated code about NGG passthrough
+    determination
+  * 6bfe65d1dc1 radv: do not initialize is_ngg_passthrough for geometry
+    shaders
+  * b3269444fd6 aco: cleanup setup_vs_output_info()
+  * 849832bc892 radv: stop gathering output GS info for vertex shaders
+  * 595b16013a2 radv: rename needs_multiview_view_index to
+    uses_view_index
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Oct 2021 23:50:06 +0200
+
 mesa (21.3.0~git2110042145.53917ab4036~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
