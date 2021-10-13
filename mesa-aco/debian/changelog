@@ -1,3 +1,49 @@
+mesa (22.0.0~git2110140052.c4323dc846d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * c4323dc846d brw/nir: remove unused function prototypes.
+  * a98ece61e91 anv: Enable tessellation redistribution
+  * 20c0ca75f55 iris: Enable tessellation redistribution
+  * 867e2e0716e anv: Enable geometry distribution
+  * efa27572a15 iris: Enable geometry distribution
+  * 1d224e7f14e genxml/gen125: Update 3DSTATE_TE fields
+  * 9a7e54b87f3 intel/genxml: Update genxml to support
+    tessellation/geometry distribution
+  * 3eadb03db77 ci/lvp: Skip some slow tests under ASan.
+  * ec51c8774d0 v3d/clif: add support for dumping GS shader state
+  * 19894bec1fd v3dv/pipeline: don't clone the nir shader at
+    pipeline_state_create_binning
+  * c7c484d7f4a VERSION: bump to 22.0
+  * 7d9950e924f docs: reset new_features.txt
+  * 91009cbaa84 VERSION: bump to 21.4
+  * 02435f1294d iris: Require a 4K alignment for extra clear color BOs.
+  * 94e07058ee5 intel/compiler: Remove unused `ret` declaration
+  * bd2cc4b9162 intel/compiler: Convert test_eu_compact to use gtest
+  * 420e33f5510 radv: move alpha_adjust into conditional during vertex
+    input updating
+  * 1b8bdecf6e0 radv: add a mask of bound descriptor buffers for dynamic
+    vertex input
+  * eda5634e257 radv: pre-calc "simple" dynamic vertex input values
+  * c335a4d70ed radv: dynamically calculate misaligned_mask for dynamic
+    vertex input
+  * 90d9c8dc621 radv: don't use invalid stride for triggering vertex
+    state change
+  * 27054f737a2 egl/dri: Enable FP16 for EGL_EXT_platform_device
+  * ea038747df0 dri: Remove the allow_fp16_configs option, always allow
+    them
+  * b01fe97a39c wsi/x11: Fetch and discard the SYNC extension info
+  * ebfbb42e0e5 clover: TargetRegistry.h was moved to another folder
+  * cdc009f5aaa Revert "ci: Add osmesa to Windows GitLab CI"
+  * 9fb2c84768c isl: only bump the min row pitch for display when not
+    specified
+  * 47ff6767eae anv: fill correct surface state for lowered storage
+    image
+  * fd8210f27ed radv: Try to do a better job of dealing with L2 coherent
+    images.
+  * 64b237436a2 radv: Add hooks after in-renderpass meta operations.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Oct 2021 01:27:41 +0200
+
 mesa (21.3.0~git2110122250.d071a241f43~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
