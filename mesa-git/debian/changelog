@@ -1,3 +1,51 @@
+mesa (21.3.0~rc1+git2110132159.2dc6aa567fc~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 2dc6aa567fc VERSION: bump for 21.3.0-rc1
+  * 02435f1294d iris: Require a 4K alignment for extra clear color BOs.
+  * 94e07058ee5 intel/compiler: Remove unused `ret` declaration
+  * bd2cc4b9162 intel/compiler: Convert test_eu_compact to use gtest
+  * 420e33f5510 radv: move alpha_adjust into conditional during vertex
+    input updating
+  * 1b8bdecf6e0 radv: add a mask of bound descriptor buffers for dynamic
+    vertex input
+  * eda5634e257 radv: pre-calc "simple" dynamic vertex input values
+  * c335a4d70ed radv: dynamically calculate misaligned_mask for dynamic
+    vertex input
+  * 90d9c8dc621 radv: don't use invalid stride for triggering vertex
+    state change
+  * 27054f737a2 egl/dri: Enable FP16 for EGL_EXT_platform_device
+  * ea038747df0 dri: Remove the allow_fp16_configs option, always allow
+    them
+  * b01fe97a39c wsi/x11: Fetch and discard the SYNC extension info
+  * ebfbb42e0e5 clover: TargetRegistry.h was moved to another folder
+  * cdc009f5aaa Revert "ci: Add osmesa to Windows GitLab CI"
+  * 9fb2c84768c isl: only bump the min row pitch for display when not
+    specified
+  * 47ff6767eae anv: fill correct surface state for lowered storage
+    image
+  * fd8210f27ed radv: Try to do a better job of dealing with L2 coherent
+    images.
+  * 64b237436a2 radv: Add hooks after in-renderpass meta operations.
+  * 3de7ba13f5a radv: Document cache coherency rules.
+  * 30b4911031b turnip: enable strictLines
+  * 542211676c5 turnip: enable VK_EXT_line_rasterization
+  * 88afceacf04 freedreno/a5xx,a6xx: rename MSAA_ENABLE to LINE_MODE in
+    GRAS_SU_CNTL
+  * d729038c073 anv: use vk_object_zalloc for wsi fences created
+  * 4721352f975 radeonsi: Fix leak of screen->perfcounters.
+  * 33484a327e7 radeonsi: do not use staging texture for APU
+  * 80efe661d73 radeonsi: simplify write_psize code in
+    si_get_vs_out_cntl
+  * 824d9bed4fe radeonsi: simplify how VS_OUT_CCDIST is set
+  * 8f9945a75bb radeonsi: remove the use of PKT3_CONTEXT_REG_RMW
+  * 411c081e97c drirc: Apply radv_invariant_geom workaround to World War
+    Z games.
+  * bbce747a0d6 drirc: Apply radv_invariant_geom workaround to Resident
+    Evil Village.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Oct 2021 01:53:52 +0200
+
 mesa (21.2.3+git2110121944.63dbbb3e814~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
