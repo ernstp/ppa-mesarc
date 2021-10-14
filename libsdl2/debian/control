@@ -13,7 +13,7 @@ Build-Depends:
  fcitx-libs-dev,
  libasound2-dev [linux-any],
  libdbus-1-dev,
- libdecor-dev,
+ libdecor-dev [amd64],
  libdrm-dev [linux-any],
  libegl1-mesa-dev [!hurd-any],
  libgbm-dev [linux-any],

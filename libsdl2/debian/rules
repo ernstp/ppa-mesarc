@@ -12,7 +12,7 @@ confflags = --disable-rpath --enable-sdl-dlopen \
             --disable-video-opengles1 \
             --enable-video-wayland --disable-wayland-shared \
             --enable-video-kmsdrm --disable-kmsdrm-shared \
-            --enable-hidapi --enable-libdecor
+            --enable-hidapi
 
 # disable autoheader (invoked automatically by autoreconf), necessary in order
 # to use debhelper compat level v10 without overriding dh-autoreconf calls
@@ -25,6 +25,10 @@ endif
 
 ifeq ($(DEB_HOST_ARCH_CPU),ppc64el)
   confflags += --disable-altivec
+endif
+
+ifeq ($(DEB_HOST_ARCH_CPU),amd64)
+  confflags += --enable-libdecor
 endif
 
 # disable Wayland and Vulkan on non-Linux, they do not support other kernels at the moment
