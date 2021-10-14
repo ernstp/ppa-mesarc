@@ -1,0 +1,90 @@
+#!/bin/sh
+# autopkgtest check: Build and run a program against SDL, to verify that the
+# headers and pkg-config file are installed correctly
+#
+# Based on glib2.0's debian/tests/build
+# (C) 2012 Canonical Ltd.
+# (C) 2018 Simon McVittie
+# Authors: Martin Pitt, Simon McVittie
+
+set -eux
+
+# Ideally this test could be re-run with mode=static. However, statically
+# linking libSDL2 doesn't actually work, because there is no libasound.a
+# in libasound-dev (since 1.0.27-3 in 2013).
+mode=dynamic
+
+WORKDIR=$(mktemp -d)
+trap 'rm -rf "$WORKDIR"' 0 INT QUIT ABRT PIPE TERM
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
+cd "$WORKDIR"
+cat <<EOF > use-sdl.c
+#undef NDEBUG
+#include <assert.h>
+
+#include <SDL_version.h>
+
+int main(void)
+{
+    SDL_version compiled;
+    SDL_version linked;
+
+    SDL_VERSION(&compiled);
+    SDL_GetVersion(&linked);
+
+    assert(compiled.major == 2);
+    assert(linked.major == 2);
+
+    return 0;
+}
+EOF
+
+for tool in pkg-config sdl2-config; do
+    for cc in "${CROSS_COMPILE}gcc" clang; do
+        cflags=
+        pcflags=
+        scflags=--libs
+
+        case "$mode" in
+        (static)
+            cflags=-static
+            pcflags=--static
+            scflags=--static-libs
+            ;;
+        esac
+
+        case "$cc" in
+        (clang)
+            cflags="$cflags ${DEB_HOST_GNU_TYPE:+--target="${DEB_HOST_GNU_TYPE}"}"
+            ;;
+        esac
+
+        exe="use-${tool}-${cc}-${mode}"
+
+        case "$tool" in
+        (pkg-config)
+            # Deliberately word-splitting cflags, pcflags, pkg-config output
+            # shellcheck disable=SC2046,SC2086
+            "$cc" $cflags -o "${exe}" use-sdl.c $("${CROSS_COMPILE}pkg-config" $pcflags --cflags --libs sdl2)
+            ;;
+        (sdl2-config)
+            # shellcheck disable=SC2046,SC2086
+            "$cc" $cflags -o "${exe}" use-sdl.c $(PKG_CONFIG="${CROSS_COMPILE}pkg-config" sdl2-config --cflags $scflags)
+            ;;
+        (*)
+            exit 1
+            ;;
+        esac
+
+        echo "build (with $tool, $cc, $mode): OK"
+        [ -x "${exe}" ]
+        ./"${exe}"
+        echo "run (with $tool, $cc, $mode): OK"
+    done
+done

@@ -1,0 +1,4 @@
+Use-wayland-scanner-in-private-code-mode.patch
+waylandtouch-Don-t-export-interface-structs.patch
+Add-a-make-install-target-for-the-tests.patch
+no-libdir.patch

@@ -32,6 +32,8 @@ cp -r ../debian .
 
 if [ -e VERSION ]; then
 	PACKAGE_VERSION=$(cat VERSION | sed "s/-devel//")
+elif [ -e Makefile.os2 ]; then
+	PACKAGE_VERSION=$(grep VERSION Makefile.os2 | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
 elif [ -e CMakeLists.txt ]; then
 	PACKAGE_VERSION=$(grep PROJECT_VERSION CMakeLists.txt | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
 elif [ -e configure.ac ]; then

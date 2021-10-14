@@ -1,0 +1,117 @@
+From: Simon McVittie <smcv@debian.org>
+Date: Fri, 15 Jan 2021 15:27:03 +0000
+Subject: Use wayland-scanner in private-code mode
+
+In versions since 1.15, the `code` mode is a deprecated alias for
+`public-code`, which emits symbols with default visibility, overriding
+SDL's -fvisibility=hidden option.
+
+Use the `private-code` mode instead. This emits symbols with hidden
+visibility, so they do not affect the ABI of libSDL.
+
+See also: https://bugreports.qt.io/browse/QTBUG-73099,
+https://lists.freedesktop.org/archives/wayland-devel/2018-February/037097.html
+
+Forwarded: https://bugzilla.libsdl.org/show_bug.cgi?id=5463
+Applied-upstream: 2.0.16, commit:https://hg.libsdl.org/SDL/rev/0530cf0a871c
+---
+ Makefile.in           |  1 +
+ cmake/sdlchecks.cmake | 13 ++++++++++---
+ configure.ac          |  6 +++++-
+ 3 files changed, 16 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile.in b/Makefile.in
+index 57871be..6d0b7e3 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -43,6 +43,7 @@ SDLTEST_TARGET = libSDL2_test.la
+ SDLTEST_OBJECTS = @SDLTEST_OBJECTS@
+ 
+ WAYLAND_SCANNER = @WAYLAND_SCANNER@
++WAYLAND_SCANNER_CODE_MODE = @WAYLAND_SCANNER_CODE_MODE@
+ 
+ INSTALL_SDL2_CONFIG = @INSTALL_SDL2_CONFIG@
+ 
+diff --git a/cmake/sdlchecks.cmake b/cmake/sdlchecks.cmake
+index a9434c8..a426b8f 100644
+--- a/cmake/sdlchecks.cmake
++++ b/cmake/sdlchecks.cmake
+@@ -564,7 +564,7 @@ macro(CheckX11)
+   endif()
+ endmacro()
+ 
+-macro(WaylandProtocolGen _SCANNER _XML _PROTL)
++macro(WaylandProtocolGen _SCANNER _CODE_MODE _XML _PROTL)
+     set(_WAYLAND_PROT_C_CODE "${CMAKE_CURRENT_BINARY_DIR}/wayland-generated-protocols/${_PROTL}-protocol.c")
+     set(_WAYLAND_PROT_H_CODE "${CMAKE_CURRENT_BINARY_DIR}/wayland-generated-protocols/${_PROTL}-client-protocol.h")
+ 
+@@ -579,7 +579,7 @@ macro(WaylandProtocolGen _SCANNER _XML _PROTL)
+         OUTPUT "${_WAYLAND_PROT_C_CODE}"
+         DEPENDS "${_WAYLAND_PROT_H_CODE}"
+         COMMAND "${_SCANNER}"
+-        ARGS code "${_XML}" "${_WAYLAND_PROT_C_CODE}"
++        ARGS "${_CODE_MODE}" "${_XML}" "${_WAYLAND_PROT_C_CODE}"
+     )
+ 
+     set(SOURCE_FILES ${SOURCE_FILES} "${_WAYLAND_PROT_C_CODE}")
+@@ -594,6 +594,7 @@ endmacro()
+ macro(CheckWayland)
+   if(VIDEO_WAYLAND)
+     pkg_check_modules(WAYLAND wayland-client wayland-scanner wayland-egl wayland-cursor egl xkbcommon)
++    pkg_check_modules(WAYLAND_SCANNER_1_15 "wayland-scanner>=1.15")
+ 
+     if(WAYLAND_FOUND)
+       execute_process(
+@@ -610,6 +611,12 @@ macro(CheckWayland)
+     endif()
+ 
+     if(WAYLAND_FOUND)
++      if(WAYLAND_SCANNER_1_15_FOUND)
++        set(WAYLAND_SCANNER_CODE_MODE "private-code")
++      else()
++        set(WAYLAND_SCANNER_CODE_MODE "code")
++      endif()
++
+       link_directories(
+           ${WAYLAND_LIBRARY_DIRS}
+       )
+@@ -629,7 +636,7 @@ macro(CheckWayland)
+       file(GLOB WAYLAND_PROTOCOLS_XML RELATIVE "${SDL2_SOURCE_DIR}/wayland-protocols/" "${SDL2_SOURCE_DIR}/wayland-protocols/*.xml")
+       foreach(_XML ${WAYLAND_PROTOCOLS_XML})
+         string(REGEX REPLACE "\\.xml$" "" _PROTL "${_XML}")
+-        WaylandProtocolGen("${WAYLAND_SCANNER}" "${SDL2_SOURCE_DIR}/wayland-protocols/${_XML}" "${_PROTL}")
++        WaylandProtocolGen("${WAYLAND_SCANNER}" "${WAYLAND_SCANNER_CODE_MODE}" "${SDL2_SOURCE_DIR}/wayland-protocols/${_XML}" "${_PROTL}")
+       endforeach()
+ 
+       if(VIDEO_WAYLAND_QT_TOUCH)
+diff --git a/configure.ac b/configure.ac
+index b7e519b..a58f0f8 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -1539,6 +1539,9 @@ AS_HELP_STRING([--enable-video-wayland-qt-touch], [QtWayland server support for
+                 WAYLAND_CFLAGS=`$PKG_CONFIG --cflags wayland-client wayland-egl wayland-cursor xkbcommon`
+                 WAYLAND_LIBS=`$PKG_CONFIG --libs wayland-client wayland-egl wayland-cursor xkbcommon`
+                 WAYLAND_SCANNER=`$PKG_CONFIG --variable=wayland_scanner wayland-scanner`
++                AS_IF([$PKG_CONFIG --exists 'wayland-scanner >= 1.15'],
++                      [WAYLAND_SCANNER_CODE_MODE=private-code],
++                      [WAYLAND_SCANNER_CODE_MODE=code])
+                 video_wayland=yes
+             fi
+         fi
+@@ -4326,7 +4329,7 @@ if test x$video_wayland = xyes; then
+         echo ;\
+         echo "\\$(gen)/\$p-protocol.c: \\$(srcdir)/wayland-protocols/\$p.xml" ;\
+         echo "	@\\$(SHELL) \\$(auxdir)/mkinstalldirs \\$(gen)" ;\
+-        echo "	\\$(RUN_CMD_GEN)\\$(WAYLAND_SCANNER) code \\$< \\$@" ;\
++        echo "	\\$(RUN_CMD_GEN)\\$(WAYLAND_SCANNER) \\$(WAYLAND_SCANNER_CODE_MODE) \\$< \\$@" ;\
+         echo ;\
+         echo "\\$(objects)/\$p-protocol.lo: \\$(gen)/\$p-protocol.c \\$(gen)/\$p-client-protocol.h" ;\
+         echo "	\\$(RUN_CMD_CC)\\$(LIBTOOL) --tag=CC --mode=compile \\$(CC) \\$(CFLAGS) \\$(EXTRA_CFLAGS) $DEPENDENCY_TRACKING_OPTIONS -c \\$< -o \\$@" ;\
+@@ -4437,6 +4440,7 @@ AC_SUBST(EXTRA_CFLAGS)
+ AC_SUBST(BUILD_LDFLAGS)
+ AC_SUBST(EXTRA_LDFLAGS)
+ AC_SUBST(WAYLAND_SCANNER)
++AC_SUBST(WAYLAND_SCANNER_CODE_MODE)
+ 
+ cat >Makefile.rules <<__EOF__
+ 

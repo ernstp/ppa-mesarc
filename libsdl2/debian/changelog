@@ -1,0 +1,694 @@
+libsdl2 (2.0.14+dfsg2-3) unstable; urgency=medium
+
+  * d/libsdl2-2.0-0.symbols: SDL_LinuxSetThreadPriority is Linux-only
+  * Add patches to exclude generated Wayland symbols from the library ABI.
+    These were not intended to be public, and are not namespaced, which
+    could lead to namespace collisions with other packages.
+  * Don't generate symbols file from a template.
+    This is unnecessary now that we don't have to suppress the symbols for
+    Wayland interfaces.
+  * Exclude autom4te.cache from examples.tar.gz, for reproducible build
+  * d/rules: Disable full path names in documentation.
+    This makes the documentation (more) reproducible.
+  * docs: Only run doxygen across header files, not the entire source tree.
+    This avoids a lot of noise caused by documenting generated files,
+    which (again) made the build non-reproducible.
+  * d/rules: Explicitly disable libunwind if it happens to be installed.
+    The build includes the header if detected, but doesn't link to the
+    library, causing link failure. Explicitly disabling it also makes the
+    build more deterministic in non-minimal chroots.
+  * Avoid using debian/source/local-options.
+    This is incompatible with using dgit, and the unapply-patches option
+    is mostly not useful now that dpkg-source automatically returns the
+    tree to its original state after building (if patches were previously
+    unapplied, they end up unapplied afterwards).
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 18 Jan 2021 14:35:30 +0000
+
+libsdl2 (2.0.14+dfsg2-2) unstable; urgency=medium
+
+  * Add .symbols file
+  * Ignore symbols and avoid dpkg-gensymbols warnings for generated
+    Wayland interfaces.
+    I'm going to ask upstream about removing these from the library's ABI,
+    but for now, mark them as new in the latest upstream version.
+  * Release to unstable
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 12 Jan 2021 20:11:19 +0000
+
+libsdl2 (2.0.14+dfsg2-1) experimental; urgency=medium
+
+  [ Felix Geyer ]
+  * (Build-)Depend on libgles-dev instead of libgles2-mesa-dev.
+    (Closes: #972190)
+
+  [ Fabian Greffrath ]
+  * enable HIDAPI for low level joystick drivers (Closes: #975989)
+
+  [ Simon McVittie ]
+  * d/p/no-libdir.patch: Expand description.
+    Among other things this explains why it isn't an upstreamable change.
+  * New upstream release
+    - Delete non-free files more selectively, so we have what's needed
+      for HIDAPI
+    - Refresh patch
+  * Install upstream's tests.
+    Most of them are manual tests rather than automated tests, so we don't
+    run them at build-time.
+    Package them in the -dev package for now, to avoid a trip through
+    the NEW queue to add a libsdl2-tests package. The installed location
+    is loosely based on what GNOME installed-tests do, but must be multiarch
+    until/unless we separate out a libsdl2-tests package, so put it below
+    the $(libdir) rather than $(libexecdir).
+  * Add Suggests on xdg-utils, for SDL_OpenURL()
+  * Add myself to Uploaders
+  * d/copyright: Update for new upstream release
+  * d/copyright: Reorder so patterns are matched in the right order
+  * Standards-Version: 4.5.1 (no changes required)
+
+  [ Helmut Grohne ]
+  * Remove wrong check of nocheck profile (Closes: #979369)
+  * Don't replace jquery.js: doxygen's jquery.js is not just jquery.
+    See debian/README.jquery in the doxygen package.
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 06 Jan 2021 11:13:12 +0000
+
+libsdl2 (2.0.12+dfsg1-4) unstable; urgency=medium
+
+  * Team upload
+  * Add graphwiz to Build-Depends-Indep for the dot command.
+
+ -- Fabian Greffrath <fabian@debian.org>  Sat, 03 Oct 2020 22:53:14 +0200
+
+libsdl2 (2.0.12+dfsg1-3) unstable; urgency=medium
+
+  * Team upload
+  * Add libdrm-dev to Build-Depends to get the kmsdrm video driver
+    working, thanks Matthew Harm Bekkema (Closes: #971529).
+
+ -- Fabian Greffrath <fabian@debian.org>  Sat, 03 Oct 2020 22:11:05 +0200
+
+libsdl2 (2.0.12+dfsg1-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Steve Langasek ]
+  * use clang:native instead of clang in autopkgtests, to make
+    them cross-testing friendly
+
+  [ RALOVICH, Kristof ]
+  * debian: enable kmsdrm video driver as well
+
+ -- Fabian Greffrath <fabian@debian.org>  Tue, 18 Aug 2020 11:15:22 +0200
+
+libsdl2 (2.0.12+dfsg1-1) unstable; urgency=medium
+
+  * Team upload
+  * Upload v2.0.12 to unstable
+  * d/tests/build: Exercise compilation using clang
+  * d/rules: Provide compatibility symlinks to begin_code.h, close_code.h.
+    If a project that (incorrectly?) #includes <SDL2/SDL_foo.h>, such as
+    jag_0.3.5-5, is compiled with gcc, our symlink to SDL_platform.h is
+    sufficient to make it work. However, when compiled with clang, we need
+    to provide symlinks to everything that is required by SDL_config.h,
+    recursively, due to different symlink behaviour between gcc and clang.
+    (This is a variation on #952066.)
+  * d/tests: Exercise the #952066-like situation with clang
+
+ -- Simon McVittie <smcv@debian.org>  Tue, 26 May 2020 14:49:00 +0100
+
+libsdl2 (2.0.12+dfsg1-1~exp1) experimental; urgency=medium
+
+  * Team upload
+
+  [ Simon McVittie ]
+  * New upstream release (Closes: #954660)
+    - d/copyright: Update
+    - d/copyright, d/gbp.conf: Exclude compiled shaders for macOS etc.
+    - d/copyright, d/gbp.conf: Exclude non-free Steam Controller headers
+      (these have been relicensed in the hg repository, so the exclusion
+      can probably be dropped with 2.0.14, but as far as I can see they're
+      only used on non-Linux platforms anyway)
+  * Remove SHLIBVER, rely on debhelper compat 12 defaults
+
+  [ Gianfranco Costamagna ]
+  * Update copyright years
+  * Drop CVE-2019-13616: upstream
+  * Refresh no-libdir patch
+  * Also install the sdl2-config-version.cmake file
+  * Remove old dbgsym migration command
+  * Remove signatures from signing key
+  * Bump std-version to 4.5.0
+  * Add Rules-Requires-Root: no
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 27 Apr 2020 14:19:49 +0100
+
+libsdl2 (2.0.10+dfsg1-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Gianfranco Costamagna ]
+  * Fix autopkgtests for cross-architecture testing, by making sure
+    sdl2-config calls the correct pkg-config command
+
+  [ Simon McVittie ]
+  * Revert "Add the non-multiarch include dir to pkg-config cflags for
+    compatibility."
+  * Revert "Install all headers in an architecture-specific location"
+  * Make SDL_config.h redirect to an architecture-specific version
+    (Closes: #909740, #951087, #951943, #951959, #951974, #951976, #952049,
+    #951962, #952105, #955416)
+  * Create a SDL_platform.h symlink in /usr/include/MULTIARCH/SDL2
+    (Closes: #952046, #952066, #952098)
+  * Add autopkgtests for various deprecated use patterns
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 13 Apr 2020 18:27:11 +0100
+
+libsdl2 (2.0.10+dfsg1-2) unstable; urgency=medium
+
+  [ Simon McVittie ]
+  * d/tests: Add a test that detecting SDL2 via CMake does not regress.
+    This is the sort of thing that could easily regress while solving #909740.
+  * Install all headers in an architecture-specific location.
+    This approach was suggested by Adrian Bunk on #909740, as one of several
+    possible ways to avoid SDL_config.h colliding between architectures.
+    Because this approach uses a different @includedir@ for each architecture,
+    we can no longer have @includedir@ in sdl2-config.in: that would result
+    in non-co-installability. However, simply removing it (similar to
+    no-libdir.patch) is not an option, because the SDL 2 headers are not
+    on the default include path (and they cannot be added to it without
+    breaking parallel-installability of SDL 1.2 or a hypothetical future
+    SDL 3). Instead, patch sdl-config.in to ask pkg-config for its CFLAGS
+    and LIBS. This can supersede the previous no-libdir.patch.
+    This relies on the assumption that cross-compilation will always set
+    PKG_CONFIG, even if that environment variable is not otherwise used by
+    the build system that is invoking sdl2-config.
+    The sdl2-config.cmake.in part of no-libdir.patch can simply be dropped,
+    because that file is installed to an architecture-specific location
+    anyway, namely ${libdir}/cmake.
+  * Mark libsdl2-dev as Multi-Arch: same (Closes: #909740)
+
+  [ Gianfranco Costamagna ]
+  * Upload part of Ubuntu delta to Debian
+
+  [ Timo Aaltonen ]
+  * rules: Disable GLES1, it's getting enabled because libgles-dev ships
+    GLES1 headers now, but they have conflicting types against the ones
+    SDL has.
+
+  [ Steve Langasek ]
+  * Make autopkgtests cross-test-friendly. (Closes: #946496)
+
+  [ Felix Geyer ]
+  * Drop build-all autopkgtest.
+    - We already have tests that check if building against SDL2 with pkg-config,
+      sdl2-config and cmake works correctly.
+    - It has a large overhead as it rebuilds SDL2 and requires supporting
+      cmake as a second buildsystem.
+  * Add the non-multiarch include dir to pkg-config cflags for compatibility.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 02 Feb 2020 23:02:25 +0100
+
+libsdl2 (2.0.10+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #939249)
+    - Fixes warnings with -Wundef on non-x86 hosts. (Closes: #892087)
+    - Fixes CVE-2019-7572, CVE-2019-7573, CVE-2019-7574, CVE-2019-7575,
+      CVE-2019-7576, CVE-2019-7577, CVE-2019-7578, CVE-2019-7635,
+      CVE-2019-7636, CVE-2019-7638 and CVE-2019-13626 (Closes: #924610)
+  * Drop fix-cross-building-907711.patch, fixed upstream.
+  * Bump SHLIBVER to 2.0.10.
+  * Add support for nodoc build-profile.
+  * Switch to debhelper compat level 12.
+  * Cherry-pick upstream fix for CVE-2019-13616.
+  * Mark autopkgtests as superficial.
+
+ -- Felix Geyer <fgeyer@debian.org>  Thu, 19 Sep 2019 23:50:39 +0200
+
+libsdl2 (2.0.9+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #914251)
+  * Drop SDL2-dynapi-symbol-resolution-fix.patch, applied upstream.
+  * Refresh fix-cross-building-907711.patch
+  * Bump SHLIBVER to 2.0.9.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sat, 02 Feb 2019 17:13:17 +0100
+
+libsdl2 (2.0.8+dfsg1-6) unstable; urgency=medium
+
+  * d/rules: Add @ in 'tar --mtime="@$(SOURCE_DATE_EPOCH)"', otherwise the
+    date is not valid
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 25 Oct 2018 01:42:18 +0200
+
+libsdl2 (2.0.8+dfsg1-5) unstable; urgency=medium
+
+  * Bump Policy Standards-Version to 4.2.1 (no changes needed)
+  * d/rules: include /usr/share/dpkg/architecture.mk and .../pkg-info.mk
+    to provide DEB_HOST_ARCH_CPU, DEB_HOST_MULTIARCH and
+    SOURCE_DATE_EPOCH, instead of getting them through shell invocations.
+  * d/watch: Switch to version=4
+  * Switch to debhelper compat level v11
+    - Force examples to be installed in libsdl2-doc
+  * d/patches:
+    - add fix-cross-building-907711.patch to fix cross-building by using
+      the right pkg-config depending on the architecture (Closes: #907711)
+      Thanks Helmut Grohne for the report and the patch.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 20 Oct 2018 12:51:58 +0200
+
+libsdl2 (2.0.8+dfsg1-4) unstable; urgency=medium
+
+  * Team upload
+  * Update copyright file.
+  * Ack previous NMU thanks!
+  * Also add the testsuite from test directory (from bug #909778)
+    - we need to find an approach to also run the resulting binaries
+      automatically
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 01 Oct 2018 12:54:23 +0200
+
+libsdl2 (2.0.8+dfsg1-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * d/tests/build: Add autopkgtest to check that dynamic linking with
+    either pkg-config or sdl2-config works correctly
+  * Revert "Make libsdl2-dev coinstallable again"
+    (Closes: #909778) (reopens: #909740)
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 30 Sep 2018 16:13:38 +0100
+
+libsdl2 (2.0.8+dfsg1-3) unstable; urgency=medium
+
+  [ Hugh McMaster <hugh.mcmaster@outlook.com> ]
+  * Make libsdl2 coinstallable again (Closes: #909740).
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 27 Sep 2018 16:21:47 +0200
+
+libsdl2 (2.0.8+dfsg1-2) unstable; urgency=medium
+
+  [ Felix Geyer ]
+  * Remove Multi-Arch: same from libsdl2-dev as SDL_config.h is architecture
+    dependent.
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+  * Enable vulkan everywhere
+  * debian/patches/SDL2-dynapi-symbol-resolution-fix.patch:
+    cherry-pick upstream fix for Unity-based games shipping bundled
+    libsdl2 version (LP: #1772471)
+    - thanks Ryan Gordon for the patch and help
+
+  [ Ryan C. Gordon (icculus) ]
+  * Disable --disable-loadso switch, it was useless and it is wrong
+    in many cases (see LP: #1740517 for discussion)
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 09 Sep 2018 01:41:38 +0200
+
+libsdl2 (2.0.8+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fixes IBus not working properly. (Closes: #878484)
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 04 Mar 2018 12:07:25 +0100
+
+libsdl2 (2.0.7+dfsg1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Fix shlib symlink.
+
+ -- Fabian Greffrath <fabian@debian.org>  Thu, 09 Nov 2017 17:26:43 +0100
+
+libsdl2 (2.0.7+dfsg1-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump std-version to 4.1.1, no changes required
+  * Add fcitx support (Closes: #881042), thanks
+    Zhang Jingqiang <zh_jq@outlook.com> for the report!
+  * Switch URI in secure mode
+  * Update copyright years
+  * Enable also samplerate support
+  * Also switch watch file in secure mode
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 07 Nov 2017 13:09:13 +0100
+
+libsdl2 (2.0.7+dfsg1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 2.0.7+dfsg1.
+  * Remove patches backported from upstream.
+  * bump SHLIBVER in debian/rules, as SDL_INTERFACE_AGE
+    in configure.in has been reset.
+
+ -- Fabian Greffrath <fabian@debian.org>  Mon, 06 Nov 2017 22:26:23 +0100
+
+libsdl2 (2.0.6+dfsg1-4) unstable; urgency=high
+
+  * Import further upstream patches for CVE-2017-2888.
+    The initial fix was incomplete. (Closes: #878264)
+    - d/patches/CVE-2017-2888-1.patch
+    - d/patches/CVE-2017-2888-2.patch
+    - d/patches/CVE-2017-2888-3.patch
+
+ -- Felix Geyer <fgeyer@debian.org>  Wed, 18 Oct 2017 21:36:23 +0200
+
+libsdl2 (2.0.6+dfsg1-3) unstable; urgency=high
+
+  [ Gianfranco Costamagna ]
+  * debian/patches/dc7245e3d1f2.patch:
+    - backport upstream fix for dbus error.
+      LP: #1721907
+      thanks LGB [Gábor Lénárt] (lgb) for the report!
+
+  [ Felix Geyer ]
+  * Fix CVE-2017-2888: Integer overflow while creating a new RGB surface.
+    - Add d/patches/CVE-2017-2888.patch
+    - Closes: #878264
+  * Enable verbose build logs.
+
+ -- Felix Geyer <fgeyer@debian.org>  Thu, 12 Oct 2017 18:33:41 +0200
+
+libsdl2 (2.0.6+dfsg1-2) unstable; urgency=medium
+
+  * Fix libSDL2-2.0.so symlink, thanks Andreas Beckmann (Closes: #877270)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 30 Sep 2017 10:09:26 +0200
+
+libsdl2 (2.0.6+dfsg1-1) unstable; urgency=medium
+
+  [ Manuel A. Fernandez Montecelo ]
+  * New upstream release
+    - Closes: #733015
+  * Override on dh_installchangelogs to install upstream changelog WhatsNew.txt
+    (wrong override on dh_auto_installchangelogs before)
+  * Mark -doc package as "Multi-Arch: foreign"
+
+  [ Gianfranco Costamagna ]
+  * Make dev package finally multiarch
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Wed, 27 Sep 2017 00:29:24 +0200
+
+libsdl2 (2.0.5+dfsg1-3) unstable; urgency=medium
+
+  * Switch to debhelper compat level v10
+    - dh flags --parallel are not needed
+    - autoreconf is invoked by default
+      * disable autoheader (invoked automatically by autoreconf),
+        necessary in order to use debhelper compat level v10 without
+        overriding dh-autoreconf calls
+  * Bump Policy Standards-Version to 4.0.0 (no changes needed)
+  * Install WhatsNew.txt as upstream changelog
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Fri, 28 Jul 2017 23:35:01 +0200
+
+libsdl2 (2.0.5+dfsg1-2) unstable; urgency=medium
+
+  * Team Upload.
+  * Fix broken link (Closes: #849297)
+    - thanks Ben Longbons for the bug report!
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 27 Dec 2016 18:11:10 +0100
+
+libsdl2 (2.0.5+dfsg1-1) unstable; urgency=low
+
+  * New upstream release
+    - Drop (all) debian/patches, there had been originally backported from
+      upstream or are now applied there:
+      * replace-relicenced-SDL_qsort.patch
+      * SDL2_dont_propagate_lpthread.diff (included in 2.0.4 already, but not
+        dropped then)
+      * bug_822210_fix_sdl2-config.cmake_whitespace.patch
+  * d/control: add Build-Depend on wayland-protocols, needed by the new version
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Wed, 02 Nov 2016 01:20:36 +0100
+
+libsdl2 (2.0.4+dfsg2-1) unstable; urgency=medium
+
+  [ Manuel A. Fernandez Montecelo ]
+  * Bump Policy Standards-Version to 3.9.8 (no changes needed)
+  * Drop -dbg package
+  * Fixes for reproducible builds:
+    - timestamps_in_tarball, use --clamp-mtime with changelog as date
+    - timestamps_in_gzip_headers, export GZIP="-9n"
+    - sort files by name when creating "examples.tar.gz"
+  * Add depends from -doc on libjs-jquery, use symlink instead of embedded
+    copy
+  * Ensure proper migration from -dbg package using "dh_strip
+    --dbgsym-migration"
+  * Bump debhelper dependency for --dbgsym-migration
+  * Enable ibus support (Closes: #822924)
+  * d/patches:
+    - Add bug_822210_fix_sdl2-config.cmake_whitespace.patch: Fix upstream
+      problem with sdl2-config.cmake (Closes: #822210)
+
+  [ Gianfranco Costamagna ]
+  * Fix insecure VCS fields.
+  * Re-import the same tarball without SDL-qsort.c file.
+    - the license issue is fixed already, because the original
+      maintainer relicensed it (so we are adding it as a patch now)
+      this repack can be removed in the next upstream tarball import.
+      (Closes: #814276).
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Thu, 19 May 2016 11:48:54 +0100
+
+libsdl2 (2.0.4+dfsg1-2) unstable; urgency=low
+
+  * Upload to unstable
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 18 Jan 2016 16:36:59 +0100
+
+libsdl2 (2.0.4+dfsg1-1) experimental; urgency=medium
+
+  * Team upload.
+  * run wrap-and-sort -sa.
+  * Fix copyright lintian warning.
+  * Update copyright to new release.
+  * New upstream release (Closes: #788688, #798265, #788540)
+    - Drop patches use-default-screen and
+      fix_joystick_misc_axes.diff, applied upstream.
+  * Add Files-Excluded keyword to copyright file, allowing to
+    import a new release with uscan command. (Closes: #804662)
+  * Create new -doc package, and move examples into it (Closes: #739430).
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sun, 03 Jan 2016 12:12:54 +0100
+
+libsdl2 (2.0.2+dfsg1-8) unstable; urgency=medium
+
+  * Change to improve build reproducibility: tar file permission modes.
+    Thanks Reiner Herrmann. (Closes: #803578)
+  * Build with sndio support (Closes: #799707)
+  * Update d/copyright to adapt to minor changes in code and files moved
+    around, and quell lintian (spelling-error-in-copyright,
+    wildcard-matches-nothing-in-dep5-copyright and
+    unused-file-paragraph-in-dep5-copyright)
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 01 Nov 2015 00:55:03 +0000
+
+libsdl2 (2.0.2+dfsg1-7) unstable; urgency=medium
+
+  * Bump Policy Standards-Version to 3.9.6 (no changes needed)
+  * Remove Barry deFreese from uploaders
+  * Change for reproducible builds: use "--owner=0 --group=0" when
+    creating the "examples" tar file (Closes: #777186).  Thanks Chris Lamb
+    and rest of the Reproducible Builds team for the analysis and patch
+    suggested.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 27 Apr 2015 22:53:31 +0100
+
+libsdl2 (2.0.2+dfsg1-6) unstable; urgency=medium
+
+  * rules: disable activec for ppc64el build (Closes: #770670)
+
+ -- Dominique Dumont <dod@debian.org>  Thu, 27 Nov 2014 18:52:50 +0100
+
+libsdl2 (2.0.2+dfsg1-5) unstable; urgency=medium
+
+  * patch to use default screen from DISPLAY (Closes: #754401)
+  * fix short name of BSD-3-clause
+
+ -- Dominique Dumont <dod@debian.org>  Sat, 18 Oct 2014 19:01:30 +0200
+
+libsdl2 (2.0.2+dfsg1-4) unstable; urgency=medium
+
+  [ Hector Oron ]
+  * d/control: remove libts-dev build depends. (Closes: #751766)
+
+  [ Felix Geyer ]
+  * Move upstream GPG key as an ascii-armored keyring to debian/upstream/.
+
+ -- Felix Geyer <fgeyer@debian.org>  Mon, 16 Jun 2014 21:02:07 +0200
+
+libsdl2 (2.0.2+dfsg1-3) unstable; urgency=medium
+
+  * Actually change Build-Depends libegl1-mesa-dev to be conditionally
+    [!hurd-any].  It was applied to libgl1-mesa-dev by mistake in -2.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Wed, 19 Mar 2014 20:22:29 +0000
+
+libsdl2 (2.0.2+dfsg1-2) unstable; urgency=medium
+
+  * Conditional dependencies libegl1-mesa-dev [!hurd-any],
+    libgles2-mesa-dev [!hurd-any] and libwayland-dev [linux-any], they do
+    not seem to support these kernels at the moment
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Tue, 18 Mar 2014 20:17:10 +0000
+
+libsdl2 (2.0.2+dfsg1-1) unstable; urgency=low
+
+  * New upstream release
+    - Remove patch applied upstream: fix_ftbfs_kfreebsd.diff
+    - Add support for Wayland, including build-depends for libegl1-mesa-dev,
+      libxkbcommon-dev and libwayland-dev.  Thanks Franz Schrober for the
+      request and the help to enable it.  (Closes: #714482)
+    - Add support for OpenGLES, including build-depends for libgles2-mesa-dev
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 15 Mar 2014 00:22:48 +0000
+
+libsdl2 (2.0.1+dfsg1-3) unstable; urgency=medium
+
+  * Use "dh_autoreconf" to support new architectures
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 09 Mar 2014 01:58:11 +0000
+
+libsdl2 (2.0.1+dfsg1-2) unstable; urgency=medium
+
+  * Fix FTBFS on kFreeBSD.
+    - Add fix_ftbfs_kfreebsd.diff to extend a __FreeBSD__ check to
+      __FreeBSD_kernel__.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 05 Jan 2014 13:42:59 +0100
+
+libsdl2 (2.0.1+dfsg1-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #728974)
+    - Remove patch applied upstream:
+      bug-723797-false_positives_in_mouse_wheel_code.patch
+  * Bump Standards-Version to 3.9.5, no changes needed.
+
+  [ Felix Geyer ]
+  * Import upstream gpg key for uscan to verify the orig tarball.
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sat, 28 Dec 2013 12:31:19 +0000
+
+libsdl2 (2.0.0+dfsg1-3) unstable; urgency=low
+
+  * Build-Depends on pkg-config
+  * Apply patch accepted upstream to work around a false-positive in the
+    X11 mouse wheel code (Closes: #723797).  Thanks Darren Salt for the
+    report and the fix.
+  * Review and removal of old patches not applied in SDL2, virtually of
+    them applied upstream, or rejected as invalid for good reason, or
+    don't apply any more (code/functionality removed upstream).  I
+    forwarded and documented the remaining patches.
+    - 001_autogen_autotools_fix.diff
+    - 020_libcaca_new_api.diff
+    - 030_pulseaudio_enable.diff
+    - 040_propagate_pic_to_nasm.diff
+    - 050_altivec_detection.diff
+    - 060_disable_ipod.diff
+    - 205_lock_keys.diff
+    - 205_x11_keysym_fix.diff
+    - 206_gcc4_compilation_fix.diff
+    - 209_alsa_priority.diff
+    - 214_missing_mmx_blit.diff
+    - 215_kfreebsd_gnu.diff
+    - 216_page_size.diff
+    - 217_x11_keytounicode.diff
+    - 218_double_free.diff
+    - 218_joystick_memmove.diff
+    - 219_pulseaudio_crackles.diff
+    - 220_std_cld.diff
+    - 221_check_SDL_NOKBD_environment_variable.diff
+    - 222_joystick_crash.diff
+    - 310_fixmouseclicks
+    - 310_segfault_noGLX.diff
+    - 320_activate_xrandr_on_default.diff
+    - 320_disappearingcursor.diff
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 20 Oct 2013 00:58:48 +0100
+
+libsdl2 (2.0.0+dfsg1-2) unstable; urgency=low
+
+  * Remove external_header_paths.diff, it's not needed anymore and pulls
+    harmful flags into the pkg-config file. Thanks to Thibaut Girka for
+    the report and analysis. (Closes: #720650)
+
+ -- Felix Geyer <fgeyer@debian.org>  Fri, 30 Aug 2013 20:20:47 +0200
+
+libsdl2 (2.0.0+dfsg1-1) unstable; urgency=low
+
+  * New upstream release
+  * Filter upstream tarball from binaries and unneeded cruft
+    - Remove from debian/copyright files that are now filtered out when creating
+      the orig.tar
+  * Add build-dependency on libdbus-1-dev, to use D-Bus
+  * Switch to @debian.org address
+  * Bring the man page of sdl-config up to date
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 12 Aug 2013 20:45:31 +0100
+
+libsdl2 (2.0.0~rc1-1) unstable; urgency=low
+
+  * New upstream release candidate.
+  * Filter debian/* when importing new upstream releases.
+  * Bump SHLIBVER to 2.0.0~rc1.
+  * Update debian/docs.
+  * Bump Standards-Version to 3.9.4, no changes needed.
+  * Disable directfb backend for now as it's broken and upstream
+    disables it by default.
+    - Drop the udeb package.
+  * Drop some unused dependencies and confflags.
+
+ -- Felix Geyer <fgeyer@debian.org>  Sun, 02 Jun 2013 18:31:42 +0200
+
+libsdl2 (2.0.0~20130103-1) unstable; urgency=low
+
+  [ Manuel A. Fernandez Montecelo ]
+  * debian/control:
+    - Updating maintainers/permissions:
+      - Add myself and Felix Geyer
+    - Update Build-Depends:
+      - Remove a few obsolete items
+      - Add items added lately to libsdl1.2, such as libts (touch screen)
+        support
+    - Add "libsdl2-dbg", analog to libsdl1.2-dbg
+    - Change "XC-Package-Type: udeb" to "Package-Type"
+  * debian/compat: set level 9
+  * debian/source/format: Set to "3.0 (quilt)"
+    - Remove README.source, not needed with new format
+  * debian/sdl2-config.1: Fix typo, "progams"->"programs"
+  * debian/libsdl2-dev.install:
+    - Remove "usr/lib/*/*.la", discouraged
+    - Add man pages: "usr/share/man/man3/*"
+  * debian/libsdl2-dev.manpages: add file to install local "sdl2-config.1"
+  * debian/sources: Removed, possible obsolete file from long ago?
+  * debian/copyright:
+    - Upstream updated to zlib/libpng
+    - Copyright-file format conversion to 1.0
+    - Complete revamp and detailed research about copyright and licenses used,
+      it's very messy but hopefully complete
+
+  [ Felix Geyer ]
+  * Simplify debian/rules by using dh(1).
+
+ -- Manuel A. Fernandez Montecelo <manuel.montezelo@gmail.com>  Sun, 27 Jan 2013 16:40:49 +0100
+
+libsdl2 (2.0~20120220c-1) experimental; urgency=low
+
+  * Upstream version was renamed to 2.0 (Closes: #669367).
+  * New upstream snapshot (Closes: #671506).
+  * This package no longer conflicts with libsdl-1.2.
+  * debian/rules: add multiarch support (Closes: #669364).
+
+  * debian/patches/fix_joystick_misc_axes.diff: fix a joystick remapping
+    bug causing some axes to malfunction.
+  * debian/patches/external_header_paths.diff: provide additional CFLAGS
+    so that headers such as SDL_syswm.h can be included (Closes: #669363).
+
+ -- Sam Hocevar <sho@debian.org>  Thu, 17 May 2012 19:03:59 +0200
+
+libsdl-1.3 (1.3.0~20111204-1) experimental; urgency=low
+
+  * Initial upload from upstream snapshot.
+
+ -- Sam Hocevar <sho@debian.org>  Sun, 04 Dec 2011 14:35:05 +0100

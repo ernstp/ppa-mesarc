@@ -1,0 +1,3 @@
+usr/lib/*/libSDL2.la
+usr/lib/*/libSDL2main.la
+usr/lib/*/libSDL2_test.la

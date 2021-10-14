@@ -1,0 +1,35 @@
+From: Simon McVittie <smcv@collabora.com>
+Date: Wed, 25 Nov 2020 13:30:29 +0000
+Subject: Add a `make install` target for the tests
+
+This makes it more convenient to compile them alongside SDL, install
+them in an optional package and use them as smoke-tests or diagnostic
+tools.
+
+Signed-off-by: Simon McVittie <smcv@collabora.com>
+---
+ test/Makefile.in | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/test/Makefile.in b/test/Makefile.in
+index 8c3bbf2..537ae7c 100644
+--- a/test/Makefile.in
++++ b/test/Makefile.in
+@@ -77,6 +77,17 @@ TARGETS = \
+ 
+ all: Makefile $(TARGETS) copydatafiles
+ 
++installedtestsdir =
++
++ifneq ($(installedtestsdir),)
++install:
++	install -D -t $(DESTDIR)$(installedtestsdir) $(TARGETS)
++	install -m644 -D -t $(DESTDIR)$(installedtestsdir) $(wildcard $(srcdir)/*.bmp)
++	install -m644 -D -t $(DESTDIR)$(installedtestsdir) $(wildcard $(srcdir)/*.dat)
++	install -m644 -D -t $(DESTDIR)$(installedtestsdir) $(wildcard $(srcdir)/*.txt)
++	install -m644 -D -t $(DESTDIR)$(installedtestsdir) $(wildcard $(srcdir)/*.wav)
++endif
++
+ Makefile: $(srcdir)/Makefile.in
+ 	$(SHELL) config.status $@
+ 
