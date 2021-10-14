@@ -1,3 +1,9 @@
+libdecor (0.1.0+git2108301930.940f8ea~h~wayland3) hirsute; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Oct 2021 22:30:53 +0200
+
 libdecor (0.1.0+git2108301930.940f8ea~h~wayland2) hirsute; urgency=medium
 
   * New snapshot:
