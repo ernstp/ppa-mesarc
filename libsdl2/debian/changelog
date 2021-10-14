@@ -1,3 +1,9 @@
+libsdl2 (2.0.17+git2110142046.5e89b3c89~h~wayland1) hirsute; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Oct 2021 21:44:35 +0200
+
 libsdl2 (2.0.14+dfsg2-3) unstable; urgency=medium
 
   * d/libsdl2-2.0-0.symbols: SDL_LinuxSetThreadPriority is Linux-only
