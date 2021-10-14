@@ -1,3 +1,12 @@
+libsdl2 (2.0.17+git2110142326.82793ac27~h~wayland3) hirsute; urgency=medium
+
+  * New snapshot:
+  * 82793ac27 Fixed mouse warping while in relative mode
+  * 072e3fdfc Fixed bug #4534: NEON implementation of Convert51ToStereo
+    (Thanks Ryan!)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Oct 2021 23:28:38 +0200
+
 libsdl2 (2.0.17+git2110142046.5e89b3c89~h~wayland2) hirsute; urgency=medium
 
   * New snapshot:
