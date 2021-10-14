@@ -29,6 +29,7 @@ Package: libdecor-dev
 Architecture: any
 Multi-Arch: foreign
 Depends:
+ libdecor1,
  ${misc:Depends},
  ${shlibs:Depends},
 Description: A client-side decorations library for Wayland client
