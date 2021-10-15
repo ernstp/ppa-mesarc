@@ -1,3 +1,9 @@
+libsdl2 (2.0.17+git2110150911.c583055ac~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 Oct 2021 20:00:42 +0200
+
 libsdl2 (2.0.17+git2110150911.c583055ac~h~wayland4) hirsute; urgency=medium
 
   * New snapshot:
