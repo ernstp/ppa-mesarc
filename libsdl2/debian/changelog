@@ -1,3 +1,28 @@
+libsdl2 (2.0.17+git2110150911.c583055ac~h~wayland4) hirsute; urgency=medium
+
+  * New snapshot:
+  * c583055ac SDL_windowsevents.c (WIN_WindowProc): remove SAFE_AREA_X
+    and SAFE_AREA_Y
+  * d5700ed20 Don't log SDL_POLLSENTINEL, it's purely for internal
+    bookkeeping
+  * dd5d89505 Fixed whitespace
+  * 7f728f3eb enabled os2 joystick code (if anyone has actually a use
+    for it...)
+  * 8a48ce00c Sync wiki -> header
+  * 8bf32e12d Improved SDL_PollEvent usage (#4794)
+  * 43da35b56 Back out documentation changes in favor of
+    https://github.com/libsdl-org/SDL/pull/4794
+  * 0dc57b0f0 Remove slightly misleading comment in the example code
+  * ddf1d5c55 Update documentation to reflect that a single
+    SDL_PumpEvents() each frame is the recommended way to handle events
+  * 88e9f7765 Fixed relative mouse mode using warping after
+    https://github.com/libsdl-
+    org/SDL/commit/82793ac279d19b5bde8fc2bd62877b05ba5a76e0
+  * a1fabca16 Removed mouse warping for local mice and improved warp
+    handling for mouse over RDP
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 Oct 2021 12:58:58 +0200
+
 libsdl2 (2.0.17+git2110142326.82793ac27~h~wayland3) hirsute; urgency=medium
 
   * New snapshot:
