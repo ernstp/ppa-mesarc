@@ -50,7 +50,7 @@ endif
 confflags += ac_cv_header_libunwind_h=no
 
 %:
-	dh $@
+	dh $@ --with quilt
 
 override_dh_auto_configure:
 	dh_auto_configure -- $(confflags)

@@ -15,25 +15,25 @@ Forwarded: not-needed
  sdl2-config.in       | 5 ++---
  2 files changed, 3 insertions(+), 5 deletions(-)
 
-diff --git a/sdl2-config.cmake.in b/sdl2-config.cmake.in
-index e528a88..993b4ed 100644
---- a/sdl2-config.cmake.in
-+++ b/sdl2-config.cmake.in
-@@ -5,9 +5,8 @@ set(exec_prefix "@exec_prefix@")
- set(libdir "@libdir@")
- set(SDL2_PREFIX "@prefix@")
- set(SDL2_EXEC_PREFIX "@prefix@")
--set(SDL2_LIBDIR "@libdir@")
- set(SDL2_INCLUDE_DIRS "@includedir@/SDL2")
+Index: libsdl2/sdl2-config.cmake.in
+===================================================================
+--- libsdl2.orig/sdl2-config.cmake.in
++++ libsdl2/sdl2-config.cmake.in
+@@ -6,9 +6,8 @@ set(libdir "@libdir@")
+ set(includedir "@includedir@")
+ set(SDL2_PREFIX "${prefix}")
+ set(SDL2_EXEC_PREFIX "${exec_prefix}")
+-set(SDL2_LIBDIR "${libdir}")
+ set(SDL2_INCLUDE_DIRS "${includedir}/SDL2")
 -set(SDL2_LIBRARIES "-L${SDL2_LIBDIR} @SDL_RLD_FLAGS@ @SDL_LIBS@")
 +set(SDL2_LIBRARIES "@SDL_RLD_FLAGS@ @SDL_LIBS@")
  string(STRIP "${SDL2_LIBRARIES}" SDL2_LIBRARIES)
  
  if(NOT TARGET SDL2::SDL2)
-diff --git a/sdl2-config.in b/sdl2-config.in
-index 5a2aed2..5cc21a6 100644
---- a/sdl2-config.in
-+++ b/sdl2-config.in
+Index: libsdl2/sdl2-config.in
+===================================================================
+--- libsdl2.orig/sdl2-config.in
++++ libsdl2/sdl2-config.in
 @@ -3,7 +3,6 @@
  prefix=@prefix@
  exec_prefix=@exec_prefix@

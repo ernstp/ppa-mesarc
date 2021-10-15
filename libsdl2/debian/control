@@ -41,6 +41,7 @@ Build-Depends:
  libxxf86vm-dev,
  pkg-config,
  libsamplerate0-dev,
+ quilt,
  wayland-protocols
 Build-Depends-Indep:
  graphviz <!nodoc>,
