@@ -1,3 +1,34 @@
+mesa (21.3.0~rc1+git2110161502.792205b6ca5~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 792205b6ca5 aux/pb: more correctly check number of reclaims
+  * 11e0915a9c8 aux/pb: add a tolerance for reclaim failure
+  * c2a67ded86c aco: do not return an empty string when disassembly is
+    not supported
+  * 3ccedc10a50 iris: fix scratch address patching for TESS_EVAL stage
+  * 290e107096e egl: set TSD as NULL after deinit
+  * 58e6dde90be i965: Emit a NULL surface for buffer textures with no
+    buffer
+  * d7d953045b4 zink: Do not access just freed zink_batch_state
+  * 78e10fb8fe0 dri_interface: remove gl header
+  * 13ef0dac1a7 dri_interface: remove obsolete interfaces
+  * 91de7da9dc4 anv: don't advertise vk conformance on GPUs that aren't
+    conformant
+  * f134f0f3c32 .pick_status.json: Update to
+    885f9b3b7540485af5dff65475078bfceaa6daa5
+  * 999b3318fd7 vulkan/log: Tweak our handling of a couple error enums
+  * dc3665439c9 vulkan: Set unused entrypoints to vk_entrypoint_stub
+    when compiling with MSVC
+  * 09c46de97b8 radv: Fix modifier property query.
+  * 7a751b63ca4 vulkan: Fix weak symbol emulation when compiling with
+    MSVC
+  * 7b5d0803766 nir/loop_unroll: Always unroll loops that iterate at
+    most once
+  * da2ffd4d713 .pick_status.json: Update to
+    1c0eb7aa78bac4494dbff0c502a8c09e23a4c123
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 17 Oct 2021 23:45:05 +0200
+
 mesa (21.3.0~rc1+git2110132159.2dc6aa567fc~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
