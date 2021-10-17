@@ -1,3 +1,22 @@
+libsdl2 (2.0.17+git2110172317.ccb12457f~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * ccb12457f Fixed bug #4843 - Can not get the ime candidatelist like
+    chinese/japaness input method
+  * 7fb436439 Don't process WM_INPUT when handling relative mode by
+    warping the mouse cursor
+  * 06824b18f Cleanup windows events after recent changes
+  * 50f969c1b Fixed bug #4841 - Out of bounds read (by 1 byte) in
+    yuvnv12_rgb24_sseu
+  * ea97ab616 Add mapping for HORI Fighting Commander OCTA controller on
+    Linux
+  * 1c5b3e0e1 Don't center the mouse when gaining focus unless we're
+    using relative mode warping
+  * a70a94e0b Don't send a mouse leave event if the mouse is outside the
+    window when gaining focus and in relative mode.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 17 Oct 2021 23:40:43 +0200
+
 libsdl2 (2.0.17+git2110150911.c583055ac~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
