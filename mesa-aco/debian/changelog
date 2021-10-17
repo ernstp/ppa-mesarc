@@ -1,3 +1,47 @@
+mesa (22.0.0~git2110172230.17a565e0cfb~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 17a565e0cfb llvmpipe: fix userptr for texture resources.
+  * d31ca63527e panfrost: Don't allow rendering/texturing 48-bit
+  * 28d12716e8f egl/wayland: Properly clear stale buffers on resize
+  * 885f9b3b754 radeonsi: don't memcmp inlined uniform values if uniform
+    inlining is disabled
+  * 8c5a32b5fe2 radeonsi: split si_shader_key into ps and ge parts to
+    minimize memcmp overhead
+  * 385c9e1cafb radeonsi: si_state_shaders.c -> cpp
+  * 8a42ea69a69 gallium/util: add some extern "C" guards
+  * b62b2fa4b9c compiler/types: Add a wrap_in_arrays helper
+  * 5818d47ae66 spirv: Use texture types for sampled images
+  * 99cda38c816 clover/nir: Don't remove texture variables
+  * 3c398139e10 lavapipe: Allow for texture types
+  * b8a0bf2343d nir/deref: Also optimize samplerND -> textureND casts
+  * 2ab5546a967 nir: Allow texture types
+  * 3ace6b968b3 compiler/types: Add a texture type
+  * 7558c9cb07e compiler/types: Unify the guts of
+    get_sampler/image_count
+  * 175f33e88fb compiler/types: Combine image and sampler type
+    serialization
+  * 2d58e31f10e dri_interface: remove gl header
+  * e19d9046dbd dri_interface: remove obsolete interfaces
+  * d343aef9423 nir/serialize: Pack deref modes better
+  * 9272a952c9b nir: Re-arrange the variable modes
+  * 956199e8708 nir: s/nir_var_mem_image/nir_var_image/g
+  * e73096bd6d4 meson: use gtest protocol for gtest based tests when
+    possible
+  * aac47c4b24a microsoft/compiler: Shadow tex instructions always use
+    shadow samplers
+  * fe2674dd52d aux/pb: more correctly check number of reclaims
+  * 58f605e4d48 nir: Drop our attempt at typed-based image mode
+    validation
+  * d05f7b4a2ca intel: fix INTEL_DEBUG environment variable on 32-bit
+    systems
+  * 182237e1e89 virgl: remove unused pipebuffer include
+  * 3d6c8829f54 aux/pb: add a tolerance for reclaim failure
+  * 29177c7ceee intel/compiler: Build all tests in a single binary
+  * 35b69907061 intel/compiler: Rename vec4 test fixtures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 17 Oct 2021 23:41:23 +0200
+
 mesa (22.0.0~git2110140052.c4323dc846d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
