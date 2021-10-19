@@ -1,3 +1,57 @@
+mesa (22.0.0~git2110192143.86b3d8c66ce~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 86b3d8c66ce zink: rescue surfaces/bufferviews for cache hits during
+    deletion
+  * 80d5e40fd13 freedreno/afuc: Disable the disassembler on 32-bit
+    builds.
+  * 5afce85f2b6 Revert "iris: add tile cache flush to iris_copy_region"
+  * 0523607ebb1 iris: Add missed tile flush flag
+  * 8633ce06af4 zink: stop leaking descriptor pool references
+  * 7fb8e0b9fb4 zink: don't clear descriptor pool cache on context
+    destroy
+  * 6a852e4e069 zink: always invalidate descriptor sets on pool free
+  * 94fc6b08751 zink: unref descriptor pools in hybrid mode when they
+    explode
+  * d0652944342 zink: remove descriptor pools from hash table on
+    deletion
+  * 6d937298818 zink: fix descriptor interface param for program_deinit
+  * 7a9e0e4fc02 zink: use ctx params for program ref/destroy functions
+  * d29e507adcd radeonsi: don't set inline_uniforms for viewperf because
+    it's enabled by default
+  * c5f39acb33e winsys/amdgpu: set max_ib_size and max_check_space_size
+    later in cs_check_space
+  * 6129db68bf8 winsys/amdgpu: remove force_chaining parameter from
+    cs_check_space
+  * 9d852a46952 radeonsi: properly destroy buffers on failure
+  * 0d2dc06761f radeonsi: don't sync before clear_buffer and copy_buffer
+    if the buffer is idle
+  * d4cf4b3cee9 radeonsi: don't update bind_history for internal buffer
+    clears and copies
+  * 61ebdcfc299 radeonsi: don't sync PS or CS before (clear|copy)_buffer
+    based on bind history
+  * 4bc8c2590e5 radeonsi: rebind a buffer only in shader stages where
+    it's been bound
+  * 13b1424e96f radeonsi: change bind_history to track usage in each
+    shader stage
+  * 9f2a97e9df7 radeonsi: add an option to use CPU storage uploads for
+    threaded context
+  * 745ea994846 radeonsi: add SI_MAX_VRAM_MAP_SIZE definition
+  * 03186773a6b mesa: fix crashes in the no_error path of glUniform
+  * 5948ff48268 freedreno/computerator: Fix mergedregs
+  * 22a203aa4c7 freedreno/isa: Fix ldg/stg "halfness"
+  * 834e8066c19 freedreno/ir3/tests: Add some 8/16b ldg/stg tests
+  * 8657e201d00 freedreno/ir3/tests: Don't skip encode test if decode
+    fails
+  * 572a9025664 aco: fix emitting stream outputs when the first
+    component isn't zero
+  * e3cbb0eb6a7 aco: fix invalid IR generated for b2f64 when the dest is
+    a VGPR
+  * 3df9d8ed807 gallium/u_threaded: implement pipelined partial buffer
+    uploads using CPU storage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 19 Oct 2021 22:42:24 +0200
+
 mesa (22.0.0~git2110172230.17a565e0cfb~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
