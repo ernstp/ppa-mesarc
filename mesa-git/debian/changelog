@@ -1,3 +1,30 @@
+mesa (21.3.0~rc1+git2110182256.1f591523022~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 1f591523022 zink: Fully initialize VkBufferViewCreateInfo for
+    hashing
+  * e216e885692 intel: fix INTEL_DEBUG environment variable on 32-bit
+    systems
+  * e66da3a9961 st: Fix 64-bit vertex attrib index for TGSI path
+  * 65f091d54ae radv: fix OpImageQuerySamples with non-zero descriptor
+    set
+  * 2e61d20c130 .pick_status.json: Mark
+    7a2e40df5e8490de739c66865f90fa6804e41f6d as denominated
+  * 53fbad1c7bf radeonsi: use viewport offset in quant_mode
+    determination
+  * b9ea1b314d9 anv: Fix assertion.
+  * 9347981b331 radv: fix removing PSIZ when it's not emitted by the
+    last VGT stage
+  * 0343faea2a5 spirv: Don't add 0.5 to array indicies for
+    OpImageSampleExplicitLod
+  * d92abcfdd29 llvmpipe: fix userptr for texture resources.
+  * e090f05ccb6 panfrost: Don't allow rendering/texturing 48-bit
+  * 05020779f53 egl/wayland: Properly clear stale buffers on resize
+  * a9575479685 .pick_status.json: Update to
+    be6d584de43966ee58bf1fcac156ebf8040081d1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 19 Oct 2021 22:46:09 +0200
+
 mesa (21.3.0~rc1+git2110161502.792205b6ca5~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
