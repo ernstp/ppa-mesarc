@@ -1,3 +1,16 @@
+libsdl2 (2.0.17+git2110182300.649a33ae4~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 649a33ae4 X11: remove redundant 'wakeup_lock' mutex creation
+  * c4bac66b7 os2, geniconv: replaced many uses of libc calls with SDL_
+    counterparts.
+  * 0a0f68547 SDL_os2video.c: missed replacing a use of libc function
+  * 8e9ea2e36 SDL_os2joystick.c: missed replacing a use of libc function
+  * 8b1a2fe86 backout SDL_AndroidSetInputType()
+  * 6ef3bc568 Add Dynapi for SDL_AndroidSetInputType()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 19 Oct 2021 22:41:40 +0200
+
 libsdl2 (2.0.17+git2110172317.ccb12457f~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
