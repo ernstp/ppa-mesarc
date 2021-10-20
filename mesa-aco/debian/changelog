@@ -1,3 +1,17 @@
+mesa (22.0.0~git2110201751.39f25945311~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 39f25945311 anv: Implement VK_EXT_global_priority_query
+  * e7599f09a14 ir3: Use stp/ldp base offset for {load,store}_scratch
+  * 7deb0d296d8 ir3/cse: Support mov instructions
+  * cd3f0683cd2 aco: simplify emit_stream_output()
+  * d50be41f8f6 broadcom/compiler: remove unused macro and function
+    definition
+  * 9bc0fc89c89 aco: disable mul(cndmask(0, 1, b), a) optimization
+    sometimes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Oct 2021 18:23:03 +0200
+
 mesa (22.0.0~git2110192143.86b3d8c66ce~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
