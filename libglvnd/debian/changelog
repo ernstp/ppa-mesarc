@@ -1,0 +1,264 @@
+libglvnd (1.3.4+git2110111809.32aeccf~h~wayland0) hirsute; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Oct 2021 19:44:59 +0200
+
+libglvnd (1.3.3-1) experimental; urgency=medium
+
+  [ Debian Janitor ]
+  * Use secure copyright file specification URI.
+  * debian/copyright: use spaces rather than tabs to start continuation lines.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Timo Aaltonen ]
+  * New upstream release.
+  * Restore libglvnd-core-dev. (Closes: #979976)
+  * rules: Enable tests.
+  * control: Drop python3-libxml2 from build-depends, it's not used.
+    (Closes: #981417)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 04 May 2021 16:47:20 +0300
+
+libglvnd (1.3.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Use debhelper-compat, bump to 12.
+  * control: Bump policy to 4.5.0.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 29 Jul 2020 17:05:09 +0300
+
+libglvnd (1.3.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * control: Add libopengl-dev to libglvnd-dev depends, since it used to
+    carry the .so.
+  * patches: Dropped, upstream.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sat, 22 Feb 2020 00:29:41 +0200
+
+libglvnd (1.3.0-7) unstable; urgency=medium
+
+  * control: Add libglx-dev to libgl-dev Depends.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 08 Jan 2020 14:11:25 +0200
+
+libglvnd (1.3.0-6) unstable; urgency=medium
+
+  * Move glx headers to libglx-dev. (Closes: #947364)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 08 Jan 2020 10:58:13 +0200
+
+libglvnd (1.3.0-5) unstable; urgency=medium
+
+  * control: Add lib{egl,gl,gles,glx}-dev to libglvnd-dev depends, since
+    the .so symlinks have moved.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 20 Dec 2019 21:06:47 +0200
+
+libglvnd (1.3.0-4) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 19 Dec 2019 08:57:14 +0200
+
+libglvnd (1.3.0-3) experimental; urgency=medium
+
+  * fix-armel-build.diff: Attempt to fix build on armel.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 16 Dec 2019 19:31:37 +0200
+
+libglvnd (1.3.0-2) experimental; urgency=medium
+
+  * Update libglvnd0.symbols for arm64.
+  * fix-armv7-build.diff: Fix armel/armhf build.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 12 Dec 2019 10:53:22 +0200
+
+libglvnd (1.3.0-1) experimental; urgency=medium
+
+  * New upstream release. (Closes: #930514) (LP: #1816004)
+  * Package lib{egl,gl,gles,glx,opengl}-dev, headers etc moved here from
+    mesa.
+  * libgl1.symbols: Updated.
+  * Fold libglvnd-core-dev into libglvnd-dev.
+  * control: Drop old Breaks/Replaces.
+  * libgles1: Override package-name-doesnt-match-sonames.
+  * control: Support nocheck profile for xvfb build-dep. (Closes: #928475)
+  * control: Fix lib{egl,gles,glx}-dev depends.
+  * Migrate to python3. (Closes: #936868)
+  * control, copyright: Update upstream url.
+  * copyright: Updated.
+  * control, rules: Build with meson.
+  * libegl1.symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 06 Dec 2019 08:19:25 +0200
+
+libglvnd (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * gles: Move libgles1 symbols to the correct package.
+  * libgl1.symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 10 Aug 2018 14:50:24 +0300
+
+libglvnd (1.0.0+git20180308-5) unstable; urgency=medium
+
+  * Move libGLESv1 to it's own package.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 08 Aug 2018 17:48:50 +0300
+
+libglvnd (1.0.0+git20180308-4) unstable; urgency=medium
+
+  * rules, libgles2: Add GLESv1 support. (LP: #1782285)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 08 Aug 2018 13:41:21 +0300
+
+libglvnd (1.0.0+git20180308-3) unstable; urgency=medium
+
+  * control: Drop the alternate depends on lib{egl,glx}-vendor, the
+    default provided by mesa should always be installed.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 30 May 2018 10:09:59 +0300
+
+libglvnd (1.0.0+git20180308-2) unstable; urgency=medium
+
+  * rules: Disable tests, they fail the build on many archs.
+    (Closes: #896602)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 23 Apr 2018 10:56:11 +0300
+
+libglvnd (1.0.0+git20180308-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+    - bump library minor versions to avoid issues with leftover libs
+      taking precedence (Closes: #884717)
+  * control, rules: Enable tests, build-depend on xauth, xvfb.
+  * kfreebsd-hurd.patch: Dropped, upstream.
+  * control: Update VCS urls.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 23 Mar 2018 10:15:50 +0200
+
+libglvnd (1.0.0-2) unstable; urgency=medium
+
+  [ Andreas Beckmann ]
+  * Add bug-control file to report whether the proprietary nvidia driver is
+    installed.
+  * Switch to dh_missing --fail-missing.
+
+  [ Andreas Boll ]
+  * Bump standards version to 4.1.2.
+  * control: Remove duplicated Section fields.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 26 Jan 2018 13:48:45 +0200
+
+libglvnd (1.0.0-1.1) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * Non-maintainer upload.
+
+  [ Andreas Beckmann ]
+  * Use source format 3.0 (quilt).
+  * kfreebsd-hurd.patch: New, fix FTBFS on kFreeBSD and Hurd.
+    (Closes: #870445)
+
+ -- Samuel Thibault <sthibault@debian.org>  Sat, 13 Jan 2018 09:16:09 +0000
+
+libglvnd (1.0.0-1) unstable; urgency=high
+
+  [ Andreas Boll ]
+  * Add versioned libglvnd0 dependencies (Workaround for #878851).
+  * Raise Priority to optional.
+  * Bump standards version to 4.1.1.
+
+  [ Timo Aaltonen ]
+  * New upstream release.
+  * Add a watch file for uscan.
+  * libgles2.symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 09 Nov 2017 12:14:14 +0200
+
+libglvnd (0.2.999+git20170802-5) unstable; urgency=medium
+
+  * control: Mark libglvnd-dev and -core-dev as M-A: same.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 28 Sep 2017 23:04:06 +0300
+
+libglvnd (0.2.999+git20170802-4) unstable; urgency=medium
+
+  * control: libglvnd-dev Breaks/Replaces old libegl1-mesa-dev/libgl1-
+    mesa-dev/libgles2-mesa-dev. (Closes: #875446)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 12 Sep 2017 10:32:47 +0300
+
+libglvnd (0.2.999+git20170802-3) unstable; urgency=medium
+
+  [ Timo Aaltonen ]
+  * control: Add Breaks/Replaces to match mesa upload which enabled
+    GLVND. (Closes: #870686)
+  * control: Add back depends on default libegl/libglx vendor.
+
+  [ Andreas Beckmann ]
+  * libgl1: Add Breaks against glx-diversions (<< 0.8) which did not divert
+    libGL.so.1.0.0.
+  * libglvnd0: Add Breaks+Replaces: libgldispatch0-nvidia which also shipped
+    libGLdispatch.so.0.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 01 Sep 2017 11:15:04 +0300
+
+libglvnd (0.2.999+git20170802-2) unstable; urgency=medium
+
+  * libglvnd0.symbols: Fix a typo.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 02 Aug 2017 12:27:51 +0300
+
+libglvnd (0.2.999+git20170802-1) unstable; urgency=medium
+
+  * New upstream snapshot.
+  * libglx0.symbols: Updated.
+  * libglvnd0.symbols: Arm64 doesn't have support for TLS stubs yet.
+    (Closes: #870444)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 02 Aug 2017 09:33:03 +0300
+
+libglvnd (0.2.999+git20170201-4) experimental; urgency=medium
+
+  * copyright: Updated.
+  * control: Bump policy to 4.0.0, no changes.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 01 Aug 2017 18:10:39 +0300
+
+libglvnd (0.2.999+git20170201-3) experimental; urgency=medium
+
+  * control: Drop depends on lib{egl,glx}-mesa0 | -vendor, these are
+    only for default driver policy and will be added back once we switch
+    mesa to use libglvnd.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 11 May 2017 10:56:23 +0300
+
+libglvnd (0.2.999+git20170201-2) experimental; urgency=medium
+
+  * control: Add depends on default libegl/libglx vendor.
+  * control: Drop useless P/R/C: libegl1-x11 from libegl1.
+  * control: Split libglx0 from libgl1.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 09 Feb 2017 11:42:36 +0200
+
+libglvnd (0.2.999+git20170201-1) experimental; urgency=medium
+
+  [ Timo Aaltonen ]
+  * New upstream snapshot.
+  * Add symbols file.
+  * Split packaging so that Mesa can be bootstrapped to use this.
+
+  [ Andreas Boll ]
+  * copyright: Add missing wildcard.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 03 Feb 2017 10:47:42 +0200
+
+libglvnd (0.2.999+git20161203-1) experimental; urgency=low
+
+  * Initial release (Closes: #812530)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sat, 03 Dec 2016 02:09:57 +0200
