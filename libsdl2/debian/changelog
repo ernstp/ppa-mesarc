@@ -1,3 +1,13 @@
+libsdl2 (2.0.17+git2110200229.bfd2f8993~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * bfd2f8993 Fixed grab handling when focus changes between windows in
+    the same application
+  * d9c44b653 Allow Cocoa_VideoInit to succeed when current display mode
+    has invalid flags
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Oct 2021 18:22:22 +0200
+
 libsdl2 (2.0.17+git2110182300.649a33ae4~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
