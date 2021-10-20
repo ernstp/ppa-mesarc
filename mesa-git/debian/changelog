@@ -1,3 +1,26 @@
+mesa (21.3.0~rc1+git2110192247.6154aee4b9c~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6154aee4b9c zink: rescue surfaces/bufferviews for cache hits during
+    deletion
+  * 7a19b9cb0dd Revert "iris: add tile cache flush to iris_copy_region"
+  * 193b84cf02f iris: Add missed tile flush flag
+  * 7420ae00f95 mesa: fix crashes in the no_error path of glUniform
+  * 6580db8b7ef aco: fix emitting stream outputs when the first
+    component isn't zero
+  * 0554f7fa382 aco: fix invalid IR generated for b2f64 when the dest is
+    a VGPR
+  * edf6cb5fdd9 radv: do not remove PSIZ for streamout shaders
+  * 4e73ccba61c meson: disable -Werror=thread-safety on FreeBSD
+  * c3cb359cc52 zink: fully zero surface creation struct
+  * b68b5fd634e zink: add a read barrier for indirect dispatch
+  * e8217a5a1b7 zink: use static array for detecting
+    VK_TIME_DOMAIN_DEVICE_EXT
+  * f5c5aefc309 .pick_status.json: Update to
+    86b3d8c66ce17ddcaefa5bdea68882cc03a57f15
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Oct 2021 18:26:50 +0200
+
 mesa (21.3.0~rc1+git2110182256.1f591523022~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
