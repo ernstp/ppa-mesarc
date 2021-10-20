@@ -1,0 +1,4 @@
+usr/include/GL/glxext.h
+usr/include/GL/glx.h
+usr/lib/*/libGLX.so
+usr/lib/*/pkgconfig/glx.pc

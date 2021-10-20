@@ -1,0 +1,2 @@
+usr/lib/*/libOpenGL.so
+usr/lib/*/pkgconfig/opengl.pc
