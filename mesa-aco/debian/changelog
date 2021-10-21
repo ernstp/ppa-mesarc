@@ -1,3 +1,50 @@
+mesa (22.0.0~git2110211812.cf0bc4fb55f~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cf0bc4fb55f frontends/va/av1: handle multiple slice params
+  * 996e81fb704 aco: fix loading 64-bit inputs with fragment shaders
+  * 75bd37dc6a3 broadcom/compiler: disallow tsy barrier in thrsw delay
+    slots
+  * 9202e8cbafc turnip: Make copy_format() and tu6_plane_format() return
+    pipe_format
+  * 68f8bbb37ea util: Move freedreno's snorm-to-unorm to util/, adding
+    remaining cases.
+  * cbdc8e09bf7 turnip: Switch format_to_ifmt() to take a pipe_format.
+  * e4e8db01327 turnip: Switch tu6_format_color() to a pipe_format.
+  * 3b68fc0c6a6 turnip: Switch tu6_format_texture() to a pipe_format.
+  * cfabdbd7d3f tu/clear_blit: Move around
+    copy_format()/tu6_plane_format()
+  * acb83e1b13d v3dv: enable Vulkan 1.1
+  * bd81a236205 ci/piglit-runner: Fix funny indentation of the piglit-
+    runner command.
+  * 440f207a1f2 ci/deqp-runner: Move more non-suite logic under the non-
+    suite 'if'.
+  * 92748e40ef0 ci/deqp-runner: Don't start GPU hang detection for
+    making junit results.
+  * 61ca900b695 ci/deqp-runner: Drop LD_LIBRARY_PATH=/usr/local for
+    libkms workaround.
+  * 899174c210b ci/deqp-runner: Move remaining asan runs to --env
+    LD_PRELOAD=
+  * 37c690ad1ae ci/deqp-runner: Drop silly CSV env vars.
+  * b978688df64 ci/deqp-runner: Use new deqp-runner's built-in
+    renderer/version checks.
+  * 9ddfd297e08 ci/deqp-runner: Simplify the --jobs argument setup.
+  * 59f3a8e6b4b ci/deqp-runner: Drop SUMMARY_LIMIT env var.
+  * 670fd8123be radv: Fix memory leak on error path.
+  * b797ecac7a4 ac/rgp: remove useless code related to GFX6-7
+  * 8304392c352 radv: add an assertion to prevent GPU hangs when VRS
+    isn't supported
+  * 9a32a7fdfee util: Move test sources to tests/ directory
+  * abf2af64aca util: Convert sparse array multithread test to use gtest
+  * 213c9e944c4 util: Convert roundeven_test to use gtest
+  * 83449f61ba3 util: Convert rb_tree_test to gtest
+  * 0d36ea7d585 util: Convert mesa-sha1_test to use gtest
+  * 89eebca0572 util: Convert blob_test to use gtest
+  * d4c536d3d9e util: Convert u_atomic_test to use gtest
+  * 1d78a31bec9 util: Move tests in single file directories to tests/
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Oct 2021 18:27:41 +0200
+
 mesa (22.0.0~git2110201751.39f25945311~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
