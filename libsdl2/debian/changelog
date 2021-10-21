@@ -1,3 +1,12 @@
+libsdl2 (2.0.17+git2110210018.f3fd1ffb9~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * f3fd1ffb9 Fixed crash if SDL API functions are called on a
+    disconnected controller on iOS
+  * a43d3f693 Don't detect the ROG Chakram mouse as a joystick
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Oct 2021 18:27:03 +0200
+
 libsdl2 (2.0.17+git2110200229.bfd2f8993~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
