@@ -1,3 +1,12 @@
+mesa (22.0.0~git2110211826.272af39be17~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 272af39be17 amd/addrlib: cosmetic addrlib update
+  * 69a1b02b688 amd/addrlib: change how the license is formatted to
+    match internal tree
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Oct 2021 19:11:33 +0200
+
 mesa (22.0.0~git2110211812.cf0bc4fb55f~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
