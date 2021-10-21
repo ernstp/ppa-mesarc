@@ -1,3 +1,13 @@
+libdecor (0.1.0+git2110211017.754432e~h~wayland3) hirsute; urgency=medium
+
+  * New snapshot:
+  * 754432e Avoid pango assertion on empty title
+  * 8ee7ebe meson: make posix_fallocate visible in glibc with -std=c99
+  * 6653451 meson: explicitly set C99 standard after 57fb8074161c
+  * 51c6bf2 frame: Unlink from context when freeing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Oct 2021 18:26:47 +0200
+
 libdecor (0.1.0+git2108301930.940f8ea~h~wayland3) hirsute; urgency=medium
 
   * New snapshot:
