@@ -1,3 +1,51 @@
+mesa (21.3.0~rc2+git2110202148.7976828ae31~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 7976828ae31 VERSION: bump for 21.3.0-rc2
+  * f8b5444a09a zink: rescue surfaces/bufferviews for cache hits during
+    deletion
+  * f1b779361c5 Revert "iris: add tile cache flush to iris_copy_region"
+  * d797e98b6f8 iris: Add missed tile flush flag
+  * 9aaf29b9387 mesa: fix crashes in the no_error path of glUniform
+  * 97a30b2d216 aco: fix emitting stream outputs when the first
+    component isn't zero
+  * 1771a7da087 aco: fix invalid IR generated for b2f64 when the dest is
+    a VGPR
+  * 5532c4267f1 radv: do not remove PSIZ for streamout shaders
+  * 80305d7c2e9 meson: disable -Werror=thread-safety on FreeBSD
+  * 356cac1c29c zink: fully zero surface creation struct
+  * b28da95fa41 zink: add a read barrier for indirect dispatch
+  * 28261505d6a zink: use static array for detecting
+    VK_TIME_DOMAIN_DEVICE_EXT
+  * b67308a4491 zink: Fully initialize VkBufferViewCreateInfo for
+    hashing
+  * 2d6c11843db intel: fix INTEL_DEBUG environment variable on 32-bit
+    systems
+  * ca1c300ecda st: Fix 64-bit vertex attrib index for TGSI path
+  * ed1db8e8cad radv: fix OpImageQuerySamples with non-zero descriptor
+    set
+  * 4504abe5119 radeonsi: use viewport offset in quant_mode
+    determination
+  * d19e28c139c anv: Fix assertion.
+  * 983cccf7574 radv: fix removing PSIZ when it's not emitted by the
+    last VGT stage
+  * 7456331987e spirv: Don't add 0.5 to array indicies for
+    OpImageSampleExplicitLod
+  * bac2dd958af llvmpipe: fix userptr for texture resources.
+  * 121f0528a74 panfrost: Don't allow rendering/texturing 48-bit
+  * 3c0c2465f35 egl/wayland: Properly clear stale buffers on resize
+  * 118131c0713 aux/pb: more correctly check number of reclaims
+  * b7942e3134b aux/pb: add a tolerance for reclaim failure
+  * 7cddbaab2d2 aco: do not return an empty string when disassembly is
+    not supported
+  * 2dcee84ce34 iris: fix scratch address patching for TESS_EVAL stage
+  * 9b68854c2e9 egl: set TSD as NULL after deinit
+  * 071ce0bbc71 i965: Emit a NULL surface for buffer textures with no
+    buffer
+  * 8876a87565b zink: Do not access just freed zink_batch_state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Oct 2021 18:31:24 +0200
+
 mesa (21.3.0~rc1+git2110192247.6154aee4b9c~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
