@@ -1,3 +1,46 @@
+mesa (22.0.0~git2110221325.2822b1345cf~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2822b1345cf tu: Expose required VK_FORMAT_FEATURE bits for planar
+    YUV formats
+  * 330a8cfa07b turnip: enable UBWC for NV12
+  * 9c895e133bf tu: Emit GRAS_LRZ_MRT_BUF_INFO_0
+  * c135c2cdb7f freedreno/a6xx: Rename GRAS_2D_BLIT_INFO
+  * 8ea6f17fdf9 freedreno/layout: Fix the UBWC block size for the Y
+    plane
+  * e0a74c7cad5 util/format: Add PIPE_FORMAT_Y8_UNORM as an "other"
+    layout format
+  * ceaf56920c5 v3dv: refactor TFU jobs
+  * 1465ec8cf35 iris: clear bos_written when resetting a batch
+  * b6a69dbb40d radv: re-emit prolog inputs when the nontrivial divisors
+    state changed
+  * 8ec68243357 radv,aco: decouple shader_info/options from
+    radv_shader_args
+  * 1429feaf293 crocus: Replace devinfo->ver[x10] checks with
+    GFX_VER[x10]
+  * 1561d0126a5 broadcom/compiler: fix assert that current instruction
+    must be in current block
+  * e79e1ca304f intel: Drop Tigerlake revision 0 workarounds
+  * 6ef192bddf1 mesa: discard draws with count=0 to decrease overhead
+  * 7daff157bb3 iris: Refactor the assignment to possible_usages
+  * 114f87c1c70 iris: Set DISABLE_AUX_BIT for AUX_USAGE_NONE modifiers
+  * b9d8793646d iris: Disable the MC_CCS modifier with norbc
+  * b71264e4656 iris: Convert some mod_info checks to asserts
+  * 138be96301b freedreno/ir3: Fix validation of subgroup macros
+  * e68d918ffb7 freedreno/ir3: Get req_local_mem from pipe_compute_state
+  * f58438320cf freedreno/ir3: Add ihadd/uhadd
+  * f5ce806ed73 freedreno/ir3: Add wide load/store lowering
+  * 7a7ac8cd409 freedreno/ir3: Fix reg size validation
+  * 8a6934dfe8c freedreno/ir3: Fix load/store_global_ir3 type
+  * 81eefe0090b freedreno/ir3: 8bit fixes
+  * f7b2d613c58 freedreno/ir3: 16b bools
+  * 9a2562a545b freedreno/ir3: Deal with zero-source instructions
+  * b6e11225a28 freedreno: Fix set_global_binding
+  * 0a35ba5c438 freedreno/ir3: Move lower_idiv_options
+  * e544a9db16e freedreno/ir3: Add support for load_kernel_input
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 22 Oct 2021 15:25:44 +0200
+
 mesa (22.0.0~git2110211826.272af39be17~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
