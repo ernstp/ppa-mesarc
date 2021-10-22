@@ -1,3 +1,22 @@
+libsdl2 (2.0.17+git2110221450.a76b73dd2~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * a76b73dd2 kmsdrm: Use SDL_PremultiplySurfaceAlphaToARGB8888() for
+    cursor surface
+  * b528d4844 wayland: Wayland cursors should use premultiplied alpha
+  * 84808ea4b video: Add SDL_PremultiplySurfaceAlphaToARGB8888()
+  * 007b5463e video/uikit: Do not use
+    setNeedsUpdateOfPrefersPointerLocked on iOS SDKs older than 14
+  * 8f58bb9cf Added SDL_USE_BUILTIN_OPENGL_DEFINITIONS to avoid system
+    OpenGL headers
+  * b360965d0 Added a hint for alternate OpenGL NV12 data format
+  * 6c134cf14 Sync wiki -> header
+  * 19dee1cd1 Add SDL_GetWindowICCProfile(). (#4314)
+  * a34fe8161 Added the ability to bind NV12 textures in the OpenGL
+    renderer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 22 Oct 2021 15:25:04 +0200
+
 libsdl2 (2.0.17+git2110210018.f3fd1ffb9~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
