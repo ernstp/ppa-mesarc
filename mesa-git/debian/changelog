@@ -1,3 +1,25 @@
+mesa (21.3.0~rc2+git2110220902.e7677248536~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * e7677248536 broadcom/compiler: fix assert that current instruction
+    must be in current block
+  * 5f1ec5b752f aco: fix loading 64-bit inputs with fragment shaders
+  * e1077478894 radv: Fix memory leak on error path.
+  * d07ae421e9d zink: move last of lazy descriptor state updating back
+    to lazy-only code
+  * 60babad3eed zink: add an early return for
+    zink_descriptors_update_lazy_masked()
+  * d74a709d47d zink: move push descriptor updating into lazy-only
+    codepath
+  * 865d1168e8a zink: don't update lazy descriptor states in hybrid mode
+  * 48c9110078f zink: assert compute descriptor key is valid before
+    hashing it
+  * 35b1de1f095 zink: clear descriptor refs on buffer replacement
+  * d45f9592fd6 .pick_status.json: Update to
+    1429feaf293e5a34dd32c632b46931f15e769bb6
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 22 Oct 2021 15:29:53 +0200
+
 mesa (21.3.0~rc2+git2110202148.7976828ae31~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
