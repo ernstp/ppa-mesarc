@@ -1,3 +1,27 @@
+mesa (22.0.0~git2110250808.ae2881c0f58~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * ae2881c0f58 radv: remove old RADV_TRACE_FILE warning
+  * c2d522b07f9 panfrost: Remove duplicated #if
+  * baaa88cf9e6 panfrost: Remove ancient TODO
+  * 2526f6f2294 panfrost: Enable AFBC on v7
+  * 789601a189e panfrost: Decompress for incompatible AFBC formats
+  * 93c9123c313 panfrost: Add internal afbc_formats
+  * 342ed4909fe panfrost: Workaround ISSUE_TSIX_2033
+  * e0335ad8881 panfrost: Fix gl_FragColor lowering
+  * be5456e1164 panfrost: Remove unused MIDGARD_NO_AFBC quirk
+  * 68a7fafe2a5 panfrost,panvk: Use dev->has_afbc instead of quirks
+  * 3e168b97cc7 panfrost: Detect implementations support AFBC
+  * ebe9494b61b turnip: Drop the assertion about the temporary bit in
+    sync fd imports.
+  * 8ccf672fa3c gallium/u_blitter: Read MSAA z/s from sampler's .x
+    instead of .y or .z.
+  * 785dd68599e iris: also dump bo's imported and exported flags
+  * 520300ad220 st/mesa: don't crash when draw indirect buffer has no
+    storage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 25 Oct 2021 08:57:35 +0200
+
 mesa (22.0.0~git2110221325.2822b1345cf~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
