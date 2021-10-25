@@ -1,3 +1,25 @@
+mesa (21.3.0~rc2+git2110241659.31dcf06c140~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 31dcf06c140 panfrost: Enable AFBC on v7
+  * 265b901cef7 panfrost: Decompress for incompatible AFBC formats
+  * 7b1e2f82c37 panfrost: Add internal afbc_formats
+  * 1bd3d6309aa panfrost: Workaround ISSUE_TSIX_2033
+  * a164fcca66d panfrost: Fix gl_FragColor lowering
+  * 7f673a94812 panfrost,panvk: Use dev->has_afbc instead of quirks
+  * 44f92df4a03 panfrost: Detect implementations support AFBC
+  * 48419086423 .pick_status.json: Update to
+    c2d522b07f9a7c719eef1b4ebea3cc5975bbe15a
+  * 88729339efc st/mesa: don't crash when draw indirect buffer has no
+    storage
+  * 84541774436 iris: clear bos_written when resetting a batch
+  * 1b083586ce5 radv: re-emit prolog inputs when the nontrivial divisors
+    state changed
+  * fbe0bb34f6f .pick_status.json: Update to
+    8ccf672fa3c000b958f961812152cc1a359a8792
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 25 Oct 2021 09:01:11 +0200
+
 mesa (21.3.0~rc2+git2110220902.e7677248536~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
