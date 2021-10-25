@@ -1,3 +1,53 @@
+libsdl2 (2.0.17+git2110250605.b3f9d8f38~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * b3f9d8f38 remove unused local vars after the latest commits.
+  * 502e9c3b4 SDL_Renderer simplifications: - Factorize
+    PrepQueueCmdDraw{,DrawTexture,Solid) into one single function -
+    Change SDL_Texture/Renderer r,g,b,a Uint8 into an SDL_Color, so that
+    it can be passed directly to RenderGeometry - Don't automatically
+    queue a SET_DRAW_COLOR cmd for RenderGeometry (and update GLES2
+    renderer)
+  * 23e252bfc DirectFB: provide RenderCopyEx via RenderGeometry
+  * 79732c9d1 Remove FillRects from back-end, where RenderGeometry can
+    be used
+  * f02ad2820 Remove FillRects from back-end, where RenderGeometry can
+    be used
+  * 70b10c753 Use correct indices when using RenderGeometry / FillRects
+  * 16beed9ae Less code since color is constant when done with triangles
+  * 99a346439 OpenGLES2: LINES and POINTS successive commands are
+    combined into a single draw call (using the same case for
+    DRAW_GEOMETRY)
+  * f0cdc1d0f OpenGLES2: remove FillRects, since it's can be done with
+    RenderGeometry
+  * 37c39d5cb Use geometry to implement FillRects
+  * b0eef52fe GLES2 batching: probably need to check for blendMode
+    changes
+  * c27e1249e Remove SDL_HAVE_RENDER_GEOMETRY define
+  * 77026f673 Metal: remove RenderCopy and RenderCopyEx from back-end
+  * 0e5160a05 VITA: remove RenderCopy and RenderCopyEx from back-end
+  * 73f4ab4c1 Direct3D11: remove RenderCopy and RenderCopyEx from back-
+    end
+  * ab758398a Direct3D: remove RenderCopy and RenderCopyEx from back-end
+  * 1fe7e3616 OpenGL: a few opengl functions become unused
+  * 88548070a  OpenGLES: remove RenderCopy and RenderCopyEx from back-
+    end
+  * d19251542 OpenGL: remove RenderCopy and RenderCopyEx from back-end
+  * b92056bbe OpenGLES2: remove RenderCopy and RenderCopyEx from back-
+    end
+  * 76f9fb96d Use RenderGeometry to implement RenderCopy and
+    RenderCopyEx at higher level
+  * 08797adae opengles2: Attempt to batch RenderCopy calls into a single
+    glDrawArrays call.
+  * 1f0eb03a7 Fix PS5 mapping with HID-PLAYSTATION driver (#4675)
+  * f499168c2 x11: Use SDL_IOReady() instead of calling select()
+    directly
+  * ba4ef461e macOS: Fix implicit integer downcast warnings
+  * d9d8f51ee wikiheaders.pl: Add support for deprecated functions.
+  * dbe55350c include: Improve doxygen text on SDL_GetRevisionNumber().
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 25 Oct 2021 08:56:55 +0200
+
 libsdl2 (2.0.17+git2110221450.a76b73dd2~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
