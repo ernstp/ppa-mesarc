@@ -1,3 +1,28 @@
+mesa (21.3.0~rc2+git2110261924.609f6a9cb37~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 609f6a9cb37 microsoft/spirv_to_dxil: turn sysvals into input
+    varyings
+  * 8f6da717d24 anv: fix push constant lowering with bindless shaders
+  * 338ac91f7b5 zink: don't check rebind count outside of buffer/image
+    rebind function
+  * 0868d3c91df zink: only reset zink_resource::so_valid on buffer
+    rebind
+  * 450f758c7c0 zink: don't break early when applying fb clears
+  * abc99a0fe0f zink: detect prim type more accurately for tess/gs lines
+  * fe1df421e13 vulkan/wsi/wayland: don't expose surface formats not
+    fully supported
+  * e4078af8c49 vulkan: Fix entrypoint generation when compiling for x86
+    with MSVC
+  * 13c11489aca .pick_status.json: Update to
+    3094524621291e6010232c4fd930e1e2d335f2ee
+  * 5635071adc2 aco: only load streamout buffers if streamout is enabled
+  * 06f19a05065 radv: fix build errors with Android
+  * fc6f348c967 .pick_status.json: Update to
+    b7c7abded7a92d3e709d311e8b964b11145620cd
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Oct 2021 09:39:43 +0200
+
 mesa (21.3.0~rc2+git2110241659.31dcf06c140~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
