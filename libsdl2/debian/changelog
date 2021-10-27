@@ -1,3 +1,30 @@
+libsdl2 (2.0.17+git2110270437.378c5d7ff~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 378c5d7ff make aclocal install relative
+  * c7dafb155 Sync wiki -> header
+  * 6b8e880a1 checkkeysthreads: Create a renderer for window display on
+    Wayland
+  * 179a04f85 fnsince.pl: Don't print out the version numbers if
+    updating the wiki.
+  * 85edbc92a fnsince.pl: Added a way to sync this information to the
+    wiki.
+  * f5de45aec fnsince.pl: Found a few more incorrect versions.
+  * e8fbcf893 fnsince.pl: a script to list version when all public APIs
+    were added.
+  * 1c6414603 Sync wiki -> header
+  * 9c799802c Vita: fix IME input languages
+  * 7ac0c73af regenerated test/configure
+  * c57bcb47b test: Fix building with libunwind under autotools
+  * fdb27e0b0 cmake: Use host wayland-scanner only (#4873)
+  * 408a93a1e wayland: Use multi-thread event reading APIs
+  * 4960cc3dc Fixed a few warnings
+  * b79339459 SDL_Renderer: make clear that we use render geometry for
+    fillrect/copy/copyex when there is no specific back-end
+    implementation (currently software, PSP, directfb)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Oct 2021 09:35:31 +0200
+
 libsdl2 (2.0.17+git2110250605.b3f9d8f38~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
