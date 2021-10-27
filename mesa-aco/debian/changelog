@@ -1,3 +1,52 @@
+mesa (22.0.0~git2110270845.0bbb32ece45~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 0bbb32ece45 glsl/nir/linker: Also remove image variables
+  * 0a277fabce9 broadcom/compiler: fix condition encoding bug
+  * 3fbd6662b77 broadcom/compiler: rework simultaneous peripheral access
+    checks
+  * 2c61d89d362 gbm: add GBM_FORMAT_GR1616 and RG1616
+  * 759eaf517a3 gbm: add missing R16 case in gbm_bo_get_bpp
+  * 1fe375e7cf8 radv: Add bufferDeviceAddressMultiDevice support.
+  * e1619b268a6 glthread: add a trivial thread-safe way to skip display
+    list execution
+  * c14d755f3d3 glthread: add an option to make glCheckFramebufferStatus
+    a no-op
+  * f4348ef60d5 glthread: don't sync for glIsEnabled with a few enums
+  * 6b370cbe289 glthread: don't execute display lists if they have no
+    effect
+  * b0c40bc9054 nir/lower_samplers_as_deref: rewrite more image
+    intrinsics
+  * c9ce151ff97 zink: more accurately update samplemask for fs shader
+    keys
+  * 8899f6a1985 zink: fix gl_SampleMaskIn spirv generation
+  * f42a4f64511 radv: fence->user_ptr and ctx->fence_map are now totally
+    unused.
+  * 861a35b3bc8 mesa: Require MRT support for GL3/ES3
+  * 7e26ea84da9 microsoft/compiler: Use memcpy instead of a union to
+    write dxil_features
+  * d8b1afdc850 nir/lower_blend: Use correct clamp for SNORM
+  * 3b146fb466d panvk: Pass through alpha_zero_nop/one_store flags
+  * 77928e45ebb panfrost: Pass through alpha_zero_nop/one_store
+  * 169aa9f1777 panfrost: Test alpha_zero_nop/one_store predicates
+  * c6b2c1069b5 panfrost: Add alpha_zero_nop/one_store predicate
+  * 87b68e77ccd panfrost: Rename depth bias fields
+  * 29762ea8975 iris: Drop hint if primitive id is required or not
+  * 1ee043e6621 anv: Drop hint if primitive id is required or not
+  * 3f332224266 intel/compiler: Track primitive id in domain/evaluation
+    shader
+  * 2b86cf2850e intel/genxml: Add new Primitive ID Not Required bit
+    field to 3DSTATE_DS
+  * 90228a80ea2 zink: don't add dynamic vertex pipeline states if no
+    attribs are used
+  * 3072e6e0da5 intel/compiler: Don't use SIMD larger than needed for
+    workgroup
+  * 4e7b71e00cb intel/compiler: Use SIMD selection helpers for variable
+    workgroup size
+  * 7dda0cf2b8e intel/compiler: Use SIMD selection helpers for CS
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Oct 2021 09:36:12 +0200
+
 mesa (22.0.0~git2110250808.ae2881c0f58~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
