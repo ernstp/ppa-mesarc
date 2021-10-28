@@ -1,3 +1,23 @@
+libglvnd (1.3.4+git2110281730.2d69d47~h~wayland0) hirsute; urgency=medium
+
+  * New snapshot:
+  * 2d69d47 Merge branch 'meson-test-environment-workaround' into
+    'master'
+  * 922b85a Merge branch 'fix-x11-config-option' into 'master'
+  * 6816db8 Merge branch 'meson-test-add-dummy-depends' into 'master'
+  * f73ae47 Merge branch 'tls-config-options' into 'master'
+  * 27eb562 tests: Remove the X11 dependency from the EGL tests.
+  * fa9ef39 Replace USE_X11 macro with ENABLE_EGL_X11.
+  * 52747d7 meson: Don't use x11 at all if the x11 feature is disabled.
+  * 4de6e67 CI: Test builds with TSD stubs and TLS variables
+  * 79b012c meson: Add an option to use the TSD dispatch stubs.
+  * 94ea132 meson: Change the 'tls' option to be boolean.
+  * 2b31e3b tests: Work around a bug in Meson 0.58.
+  * 1bb30a6 tests/meson: Add dependencies for the dummy vendor
+    libraries.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Oct 2021 00:24:16 +0200
+
 libglvnd (1.3.4+git2110111809.32aeccf~h~wayland0) hirsute; urgency=medium
 
   * New snapshot:
