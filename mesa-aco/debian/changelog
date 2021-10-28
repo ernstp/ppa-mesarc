@@ -1,3 +1,50 @@
+mesa (22.0.0~git2110282317.2f58a63b2f1~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2f58a63b2f1 intel/genxml: Add XY_BLOCK_COPY_BLT on Tigerlake and
+    later.
+  * 9163500aa17 intel/genxml: Allow MI_FLUSH_DW on the blitter
+  * d9ffdfc16da intel/genxml: Include blitter commands in gen*_pack.h
+  * 7b78b2fcac6 intel/genxml: Assert that all MOCS fields are non-zero
+    on Gfx7+
+  * ebe2a2b5f6a intel/genxml: Add an field option for nonzero="true"
+  * e6ebf5add7f i965: Set MOCS for Bindless Surface/Sampler State base
+    addresses
+  * 148ea65ee15 i965: Port STATE_BASE_ADDRESS to genxml and fix bugs
+  * 0a64007676f i965: Fix MOCS for BLORP buffer copies
+  * 75e86afb500 i965: Set MOCS for 3DSTATE_INDEX_BUFFER on Gfx6/7 as
+    well.
+  * ab44a546461 i965: Set MOCS for 3DSTATE_SO_BUFFERS on Gfx7.x too
+  * eaaa3c7e04e i965: Set MOCS on NULL stream output buffers
+  * 59f53b07c48 i965: Set MOCS for push constant buffers on Haswell and
+    Gfx9+
+  * d0e356b3332 i965: Set default MOCS for NULL depth/stencil/HiZ
+    buffers
+  * f0a5f10b6cc i965: Use ISL for MOCS rather than open coding it
+    everywhere
+  * d9decdb2c4a crocus: Fix MOCS for buffer copies.
+  * dc29e9dbb3a crocus: Set MOCS for 3DSTATE_SO_BUFFERS on Gfx7.x too
+  * 72ffcd19653 crocus: Set MOCS for push constant buffers where
+    possible
+  * 798cc4be1b8 crocus: Set default MOCS for NULL depth/stencil/HiZ
+    buffers
+  * 737b3fae737 crocus: Set MOCS on NULL stream output buffers
+  * de99b5502b1 crocus: Set MOCS for index buffers on Gen6+
+  * be0d22a9ce0 crocus: Tidy the ifdefs for emitting STATE_BASE_ADDRESS
+  * 51f843ad603 crocus: Set MOCS for most state base addresses on pre-
+    Gen8
+  * dfe455b6dfb anv: Set MOCS on NULL stream output buffers
+  * 818b5d2b9ed anv: Set MOCS on NULL vertex buffers
+  * 7ae9f516f03 anv: Set MOCS in 3DSTATE_CONSTANT_XS even if there isn't
+    a buffer.
+  * 158ad07b3ef anv: Set MOCS for 3DSTATE_CONSTANT_XS on Gfx7.x as well
+  * b4310ef8eeb anv: Set default MOCS for NULL depth/stencil/HiZ buffers
+  * d8cb76211c5 iris: Fix MOCS for buffer copies
+  * 256d48eb8cd iris: Set MOCS on NULL stream output buffers
+  * d8e1d0fecc9 iris: Set MOCS on NULL vertex buffers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Oct 2021 00:25:17 +0200
+
 mesa (22.0.0~git2110270845.0bbb32ece45~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
