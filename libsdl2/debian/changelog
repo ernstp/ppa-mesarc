@@ -1,3 +1,15 @@
+libsdl2 (2.0.17+git2110280535.ac54d57aa~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * ac54d57aa event: Check subsystem initialization before events or
+    devices
+  * 1bc6dc3ea event: Cap maximum wait time if sensor or joystick
+    subsystems are active
+  * 2bf36bfac wayland: Implement WaitEventTimeout() and
+    SendWakeupEvent()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Oct 2021 00:24:39 +0200
+
 libsdl2 (2.0.17+git2110270437.378c5d7ff~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
