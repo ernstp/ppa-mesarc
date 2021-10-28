@@ -1,3 +1,51 @@
+mesa (21.3.0~rc3+git2110282203.84ad1227070~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 84ad1227070 ir3/ra: Check register file upper bound when updating
+    preferred_reg
+  * 66e0bf280e1 zink: always use explicit lod for texture() when legal
+    in non-fragment stages
+  * bf66b729e78 zink: set aspectMask for renderpass2
+    VkAttachmentReference2 structs
+  * a2776a40907 zink: use align64 for allocation sizes
+  * 269045e3336 zink: add better handling for CUBE_COMPATIBLE bit
+  * 1aacb11e8a0 .pick_status.json: Update to
+    cf76247f382a0b872e39135326111bd93f08c744
+  * bb9bdc4b739 VERSION: bump for 21.3.0-rc3
+  * f199962c4d0 util: use anonymous file for memory fd creation
+  * bf2e5336886 radv: Add bufferDeviceAddressMultiDevice support.
+  * 627659b6aff nir/lower_samplers_as_deref: rewrite more image
+    intrinsics
+  * b4506d1cc24 zink: more accurately update samplemask for fs shader
+    keys
+  * 852c6bb9d21 zink: fix gl_SampleMaskIn spirv generation
+  * 59b59c586be zink: don't add dynamic vertex pipeline states if no
+    attribs are used
+  * 8cb060c374c zink: stop exporting PIPE_SHADER_CAP_FP16_DERIVATIVES
+  * 25b007d7a9b microsoft/spirv_to_dxil: turn sysvals into input
+    varyings
+  * a82babccd11 anv: fix push constant lowering with bindless shaders
+  * e4dc69796e6 zink: don't check rebind count outside of buffer/image
+    rebind function
+  * 737c9a7dcfc zink: only reset zink_resource::so_valid on buffer
+    rebind
+  * 7264cc5cd43 zink: don't break early when applying fb clears
+  * 4d88c19510e zink: detect prim type more accurately for tess/gs lines
+  * b6f0a4c11d1 vulkan/wsi/wayland: don't expose surface formats not
+    fully supported
+  * a63104a7d8b vulkan: Fix entrypoint generation when compiling for x86
+    with MSVC
+  * 734011012f6 aco: only load streamout buffers if streamout is enabled
+  * 2ac3a3b5e98 radv: fix build errors with Android
+  * 40eb47924e7 panfrost: Enable AFBC on v7
+  * e97caaf4523 panfrost: Decompress for incompatible AFBC formats
+  * 1b87d41d735 panfrost: Add internal afbc_formats
+  * 14f88aaca39 panfrost: Workaround ISSUE_TSIX_2033
+  * fd3f846f4f1 panfrost: Fix gl_FragColor lowering
+  * ddcf4a13f29 panfrost,panvk: Use dev->has_afbc instead of quirks
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Oct 2021 00:28:57 +0200
+
 mesa (21.3.0~rc2+git2110261924.609f6a9cb37~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
