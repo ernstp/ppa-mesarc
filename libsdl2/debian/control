@@ -24,6 +24,7 @@ Build-Depends:
  libpulse-dev,
  libsndio-dev,
  libudev-dev [linux-any],
+ libunwind-dev,
  libusb2-dev [kfreebsd-any],
  libusbhid-dev [kfreebsd-any],
  libvulkan-dev [linux-any],
