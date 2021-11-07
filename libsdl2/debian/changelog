@@ -1,3 +1,52 @@
+libsdl2 (2.0.17+git2111070535.6312aaea0~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 6312aaea0 WGI: Add workaround for delayed callbacks after
+    WGI_JoystickQuit()
+  * 35b0baaa7 Unfixed typo
+  * 1d40c69a1 Fixed typo
+  * 2248a5493 Update the focus in case we changed focus to a child
+    window and then away from the application
+  * 5de723749 SDL_config_windows.h: detect winsdkver.h using
+    __has_include()
+  * c48c81bd1 docs: List the required Fedora packages in README-linux.md
+  * 6407d4b0a remove unnecessary parentheses from SDL_abs()
+  * 6cbee0634 include: Swap parameter names in atan2 functions
+  * 7f308abb5 cmake: Only prevent MSVC codegen using the CRT if
+    SDL_LIBC=OFF
+  * d8b53e821 direct3d11: fix SDK version requirement for non-CMake
+    build
+  * 802e17aad autotools: added windows.gaming.input.h (and
+    SDL_JOYSTICK_WGI) detection
+  * 2371b247f windows: improve feature detection consistency between
+    CMake and non-CMake builds
+  * 839ca0ea6 SDL_OpenURL (macOS): try to open path if the url cannot be
+    opened (#4830)
+  * e2ba84a53 testtimer: Be more like the C90's.
+  * 4ab7ee192 testtimer: Add basic sanity check for SDL_GetTicks*()
+  * 8593076da Fixed whitespace
+  * 62629c2b5 Fix 64-bit timeval/timespec delta calculations
+  * 6d5edfa73 Fixed crash on Android 8, due to bugs in AAudio
+    implementation
+  * c948b9366 Added note for Android 12 API level
+  * 43ddc59fa Export SDL_LinuxSetThreadPriorityAndPolicy() function
+    (#4877)
+  * 848d7b125 Vita: Implement command batching
+  * 3f7a94fc9 Vita: Remove FillRects
+  * f73376ae2 events: Add logging for SDL_CONTROLLERTOUCHPAD*,
+    SDL_CONTROLLERSENSORUPDATE, and SDL_SENSORUPDATE events
+  * 2379c5284 os/2: Don't try to be clever with the 32-bit GetTicks
+    fallback.
+  * d78cb9e90 testtimer: added SDL_GetTicks64() calls.
+  * 228219dcd include: Improved SDL_GetTicks*() documentation a little.
+  * cca79d32a android: Patched SDL_GetTicks64() to compile.
+  * affb183ea unix: Fixed SDL_GetTicks64 function signature.
+  * 99c9727dc timer: Added SDL_GetTicks64(), for a timer that doesn't
+    wrap every ~49 days.
+  * 0d631c741 CI: Build tests for Windows, macOS, and Linux
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Nov 2021 11:46:48 +0100
+
 libsdl2 (2.0.17+git2110280535.ac54d57aa~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
