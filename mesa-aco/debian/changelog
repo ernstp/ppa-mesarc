@@ -1,3 +1,53 @@
+mesa (22.0.0~git2111051937.c4d904101c0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * c4d904101c0 aux/trace: add pipe_context::render_condition_mem
+  * f5794010999 aux/trace: fix vertex state tracing
+  * 810305fbed8 aux/trace: trace pipe_screen::is_format_supported better
+  * d2f3aba5f0e aux/trace: support
+    pipe_context::get_query_result_resource
+  * 58ba18474ba aux/trace: fix PIPE_QUERY_PIPELINE_STATISTICS_SINGLE
+    tracing
+  * 78b613db23c util/u_trace: Replace Flag with IntEnum to support
+    python3.5
+  * 349bfb72752 intel/devinfo: fix wrong offset computation
+  * 718c97d5253 intel/devinfo: use compatible type for ARRAY_SIZE
+  * 67619d81532 intel/perf: fix perf equation subslice mask generation
+    for gfx12+
+  * a543a944043 intel/dev: fix subslice/eu total computations with some
+    fused configurations
+  * e10c641f009 intel/dev: reuse internal functions to set mask
+  * d7c6a90c267 intel/dev: don't forget to set max_eu_per_subslice in
+    generated topology
+  * d1db5d562af intel/dev: fix HSW GT3 number of subslices in slice1
+  * 12294026d51 nir/algebraic: optimize Cyberpunk 2077's open-coded
+    bitfieldReverse()
+  * 9b8bc712b2b mesa: remove NEW_COPY_TEX_STATE
+  * 1ee3fbd7037 mesa: always call _mesa_update_pixel
+  * 6b002d25498 Revert "radv: only enable VK_EXT_display_control for
+    vrcompositor (SteamVR)"
+  * 0a6f079afe0 build: add sha1_h for lp_texture.c
+  * 6ffdcc335ee iris: Use mi_builder in iris_load_indirect_location()
+  * 833c0394e01 Revert "gallium/u_blitter: work around broken sample
+    shading in llvmpipe and zink"
+  * 60a8d682850 gallivm: handle TGSI SampleId sysval
+  * 64cee33984f lavapipe: add some asserts for descriptor dynamic
+    offsets
+  * 8c37cd8860c zink: rework cached fbfetch descriptor fallback
+  * 2d1f5e3dcb3 d3d12: Don't accumulate timestamp queries
+  * 34739cb6e28 freedreno/ir3: Fix off-by-one in prefetch safety assert.
+  * b0f2b0e980b freedreno/a5xx: Clean up a little bit of blitter array
+    pitch setup.
+  * b26e0cdf440 freedreno/a5xx: Try to fix drawing to z/s miplevel/layer
+    offsets.
+  * 99f5b7ba1ed freedreno/a5xx: Remove bogus assertion about BO size.
+  * 03d8677bcaf freedreno/a6xx: Try to fix drawing to z/s miplevel/layer
+    offsets.
+  * 35f56ad8567 freedreno/a5xx: Diff reduction in fd5_layout to
+    fd6_layout.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Nov 2021 11:47:38 +0100
+
 mesa (22.0.0~git2110282317.2f58a63b2f1~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
