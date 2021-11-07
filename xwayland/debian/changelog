@@ -1,0 +1,30 @@
+xwayland (2:21.1.2-0ubuntu1) impish; urgency=medium
+
+  * New upstream release.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 10 Aug 2021 12:17:36 +0300
+
+xwayland (2:21.1.1.901-0ubuntu1) impish; urgency=medium
+
+  * New upstream prerelease.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 30 Jun 2021 19:48:12 +0300
+
+xwayland (2:21.1.1-0ubuntu1) hirsute; urgency=medium
+
+  * New upstream release.
+    - CVE-2021-3472
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 13 Apr 2021 19:30:33 +0300
+
+xwayland (2:21.0.99.902-0ubuntu1) hirsute; urgency=medium
+
+  * Uploade to Ubuntu. (LP: #1918455)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 25 Feb 2021 12:31:59 +0200
+
+xwayland (2:21.0.99.902-1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #981841)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 01 Dec 2020 09:43:58 +0200

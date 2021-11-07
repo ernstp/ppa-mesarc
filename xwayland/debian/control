@@ -1,0 +1,40 @@
+Source: xwayland
+Section: x11
+Priority: optional
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ meson,
+ pkg-config,
+ quilt,
+ libdrm-dev (>= 2.4.89),
+ libepoxy-dev,
+ libgcrypt-dev,
+ libgbm-dev,
+ libnvidia-egl-wayland-dev,
+ libpixman-1-dev,
+ libxfont-dev,
+ libxkbfile-dev,
+ libxshmfence-dev,
+ libxv-dev,
+ libwayland-dev,
+ mesa-common-dev,
+ x11proto-dev,
+ xfonts-utils,
+ xtrans-dev,
+ wayland-protocols,
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/xorg-team/wayland/xwayland.git
+Vcs-Browser: https://salsa.debian.org/xorg-team/wayland/xwayland
+Homepage: https://www.x.org/
+
+Package: xwayland
+Architecture: linux-any
+Depends:
+ xserver-common,
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: Xwayland X server
+ This package provides an X server running on top of wayland, using wayland
+ input devices for input and forwarding either the root window or individual
+ top-level windows as wayland surfaces.
