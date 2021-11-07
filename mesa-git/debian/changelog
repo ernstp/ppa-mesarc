@@ -1,3 +1,57 @@
+mesa (21.3.0~rc4+git2111050019.cd6d7eaefa4~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * cd6d7eaefa4 freedreno/a6xx: Don't try to generate mipmaps for SNORM
+    with our blitter.
+  * 184ddcbe512 freedreno/a6xx: Fix partial z/s clears with sysmem.
+  * 3904430bf48 freedreno/a6xx: Emit a null descriptor for unoccupied
+    IBO slots.
+  * bb8f0c6a2e7 freedreno: Fix gmem invalidating the depth or stencil of
+    packed d/s.
+  * 3bce454bc37 ci: Let manual LAVA jobs have a longer timeout than
+    others
+  * 5f582b759af ci: Add support for lazor Chromebooks
+  * 50ecee6b74d ci: Update linux kernel to v5.15
+  * 5129408c7a2 ci: Enable testing radeonsi's libva using libva-util
+    unit tests.
+  * b8717cc8896 ci/piglit-runner: Merge piglit-driver-*.txt files into
+    driver-*.txt.
+  * 04e02a64483 ci/deqp-runner: Rename the deqp-drivername-*.txt files
+    to drivername-*.txt
+  * 8217f5e97d5 ci/piglit-runner: Fix funny indentation of the piglit-
+    runner command.
+  * 17378c78727 ci/deqp-runner: Move more non-suite logic under the non-
+    suite 'if'.
+  * 18dc0896a84 ci/deqp-runner: Don't start GPU hang detection for
+    making junit results.
+  * 1a1cb690fd4 ci/deqp-runner: Drop LD_LIBRARY_PATH=/usr/local for
+    libkms workaround.
+  * 0e6e23a94e4 ci/deqp-runner: Move remaining asan runs to --env
+    LD_PRELOAD=
+  * cefaf03c2f8 ci/deqp-runner: Drop silly CSV env vars.
+  * 3ae52965ccb ci/deqp-runner: Use new deqp-runner's built-in
+    renderer/version checks.
+  * 3a4c2b97a1c ci/deqp-runner: Simplify the --jobs argument setup.
+  * 0327192b253 ci/deqp-runner: Drop SUMMARY_LIMIT env var.
+  * 90da2a21321 aux/primconvert: handle singular incomplete restarts
+  * 8794b65263e radeonsi: fix a typo preventing a fast depth-stencil
+    clear
+  * 99c9bbfb382 radeonsi: fix 2 issues with depth_cleared_level_mask
+  * b0216d0fe32 zink: clamp PIPE_SHADER_CAP_MAX_INPUTS for xfb
+  * da759c47d61 vbo/dlist: free copied.buffer if no vertices were copied
+  * 2185245f642 ac/surface: don't validate DCC settings if DCC isn't
+    possible
+  * 43266af258a radeonsi/sdma: fix bogus assert
+  * 3ed2c02b7d8 radeonsi: treat nir_intrinsic_load_constant as a VMEM
+    operation
+  * ec19d8abd4b zink: always use lazy (non-push) updating for fbfetch
+    descriptors
+  * 56770998f3e zink: set fbfetch state on lazy batch data when enabling
+    it
+  * 42c1bc5d179 build: add sha1_h to llvmpipe build
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Nov 2021 11:51:31 +0100
+
 mesa (21.3.0~rc3+git2110282203.84ad1227070~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
