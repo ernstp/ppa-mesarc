@@ -4,6 +4,8 @@ set -o pipefail
 
 rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz
 
+EPOCH=
+
 source settings.sh
 
 BASEDIR=$(basename "$PWD")
@@ -68,7 +70,7 @@ echo New rev: $GIT_REV
 
 first=1
 for dist in $DISTROS ; do
-	DEBIAN_VERSION=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~${PPA}${INC}
+	DEBIAN_VERSION=${EPOCH}${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~${PPA}${INC}
 	if [ "$first" -eq 1 ]; then
 		dch -c ../debian/changelog -D ${dist} -v ${DEBIAN_VERSION} "New snapshot:"
 		git log -n 30 --oneline "${OLD_GIT_REV}..${GIT_REV}" | while read change; do
