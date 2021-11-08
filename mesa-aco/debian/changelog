@@ -1,3 +1,34 @@
+mesa (22.0.0~git2111082002.55e1dc8b648~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 55e1dc8b648 pan/bi: Drop unused test helpers
+  * baa405f02a1 pan/bi: Use gtest for test-constant-fold
+  * 4554cd03f01 pan/bi: Use gtest for test-optimizer
+  * 06b3b537686 pan/bi: Use gtest for test-pack-formats
+  * 71cbb9c4f06 pan/bi: Use gtest for test-packing
+  * fecb299b81e pan/bi: Use gtest for test-scheduler-predicates
+  * 3a9210c93dc pan/bi: Make some headers compilable with C++
+  * bee2c9c0819 meson: automatically define `HAVE_{some}_PLATFORM`
+  * 5cc9c30aefd meson: always define `HAVE_{X11,XCB}_PLATFORM` when it's
+    enabled
+  * 448dd106da2 meson: drop impossible `if no platform` branch
+  * 2351c0aded8 meson: move `egl_native_platform` definition inside the
+    `with_egl` block
+  * 9ad375bdcd3 meson: drop duplicate addition of surfaceless & drm to
+    the list of platforms
+  * 09bb4dbe60b release-calendar: fix date for next 21.3 rc
+  * 984091531e7 radv: remove unused parameter in
+    radv_emit_subpass_barrier()
+  * 75161e6f3d8 util: Change blob_test to use macro from mesa-gtest-
+    extras.h
+  * 015383d1d78 gtest: Add mesa-gtest-extras.h with array ASSERT/EXPECT
+    macros
+  * 5358d8a1109 radeonsi/sqtt: reserve a vmid when sqtt is enabled
+  * e26dd92957d radeonsi/sqtt: fix FINISH_DONE / BUSY usage
+  * 3de072aaecf radeonsi/sqtt: fix shader stage values
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 08 Nov 2021 20:32:45 +0100
+
 mesa (22.0.0~git2111081748.c572adceaa4~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
