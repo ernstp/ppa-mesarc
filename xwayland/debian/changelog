@@ -1,3 +1,10 @@
+xwayland (2:21.1.3+git2111081128.a436a2226~h~wayland1) hirsute; urgency=medium
+
+  * New snapshot:
+  * a436a2226 Bump version to 21.1.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 08 Nov 2021 18:37:56 +0100
+
 xwayland (2:21.1.2+git2110211158.ad8e48dc2~h~wayland1) hirsute; urgency=medium
 
   * New snapshot:
