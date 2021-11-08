@@ -1,3 +1,24 @@
+mesa (22.0.0~git2111081748.c572adceaa4~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * c572adceaa4 intel/dev: also test crocus & i915 pci-ids
+  * 361b3fee3c5 intel: move away from booleans to identify platforms
+  * 3b1a5b8f2ba intel: remove 2 preproduction pci-id for ADLS
+  * f32dcb6fe17 nir: assert that variables in optimize_atomic are
+    initialized
+  * fbd61d2b020 zink: set new point/line caps
+  * 8bbebc7e9f1 st/mesa: use new point and line CAPs
+  * 78337728d1d radeonsi: set correct point and line limits
+  * cf9afc7b0cf gallium: add missing point and line CAPs
+  * b80dca86c33 gallium: rename PIPE_CAPF_MAX_POINT_WIDTH ->
+    MAX_POINT_SIZE
+  * 10ee261c38c driconf: disallow 10-bit pbuffers for viewperf2020/maya
+    due to X errors
+  * f8ea4c9e1df Revert "CI: Disable Windows jobs"
+  * 7b44e7d7bb7 CI: Disable Windows jobs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 08 Nov 2021 18:30:55 +0100
+
 mesa (22.0.0~git2111051937.c4d904101c0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
