@@ -1,3 +1,35 @@
+mesa (21.3.0~rc4+git2111081142.2f6278a8b4e~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 2f6278a8b4e aux/trace: fix vertex state tracing
+  * 300e73668a2 util/u_trace: Replace Flag with IntEnum to support
+    python3.5
+  * 45051152657 intel/devinfo: fix wrong offset computation
+  * eb66eed395e intel/perf: fix perf equation subslice mask generation
+    for gfx12+
+  * 6e499b48333 intel/dev: fix subslice/eu total computations with some
+    fused configurations
+  * d406d189baa intel/dev: reuse internal functions to set mask
+  * 4093e20cfa6 intel/dev: don't forget to set max_eu_per_subslice in
+    generated topology
+  * b31097d5a8c intel/dev: fix HSW GT3 number of subslices in slice1
+  * 71707816da9 mesa: always call _mesa_update_pixel
+  * e85bda02b83 build: add sha1_h for lp_texture.c
+  * e3a1802af3d zink: rework cached fbfetch descriptor fallback
+  * 1459a05696d freedreno/ir3: Fix off-by-one in prefetch safety assert.
+  * af7b64bce8d .pick_status.json: Update to
+    c4d904101c0d5ab76e8cef6469f2fe8ebf3c980b
+  * 1ff6a9486ae freedreno/a6xx: Don't try to generate mipmaps for SNORM
+    with our blitter.
+  * 4738301f24e freedreno/a6xx: Fix partial z/s clears with sysmem.
+  * 02379a6d141 freedreno: Fix gmem invalidating the depth or stencil of
+    packed d/s.
+  * 8daa81531db v3dv/pipeline: don't clone the nir shader at
+    pipeline_state_create_binning
+  * be9d4cbfeb9 mesa: Require MRT support for GL3/ES3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 08 Nov 2021 18:34:25 +0100
+
 mesa (21.3.0~rc4+git2111050019.cd6d7eaefa4~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
