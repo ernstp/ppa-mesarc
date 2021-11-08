@@ -1,3 +1,55 @@
+libsdl2 (2.0.17+git2111081828.4bbbe5f84~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 4bbbe5f84 Fixed CMake build by adding hidapi files
+  * b8327a4a4 Added SDL_HIDAPI_DISABLED so it can be disabled like other
+    SDL subsystems
+  * 2a6feb501 Removed accidental debugging commit (thanks @DomGries!)
+  * 6c56e2751 Set both _NET_WM_NAME and WM_NAME so SDL windows can be
+    shared in the browser.
+  * 301819cd1 SDL_windowsmouse.c: Fix WIN_CreateCursor does not scale
+    with system cursor size preference
+  * f61b10dcf Do more robust validation of devices passed to the SDL
+    HIDAPI functions
+  * dd8c35484 SDL_hidapi.c: avoid possible NULL pointer dereferences.
+  * 2a904aa1c os2: remove SDL_hidapi duplications in makefile, disable
+    it in config.
+  * 5b646cd19 Build hidapi code into SDL as a new public API
+  * 94c1276a5 emscripten: Decrease vertical scroll speed by using
+    deltaMode
+  * 6657cbce8 include: Updated SDL_config_emscripten.h from emscripten-
+    ports.
+  * f6dc47cae WGI/DInput: Fix SDL_IsXInputDevice() checks when RawInput
+    is enabled
+  * 74f35a7cb Fixed documentation
+  * 301389cec Fixed iOS build
+  * b3e909dc4 WGI: Fix SDL_IsXInputDevice() for Xbox One controllers
+  * dd85cc019 Fixed whitespace
+  * 80d19282f If Android version >= API 23 PendingIntent.FLAGIMMUTABLE
+  * b8c00bf91 Allow opening joysticks that are read-only on Linux
+  * 0323d983c Add the platform to the game controller mapping so it can
+    be read back in without changes
+  * d950b9e2d emscripten: Make timers work (if used with
+    emscripten_set_main_loop)
+  * fe2fe2904 Backed out accidentally committed PR
+    https://github.com/libsdl-org/SDL/pull/4849
+  * 86bc65a74 Fixed non-Apple builds
+  * 637bcd0b7 Fixed build warnings
+  * e14358265 Cleanup sfSymbolName support and add them to the dynamic
+    API functions
+  * 149e5c656 Support returning sfSymbolsName for gamepad controls on
+    macOS / iOS / tvOS
+  * cdb4d8f22 Added a test case for snprintf of 0.0
+  * 3acb17253 stdlib: SDL_snprintf now adds decimal places for ("%f",
+    0.0).
+  * 2008f2a8a SDL_test_font.c: fix type of SDLTest_CharTextureCacheList
+  * a0e055a7f testwm2: add mode menu, click on a mode to call
+    SDL_SetWindowDisplayMode
+  * 70f7ebe63 SDL_test_font.c: add ability to draw on different
+    SDL_Renderers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 08 Nov 2021 18:30:13 +0100
+
 libsdl2 (2.0.17+git2111070535.6312aaea0~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
