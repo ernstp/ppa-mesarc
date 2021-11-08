@@ -1,3 +1,23 @@
+libsdl2 (2.0.17+git2111082028.dcc919096~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * dcc919096 autotools: initial adjustments after the recent hidapi
+    changes.
+  * 2636d839e cmake: add hidapi to 'SDL_SUBSYSTEMS'
+  * 1739ef3ee sdlchecks.cmake: remove libusb/hid.c and SDL_hidapi.c
+    additions to srcs
+  * 36067fa12 cmake: include hid.cpp in android sources
+  * 84138b771 minor update to os2 config file.
+  * 001aa4dab cmake: more hidapi fixes.
+  * a3e8fd49e Cancel any accumulated mouse wheel motion in the opposite
+    direction when the wheel direction changes
+  * 5dbbc8e61 Added mouse wheel deltas with floating point precision
+  * d95a52c9a Fixed comment typo
+  * fc998b8ec wayland: Return true for HasScreenKeyboardSupport only if
+    no physical keyboard exists
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 08 Nov 2021 20:32:06 +0100
+
 libsdl2 (2.0.17+git2111081828.4bbbe5f84~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
