@@ -1,3 +1,60 @@
+libsdl2 (2.0.17+git2111102004.98c983628~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 98c983628 Don't clobber the error in SDL_ShowMessageBox() if one has
+    been set at the platform level
+  * dca5ce4ea Clarified that AAudio is only used on Android 8.1 and
+    newer
+  * dc4c7d953 Fixed infinite loop in SDL_vsnprintf() if the format
+    string is too large for the output buffer
+  * d5032582e Use consistent language between SDLTest_AssertPass() and
+    SDLTest_AssertCheck()
+  * 6c4b4ee7a Don't assert on API parameters
+  * fed857787 Update the orientation and display modes when the display
+    settings change on Windows
+  * c0f1109bd Implemented querying the orientation of displays on
+    Windows
+  * 3a31a4502 End the scene before resetting the D3D device, since we'll
+    start with BeginScene after that.
+  * 6b64c47b6 haptics: Enumerate XInput/DInput joysticks after haptic
+    init
+  * 6f9909b60 These functions made it into 2.0.18
+  * 0d9879369 testwm2: Fix video modes menu hit detection when highdpi
+    or logical size used (#4936)
+  * 27ce91446 Send absolute mouse motion when in normal mouse mode and
+    relative mouse motion when in relative mode on iOS
+  * 19c129fab Added documentation that the
+    UIApplicationSupportsIndirectInputEvents key must be set to true  in
+    your application's Info.plist in order to get real Bluetooth mouse
+    events.
+  * a7e2e3a32 Fixed rendering in the iOS touch demo
+  * 7681929cb Don't send the initial joystick axis event if the
+    application is in the background
+  * d31f90d9e Don't send game controller touchpad or sensor events
+    unless the application has focus
+  * d2f756360 When making the window centered it should use windowed
+    mode size since it doesn't affect fullscreen windows
+  * 1fc25bd83 Properly position the IME window(s) on windows
+  * 04f42e046 metal: Deal better with -[CAMetalLayer nextDrawable]
+    returning nil.
+  * 8f63e9ff6 cmake: use generated SDL_config.h to build SDLmain static
+    lib
+  * 3a82e432f cmake: Moved back to requiring merely CMake 3.0.0.
+  * cfdbd6acc docs: Modernized README-macosx.md and cleaned up the
+    Markdown a little.
+  * 0f2bf6293 Fixed building hidapi when libusb is available
+  * 7b9fe52e1 We're no longer building a separate shared library for
+    hidapi
+  * e8731933c Fixed warning: macro is not used
+  * c7065bf42 Fix warning: declaration shadows a local variable
+  * 715e7bda2 haptic: Don't enumerate joysticks if the joystick
+    subsystem is active
+  * b2ce22a07 added src/hidapi/*.c to sources in standalone makefiles
+  * ae67c7d2d Implemented SDL_SetWindowMouseRect() on Wayland
+  * 18e69827a Fixed Linux build
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 10 Nov 2021 21:13:58 +0100
+
 libsdl2 (2.0.17+git2111082028.dcc919096~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
