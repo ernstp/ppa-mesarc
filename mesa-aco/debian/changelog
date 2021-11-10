@@ -1,3 +1,48 @@
+mesa (22.0.0~git2111102007.5451bb03c7b~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5451bb03c7b mesa/main: Fix use of alloca() without #include
+    "c99_alloca.h"
+  * 549924d53e3 freedreno: Fix constant-index assumptions in IBO loads.
+  * 9e04f97d8e9 freedreno: Fix the uniform/nonuniform handling for cat5
+    bindful modes.
+  * 46c37c8600e anv: don't forget to add scratch buffer to BO list
+  * e0de7aa4d77 aco: Work around MSVC restrict in c99_compat.h
+  * a697dde5535 wsi/x11: support depth 30 visuals
+  * 794a9cf3d6e vulkan/wsi: Unlock before return on error path.
+  * 3a95e25e849 v3dv,v3d: don't store swizzle pointer in shader/pipeline
+    keys
+  * 183e705a15b vulkan, radv: Support backslash in ICD paths
+  * 379fab74d21 radv/sqtt: fix GPU hangs when capturing from the compute
+    queue
+  * 4dfb5818ed7 zink: update gfx pipeline shader module pointer even if
+    the program is unchanged
+  * bfa81c1e8c8 zink: be more consistent about applying module hash for
+    gfx pipeline
+  * 937a841b574 zink: ci updates
+  * 2ac23b4d583 zink: always inline uniforms when running on a cpu
+    driver
+  * a8d90c8ed55 zink: implement cs uniform inlining
+  * 06f2054cb50 zink: radv ci updates for 1dshadow stuff
+  * 64e0ca15d69 zink: add 1DShadow sampler handling for drivers (radv)
+    that don't support it
+  * 0ae1231879b util/xmlconfig: Allow DT_UNKNOWN files
+  * e6147895885 anv: Also disallow CCS_E for multi-LOD images
+  * 62983f276ba zink: add another compiler pass to convert 64bit vertex
+    attribs
+  * 39bdb00d773 zink: simplify 64bit vertex attrib lowering
+  * 854fd242faf zink: declare int/float size caps inline with type usage
+  * 17aa2be4c9c ci: Add RADV to Android CI.
+  * aad80e47d8a util: Add support for clang::fallthrough.
+  * 966c171d888 amd/addrlib: Ignore self-assign warnings.
+  * 22673a980f3 meson: Check arguments before adding.
+  * 5db098c98bd aco: Remove useless sub-expr.
+  * bbd091d1fab radv: Always use linker script when possible.
+  * 66713d33fe4 radv: Remove android build warning.
+  * 7b06b6288c7 amd/addrlib: Use alternative ADDR_C_ASSERT definition.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 10 Nov 2021 21:14:42 +0100
+
 mesa (22.0.0~git2111082002.55e1dc8b648~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
