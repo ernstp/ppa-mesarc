@@ -1,3 +1,38 @@
+mesa (21.3.0~rc4+git2111101943.78a76905393~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 78a76905393 anv: don't forget to add scratch buffer to BO list
+  * 61e49c0e9f3 .pick_status.json: Update to
+    549924d53e359c04d7c14b12990178c86d3aad2d
+  * 288d3d45ecd radv/sqtt: fix GPU hangs when capturing from the compute
+    queue
+  * 088ce9ab61d zink: update gfx pipeline shader module pointer even if
+    the program is unchanged
+  * e0ace9df66a zink: be more consistent about applying module hash for
+    gfx pipeline
+  * bfe0eeceef0 anv: Also disallow CCS_E for multi-LOD images
+  * 27730429918 .pick_status.json: Update to
+    183e705a15b79e723666476817d144dbb74707f6
+  * d244455beb3 util: Add support for clang::fallthrough.
+  * e5afd551522 freedreno/a6xx: Emit a null descriptor for unoccupied
+    IBO slots.
+  * 3b65f9de76d meson: Check arguments before adding.
+  * 454fa0f29d7 radv: do not expose buffer features for depth/stencil
+    formats
+  * 53250e8e478 d3d12: Fix Linux fence wait return value
+  * 0263fdc10bf anv: Fix FlushMappedMemoryRanges for odd mmap offsets
+  * 4cd7e081d6e ir3/spill: Mark root as non-spillable after inserting
+  * f2f8738bc29 meson: drop duplicate addition of surfaceless & drm to
+    the list of platforms
+  * 65adf1399d8 radeonsi/sqtt: fix shader stage values
+  * 314870fcea6 intel: remove 2 preproduction pci-id for ADLS
+  * ac25873e2a6 driconf: disallow 10-bit pbuffers for viewperf2020/maya
+    due to X errors
+  * f9569dc1f60 .pick_status.json: Update to
+    17aa2be4c9c8c83470b73ea1eacacb47ab898f8e
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 10 Nov 2021 21:18:31 +0100
+
 mesa (21.3.0~rc4+git2111081142.2f6278a8b4e~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
