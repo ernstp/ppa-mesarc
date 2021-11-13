@@ -1,3 +1,53 @@
+mesa (21.3.0~rc5+git2111122029.d9b06a4d2f8~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * d9b06a4d2f8 nir/lower_pntc_ytransform: Support PointCoordIsSysval
+  * 3b502385844 anv: fix multiple wait/signal on same binary semaphore
+  * ecd7d3cef06 mesa/st: Disable NV_copy_depth_to_color on non-doubles-
+    capable HW.
+  * d9d4ad0057b v3d: Update prim_counts when prims generated query in
+    flight without TF
+  * fd5fe8fcc9f virgl: Allocate qdws after virgl_init_context to avoid
+    leak.
+  * b67ef02f9fd util/ra: Fix deserialization of register sets
+  * ef9c663fa91 .pick_status.json: Update to
+    a9b4a507fe58f82a391e24214b9fc60cc00e5f2a
+  * eb2f43553a0 VERSION: bump for 21.3.0-rc5
+  * a4ba2774512 anv: don't forget to add scratch buffer to BO list
+  * 44b5b835931 radv/sqtt: fix GPU hangs when capturing from the compute
+    queue
+  * 33272954988 zink: update gfx pipeline shader module pointer even if
+    the program is unchanged
+  * 0f40fdd4d9b zink: be more consistent about applying module hash for
+    gfx pipeline
+  * 6108b3c7f2f anv: Also disallow CCS_E for multi-LOD images
+  * e5b1bee3397 util: Add support for clang::fallthrough.
+  * 766c57480bf freedreno/a6xx: Emit a null descriptor for unoccupied
+    IBO slots.
+  * 7970a4a9a8f meson: Check arguments before adding.
+  * b7269970297 radv: do not expose buffer features for depth/stencil
+    formats
+  * b5ebe0ec36b d3d12: Fix Linux fence wait return value
+  * 6bbf2110dbe anv: Fix FlushMappedMemoryRanges for odd mmap offsets
+  * e426a9e5865 ir3/spill: Mark root as non-spillable after inserting
+  * caf9593d4b5 meson: drop duplicate addition of surfaceless & drm to
+    the list of platforms
+  * 7fd2714ddb7 radeonsi/sqtt: fix shader stage values
+  * 49a49fd20c1 intel: remove 2 preproduction pci-id for ADLS
+  * bdc8f046204 driconf: disallow 10-bit pbuffers for viewperf2020/maya
+    due to X errors
+  * 1ae62790810 aux/trace: fix vertex state tracing
+  * 4fd4c41c9e4 util/u_trace: Replace Flag with IntEnum to support
+    python3.5
+  * 03ee3a9dd09 intel/devinfo: fix wrong offset computation
+  * 198f6463eeb intel/perf: fix perf equation subslice mask generation
+    for gfx12+
+  * f4fe896423a intel/dev: fix subslice/eu total computations with some
+    fused configurations
+  * 8b4c2319324 intel/dev: reuse internal functions to set mask
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Nov 2021 08:16:48 +0100
+
 mesa (21.3.0~rc4+git2111101943.78a76905393~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
