@@ -7,6 +7,7 @@ Uploaders: Héctor Orón Martínez <zumbi@debian.org>,
 Build-Depends:
  debhelper (>=10),
  libwayland-dev,
+ meson,
  pkg-config
 Standards-Version: 4.5.0
 Rules-Requires-Root: no
