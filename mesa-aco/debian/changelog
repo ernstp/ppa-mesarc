@@ -1,3 +1,46 @@
+mesa (22.0.0~git2111122126.01d36149cdd~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 01d36149cdd ci/freedreno: Add a link to the issue for
+    color_depth_attachments.
+  * 1847700d3c7 ci/freedreno: Add notes explaining the KHR-GL* failures.
+  * 32b51d5e607 freedreno/a6xx: Do sparse setup of the TFB program.
+  * 943449fb8ea ci/freedreno: Enable the tes-input/tcs-input tests.
+  * 2ce44a02984 freedreno/ir3: Fix an off-by-one in so->outputs_count
+    safety assert.
+  * 02079cbb77c freedreno/a6xx: Add some notes about piglit failures.
+  * 11b533cb198 aco: optimize load_local_invocation_index with single-
+    wave workgroups
+  * 2d07bcad661 radv: lower load_local_invocation_index with 1D
+    workgroups
+  * 719b48f85d6 nir/lower_system_values: replace local_invocation_id
+    components with zero
+  * a9b4a507fe5 tu: Expose Vulkan 1.2
+  * c6216c941ca tu: Add VK_KHR_buffer_device_address stubs
+  * 952ab4f64f9 tu: Enable subgroupBroadcastDynamicId
+  * 170e1aa6478 freedreno/a[345]xx: add R8/RG8 SRGB formats
+  * 8db29109beb freedreno: prefer float immediates when float values are
+    involved
+  * 4e83584092f pan/mdg: Remove duplicate compiler option
+  * a4d3a296477 pan/bi: Enable dual texture fusing pass
+  * 0c215813f7d pan/bi: Test dual texture fusing
+  * 9146bafbb42 pan/bi: Add dual texture fusing pass
+  * e6c6a1afb46 pan/bi: Fix up dual texturing registers
+  * ce8d2b96c1b pan/bi: Add bi_dual_tex_as_u32 helper
+  * 9b2a383af8a pan/bi: Support dual texture scheduling
+  * 98c1b3e7e14 pan/bi: Use BIFROST_TEXTURE_OPERATION_SINGLE enum
+  * 9245b39ccf1 pan/bi: Add bifrost_dual_texture_operation struct
+  * 3612880ea3e pan/bi: Add bifrost_texture_operation_mode enum
+  * 7dc90b68d9d pan/bi: Add second destination to TEXC
+  * 8e027316243 pan/bi: Add secondary staging count
+  * 238f6d80a70 pan/bi: Make bi_index padding explicit
+  * b0022f1c6b9 pan/bi: Fix typo in helper invocation analysis
+  * a315d043089 mesa: add just a tiny bit of debug info to some
+    _mesa_problem calls
+  * 269b4dec9e9 nv50,nvc0: expose R8/RG8_SRGB formats for texturing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Nov 2021 08:12:56 +0100
+
 mesa (22.0.0~git2111102007.5451bb03c7b~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
