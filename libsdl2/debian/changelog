@@ -1,3 +1,50 @@
+libsdl2 (2.0.17+git2111130126.eb3f1462b~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * eb3f1462b x11: Fix memory leak in X11_CreatePixmapCursor()
+  * f124259e5 testautomation: fix use-after-free when restoring hint
+    value
+  * 704edf632 audio: Fix crash calling SDL_OpenAudio() after
+    SDL_AudioInit() fails
+  * 78013aeef alsa: Fix use-after-free when reinitializing
+  * e688a95ba updated os2 makefile for tests
+  * 2cf937427 minor update to docs/README.md
+  * 3dc7813ae more whitespace tidy-ups in SDL_os2messagebox.c
+  * c2dd50a9a Fixed whitespace
+  * 4a1524350 updated linux dependencies for libXfixes-devel.
+  * 074e613bb Fixed typo
+  * 35d90f17e Better implementation of SDL_SetWindowMouseGrab() and
+    SDL_SetWindowMouseRect() on macOS
+  * fa3330bae autotools, cmake: test Xfixes along with XInput2.h:
+  * c3a4a6a03 mark Android.mk as non-executable
+  * 5fc7a90a8 Fix refcounting in SDL_hid_exit
+  * 97c71371f If Android version >= API 31 PendingIntent.FLAG_MUTABLE
+    "If your app targets Android 12, you must specify the mutability of
+    each PendingIntent object that your app creates. This additional
+    requirement improves your app's security."
+  * 162772aa6 Fixed build warnings on Android
+  * 544d2e6aa Don't try to load hidapi at startup on Android
+  * 33735d599 mark Android.mk as non-executable
+  * 50971577e dinput: Fix memory leak when SDL_DINPUT_JoystickPresent()
+    returns true
+  * ed05a0e9e Fixed exception trying to get USB permission
+  * acb602d60 minor style adjustment
+  * 3bf7994fe Add and use `SDL_FALLTHROUGH` for fallthroughs
+  * c877dd93c The hidapi code is now built into SDL, we don't need to
+    load a shared library for it
+  * 9c3bcf8e8 Added SDL_hid_ble_scan() for pairing Steam Controllers on
+    iOS and tvOS
+  * abc12a832 Revert "Add and use `SDL_FALLTHROUGH` for fallthroughs"
+  * 36b2690e4 Moved SDL HIDAPI functions into a single block for the ABI
+  * cfbae8b96 Sync wiki -> header
+  * fe09a4930 joystick: Add APIs to query rumble support
+  * afccabb88 joystick: Add capability flags for rumble and trigger
+    rumble
+  * 1ccfbf963 joystick: Convert HasLED() into a generic
+    GetCapabilities() function
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Nov 2021 08:12:12 +0100
+
 libsdl2 (2.0.17+git2111102004.98c983628~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
