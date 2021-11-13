@@ -1,0 +1,23 @@
+libdecor-0 (0.1.0-2) unstable; urgency=medium
+
+  * Mark all patches as applied upstream
+  * d/patches: Add some more bug fixes from upstream
+    - This requires a build-dependency on libopengl-dev when building
+      the manual tests
+  * Use https format URI in copyright file
+  * d/upstream/metadata: Add
+  * Standards-Version: 4.6.0 (no changes needed)
+  * Upload to unstable
+
+ -- Simon McVittie <smcv@debian.org>  Sat, 06 Nov 2021 16:23:30 +0000
+
+libdecor-0 (0.1.0-1) experimental; urgency=medium
+
+  [ Christian Rauch ]
+  * Initial release (Closes: #988116)
+
+  [ Simon McVittie ]
+  * d/control: Set Maintainer to the SDL team
+  * Various packaging and test improvements
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 11 Aug 2021 16:06:55 +0100

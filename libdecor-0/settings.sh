@@ -1,4 +1,5 @@
 GIT="https://gitlab.gnome.org/jadahl/libdecor.git"
 DISTROS="hirsute impish"
 PPA=wayland
-INC=3
+INC=0
+PACKAGE_NAME="libdecor-0"

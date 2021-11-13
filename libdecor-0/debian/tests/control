@@ -1,0 +1,10 @@
+Tests: libdecor-0-dev
+Restrictions: allow-stderr, superficial
+Depends:
+ build-essential,
+ libdecor-0-dev,
+ libwayland-dev,
+ libxkbcommon-dev,
+ pkg-config,
+ wayland-protocols,
+ weston,

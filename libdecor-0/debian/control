@@ -1,0 +1,102 @@
+Source: libdecor-0
+Section: x11
+Priority: optional
+Maintainer: Debian SDL packages maintainers <pkg-sdl-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Christian Rauch <Rauch.Christian@gmx.de>,
+ Simon McVittie <smcv@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ libcairo2-dev,
+ libdbus-1-dev,
+ libegl-dev <!noinsttest>,
+ libgl-dev <!noinsttest>,
+ libopengl-dev <!noinsttest>,
+ libpango1.0-dev,
+ libwayland-dev (>=1.18),
+ libxkbcommon-dev <!noinsttest>,
+ meson (>=0.47),
+ pkg-config,
+ wayland-protocols (>=1.15),
+Standards-Version: 4.6.0
+Homepage: https://gitlab.gnome.org/jadahl/libdecor
+
+Package: libdecor-0-0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ libdecor-0-plugin-1-cairo | libdecor-0-plugin-1,
+Conflicts:
+ libdecor,
+Replaces:
+ libdecor,
+Description: client-side window decoration library
+ libdecor is a library that can help Wayland clients draw window
+ decorations for them. It aims to provide multiple backends that implements the
+ decoration drawing.
+ .
+ This package contains the runtime library.
+
+Package: libdecor-0-dev
+Section: libdevel
+Architecture: any
+Depends:
+ libdecor-0-0 (= ${binary:Version}),
+ libwayland-dev,
+ ${misc:Depends},
+Conflicts:
+ libdecor-dev,
+Replaces:
+ libdecor-dev,
+Multi-Arch: same
+Description: client-side window decoration library - development files
+ libdecor is a library that can help Wayland clients draw window
+ decorations for them. It aims to provide multiple backends that implements the
+ decoration drawing.
+ .
+ This package contains development files.
+
+Package: libdecor-0-plugin-1-cairo
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides:
+ libdecor-0-plugin-1,
+Conflicts:
+ libdecor-plugin-cairo,
+Replaces:
+ libdecor-plugin-cairo,
+Description: default decoration plugin
+ libdecor is a library that can help Wayland clients draw window
+ decorations for them. It aims to provide multiple backends that implements the
+ decoration drawing.
+ .
+ This package contains a backend that draws window decorations using Cairo.
+
+Package: libdecor-tests
+Build-Profiles: <!noinsttest>
+Section: misc
+Architecture: any
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: manual tests for libdecor
+ libdecor is a library that can help Wayland clients draw window
+ decorations for them. It aims to provide multiple backends that implements the
+ decoration drawing.
+ .
+ This package contains manual test programs. Automated tests might be added
+ to this package in future versions.

@@ -1,0 +1,4 @@
+version=4
+opts="filenamemangle=s%(?:.*?)?(\d[\d.]*)\.tar\.gz%@PACKAGE@-$1.tar.gz%" \
+https://gitlab.gnome.org/jadahl/libdecor/-/tags \
+archive/[0-9.]+/libdecor-@ANY_VERSION@\.tar\.gz
