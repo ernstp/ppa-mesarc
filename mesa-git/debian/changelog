@@ -1,3 +1,42 @@
+mesa (21.3.0+git2111172138.4a94b5d22ab~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 4a94b5d22ab docs: update sha256sum for 21.3.0
+  * 9a33ae94679 VERSION: bump for 21.3.0
+  * 9ca91d9bbe3 docs: add release notes for 21.3.0
+  * b7ac49468be nir: fix constant expression of ibitfield_extract
+  * 02dc554b217 vulkan/util: Include stdlib.h
+  * a6c713f8c54 intel/genxml: Fix MI_FLUSH_DW to actually specify the
+    length properly
+  * ca307d8cbf4 iris: Fix parameters to iris_copy_region in
+    reallocate_resource_inplace
+  * 6e1de958605 radv: Fix memory corruption loading RT pipeline cache
+    entries.
+  * 503321ea7da zink: always add VK_IMAGE_CREATE_2D_ARRAY_COMPATIBLE_BIT
+    for 3D images
+  * dc7bccdb545 aco: consider pseudo-instructions reading exec in
+    needs_exec_mask()
+  * 565a14d7edc radv: fix a sync issue on GFX9+ by clearing the upload
+    BO fence
+  * 5275563df40 mesa: fix buffer overrun in SavedObj texture obj array
+  * f2de11b9261 llvmpipe: fix compressed image sizes.
+  * 90486b44aef llvmpipe: disable 64-bit integer textures.
+  * ca3f3318e47 aco: Fix how p_is_helper interacts with optimizations.
+  * 9586feff54d aco: Work around MSVC restrict in c99_compat.h
+  * ffb3ab4d7ad nir/lower_pntc_ytransform: Support PointCoordIsSysval
+  * 53801042012 anv: fix multiple wait/signal on same binary semaphore
+  * db338002c75 mesa/st: Disable NV_copy_depth_to_color on non-doubles-
+    capable HW.
+  * fdc6d4dc955 v3d: Update prim_counts when prims generated query in
+    flight without TF
+  * a728b8a7329 virgl: Allocate qdws after virgl_init_context to avoid
+    leak.
+  * 764e965f378 util/ra: Fix deserialization of register sets
+  * c0d6fbba8e9 .pick_status.json: Update to
+    ba6d389fa7a0ac512cb9d4cdd21efde990f041b1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Nov 2021 22:06:03 +0100
+
 mesa (21.3.0~rc5+git2111122029.d9b06a4d2f8~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
