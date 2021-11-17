@@ -1,3 +1,50 @@
+mesa (22.0.0~git2111172022.b1a32d1432f~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b1a32d1432f zink: implement multiplanar modifier handling
+  * b1675608c3a dri2: set dimensions on dmabuf import planes
+  * 943f6a038db zink: always set matching resource export type for
+    dmabuf creation
+  * 11c79a8bd79 zink: stop using VK_IMAGE_LAYOUT_PREINITIALIZED for
+    dmabuf
+  * 63baeffc2db vulkan/sync: Rework asserts a bit
+  * 0c74f806453 glsl: fix trivial strict aliasing warning
+  * 58a0d8d0ded llvmpipe: page-align memory allocations
+  * 23a5f1a5acb ir3: Stop inserting nops during scheduling
+  * e0eeba6cbb0 ir3/postsched: Only prefer tex/sfu if they are soft-
+    ready
+  * 6f5c0d209c3 ir3/postsched: Rewrite delay handling
+  * 140e117f2b0 ir3/delay: Ignore earlier definitions to the same
+    register
+  * a54e7baa65a ir3/postsched: Handle sync dependencies better
+  * b9f61d72877 ir3/postsched: Fix copy-paste mistake
+  * d9a91318b1c ir3/sched: Rewrite delay handling
+  * b8fc7a08f9f util/dag: Add dag_add_edge_max_data
+  * 508f917d8c5 util/dag: Make edge data a uintptr_t
+  * ee2e14b352b ci: temporarily disable lima CI
+  * 3b78f175323 iris: Tidy code in iris_use_pinned_bo a bit
+  * 6e909849349 iris: Check for cross-batch flushing whenever a buffer
+    is newly written.
+  * 76030964a65 iris: Make a helper function for cross-batch dependency
+    flushing
+  * cbf0d83eace v3d,v3dv: move TFU register definition to a common
+    header
+  * ffbad81305b radv: simplify re-using cache entries in
+    radv_pipeline_cache_insert_shaders()
+  * 836a4b58363 v3dv: fix internal bpp of D/S formats
+  * 8ee7309e577 llvmpipe: enable PIPE_CAP_FBFETCH_COHERENT
+  * e403c1c23ea llvmpipe: remove dead args from load_unswizzled_block
+  * ea6eeb70e67 llvmpipe: fix FB fetch with non 32-bit render target
+    formats
+  * 2b3a0209280 llvmpipe: protect from doing FB fetch of missing buffers
+  * 3ebd6498c4f llvmpipe: fix gl_FragColor and gl_LastFragData[0]
+    combination
+  * b1de61dd385 llvmpipe: fix wrong assumption on FB fetch shader
+    opacity
+  * 86eb1549efd zink: implement pipe_context::draw_vertex_state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Nov 2021 22:02:20 +0100
+
 mesa (22.0.0~git2111122126.01d36149cdd~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
