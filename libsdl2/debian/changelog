@@ -1,3 +1,50 @@
+libsdl2 (2.0.17+git2111171555.dd6269b1e~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * dd6269b1e SDL_endian.h: added proper version check (VS2005+) to MSVC
+    functionality
+  * d2cf19193 hidapi, linux: merged a minor warning + code style fix
+    from mainstream.
+  * 43d1b42a5 cmake: Sync build config options with autotools
+  * 7d3045f27 minor whitespace tidy-up.
+  * 29b79313a minor tweak for a slightly smaller configure script
+  * 68ffd24c5 autotools, cmake: don't define SDL_JOYSTICK_HIDAPI in
+    CheckHIDAPI()
+  * 5cc23868e wayland: Add support for SDL_DisplayOrientation
+  * 40d808620 SDL_classic_joysticks defaults off
+  * 7ad64357e Updated Android build environment for examples
+  * 66058bbbd Fixed exception accessing Bluetooth devices on Android 12
+  * be5b4d980 Added nativeGetHintBoolean for Java code
+  * 9ec2b3514 Fixed the GLES2 shader count to be in sync with the enum
+  * 2f591fb0a Added android:exported="true" to the example Android
+    manifest
+  * b649314d6 Add comment to audio clipping (see bug #4104)
+  * d4df5d33c GLES2: prevent batching if blend mode changes (see bug
+    #4964)
+  * 92f2fdfc8 GLES2: batch non joined lines (see #4964)
+  * 17f156fae Fixed bug #4964 - opengles2 & batching = conjoined lines
+    put back the initial switch case because groups of joined lines
+    cannot be batched.
+  * d8888e468 Fixed bug #4964 - opengles2 & batching = conjoined lines
+  * 193ab28fe Renamed README-macosx.md to README-macos.md
+  * 4edf2df5c Unix2dos'd README-macosx.md.
+  * bbac1e9ad Don't include pthreads code when threads are disabled
+  * 93556e67e Update AndroidManifest.xml
+  * b9c619017 [Android] Limit WRITE_EXTERNAL_STORAGE to SDK 22-
+  * cc094f4d7 Fixed building with the macOS 10.8 SDK
+  * d7d67af44 mouse: Fix Y value in motion events when confinement is
+    active
+  * fb6aba193 Updated SDL_egl.h with the latest Khronos headers
+  * 1cd3e8375 cocoa: Fix abort on touch event types without a subtype
+  * 781caec2b SDL_waylandevents.c (keyboard_handle_keymap): silenced -
+    Wwrite-strings .
+  * 5c067906b wasapi: AvSetMmThreadCharacteristicsW takes an LPCWSTR
+    param, not LPWSTR
+  * 3eb9bfac7 win32 rawinput & wgi joystick: avoid -Werror=declaration-
+    after-statement
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 17 Nov 2021 22:01:35 +0100
+
 libsdl2 (2.0.17+git2111130126.eb3f1462b~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
