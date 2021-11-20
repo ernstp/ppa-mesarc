@@ -1,3 +1,41 @@
+libsdl2 (2.0.17+git2111192315.495ee42a8~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 495ee42a8 testcustomcursor.c: replaced libc sscanf with SDL_sscanf
+  * 990fb668f tests: several -Wwrite-strings fixes.
+  * 665865eda If the hardware is in an error state, the final page flip
+    may not come.
+  * 6828955dd Trim any extra platform strings from mappings when they're
+    returned to the application
+  * 116a002b1 build-scripts/gcc-fat.sh is no longer supported. Use clang-
+    fat instead.
+  * 881a67492 rawinput: Only access SDL_RAWINPUT_mutex if initialized
+  * 1237142be joystick: Quit drivers in reverse order to ensure
+    dependencies are not broken
+  * b67965979 SDL_hidapi.c: fix SDL_udev.h include path
+  * 3ed0c6267 SDL_RWsize: updated description
+  * 0fddda6e5 Sync wiki -> header
+  * e52683099 Sync wiki -> header
+  * 3f978c0f9 include: Improved documentation of SDL_RegisterApp and
+    SDL_UnregisterApp.
+  * 09bf12e03 fnsince.pl: SDL_UnregisterApp() also arrived in 2.0.2.
+  * 7f70f6e1e include: Note that several rwops functions used to be
+    macros before 2.0.10.
+  * 319d2b3e0 Sync wiki -> header
+  * 83024f329 fnsince.pl: Whoops, it's SDL_RegisterApp and not
+    SDL_SetMainReady in 2.0.2.
+  * 16a1721e9 Sync wiki -> header
+  * 46f12cc7f fnsince.pl: SDL_SetMainReady() originally arrived in SDL
+    2.0.2.
+  * a7a54e645 wayland: Add support for display connect/disconnect events
+  * c2464653d Remove unnecessary clang-cl check since Clang has
+    __builtin_bswap.
+  * 6b66542e7 Fixing compilation errors for VS2019 Clang toolset (fixes
+    #4702)
+  * 5be8a2211 Add audio conversion from/to 61
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Nov 2021 13:04:23 +0100
+
 libsdl2 (2.0.17+git2111171555.dd6269b1e~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
