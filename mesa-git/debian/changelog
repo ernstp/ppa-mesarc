@@ -1,3 +1,32 @@
+mesa (21.3.0+git2111182001.07c68d78b52~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 07c68d78b52 radv: disable HTILE for D32S8 format and mipmaps on
+    GFX10
+  * dacb05c497b zink: fail context creation more gracefully
+  * b7265b1b17a zink: fix memory availability reporting
+  * ba011bfe7da intel/nir: also allow unknown format for getting the
+    size of a storage image
+  * db61647bd53 glsl/nir: Don't build soft float64 when it cannot be
+    used
+  * 2bc4ed47ff0 zink: always set matching resource export type for
+    dmabuf creation
+  * a0fe0e094e5 zink: stop using VK_IMAGE_LAYOUT_PREINITIALIZED for
+    dmabuf
+  * 4f92ad13378 iris: Tidy code in iris_use_pinned_bo a bit
+  * 87309ea5c23 iris: Check for cross-batch flushing whenever a buffer
+    is newly written.
+  * f73ab966219 iris: Make a helper function for cross-batch dependency
+    flushing
+  * fdf2f6fa033 zink: set suballocator bo size to aligned allocation
+    size
+  * 0da127e3997 zink: block suballocator caching for swapchain/dmabuf
+    images
+  * 2168da43a84 .pick_status.json: Update to
+    341278f069a54a173fa646b16e0b68eefd28e5ed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Nov 2021 13:08:47 +0100
+
 mesa (21.3.0+git2111172138.4a94b5d22ab~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
