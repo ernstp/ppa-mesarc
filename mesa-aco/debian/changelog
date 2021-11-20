@@ -1,3 +1,53 @@
+mesa (22.0.0~git2111200245.df005c2a65f~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * df005c2a65f mesa: move around current texture object fetching
+  * d814539c2b6 mesa: check target/format for Tex(ture)StorageMem*
+  * f659d00000a android: define cpp_rtti=false because libLLVM is built
+    w/o RTTI
+  * cdeecadcb6e radeonsi: deduplicate min_esverts code in
+    gfx10_ngg_calculate_subgroup_info
+  * 9d7ac70ffb3 radeonsi: implement shader culling in GS
+  * 492a61fe725 radeonsi: don't use ctx.stage outside of
+    si_llvm_translate_nir
+  * 1c5899900dc radeonsi: simplify si_get_vs_key_outputs for GS
+  * a368385b23e radeonsi: add is_gs parameter into si_vs_needs_prolog
+  * f96d1757bba radeonsi: restructure code that declares merged VS-GS
+    and TES-GS SGPRs
+  * 2418da2d4af radeonsi: separate culling code from VS/TES (to be
+    reused by GS)
+  * 37c3e16d356 mesa/get: allow NV_pixel_buffer_object constants in
+    GLES2
+  * b8f41c5c4ee d3d12: Validate opened D3D12 resource matches pipe
+    template
+  * 9740141b2ef d3d12: Generate a pipe format -> typeless mapping table
+    too
+  * ca7d4fcb3fc d3d12: Generate format table using a macro list
+  * 25bcc56027e d3d12: Make format list all use macros
+  * 96012b686ed d3d12: Handle import/export of fd shared handles
+  * 31c7a04b472 winsys/d3d12: Populate winsys handle format
+  * 2771fd4a3fb gallium, windows: Use HANDLE instead of FD for external
+    objects
+  * 5bfbf4bec99 microsoft/compiler: Handle GLES external textures
+  * 21886070149 d3d12: Support RGBX formats mapped to RGBA
+  * ab9948997ac d3d12: Support PIPE_CAP_MIXED_COLOR_DEPTH_BITS
+  * e0576ec148c d3d12: Support BGRA 555 and 565 formats
+  * d0bc4974fa7 android: Allow forcing softpipe
+  * 33e5a4378ef android,d3d12: Support using DirectX-Headers dependency
+    from AOSP
+  * 6138b047e29 mesa/main, android: Log errors to logcat
+  * 9e82a56745c android: Add a BOARD CFlags option so build can be
+    customized
+  * 81cc94b8f0f zink: be consistent about waiting on context queue on
+    context destroy
+  * e92b8956c79 zink: set batch state queue on creation
+  * b8ffd7a8886 freedreno/a5xx: Emit MSAA state for sysmem rendering,
+    too.
+  * 5071d39cb27 freedreno/a5xx: Document the sRGB bit on RB_2D_SRC/DST
+    info.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 20 Nov 2021 13:05:06 +0100
+
 mesa (22.0.0~git2111172022.b1a32d1432f~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
