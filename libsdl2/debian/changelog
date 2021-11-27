@@ -1,3 +1,47 @@
+libsdl2 (2.0.18+git2111270227.4f683f01d~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * 4f683f01d Fixed potentially truncated entry in stack trace
+  * 5f1558ffe Fixed detecting Raspberry Pi 2/3 video support on Pi 4
+  * 4e5839a5f Fixed compiling for Raspberry Pi
+  * 86c0cf2bb software: Draw a single pixel for a line with the same
+    start/end point.
+  * a2e856523 The Google Pixel fingerprint sensor isn't actually a
+    joystick
+  * cb2f3bedf tidy-up a comment in cmake script
+  * 67b5de5b4 Fixed build warnings
+  * 2ca2ad76d Fixed build warnings
+  * b6c1cfb93 Added API changes in 2.0.18
+  * f90164a62 Fixed mapping for the G-Shark GS-GP702
+  * 22e59cd10 CMakeLists.txt: update DYLIB_CURRENT_VERSION too 2.0.18
+    for release
+  * 7242075b2 Updated version to 2.0.18 for release
+  * d86182046 SDL_JoystickGetAttached() doesn't need to be noisy for
+    NULL joystick
+  * 30f04d63e HIDAPI is only reliable on Android 4.3 and newer
+  * d713a6807 pulseaudio: wait until at least 1/8th (!) of the mixbuffer
+    is available.
+  * eb39e2058 SDL_endian.h: remove aarch64 asm.
+  * 53aa8eec5 minor cleanup for watcom _inline keyword.
+  * 3c71f8939 Sync wiki -> header
+  * 57520cbde Improve documentation for input grabbing functions
+  * 2fa35757a cmake: Weak link to GameController.framework to handle
+    older OSes
+  * bc409163a cmake: Detect SDL_JOYSTICK_MFI for macOS
+  * d5813776d Release UDEV ressources
+  * 5cb85d611 CI: Add iOS and tvOS builds
+  * b99510836 SDL_mfijoystick.m: Fix -Wshadow warning
+  * e77cfb9a1 Fixed d3d11 renderer creation
+  * d9f70878f don't use CMAKE_COMPILER_IS_MINGW
+  * 57366285d Only send display events for hotplugged displays, not the
+    initial state
+  * a3c05d2f3 Added debug output for display connect/disconnect events
+  * b7f9c2089 cmake: handle warning flags properly (thanks to hgs3 for
+    pointers.)
+  * f8900583e removed windows winmm joystick driver
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 27 Nov 2021 11:06:16 +0100
+
 libsdl2 (2.0.17+git2111192315.495ee42a8~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
