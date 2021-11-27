@@ -1,3 +1,30 @@
+mesa (21.3.0+git2111242056.1324fb89409~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 1324fb89409 svga: fix bitwise/logical and mixup
+  * 52f25d433fa android.mk: Add missing variables to the make target
+  * 44bcb9de4a9 radv: fix emitting VBO when vertex input dynamic state
+    is used
+  * a5aa4d40b20 aco/spill: use spills_entry instead of spills_exit to
+    kill linear VGPRs
+  * 15be321f47a intel/fs: fix shader call lowering pass
+  * f0e69e807fd ir3/lower_pcopy: Fix bug with "illegal" copies and swaps
+  * 52d319f11f5 ir3/lower_pcopy: Fix shr.b illegal copy lowering
+  * 6bcecd41ff6 ir3/ra: Consider reg file size when swapping killed
+    sources
+  * 7feda89b59f anv: don't try to close fd = -1
+  * b5b4b710ff7 glx/dri3: fix glXQueryContext does not return
+    GLX_RENDER_TYPE value
+  * bee05023d60 broadcom/compiler: don't move ldvary earlier if current
+    instruction has ldunif
+  * ba8d841609b broadcom/compiler: fix scoreboard locking checks
+  * d4827d0b2be broadcom/compiler: don't allow RF writes from signals
+    after thrend
+  * 6995a2e3d61 .pick_status.json: Update to
+    d106e5c73265f899f7204f7353969be945d6eda3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 27 Nov 2021 11:10:40 +0100
+
 mesa (21.3.0+git2111182001.07c68d78b52~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
