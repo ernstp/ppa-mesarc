@@ -1,3 +1,14 @@
+wayland-protocols (1.24+git2111241310.0aaf121~h~wayland1) hirsute; urgency=medium
+
+  * New snapshot:
+  * 0aaf121 xdg-shell: clarify conditions for remapping unmapped
+    surfaces
+  * bb7b398 build: Bump version to 1.24
+  * c62be97 linux-dmabuf: send protocol error on invalid format/modifier
+  * 8a5cd28 unstable/linux-dmabuf: add wp_linux_dmabuf_feedback
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 27 Nov 2021 11:14:30 +0100
+
 wayland-protocols (1.23+git2111171721.e5d63e9~h~wayland1) hirsute; urgency=medium
 
   * New snapshot:
