@@ -1,3 +1,22 @@
+libglvnd (1.3.4+git2111261425.055a4ba~h~wayland0) hirsute; urgency=medium
+
+  * New snapshot:
+  * 055a4ba Merge branch 'egl-allow-adding-devices' into 'master'
+  * 288eb48 tests: Add unit test for eglQueryDisplayAttribEXT.
+  * a5688ef tests: Implement EGL_EXT_device_query in the dummy vendor.
+  * af3f7e9 tests: Added unit tests for adding new EGLDisplayEXT
+    handles.
+  * 01316ea tests: Update EGL test helpers to match the new EGL dummy
+    vendor functions.
+  * 6d43e9b tests: Add initial support for adding new devices to
+    EGL_dummy.
+  * eaffa7b EGL: Add a dispatch stub for eglQueryDisplayAttribEXT.
+  * 26d15a9 EGL: Allow vendor's dispatch stubs to update the EGL device
+    map.
+  * 2747fcd EGL: Allow adding EGLDeviceEXT handles
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 27 Nov 2021 11:05:57 +0100
+
 libglvnd (1.3.4+git2110281730.2d69d47~h~wayland0) hirsute; urgency=medium
 
   * New snapshot:
