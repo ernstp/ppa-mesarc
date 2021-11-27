@@ -1,3 +1,51 @@
+mesa (22.0.0~git2111261706.b5848b2dac1~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b5848b2dac1 egl/wayland: use surface dma-buf feedback to allocate
+    surface buffers
+  * 5b56fc748a7 egl/wayland: move loader_dri_create_image() calls to
+    separate functions
+  * 83916ae0b9b egl/wayland: add initial dma-buf feedback support
+  * a25d4dd2761 loader: add function to get render node from dev_t
+  * cd39180cfab egl/wayland: remove unused constant EGL_DRI2_NUM_FORMATS
+  * aa6c900625d egl/wayland: move formats and modifiers to a separate
+    struct
+  * 6c37784400f egl/wayland: do not try to access memory if allocation
+    failed
+  * af1ee8e0104 egl/wayland: deprecate drm_handle_format() and
+    drm_handle_capabilities()
+  * 3022ad7e158 egl/wayland: replace EGL_DRI2_MAX_FORMATS by
+    EGL_DRI2_NUM_FORMATS
+  * 42a0e5caa9f egl/wayland: Remove unused wayland enum
+  * c53733b004a egl: remove unnecessary spaces after types
+  * be1acac84c3 ci: Upgrade to libdrm 2.4.109
+  * a2fd507973d ci: Consistently build Wayland and protocols
+  * 9bab991be09 ci: Use common build script for libwayland
+  * db3d76c42d7 radv: advertise VK_KHR_synchronization2
+  * 52b41850125 radv: switch the remaining stages/access to
+    VK_PIPELINE_STAGE_2/VK_ACCESS_2
+  * ad3cd581f41 radv: add support for
+    VK_IMAGE_LAYOUT_ATTACHMENT_OPTIMAL_KHR
+  * 936ac58b779 radv: add support for new pipeline stages and access
+    masks
+  * 3f29ae2d31c radv: add support for creating device-only events
+  * e99c66ad196 radv: add support for VkMemoryBarrier2KHR
+  * 3da7d10d9bb radv: implement vkQueueSubmit2KHR()
+  * 8df17163c78 radv: implement
+    vkCmdWaitEvents2KHR()/vkCmdPipelineBarrier2KHR()
+  * 57575974fd4 radv: implement vkCmdWriteBufferMarker2AMD()
+  * cff81c863bc radv: implement vkCmd{Reset,Set}Event2KHR()
+  * a0ac03676fb radv: implement vkCmdWriteTimestamp2KHR()
+  * 1df7c0ce7e0 radeonsi: print the shader stage for shader-db dumps
+  * 59926f25fab radeonsi: print source_sha1 as part of shader dumps
+  * e54264c84f8 nir: add shader_info::source_sha1, its initialization
+    and printing
+  * ba8075031a2 util: add SHA1 printing and comparison functions
+  * 0b196b40a3a mesa: don't compute the same SHA1 twice in
+    glShaderSource
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 27 Nov 2021 11:06:55 +0100
+
 mesa (22.0.0~git2111200245.df005c2a65f~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
