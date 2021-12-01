@@ -1,3 +1,47 @@
+mesa (22.0.0~git2112011926.70dd119abd4~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 70dd119abd4 CI/d3d12: Add a quick_shader run
+  * 7afb4aba3f1 CI/windows: Move reference files to relevant ci
+    subdirectories
+  * c70e31c4d52 CI/windows: Move SPIRV-to-DXIL test YML to microsoft
+    folder
+  * 214168621d4 CI/windows: Move D3D12 test YML to D3D12 driver folder
+  * 145b0711fcb freedreno/crashdec: Basing GMU log decoding
+  * 8c654d02a3b freedreno/crashdec: Fallback to chip_id for GPU id
+  * f33d5256dd1 freedreno/crashdec: HFI queue decoding
+  * 2133d34b11a freedreno/crashdec: Split out mempool decoding
+  * b234c538e8a turnip: Move CP_SET_SUBDRAW_SIZE to vkCmdBindPipeline()
+    time.
+  * fd11d992546 turnip: use SUBDRAW_SIZE and constant sized tess bos
+  * 3748b8afce9 freedreno/ir3: Make a shared helper for the tess factor
+    stride.
+  * 17de0841ae7 nouveau/nir: Use natural alignment for scalars
+  * 698343edc57 util/u_trace/perfetto: add new env variable to enable
+    perfetto
+  * 65697d6141b util/u_trace: add end_of_pipe property to tracepoints
+  * 6f54ebe44f7 glsl: fix for unused variable in glsl_types.cpp
+  * 4f58cc82e2f spirv: handle SpvOpMemberName
+  * 8e568d3f00b nir/opt_deref: don't try to cast empty structures
+  * 69ec384bbad gallium/d3d12: Don't use designated initializers
+  * 83280b8e23e microsoft/compiler: Fix dxil_nir_create_bare_samplers()
+  * c868bff36a5 freedreno/ci: add piglit runs for a306
+  * 1ba231fb75b android: define cpp_rtti=false because libLLVM is built
+    w/o RTTI (v2)
+  * be7a0b23c8b Revert "android: define cpp_rtti=false because libLLVM
+    is built w/o RTTI"
+  * 6afba805349 aco: don't create DPP instructions with SGPR operands
+  * 8d2be391e34 panfrost: Add empty tile flags to GenXML
+  * 8f00f19da5b radv: fix resetting the entire vertex input dynamic
+    state
+  * 18cd0a5409e anv: Drop code from get_blorp_surf_for_anv_buffer
+  * 355f3188438 anv: Allow transfer-only linear ASTC images
+  * bdf8b36c4cf anv: Require transfer features for transfer usages
+  * 8171535c457 iris: Allow GPU-based uploads of ASTC textures
+  * caa998ca8ff intel/isl: Allow creating non-Y-tiled ASTC surfaces
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Dec 2021 21:08:18 +0100
+
 mesa (22.0.0~git2111261706.b5848b2dac1~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
