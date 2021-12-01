@@ -1,3 +1,52 @@
+mesa (21.3.1+git2112012048.0dd14909233~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 0dd14909233 nir/opt_deref: don't try to cast empty structures
+  * 622be799011 .pick_status.json: Update to
+    70dd119abd4481ea3cbe82435bcfb89459c7dd4f
+  * 9da08702b0c VERSION: bump for 21.3.1
+  * ec157bc04dd docs: add release notes for 21.3.1
+  * ae3b08fb974 android: define cpp_rtti=false because libLLVM is built
+    w/o RTTI (v2)
+  * bf23b3e69a1 aco: don't create DPP instructions with SGPR operands
+  * 36659b347ca radv: fix resetting the entire vertex input dynamic
+    state
+  * cb5b523922a nir: Fix read depth for predecessors
+  * 87bab077506 nir/dce: fix DCE of loops with a halt or return
+    instruction in the pre-header
+  * ae0988b09ce lima: disasm: use last argument as a filename
+  * d36f814171f radv: add a workaround to fix a segfault with Metro
+    Exodus (Linux native)
+  * 4d5d2a1558e ci: temporarily disable lima CI
+  * 6f2e24f53fb util/u_trace: refcount payloads
+  * 6f0505d49ef spirv: run nir_copy_prop before
+    nir_rematerialize_derefs_in_use_blocks_impl
+  * 7a5cea0ff80 svga: fix bitwise/logical and mixup
+  * 0ba31a494d0 android.mk: Add missing variables to the make target
+  * b1d56579900 radv: fix emitting VBO when vertex input dynamic state
+    is used
+  * 3defc6bc475 aco/spill: use spills_entry instead of spills_exit to
+    kill linear VGPRs
+  * 73f5d5053e3 intel/fs: fix shader call lowering pass
+  * d3d950ce4ad ir3/lower_pcopy: Fix bug with "illegal" copies and swaps
+  * c6bdf7a811c ir3/lower_pcopy: Fix shr.b illegal copy lowering
+  * 11e8af19554 ir3/ra: Consider reg file size when swapping killed
+    sources
+  * f5c31a44a87 anv: don't try to close fd = -1
+  * b2e5b6757a6 glx/dri3: fix glXQueryContext does not return
+    GLX_RENDER_TYPE value
+  * 7bde2ce13fb broadcom/compiler: don't move ldvary earlier if current
+    instruction has ldunif
+  * c2d44f59799 broadcom/compiler: fix scoreboard locking checks
+  * f6504f64e85 broadcom/compiler: don't allow RF writes from signals
+    after thrend
+  * ec1891bae89 radv: disable HTILE for D32S8 format and mipmaps on
+    GFX10
+  * 5e31954a2e5 zink: fail context creation more gracefully
+  * c2682955ff5 zink: fix memory availability reporting
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Dec 2021 21:12:05 +0100
+
 mesa (21.3.0+git2111242056.1324fb89409~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
