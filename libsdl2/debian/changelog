@@ -1,3 +1,52 @@
+libsdl2 (2.0.19+git2112011933.f14a8bfa4~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * f14a8bfa4 fix whitespace.
+  * b71bfdaaf SDL_iconv.c (encodings): mark "WCHAR_T" as
+    ENCODING_UTF16LE for OS/2 too
+  * cbe97cbf7 Added a step necessary for running on a real device
+  * 66b0a6ee1 workaround for libmali gbm_device_get_fd()
+  * 0c7c4bfcf docs: Don't let Doxygen expand HOME environment variable
+  * 339f0d409 configure.ac: adjust os2 section for system iconv() use.
+  * 563ef2aeb regenerated configure scripts.
+  * efa1aa9a8 initial attempt at adding os2 support to autotools
+  * 335546407 libtool upgrade to 2.4.6 - 18/n: SDL customizations
+  * 5ae2f0fd1 libtool upgrade to 2.4.6 - 17/n: SDL customizations
+  * 6a5aeaf94 libtool upgrade to 2.4.6 - 16/n: Fedora ABI-specific
+    directories patch:
+  * 792d7c9f6 libtool upgrade to 2.4.6 - 15/n: -Xassembler and -Wa,*
+    support :
+  * 8c44e0e0f libtool upgrade to 2.4.6 - 14/n: support for MidnightBSD
+  * a6df1f7be libtool upgrade to 2.4.6 - 13/n: add mingw to systems not
+    needing libm.
+  * 897efe183 libtool upgrade to 2.4.6 - 12/n: fix preloading symbols on
+    Solaris 11.3
+  * b5dc1eedb libtool upgrade to 2.4.6 - 11/n: FreeBSD elftoolchain
+    strip support
+  * 3cbd56169 libtool upgrade to 2.4.6 - 10/n: export AIX TLS symbols
+    fix
+  * 27666089b libtool upgrade to 2.4.6 - 9/n: fix func_fatal_error
+    function name typo
+  * 4be6ab269 libtool upgrade to 2.4.6 - 8/n: set file_list_spec to '@'
+    on OS/2
+  * 83a22d059 libtool upgrade to 2.4.6 - 7/n: fix an os/2 typo
+  * e8881b0d3 libtool upgrade to 2.4.6 - 6/n: fix typo introduced in
+    libtool-2.4.3
+  * 8b13673c1 libtool upgrade to 2.4.6 - 5/n: fix linker error for
+    powerpc64le
+  * 8e6206381 libtool upgrade to 2.4.6 - 4/n: fix m4 quoting bug
+  * df4026825 libtool upgrade to 2.4.6 - 3/n: fixes for gcc/clang
+    linkage
+  * 647514a5d libtool upgrade to 2.4.6 - 2/n: support macOS 11
+  * c8ddccdef libtool upgrade to 2.4.6 - 1/n
+  * 662ea5abe minor correction after previous patch and minor tidy-up.
+  * 70c5e91d0 os/2 optionally builds against libiconv.
+  * b20484e80 minor os/2 reorganization for iconv
+  * 8c91cf7db Always create a full 256-entry map in case color values
+    are out of range
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Dec 2021 21:07:29 +0100
+
 libsdl2 (2.0.18+git2111270227.4f683f01d~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
