@@ -43,7 +43,6 @@ ifeq ($(DEB_HOST_ARCH_OS), hurd)
 	confflags_DIRECT_RENDERING = -Dglx-direct=false
 	confflags_GBM = -Dgbm=disabled
 else
-	DRI_DRIVERS += r100 r200
 	GALLIUM_DRIVERS += r300 r600
 
 	confflags_DIRECT_RENDERING = -Dglx-direct=true
@@ -60,7 +59,6 @@ else
 
   ifeq ($(DEB_HOST_ARCH_OS), linux)
 	confflags_DRI3 = -Ddri3=enabled
-	DRI_DRIVERS += nouveau
 	# Gallium drivers which require kernel support, not yet ported to non-Linux
 	GALLIUM_DRIVERS += nouveau virgl
 
@@ -99,7 +97,6 @@ else
 
   # Build intel drivers on archs where libdrm-intel is installed
   ifneq (,$(filter $(DEB_HOST_ARCH),amd64 i386 kfreebsd-amd64 kfreebsd-i386 x32))
-	DRI_DRIVERS += i915 i965
 	GALLIUM_DRIVERS += iris
   endif
 
