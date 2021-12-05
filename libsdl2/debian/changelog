@@ -1,3 +1,20 @@
+libsdl2 (2.0.19+git2112031835.b7a0200aa~h~wayland5) hirsute; urgency=medium
+
+  * New snapshot:
+  * b7a0200aa Update 2.0.18 release notes with CMake prefix change
+  * a887b8e28 SDL_test_common.c: replaced all printf() calls with
+    SDL_Log()
+  * 5056b29b0 Fix the wrong int size for fcitx capability.
+  * d68b429cf [ios] Fix failing to link iconv when build using CMake
+  * 514f5858e autotools: disable static builds on os/2
+  * e14d10263 Change viewport and cliprect to float version: from
+    SDL_Rect to SDL_FRect
+  * 7828362da SDL_Renderer software, D3D11: don't use "renderer-
+    >viewport" in back-ends, but use the one from SETVIEWPORT cmd
+  * a2b13e585 SDL_iconv_string: avoid memory leak if realloc() fails.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Dec 2021 10:00:38 +0100
+
 libsdl2 (2.0.19+git2112011933.f14a8bfa4~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
