@@ -1,3 +1,49 @@
+mesa (22.0.0~git2112042028.6e7ffa760f3~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 6e7ffa760f3 vulkan: Open registry XML files as UTF-8
+  * 8665910a632 venus: move bo allocation for mappable memory to
+    vn_MapMemory
+  * 19d6b497fbf venus: track memory type property flags in
+    vn_device_memory
+  * 86b3a4e6aa9 venus: defer roundtrip waiting to vkFreeMemory time
+  * 9fa3e3df9e9 venus: simplify device memory pool alloc and refcount
+  * e019780626a venus: refactor vn_device_memory_simple_alloc
+  * eb28ac0f883 nv50: don't claim support for format-less stores
+  * 03acfa4aac3 nv50,nvc0: add new caps to list
+  * bd2c11dfa80 intel/compiler: Load draw_id from XP0 in Task/Mesh
+    shaders
+  * b717872e085 intel/compiler: Get mesh_global_addr from the Inline
+    Parameter for Task/Mesh
+  * 28e0c63a4cb intel/compiler: extract brw_nir_load_global_const out of
+    rt code
+  * 1f438eb0337 intel/compiler: Implement Mesh Output
+  * 70ace2bbcd5 intel/compiler: Implement Task Output and Mesh Input
+  * 171bdd2ec66 intel/compiler: Lower Task/Mesh
+    local_invocation_{id,index}
+  * db23c41537e intel/compiler: Add backend compiler basics for
+    Task/Mesh
+  * 827cf65a26e intel/compiler: Export brw_nir_lower_simd
+  * 09dd05a2199 intel/compiler: Make MUE available when setting up FS
+    URB access
+  * 79e5e353e4a intel/compiler: Add structs to hold TUE/MUE
+  * fcc1ccf5417 intel/compiler: Don't lower Mesh/Task I/O to temporaries
+  * 18e1c9c5423 intel/compiler: Don't stage Task/Mesh outputs in
+    registers
+  * be89ea3231c intel/compiler: Handle per-primitive inputs in FS
+  * 7938c38778c intel/compiler: Properly lower WorkgroupId for Task/Mesh
+  * 76f55d7556e intel: Add INTEL_DEBUG=task,mesh
+  * ea8fa10edd1 mesa: move common/dri into gallium
+  * 01b44d66b12 mesa: Merge libmesa_gallium and libmesa_common
+  * e030d5ba8ac mesa: Delete libmesa_classic
+  * bc2d3e7b5fd mesa/main/tests: remove dispatch sanity
+  * a63760f01a5 include/pci_ids: Move PCI ids supported by both i965 and
+    iris to iris
+  * bf97868062a mesa/dri: remove mega driver stub
+  * cdde031ac2c classic/i965: Remove driver
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Dec 2021 10:01:21 +0100
+
 mesa (22.0.0~git2112011926.70dd119abd4~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
