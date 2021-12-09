@@ -1,3 +1,11 @@
+libglvnd (1.3.4+git2112080034.b56a13f~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * b56a13f Merge branch 'submit/fix-get-option-x11' into 'master'
+  * 9d09a1a meson: use required : feature option correclty
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Dec 2021 16:58:36 +0100
+
 libglvnd (1.3.4+git2111261425.055a4ba~h~wayland0) hirsute; urgency=medium
 
   * New snapshot:
