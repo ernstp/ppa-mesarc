@@ -1,3 +1,50 @@
+libsdl2 (2.0.19+git2112082151.615f7b445~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 615f7b445 more updates to os2 makefile for libiconv
+  * b6d40b29a minor update to os2 makefile.
+  * 8d14e6ea4 replaced use of _MAX_PATH with CCHMAXPATH in os/2 code,
+  * 1940d289b SW Renderer: fix invalid read if VSYNC hint is initially
+    set with an empty value (eg "") because: - GeHint return a value
+    pointer. - SetHint free internally the pointer - The -now invalid-
+    pointer is re-read
+  * 9409642e0 fix some warnings from vita builds (missing includes)
+  * 21d46b7e0 PSP renderer fixed
+  * 6f6382f8d Fix SDL_GameController API for PSP (#3)
+  * da0f76de6 cocoa: Don't round scroll deltas from trackpads
+  * 8cee50eea removed stdlib.h from SDL_psp_main.c now that exit() is
+    gone.
+  * 4facca0bf made Makefile.psp to build libSDL2main.a
+  * 00014dc2a fix some warnings from psp builds (missing includes.)
+  * da5dbb476 Fix SDL2main on PSP (#5076)
+  * 2d673e5b5 evdev: Add support for REL_WHEEL_HI_RES and
+    REL_HWHEEL_HI_RES
+  * 493d45f00 minor tidy-up in cmake script.
+  * f266d9228 psp/SDL_sysjoystick.c: fix -Wshadow warnings.
+  * 801dcbc5e SDL_render_sw.c: fix -Wshadow warnings.
+  * e17a3154e Fix build issue
+  * 7266cf66c Clean up PSP render code to fit C standard used better
+  * 07608bf45 Fix ISO C90 violations in psp render code
+  * 897c7cfa8 Make sure SDL_VIDEO_RENDER_PSP is set
+  * bfbdf8969 Add automated build for PSP
+  * a79b64263 Make SDL2 able to build or PSP with cmake
+  * 21fd0047e Initial for building PSP version with CMake
+  * d09f80ef1 SDL_DrawPointsF: fix error message typo
+  * 6dafc8501 SDL_DrawLines: minor simpification: - scale is  1.0f,
+    don't need to multiply - typo in error message - remap SDL_DrawLines
+    to SDL_DrawLinesF
+  * a0818a63e Fixed bug #5071 - Float conversion warnings in
+    SDL_render.c (see also #5003)
+  * 9ae56cb35 events: Add logging for SDL_MOUSEWHEEL preciseX/Y fields
+  * 03019c912 autotools, cmake: tighten Xfixes check && explicitly test
+    BarrierEventID
+  * a709b5b60 video: wayland: Handle 0x0 xdg_toplevel_configure in
+    fullscreen
+  * 2f0edc290 IAudioClient::SetEventHandle  Parameter eventHandle Should
+    not be NULL
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Dec 2021 16:58:55 +0100
+
 libsdl2 (2.0.19+git2112031835.b7a0200aa~h~wayland5) hirsute; urgency=medium
 
   * New snapshot:
