@@ -1,5 +1,5 @@
 GIT="https://gitlab.freedesktop.org/wayland/wayland-protocols.git"
 GITBRANCH="main"
-DISTROS="hirsute impish"
+DISTROS="impish jammy"
 INC=1
 PPA=wayland
