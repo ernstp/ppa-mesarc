@@ -1,3 +1,45 @@
+mesa (22.0.0~git2112090152.c50bdacbda6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * c50bdacbda6 glx: fix regression for drawable type detection
+  * ff74d5dd1b8 intel/compiler: Don't store "scalar stage" bits on Gfx8
+    or Gfx9
+  * 4563261ad18 intel/compiler: Don't predicate a WHILE if there is a
+    CONT
+  * d051854ccaa treewide: drop mtypes/macros includes from main
+  * 72db15913f6 v3dv: Fix dEQP-VK.info#instance_extensions test
+  * b14dd3a8661 venus: prefer VIRTGPU_BLOB_MEM_HOST3D for shmems
+  * fe3a800ad3d d3d12: Use overall resource format + plane format to get
+    format info
+  * 0312142d964 d3d12: Allow creating planar resources
+  * a6db8054694 d3d12: Handle opening planar resources
+  * fb6479544bd d3d12: Force emulation of all YUV formats using per-
+    plane formats
+  * 7f34b70474f radv: Use the winsys 0 cmdbuffer submission support.
+  * 7675d066caa radv/amdgpu: Add support for submitting 0
+    commandbuffers.
+  * 6eb08213159 radv/winsys: Add queue family param to submit.
+  * c03d258046c radv/amdgpu: Add a syncobj per queue.
+  * 6d1a15f7faf mesa/st: drop Draw from dd function table.
+  * 5312511ea54 mesa/st: move draw indirect and xfb to direct calls.
+  * 132ffc46dcc mesa/st: move compute to direct call
+  * 28bd406f508 mesa/st: move msaa functions to direct call
+  * d16f514f192 mesa/st: convert DrawTex to direct call
+  * 601c30c8c1e mesa/st: convert the non-optional egl image to direct
+    calls
+  * 7b066ebfb38 mesa/st: move blit function to direct call
+  * c9fec99c4a2 mesa/st: replace most of buffer funcs with direct calls.
+  * f60add48ee4 mesa/st: move program calls to direct call
+  * 878cf8cae95 mesa/st: move copy image sub data to direct call
+  * 81eae719363 mesa/st: move viewport to direct call
+  * ce9a50e6f80 mesa/st: move some context functions to direct calls
+  * cb400f368a7 mesa/st: move clear/flush/finish to direct call
+  * 37fb8058fb8 mesa/st: move pixel/bitmap functions to direct call
+  * 4e13c7d46ae mesa/st: move Clear to new direct call
+  * 889ac0f1b98 mesa/st: move texture APIs to direct st calls
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Dec 2021 16:59:36 +0100
+
 mesa (22.0.0~git2112042028.6e7ffa760f3~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
