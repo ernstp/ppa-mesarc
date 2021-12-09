@@ -13,6 +13,7 @@ Build-Depends:
  libgbm-dev,
  libnvidia-egl-wayland-dev,
  libpixman-1-dev,
+ libxcvt-dev,
  libxfont-dev,
  libxkbfile-dev,
  libxshmfence-dev,
