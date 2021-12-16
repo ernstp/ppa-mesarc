@@ -1,3 +1,9 @@
+wayland-protocols (1.24+git2111241310.0aaf121~b~wayland2) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Dec 2021 17:34:56 +0100
+
 wayland-protocols (1.24+git2111241310.0aaf121~h~wayland1) hirsute; urgency=medium
 
   * New snapshot:
