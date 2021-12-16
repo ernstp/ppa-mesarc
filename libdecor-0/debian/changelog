@@ -1,3 +1,10 @@
+libdecor-0 (0.1.0+git2112100922.8e465f1~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 8e465f1 cairo: fix use after free in wl_list_for_each
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Dec 2021 17:18:53 +0100
+
 libdecor-0 (0.1.0+git2110211017.754432e~h~wayland0) hirsute; urgency=medium
 
   * New snapshot:
