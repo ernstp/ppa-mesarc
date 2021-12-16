@@ -1,3 +1,42 @@
+libsdl2 (2.0.19+git2112161622.4c9966eed~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 4c9966eed wayland: Add a note for why we check 0,0 for fullscreen
+    configurations
+  * 6101499c7 BigEndian: fix code that generates illegal instruction
+    with gcc-4.9.2 on powerpc
+  * 0b7b0977f fix PSP texure artifacts
+  * 996f30b0e Use lightweight mutex
+  * 0341ec93f Improve performance when vsync is enabled and the game is
+    not reaching the 60 FPS
+  * 67c4b9963 Fixed enabling udev hotplug detection on Linux
+  * 60c3ca49b Vita: disable arm asm blitters and add missing pvr dep
+  * c326ff7c6 Re-enabled the O_CLOEXEC definition so config headers can
+    be fixed
+  * 7f5339e6c Document the packed integer formats SDL_Color is bit-
+    compatible with.
+  * 3a5e148b1 Renderer backends use SDL_Color instead of int for
+    geometry colors.
+  * 086c74556 Fixed build warning on iOS
+  * b08e57e92 Don't try to create a vbo if we aren't using any vertices
+  * b7885abc4 Fixed bug #5087: SDL_RenderGeometryRaw() passes colors as
+    int* instead of SDL_Color*
+  * 323ba6c00 d3d11 renderer: reduce vertex bandwidth and calculations.
+  * 2b6b69fb1 fix assertion failure in sndio audio caused by the recent
+    hotplugging support
+  * 8927d73b1 RenderGeometry: simplify casting (Thanks Daniel Gibson)
+  * d7f66ba1e Remove strict aliasing warning in opengles2 backend
+  * 3e43d6e34 SDL_RenderGeometry: remove some warning "dereferencing
+    type-punned pointer might break strict-aliasing"
+  * e2ade2bfc Fix build against wayland 1.20
+  * 9da93d074 video: x11: Set XImage's byte_order field (fix #5081)
+  * e7f84c20b Fix a typo in comment.
+  * 66fbf00e7 Temporarily ignore gl_config.driver_loaded check in
+    Cocoa_GLES_SetupWindow.
+  * cb8fa5f9c wayland: fix keycodes of swapped xkb modifier keys
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Dec 2021 17:19:09 +0100
+
 libsdl2 (2.0.19+git2112082151.615f7b445~i~wayland5) impish; urgency=medium
 
   * New snapshot:
