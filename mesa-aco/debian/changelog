@@ -1,3 +1,52 @@
+mesa (22.0.0~git2112161043.f7e63ec5d87~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * f7e63ec5d87 nir/print: compact printing of intrinsic indices
+  * d8fa625bb34 nir/print: expand printing of io semantics.gs_streams
+  * be25db9f0f3 nir/print: simplify printing of IO semantics
+  * 7325179bcb0 intel/compiler: Use uppercase enum values in
+    brw_ir_performance.cpp
+  * d3f4f23ca34 intel/vec4: Inline emit_texture and move helpers to
+    brw_vec4_nir.cpp
+  * 92d194427da intel/vec4: Use nir_texop in emit_texture instead of
+    translating
+  * 2729a741fc3 intel/vec4: Use ir_texture_opcode less in emit_texture()
+  * 5ce4017a2bf radv,aco: do not disable anisotropy filtering for non-
+    mipmap images
+  * 8a327722d54 ac/nir: add an option to disable anisotropic filtering
+    for single level images
+  * 1cb5c1775b0 glx: fix querying GLX_FBCONFIG_ID for Window
+  * 6c5b3c6bb56 dri: Remove unused driGetRendererString
+  * 7cc42a8dd43 dri: Remove unused driUpdateFramebufferSize
+  * 7e1e3722fb3 dri: Remove unused driContextSetFlags
+  * 69aad977880 mesa: Remove unused _mesa_initialize_visual
+  * cd38b6e2e85 anv, iris: Implement Wa_14014890652 for DG2
+  * 40b66a44998 anv, iris: Add Wa_22011440098 for DG2
+  * 17a1df79bab anv, iris: Add Wa_16011773973 for DG2
+  * b1156f23a2a Revert "nir: disable a NIR test due to undebuggable &
+    locally unreproducible CI failures"
+  * 49c356a3356 meson: Bump version required for gtest protocol
+  * dcc7b19cae9 nir: Initialize nir_register::divergent
+  * 3ffd6f3fa62 nir_to_tgsi: Set the TGSI Precise flag for exact ALU
+    instructions.
+  * af4d277cccb mesa: OpenGL 1.3 and OpenGL ES 1.0 are not optional
+  * 5f14e987808 mesa: OpenGL 1.3 feature GL_ARB_texture_env_dot3 is not
+    optional
+  * 61a3e68767b mesa: OpenGL 1.3 feature GL_ARB_texture_env_combine is
+    not optional
+  * 7649ab1f03f mesa: OpenGL 1.3 feature GL_ARB_texture_cube_map is not
+    optional
+  * c11641ab241 mesa: OpenGL 1.3 feature GL_ARB_texture_border_clamp is
+    not optional
+  * 2ca13abcceb intel/fs: Use HF as destination type for F32TOF16 in
+    fquantize2f16
+  * 9c81de7df29 venus: cache shmems
+  * 7bec2a0b239 venus: add VN_CS_ENCODER_STORAGE_SHMEM_POOL for
+    VkCommandBuffer
+  * 487926aa865 venus: add vn_cs_encoder_storage_type
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Dec 2021 17:19:48 +0100
+
 mesa (22.0.0~git2112090152.c50bdacbda6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
