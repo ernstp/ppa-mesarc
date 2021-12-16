@@ -1,3 +1,24 @@
+mesa (21.3.1+git2112131829.050c441e77b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 050c441e77b android: add support for classic dri-drivers (v2)
+  * 26c1fea0987 anv: Stop doing too much per-sample shading
+  * 81bab29f626 crocus: wm_prog_key::key_alpha_test uses GL enums
+  * 13047efb5a3 turnip: Fix operator precedence in address calculation
+    macros for queries
+  * e2e6ec12b53 aco: Clean up and fix quad group instructions with WQM.
+  * 876a9dc7293 intel/compiler: Don't predicate a WHILE if there is a
+    CONT
+  * 9201766846a v3dv: Fix dEQP-VK.info#instance_extensions test
+  * 24d48c58402 gbm: Don't pass default usage flags on ABIs < 1
+  * c646b1df12f intel/fs/xehp: Teach SWSB pass about the exec pipeline
+    of FS_OPCODE_PACK_HALF_2x16_SPLIT.
+  * cabbae29028 panfrost: Don't shadow Mesa's fui()
+  * cc402827aff .pick_status.json: Update to
+    9ff086052ab7bff3cb55c06365543190a3afe188
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Dec 2021 17:23:18 +0100
+
 mesa (21.3.1+git2112062125.143af0ad9c3~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
