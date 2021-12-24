@@ -9,3 +9,6 @@ endif
 
 %:
 	dh $@ --buildsystem=cmake
+
+override_dh_auto_test:
+	true
