@@ -1,3 +1,53 @@
+libsdl2 (2.0.19+git2112212207.a1e992b11~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * a1e992b11 Fixed bug #5118 - [Android] PointerIcon leak in Cursor API
+  * 5ca0926d8 fixes to visual test MSVC project files.
+  * b8d839c0c remove all unnecessary stuff from visualtest configury.
+  * 8a355116d silence -Wwrite-strings in visualtest
+  * 71c497a3a visualtest windows build fixes
+  * 449ef08dc minimal fixes to visual test, so that it actually builds
+    w/o warnings:
+  * 505df1a99 autotools: Fix typo in libgbm print
+  * 0673e448f autotools: improved detection of windows.gaming.input.h
+  * 83583dc49 cmake: Fix WGI detection with older SDKs
+  * 398c0fdff cmake: simplify wayland-scanner 1.15 detection.
+  * 54d245106 sdlchecks.cmake: Small tune by @sezero
+  * 6c9907dd0 Fixed build on CMake older than 3.7
+  * 3861afacf Fixed build on CMake older than 3.13
+  * 840339c49 SDL_utf8strlcpy: store trailing_bytes explicity as
+    unsigned type.
+  * 507d4bcd6 SDL_utf8strlen: run bit-test explicitly on unsigned char
+  * 82fc67ae4 SDL_joystick.c: cast the arguments to nibble() to unsigned
+    char.
+  * 47d3e96b4 SDL_joystick.c: (unsigned char) cast to SDL_tolower()
+    parameters.
+  * 881feca1f CMAKE: fixed cflags check for build type
+  * c31a40246 Fix audio memory leaks due to invalid init (thanks
+    Janiszewski!)
+  * 71e3998d6 Make SDL_VideoInit cleanup when errors occur before video
+    driver creation.
+  * 8ed0cc430 Fix wrong value for thread priorities following official
+    PSP Docs
+  * 44c84c0d8 GLES2/Big-endian: don´t swap datas for yuv textures
+    (Thanks 0x1F9F1 !)
+  * 3a69828e8 Fixed GLES2 back-end on Big Endian Platform (see #5093)
+  * 61107494a SDL_gamecontroller.c: (unsigned char) cast to
+    SDL_isdigit() parameters.
+  * ced442cd3 SDL_test_common.c: (unsigned char) cast to SDL_isdigit()
+    parameter.
+  * 48d1ef8fa another unsigned char cast in os2cp.c. code clean-up in
+    os/2 geniconv.
+  * dac651605 os2iconv.c (_createUconvObj): cast to unsigned char, to be
+    safe.
+  * 2052b5bc3 os2messagebox: use proper UCHAR* typecast in assignment,
+    just in case.
+  * ca18bf11e Don't compare raw mouse button state with windows message
+    button state
+  * 3d5fcb5da Fix warning
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 25 Dec 2021 15:30:22 +0100
+
 libsdl2 (2.0.19+git2112161622.4c9966eed~i~wayland5) impish; urgency=medium
 
   * New snapshot:
