@@ -1,3 +1,51 @@
+mesa (21.3.2+git2112241336.fa64a71f3b3~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * fa64a71f3b3 r300/vs: Fix flow control processing just after an
+    endloop.
+  * 9a69658a98e r300/vs: Allocate temps we see a use as a source, too.
+  * d0f2e4ff623 r300: Disable loop unrolling on r500.
+  * 24c0a1ba66c r300: Also consider ALU condition modifiers for loop
+    DCE.
+  * eaee882e933 r300: Ensure that immediates have matching negate flags
+    too.
+  * 30b404109f4 r300: Move the instruction filter for
+    r500_transform_IF() to the top.
+  * 7b85174438c r300: Fix mis-optimization turning -1 - x into 1 - x.
+  * 043a5eded55 microsoft/compiler: Implement inot
+  * e6561930076 swr: Fix MSVC build
+  * 9f9def99048 glsl: fix invariant qualifer usage and matching rule for
+    GLSL 4.20
+  * 5a1277abbac panfrost: Avoid double unlock.
+  * bedc620541c aco/optimizer_postRA: Fix applying VCC to branches.
+  * a0ca271fd92 aco/optimizer_postRA: Fix combining DPP into VALU.
+  * b54c371f4c2 aco/ra: fix get_reg_for_operand() in case of stride
+    mismatches
+  * f13bbd3b29a aco/optimizer: fix fneg modifier propagation on VOP3P
+  * cd35a609dc5 intel/fs: Add physical fall-through CFG edge for
+    unconditional BREAK instruction.
+  * 06cd2cb3720 freedreno/computerator: Fix @buf header
+  * cc68a60bec0 freedreno/ir3: Handle instr->address when cloning
+  * e2db0daf631 panfrost: Fix Secondary Shader field
+  * 590b361d174 pan/indirect_draw: Don't upload garbage UBO
+  * 9649de775e9 .pick_status.json: Mark
+    d49d092259829ad9e33d0d9fc8eef9759d9fe56e as denominated
+  * 894465d7768 .pick_status.json: Update to
+    944c8907ba80866cd52326cc7fb043df0d2c2e90
+  * ea42411badc vulkan/log: Don't assert on non-client-visible objects
+  * 272a5da515c .pick_status.json: Update to
+    3415b51b1ce173735ff8c9a61846c9e27c6b8ffd
+  * a06cd045d16 VERSION: bump for 21.3.2
+  * 4b6c14cc7a0 docs: add release notes for 21.3.2
+  * 1b8f73b5c7b radeonsi/nir: Check for VARYING_SLOT_PRIMITIVE_ID not
+    SYSTEM_VALUE
+  * 09ead89f6de vulkan: fix missing handling of WSI memory signal
+  * fd54eeb8978 intel/stub: Silence "initialized field overwritten"
+    warning
+  * c51e26649ee meson: correctly detect linker arguments
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 25 Dec 2021 15:33:15 +0100
+
 mesa (21.3.1+git2112131829.050c441e77b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
