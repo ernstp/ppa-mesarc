@@ -1,3 +1,43 @@
+mesa (22.0.0~git2112240915.222487fabee~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 222487fabee radv: Fix memory leak on error path.
+  * d2148af2cab mesa/st: remove conditionals for driver state bits that
+    are always set.
+  * 86a7a36164d mesa/st: drop multisample mask/locations state drivers
+    bits
+  * ddade693d00 mesa/st: drop new framebuffer srgb driver state bit
+  * cbaf0729719 mesa/st: drop clip plane driver state bits
+  * 33991f0743e mesa/st: drop scissor/window rect driver state bits
+  * 42c7570eed2 mesa/st: drop ssbo, image and sampler driver state flags
+    bits
+  * 75255a1d069 mesa: drop unused transform feedback state driver flags
+  * 6e15cc69ec2 mesa/st: drop new uniform driver state bit
+  * f35d22b2ee9 mesa/st: drop new tess state driver bit
+  * 562f01fbc7a mesa/st: drop poly stipple driver state bit
+  * 784ced98f09 mesa/st: drop new depth/stencil state bits
+  * 14e1f9cb980 mesa/st: drop NewBlend driver state flags
+  * 4f0316613f0 mesa/st: remove the viewport driver state flags
+  * c5af853cb92 mesa/st: drop the rasterizer driver flags
+  * b2175609baa mesa/st: drop the new array driver state bit
+  * df4f0672d3f mesa/st: merge NewDepthClamp state flag
+  * 535a9d42030 mesa: drop optional tex/tnl maintains mode.
+  * 1adff0d0db0 mesa/st: move default enabled extensions into mesa.
+  * 87cc3ee964c mesa/draw: drop the multi draw with indices fallback.
+  * d17f45df1a6 mesa: remove StripTextureBorder option.
+  * 424941f0e48 ci: debian-clang: build more drivers
+  * 08f7d37fb97 panvk: cast negative value to unint8_t
+  * cea1df7d34f panvk: use FALLTHROUGH to stop a warning
+  * bc19893f5dd i915g: avoid left shifting a negative number
+  * 107c63aee88 lavapipe: fix string-plus-int warning
+  * 944c8907ba8 pan/bi: Don't call useless NIR passes
+  * f0f6aec5459 glcpp: Disable the valgrind tests.
+  * 059b71b58de ci: Enable a build with MSan.
+  * 6e6e16b3178 isaspec: Sort field names to generate deterministic
+    output.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 25 Dec 2021 15:30:54 +0100
+
 mesa (22.0.0~git2112161043.f7e63ec5d87~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
