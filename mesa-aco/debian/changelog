@@ -1,3 +1,52 @@
+mesa (22.0.0~git2112282322.eca7b24e74d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * eca7b24e74d intel/devinfo: adjust subslice array size
+  * cd182a31c3d iris: Use util packing fns in convert_clear_color
+  * 34151f9be94 radv: fix clears with value of "1" and different DCC
+    signedness
+  * 554e1c20007 radv: Increase maxFragmentCombinedOutputResources.
+  * 50658ed8da2 radv/amdgpu: Use VkResult for wait_timeline_syncobj.
+  * 20b51cdabe7 radv: Skip wait timeline ioctl with 0 handles.
+  * afff9dd0f04 radv: Use correct buffer size for query pool result
+    copies.
+  * b775aaff1ec radv: re-apply "Do not access set layout during
+    vkCmdBindDescriptorSets."
+  * 01f1bd4dfdb radv: re-enable fast clears for images that support comp-
+    to-single
+  * 311077c4832 panfrost: Make pan_merge macro more robust
+  * 36f8f9b882a Fix typo
+  * 7b7debe8f9b radv: fix restoring subpass during hw/fs color resolves
+  * 030daf80b5f radv/winsys: remove radv_amdgpu_winsys_bo::is_shared
+  * 847048fa241 radv/winsys: stop zeroing few structs in
+    buffer_from_fd()
+  * 3368e522b41 radv: remove unnecessary NULL checks in
+    vkMapMemory()/vkUnmapMemory()
+  * ff7aee2ac98 tu/clear_blit: use || when working with bools
+  * 5c69c44a997 d3d12: Avoid a debug warning trying to unmap a not-
+    mapped resource
+  * 0c5fde39e48 d3d12: Set SSBO support caps
+  * 416a8078544 d3d12: Use DXIL load/store lowering pass
+  * 32375789e56 d3d12: Support setting SSBOs on the context and turning
+    them into descriptors
+  * 49cf325d821 d3d12: Always create buffers as UAV-capable
+  * de4c38c3a7c d3d12: Support SSBOs in root signatures
+  * c375b05bfe9 microsoft/compiler: Handle write masks in SSBO lowering
+    pass
+  * efc47571d4f microsoft/compiler: Hook up uavs-at-every-stage flag
+  * 72b0d0cda06 microsoft/compiler: Emit SSBOs from 0 -> count for GL
+    (non-kernel, non-Vulkan) shaders
+  * 7b8ea338483 gitlab-ci: disable radv-fossils
+  * 01821a26015 CI: Trigger Windows build on softpipe changes
+  * d87a0895799 softpipe: Add a dummy field to
+    sp_fragment_shader_variant_key
+  * 79af19ab9e9 softpipe: Drop duplicate decl of
+    softpipe_find_fs_variant
+  * 0b7a0d1a495 softpipe: Use the draw module's poly stipple handling,
+    like llvmpipe.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Dec 2021 03:37:52 +0100
+
 mesa (22.0.0~git2112240915.222487fabee~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
