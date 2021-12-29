@@ -1,3 +1,19 @@
+libsdl2 (2.0.19+git2112290230.2363ddc33~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 2363ddc33 Fixed crash on Windows Subsystem for Android, which
+    doesn't have a USB manager.
+  * ab6d0d4d5 Fixed undefined behavior in SDL_memset() (thanks
+    andrewrk!)
+  * 6a7b63802 Fix macOS cursor jumping to corner on first titlebar click
+  * a35a7d250 Fix SigSegV from displayInfoInvalidate when changing
+    resolution
+  * 1c41b5355 macOS: Calculate correct DPI by not using
+    backingScaleFactor
+  * 724468ae2 GL renderer uses glDrawArrays instead of glBegin/glEnd.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Dec 2021 03:37:21 +0100
+
 libsdl2 (2.0.19+git2112212207.a1e992b11~i~wayland5) impish; urgency=medium
 
   * New snapshot:
