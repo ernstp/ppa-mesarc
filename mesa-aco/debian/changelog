@@ -1,3 +1,32 @@
+mesa (22.0.0~git2112300831.94351c94dba~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 94351c94dba r600/sfn: Remove unused AluInstruction members.
+  * 9130e4564b8 crocus: set max clip planes to 6 for gen4.
+  * af3cbc53794 gallium/mesa: enhance PIPE_CAP_CLIP_PLANES to support
+    override number
+  * f1c1fcfdce4 crocus: don't create staging resources > half aperture
+  * d8a38edc48e crocus: fail resource allocation properly.
+  * a2293e33fd1 intel/genxml/gen4-5: fix more Raster Operation in BLT to
+    be a uint
+  * c2217acaa57 ci/i915g: Add a couple more recent regressions.
+  * 177bf24569d ci: Enable reporting to the flakes IRC channel for i915g
+    and crocus.
+  * d1a59c4077f ci/crocus: Add manual CI for the new HSW box I have at
+    home.
+  * e573f544732 docs: update calendar and link releases notes for 21.3.3
+  * e4135c265d4 docs: add release notes for 21.3.3
+  * 2ddfb9c256b r300: fix handling swizzle in transform_source_conflicts
+  * 6f7421f50dd r300: Replace RADEON_NO_TCL with RADEON_DEBUG=notcl
+  * 44f134bc219 r300: Document the RADEON_DEBUG options
+  * b249e700ac6 radv: print number of levels with RADV_DEBUG=img
+  * 4942e108909 radv: stop checking buffer size in vkCreateBuffer()
+  * 05818bf7a49 Revert "gitlab-ci: disable radv-fossils"
+  * 0357a2e0129 dri_drawable: missing header
+  * cafca76fa2c zink: Fix building on macOS
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 30 Dec 2021 09:17:10 +0100
+
 mesa (22.0.0~git2112282322.eca7b24e74d~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
