@@ -1,3 +1,48 @@
+mesa (21.3.3+git2112292205.a65ad66c47f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * a65ad66c47f VERSION: bump for 21.3.3
+  * 7cdf1293513 docs: add release notes for 21.3.3
+  * 5928a69a716 radv: Skip wait timeline ioctl with 0 handles.
+  * 9c96f43758e radv: Use correct buffer size for query pool result
+    copies.
+  * 3e62c870ea9 radv: re-apply "Do not access set layout during
+    vkCmdBindDescriptorSets."
+  * 95ad97fcade r300/vs: Fix flow control processing just after an
+    endloop.
+  * a42ed80f095 r300/vs: Allocate temps we see a use as a source, too.
+  * a80330e217d r300: Disable loop unrolling on r500.
+  * 3ad31d0d881 r300: Also consider ALU condition modifiers for loop
+    DCE.
+  * 7771f16e089 r300: Ensure that immediates have matching negate flags
+    too.
+  * 94449816abe r300: Move the instruction filter for
+    r500_transform_IF() to the top.
+  * d4bbc1261f4 r300: Fix mis-optimization turning -1 - x into 1 - x.
+  * 507ec266884 microsoft/compiler: Implement inot
+  * ae068af2e2c swr: Fix MSVC build
+  * 7c59c309057 glsl: fix invariant qualifer usage and matching rule for
+    GLSL 4.20
+  * 4f848d9f2b9 panfrost: Avoid double unlock.
+  * 11ef52212ad aco/optimizer_postRA: Fix applying VCC to branches.
+  * 0fb58901f05 aco/optimizer_postRA: Fix combining DPP into VALU.
+  * 6c510c48478 aco/ra: fix get_reg_for_operand() in case of stride
+    mismatches
+  * 1c44a60ff48 aco/optimizer: fix fneg modifier propagation on VOP3P
+  * 03f6edd5b77 intel/fs: Add physical fall-through CFG edge for
+    unconditional BREAK instruction.
+  * d93b0b48885 freedreno/computerator: Fix @buf header
+  * 63af1b930ac freedreno/ir3: Handle instr->address when cloning
+  * aade2545a79 panfrost: Fix Secondary Shader field
+  * 7342fa5ed90 pan/indirect_draw: Don't upload garbage UBO
+  * d8715ff19b9 vulkan/log: Don't assert on non-client-visible objects
+  * 4d28da1f8e1 .pick_status.json: Mark
+    d49d092259829ad9e33d0d9fc8eef9759d9fe56e as denominated
+  * 524fb244bde .pick_status.json: Update to
+    4942e108909bbe0f53ec5fd52a3c7ae14c60abe6
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 30 Dec 2021 09:20:03 +0100
+
 mesa (21.3.2+git2112241336.fa64a71f3b3~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
