@@ -1,3 +1,21 @@
+mesa (21.3.3+git2201012140.c707001cae1~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * c707001cae1 r300: fix handling swizzle in transform_source_conflicts
+  * 868dccb5aa8 aco: don't allow SDWA on VOP3P instructions
+  * 654e2b631c9 radv: add drirc radv_disable_htile_layers and enable it
+    for F1 2021
+  * 9c77337f6ac intel/compiler/test: Fix build with GCC 7
+  * f4e085c0010 glapi: should not add alias function to static_data.py
+  * cd9c4eeefc9 crocus: fail resource allocation properly.
+  * 4aa56b6e59c intel/genxml/gen4-5: fix more Raster Operation in BLT to
+    be a uint
+  * 656cc34f870 .pick_status.json: Update to
+    31d839aacc63831e7e13c46d5070672fb09ff844
+  * 4e143b9c0bb Revert "anv: Stop doing too much per-sample shading"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Jan 2022 01:50:40 +0100
+
 mesa (21.3.3+git2112292205.a65ad66c47f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
