@@ -1,3 +1,15 @@
+mesa (21.3.3+git2201020113.491ee16e606~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 491ee16e606 freedreno/afuc: Disable the disassembler on 32-bit
+    builds.
+  * 3b90d08b6e0 .pick_status.json: Mark
+    2a0253b9b5d21c7571555abe3a1d851468a18740 as denominated
+  * be59ab52b62 .pick_status.json: Mark
+    00bea38242d97e7ace1954f1bc7d32cbf0ce3ee0 as denominated
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Jan 2022 02:30:26 +0100
+
 mesa (21.3.3+git2201012140.c707001cae1~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
