@@ -1,3 +1,49 @@
+mesa (22.0.0~git2112312156.31d839aacc6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 31d839aacc6 aco: lower masked swizzle to DPP8
+  * da0412e55b1 aco: support DPP8
+  * 5c3dfb4ef51 gallium/aux: Move index offsetting from prim restart to
+    primconvert
+  * 46c59e8fd69 radv: Remove dependencies on vk_common entrypoints.
+  * 8c4c63a6ed1 radv: Rename submit2->submit.
+  * 84ec547f69e radv: Remove syncobj reset mechanism.
+  * 91fe0b5629d radv: Delete lots of sync code.
+  * 967fc415fc4 radv: Add new submission path for use by the common sync
+    framework.
+  * 93cde57f7a5 radv: Add new cs_submit2 winsys call.
+  * 9d75f23350e radv: Use vk_command_buffer for preambles.
+  * 31da5c41b6b radv: Set horizontal sync types.
+  * 1965872b417 radv: Add function to allow WSI signalling
+    fences/semaphores.
+  * 3055d2f9dfe radv: Initialize vk device drm fd.
+  * 101a366e579 meson: Bump libdrm_amdgpu version req to 2.4.109.
+  * 1a84dd6358c radv: Use vulkan runtime for device lost.
+  * 085f99b729b radv: Use dispatch table for wsi_display.c
+  * 40558dbe91d radv: Use dispatch table for QueueWaitIdle in the SQTT
+    layer.
+  * 7a84314c12a vulkan/runtime: Add sparse bind support.
+  * 73cdc302ab9 vulkan/runtime: Refactor queue submit to take an
+    argument struct.
+  * 16a527deefb aco: don't split VOP3P definitions
+  * 7e02787a544 aco: use p_create_vector(v2b,v2b) in get_alu_src_vop3p()
+  * e56d8b0b2e0 aco: use explicit zero-padding for 64bit image loads in
+    expand_vector()
+  * 91f17e1c731 aco/optimizer: apply extract from subdword
+    p_split_vector
+  * fb622775b5e aco/optimizer: optimize extract(extract())
+  * 5ad9c20d4ad aco/optimizer: apply extract from p_extract_vector
+  * 11712729eb8 aco/optimizer: keep instr_mod_labels after applying
+    extract
+  * 1502c22e2c3 aco: don't allow SDWA on VOP3P instructions
+  * 90994e4db70 radv: add drirc radv_disable_htile_layers and enable it
+    for F1 2021
+  * ce5d7bf5085 radv: fix copying mutable descriptors to sampler
+    descriptors
+  * 6fee84bc2e7 radv: Enable NV_mesh_shader with a perftest flag.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Jan 2022 01:47:13 +0100
+
 mesa (22.0.0~git2112300831.94351c94dba~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
