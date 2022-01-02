@@ -1,3 +1,13 @@
+libsdl2 (2.0.19+git2112312012.d0de4c625~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * d0de4c625 Android: fixes build NDK 21d
+  * 8f8169986 Only clear IME display options if SDL_HINT_IME_SHOW_UI is
+    off (thanks opxdo!)
+  * e4000c028 video: SDL_GL_GetAttribute needs to operate on FBO 0.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 02 Jan 2022 01:46:32 +0100
+
 libsdl2 (2.0.19+git2112290230.2363ddc33~i~wayland5) impish; urgency=medium
 
   * New snapshot:
