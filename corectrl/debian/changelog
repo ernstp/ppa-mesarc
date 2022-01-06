@@ -1,3 +1,16 @@
+corectrl (1.3.0~git2201031826.a4c7e65~b~mesarc13) bionic; urgency=medium
+
+  * New snapshot:
+  * a4c7e65 Make SysTray a child of QApplication
+  * b08ee3f Handle QSystemTrayIcon lifetime with QObject parent/child
+    ownership
+  * 268298d Bound SysTray and its context menu lifetimes
+  * 2d8be18 Move connections to the end of the UI building phase
+  * cd71da9 Move App::settings member to a local variable on App::exec
+  * bc0006c Remove unused App parent from ctor
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Jan 2022 23:05:01 +0100
+
 corectrl (1.3.0~git2110151511.58ac0fb~b~mesarc13) bionic; urgency=medium
 
   * New snapshot:
