@@ -1,3 +1,24 @@
+mesa (21.3.3+git2201052218.6742bdec508~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6742bdec508 etnaviv: initialize vertex attributes on context reset
+  * 9dd5c0d0390 r300: Fix omod failing to increase the number of
+    channels stored.
+  * ea08f3873b2 zink: fix -Warray-bounds warning
+  * 54fbd9cdb50 i915g: Turn off FP16 in the vertex shaders.
+  * 4620e9a8b7a Fix compilation on armv7l with gcc 11.2.0
+  * dc3dece06bc glsl/glcpp: make sure to expand new token after
+    concatenation
+  * cdf03573da0 r300: Remove broken optimization in rc_transform_KILL
+  * 60383588f05 .pick_status.json: Update to
+    a255f6f823017aed7505bb508366a81432ed0ba3
+  * 2406855cfb1 pan/bi: Fix load_const of 1-bit booleans
+  * 844f021b13e .pick_status.json: Update to
+    13bdd8da5e9b8e52b3913be8c2d18610a7b31605
+  * 4fcbd2b730b microsoft/compiler: Fix dxil_nir_create_bare_samplers()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Jan 2022 23:09:47 +0100
+
 mesa (21.3.3+git2201020113.491ee16e606~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
