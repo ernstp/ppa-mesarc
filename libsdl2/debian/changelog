@@ -1,3 +1,51 @@
+libsdl2 (2.0.19+git2201062305.954858846~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 954858846 Move special sentinel handling inside SDL_PeepEvents()
+  * 2592e6219 Clarify that timeout == 0 is handled at the top of
+    SDL_WaitEventTimeout()
+  * 8ff216685 Only return from SDL_PollEvent() if the last sentinel is
+    consumed
+  * c9ff90b94 Clarify comment
+  * 31f8c3ef4 Fixed event pump starvation if the application frequently
+    pushes its own events
+  * e0c539911 Don't make psp eboot for testoffscreen
+  * 5d3f6b021 wikiheaders.pl: Added support for export to Unix manpages.
+  * 75ac944b9 check for tpcshrd.h and define HAVE_TPCSHRD_H if it's
+    available.
+  * 515b5f2a3 Fix build errors in PSP port
+  * 34e34ad5a Remove debug code from PSP renderer
+  * 520c89a00 cleaning
+  * 09f4711f4 Fix LRU when destroying texture.
+  * c3ec62d6a PSP lazier blend states, display mode report with 16bit
+    option
+  * 0f5368fe1 PSP cached blending and texturing state, ABGR1555 stencil
+    hack
+  * fe405eb27 fixed LRU cache code
+  * c1f152292 Spill render targets to ram on PSP
+  * 77d874e3c Attempt to make render to texture work on PSP
+  * 7967c9761 cmake: Do a more thorough test for the old bcm Raspberry
+    Pi libraries.
+  * f3255df9c Improve audio compatibility in PSP. Now it supports more
+    formats and frequencies
+  * 16f5b9e3c Filter jitter on Xbox One controllers when using raw input
+    reports
+  * eca198d51 Don't build an eboot for testgesture for PSP
+  * cd6cb959c Only copy resources to PSP eboot directory if it exists
+  * 9d0b4d85f Don't build EBOOT files for all tests for PSP
+  * b2ca62f23 Make sure all tests have the resources they need
+  * 6d46e30fe Remove extra / in PSP GetPrefPath
+  * 33dccbb38 Make sure GetPrefPath also works without org
+  * 419ae29d9 joystick: Move WGI driver initialization after Windows
+    driver
+  * d73bd0d2f dinput: Don't crash in SDL_DINPUT_JoystickPresent if
+    DInput init failed
+  * 3ea82eaaf Under MSVC, build project-sources in parallel.
+  * 565ef6387 SDL_rwops.c: simplify `foo <= 0` checks to `!foo` with
+    unsigned types.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Jan 2022 23:05:33 +0100
+
 libsdl2 (2.0.19+git2112312012.d0de4c625~i~wayland5) impish; urgency=medium
 
   * New snapshot:
