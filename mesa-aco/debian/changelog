@@ -1,3 +1,50 @@
+mesa (22.0.0~git2201061844.05a5e5a2bce~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 05a5e5a2bce radv: fix xfb query copy param ordering
+  * f43b0d5cdcd radv/winsys: remove unused syncobj functions
+  * da0c708d79c radv: remove remaining dead code related to the old sync
+    code
+  * dcbf2423d28 vbo/dlist: add vertices to incomplete primitives
+  * 7a1d3d3abc5 vbo/dlist: fix loopback crash
+  * d84e0096a5d radeonsi/gfx8: use the proper dcc clear size
+  * 21047a4a06b isaspec: Remove duplicate return statement.
+  * d57b10ab98a intel/compiler: Adjust TCS instance-id for dg2+
+  * 9f58275f98f ci: skqp: Add documentation on how to maintain skqp jobs
+  * a6d05e68634 ci: Add a630_skqp jobs
+  * 8992cf5ab8b ci: Build skqp on ARM64 images
+  * a255f6f8230 radv: do not use the common entrypoint for the Metro
+    Exodus layer
+  * c1f8bc67e29 etnaviv: initialize vertex attributes on context reset
+  * 105b48c85c2 r300: Fix omod failing to increase the number of
+    channels stored.
+  * 946fe209d90 ci/r300: Update xfails from a full dEQP run.
+  * 7b7530a85a0 r300: Use uif() instead of pointer aliasing in program
+    printing.
+  * ca1d0333dba v3dv: Use the common QueueSignalReleaseImageANDROID from
+    RADV
+  * a9321b13098 anv: Use the common QueueSignalReleaseImageANDROID from
+    RADV
+  * b2073f5e5d6 radv: Move QueueSignalReleaseImageANDROID to common code
+  * dfb1e1777c8 anv,radv,v3dv: Move AcquireImageANDROID to common code
+  * 9caf110d4f3 frontends/va/enc: default motion estimation parameters
+    for performance
+  * 4ff57e5aba0 zink: fix -Warray-bounds warning
+  * 43d57189ddb radeonsi: print the number of param exports for shader-
+    db
+  * d96a346120e radeonsi: print all streamout info
+  * 3c471c0eb5a ac/nir: move ac_are_tessfactors_def_in_all_invocs into
+    radeonsi
+  * 116a05c7215 ac: move ac_exp_param.h to ac_nir.h
+  * d4a1766a5a9 radeonsi: move the GS copy shader into shader variants
+  * 1caa94f2a5f radeonsi: add into the disk cache key whether cached
+    shaders contain LLVM IR
+  * 8ed9d38e73d radeonsi: move si_nir_scan_shader into si_shader_info.c
+  * 70919f30c1f radeonsi: change si_shader_output_values::vertex_stream
+    to a bitmask
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Jan 2022 23:06:14 +0100
+
 mesa (22.0.0~git2112312156.31d839aacc6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
