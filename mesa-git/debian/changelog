@@ -1,3 +1,20 @@
+mesa (21.3.3+git2201072345.48140f1205b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 48140f1205b anv: don't leave anv_batch fields undefined
+  * 1480ba76c09 ir3: Bump type mismatch penalty to 3
+  * e2f707a45ab ir3/ra: Fix logic bug in compress_regs_left
+  * 622d4886bfd intel/fs: OpImageQueryLod does not support arrayed
+    images as an operand
+  * 60f80b02c7f radv: Set optimal copy alignment to 1.
+  * d0008de0a29 radv: fix xfb query copy param ordering
+  * a682d0dcfe3 vbo/dlist: fix loopback crash
+  * 301c393d25a radeonsi/gfx8: use the proper dcc clear size
+  * e67eac8d6c2 .pick_status.json: Update to
+    3792fbfcf60faa505c18b4981601b381c1170748
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Jan 2022 08:51:50 +0100
+
 mesa (21.3.3+git2201052218.6742bdec508~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
