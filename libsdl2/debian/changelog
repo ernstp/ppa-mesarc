@@ -1,3 +1,50 @@
+libsdl2 (2.0.20+git2201092012.a29d3acc9~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * a29d3acc9 Updated Bresenham line drawing to match software renderer
+    output
+  * b9d98331c os2joystick: fix uninitialized use of local var 'maxdevs'
+  * 17da60068 os2joystick: fix -Wsequence-point issues.
+  * f14c7bb44 added missing hidapi stuff for os/2 with libusb
+  * 1f32dd8ed Fixed overdraw with duplicate points, fixed not drawing
+    single point lines
+  * 5d07c0361 psp: Force channels to stereo if user requested anything
+    other than mono.
+  * c275436f5 opengles2: Batching lines/points used wrong var for
+    summing vertex counts.
+  * 9e6249fa5 wayland: Avoid spurious key repeats when not pumping
+    events
+  * 461724d28 wayland: Refactor time fields in SDL_WaylandKeyboardRepeat
+  * fb0c3040c wayland: Avoid infinite loop in keyboard_repeat_handle
+  * 3b083b991 Fixed compile warning
+  * b82af9dfb Improved OpenGL point drawing performance (thanks
+    @slime73!)
+  * 1a73c45a0 Fixed incorrect color in the OpenGL driver
+  * 3cdda8f8a PSP: use 'data' variable which is alread the driver data
+  * 9f1e609aa Document SDL_HINT_RENDER_LINE_METHOD in the release notes
+  * 4ef2529bf More efficient calculation of render_count
+  * 5346c93b6 Fixed assertion on number of points rendered
+  * 4b7196203 Prevent overdraw with connected line segments
+  * 63d10a0ac updates to config.guess and config.sub from mainstream.
+  * 09ece861d Added the hint SDL_HINT_RENDER_LINE_METHOD to select the
+    line rendering method
+  * 836a4ec7b updates to os/2 build
+  * c1e607983 As an optimization, draw horizontal and vertical lines
+    using rectangles
+  * 3da7c6305 Assert that we have drawn the expected number of points
+  * 9f56faeed Added line drawing using Bresenham's line algorithm
+    (thanks @rtrussell!)
+  * fe3a33a09 Use RenderGeometry for drawing lines at all scales
+  * 0696fc013 cmake: Split SDL2-static and SDL2main into their own
+    target exports
+  * 1694782b2 Remove redundant work when render scale is 1.0
+  * 2026a78dc Don't flush in RenderDraw*WithRects()
+  * 18e4d9fed Re-enable line drawing path in render drivers
+  * dca281e81 Fixed getting different results for SDL_PollEvent(NULL)
+    and SDL_PollEvent(&event)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Jan 2022 08:47:36 +0100
+
 libsdl2 (2.0.19+git2201062305.954858846~i~wayland5) impish; urgency=medium
 
   * New snapshot:
