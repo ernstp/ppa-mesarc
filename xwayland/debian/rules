@@ -9,8 +9,11 @@ SUPPORT = https://www.debian.org/support
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-		-Dbuilder_addr="debian-x@lists.debian.org"
-		-Dbuilder_string="$(DEB_SOURCE) $(DEB_VERSION_UPSTREAM) ($(SUPPORT))"
+		-Dbuilder_addr="debian-x@lists.debian.org" \
+		-Dbuilder_string="$(DEB_SOURCE) $(DEB_VERSION_UPSTREAM) ($(SUPPORT))" \
+		-Dxwayland_eglstream=true -Dxwayland=true -Dglamor=true \
+		-Dxorg=false -Dxnest=false -Dxvfb=false -Dxwin=false -Dxquartz=false \
+		-Dxephyr=false -Ddocs=false
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp

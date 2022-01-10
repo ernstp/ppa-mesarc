@@ -1,5 +1,5 @@
-GIT="https://gitlab.freedesktop.org/ernstp/xserver.git"
-GITBRANCH="xwayland-21.1"
+GIT="git@gitlab.freedesktop.org:xorg/xserver.git"
+GITBRANCH="master"
 PACKAGE_NAME=xwayland
 DISTROS="impish jammy"
 INC=2
