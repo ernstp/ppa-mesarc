@@ -1,3 +1,47 @@
+mesa (22.0.0~git2201091443.b8f0459d6f4~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b8f0459d6f4 iris: unref syncobjs and free r/w dependencies array for
+    slab entries
+  * 9cb91010ab0 iris/ci: update piglit fails
+  * 4d624f189eb i915g/ci: update piglit fails
+  * a2dbdc645f0 ci: Shrink container/rootfs sizes.
+  * 48712b8cc59 venus: subtract appended header size in
+    vn_CreatePipelineCache
+  * 3792fbfcf60 ir3: Assert that we cannot have enough concurrent waves
+    for CS with barrier
+  * 9ed4d49c977 ir3: Be able to reduce register limit for RA when CS has
+    barriers
+  * 9323d2ea6d1 zink/codegen: remove bogus print statement
+  * 37f01832eb9 zink/codegen: remove core_since in constructor
+  * 029e871239a zink/codegen: support platform tags
+  * 1d40d53e03d anv: don't leave anv_batch fields undefined
+  * 8685a505e74 ntt: Set the output invariant flag according to the
+    semantics
+  * 6f348d9c990 nir_lower_io: propagate the "invariant" flag to outputs
+  * 5bfe2927081 util/primconvert: map only index buffer part that is
+    needed
+  * 86b19db459d etnaviv/ci: update piglit fails
+  * 1756930a79d radv: increase maxTaskOutputCount to 65535
+  * cb451205569 ir3: Use (ss) for instructions writing shared regs
+  * d45678cac46 ir3/postsched: Rename tex/sfu to sy/ss
+  * e6b35d606de ir3/sched: Rename tex/sfu to sy/ss
+  * 0cc4aca3455 ir3: Use new (sy)/(ss) stall helpers in the compiler
+  * 7e60978d30a ir3: Introduce systall metric and new helper functions
+  * 603791bdebd ir3: Bump type mismatch penalty to 3
+  * d371d807eb8 ir3/ra: Fix logic bug in compress_regs_left
+  * c9adcb60510 anv/tests: Free BO cache and device mutex
+  * 8a7659a7a23 anv/ci: Test with deqp-vk on Tiger Lake
+  * ef27036b4cf shader_info: tess.spacing needs to be unsigned
+  * 1b808f1dea1 etnaviv: fix emit_if in case the else block ends in a
+    jump
+  * af131199931 intel/fs: OpImageQueryLod does not support arrayed
+    images as an operand
+  * 558a6006299 nir_to_tgsi: Enable fdot_replicates flag.
+  * 85d7d520b99 panfrost/ci: update piglit fails
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Jan 2022 08:48:16 +0100
+
 mesa (22.0.0~git2201061844.05a5e5a2bce~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
