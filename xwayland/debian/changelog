@@ -1,3 +1,11 @@
+xwayland (2:21.1.99+git2112241906.288ec0e04~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 288ec0e04 xwayland/present: Run fallback timer callback after more
+    than a second
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jan 2022 18:00:42 +0100
+
 xwayland (2:21.1.99+git2112201657.38291fa86~i~wayland5) impish; urgency=medium
 
   * New snapshot:
