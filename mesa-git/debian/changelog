@@ -1,3 +1,37 @@
+mesa (21.3.3+git2201112133.8568ef6f373~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 8568ef6f373 intel/dev: fixup chv workaround
+  * 890c0514416 zink: add extra synchronization for buffer descriptor
+    binds
+  * 96e40074b69 zink: always unset vertex shader variant key data when
+    changing last vertex stage
+  * 2cd8c013ce6 aco: validate VOP3P opsel correctly
+  * edb0a6e7018 .pick_status.json: Update to
+    0a01d2c04f2d2b7ccbeeec079e193a48d76af094
+  * 5fb419afea8 vbo/dlist: add vertices to incomplete primitives
+  * 039e8fc3863 mesa: free vbo_save_vertex_list store prims
+  * d542c03f44d mesa: free idalloc storage for display lists
+  * 808b94a72a8 nir_to_tgsi: Fix a bug in TXP detection after backend
+    lowering.
+  * 505f8a2b453 lima,panfrost: Correct pixel vs block mismatches
+  * ded1bca25a1 gallium/util: Add pixel->blocks box helper
+  * 988c6803dbd aco: remove pack_half_2x16(a, 0) optimization
+  * 4c152bc824f etnaviv: drm: properly handle reviving BOs via a lookup
+  * 3083f872b59 etnaviv: drm: fix size limit in etna_cmd_stream_realloc
+  * bf19d03f946 tu: fix workaround for depth bounds test without depth
+    test
+  * 0376d81a63c anv: limit compiler valid color outputs using NIR
+    variables
+  * f2897f11126 iris: unref syncobjs and free r/w dependencies array for
+    slab entries
+  * 715f32fa0c5 venus: subtract appended header size in
+    vn_CreatePipelineCache
+  * 0d266e9d097 .pick_status.json: Update to
+    a5bc8c4be997f9af927e44cec225492b70cb7e55
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jan 2022 17:56:56 +0100
+
 mesa (21.3.3+git2201072345.48140f1205b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
