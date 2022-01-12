@@ -1,3 +1,30 @@
+libsdl2 (2.0.20+git2201120901.5b6e2d69a~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 5b6e2d69a SDL_os2messagebox.c (_makeDlg): remove unnecessary casts
+  * ae9e2149a os2-buildbot.sh: Use the 64-bit Watcom binaries.
+  * 42302d0a5 x11: Let apps specify a custom _NET_WM_WINDOW_TYPE.
+  * f9b918ff4 opengles2: Use client-side arrays on everything but
+    Emscripten.
+  * bb9ebad74 Optionally disable generation of SDL2main and uninstall
+    projects.
+  * fcf0e524b cmake: Remove libunwind-generic as hard dependency
+  * 73434a964 Removed debian directory
+  * c3a7cc34f cmake: sdlchecks.cmake: pass cflags to the appropriate
+    cmake variable
+  * ea0bca573 SDL_cocoamodes.m: fix build against older SDKs.
+  * 7527c8d3d hidapi, libusb: provide a wcsdup implementation if it is
+    not available.
+  * c6c4d4211 pthread: disable SetThreadPriority for OS/2 too
+  * b26567761 cmake: initial attempt at adding os/2 support.
+  * b424665e0 Sync wiki -> header
+  * 5e3f4ccc3 Sync wiki -> header
+  * d8129c569 Mark internal function as static
+  * 3e1b3bc34 wayland: Horizontal wheel values do not need to be
+    inverted
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jan 2022 17:52:45 +0100
+
 libsdl2 (2.0.20+git2201092012.a29d3acc9~i~wayland5) impish; urgency=medium
 
   * New snapshot:
