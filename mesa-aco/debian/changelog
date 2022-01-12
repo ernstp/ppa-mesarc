@@ -1,3 +1,50 @@
+mesa (22.0.0~git2201121441.8a78706643e~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 8a78706643e nir: refactor nir_opt_move
+  * 8ef9350ff0c intel/devinfo: drop num_eus_per_subslice field
+  * 5d5a1b660b8 intel/devinfo: add a helper to check for slice
+    availability
+  * 1c5b206366c intel/devinfo: printout devinfo struct size
+  * 574ba30fb44 intel/devinfo: printout pixel pipes in info printout
+  * d8ba48e4473 radeonsi/tests: add expected results for vega20
+  * d299d819195 radeonsi/tests: update expected results
+  * 86262b6eac0 radeonsi,radv: fix usages of surf_pitch
+  * 2f8982df0e7 radeonsi/gfx10: fix si_texture_get_offset for mipmapped
+    tex
+  * 9cd8908c030 radv: fix computing the fb size in presence of dynamic
+    VRS attachment
+  * 9c746157ae4 radv: reset VRS if the current subpass doesn't have a
+    VRS attachment
+  * ec4dcd53dbb radv: stop checking if dynamic states changed
+  * 567a9550d78 ci: disable vs2019 windows build
+  * 912acbf963e anv,iris: Flush HDC before color fast clears
+  * f3c629733fd anv,iris: PSS Stall Sync around color fast clears
+  * 8ec8298ce4f intel: Rename the PSD bit in PIPE_CONTROL for XeHP
+  * de5f1cdd31a anv,iris: Depth stall around color fast clears
+  * 34c8371e2a9 anv,iris: Flush tile cache after color fast clears
+  * 38b3661b8fb radv: 256 byte push constants.
+  * 43f8e07765f radv: Use 16-bits to store push constant indices.
+  * 3a36d0b7874 radv: Use MAX_PUSH_CONSTANTS_SIZE for saved push
+    constants.
+  * b6499dff37d zink: use device-local heap for sparse backing
+    allocations
+  * f286ecf906c nir: handle per-view clip/cull distances
+  * 70a9710eee8 spirv: mark [Clip|Cull]DistancePerViewNV variables as
+    compact
+  * 0d6f83cbf11 nir: remove invalid assert affecting per-view variables
+  * ce5a8bff77e spirv: handle multiview bits of SPV_NV_mesh_shader
+  * 4fed440724a nir: add load_mesh_view_count and load_mesh_view_indices
+    intrinsics
+  * e4ff7fd76ad spirv: add MeshViewCountNV/MeshViewIndidcesNV builtins
+    from SPV_NV_mesh_shader
+  * 561de760fd6 compiler: add new MESH_VIEW_COUNT/MESH_VIEW_INDICES
+    system values
+  * 4cb7dcb0974 spirv: handle ViewportMaskNV builtin/cap from
+    SPV_NV_mesh_shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jan 2022 17:53:25 +0100
+
 mesa (22.0.0~git2201091443.b8f0459d6f4~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
