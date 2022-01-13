@@ -1,3 +1,47 @@
+mesa (22.0.0~git2201130709.01709464a4c~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 01709464a4c aux/trace: copy over stream_output_target_offset method
+    from context
+  * d0bba3dfbf8 zink: add flake
+  * 4dc406c7482 freedreno: Update chip-ids
+  * 785a324debb freedreno: Handle wildcard fuse-id in device matching
+  * 6b8e3aeeb71 freedreno: Rearrange dev_id_compare() logic
+  * 9176e27dd27 freedreno: Small dev_id_compare() cleanup
+  * 0a82a26a185 turnip: Porting to common implementation for timeline
+    semaphore
+  * 479a1c405e4 turnip: Porting to common vulkan implementation for
+    synchronization.
+  * 58aa920706c vulkan: fix typo
+  * f976f71fb08 turnip: Use the new common device lost tracking
+  * 14a4600b62d intel: add swizzle flag into driver uuid
+  * f43c7185e0a intel: remove chipset_id
+  * ddfa3924b3a intel: dump PCI info in intel_dev_info
+  * 3414ba9a814 anv: remove private pci fields
+  * d86989bf73e intel: use PCI info to compute device uuid
+  * db8405670a7 intel: provide pci bus and dev info in base device
+    struct
+  * 17b753459ec venus: VkExternalImageFormatProperties is optional
+  * cd6377741d0 docs: update calendar and link releases notes for 21.3.4
+  * 7240b379485 docs: add release notes for 21.3.4
+  * 79a987ad2a1 nir/opt_if: also merge break statements with ones after
+    the branch
+  * dad609d1521 nir/opt_if: merge two break statements from both branch
+    legs
+  * 64a51293c8f vulkan/overlay: support Vulkan 1.2
+  * 20db89b7c7c virgl: disable texture uploads with copy transfers
+  * d3398a8e03e docs: move the release for 22.0 out
+  * c638d6f3bf6 ci: Add paraview traces to several drivers.
+  * ec29a9391eb ci/llvmpipe: Add a trace for the game JVGS, which got
+    regressed recently.
+  * e46fa37cf46 ci/llvmpipe: Sort the list of traces.
+  * 9675cef53b5 radv: set radv_split_fma=true for Proton SotTR
+  * cc802cab7c0 radv: add RADV_DEBUG=splitfma
+  * b2ae4b2ac4b lima: remove not needed lie about
+    PIPE_CAP_OCCLUSION_QUERY
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 13 Jan 2022 08:40:41 +0100
+
 mesa (22.0.0~git2201121441.8a78706643e~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
