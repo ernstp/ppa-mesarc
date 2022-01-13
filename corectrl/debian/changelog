@@ -1,3 +1,11 @@
+corectrl (1.3.0~git2201121911.f9266e2~b~mesarc13) bionic; urgency=medium
+
+  * New snapshot:
+  * f9266e2 Point to the real issue fixed by commit cf5a83b
+  * cf5a83b Parse kernel versions with missing patch number
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 13 Jan 2022 08:39:39 +0100
+
 corectrl (1.3.0~git2201031826.a4c7e65~b~mesarc13) bionic; urgency=medium
 
   * New snapshot:
