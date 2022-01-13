@@ -1,3 +1,17 @@
+libsdl2 (2.0.20+git2201121901.9a2bbd8ac~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 9a2bbd8ac wayland: Convert URI to local path for DropFile
+  * 0abc0a6f3 SDL_string.c: tidy-up gcc2 va_copy defines after previous
+    haiku commit.
+  * d37c9777b haiku: updated for Haiku
+  * bff867013 haiku: updated for Haiku
+  * 094e94402 haiku: Remove BDirectWindow, fix OpenGL handling.
+  * 407d4e470 cmake: simplify after the previous os/2 commit.
+  * f199f832e cmake: added target_properties for os/2.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 13 Jan 2022 08:40:06 +0100
+
 libsdl2 (2.0.20+git2201120901.5b6e2d69a~i~wayland5) impish; urgency=medium
 
   * New snapshot:
