@@ -1,3 +1,50 @@
+mesa (21.3.4+git2201122232.bfe18835b50~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * bfe18835b50 VERSION: bump for 21.3.4
+  * e03911b27ec docs: add release notes for 21.3.4
+  * 597766f0ab8 i965: Disable EXT_texture_integer on Gfx4 and Gfx5
+  * 89ed84a0ba9 v3dv: Hotfix: Rename remaining V3DV_HAS_SURFACE-
+    >V3DV_USE_WSI_PLATFORM
+  * 2435a8879e6 radeonsi/gfx10: fix si_texture_get_offset for mipmapped
+    tex
+  * a0ed1827441 zink: use device-local heap for sparse backing
+    allocations
+  * 33461292fb8 intel/dev: fixup chv workaround
+  * 24a31011b58 zink: add extra synchronization for buffer descriptor
+    binds
+  * bed4968acce zink: always unset vertex shader variant key data when
+    changing last vertex stage
+  * 71cd312c410 aco: validate VOP3P opsel correctly
+  * f0595be9886 vbo/dlist: add vertices to incomplete primitives
+  * 4637a3bc2db mesa: free vbo_save_vertex_list store prims
+  * 50c247dfdc5 mesa: free idalloc storage for display lists
+  * c3a733dded3 nir_to_tgsi: Fix a bug in TXP detection after backend
+    lowering.
+  * 8c01a6de071 lima,panfrost: Correct pixel vs block mismatches
+  * 0d427406cec gallium/util: Add pixel->blocks box helper
+  * a324d79e5ee aco: remove pack_half_2x16(a, 0) optimization
+  * eec8afec250 etnaviv: drm: properly handle reviving BOs via a lookup
+  * d33e79e575d etnaviv: drm: fix size limit in etna_cmd_stream_realloc
+  * 4781087c263 tu: fix workaround for depth bounds test without depth
+    test
+  * d987419d8a4 anv: limit compiler valid color outputs using NIR
+    variables
+  * a332907bbc5 iris: unref syncobjs and free r/w dependencies array for
+    slab entries
+  * 0db1699eabd venus: subtract appended header size in
+    vn_CreatePipelineCache
+  * 886b86f601b anv: don't leave anv_batch fields undefined
+  * b57693c541f ir3: Bump type mismatch penalty to 3
+  * d761347e05a ir3/ra: Fix logic bug in compress_regs_left
+  * 7241ec2ee5c intel/fs: OpImageQueryLod does not support arrayed
+    images as an operand
+  * 2cd9d700ac3 radv: Set optimal copy alignment to 1.
+  * 08bea100a12 radv: fix xfb query copy param ordering
+  * ad5fe81c22d vbo/dlist: fix loopback crash
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 13 Jan 2022 08:44:08 +0100
+
 mesa (21.3.3+git2201112133.8568ef6f373~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
