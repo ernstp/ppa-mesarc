@@ -1,3 +1,12 @@
+libsdl2 (2.0.20+git2201150004.1a50334c4~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 1a50334c4 Fixed Xbox One trigger axis zero point
+  * e9511f713 hidapi, libusb: don't use iconv on OS/2, it lacks wchar_t
+    functionality.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 15 Jan 2022 11:03:49 +0100
+
 libsdl2 (2.0.20+git2201121901.9a2bbd8ac~i~wayland5) impish; urgency=medium
 
   * New snapshot:
