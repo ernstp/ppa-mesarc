@@ -1,3 +1,42 @@
+mesa (22.0.0~git2201150414.01f5fffbc63~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 01f5fffbc63 mesa: Remove unused src/mesa/x86-64
+  * a686946553e mesa: Remove unused
+    _mesa_set_sampler_{filters,srgb_decode,wrap}
+  * 2db87ad3444 mesa: Remove unused _mesa_is_front_buffer_{draw,read}ing
+  * 203df8c2640 mesa: Remove unused _mesa_is_alpha_to_coverage_enabled
+  * c630408945d mesa/math: Remove unused m_translate.c
+  * c828490b26c mesa: Remove unused _mesa_delete_nameless_texture
+  * c1fa6bbecf9 mesa: Remove unused _mesa_all_varyings_in_vbos
+  * 6e3cd058708 mesa: Remove unused _mesa_convert_colors
+  * fcb3b875539 freedreno/decode: Handle chip-id
+  * d15021435ed driconf: Fix unhandled tags in static conf
+  * fe0a6b96061 anv: Don't fill lowered_storage_image_param on SKL+
+  * 10276558106 pps: increase intel.cfg buffer size
+  * 2e3490dd0f2 iris: utrace/perfetto support
+  * 1d2fea6eae2 tools/pps: limit intel cfg to 250ms of sampling
+  * b462dafbd68 pps: enable anv source in example config file
+  * e760c5b37be anv: add perfetto source
+  * b70143f4e39 util/u_process: protect entrypoints for c++
+  * cf9956a8c57 intel/ds: use a per GPU clock ID
+  * 61766f9f90a intel/ds: use the right i915_drm.h include location
+  * e35a65ae454 intel/ds: don't forget to reset upper dword timestamp
+    read
+  * 6eb554a9c7e intel/ds: allow user to select metric set at start time
+  * 69df00b33b3 intel/ds: reuse intel_ioctl()
+  * cc5843a573b anv: implement u_trace support
+  * bb541d11593 intel/blorp: add measure_end entry point
+  * d3724de8948 intel/dev,perf: Use a single timescale function
+  * 02a4d622ed0 anv: expose a couple of emit helper to build utrace
+    buffer copies
+  * 246e2c74d39 isl: add helpers to printout ops
+  * e8ea6a899f0 blorp: add description & helpers to printout ops
+  * 30a8b8d2df4 intel/fs: disable VRS when omask is written
+  * 37fa59fa6c1 anv,lavapipe,v3dv: use wsi_common_get_image
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 15 Jan 2022 11:04:30 +0100
+
 mesa (22.0.0~git2201130709.01709464a4c~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
