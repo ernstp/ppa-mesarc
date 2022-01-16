@@ -1,3 +1,33 @@
+mesa (22.0.0~git2201161923.9645fa91079~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 9645fa91079 agx: Handle discard intrinsics
+  * f248f6623c4 agx: Add sample_mask instruction
+  * dcc12656e3b asahi: Route sample mask from shader
+  * 9b57600502a asahi: Rectify confusing XML comment
+  * 3341abc5d79 asahi: Break out Fragment Parameters word
+  * fc5a72be2fd asahi: Add XML for unknown 0x4a packet
+  * 054c5be1021 asahi: Warn when hacks mode is enabled
+  * 011106640fb asahi: Fake more CAPs with dEQP hacks mode
+  * 13b79266e47 frontend/va: Setting the size of
+    VADRMPRIMESurfaceDescriptor
+  * 76b7e393542 frontends/va: use un-padded width/height in
+    ExportSurfaceHandle
+  * b6cc240db1c bin/gen_calendar_entries: fix newlines on windows
+  * 493f6883312 ensure csv-files are crlf on disk
+  * b8d37eb1bb9 pan/bi: Schedule around blend shader register clobbering
+  * 77a1514a378 pan/decode: Disassemble Bifrost quietly
+  * 58accc995bf pan/decode: Don't print Preload twice
+  * 330bb2c58b0 panfrost: Remove FBD pointer on Bifrost XML
+  * ae9316f8128 pan/decode: Decode Valhall surface descriptor
+  * c947a52df44 pan/decode: Add pandecode_dump_mappings
+  * 861fa2baec1 pan/decode: Add hexdump helper
+  * 6752fcf1797 pan/decode: Track mmaps with a red-black tree
+  * a07473b79d7 pan/decode: Include addresses for jobs
+  * 4af20895c52 pan/decode: Remove hierarchy mask check
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Jan 2022 20:23:51 +0100
+
 mesa (22.0.0~git2201150414.01f5fffbc63~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
