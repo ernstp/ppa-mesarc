@@ -1,3 +1,15 @@
+libsdl2 (2.0.20+git2201161844.b06866ef9~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * b06866ef9 Entirely remove Xbox axis filtering, we don't want this at
+    all.
+  * 09aed1020 Don't send output reports to the Victrix Pro FS v2
+  * 85961b61a Disable Xbox axis deadzone handling by default
+  * 2a0cde8fd Always send SDL_WINDOWEVENT_SIZE_CHANGED when window is
+    resized
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Jan 2022 20:23:11 +0100
+
 libsdl2 (2.0.20+git2201150004.1a50334c4~i~wayland5) impish; urgency=medium
 
   * New snapshot:
