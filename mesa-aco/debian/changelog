@@ -1,3 +1,52 @@
+mesa (22.0.0~git2201191747.96cc3007461~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 96cc3007461 radv: fix missing destroy for the overallocation mutex
+  * 6619f855d97 vulkan/runtime: fix accessing NULL pointers detected by
+    UBSAN
+  * 44ddc28fa8d Add new rules to .gitattributes
+  * a4b8f69bb50 radv/ci: add line endings exception for files generated
+    with wine
+  * 745af887830 ci/windows: normalize line endings
+  * f5471227724 microsoft/compiler: normalize line endings
+  * ed0edcc3388 freedreno/rnn: normalize line endings in rules-ng.xsd
+  * b59764a9fcb aco: use p_extract for SGPR
+    nir_op_unpack_half_2x16_split_y
+  * bbc4ca5d7d5 aux/trace: cosmetic cleanup
+  * 85a75e42db7 aux/trace: implement missing trace calls
+  * 32d40f7c80c aux/trace: print enum names instead of integer values in
+    gallium traces
+  * 51f6288a2d2 genxml: reduce amount of generated code
+  * acebea9cf1f anv: fix missing descriptor copy of
+    bufferview/surfacestate content
+  * 2c875e6ad78 intel/dev: fix ppipe_mask computation
+  * 9e839620daa meson: add check kwarg to run_command
+  * 71673cd2d4d zink: add deqp ci baseline for nv
+  * f9892b0f4f9 zink: update nv ci baseline
+  * 806946b0947 lavapipe: replace hard pointer calcs in push descriptors
+    with ptralloc
+  * 48fde98b79f lavapipe: replace hard pointer calcs in dynamic render
+    with ptralloc
+  * 171ccdbf1c4 util: add ptralloc
+  * 0bc7562466c iris: Do primitive ID overrides in 3DSTATE_SBE not
+    SBE_SWIZ
+  * 223edb1ec11 iris: Use prog_data->inputs rather than shader info in
+    SBE code.
+  * d475e839daf intel/fs: Reuse the same FS input slot for VUE header
+    fields.
+  * 5f0bf2113ef r300: Add consts (uniforms) count to the shader-db
+    output.
+  * cd7b260eeb9 r300: Drop unused r300_get_stats() call.
+  * 695ba644abe intel/gem: Return length from intel_i915_query_alloc
+  * 83da7dc487e intel/dev: Recalculate max_cs_threads after applying
+    hwconfig changes
+  * ab22fb488bd intel/dev: Apply settings from hwconfig if
+    devinfo::apply_hwconfig is set
+  * 59f32c62c73 intel/dev: Set intel_device_info::apply_hwconfig for DG2
+  * a15f18c8860 intel/dev: Add intel_device_info::apply_hwconfig
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Jan 2022 18:44:02 +0100
+
 mesa (22.0.0~git2201161923.9645fa91079~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
