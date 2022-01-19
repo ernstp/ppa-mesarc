@@ -1,3 +1,12 @@
+libsdl2 (2.0.21+git2201192028.426c1f4b8~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 426c1f4b8 opengles2: fix comment about client-side arrays.
+  * b3984df1c audio: pipewire: Use client config files instead of module
+    names
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Jan 2022 21:30:38 +0100
+
 libsdl2 (2.0.21+git2201181232.381520ad9~i~wayland5) impish; urgency=medium
 
   * New snapshot:
