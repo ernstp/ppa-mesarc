@@ -1,3 +1,10 @@
+mesa (22.0.0~git2201192045.19f88eb858e~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 19f88eb858e meson: tlsdesc: minor reformatting, add comments
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Jan 2022 21:31:18 +0100
+
 mesa (22.0.0~git2201191747.96cc3007461~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
