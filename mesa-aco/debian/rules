@@ -91,7 +91,9 @@ else
 
 	# WSL supports only amd64 and arm64
 	ifneq (,$(filter amd64 arm64,$(DEB_HOST_ARCH)))
+	ifneq ($(DEB_DISTRIBUTION),bionic)
 		GALLIUM_DRIVERS += d3d12
+	endif
 	endif
   endif
 
