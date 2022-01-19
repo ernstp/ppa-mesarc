@@ -1,3 +1,12 @@
+wayland-protocols (1.24+git2201190954.3440486~b~wayland2) bionic; urgency=medium
+
+  * New snapshot:
+  * 3440486 xdg-shell: Add toplevel "bounds" configure event
+  * c2ceb5f linux-dmabuf: fix typo in dev_t example code
+  * a52b8f0 ext-session-lock-v1: new protocol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Jan 2022 18:47:42 +0100
+
 wayland-protocols (1.24+git2111241310.0aaf121~b~wayland2) bionic; urgency=medium
 
   * New snapshot:
