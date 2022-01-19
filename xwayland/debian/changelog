@@ -1,3 +1,11 @@
+xwayland (2:21.1.99+git2201181110.d1f26c3e7~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * d1f26c3e7 xwayland: Raise the FD limit to the max
+  * 50b4a70de xwayland/glx: Flip order of sRGB & non-sRGB fbconfigs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Jan 2022 18:48:05 +0100
+
 xwayland (2:21.1.99+git2112241906.288ec0e04~i~wayland5) impish; urgency=medium
 
   * New snapshot:
