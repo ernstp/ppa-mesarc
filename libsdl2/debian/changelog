@@ -1,3 +1,15 @@
+libsdl2 (2.0.21+git2201181232.381520ad9~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 381520ad9 updates for watcom optimization flags
+  * a0e3c884d Updated to version 2.0.21 for development
+  * 1bfefb5b4 regenerated configure script.
+  * a575e2cf5 Enable alloca on mingw/cygwin builds:
+  * 33dadbf13 'dnl' whitespace tidy-up in configure.ac
+  * d3952a8a2 wayland: Avoid spurious resize events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Jan 2022 18:43:20 +0100
+
 libsdl2 (2.0.20+git2201161844.b06866ef9~i~wayland5) impish; urgency=medium
 
   * New snapshot:
