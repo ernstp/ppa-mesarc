@@ -1,3 +1,43 @@
+mesa (22.0.0~git2201211038.b8c518f0fbf~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b8c518f0fbf radv: fix computing the number of color samples if no
+    attachments
+  * 4e4a2d0f97f driconf: enable vs_position_always_invariant for Dirt
+    Rally
+  * b5b105df96d r300: properly initialize new_vs in
+    r300_draw_init_vertex_shader
+  * 5decf569fc8 mesa/st: move perf query test to st_context, drop files.
+  * 3f8e7b87354 mesa/st: drop lots of perfquery wrappers
+  * 78d13fdbb25 mesa/st: drop some bindless wrappers
+  * 8467047f6da mesa/st: move memory query into mesa.
+  * 6e99b10632e mesa/st: move shader completion into mesa
+  * 03f180d88b3 mesa/st: inline st_max_shader_compiler_threads
+  * 74d40c68dc3 mesa/ctx: store screen pointer in ctx as well
+  * df9d5795c1e mesa/st: move evaluate depth values into mesa
+  * a64e5c02bda mesa/st/vdpau: direct call the vdpau functions.
+  * 0f8a3a71754 mesa/st: drop release all sampler views wrapper
+  * 31d3e3ebeba mesa/st: move st_TexParameter into mesa
+  * 96b57faf357 mesa/st: drop useless tex parameter calls.
+  * 9244c792f9a mesa/dd: drop GetProgramBinaryDriverSHA1
+  * 4a055c19408 mesa/st: move pin l3 cache to direct check/call.
+  * 10ac88b72fa mesa/st: drop emit string marker device table entry.
+  * 5618fac7860 mesa/st: directly call the uuid get funcs.
+  * ec0d62ceb5f mesa/st: drop last user of st_Enable.
+  * 84fe99b2a0e mesa/st: migrate debug callback code into mesa
+  * bc122e07690 mesa/st: remove st_context from debug callback
+  * e344a117af8 mesa/st: move intel blackhole noop enable to frontend
+  * 129e31cd4f7 zink: hook up planar image format creation
+  * bff042fd43f zink: link with vulkan utils
+  * 926d78a645b ntt: Extend ntt_compile::addr_declared and
+    ntt_compile::addr_reg
+  * 495debebad2 nir/algebraic: optimize expressions using fmulz/ffmaz
+  * 14b82270837 nir: add some missing nir_alu_type_get_base_type
+  * f2fbba79209 nir/algebraic: optimize open-coded fmulz/ffmaz
+  * 312a2849807 nir/algebraic: add ignore_exact() wrapper
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Jan 2022 10:58:11 +0100
+
 mesa (22.0.0~git2201192045.19f88eb858e~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
