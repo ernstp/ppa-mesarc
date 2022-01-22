@@ -1,3 +1,10 @@
+wayland-protocols (1.24+git2201192120.220efff~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 220efff xdg-shell: add invalid_resize_edge error value
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 22 Jan 2022 13:41:19 +0100
+
 wayland-protocols (1.24+git2201190954.3440486~b~wayland2) bionic; urgency=medium
 
   * New snapshot:
