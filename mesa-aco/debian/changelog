@@ -1,3 +1,50 @@
+mesa (22.0.0~git2201220024.4198ca4b3f6~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 4198ca4b3f6 iris/xehp: Implement workaround for 3D
+    texturing+anisotropic filtering.
+  * bbb12b5550b docs: Update d3d12 features
+  * 75e1948b238 d3d12: Set sample-rate shading and GLSL 400 caps
+  * 23918d933e2 d3d12: When mapping a non-directly-mappable resource for
+    write, readback first
+  * 7f9ac5bba23 d3d12: Support dynamic UBO/SSBO indexing
+  * ce93f114b66 d3d12: Run point sprite lowering pass on multi-stream GS
+    when safe
+  * 2a81bd9397e d3d12: Apply GS point sprite lowering to fixed-function
+    point size too
+  * bcbfbb8efd7 d3d12: Report number of GS streams
+  * 223a05dc53e d3d12: Temp resources for same-resource copies can be
+    MSAA too
+  * 2da7db759bf d3d12: Relax multisampling direct copy requirements
+  * e5cf19fced6 d3d12: Modify shaders when MSAA is disabled
+  * aef777c95dd d3d12: Report sample positions
+  * 173e3738034 d3d12: Lower load_sample_pos to load_sample_pos_at_id
+  * 7ad089c66e3 d3d12: Sample mask output needs to be uint-typed
+  * f915bc56a48 microsoft/compiler: Lower helper invocations
+  * 1022435845d microsoft/compiler: Handle msb/lsb/bfrev
+  * ac94bcf0464 microsoft/compiler: Use ibfe/ubfe for bitfield extract
+    instead of lowering to shifts
+  * 80e782d5ed5 microsoft/compiler: Handle bitfield_insert
+  * 8938c6e0321 microsoft/compiler: Emit samplers as array types
+  * 7502b089001 microsoft/compiler: Handle load_invocation_id for GS and
+    HS
+  * fe6f7b52656 microsoft/compiler: Handle tex texture/sampler offset
+    srcs
+  * 7748e4799d2 microsoft/compiler: Handle input coverage
+  * 777a42e309c microsoft/compiler: Handle textureGatherCmp
+  * 30a44e4c3dc microsoft/compiler: Handle 'pull model' explicit
+    interpolation intrinsics
+  * 5b51842b58a microsoft/compiler: Always have at least one GS active
+    stream
+  * a8373ca8de6 microsoft/compiler: Handle load_sample_pos_at_id
+  * 852e243caeb microsoft/compiler: Handle variables declared per-sample
+  * 413f398cff6 ci/windows: Use 2 container stages
+  * 4d2937ff92c mesa: OpenGL ES 1.1 is not optional
+  * b04a1862962 mesa: OpenGL 1.4 feature GL_EXT_point_parameters is not
+    optional
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 22 Jan 2022 13:37:42 +0100
+
 mesa (22.0.0~git2201211038.b8c518f0fbf~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
