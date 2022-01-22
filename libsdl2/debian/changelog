@@ -1,3 +1,13 @@
+libsdl2 (2.0.21+git2201221327.99af3281e~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 99af3281e timer: Fix Emscripten declaration-after-statement error
+  * 53df0e661 Fix the erroneous generation of mouse-down events from
+    touch-move events.
+  * 8f8b14cbb Synthesize a missing touch-up event.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 22 Jan 2022 13:37:00 +0100
+
 libsdl2 (2.0.21+git2201210950.d2456b6e4~i~wayland5) impish; urgency=medium
 
   * New snapshot:
