@@ -1,3 +1,10 @@
+xwayland (2:21.1.99+git2201191923.22d581885~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 22d581885 present: Check for NULL to prevent crash
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 22 Jan 2022 13:41:41 +0100
+
 xwayland (2:21.1.99+git2201181110.d1f26c3e7~i~wayland5) impish; urgency=medium
 
   * New snapshot:
