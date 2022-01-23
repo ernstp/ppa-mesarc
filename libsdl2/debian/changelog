@@ -1,3 +1,11 @@
+libsdl2 (2.0.21+git2201221752.d7873e656~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * d7873e656 Disable tablet flicks under MS Windows.
+  * 15ebad6e7 emscripten: Implement SDL_OpenURL
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 23 Jan 2022 23:45:52 +0100
+
 libsdl2 (2.0.21+git2201221327.99af3281e~i~wayland5) impish; urgency=medium
 
   * New snapshot:
