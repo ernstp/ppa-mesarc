@@ -1,3 +1,56 @@
+mesa (21.3.4+git2201232227.ab783a6df65~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * ab783a6df65 .pick_status.json: Mark
+    58a843ab14e0eecf044a35154da72cdf7ab6f15a as denominated
+  * 5a900fd4b53 .pick_status.json: Mark
+    d1530a3f3b1625baa42e84cba9844b6eb4ac76ce as denominated
+  * d306f4c9321 .pick_status.json: Mark
+    1b88777e97f635612c560a2f00d349ea271581b1 as denominated
+  * 6ab2ecc4ece vulkan: return default string for undefined enum
+  * 21bc3a15f70 zink: Output PackHalf2x16 to uint not float
+  * df7eab30025 mesa: use less temporaries in build_lighting
+  * 1928a613245 driconf: enable vs_position_always_invariant for Dirt
+    Rally
+  * 1e9a1ee5a4c r300: properly initialize new_vs in
+    r300_draw_init_vertex_shader
+  * 8979ec9630c intel/fs: Fix gl_FrontFacing optimization on Gfx12+
+  * d0cd9c6d790 zink: stop allocating such massive staging regions for
+    buffer maps
+  * e16a6fc98d6 softpipe: respect !independent_blend_enable for color
+    masks.
+  * a806608e94c llvmpipe: Add get_{driver,device}_uuid implementations
+  * 2272d421b38 anv: fix missing descriptor copy of
+    bufferview/surfacestate content
+  * ca413bdf6df zink: check EXT_image_drm_format_modifier for dmabuf
+    support
+  * e1fca1183f4 nir: fix nir_tex_instr hash not count is_sparse field
+  * fe5301f7b1e nir/unsigned_upper_bound: don't follow 64-bit f2u32()
+  * e3885840241 pan/bi: Schedule around blend shader register clobbering
+  * 667d51507e9 driconf: Fix unhandled tags in static conf
+  * faa7a9724fc intel/fs: disable VRS when omask is written
+  * 1b08e02da8c zink: remove SpvMemorySemanticsMakeVisibleMask from
+    nir_intrinsic_memory_barrier
+  * c8686828ba7 panfrost: Don't double-free when handling error for
+    unsupported GPU
+  * cc942abbb06 util/vbuf: fix buffer translation sizing
+  * e8a3b10d21f aux/trace: copy over stream_output_target_offset method
+    from context
+  * d3d757900d0 venus: VkExternalImageFormatProperties is optional
+  * 1f5fb7e57de zink: use even more accurate stride values for query
+    result copies
+  * 00d2e905b3b Revert "zink: when performing an implicit reset, sync
+    qbos"
+  * 6bf9d19b5b5 zink: skip readback of qbos with no results
+  * 07212900232 zink: fix availability buffer sizing/copying for xfb
+    queries
+  * 17775963552 zink: always set number of timestamp results to 1 for
+    internal qbo
+  * 877f237c5bf .pick_status.json: Update to
+    4198ca4b3f6c4c6f71feebca8daa23137d84fad0
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 23 Jan 2022 23:46:37 +0100
+
 mesa (21.3.4+git2201122232.bfe18835b50~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
