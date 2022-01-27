@@ -1,3 +1,49 @@
+mesa (21.3.5+git2201262335.aa4733263dd~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * aa4733263dd tu: VkExternalImageFormatProperties is optional
+  * 1c7e8e12d15 zink: reorder fbfetch flag-setting to avoid null deref
+  * a1ffdb9a9ed anv/pass: Don't set first_subpass_layout for stencil-
+    only attachments
+  * e5d8b764d5b zink: never use SpvOpImageQuerySizeLod for texel buffers
+  * 1199803da5d intel/fs: Take into account region strides during SIMD
+    lowering decision of SHUFFLE.
+  * 193a97ddd57 .pick_status.json: Update to
+    8bca29dcf0ae01c23215bbee2193bdde1956def4
+  * 75835603058 Revert "zink: handle vertex buffer offset overflows"
+  * cb21190b24b Revert "nir/algebraic: distribute fmul(fadd(a, b), c)
+    when b and c are constants"
+  * 112de3a07a2 VERSION: bump for 21.3.5
+  * 7c4f2f1eb81 docs: add release notes for 21.3.5
+  * 371727f3a7b freedreno/a5xx: Fix clip_mask
+  * ea7aac8a3a2 freedreno/a6xx: Fix clip_mask
+  * a6887c3c4f2 freedreno: Add FD_DIRTY_RASTERIZER_CLIP_PLANE_ENABLE
+  * 9c986203781 freedreno: Pass shader cache key instead of shader key
+  * 935e5fce5ea mesa/st: Lowered ucp should still mark rast state dirty
+  * 12beba1f71b iris: Fix and refactor check for clear color being fully
+    zero
+  * 102b83d77d8 mesa: move GetProgramInterfaceiv as a shader_query
+    function
+  * 36bc6e18a2e mesa: refactor GetProgramiv to use program resource list
+  * fbd47b9d436 panfrost: Only cull polygons
+  * b5ff6276036 panfrost: Use u_reduced_prim for primitive checks
+  * f15d2c8d3a2 util/fossilize_db: Fix double free in error handling.
+  * 2143a663da4 vulkan: return default string for undefined enum
+  * 83011a92261 zink: Output PackHalf2x16 to uint not float
+  * f85939fa865 mesa: use less temporaries in build_lighting
+  * 823a0471980 driconf: enable vs_position_always_invariant for Dirt
+    Rally
+  * ec6eaf7adfe r300: properly initialize new_vs in
+    r300_draw_init_vertex_shader
+  * 2c51e966721 intel/fs: Fix gl_FrontFacing optimization on Gfx12+
+  * 107c8232e01 zink: stop allocating such massive staging regions for
+    buffer maps
+  * 089a957befa softpipe: respect !independent_blend_enable for color
+    masks.
+  * ec2e78b3ff1 llvmpipe: Add get_{driver,device}_uuid implementations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Jan 2022 17:15:47 +0100
+
 mesa (21.3.4+git2201232227.ab783a6df65~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
