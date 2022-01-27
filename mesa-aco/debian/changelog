@@ -1,3 +1,52 @@
+mesa (22.0.0~git2201271516.cad053db615~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * cad053db615 panvk: Fix pointer corruption in
+    panvk_add_wait_event_syncobjs
+  * ece10a54679 zink: unify some context casts in
+    zink_create_sampler_view
+  * fe3984b8cde anv: silence wsi debug logging
+  * 6018d5c44aa vulkan/wsi/x11: document implementation
+  * 978ea32acfb radv/ci: mark the dEQP fails related to a missing VKCTS
+    1.3 as expected
+  * 764c8867b04 v3dv: document why we don't expose
+    VK_EXT_scalar_block_layout
+  * 06220a28e7a v3dv: rework Vulkan 1.2 feature queries
+  * 692e0dfe272 v3dv: implement VK_KHR_imageless_framebuffer
+  * 2ee9487ad7f v3dv: drop signature of undefined function
+  * af957d4a17e ci/traces: Always generate the junit XML.
+  * 60f7bd3c095 ci/traces: Drop PIGLIT_REPLAY_UPLOAD_TO_MINIO.
+  * d0af517a14c ci/traces: Drop the baseline file creation for trace
+    results.
+  * d562b83a844 ci/traces: Clean up the failure report message.
+  * 7d6cd4a5cd3 ci/traces: Drop the PIGLIT_PROFILES setting for traces
+    replay.
+  * ccbf16124e9 ci/traces: Rename the piglit/run.sh script to piglit-
+    traces.sh.
+  * d041630a379 ci/llvmpipe,softpipe: Switch piglit testing to piglit-
+    runner.
+  * 87c3651674f ci/llvmpipe: Drop the skip of piglit edgeflag test.
+  * 6ce7a6e7258 Revert "ci: freedreno: Update a530 dEQP fail expectation
+    list"
+  * ae32c6229e5 freedreno: Add missing generated header dependency
+  * 6c984b14694 dri_interface: Remove the remaining DRI1 API definitions
+  * 57445adc891 anv: Re-enable CCS_E on TGL+
+  * c48401404c1 anv: Use ANV_FAST_CLEAR_DEFAULT_VALUE for CCS on TGL+
+  * d68b2db89ca anv: Disable CCS_E for some 8/16bpp copies on TGL+
+  * 09ca0891444 anv: Drop assert against modifier with aux on gfx12
+  * f07f4d5ec55 docs: use http-redirect when possible
+  * 53426d26c37 softpipe: Dispatch 4 CS invocations per tgsi_exec
+    thread.
+  * 62dc4be470f softpipe: Initialize the CS dispatch mask at machine
+    setup time.
+  * 2fe2a2b0808 softpipe: Improve some local var naming in compute
+    shaders.
+  * 13b57a8cad6 tgsi_exec: Fix shared var stores for >1 real invocation,
+    and overflow checks.
+  * 8a5b949a3ef turnip: fix leaks of submit requests.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Jan 2022 17:12:05 +0100
+
 mesa (22.0.0~git2201220024.4198ca4b3f6~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
