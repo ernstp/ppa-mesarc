@@ -1,3 +1,10 @@
+libdecor-0 (0.1.0+git2201271217.316b337~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 316b337 document OpenGL dependency for EGL demo
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Jan 2022 17:11:09 +0100
+
 libdecor-0 (0.1.0+git2201111037.a5e1d87~i~wayland0) impish; urgency=medium
 
   * New snapshot:
