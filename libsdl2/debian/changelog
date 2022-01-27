@@ -1,3 +1,9 @@
+libsdl2 (2.0.21+git2201270427.cc40f732f~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Jan 2022 17:20:57 +0100
+
 libsdl2 (2.0.21+git2201270427.cc40f732f~i~wayland5) impish; urgency=medium
 
   * New snapshot:
