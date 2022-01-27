@@ -1,3 +1,37 @@
+libsdl2 (2.0.21+git2201270427.cc40f732f~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * cc40f732f wayland: Round the refresh rate rather than truncating it
+  * 304431051 video: Don't add SDL_WINDOW_METAL to new windows if not
+    using Cocoa or UIKit.
+  * 77a9ca6ba wayland: Fix SDL_SetWindowSize() being dropped right after
+    exiting fullscreen
+  * c6ec5a07f d3d11: Respect SDL_HINT_RENDER_DIRECT3D_THREADSAFE when
+    creating device
+  * f37e4a94d video: Don't check if we can use a "texture framebuffer"
+    until needed.
+  * 71e06a536 cmake: fix Metal detection
+  * 8ceba27d6 video: Prefer Wayland over X11
+  * 68a71f91c wayland: Try to avoid committing before the window is
+    shown
+  * 84320266f Fixed the queue filling up with sentinel events when the
+    WaitEvent call is passed NULL for the event
+  * f0e768da4 wayland: Call SetFullscreen directly in ShowWindow.
+  * 8c660ccb6 Fixed bug #5256: X11 Segmentation fault with multiple
+    windows and renderers First window is created and it triggers and
+    'EnterNotify' event which calls SDL_SetMouseFocus() and
+    X11_ShowCursor() while the second windows hasn't finished to be
+    created  (eg window->driverdata isn't set) Just check for a valid
+    'driverdata'
+  * e2d74bcbe wayland: Detach hidden surfaces in HideWindow, not
+    ShowWindow
+  * ca22b30e4 testgles2: Use vertex buffer objects instead of client-
+    side arrays.
+  * 57bc90403 Add hint to optionally forcibly raise the window under MS
+    Windows.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Jan 2022 17:11:24 +0100
+
 libsdl2 (2.0.21+git2201221752.d7873e656~i~wayland5) impish; urgency=medium
 
   * New snapshot:
