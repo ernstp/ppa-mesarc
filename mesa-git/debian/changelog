@@ -1,3 +1,22 @@
+mesa (21.3.5+git2201281940.f81cb2e6e9e~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * f81cb2e6e9e zink: fix vertex buffer mask computation for null
+    buffers
+  * 04b85499298 anv: Fix subgroupSupportedStages physical property
+  * 456604a601a vulkan: Fix leak of error messages
+  * 50251141010 .pick_status.json: Update to
+    a78861b0fbd6e1c1bac7c89f4049cdab7ee2913d
+  * 3bad11501c3 panvk: Fix pointer corruption in
+    panvk_add_wait_event_syncobjs
+  * 9a7e44b2603 anv: Re-enable CCS_E on TGL+
+  * e900e61f3d1 anv: Use ANV_FAST_CLEAR_DEFAULT_VALUE for CCS on TGL+
+  * 292026c0964 anv: Disable CCS_E for some 8/16bpp copies on TGL+
+  * 9e6bee7bd80 .pick_status.json: Update to
+    2d75fd1e0ac06c65d83e053c58bf266732db3de4
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 01 Feb 2022 17:56:20 +0100
+
 mesa (21.3.5+git2201262335.aa4733263dd~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
