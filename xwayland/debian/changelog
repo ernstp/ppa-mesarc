@@ -1,3 +1,11 @@
+xwayland (2:21.1.99+git2201291220.2e6edeb56~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 2e6edeb56 xf86: Accept devices with the 'hyperv_drm' driver
+  * c6b0dcb82 render: Fix build with gcc 12
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 01 Feb 2022 18:05:23 +0100
+
 xwayland (2:21.1.99+git2201191923.22d581885~i~wayland5) impish; urgency=medium
 
   * New snapshot:
