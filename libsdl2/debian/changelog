@@ -1,3 +1,70 @@
+libsdl2 (2.0.21+git2202011137.4fa21dd65~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 4fa21dd65 Sync wiki -> header
+  * d46cc18af Fix function comment
+  * d224a63bd Fix compilation for non Android
+  * 61b6a2cad Sync wiki -> header
+  * fe2ed6cf6 Fixed bug #5221 - Add SDL_AndroidSendMessage()
+  * 97269e143 adjustments to ime_candidates - allocate ime_candidates on
+    demand - allow write to the whole allocated memory of ime_candidates
+    - ensure ime_candcount is set to zero in case the candidates can not
+    be queried for any reason
+  * 6f404d0f0 cleanup IME_GetCandidateList / UILess_GetCandidateList -
+    move IME_ShowCandidateList, ImmGetContext and ImmReleaseContext to
+    this function - set ime_candpgsize to MAX_CANDLIST if dwPageSize is
+    zero - comment out deselection of ime_candsel in case of korean
+    language for the moment (LANG_CHT does not work anyway)
+  * ec8e3104c Refresh the battery state before we query it on Linux
+  * 0b34f1804 audio: pipewire: Don't double free properties on init
+    failure
+  * f7d3abddb Fixed bug #964 - SDL_RenderCopy stretch loses proportion
+    on viewport. Handle the case when there is blending
+  * 8b139e26a regenerated configure script.
+  * a5c610b0a revert 'Changed to use 0xFE instead of 0xFF for better
+    sound quality.'
+  * 43f0271b4 Revert "fix compiler warnings in
+    SDL_windows_gaming_input.c"
+  * a70bb259c drop handle parameter of OpenDevice
+  * 47ddb04e1 cleanup/sync the main loop of *_OpenDevice functions to
+    pick audio format II.
+  * 2eafe4340 cleanup/sync the main loop of *_OpenDevice functions to
+    pick audio format
+  * 3939ef72f cleanup SDL_GetAudioDeviceSpec - drop unnecessary
+    hascapture check - call SDL_InvalidParamError and return -1 in case
+    the index is out of range - do not zfill SDL_AudioSpec - adjust
+    documentation to reflect the behavior
+  * 113109f83 cleanup SDL_GetAudioDeviceName - drop unnecessary
+    hascapture check - call SDL_InvalidParamError in case the index is
+    out of range
+  * f91211eb1 cleanup WASAPI_PrepDevice - reorganize the loop which
+    checks for the right wave-format - use the return value of
+    UpdateAudioStream - ensure SetError is called in SDL_NewAudioStream
+  * c9e8d1573 re-use return value of
+    SDL_SetError/WIN_SetErrorFromHRESULT/SDL_OutOfMemory II.
+  * 1043dd8c0 adjust handling of iscapture - drop iscapture parameter of
+    OpenDevice - use SDL_bool for iscapture
+  * e2f70a2df cleanup SDL_EventState
+  * 32c7d5d35 cleanup IME_UpdateInputLocale - do not store the HKL in a
+    static variable - always set the ime_candvertical value in case the
+    HKL is changed
+  * 25aa7244d cleanup IME_GetId - use assert instead of a check (it is a
+    static function with constant parameter) - assume it is called with
+    0 first (simplifies the logic) - reuse dwLang value instead of a new
+    'call' to LANG()
+  * 60deadba5 re-use return value of
+    SDL_SetError/WIN_SetErrorFromHRESULT/SDL_OutOfMemory
+  * ebdd53667 use SDL_InvalidParamError or SDL_assert instead of custom
+    SDL_SetError
+  * 4a17612bf get rid of BeginLoopIteration
+  * 0770c5829 get rid of PrepareToClose
+  * e0236c02c audio: Removed an unnecessary commented-out line.
+  * 0dda8a7f4 cleanup init functions of audio - use SDL_bool if possible
+    - assume NULL/SDL_FALSE filled impl - skip zfill of current_audio at
+    the beginning of SDL_AudioInit (done before the init() calls)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 01 Feb 2022 17:46:38 +0100
+
 libsdl2 (2.0.21+git2201270427.cc40f732f~i~wayland6) impish; urgency=medium
 
   * New snapshot:
