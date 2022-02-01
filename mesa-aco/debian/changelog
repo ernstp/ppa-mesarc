@@ -1,3 +1,47 @@
+mesa (22.0.0~git2202011630.bf289e3123c~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * bf289e3123c turnip: Store the computed iova in the tu_image.
+  * f460fb3f917 turnip: Store the computed iova in the tu_buffer.
+  * ba44634e4dd aco: fix v_mac_legacy_f32
+  * d1e46d34f75 radeonsi: enable ARB_sparse_texture_clamp
+  * 95d36179092 glsl/nir: convert ir_texture->clamp to nir
+  * 10a71c61065 glsl: add ARB_sparse_texture_clamp builtin functions
+  * 391f2dffaad glsl: _textureCubeArrayShadow support clamp
+  * de37146c712 glsl: _texture support clamp parameter
+  * 92d6b2735b7 glsl: ir_texture add clamp field
+  * 13ffd46a0fb glsl: add ARB_sparse_texture_clamp extension
+  * 3729c3fa30e mesa: add ARB_sparse_texture_clamp extension
+  * d68087a1d97 gallium: add PIPE_CAP_CLAMP_SPARSE_TEXTURE_LOD
+  * d014efa33e7 util/utrace: make generated code a tiny bit nicer to
+    look at
+  * d0363baefdb util/u_trace: make mako conditional code easier to read
+  * 928156bc9dc intel/tracepoint: simplify tracepoint descriptions
+  * 713a4363e5f vulkan/wsi/wayland: remove format switch from
+    wl_shm_format_for_vk_format
+  * 5a82232e5cb vulkan/wsi/wayland: use DRM_FORMAT_INVALID
+  * fda2aecb8b8 vulkan/wsi/wayland: use enum wl_shm_format
+  * bbe97c38714 docs: update INTEL_DEBUG environment variable
+    documentation
+  * ce99b1a7467 v3dv: don't submit noop job if there is nothing to wait
+    on or signal
+  * 4fa24747b90 glthread: call _mesa_glthread_BindBuffer unconditionally
+  * 061bf72a4fd mesa: stop truncating MESA_GLSL=dump
+  * b1b8b712c1d aux/vbuf: add fastpath for skipping identical vbuf
+    updates
+  * b733a226360 aux/vbuf: move mask-clearing for vbuf updates after
+    buffer scanning
+  * cf6a6161222 aux/vbuf: use local var for modifying unaligned_vb_mask
+    during update
+  * 28f677e6dc9 iris: implement inter-context busy-tracking
+  * 06b279ccb25 iris: save some iris_syncobj_reference() calls at
+    update_bo_syncobjs()
+  * db475c81b7c iris: Return non-zero stride for clear color plane
+  * 2407a7e6c1f iris: Pick the right BO in iris_resource_get_param
+  * ea5ffa01287 iris: Refactor a ternary in iris_resource_get_param
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 01 Feb 2022 17:48:01 +0100
+
 mesa (22.0.0~git2201271516.cad053db615~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
