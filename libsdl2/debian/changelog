@@ -1,3 +1,38 @@
+libsdl2 (2.0.21+git2202041805.b5614d0c6~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * b5614d0c6 cmake: fix UWP joystick.
+  * c93e55206 minor update to winrt/SDL_sysurl.cpp
+  * 050a5e1a1 removed unused SDL_config_wiz.h
+  * c459eceee removed unused Makefile.wiz
+  * 3b9e6c1ce SDL_os2video.c: fixed HasClipboardText() semantics.
+  * 86b7a0642 Add additional VID/PIDs for Anne Pro II
+  * dd69c28d6 Added a mapping for the Xbox Series X controller, firmware
+    version 5.11.3118.0, connected to Linux via Bluetooth
+  * b59e75c25 Handle menu button press from controller
+  * 2005dd959 UWP build (#5299)
+  * 2cfc83eab sync D3D_RenderReadPixels with D3D11_RenderReadPixels
+  * 3bef4a5da cleanup error-handling in SDL_egl.c
+  * b5c505260 cleanup error-handling in SDL_bmp.c
+  * 19df4af2a simplify SDL_DUMMY/OFFSCREEN_CreateWindowFramebuffer
+  * ecd922b5c Fix touch holding detection after #5244 changes
+  * df0d696a6 RISCOS: attempt to fix compilation ERANGE
+  * 87b02d379 Linux thread name limitation: test for ERANGE (see bug
+    #5283)
+  * daea9fa19 Remove SDL_config_psp and references
+  * ff5f5d0ef Updating Readme-psp info
+  * ec632aba1 Remove legacy and unused Makefile.psp
+  * 220a9596f Remove testing instruction (see bug #5283)
+  * 9e46a512b Fixed bug #5283 - limit thread name to 16 characters when
+    using pthread_setname_np()
+  * b11dfd761 Only generate key repetition for keys that should repeat
+    on wayland.
+  * a90a2e758 Fix text_input_v3 preedit string
+  * 03c4405b3 Fixed D-Bus battery refresh call
+  * e1cf8d874 Sync wiki -> header
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Feb 2022 18:48:37 +0100
+
 libsdl2 (2.0.21+git2202011137.4fa21dd65~i~wayland6) impish; urgency=medium
 
   * New snapshot:
