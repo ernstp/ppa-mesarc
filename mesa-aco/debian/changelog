@@ -1,3 +1,47 @@
+mesa (22.1.0~git2202041116.3abe9ccbd4c~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 3abe9ccbd4c vulkan/util: simplify multialloc init
+  * 0d0ecbd987e vulkan/util: Add explicit casts to make c++ happy
+  * 676c65d8d56 vulkan/util: Add extern "C" to allow inclusion from c++
+  * fded7a95c55 turnip: Expose VK_KHR_shader_non_semantic_info
+  * ff059605aaa turnip: Implement
+    VK_KHR_zero_initialize_workgroup_memory
+  * c6d1cac6e51 turnip: Expose VK_EXT_image_robustness
+  * 03f9deecb8b turnip: Use the shared helpers to expose 1.3 core
+    extensions/limits
+  * 679713d5f93 turnip/doc: Update turnip extension list
+  * fd0e4aedeb2 iris: Make an iris_foreach_batch macro that skips
+    unsupported batches
+  * c4b400285ac llvmpipe/triangle: don't store area in fixed_position.
+  * cd4d2e920cb llvmpipe: just move opaque alpha lookup closer to use.
+  * a448695eee1 llvmpipe: refactor lp_rast_shader_inputs.
+  * fb17da6c504 llvmpipe/setup: remove opaque from setup triangle
+  * 66188e86931 llvmpipe: inline retry_triangle_ccw
+  * 086a9b78698 llvmpipe: optimise triangle setup a bit.
+  * 5e4bf6d100b turnip: Do not use hw binning if tiles per pipe are over
+    the limit
+  * c6e8198f1be turnip: Add TU_GMEM envvar to test different gmem sizes
+  * dac3e6f3727 venus: Advertise VK_EXT_extended_dynamic_state support
+  * 19e313e1c84 venus: Implement VK_EXT_extended_dynamic_state commands
+  * 3affb69eaaa docs: Update d3d12 features
+  * 7430742b164 d3d12: ARB_gpu_shader_fp64
+  * b8ecb8be799 d3d12: Handle structs in TCS variants
+  * c448931d232 d3d12: Handle structs in GS variants
+  * 252a89a2c9c d3d12: Set lower full fp64 compiler options flag when
+    needed
+  * 204102099a2 d3d12: Lower [de]construction of doubles via math ops
+    into pack/unpack ops
+  * 4daa3eac2ce d3d12: Add int64 support
+  * 397e117e960 d3d12: Get OPTIONS1
+  * 0144e7b18da d3d12: Add a driver version to the screen to be used for
+    workarounds
+  * 944832d3d72 d3d12: Cache a modifyable copy of the nir options in
+    d3d12_screen
+  * 2529a0df89c d3d12: Use the right constant for GS varying limits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Feb 2022 18:50:05 +0100
+
 mesa (22.0.0~git2202011630.bf289e3123c~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
