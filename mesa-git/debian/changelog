@@ -1,3 +1,43 @@
+mesa (21.3.5+git2202032246.31462006f3b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 31462006f3b aco: don't encode src2 for v_writelane_b32_e64
+  * 10cdd85533f .pick_status.json: Update to
+    0447a2303fb06d6ad1f64e5f079a74bf2cf540da
+  * eaf282c15ab i965: Avoid NULL drawbuffer in brw_flush_front
+  * f0f586162b7 .pick_status.json: Mark
+    15e77504461a30038a054c87cc53a694171c9cf4 as denominated
+  * 2e7105d0cf4 radv/winsys: fix missing buffer_make_resident() for the
+    null winsys
+  * 582227b11a5 ir3: opt_deref in opt loop to remove unnecessary tex
+    casts
+  * 9912299f27f ir3/cp: ir3: Prevent propagating shared regs out of
+    loops harder
+  * 83a6109906b ir3: Fix copy-paste mistakes in
+    ir3_block_remove_physical_predecessor()
+  * 3bf0340ae19 zink: use SpvScopeDevice over SpvScopeWorkgroup for
+    atomic shader ops
+  * e71e90eea78 zink: cast image atomic op params/results based on image
+    type
+  * 1df7d008a97 vulkan/wsi: Set MUTABLE_FORMAT_BIT in the prime path
+  * 00f5462523b vulkan/wsi/wayland: Fix add_drm_format_modifier
+    aplha/opaqueness.
+  * 49e08823940 vulkan/wsi/wayland: Add modifiers for RGB formats.
+  * a8baf16d1d9 vulkan/wsi/wayland: Convert  missing vulkan formats to
+    shm formats.
+  * a8fe66f3ef6 vulkan/wsi/wayland: Fix add_wl_shm_format
+    alpha/opaqueness.
+  * a3f07a7c7ff aco: fix neg(abs(mul(a, b))) if the mul is not VOP3
+  * 05110a7860e zink: fix waiting on current batch id
+  * 76b60224c27 zink: add vertex shader pipeline bit for generated
+    barrier construction
+  * 956f8de5145 zink: clamp tbo creation to maxTexelBufferElements
+  * cd51e701177 iris: implement inter-context busy-tracking
+  * 69fb8cea15f .pick_status.json: Update to
+    242c7a651308f43d5f6f2590717fd72f44eba3ca
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Feb 2022 18:58:56 +0100
+
 mesa (21.3.5+git2201281940.f81cb2e6e9e~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
