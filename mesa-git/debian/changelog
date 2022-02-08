@@ -1,3 +1,25 @@
+mesa (21.3.5+git2202072029.d8761e3918f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * d8761e3918f radv: fix R_02881C_PA_CL_VS_OUT_CNTL with mixed
+    cull/clip distances
+  * b7df3d09aaf crocus: find correct relocation target for the bo.
+  * 52534ebc4de .pick_status.json: Update to
+    604d97671b663501195644f2a5f12535e88c563f
+  * 059493ba9ec .pick_status.json: Mark
+    960e72417f3e8885699cf384f690853e14ba44da as denominated
+  * 11d5ea93f89 .pick_status.json: Update to
+    945a1e0b8cd57403c6a0cbf9b2fec112f233075e
+  * 45a84461271 zink: add VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT
+    for query binds
+  * c5dab9182c5 llvmpipe: ci updates
+  * f052bd174c8 llvmpipe: disable PIPE_SHADER_CAP_FP16_CONST_BUFFERS
+  * 4ad259c9064 zink: disable PIPE_SHADER_CAP_FP16_CONST_BUFFERS
+  * 6b0db4a12a6 .pick_status.json: Update to
+    47f4cb2405fa8cbfce8e940c07b7725d9619f200
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Feb 2022 07:41:40 +0100
+
 mesa (21.3.5+git2202032246.31462006f3b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
