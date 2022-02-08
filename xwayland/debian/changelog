@@ -1,3 +1,13 @@
+xwayland (2:21.1.99+git2202061231.34b870da8~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 34b870da8 meson: Remove config macros that are no longer used
+  * 9946b0f19 config/wscons: Always attach the "ws" driver for pointer
+    devices, rather than "mouse".
+  * bcee84c3e config/wscons: Fix build and add support for NetBSD
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Feb 2022 07:49:42 +0100
+
 xwayland (2:21.1.99+git2202032334.4c03b67d3~i~wayland5) impish; urgency=medium
 
   * New snapshot:
