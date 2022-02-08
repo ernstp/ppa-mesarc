@@ -1,3 +1,11 @@
+libglvnd (1.4.0+git2202071650.b2f8bab~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * b2f8bab Merge branch 'update-egl' into 'master'
+  * 7fa33fa Update the EGL headers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Feb 2022 07:32:18 +0100
+
 libglvnd (1.4.0+git2112171649.8f3c5b1~i~wayland0) impish; urgency=medium
 
   * New snapshot:
