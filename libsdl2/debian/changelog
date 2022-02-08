@@ -1,3 +1,33 @@
+libsdl2 (2.0.21+git2202080036.8ce003a42~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 8ce003a42 Vita: credit cpasjuste
+  * 14bc3bf4e Android: fix typo to register TOUCHSCREEN device (see
+    #5322, #2718)
+  * 53091e36a audio: pipewire: Remove the hard upper bound on rates and
+    buffer sizes
+  * 66866249a audio: pipewire: Condition variable doesn't need to be
+    atomic
+  * 0cb39ed46 cmake: Fix SDL_LIBUSB_DYNAMIC soname
+  * b0dd4c7d3 SDL_Render OpenGL: do batching like in the GLES2 backend
+    (with no VBO)
+  * 90f0d2ce4 Revert OpenGL point drawing performance, do to proper
+    batching
+  * 423feac69 haiku: Actually remove BDirectWindow and fix OpenGL
+    handling.
+  * 940354367 cmake: enable_language(OBJC) only for APPLE
+  * 3c9ac4489 cmake: enable_language(OBJC) to fix
+    check_objc_source_compiles().
+  * 686a0f345 cmake: include CheckOBJCSourceCompiles for cmake >= 3.16
+  * 6d5592a20 minor cleanup of SDL_CreateRenderer
+  * e8c48981f pthread/SDL_systhread.c: always include errno.h
+  * 5c4fff7f6 Don't fail to get battery status if the upower refresh
+    call fails
+  * c8cee0b8c OS2_HasClipboardText: store the boolean result before
+    closing clipboard.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Feb 2022 07:32:50 +0100
+
 libsdl2 (2.0.21+git2202041805.b5614d0c6~i~wayland6) impish; urgency=medium
 
   * New snapshot:
