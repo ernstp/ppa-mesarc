@@ -1,3 +1,49 @@
+mesa (22.1.0~git2202080622.a52e4871fe9~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * a52e4871fe9 meson: add radv to meson devenv
+  * 8335fdfeafb vk/sync: add asserts for timeline semaphore count
+    matching
+  * 388f23eabe5 zink: min/max blit region in coverage functions
+  * b656ab75a68 zink: reject invalid draws
+  * e38c13830fc zink: fix PIPE_CAP_TGSI_BALLOT export conditional
+  * 8907964dcd5 zink: export PIPE_SHADER_CAP_TGSI_CONT_SUPPORTED
+  * 413bf889e70 radeonsi/blit: relax conditions to use sdma copy for
+    prime buffers
+  * 3b27ad15046 radeonsi: create prime buffers as uncached
+  * 18c38bf78fc gallium: rename PIPE_BIND_DRI_PRIME
+  * 42c149e36b3 gallium/dri: add missing PIPE_BIND_DRI_PRIME handling
+  * 3926be368e8 ci/iris: Mark qbo tests as flakes
+  * df1751a2bbd crocus: Enable compat profile the same way as core
+    profile
+  * 604d97671b6 iris: Add support for flushing the blitter (hackily)
+  * 9c5dc4985b2 blorp: Assert that blorp_copy() on the blitter can
+    handle it
+  * d2646e147ba intel/genxml: Add missing MI_FLUSH_DW::Flush CCS field
+  * 7ddad1b93a1 radv: fix R_02881C_PA_CL_VS_OUT_CNTL with mixed
+    cull/clip distances
+  * 44bdac98499 tu: Implement VK_AMD_buffer_marker to support Graphics
+    Flight Recorder
+  * b5619464970 egl/wayland: Don't replace existing backbuffer in
+    get_buffers
+  * 3da8300562e egl/wayland: Reset buffer age when destroying buffers
+  * fa4390f7bf6 ci/iris: Add skips and flakes notes for recent #intel-ci
+    logs.
+  * 0cf32b5079f ci/crocus: Add recent flakes from #intel-ci
+  * 64230459579 ci/softpipe,llvmpipe: Disable Xvfb server reset on
+    piglit runs.
+  * 9ea4029f9fe Revert "radv: re-apply "Do not access set layout during
+    vkCmdBindDescriptorSets.""
+  * 66f7289d568 radv: add reference counting for descriptor set layouts
+  * 37c3be6947b crocus: find correct relocation target for the bo.
+  * d774059a0c6 crocus: enable GL46 tests for HSW in ci
+  * 0299600efb9 asahi: Fix memory unsafety in delete_sampler_state
+  * 786871c87e8 agx: Don't kill helper threads in ld_var
+  * 367d93bcd43 agx: Handle texture array indices
+  * b459473bb97 agx: Implement nir_op_txb
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 08 Feb 2022 07:34:04 +0100
+
 mesa (22.1.0~git2202041116.3abe9ccbd4c~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
