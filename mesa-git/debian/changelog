@@ -1,3 +1,53 @@
+mesa (22.0.0~rc1+git2202081823.2e1387c7528~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 2e1387c7528 anv: fix conditional render for
+    vkCmdDrawIndirectByteCountEXT
+  * a910e58ad8b intel/nir: fix shader call lowering
+  * 54f49993d18 intel/fs: don't set allow_sample_mask for CS intrinsics
+  * 2b282fb3b5d .pick_status.json: Update to
+    5e9df85b1a4504c5b4162e77e139056dc80accc6
+  * 4e67d2aad4d crocus: find correct relocation target for the bo.
+  * 8f5fb1eb10d zink: min/max blit region in coverage functions
+  * 4587268d2b7 zink: reject invalid draws
+  * a04818a500e zink: fix PIPE_CAP_TGSI_BALLOT export conditional
+  * 59b2c1dddee radv: fix R_02881C_PA_CL_VS_OUT_CNTL with mixed
+    cull/clip distances
+  * 2ce020120ab egl/wayland: Reset buffer age when destroying buffers
+  * ba2d22e95f3 Revert "radv: re-apply "Do not access set layout during
+    vkCmdBindDescriptorSets.""
+  * 5ff5f3cbf79 mesa: fix misaligned pointer returned by dlist_alloc
+  * 5a7a564d7c4 svga: store shared_mem_size in svga_compute_shader
+    instead of svga_context
+  * 2c7d0e1b492 zink: use scanout obj when returning resource param info
+  * 83eef372a22 turnip: Unconditionaly remove descriptor set from pool's
+    list on free
+  * 0a1f166f4dc iris: Make an iris_foreach_batch macro that skips
+    unsupported batches
+  * 68242654f80 microsoft/compiler: Only treat tess level location as
+    special if it's a patch constant
+  * c7bd1f0720d microsoft/compiler: Only prep phis for the current
+    function
+  * 88762cf59ba zink: add VK_BUFFER_USAGE_CONDITIONAL_RENDERING_BIT_EXT
+    for query binds
+  * 6420dc86cf1 .pick_status.json: Update to
+    8335fdfeafbe1fd14cb65f9088bbba15d9eb00dc
+  * a58a01050c7 aco: don't encode src2 for v_writelane_b32_e64
+  * b6e296f8233 radeonsi: limit loop unrolling for LLVM < 13
+  * fabb6b5c5e7 broadcom/compiler: fix offset alignment for ldunifa when
+    skipping
+  * 0ec3de0563c llvmpipe: disable PIPE_SHADER_CAP_FP16_CONST_BUFFERS
+  * b2be43a1928 zink: disable PIPE_SHADER_CAP_FP16_CONST_BUFFERS
+  * 9e17fcbed20 .pick_status.json: Update to
+    0447a2303fb06d6ad1f64e5f079a74bf2cf540da
+  * c69a870f86c VERSION: bump for 22.0.0-rc1 release
+  * 0395c483d4f radv: Handle SDMA for padding.
+  * dbcdededb23 intel: Add missing dep of gen_*_header.py on utils.py.
+  * 3d5ee08c15c freedreno/isaspec: Add missing dep of
+    encode.py/decode.py calls on isa.py
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 09 Feb 2022 15:45:25 +0100
+
 mesa (21.3.5+git2202072029.d8761e3918f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
