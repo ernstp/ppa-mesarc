@@ -1,3 +1,54 @@
+mesa (22.1.0~git2202091513.5d7bae5ab35~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 5d7bae5ab35 zink: ci updates
+  * 63fa2ab978c zink: add Sample decorations to fragment shader inputs
+    with sample shading
+  * 0cb5333a148 iris/ci: Enable Whiskey Lake boards by default
+  * fe560aeb125 radeonsi: workaround Specviewperf13 Catia hang on GFX9
+  * e2cd0c3a3c2 intel/fs: Assert that old pull-const code is not used if
+    devinfo->has_lsc
+  * 562f7eef5b4 iris: invalidate L3 read only cache when VF cache is
+    invalidated
+  * 7a6ea047954 anv: invalidate L3 read only cache when VF cache is
+    invalidated
+  * 442628b7024 intel/genxml: add PIPE_CONTROL field for L3 read only
+    cache invalidation
+  * 03e1e19246d anv: Refactor descriptor copy
+  * 6fba52cfd2b radv: allow RADV_FORCE_VRS with pipeline VRS declared as
+    dynamic
+  * 413ea503bae iris: Disable PIPE_CAP_PREFER_BACK_BUFFER_REUSE
+  * e3cb620b559 iris: Use the hardware blitter for DRI PRIME blits
+  * f9eba6e2b52 iris: Allow IRIS_BATCH_BLITTER in iris_copy_region()
+  * 70a219d4a35 broadcom/simulator: enable multisync in the simulator
+  * 5200e1c2120 translate: improve sse2 32-bit unsigned -> float
+    conversion
+  * 0b69f7b15d5 rtasm: add pcmpgtd operation
+  * 55b735c51ae rtasm: fix printf specifier for ptrdiff_t
+  * 7d1727079c3 zink: ci updates
+  * 883017b67ec zink: do not copy colors through floats
+  * 745fc95659b zink: Re-interpret formats when using
+    vkCmdClearColorImage()
+  * 86eaff29c0b st/mesa: only enable ARB_enhanced_layouts if there are
+    xfb buffers
+  * 13c6f401ccb glsl: only validate xfb_buffer values when we have
+    enhanced layouts
+  * c17a3392c4c glsl: simplify conditions for setting various allowed
+    flags
+  * 2883e8f33db nir_to_tgsi: Add a flag for lowering fabs, and use it in
+    r300/i915.
+  * f4ee7146f9f nir: Split the flag for lowering of fabs and fneg to
+    source modifiers.
+  * bd24f418c3c r300: Throw a compile error instead of an assert in r300
+    swizzle rewrites.
+  * 4968f8c0663 r300: Demote a compiler assert(0) to a compile failure.
+  * 97d13b2debb d3d12: Fix take_ownership semantic for constant buffers
+  * d52d500f17a r300: Request that nir-to-tgsi avoid generating
+    TGSI_OPCODE_CMP.
+  * 4a1ba7914a0 ci/lavapipe: update lvp asan results after leak fixes.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 09 Feb 2022 15:38:09 +0100
+
 mesa (22.1.0~git2202080622.a52e4871fe9~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
