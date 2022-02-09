@@ -1,3 +1,40 @@
+libsdl2 (2.0.21+git2202090950.5b41844c7~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 5b41844c7 Fixed bug #5322 - register virtual input devices as
+    SDL_Touch device, fix compilation
+  * 3a9bbf604 Fixed bug #5322 - register virtual input devices as
+    SDL_Touch device because they can send SOURCE_TOUCHSCREEN events
+    even if getSources() doesn't declare them.
+  * 59f1e2875 Android: add debug function to display class/sources
+  * 228db3528 audio: pipewire: Tidy up formatting
+  * 9da9e85cb audio: pipewire: Reset all hotplug values and pointers on
+    shutdown
+  * 5b36a527e audio: pipewire: Remove redundant locks
+  * 48b4d1c41 audio: pipewire: Convert atomic hotplug conditional
+    variables to SDL_bool
+  * 67f12ede3 move bug #5333 fix to headers
+  * 54304b971 Fix rotation direction and center point on PSP
+  * 2b572dff8 Make RenderCopyEx rotate around center
+  * 2df2da11f Android: handleMotionEvent() is checking for
+    SOURCE_JOYSTICK. So don't handle DPAD GAMEPAD (see #5322, #2718)
+  * 1fc5dba3d Android: test for SOURCE_KEYBOARD / SOURCE_MOUSE. Don't
+    compare to 0, since there are several bits (see #5322, #2718)
+  * 7935cfacc SDL_mfijoystick.m: use __typeof instead of typeof.
+  * 9b817248c SDL_spinlock.c: define HAVE_GCC_ATOMICS for windows/clang
+    builds,
+  * f18571120 Fixed bug #5310: Android, Undefined reference to
+    AAssetManager_fromJava
+  * 68dd84f1d Android: TouchDevice -1 is reserved for SDL synthetic
+    devce (See #5322)
+  * 94e5c3f30 testgesture: display device name with SDL_GetTouchName()
+  * 580d23182 Sync wiki -> header
+  * e7e44df03 Dynapi: add SDL_GetTouchName() entry
+  * 34d4f5b14 Fixed bug #2032: add SDL_GetTouchName to expose the driver
+    name of the device (Thanks @mgerhardy!)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 09 Feb 2022 15:36:50 +0100
+
 libsdl2 (2.0.21+git2202080036.8ce003a42~i~wayland6) impish; urgency=medium
 
   * New snapshot:
