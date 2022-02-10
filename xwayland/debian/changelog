@@ -1,3 +1,11 @@
+xwayland (2:21.1.99+git2202091236.1801fe0ac~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 1801fe0ac dix: Fix use after free in input device shutdown
+  * 6ef5c0572 dix: Correctly save replayed event into GrabInfoRec
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Feb 2022 10:31:31 +0100
+
 xwayland (2:21.1.99+git2202061231.34b870da8~i~wayland5) impish; urgency=medium
 
   * New snapshot:
