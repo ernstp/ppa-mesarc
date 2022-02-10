@@ -1,3 +1,10 @@
+libsdl2 (2.0.21+git2202091836.abc8198a1~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * abc8198a1 Render all sides when drawing rect on PSP
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Feb 2022 10:13:32 +0100
+
 libsdl2 (2.0.21+git2202090950.5b41844c7~i~wayland6) impish; urgency=medium
 
   * New snapshot:
