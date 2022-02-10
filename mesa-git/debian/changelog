@@ -1,3 +1,26 @@
+mesa (22.0.0~rc2+git2202091916.2006078e065~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 2006078e065 radeonsi: workaround Specviewperf13 Catia hang on GFX9
+  * 61ee076068f intel/fs: Assert that old pull-const code is not used if
+    devinfo->has_lsc
+  * baa1d912803 iris: invalidate L3 read only cache when VF cache is
+    invalidated
+  * d6f20bd2e4d anv: invalidate L3 read only cache when VF cache is
+    invalidated
+  * 826f071e2da intel/genxml: add PIPE_CONTROL field for L3 read only
+    cache invalidation
+  * 6836565db9a lavapipe: fix sampler + sampler view leaks.
+  * 763cc4c5218 r300: fix transformation of abs modifiers with negate
+  * 0a400c9d18d tc: CPU storage needs to be freed with align_free
+  * 72bf9bfbcd2 lavapipe: use util_pack_color_union() for generating
+    clear colors
+  * e93350a8334 .pick_status.json: Update to
+    7955df28a6660d8dff77c79c345aa28aa7fa859c
+  * 716fc5280ad VERSION: bump version for 22.0.0-rc2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Feb 2022 10:22:52 +0100
+
 mesa (22.0.0~rc1+git2202081823.2e1387c7528~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
