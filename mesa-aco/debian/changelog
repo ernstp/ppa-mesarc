@@ -1,3 +1,48 @@
+mesa (22.1.0~git2202100611.f93059b19f0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * f93059b19f0 venus: fix two VN_TRACE_SCOPE's in the same scope
+  * 987bc449548 iris: Drop the iris_resource aux usage bit fields
+  * ae763940e8c iris: Compute aux.possible_usages from aux.usage
+  * d905018a2c8 iris: Use iris_sample_with_depth_aux more often
+  * 85a7fb1e197 intel/isl: Add format assertions for surfaces using CCS
+  * 05b8b08ef49 iris: Avoid making some invalid CCS surface states
+  * a9beb87dce3 iris: Inline some surface_state.cpu references
+  * d705faad6cb iris: Add and use fill_surface_states
+  * eb51fd04147 iris: Add and use use_surface_state
+  * 89ebdd67c49 iris: Add and use iris_surface_state::aux_usages
+  * b60af618a0e iris: Drop res param from surf_state_offset_for_aux
+  * ce37e176f1d iris: Drop format param from fast_clear_color
+  * 6778b3a379d iris: Don't fast clear with the view format
+  * 68c1b50e48e aux/draw: fix llvm tcs lane vec generation
+  * 8d5be0a2b3f radv: Add submit locking with trace bo.
+  * e3cbc328e0d gallivm/nir: Call nir_lower_bool_to_int32 after
+    nir_opt_algebraic_late
+  * d633eace3fd ci/freedreno: Try to detect a wedged MMU that's happened
+    recently.
+  * b7278b2281f ci/lvp: Add a flake that's shown up a couple of times
+    since VKCTS 1.3.1.
+  * 2d15f9e3c21 ci/r300: Drop xfails that were fixed with the VK-GL-CTS
+    1.3.1.0 uprev.
+  * 20469009c71 nir: Delete the per-instr SSA liveness impl.
+  * 74c02d99b22 nir_to_tgsi: Replace the NIR SSA liveness with TGSI reg-
+    level liveness.
+  * f4ce3178d99 nir_to_tgsi: Track our TGSI insns in blocks before
+    emitting tokens.
+  * 3f84c67af85 tgsi: Refactor out a tgsi_util_get_src_usage_mask().
+  * e92209f2990 i915g: Report the temps usage
+  * bfcc7c20c8c docs: update calendar and link releases notes for 21.3.6
+  * d66a22a02b4 docs: add release notes for 21.3.6
+  * aabc7034d7e docs: update calendar for 22.0.0-rc2
+  * 97c90c514fd turnip: Depth/stencil formats should not expose any
+    bufferFeatures
+  * 53dc5f774d4 radv: only emit the per-vertex VRS state if the pipeline
+    forced it
+  * d0171dffe18 radv: do not force per-vertex VRS if there is no pixel
+    shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 10 Feb 2022 10:14:58 +0100
+
 mesa (22.1.0~git2202091513.5d7bae5ab35~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
