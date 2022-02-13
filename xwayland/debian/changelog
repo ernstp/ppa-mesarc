@@ -1,3 +1,10 @@
+xwayland (2:21.1.99+git2202111033.6ad6517a7~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 6ad6517a7 xwayland: Fix cursor color
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Feb 2022 16:52:26 +0100
+
 xwayland (2:21.1.99+git2202091236.1801fe0ac~i~wayland5) impish; urgency=medium
 
   * New snapshot:
