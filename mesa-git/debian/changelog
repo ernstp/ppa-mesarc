@@ -1,3 +1,26 @@
+mesa (22.0.0~rc2+git2202102200.b8dc56f5f81~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * b8dc56f5f81 nir: Produce correct results for atan with NaN
+  * 44444b5d1ee nir: Properly handle various exceptional values in frexp
+  * 599cf9ff338 spirv: Produce correct result for GLSLstd450Tanh with
+    NaN
+  * eda4465b700 spirv: Produce correct result for GLSLstd450Modf with
+    Inf
+  * bd52e0389d2 spriv: Produce correct result for GLSLstd450Step with
+    NaN
+  * e8c5bd567b5 intel/fs: Don't optimize out 1.0*x and -1.0*x
+  * d1fa63dafbe nir: All set-on-comparison opcodes can take all float
+    types
+  * 055df321227 iris: Don't fast clear with the view format
+  * d8afb09eecd aux/draw: fix llvm tcs lane vec generation
+  * 6b95c7756bc gallivm/nir: Call nir_lower_bool_to_int32 after
+    nir_opt_algebraic_late
+  * 53f53ca9828 .pick_status.json: Update to
+    22fc53493092a7507c1e2db47b0c8763158d7b2d
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Feb 2022 16:43:44 +0100
+
 mesa (22.0.0~rc2+git2202091916.2006078e065~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
