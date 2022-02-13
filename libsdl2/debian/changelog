@@ -1,3 +1,16 @@
+libsdl2 (2.0.21+git2202120710.f97a29f6e~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * f97a29f6e Use the real device VID/PID when seeing the Steam virtual
+    controller
+  * 85e650006 X11 Segmentation fault with multiple windows and renderers
+    (see #5256)
+  * 4cb618180 Do not build loadso test eboot for PSP
+  * a75041e8d Fixed bug #2140: basic support to convert 16 colors
+    palette PIXELFORMAT_INDEX4, to allow conversion to SDL_Texture
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Feb 2022 16:33:53 +0100
+
 libsdl2 (2.0.21+git2202091836.abc8198a1~i~wayland6) impish; urgency=medium
 
   * New snapshot:
