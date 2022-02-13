@@ -1,3 +1,46 @@
+mesa (22.1.0~git2202130118.da8c2f5ed30~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * da8c2f5ed30 docs/features: Mark VK_KHR_ray_query in progress
+  * 3d41414d26a freedreno/ir3: split up load/store/atomic by generation
+  * b91b036322f isaspec: add gen-based leaf bitset separation
+  * 40468430a42 isaspec: fix gen_max to be 2^32-1
+  * 9dc30f99ae5 panfrost: Flesh out the Shader Program Descriptor
+  * 60b37424d91 panfrost: Simplify Valhall preload descriptor
+  * 1e9a35648a1 panfrost: Clarify unknowns in z/stencil descriptor
+  * 733d5f061d3 panfrost: Add more fields to Attribute Descriptor
+  * b31f6a821dc panfrost: Update primitive descriptor for Valhall
+  * d8d32cf7734 radv: Only wait on CS/PS to finish if we wait on a
+    semaphore.
+  * 79131b6ee6c radv: Fix preamble argument order.
+  * 7adb3c0f7f9 radv: Use larger arena sizes.
+  * 0f9756f4808 lima/ppir: refactor bitcopy to use unsigned char
+  * 7297f931f04 lima/ppir: initialize slots array for dummy/undef
+  * 5b158493663 lima/gpir: avoid invalid write in regalloc
+  * 58c619c3d6d lima: remove an unneeded lima_job_get assignment
+  * 116f01c8535 lima: add some checks for potential null pointer
+    dereference
+  * 60888c95bdf lima: fix warning of garbage value access
+  * 2d807979c95 lima/ppir: initialize spill_costs array in regalloc
+  * 8a8f34c3206 lima/ppir: avoid ppir_codegen_outmod implicit conversion
+  * 3d77950b8b7 lima/ppir: clean up override-init warnings
+  * 823be63216a lima/gpir: clean up override-init warnings
+  * 8a30b1541c6 venus: use 64KB alignment for suballocations
+  * 05a2cea14c4 venus: no roundtrip needed for shmem backed by
+    BLOB_MEM_HOST3D
+  * a76d1e0e741 venus: init renderer_info at renderer creation (part 2)
+  * ddba7337c75 venus: init renderer_info at renderer creation (part 1)
+  * 1bbbabedb7a aco/insert_exec_mask: refactor and remove some
+    unnecessary WQM handling code
+  * d7d7b9974ab aco/insert_exec_mask: refactor and simplify
+    get_block_needs()
+  * fcc5dec8d69 aco/insert_exec_mask: remove ever_again_needs and
+    Exact_Branch
+  * cbb1b095ca9 aco/insert_exec_mask: remove some unnecessary WQM loop
+    handling code
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Feb 2022 16:35:21 +0100
+
 mesa (22.1.0~git2202100611.f93059b19f0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
