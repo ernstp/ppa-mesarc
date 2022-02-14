@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu (21.0.0+git2202142023.8bc148f~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 8bc148f Fix spelling/wording issues
+  * 65c1273 Add option for non-vsynced flips for "secondary" outputs.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Feb 2022 21:44:20 +0100
+
 xserver-xorg-video-amdgpu (21.0.0+git2108271336.6936552~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
