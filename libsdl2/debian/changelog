@@ -1,3 +1,10 @@
+libsdl2 (2.0.21+git2202141059.66ee79bd6~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 66ee79bd6 [PSP] Don't swizzle streaming textures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Feb 2022 21:34:28 +0100
+
 libsdl2 (2.0.21+git2202120710.f97a29f6e~i~wayland6) impish; urgency=medium
 
   * New snapshot:
