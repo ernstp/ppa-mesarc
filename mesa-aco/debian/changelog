@@ -1,3 +1,21 @@
+mesa (22.1.0~git2202142018.b6557b80a50~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * b6557b80a50 intel/compiler: fix array & struct IO lowering in mesh
+    shaders
+  * e6cfd1ed642 spirv: Create PRIMITIVE_INDICES for NV_mesh_shader on-
+    demand.
+  * 0445802ab2e compiler: Extract num_mesh_vertices_per_primitive
+    function.
+  * 32155851f10 radv: remove set but unused radv_buffer::shareable
+  * af420833f0d radv: remove useless NULL checks in
+    vkBind{Buffer,Image}Memory2()
+  * 2dcd12f38be radv: fix finding shaders by PC
+  * 306e153c188 radv: make the trap handler shader BO resident
+  * a224b7a057a radv: fix allocating/uploading the trap handler shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Feb 2022 21:35:50 +0100
+
 mesa (22.1.0~git2202130118.da8c2f5ed30~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
