@@ -1,3 +1,20 @@
+libdecor-0 (0.1.0+git2202141155.2173e1a~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 2173e1a Fix leak of plugin private data
+  * 3b73224 Fix checking of plugin file extension
+  * e76b4ec Add a Meson devenv
+  * c3c4316 Allow multiple paths in LIBDECOR_PLUGIN_DIR
+  * 755122c Fix a possible use after free
+  * a5f72a6 os-compatibility: use libdecor in debug name / temporary
+    file prefix
+  * 888c55d os-compatibility: make os_resize_anonymous_file private
+  * 0f19596 os-compatibility: drop duplicate _GNU_SOURCE in favor of
+    meson
+  * 466230a build: add memfd_create fallback from libwayland
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Feb 2022 21:34:12 +0100
+
 libdecor-0 (0.1.0+git2201271217.316b337~i~wayland0) impish; urgency=medium
 
   * New snapshot:
