@@ -1,3 +1,19 @@
+libsdl2 (2.0.21+git2202152207.18032979d~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 18032979d Added the hint SDL_HINT_JOYSTICK_ROG_CHAKRAM to control
+    whether ROG Chakram mice show up as joysticks
+  * 75ffa24e3 Software Render Jitter in rotation (bug #5143) The output
+    surface doesn't necessarily to have even width and height.
+  * 61abc4e5b PSP: SDL_RenderCopyEx rotation and global scaling around
+    the wrong way (see #bug 3070)
+  * 18b76fcc5 Fixed bug #3070 -  SDL_RenderCopyEx rotation and global
+    scaling around the wrong way (software renderer)
+  * e366ad128 Fixed bug #2308: SDL_RenderCopyEx rotation center
+    precision (software renderer)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Feb 2022 18:09:10 +0100
+
 libsdl2 (2.0.21+git2202141059.66ee79bd6~i~wayland6) impish; urgency=medium
 
   * New snapshot:
