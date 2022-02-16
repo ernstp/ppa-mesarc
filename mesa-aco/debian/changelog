@@ -1,3 +1,50 @@
+mesa (22.1.0~git2202161620.108e6eaa83e~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 108e6eaa83e tegra: Use private reference count for resources
+  * e8ce0a33570 tegra: Use private reference count for sampler views
+  * 4e252cbc7df aux/trace: fix dumping of pipe_texture_target
+  * 1912503224d radv: Don't disturb dynamic primitive topology with mesh
+    shading.
+  * da719792ad2 radv: Disable IB2 on compute queues.
+  * 3fad6325cd4 radeonsi: use SI_PROFILE_CLAMP_DIV_BY_ZERO for viewperf
+  * 9685b5785b0 radeonsi: add SI_PROFILE_CLAMP_DIV_BY_ZERO
+  * 13674245011 ci: Uprev virglrenderer and crosvm
+  * 3ef858a6f67 ir3/spill: Fix simplify_phi_nodes with multiple loop
+    nesting
+  * d3b4202b63c mesa/st: always use DXT5 when transcoding ASTC format
+  * 103699677bd radv: allow to force per-vertex VRS if the config file
+    is present
+  * c50557d9612 radv: allow applications to dynamically change
+    RADV_FORCE_VRS
+  * 5e2d9202e28 radv: add RADV_FORCE_VRS_CONFIG_FILE to configure per-
+    vertex VRS
+  * a862e15ee7c radv: rename RADV_FORCE_VRS_NONE to RADV_FORCE_VRS_1x1
+    and accept 1x1
+  * b4f526cc191 radv: only re-emit the per-vertex VRS rates if necessary
+  * 99d7c130510 radv: rework RADV_FORCE_VRS to make it more dynamic
+  * cbd5724a6df aco: implement nir_intrinsic_load_vrs_rates_amd
+  * 772aeff2c4c ac/llvm: implement nir_intrinsic_load_vrs_rates_amd
+  * 85436896c43 radv: declare a new shader argument for loading the VRS
+    rates
+  * 74b932f8d34 nir: add nir_intrinsic_load_vrs_rates_amd
+  * 9cbcdfb514e anv: use vk_image_view::format for creating dynamic
+    renderpasses
+  * 818c5dedf46 vulkan: Add back vk_image_view::format
+  * 05e9e7767d7 vulkan: Rename vk_image_view::format to view_format
+  * 9dd15295e30 venus: properly destroy deferred ahb image before real
+    image creation
+  * 3652ff2fa1d draw: Don't look at .nir if !IR_NIR.
+  * 780949c62bc i915g: Initialize the rest of the "from_nir" temporary
+    VS struct.
+  * a6a651b96ac r300: Delete the loop unrolling.
+  * 4f3f245b784 zink: radv ci updates
+  * ffdac8bfa78 vulkan/wsi/wayland: ensure added formats have flags
+  * 5617d5c8854 vulkan/wsi/wayland: de-duplicate
+    wsi_wl_display_add_wl_shm_format
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Feb 2022 18:09:42 +0100
+
 mesa (22.1.0~git2202142018.b6557b80a50~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
