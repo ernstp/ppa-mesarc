@@ -1,3 +1,12 @@
+xwayland (2:21.1.99+git2202161425.7d2014e7d~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 7d2014e7d xfree86: Fix event data alignment in inputtest driver
+  * 43e934a19 dix: Don't send touch end to clients that do async grab
+    without touches
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Feb 2022 18:12:20 +0100
+
 xwayland (2:21.1.99+git2202111033.6ad6517a7~i~wayland5) impish; urgency=medium
 
   * New snapshot:
