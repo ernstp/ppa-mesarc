@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (21.0.0+git2202161636.402bfde~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 402bfde Build xz tarballs instead of bzip2
+  * c21bcdd glamor: unset AMDGPU_CREATE_PIXMAP_SCANOUT on shared pixmap
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Feb 2022 18:11:57 +0100
+
 xserver-xorg-video-amdgpu-hwe-18.04 (21.0.0+git2202142023.8bc148f~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
