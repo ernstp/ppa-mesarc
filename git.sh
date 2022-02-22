@@ -90,7 +90,7 @@ for dist in $DISTROS ; do
 
 	dch --distribution ${dist} -v ${DEBIAN_VERSION} "Build for $dist"
 
-	debuild -S -d
+	debuild --no-lintian -S -d
 done
 
 popd
