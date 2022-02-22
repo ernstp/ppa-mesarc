@@ -1,3 +1,43 @@
+mesa (22.0.0~rc2+git2202162325.af43668ef5b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * af43668ef5b iris: handle IRIS_MEMZONE_BINDER with a real vma_heap
+    like the others
+  * b5308c4ea02 tegra: Use private reference count for resources
+  * 671f4c893a0 tegra: Use private reference count for sampler views
+  * 7868c960b86 radv: Disable IB2 on compute queues.
+  * 6e348650ee6 ir3/spill: Fix simplify_phi_nodes with multiple loop
+    nesting
+  * f88718d8e95 mesa/st: always use DXT5 when transcoding ASTC format
+  * 3ba79691dce venus: properly destroy deferred ahb image before real
+    image creation
+  * 964f946386c i915g: Initialize the rest of the "from_nir" temporary
+    VS struct.
+  * 0e13817a71b iris: fix a leak on surface states
+  * 7dcc977c06c zink: always invalidate streamout counter buffer if not
+    resuming
+  * 9350e05cb19 ir3: Limit the maximum imm offset in nir_opt_offset for
+    shared vars
+  * 2c34dde7320 intel/compiler: fix array & struct IO lowering in mesh
+    shaders
+  * 6a86f13a31b radv: Fix preamble argument order.
+  * 25beed1afc0 lima/ppir: refactor bitcopy to use unsigned char
+  * b0b2720b0e6 lima/ppir: initialize slots array for dummy/undef
+  * 53d040e5803 lima/gpir: avoid invalid write in regalloc
+  * 105b4765e78 radv/winsys: fix initializing debug/perftest options if
+    multiple instances
+  * 57749a59572 .pick_status.json: Mark
+    b07372312d7053f2ef5c858ceb1fbf9ade5e7c52 as denominated
+  * 4fb2fa612cb anv: Call vk_command_buffer_finish if create fails
+  * 42e4600e87c zink: always set
+    VkPipelineMultisampleStateCreateInfo::pSampleMask
+  * 454a6c97358 anv: make the pointer valid before we assign stuff into
+    it
+  * 178798db3dd .pick_status.json: Update to
+    108e6eaa83eed3eb356f3cce835c5f5e3a836b8e
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 22 Feb 2022 19:20:37 +0100
+
 mesa (22.0.0~rc2+git2202102200.b8dc56f5f81~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
