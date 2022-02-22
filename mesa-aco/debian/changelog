@@ -1,3 +1,47 @@
+mesa (22.1.0~git2202221902.c063d8ff649~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * c063d8ff649 zink: prune ci lists
+  * 59bc17d57ae turnip: Request no implicit sync when we have no
+    implicit-sync WSI BOs.
+  * 83ee08f6d1a radv: fix build on BSD
+  * 2e867673709 pan/bi: Add BIFROST_MESA_DEBUG=nosb option
+  * c81c022e666 pan/bi: Implement basic scoreboarding pass
+  * 8f25d88d907 pan/bi: Print scoreboarding state
+  * 6ad9a7f6501 pan/bi: Add scoreboard state to IR
+  * 91c02893d87 pan/bi: Clean up nits in liveness analysis
+  * 734a8bdc5d6 pan/bi: Use bi_exit_block
+  * 75406a561fa pan/bi: Add bi_{start, exit}_block helpers
+  * e5423bb1295 pan/bi: Do not cull post-RA staging writes
+  * 87d46f40c87 pan/bi: Cull DTSEL_IMM dests in post-RA DCE
+  * 956b969616b pan/bi: Clarify requirement for barriers
+  * 9a14ddc22dd docs: add license to the redirects script
+  * 2eb644e470e mesa: Enable GL_NV_pack_subimage
+  * 606ac8d61e4 pan/bi: Enable nir_opt_shrink_vectors
+  * e0e63c2a8e6 pan/bi: Specialize IDVS in NIR
+  * 3c1021cd1ed panvk: Use more reliable assert for UBO pushing
+  * d223b7f096e radv, aco: Add u_foreach_bit to .clang-format.
+  * a6be12fdadc gbm: improve documentation about the lifetime of
+    resources
+  * 62074cb4ace ac: update shadowed registers
+  * e74929bfef8 radeonsi: move Arcturus code outside the gfx9 branch
+  * c740fd18ba4 ac/llvm: replace structured by vindex != NULL in
+    ac_build_buffer_store_common
+  * 1038382baf9 ac/llvm: replace structured by vindex != NULL in
+    ac_build_tbuffer_store
+  * c8e2c6faf64 radeonsi: use SET_SH_REG_INDEX with index=3 for
+    registers containing CU_EN
+  * 79a7ab642ac ac/surface: add more elements to meta equations because
+    HTILE can use them
+  * 9a28f79f7bf ac/surface/tests: fix missing NUM_PKRS extraction in
+    test_modifier
+  * 12e00be09b9 radeonsi: apply the LLVM discard bug workaround to LLVM
+    13 only
+  * 21f169b2fb3 ac,radeonsi: rework and optimize how TMPRING_SIZE is set
+  * 3c7df183a37 radeonsi: prepare clamp, alpha test before mrtz prepare
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 22 Feb 2022 19:18:26 +0100
+
 mesa (22.1.0~git2202161620.108e6eaa83e~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
