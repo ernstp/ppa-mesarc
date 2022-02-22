@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (22.0.0+git2202221626.533bd30~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 533bd30 Bump version for the 22.0.0 release
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 22 Feb 2022 19:22:47 +0100
+
 xserver-xorg-video-amdgpu-hwe-18.04 (21.0.0+git2202161636.402bfde~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
