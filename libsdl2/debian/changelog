@@ -1,3 +1,22 @@
+libsdl2 (2.0.21+git2202221731.08d27dfd7~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 08d27dfd7 SDL_openslES.c: Detect float support in runtime and use it
+  * 293a0aa80 opengl: If GL version >= 2.0, NPOT textures are supported,
+    so favor them.
+  * 9299a3e79 Workaround for crash in CoUninitialize()
+  * 978fbc325 Fixed compile warnings
+  * 6c531c433 Correct handling of sentinel events when polling without
+    removing events
+  * d90bd261f wscons: Make USB keyboard input layout independent
+  * 9d86ec857 Palette format: software Render Jitter in rotation (see
+    #5143) - same fix applied for rotation with palette surfaces - allow
+    other 8bits format (eg 332)
+  * ceb09ee74 Fixed #5143 - software Render Jitter in rotation better
+    precision calculating rotated coordinates and interpolation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 22 Feb 2022 19:17:53 +0100
+
 libsdl2 (2.0.21+git2202152207.18032979d~i~wayland6) impish; urgency=medium
 
   * New snapshot:
