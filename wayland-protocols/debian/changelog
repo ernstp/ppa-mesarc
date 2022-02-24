@@ -1,3 +1,11 @@
+wayland-protocols (1.25+git2202230840.7e2d9e3~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 7e2d9e3 ci: upgrade wayland to 1.20.0
+  * 4cc189f ci: add meson-logs artifacts
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:55:27 +0100
+
 wayland-protocols (1.25+git2201261554.d324986~b~base2) bionic; urgency=medium
 
   * New snapshot:
