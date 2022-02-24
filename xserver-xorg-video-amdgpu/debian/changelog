@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (22.0.0+git2202221657.89b3eb9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 89b3eb9 Update URLs to reflect gitlab migration
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:55:41 +0100
+
 xserver-xorg-video-amdgpu (22.0.0+git2202221626.533bd30~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
