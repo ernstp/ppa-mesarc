@@ -1,3 +1,50 @@
+mesa (22.0.0~rc2+git2202242356.9c94e7e7247~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9c94e7e7247 nir: Add missing dependency on nir_opcodes.py
+  * 60ad4707d48 pan/bi: Specialize IDVS in NIR
+  * a7364245060 panvk: Use more reliable assert for UBO pushing
+  * 07a9bc76d3c .pick_status.json: Mark
+    a8418abd748e8e761dda9c3594e29e560833d9ff as denominated
+  * e8d25b50c96 pan/bi: Lower swizzles on CSEL.i32/MUX.i32
+  * bd29a0689bc pan/bi: Avoid *FADD.v2f16 hazard in scheduler
+  * 183e19f23ad pan/bi: Avoid *FADD.v2f16 hazard in optimizer
+  * 9b9bc8ad642 ac/nir/ngg: Fix mixed up primitive ID after culling.
+  * ea23bb04f4a ac/surface: add more elements to meta equations because
+    HTILE can use them
+  * e2801306267 amd: add a workaround for an SQ perf counter bug
+  * d1e61f595d4 winsys/radeon: fix a hang due to introducing spi_cu_en
+  * 6f56bad4dd4 glx: fix pbuffer refcount init
+  * c454ff42f07 anv: don't set color state when input state was
+    requested
+  * 0906f9f7d29 radeonsi: fix depth stencil multi sample texture blit
+  * 6353a869ca6 crocus: fix leak on gen4/5 stencil fallback blit path.
+  * fdd351cc810 anv/genxml/intel/fs: fix binding shader record entry
+  * 5998d19a960 nir: fix lower_memcpy
+  * 4aa73d53108 anv: Don't assume depth/stencil attachments have depth
+  * 1d25a226fa9 intel/compiler: make CLUSTER_BROADCAST always deal with
+    integers
+  * fa4d9f59348 anv: only advertise 64b atomic floats if 64b floats are
+    supported
+  * 2a03c296fd7 radv: enable radv_disable_aniso_single_level for The
+    Evil Within 1&2
+  * 527bac358d5 .pick_status.json: Update to
+    3759a16d8a883355effa435f46867951ce712dbe
+  * 277d7fe83d3 iris: handle IRIS_MEMZONE_BINDER with a real vma_heap
+    like the others
+  * e76b049b2ba tegra: Use private reference count for resources
+  * bd23929d016 tegra: Use private reference count for sampler views
+  * 47c9c42764f radv: Disable IB2 on compute queues.
+  * db7f26a9447 ir3/spill: Fix simplify_phi_nodes with multiple loop
+    nesting
+  * d191aa607ce mesa/st: always use DXT5 when transcoding ASTC format
+  * c9215c391ad venus: properly destroy deferred ahb image before real
+    image creation
+  * 53f532bac20 i915g: Initialize the rest of the "from_nir" temporary
+    VS struct.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:53:36 +0100
+
 mesa (22.0.0~rc2+git2202162325.af43668ef5b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
