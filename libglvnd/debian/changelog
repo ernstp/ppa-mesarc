@@ -1,3 +1,11 @@
+libglvnd (1.4.0+git2202241648.c8ee005~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * c8ee005 Merge branch 'master' into 'master'
+  * 7107f73 Add BTI landing pads for aarch64
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:51:13 +0100
+
 libglvnd (1.4.0+git2202071650.b2f8bab~i~wayland0) impish; urgency=medium
 
   * New snapshot:
