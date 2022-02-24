@@ -1,3 +1,22 @@
+libsdl2 (2.0.21+git2202241811.98353533e~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 98353533e riscos: Report keyboard repeat events
+  * af40cb6f0 Added support for the Razer Huntsman Analog keyboard in
+    controller mode
+  * 669a7f855 Sync wiki -> header
+  * 4a43321c8 cmake: Fix bug #5361.
+  * 94d43186f GameCubeAdapter: Add suppport for all rumble modes This
+    adds support for all 3 of the gamecube controller's rumble modes
+    Rumble: 1 Stop: 0 StopHard: 2 This is useful for applications that
+    need the full range of support This also adds a hint to control
+    rumble behavior, defaults 0 to maintain compatibility
+  * b946e31ec video: Allow unaccelerated
+    SDL_HINT_FRAMEBUFFER_ACCELERATION renderers.
+  * 60ddb74cf video: rework how we prepare a texture framebuffer.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:51:23 +0100
+
 libsdl2 (2.0.21+git2202221731.08d27dfd7~i~wayland6) impish; urgency=medium
 
   * New snapshot:
