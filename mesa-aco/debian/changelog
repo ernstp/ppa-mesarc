@@ -1,3 +1,43 @@
+mesa (22.1.0~git2202250025.834db3aa8d0~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 834db3aa8d0 docs: remove incorrect drivers from extension
+  * 988d5aae74d panfrost: Flush resources when shadowing
+  * 5536852d60e panfrost: Handle NULL samplers
+  * 53ef20f08d4 panfrost: Handle NULL sampler views
+  * 304851422a4 panfrost: Fix set_sampler_views for big GL
+  * 4b2769493ed panfrost/ci: Update xfails list
+  * 97f18d29292 blorp: Add blorp_measure hooks to the blitter codepaths
+  * e6b7e743083 iris: Set MI_FLUSH_DW::PostSyncOperation correctly
+  * c393753daa4 r300: add predicate instructions to statistics of vertex
+    shaders
+  * 8eb9bffdfc1 r300: report number of loops in shader statistics
+  * 517b37a08c3 r300: use %u specifiers when printing unsigned stats
+    values
+  * e7978412c3f r300: only print shader statistics when compilation
+    succeeds
+  * b124f83bc27 zink: add a flake channel
+  * cd2a4cc47c3 pan/bi: Unit test message preloading optimization
+  * eb1479bda22 pan/bi: Support message preloading
+  * c8437cd415c pan/bi: Account for message preloading in shaderdb
+  * 19541dc8c86 pan/bi: Add bi_before_nonempty_block helper
+  * 6618697e0e7 panfrost: Pack message preloads from compiler
+  * bd06a266623 panfrost: Add an unpacked message preload struct
+  * 2d0c4973dc1 panfrost: Remove Message Preload Descriptor from v6.xml
+  * b130f8f4cfc venus: add macros to help with future extensions
+  * 43bbe367ea5 panfrost/ci: Move T860 flake to skip
+  * 5c07f7c427c panfrost/ci: Move T720 flakes to skips
+  * eecc62ccbd8 Revert "ci: Disable jobs to the Collabora lab"
+  * cf99584f510 broadcom/compiler: move uniforms right before their
+    first use after scheduling
+  * f1d20ec67c3 nir/nir_opt_move: handle non-SSA defs
+  * fe2249eac50 nir: add a nir_instr_def_is_register helper
+  * 0a044687040 nir/nir_opt_move: allow to move uniform loads
+  * f692bda4843 ci: Disable jobs to the Collabora lab
+  * c0695bb4733 ci: Allow disabling the whole of the Collabora farm
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:51:46 +0100
+
 mesa (22.1.0~git2202221902.c063d8ff649~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
