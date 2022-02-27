@@ -1,3 +1,43 @@
+mesa (22.1.0~git2202272126.114e48e923d~b~mesaaco0) bionic; urgency=medium
+
+  * New snapshot:
+  * 114e48e923d CI: Disable panfrost-t760
+  * f2dee2ea555 docs: update irc channel
+  * 5558f7de59d docs: mark virgl gles2 renderer as done
+  * 5cce0d1d9d3 docs: update virgl description
+  * ca4ad9c2cb3 docs: link to gitlab instead of cgit
+  * 32de503b022 docs: master -> main
+  * 76ee3eeae95 docs: Virgl -> VirGL
+  * 4ebd3b041bb docs: qemu -> QEMU
+  * 5494b686947 docs: add missing get
+  * 2015d458b6e docs: remove a few repeated words
+  * 6897266ce01 docs: import virgl docs
+  * e1964e1dde7 zink: don't free non-fbfetch dsl structs when switching
+    to fbfetch
+  * 03a80490a47 zink: free push descriptor pools on deinit
+  * 698ae34844b zink: fix cached descriptor set invalidation for array
+    bindings
+  * 62b8daa889d zink: set shader key size to 0 for non-generated tcs
+  * 861fc10bfc7 zink: skip extra descriptor lookups for images during
+    barrier updates
+  * cd7ea80e70f zink: add layout to sampler descriptor hash
+  * 7431c309998 zink: fix typo for image descriptor rebinds
+  * a179977b8e3 zink: update descriptor refs after starting renderpass
+  * f0398180a59 radv: use MAJOR_IN_SYSMACROS for sysmacros.h include
+  * afece589dc6 util: fix util_cpu_detect_once() build on OpenBSD
+  * 623ff4ec429 util: fix u_print.cpp build on OpenBSD
+  * 7d609431d4f util: unbreak non-linux mips64 build
+  * e5c39bc427f intel/compiler: optimize flat inputs mask calculation
+  * e2cb562dd1b intel/compiler: ignore per-primitive attrs when
+    calculating flat input mask
+  * 216da26b3f3 pan/va: Add TEX_FETCH assembler case
+  * 794836daf06 pan/va: Handle sr_write_count in the disassembler
+  * eee6dad0c97 pan/va: Fix definitions of TEX_SINGLE and TEX_FETCH
+  * a58807fa955 pan/va: Don't use staging index as a sideband
+  * 49a4cc6af86 pan/va: Handle extended staging counts in assembler
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Feb 2022 22:18:01 +0100
+
 mesa (22.1.0~git2202250025.834db3aa8d0~b~mesaaco0) bionic; urgency=medium
 
   * New snapshot:
