@@ -1,3 +1,27 @@
+mesa (22.0.0~rc2+git2202252209.5cc0bcf6d79~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 5cc0bcf6d79 docs: remove incorrect drivers from extension
+  * b3f333348d5 panfrost: Flush resources when shadowing
+  * 4fee724fafe panfrost: Handle NULL samplers
+  * f47fdc49a9f panfrost: Handle NULL sampler views
+  * 76b498bd800 panfrost: Fix set_sampler_views for big GL
+  * 9db0bfb0733 blorp: Add blorp_measure hooks to the blitter codepaths
+  * 23032ee9dbb draw/so: don't use pre clip pos if we have a tes either.
+  * 94f5c307cb0 anv: Align state pools to 2MiB on XeHP
+  * de55b090e40 anv: Align GENERAL_STATE_POOL_MIN_ADDRESS to 2MiB
+  * 38c88f36ff9 panfrost: Fix FD resource_get_handle
+  * ace12c4da36 anv: Enable nir_opt_access
+  * 383369f1bd5 turnip: Use LATE_Z when there might be depth/stencil
+    feedback loop
+  * e4f1fafea95 iris: fix register spilling on compute shaders on XeHP
+  * bf5e7bcebb2 .pick_status.json: Update to
+    f030b75b7d2c359b90c18ee4ed83fa05265c12e0
+  * 0b51f5e3ca8 .pick_status.json: Update to
+    22efeec399fb55dcb364dabd65afab137d6f3fc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Feb 2022 22:19:51 +0100
+
 mesa (22.0.0~rc2+git2202242356.9c94e7e7247~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
