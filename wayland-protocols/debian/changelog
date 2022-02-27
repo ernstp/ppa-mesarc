@@ -1,3 +1,14 @@
+wayland-protocols (1.25+git2202252222.1293ff1~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1293ff1 staging/drm-lease: Annotate destructor event
+  * 8498e4c linux-explicit-synchronization: Annotate destructor events
+  * bbb683e fullscreen-shell: Annotate destructor events
+  * cae8a2b presentation-time: Annotate destructor events
+  * 6a7c979 build: Bump wayland-scanner version to 1.20.0
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Feb 2022 22:21:41 +0100
+
 wayland-protocols (1.25+git2202230840.7e2d9e3~b~base2) bionic; urgency=medium
 
   * New snapshot:
