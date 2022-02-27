@@ -1,3 +1,13 @@
+libdecor-0 (0.1.0+git2202251144.870462b~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 870462b Add more cleanup on exit of EGL demo
+  * dff53e4 Prevent libdecor-cairo from overwriting any user-set min
+    window size
+  * 17f258a readme: Add code of conduct section
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Feb 2022 22:17:48 +0100
+
 libdecor-0 (0.1.0+git2202141155.2173e1a~i~wayland0) impish; urgency=medium
 
   * New snapshot:
