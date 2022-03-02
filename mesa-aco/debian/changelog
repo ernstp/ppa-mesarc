@@ -1,3 +1,55 @@
+mesa (22.1.0~git2203022053.221ce1b35ae~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * 221ce1b35ae ci/freedreno: Consolidate some information about an a630
+    flake.
+  * a64408dcd51 ir3: Don't assert on not finding the VS output for an FS
+    input.
+  * feb7e30e2d4 radv: include disable_aniso_single_level and
+    adjust_frag_coord_z in key
+  * 2de15273d5b freedreno: Improve robustness behavior for VBs with
+    offset > size.
+  * 92945825f5f freedreno: Fix start_slot handling in
+    set_vertex_buffers.
+  * 35ddb65ea6b freedreno: Use the resource size rather than BO size for
+    VFD_FETCH[].SIZE.
+  * b21e7e1ef7b docs: match build-flags markup with meson docs
+  * 23d3fb6da26 docs: fix a broken link
+  * 96c8880900e intel/fs: fix total_scratch computation
+  * 5b430758886 v3d: enable texture filtering anisotropic
+  * dc77542ed22 intel/compiler: Use pass helper in
+    brw_nir_adjust_offset_for_arrayed_indices
+  * f761f8fd9e2 broadcom/compiler: simplify node/temp translation during
+    register allocation
+  * 871b0a7f6a3 broadcom/compiler: don't sort nodes for register
+    allocation
+  * 4483cd24af5 broadcom/compiler: sink uniform loads
+  * e228642cf50 broadcom/compiler: move constants before their first
+    user
+  * a1998a9f43e broadcom/compiler: disallow TMU spills if max tmu spills
+    is 0
+  * cbb4d0dded2 broadcom/compiler: increase cost of TMU spills to 10
+  * a02dd17cb36 radeonsi: fix an assertion failure with register
+    shadowing
+  * 0f96948dfab radeonsi: fix register shadowing after the pm4 state
+    size was decreased
+  * 66e20d2bf70 ac: add an environment variable that parses IBs in files
+  * 3394f0ae14e ac: define PKT3_ATOMIC_MEM
+  * ff9e4409c13 ac: parse SET_SH_REG_INDEX packet
+  * 0cae7a59c08 ac/llvm: update LLVM processor names for gfx10.3
+  * 87d83f4103b ci: add point coord failures to d3d12
+  * 5ca7c20cf7b st/mesa: do nir_lower_io() for inputs & outputs with
+    transform feedback info
+  * ee4c5b16993 gallium/aux: add helper nir_gather_stream_output_info
+  * 2a708efec33 gallium/util: add util_dump_stream_output_info
+  * 1dcd1eac6a5 nir: pass nir_shader into nir_recompute_io_bases instead
+    of func_impl
+  * 606811bded2 nir: add nir_print_xfb_info
+  * ad68a1ee5a5 nir: add nir_gather_xfb_info_from_intrinsics for lowered
+    IO
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 02 Mar 2022 21:33:00 +0100
+
 mesa (22.1.0~git2202272126.114e48e923d~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
