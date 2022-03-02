@@ -1,3 +1,13 @@
+libsdl2 (2.0.21+git2202281804.2f7b885df~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 2f7b885df Fix 'potentially uninitialized local pointer variable'
+    error in UWP builds
+  * b7f8117d4 Build the standalone MSVC projects with GitHub Actions
+  * 550b8377b Combine the MSVC and UWP workflows
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 02 Mar 2022 21:32:33 +0100
+
 libsdl2 (2.0.21+git2202241811.98353533e~i~wayland6) impish; urgency=medium
 
   * New snapshot:
