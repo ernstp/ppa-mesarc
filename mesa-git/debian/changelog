@@ -1,3 +1,17 @@
+mesa (22.0.0~rc2+git2203021952.949b25d6fdd~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 949b25d6fdd d3d12: mark incorrectly passing tests as expected
+    failures
+  * 1dcb8306b1a .pick_status.json: Update to
+    b21e7e1ef7ba2c2cf97f073a8a01d6bc43835622
+  * f0ba075c41e llvmpipe: remove test that passes on 22.0 for some
+    reason from the fail list
+  * 8facc128558 .pick_status.json: Update to
+    fd3451babd6cded6794561d74c8919576ba1f97d
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 02 Mar 2022 21:34:50 +0100
+
 mesa (22.0.0~rc2+git2202252209.5cc0bcf6d79~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
