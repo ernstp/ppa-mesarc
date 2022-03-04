@@ -1,3 +1,38 @@
+mesa (22.0.0~rc3+git2203032344.3386e2a3edd~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3386e2a3edd zink: ci updates
+  * f2a263bb124 lavapipe: reference gallium fences correctly.
+  * 29822cf29af zink: always invalidate streamout counter buffer if not
+    resuming
+  * dcb32ae3a54 zink: always set
+    VkPipelineMultisampleStateCreateInfo::pSampleMask
+  * 9dcf2c0f3c0 lavapipe: fix sampler + sampler view leaks.
+  * 9175d1a2b07 .pick_status.json: Update to
+    48b3ef625e1909c1be31fbe10adb53734af38eb4
+  * fea4ef272ea lavapipe: ci updates
+  * 1aa5f5e575f zink: ci updates
+  * b4245e38935 lavapipe: use util_pack_color_union() for generating
+    clear colors
+  * 01db75635ad Revert "anv: Require the local heap for CCS on XeHP"
+  * 6961f75931f ir3/nir: Fix 1d array readonly images
+  * 962197c5fdb ir3: Don't always set bindless_tex with readonly images
+  * db716caf8c0 ir3: Use CAN_REORDER instead of NON_WRITEABLE
+  * a5dfdd54c00 util: use correct type in sysctl argument
+  * 4d5eea67323 util: fix build with clang 10 on mips64
+  * 381fe26b503 util/u_atomic: fix build on clang archs without 64-bit
+    atomics
+  * 711b82e6aed radv: use MAJOR_IN_SYSMACROS for sysmacros.h include
+  * 43be854eef5 util: fix util_cpu_detect_once() build on OpenBSD
+  * 85a5ec74f9d util: unbreak non-linux mips64 build
+  * 379697197a4 intel/compiler: ignore per-primitive attrs when
+    calculating flat input mask
+  * bfa73c568ed .pick_status.json: Update to
+    48b3ef625e1909c1be31fbe10adb53734af38eb4
+  * 148aac1b3bf VERSION: bump for 22.0.0-rc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Mar 2022 19:37:33 +0100
+
 mesa (22.0.0~rc2+git2203021952.949b25d6fdd~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
