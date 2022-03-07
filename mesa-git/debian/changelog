@@ -1,3 +1,10 @@
+mesa (22.0.0~rc3+git2203042220.716ca39489b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 716ca39489b ci/zink: mark tests fixed by previous commit as fixed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Mar 2022 02:40:16 +0100
+
 mesa (22.0.0~rc3+git2203032344.3386e2a3edd~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
