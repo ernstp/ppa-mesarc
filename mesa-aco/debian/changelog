@@ -1,3 +1,45 @@
+mesa (22.1.0~git2203060344.c82dcdf598f~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * c82dcdf598f gallivm: avoid division by zero when computing cube face
+  * cf9454bb2a1 gallivm: fix debug prints for halfs
+  * ba18799ca12 pan/bi: Don't assign slots for the blend second source
+  * 66a604efb52 pan/bi: Skip psuedo sources in ISA.xml
+  * 9d4441c71aa panfrost: Fix ubo_mask calculation
+  * 0b232b86598 panfrost: Improve comment for emit_fragment_job
+  * 24101d944b7 pan/bi: Add documentation for
+    bifrost_nir_lower_store_component
+  * 42caddcf6ba pan/bi: Make disassembler build reproducibly
+  * d6c431c2e3e panfrost: Re-emit descriptors after resource shadowing
+  * b164ee0d7b1 panfrost: Set dirty state in set_shader_buffers
+  * cb8c47b15e4 pan/bi: Check dependencies of both destinations of
+    instructions
+  * 9e714f7455d pan/bi: Add interference between destinations
+  * 198cb4a77ad panfrost: Disable point size upper limit clamping
+  * 66684339d5f panfrost: Update point size limits to match hardware
+    behaviour
+  * d54efebf043 panfrost: Set
+    PIPE_CAP_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION
+  * 948300da279 pan/mdg: Use util_logbase2 instead of C99 log2
+  * e42a8a5b92a a4xx: add emission of compute state, and compute
+    dispatch
+  * 63bba1dc6c4 a4xx: add logic to emit image/ssbo state
+  * aac7028b583 freedreno/ir3: support a4xx compute differences
+  * 6fb5e64eadb freedreno/ir3: support a4xx in load/store buffer/image
+    emission
+  * e9cd4fba6f9 freedreno/perfetto+fdperf: Set SYSPROF param
+  * af4b7f74b2c freedreno/drm: Add SYSPROF param
+  * f925794b16d freedreno: Update uapi header
+  * d2e498b6a5d egl+libsync: Add helper to complain about invalid fence
+    fd's
+  * 1e25f3b2825 android: Push in-fence-fd down to driver
+  * dfac374220d gallium/dri: Extend image extension to support in-fence
+  * af2951dde84 radv/ci: update list of expected failures
+  * 51c6fdf708f radv/ci: skip dEQP-
+    VK.renderpass2.depth_stencil_resolve.*_samplemask
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Mar 2022 02:38:26 +0100
+
 mesa (22.1.0~git2203041820.7ffee7f1ab3~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
