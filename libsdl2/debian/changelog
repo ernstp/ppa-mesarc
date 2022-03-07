@@ -1,3 +1,14 @@
+libsdl2 (2.0.21+git2203062202.b2463a917~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * b2463a917 events: Add logging support for several missing event
+    types
+  * bdafe1e04 Fixed whitespace
+  * 2e801b1ae Split long text input into multiple events if needed
+    (thanks @zreedy!)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Mar 2022 02:37:59 +0100
+
 libsdl2 (2.0.21+git2203041830.232c3556a~i~wayland6) impish; urgency=medium
 
   * New snapshot:
