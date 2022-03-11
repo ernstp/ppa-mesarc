@@ -1,3 +1,47 @@
+mesa (22.0.0+git2203102313.337e147901d~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 337e147901d ci: Fixup some lvp expected passes
+  * 3630f1609eb delete me
+  * e6e021dc5f4 llvmpipe: clamp surface clear geometry
+  * 3fc09b282a0 lavapipe: clamp clear attachments rects
+  * b799d764e2c llvmpipe: fix debug print iterating in
+    set_framebuffer_state
+  * acdab738d23 radv: add reference counting for descriptor set layouts
+  * 4b45d80f054 .pick_status.json: Update to
+    cc4f0e804e6feee17a657d052f4f2ee32ebe53d0
+  * cc1bd5c9877 docs: add release notes for 22.0.0
+  * a82920af6ef VERSION: bump for 22.0.0 release
+  * 9848a7b7fcd gallivm/nir: extract a valid texture index according to
+    exec_mask.
+  * 5bb4e9a0870 intel/fs: fix total_scratch computation
+  * db9c1251f10 zink: set shader key size to 0 for non-generated tcs
+  * e6f159d6262 radeonsi: change rounding mode to round to even
+  * c75e89962e4 zink: invalidate non-punted recycled descriptor sets
+    that are not valid
+  * d8e5624984e zink: stop leaking descriptor sets
+  * 2caf7b788fe zink: mark fbfetch push sets as non-cached
+  * da863546249 zink: fix descriptor cache pointer array allocation
+  * 4f1a3be5f6a zink: wait on program cache fences before destroying
+    programs
+  * eadc089854a zink: use a fence for pipeline cache update jobs
+  * 5f326287c9a zink: always update shader variants when rebinding a gfx
+    program
+  * e86cc99649c gallivm: avoid division by zero when computing cube face
+  * 085a5d96e5c pan/bi: Don't assign slots for the blend second source
+  * 909b675c193 pan/bi: Skip psuedo sources in ISA.xml
+  * 8a22cc32af3 panfrost: Fix ubo_mask calculation
+  * 4a60a6be41d pan/bi: Make disassembler build reproducibly
+  * c3497b6e451 panfrost: Re-emit descriptors after resource shadowing
+  * 1ab727add7f panfrost: Set dirty state in set_shader_buffers
+  * 03082e84c52 pan/bi: Check dependencies of both destinations of
+    instructions
+  * 8821f6cd24f pan/bi: Add interference between destinations
+  * aa43f9816e1 panfrost: Set
+    PIPE_CAP_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Mar 2022 15:19:55 +0100
+
 mesa (22.0.0~rc3+git2203042220.716ca39489b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
