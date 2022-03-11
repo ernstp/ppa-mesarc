@@ -1,3 +1,53 @@
+mesa (22.1.0~git2203111058.adea0960295~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * adea0960295 ci: update various ci result files
+  * 2a14baab855 mesa: check for valid internalformat with
+    glTex[Sub]Image
+  * 6cea8a43fa0 anv: silence compiler warning
+  * 90000aea9b9 anv: make a couple of descriptor function private
+  * e12698724e5 anv: rename host only descriptor internal flag
+  * 87f59b18cf4 anv: don't lazy allocate surface states in descriptor
+    sets
+  * 71cd6a7b84c anv: fix acceleration structure descriptor copies
+  * 968d68125c2 radeonsi: don't clear framebuffer.state before dcc
+    decomp
+  * 01442cf4d4e iris: Restore flagging of dirty bindings in
+    binder_realloc
+  * b366fef091d radv: optimize the number of loaded components for VS
+    inputs in NIR
+  * 1ec4e568de2 radv: abstract queue family away from queue family
+    index.
+  * afb4cced5c3 lavapipe: more descriptor validation
+  * 0c130d64d3c lavapipe: validate per-stage descriptor limits when
+    creating pipeline layouts
+  * 21abb01fb96 lavapipe: make device limits a physical device struct
+  * 5ab0e3f0bb0 anv: fix some dynamic rasterization discard cases in
+    pipeline construction
+  * 1e3e7b3a4da anv: fix CmdSetColorWriteEnableEXT for maximum rts
+  * 52f6978484f anv: fix xfb usage with rasterizer discard
+  * e8c3be0eb84 crocus: don't map scanout buffers as write-back
+  * 42e78ba1257 llvmpipe: fix occlusion queries with early depth test
+  * f7175bf416d lavapipe: Use the common
+    vk_enqueue_CmdBindDescriptorSets
+  * ac58e93633d lavapipe: Reference count pipeline layouts
+  * 48a10c5dd31 lavapipe: Allocate descriptor set layouts with DEVICE
+    scope
+  * 94ea3b9c031 vulkan/cmd_queue: Add a common
+    vk_cmd_enqueue_CmdBindDescriptorSets
+  * c1070556a0c vulkan/cmd_queue: Add a driver_free_cb hook
+  * 2106c3bab6b lavapipe: ci updates
+  * cf5c32a4b2d lavapipe: run nir_opt_copy_prop_vars during optimization
+    loop
+  * c94c8a70292 lavapipe: ci updates
+  * 6a4c7ef7286 lavapipe: skip format checks for EXTENDED_USAGE
+  * c40dc39b5a8 lavapipe: use the correct value for dynamic render
+    resolve attachment indexing
+  * 938488f4398 lavapipe: remove broken workaround for zink depth
+    texturing.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Mar 2022 15:18:01 +0100
+
 mesa (22.1.0~git2203060344.c82dcdf598f~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
