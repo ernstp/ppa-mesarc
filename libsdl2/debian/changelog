@@ -1,3 +1,43 @@
+libsdl2 (2.0.21+git2203111255.9de97e19c~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 9de97e19c emscripten: Don't prevent default on filtered key events
+  * afb0606f5 minor os/2 clean-ups.
+  * 50575aa18 Makefile.os2: fixed setting OS2DEBUG in CFLAGS.
+  * 677dc1015 rawinput: Fix double detection of gamepads on some 3rd
+    party X360 wireless receivers
+  * bf6986892 reduced a few ifdefs, fixed an unused warning if built w/o
+    SDL_HAVE_YUV.
+  * 01d38e7ad Make Win32 fullscreen and borderless windows minimizable
+  * 09b652b70 Make sure the string properties are actually strings
+    (thanks Nat!)
+  * c6eef542a Removed dead code
+  * 911ba8d34 hide impossible branch in D3D_UnlockTexture
+  * ea5b482bf Remove unused warning
+  * 45833a148 Prevent shadowing static variable '_this' with local
+    paramter '_this' of SDL_CreateWindowTexture
+  * a4a80c860 Fix variable may be uninitialized when used here [-
+    Wconditional-uninitialized]
+  * 04256a537 Fix compilation (see #5313)
+  * 0983fcee5 fix memory leak in D3D11_CreateRenderer
+  * 3f8b450de extend the code hidden by SDL_HAVE_YUV
+  * ce1883e1e fix compile error with disabled SDL_HAVE_YUV (vita) -
+    UpdateTextureYUV is not defined if SDL_HAVE_YUV is not defined/zero
+    + calling SDL_free suffice if the VITA_GXM_RenderData was just
+    allocated
+  * 14db417e1 Reenable getting the serial number on macOS
+  * c3ca3445b Prefer HIDAPI on macOS, as that has extended functionality
+  * 6a787619e Allow reading background events for MFi controllers
+  * b064ad6ac Allow GL_ARB_texture_non_power_of_two environment variable
+    to override OpenGL 2.0 check
+  * 1b7669374 Fixed the SDL controller type for
+    USB_PRODUCT_XBOX_ONE_XINPUT_CONTROLLER
+  * 41e7d1baa Add SDL_GetDisplayDPI implementation on Emscripten
+  * f03215bc7 fix linking with SDL_PULSEAUDIO_SHARED=OFF and
+    SDL_X11_SHARED=OFF
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Mar 2022 15:17:33 +0100
+
 libsdl2 (2.0.21+git2203062202.b2463a917~i~wayland6) impish; urgency=medium
 
   * New snapshot:
