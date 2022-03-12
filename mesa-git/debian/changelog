@@ -1,3 +1,18 @@
+mesa (22.0.0+git2203112121.7412747fe0f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 7412747fe0f mesa: Fix discard_framebuffer for fbo vs winsys
+  * 9de53fe5590 zink: lower dmod on AMD hardware
+  * 7c997acb9e5 docs: fixup zink gl 4.3 requirements
+  * 919b08343ac util/slab: add slab_zalloc
+  * d6c91199262 aux/trace: rzalloc the context struct
+  * 37d4a31ebaf lavapipe: fix pipeline creation for blend and zs states
+  * 092f43be3a3 lavapipe: update multisample state after blend state
+  * f7ee7575a45 ci: Fixup some lvp expected passes
+  * b651d7525f0 zink: map R8G8B8X8_SRGB -> R8G8B8A8_SRGB
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 12 Mar 2022 13:39:30 +0100
+
 mesa (22.0.0+git2203102313.337e147901d~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
