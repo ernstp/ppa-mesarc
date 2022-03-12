@@ -1,3 +1,10 @@
+xwayland (2:21.1.99+git2203081643.47d331746~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 47d331746 Xwayland: Do not map the COW by default when rootless
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 12 Mar 2022 13:41:26 +0100
+
 xwayland (2:21.1.99+git2202161425.7d2014e7d~i~wayland5) impish; urgency=medium
 
   * New snapshot:
