@@ -1,3 +1,32 @@
+mesa (22.1.0~git2203120912.cd00247db5b~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * cd00247db5b crocus: force ignore_sample_mask_out on gen4/5 for
+    precompile
+  * 7edda218fda intel: add some missing debug recompile info.
+  * 65db6b0e7ca bifrost: Constant fold after lower_explicit_io
+  * e0b6493c491 mesa: Remove unused framebuffer validation
+  * 1aa120b10f5 bifrost: Handle nir_op_frexp* and nir_op_ldexp
+  * d2a09f3dd3e bifrost: Implement fine and coarse derivatives
+  * 83010c57a62 bifrost: Simplify derivatives a bit
+  * c043e93ca53 bifrost: Lower usub_borrow
+  * e50eb1ce7ab util: fix msvc build
+  * d65dbe80189 anv: Allow MSAA resolve with different numbers of planes
+  * ffd67b39e71 zink: remove flake
+  * 95a44a5b092 lavapipe: Use the auto-generated
+    vk_enqueue_BeginRendering
+  * f76621f7192 vulkan/cmd_queue: Properly support non-array pointer
+    members
+  * 027f1302fcb radeonsi: add option to disable EFC
+  * 23e5b910c57 radeon: add EFC support to only VCN2.0 devices
+  * 9fa6ab962a9 frontends/va: zero-copy efc
+  * 96025265689 frontends/va: add encoder format conversion (EFC)
+    support
+  * 73153746d5b gallium: add parameters for encoder format conversion
+    (EFC) support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 12 Mar 2022 13:37:34 +0100
+
 mesa (22.1.0~git2203111058.adea0960295~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
