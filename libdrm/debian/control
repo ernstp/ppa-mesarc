@@ -14,8 +14,7 @@ Build-Depends:
  python3-setuptools,
  xutils-dev (>= 1:7.6+2),
  libudev-dev [linux-any],
- libpciaccess-dev,
- valgrind [amd64 armhf i386 mips mipsel powerpc s390x],
+ libpciaccess-dev
 Standards-Version: 4.1.4
 Section: libs
 Vcs-Git: https://salsa.debian.org/xorg-team/lib/libdrm

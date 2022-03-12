@@ -13,6 +13,7 @@ confflags = \
 	-Dradeon=true \
 	-Damdgpu=true \
 	-Dlibkms=false \
+	-Dvalgrind=false \
 	$()
 
 # Linux vs. the rest:
