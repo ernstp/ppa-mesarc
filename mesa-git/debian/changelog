@@ -1,3 +1,51 @@
+mesa (22.0.0+git2203161727.3b0d0fbe4b9~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3b0d0fbe4b9 gallivm: fix oob image detection for
+    cube/1dArray/2dArray/cubeArray
+  * 7559a9f8f6d meson: restore private requires to libdrm in dri.pc file
+  * 157e3046bd9 ir3/lower_spill: Fix corner case with oob offsets
+  * 08fd564c16b .pick_status.json: Update to
+    acbb0d86f71c950e29df70e357ae08e5ca903a49
+  * 3c03823941d .pick_status.json: Mark
+    5dbbc0f0a824e4addffeb115631a9c5bcb426c29 as denominated
+  * 553c60c6ff6 .pick_status.json: Mark
+    dd9b8881e0ad84ab1e74d972a8233f5c03e7b37a as denominated
+  * d63a6f52a7d lavapipe: always clone shader nir for shader states
+  * ecf3675b311 .pick_status.json: Update to
+    dc247e5d4319b644e373534495cc75f41bc7bcd2
+  * 1dc29007312 panfrost: Don't initialise the trampolines array
+  * 9c93c285ff1 pan/bi: Handle non-2D arrays
+  * f254c2ebf4b panfrost: Emulate GL_CLAMP on Bifrost
+  * 7976ceda559 freedreno/ir3: Don't try re-swapping cat3 srcs
+  * ab468e1e0b9 util: fix msvc build
+  * c457e5b7938 anv: Allow MSAA resolve with different numbers of planes
+  * 76b8a28d5a2 radeonsi: don't clear framebuffer.state before dcc
+    decomp
+  * bbdcc0d1e47 anv: fix some dynamic rasterization discard cases in
+    pipeline construction
+  * 0185719f0a5 anv: fix CmdSetColorWriteEnableEXT for maximum rts
+  * 3aca53b5dd3 anv: fix xfb usage with rasterizer discard
+  * 6822ea6304d crocus: don't map scanout buffers as write-back
+  * 41a8a3b0a07 lavapipe: run nir_opt_copy_prop_vars during optimization
+    loop
+  * 3c040493457 lavapipe: skip format checks for EXTENDED_USAGE
+  * b82412510b3 lavapipe: use the correct value for dynamic render
+    resolve attachment indexing
+  * f00548eeacd lavapipe: remove broken workaround for zink depth
+    texturing.
+  * deb0225609d zink: workaround depth texture mode alpha.
+  * 8bd9c64fefc zink: correctly set xfb packed output offsets
+  * 63e9e339876 zink: store the correct number of components for xfb
+    packing outputs
+  * a46dbbdc125 zink: use 64bit mask for xfb analysis
+  * c2541d65c8d util/bitset: Fix off-by-one in __bitset_set_range
+  * 4656dbee084 ir3/ra: Sanitize parallel copy flags better
+  * 17836a6d64f lavapipe: Reset the free_cmd_buffers list in
+    TrimCommandPool
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Mar 2022 19:24:34 +0100
+
 mesa (22.0.0+git2203112121.7412747fe0f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
