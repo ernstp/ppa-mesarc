@@ -1,3 +1,43 @@
+mesa (22.1.0~git2203161558.acbb0d86f71~b~mesaaco1) bionic; urgency=medium
+
+  * New snapshot:
+  * acbb0d86f71 panvk: Implement VK_EXT_vertex_attribute_divisor
+  * 58587c32cbd panvk: Implement indexed rendering
+  * a08b6953865 panvk: Fix per-instance attribute handling
+  * 417cf3d35e0 panvk: No-op zero-vertex draws
+  * 3244100557f Revert "virgl: Enable PIPE_CAP_TGSI_TEXCOORD when the
+    host supports it"
+  * 60517948af1 radv: fix missing destruction of the inotify thread
+  * 550f48a8265 anv: implement EXT_depth_clip_control
+  * 61ad60dc009 ci, radv: Update flake expectations
+  * a815d4001a6 ci, valve: Bump the trigger container
+  * 729537438e9 ci, valve: Show real kernel addresses in KFENCE reports.
+  * 737c86da624 radv: only clear VRAM for app and descriptor BOs when
+    set via drirc
+  * 45b909a5a0a radv/winsys: remove old comment about zerovram
+  * acb300a3f02 lavapipe: EXT_image_robustness
+  * 6345575f8a9 gallivm: fix oob image detection for
+    cube/1dArray/2dArray/cubeArray
+  * b7fbaf924d8 lavapipe: EXT_pipeline_creation_cache_control
+  * 9bce8784908 lavapipe: EXT_pipeline_creation_feedback
+  * dffe8141bdf lavapipe: KHR_zero_initialize_workgroup_memory
+  * e106c1294ba llvmpipe: add handling for zeroing cs shared memory
+  * f72d5a930b1 lavapipe: KHR_format_feature_flags2
+  * 90e091b072b lavapipe: use VkFormatFeatureFlags2 in format detection
+  * 65bf1cbc26e gallium: add flag to draw info to indicate converted
+    draws
+  * 864f3c0ee0e panvk: Fix SSBO buffer offsets
+  * 6214cce3826 panvk: Require 16B alignment for UBOs
+  * a54f5e8e00e anv: silence compiler warnings
+  * 2221e3d4873 ci: Add new Panfrost G52 skip
+  * c287ed4f398 meson: restore private requires to libdrm in dri.pc file
+  * 3b90d3997a1 turnip: use vk_shader_module_to_nir().
+  * 5a0e081e00a panvk: Use vk_shader_module_to_nir()
+  * 0c871d89aed panvk: Use vk_shader_module
+  * 0b4a80b4c4f anv: Use vk_shader_module_to_nir()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Mar 2022 19:22:37 +0100
+
 mesa (22.1.0~git2203120912.cd00247db5b~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
