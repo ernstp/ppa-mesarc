@@ -1,3 +1,39 @@
+mesa (22.1.0~git2203161913.893fa30afed~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 893fa30afed anv: Include scissors in viewport calculations
+  * b4e38e174f5 anv: Move viewport/scissor emit to genX_cmd_buffer.c
+  * 2c04373c45e anv: Calculate the real guardband based on render area
+  * 12d815bcac0 intel/guardband: Take min/max instead of total size
+  * d89d6c7a4d0 docs: Add high-level documentation for Vulkan render
+    passes
+  * 7521b5db182 docs: Add the start of Vulkan runtime docs
+  * 3501a3f9ed9 anv: Convert to 100% dynamic rendering
+  * 8112e6d601e anv: Drop pipeline pass/subpass in favor of
+    rendering_info
+  * ee9c0680436 anv/pipeline: Stop pretending we're the validator
+  * 2da152b5e67 anv: Stop treating color input attachments specially
+  * 1ad0f1b0045 anv/pass: Make unused color attachments
+    VK_ATTACHMENT_UNUSED
+  * 9bbecbed7a2 anv: Better null surface state size for dynamic
+    rendering
+  * fff3f8bfe55 anv: Fix handling of null depth/stencil attachments with
+    dynamic rendering
+  * 030b231ba98 vulkan/framebuffer: Add a flags field
+  * c3d8ca93009 vulkan/render_pass: Add an optimization for
+    UNDEFINED+LOAD_OP_CLEAR
+  * 17395d395a8 vulkan/render_pass: Support fragment shading rate
+  * 6b61953684d vulkan/render_pass: Provide self-dependeny information
+  * ca5ad9cbeed vulkan: Add helpers for getting rendering info from a
+    renderpass
+  * 1d726940d28 vulkan: Add a common CmdBegin/EndRederPass
+    implementation
+  * 874aeb8743d vulkan: Add a common vk_render_pass struct
+  * 83101429bf7 anv: Convert to vk_framebuffer
+  * d84e6b8f221 vulkan: Add a common vk_framebuffer struct
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Mar 2022 20:29:29 +0100
+
 mesa (22.1.0~git2203161558.acbb0d86f71~b~mesaaco1) bionic; urgency=medium
 
   * New snapshot:
