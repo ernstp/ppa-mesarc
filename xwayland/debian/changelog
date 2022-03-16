@@ -1,3 +1,13 @@
+xwayland (2:21.1.99+git2203150959.102764b68~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 102764b68 xwayland: Clear timer_armed in
+    xwl_present_unrealize_window
+  * 42113ab28 xwayland/present: Fix use-after-free in
+    xwl_unrealize_window()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Mar 2022 19:26:32 +0100
+
 xwayland (2:21.1.99+git2203081643.47d331746~i~wayland5) impish; urgency=medium
 
   * New snapshot:
