@@ -1,3 +1,43 @@
+libsdl2 (2.0.21+git2203161809.b2db570ce~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * b2db570ce SDL_triangle_blit_slow: sync code with SDL_blit_slow to
+    handle ARGB2101010
+  * 93e7caab9 SDL_blit_slow: remove one nested 'if()' because of
+    ARGB2101010 handling
+  * 56568ffb3 Remove 'reserved identifier' warning
+  * 1c1f5c180 imported two libtool mainstream commits 28fbcb6a and
+    b55b1cc8
+  * 2c6a9c519 minor optimization (SDL_audiocvt.c)
+  * 85dff3e45 emscripten: obey enable-misc/SDL_MISC settings
+  * 123b9aaa4 Adjust gradle dependencies to enable the build to position
+    assets for the APK
+  * 5905696e6 SDL_audiocvt.c: minor cleanup.
+  * 61a93d3c4 minor whitespace cleanup.
+  * d1e4367f5 SDL_windowskeyboard.c: fix build with
+    SDL_DISABLE_WINDOWS_IME defined.
+  * 1ee196b48 INSTALL.txt: Say "macOS" instead of "Mac OS X" in modern
+    times.
+  * 90b13e148 Merge remote-tracking branch 'refs/remotes/origin/main'
+  * c44966b78 Fixed bug #2691 - re-enable
+    surface_testCompleteSurfaceConversion for ARGB2101010
+  * f3e86b9fd Fixed bug #2199: make SDL_blit_slow handles
+    SDL_PIXELFORMAT_ARGB2101010, storing as RGBA
+  * 67848b653 Fix name of macOS platform and link to README file
+  * 3bebdaccb METAL: clip rect w/h must be <= render pass
+  * 7c421fec1 SDL_audiocvt.c: Don't byteswap 8-bit streams
+  * 363c36781 Fixed: Incorrect assumption that mouse button is released
+    when window is allocated
+  * 7495b9814 Make SDL_VIDEO_OPENGL_EGL optional on Android
+  * 0ad606b48 Android: add comment to set render target to NULL when
+    going to background (bug #4041)
+  * ecc1c871e SDL_endian.h: use endian predefs from newer gcc and clang
+    versions.
+  * ee6bfcdd6 SDL_blit_N.c: removed duplicated const (fixes bug #5401)
+  * 3ab739aff cmake: Make test code use proper C main functions.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Mar 2022 19:22:12 +0100
+
 libsdl2 (2.0.21+git2203112356.072db7b00~i~wayland6) impish; urgency=medium
 
   * New snapshot:
