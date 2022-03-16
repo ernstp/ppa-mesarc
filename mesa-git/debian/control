@@ -24,6 +24,7 @@ Build-Depends:
  libvulkan-dev [amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  x11proto-dev,
  linux-libc-dev (>= 2.6.31) [linux-any],
+ libpciaccess-dev,
  libx11-xcb-dev,
  libxcb-dri2-0-dev (>= 1.8),
  libxcb-glx0-dev (>= 1.8.1),
