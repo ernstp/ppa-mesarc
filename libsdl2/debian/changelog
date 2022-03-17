@@ -1,3 +1,31 @@
+libsdl2 (2.0.21+git2203172244.e5f45455c~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * e5f45455c Added a hint to mark a foreign window as usable with
+    OpenGL
+  * 4e49b78a1 Fixed compile warning and comment typo
+  * 0bf8ccfb6 video: Add a hint to allow Vulkan surfaces on foreign
+    windows
+  * ecaa22cbe Don't warn if anyone peeps for events after quitting the
+    event subsystem
+  * 331859079 Fix relative mouse input for Unvanquished
+    (unvanquished.net)
+  * 829e15a49 Ignore unknown WM_SIZE types.
+  * a164c9d24 SDL_cocoawindow.m: update fullscreen toggle when
+    SDL_SetWindowResizable called
+  * cc152103b Fixed warnings when building with cygwin
+  * e8c3ff56e Removed problematic call to ISensor_SetEventSink()
+  * bcb0f1de2 Fixed build when events are disabled
+  * 01bfde452 simplify SetDSerror - no need to keep the error in a
+    static variable - always print the error code - reduce the required
+    stack-size - reduce the number of snprintf calls (and code size)
+  * 01663238d testplatform.c: move static asserts out of TestTypes().
+  * f0d2747df use _Static_assert for SDL_COMPILE_TIME_ASSERT(), when
+    available
+  * dfbe1f724 SDL_GetBasePath() fixes for OS/2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Mar 2022 00:06:14 +0100
+
 libsdl2 (2.0.21+git2203161809.b2db570ce~i~wayland6) impish; urgency=medium
 
   * New snapshot:
