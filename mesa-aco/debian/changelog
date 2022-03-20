@@ -1,3 +1,42 @@
+mesa (22.1.0~git2203200635.c36f3f2db82~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * c36f3f2db82 nouveau: Fix out-of-bounds access in AlgebraicOpt
+  * d12e16fc3b5 nouveau: Handle unaligned tlsBase during spills
+  * 4de13d53fee iris: Fix MOCS for copy regions
+  * ed2f496ce49 ir3: set local_size for shaders of MESA_SHADER_KERNEL
+    type
+  * 44c52e94e99 ci/traces: Make sure we have no pre-existing traces-db
+    before starting.
+  * 49e2d39c666 lavapipe: fix i686 mingw build
+  * 47209e80db3 lavapipe: zalloc lvp_image_view structs
+  * 4a13b11f4ae lavapipe: break out resolves into separate functions
+  * 441c553ef7f lavapipe: store number of immutable samplers to pipeline
+    layout
+  * 7030d14e0d9 spirv: Properly mangle generic pointers
+  * 9ba636cdc76 docs: update calendar and link releases notes for 21.3.8
+  * daf6ee08d69 docs: add release notes for 21.3.8
+  * f831ba238f6 ci/turnip: Increase the hangcheck timer to 2 seconds.
+  * 0cbe4dd4c41 pan/bi: Use bi_dontcare for ZS_EMIT
+  * 1b934d5962c pan/bi: Emit arch-specific code for bi_dontcare
+  * 222d17fc671 pan/bi: Model Valhall action on bi_instr
+  * 38625af0101 pan/bi: Add Valhall-specific zero builder
+  * 666b714a372 pan/bi: Don't analyze helper reqs in !frag shaders
+  * a16163a9fd4 pan/bi: Print Valhall-specific FAU indices
+  * 32ca9200232 pan/bi: Use vertex/instance ID helpers
+  * 1e37113edef pan/bi: Add helpers to get vertex/instance ID
+  * 76a09b8cd33 pan/va: Fix ST_CVT definitions
+  * 9b7a45e3dc0 pan/va: Align error messages in disassembler tests
+  * 3a4b8641974 pan/va: Add missing .auto32 register format
+  * 263c5ef194e pan/va: Add LEA_ATTR_IMM instruction
+  * 459c6ac23fc pan/va: Model LEA_TEX_IMM more accurately
+  * 17caccd15d5 pan/va: Correct definition of ZS_EMIT
+  * 508335c927c panfrost: Add Tiler Job to v9 XML
+  * e635dc9ea51 panfrost: Refactor XML to permit non-IDVS jobs
+  * 53f1fa92193 panfrost: Fix definition of DCD on v9
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 20 Mar 2022 15:25:10 +0100
+
 mesa (22.1.0~git2203172314.3bd9b250609~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
