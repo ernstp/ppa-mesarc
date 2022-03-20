@@ -1,3 +1,41 @@
+libsdl2 (2.0.21+git2203191901.8f964576d~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 8f964576d Fixed parameter operation ordering for ease of reading
+  * 0517b61ed Relative mouse mode is tied to the window with keyboard
+    focus
+  * b559a4acc Fixed Android crash when SDL_HIDAPI_DISABLED set to 1
+  * a485ffc3c Fix "SDL_FALSE is not defined" runtime error for
+    emscripten.
+  * d81fee762 SDL_Rect: Added floating point versions of all the
+    rectangle APIs.
+  * 4d9bef604 SDL_Rect: minor code cleanups.
+  * c573ebe14 SDL_UnionRect: If both rects are empty, zero out the
+    result struct.
+  * fbbd0270e Fix "SDL_TRUE is not defined" runtime error for
+    emscripten.
+  * aef1e5673 Sync wiki -> header
+  * 40b7326b3 Added a note that SDL_RenderReadPixels() should be called
+    before SDL_RenderPresent()
+  * 6c9621772 Added the hint SDL_HINT_MOUSE_RELATIVE_MODE_CENTER,
+    controlling whether the mouse should be constrained to the center of
+    the window or the whole window in relative mode.
+  * d3cc5764c Modern CMake doesn't need "LANGUAGE C" for Objective-C
+  * 1868c5b52 Start rumbling once a raw input controller has been
+    correlated
+  * 3167ba342 Fixed freeing the Windows blank cursor
+  * 0387bf821 Fixed memory leak in WIN_CreateBlankCursor()
+  * 5ff42438e Added a hint to capture the mouse when mouse buttons are
+    pressed, defaulting on
+  * 09b8152fa Use SDL_Log instead of printf
+  * b22ce2b5a Workaround for bug in Microsoft WGI support
+  * d40627851 Try not forcing activation when grabbing the mouse in
+    fullscreen windows
+  * 4e784fce4 When updating grab state, only activate windows that are
+    grabbed, fullscreen, and shown.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 20 Mar 2022 15:24:42 +0100
+
 libsdl2 (2.0.21+git2203172244.e5f45455c~i~wayland6) impish; urgency=medium
 
   * New snapshot:
