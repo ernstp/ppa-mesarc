@@ -1,3 +1,32 @@
+mesa (22.0.0+git2203181857.9f2ff50897c~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 9f2ff50897c .pick_status.json: Update
+  * 0613a141aff zink: only update usage on buffer rebind if rebinds
+    occurred
+  * 7d81541645f zink: force-add usage when adding last-ref tracking
+  * 08441a72a5d anv: flush tile cache with query copy command
+  * 7a86180509c anv: emit timestamp & availability using the same part
+    of CS
+  * d6b6b908f30 bin/auto-pick: Add a script that automates applying
+    commits
+  * 38f5b5829d7 pick/core: have update_commits return the commit list
+  * 13264fb2c54 core: don't pass the ui back into commit.apply
+  * 6b06bbb09e9 pick/ui: correctly handle MANUAL_RESOLUTION
+  * 6ef7271745a pick/core: Add a MANUAL_RESOLUTION resolution
+  * 8b85e8a9b3f pick/core: Add a method for updating commits
+  * 427b9004391 pick/core: Add proper type annotation for update_commits
+    callback
+  * 68952738b26 pick/core: drop the main_sha field
+  * 6c682f28992 pick/ui: Fix mypy issue
+  * 15ecd5a9179 .pick_status.json: Update
+  * 6d31e112e39 intel/fs: Add Wa_14014435656
+  * d842baf7bc1 intel/fs: Add Wa_22013689345
+  * 9fef791f476 anv, iris: Add Wa_16011411144 for DG2
+  * 8f64820495f llvmpipe: fix occlusion queries with early depth test
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 20 Mar 2022 15:27:17 +0100
+
 mesa (22.0.0+git2203172352.ce7818df01a~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
