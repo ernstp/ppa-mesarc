@@ -1,3 +1,10 @@
+wayland-protocols (1.25+git2203251028.39c014c~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 39c014c members: say goodbye to Drew DeVault
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Mar 2022 23:36:19 +0100
+
 wayland-protocols (1.25+git2202252222.1293ff1~b~base2) bionic; urgency=medium
 
   * New snapshot:
