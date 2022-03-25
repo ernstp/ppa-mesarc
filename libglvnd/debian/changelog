@@ -1,3 +1,14 @@
+libglvnd (1.4.0+git2203212127.5024e57~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 5024e57 Merge branch 'thread-state-to-null-in-teardown' into
+    'master'
+  * 9f59259 Moving setspecific to before DestroyThreadState
+  * 1f2bfbb Update src/EGL/libeglcurrent.c
+  * 4834bd2 Set current thread state to NULL in teardown
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Mar 2022 23:31:50 +0100
+
 libglvnd (1.4.0+git2202241648.c8ee005~i~wayland0) impish; urgency=medium
 
   * New snapshot:
