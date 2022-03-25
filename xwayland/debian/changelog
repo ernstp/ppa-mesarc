@@ -1,3 +1,33 @@
+xwayland (2:22.1.0+git2203240922.1a7e4e721~i~wayland5) impish; urgency=medium
+
+  * New snapshot:
+  * 1a7e4e721 xwayland: Always hook up frame_callback_list in
+    xwl_present_queue_vblank
+  * 88ed88e8a xwayland: Clear timer_armed in
+    xwl_present_unrealize_window
+  * c5b894417 xwayland/present: Fix use-after-free in
+    xwl_unrealize_window()
+  * b211df90d Xwayland: Do not map the COW by default when rootless
+  * ef746ca96 Bump version to 22.1.0
+  * 278b48acb xwayland: Fix cursor color
+  * c155a4903 Bump version to 22.0.99.902
+  * 1d98f8b7d render: Fix build with gcc 12
+  * c2c6f66bb Bump version to 22.0.99.901
+  * f85a0567b Bump version to 22.0.99.1
+  * a15dbb888 meson: Change project name to xwayland
+  * 4718dca4f Don't install Xvfb
+  * 0c2883109 meson: Build Xwayland unconditionally
+  * 224091431 Drop miext/shadow directory
+  * cd080f721 Drop EXA code
+  * 09ce18292 Drop config directory
+  * 5d897d0e8 Drop Xephyr / kdrive DDX
+  * 6fbc05b70 Drop Xorg DDX
+  * 46675b103 Drop Xwin DDX and x86 MinGW-w64 cross build
+  * 16c4ff780 Drop Xnest DDX
+  * ee9dbd9f6 Drop Xquartz DDX
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Mar 2022 23:38:55 +0100
+
 xwayland (2:21.1.99+git2203171022.9e5a37961~i~wayland5) impish; urgency=medium
 
   * New snapshot:
