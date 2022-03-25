@@ -1,3 +1,40 @@
+mesa (22.1.0~git2203252302.2d1e6b756e9~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2d1e6b756e9 aco: remove 'high' parameter from can_use_opsel()
+  * b98a9dcc36b aco/optimizer: fix call to can_use_opsel() in
+    apply_insert()
+  * 8006179cfdc wsi/x11: xcb_wait_for_special_event failure is an error
+  * f31208f778c pan/va: Lower BLEND to call blend shaders
+  * cb76cc1f1d0 pan/va: Add packing unit tests
+  * 18bf478f1e8 pan/va: Add shader-db support
+  * 8bc268f2d54 pan/va: Implement the cycle model
+  * 8a258a685c9 pan/va: Test instruction selection lowerings
+  * 1745c893124 pan/va: Lower branch offsets
+  * 9a9b20e6526 pan/va: Add instruction selection lowering pass
+  * b796d32564f pan/va: Add constant lowering pass
+  * b8f912e5471 pan/va: Validate FAU before packing
+  * fd1906afea5 pan/va: Add FAU validation
+  * 676d9c94412 pan/va: Add unit tests for ADD_IMM optimizations
+  * 13d7ca13001 pan/va: Optimize add with imm to ADD_IMM
+  * f45654af595 pan/va: Add packing routines
+  * edf284215dc pan/va: Add helpers for swapping bitwise sources
+  * 619566dea18 pan/va: Generate header containing enums
+  * 7ad98ae96ec pan/va: Build opcode info structures
+  * 40ed485e32e pan/va: Permit encoding more flags
+  * 76487c7eb48 pan/va: Unify flow control
+  * cf6d1a81f68 pan/va: Add Bifrost-style LD_VAR instructions
+  * 295b802f64b pan/va: Add LD_VAR_BUF instructions
+  * e8590e0d043 pan/va: Add ST_TILE instruction
+  * fa841273d4f pan/bi: Rename I->action to I->flow
+  * f5585700be6 pan/bi: Model LD_VAR_BUF instructions
+  * 97a13d6424e pan/bi: Augment ST_TILE with register format
+  * c7f6b973b21 pan/bi: Check return addresses in blend shaders
+  * 1b7d7ebbab7 pan/bi: Allow branch_offset on BLEND
+  * cfde0275e4a pan/bi: Model Valhall-style A(CMP)XCHG
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Mar 2022 23:32:29 +0100
+
 mesa (22.1.0~git2203200635.c36f3f2db82~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
