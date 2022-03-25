@@ -1,3 +1,50 @@
+libsdl2 (2.0.21+git2203251754.7a1c45bd1~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 7a1c45bd1 wayland: Optimize keyboard_handle_modifiers.
+  * 69d0b6e3c Vita: Fix NULL-pointer dereference
+  * bf38fd467 YUV: fix invalid read on last line when converting from
+    SDL_PIXELFORMAT_YUY2 (see bug #4841)
+  * 2891f0821 wayland: Use xkb_keymap_mod to set mod state
+  * 6d9ca9262 wayland: Enforce text capitalization manually, for
+    remapped keymods
+  * a75c6150e wayland: Add an xkb_keysym_t->SDL_Keycode mapping for
+    backspace
+  * ee96407ed iOS >= 10.0 silence GLes deprecation warnings
+  * ab74b6a3c wayland: Remove some now-redundant casts
+  * ee52ad08c wayland: Minor fixes for old compilers
+  * b4d28085b wayland: Don't overwrite error message from
+    SDL_EGL_CreateSurface
+  * d5bbbd3f7 Avoid depending on libwayland 1.20 unnecessarily
+  * d597a9b43 x11: Minor cleanups and corrections in X11_ShowMessageBox.
+  * 6c56193a2 Fixed bug #1650: X11 doesn't set KMOD_NUM and KMOD_CAPS to
+    system state
+  * 2398c43be add some Thrustmaster wheels
+  * 4fe7b2cbd static analysis: Fixed several complaints from
+    codechecker.
+  * eadc064e2 Vita: add native YUV textures support.
+  * 0af2db6f2 Vita: support audio format fallback
+  * 0dae35bf3 video: wayland: Use xdg-output for retrieving the desktop
+    dimensions
+  * 9125b244e wayland: Basic support for zwp_tablet_*v2 protocol
+  * 13337e17a wayland: The rest of the wayland-client 1.18
+    requirement... Git, please
+  * f3ff0c568 wayland: Bump minimum requirement to wayland-client 1.18
+    or newer
+  * 2a4e0f8fd Sync wiki -> header
+  * c23a7ad38 Add SDL_RenderGetWindow() API to get the window associated
+    with a renderer (#5440)
+  * 57df1dfce Video: do not use hardcoded VIVANTE and VDK libraries
+  * f5a980448 Android: add SetWindowResizable() implementation - which
+    also enable/disable the orientation lock status.
+  * 006aafabc Fixed freeing a constant string (thanks @gnrlwart)
+  * 8df045cc7 stdlib: just cast iconv()'s 2nd arg to void *.
+  * 4b8d69a41 Avoid trying to use texture framebuffers on emscripten
+  * 25203222f optimize the SDL_str(case)cmp functions
+  * aec58d820 make SDL_strcasecmp standard compliant
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Mar 2022 23:32:03 +0100
+
 libsdl2 (2.0.21+git2203191901.8f964576d~i~wayland6) impish; urgency=medium
 
   * New snapshot:
