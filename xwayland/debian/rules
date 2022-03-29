@@ -5,15 +5,12 @@ include /usr/share/dpkg/pkg-info.mk
 SUPPORT = https://www.debian.org/support
 
 %:
-	dh $@ --buildsystem=meson --with quilt
+	dh $@ --buildsystem=meson
 
 override_dh_auto_configure:
 	dh_auto_configure -- \
-		-Dbuilder_addr="debian-x@lists.debian.org" \
-		-Dbuilder_string="$(DEB_SOURCE) $(DEB_VERSION_UPSTREAM) ($(SUPPORT))" \
-		-Dxwayland_eglstream=true -Dxwayland=true -Dglamor=true \
-		-Dxorg=false -Dxnest=false -Dxvfb=false -Dxwin=false -Dxquartz=false \
-		-Dxephyr=false -Ddocs=false -Dudev=false -Dudev_kms=false -Dhal=false -Dsystemd_logind=false
+		-Dbuilder_addr="debian-x@lists.debian.org"
+		-Dbuilder_string="$(DEB_SOURCE) $(DEB_VERSION_UPSTREAM) ($(SUPPORT))"
 
 override_dh_auto_install:
 	dh_auto_install --destdir=debian/tmp
