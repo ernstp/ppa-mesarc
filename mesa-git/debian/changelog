@@ -1,3 +1,58 @@
+mesa (22.0.1+git2203292212.9f11d715400~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 9f11d715400 Revert "anv: Disable CCS_E for some 8/16bpp copies on
+    TGL+"
+  * 00ac3b1ab11 bin/auto-pick: Add a script that automates applying
+    commits
+  * dbafc76c3eb pick/core: have update_commits return the commit list
+  * 3fa4184076d .pick_status.json: Update to
+    5a459b8f6b0b59814865bc5869a868269f8f7ebf
+  * fb08fbb6eeb .pick_status.json: Mark
+    2617e6c028a3823c600b16dbffa5702a68b1cfa7 as needing manual
+    resolution
+  * 2084df1d4cb .pick_status.json: Mark
+    256e4d7949aed1b3618cf1083cd08ab5013f97ec as needing manual
+    resolution
+  * 6de96f3a9d6 .pick_status.json: Mark
+    4f6c7a6025628fe14e06ac864986ab95bdd25457 as needing manual
+    resolution
+  * fa75ecde9f8 .pick_status.json: Mark
+    dc8fdab71efdc3e516f2a8abdfdc2dec05fce448 as needing manual
+    resolution
+  * 66ecaf64536 .pick_status.json: Mark
+    8294d454245d4318befac7c8915e55db3d47cefd as needing manual
+    resolution
+  * 4f8f3097261 .pick_status.json: Mark
+    7da211e24fe14d8b107461bdfcb3b8d67212f88a as needing manual
+    resolution
+  * e8ffcac1683 .pick_status.json: Mark
+    8b71118aa066ab125b7440912ed1e14da79c9451 as needing manual
+    resolution
+  * 9d8c29775d2 .pick_status.json: Mark
+    4e30da7874e6586c7ac94cd34560c782d0f9678d as needing manual
+    resolution
+  * fe246736b8d .pick_status.json: Mark
+    efa724133f6e454b209837713ad4218ade6eb7d0 as needing manual
+    resolution
+  * f9f58e5858d .pick_status.json: Mark
+    19330eeb1d65c631ce11a0be1cb13437c6c28491 as needing manual
+    resolution
+  * a7cfd251388 docs: add sah256 sum for mesa 22.0.1
+  * 4a8d3189fdb VERSION: bump for release
+  * 7591d622480 docs: add release notes for 22.0.1
+  * b66aad09091 amd: add support for gfx1036 and gfx1037 chips
+  * 3e37848f508 nir/lower_is_helper_invocation: create
+    load_helper_invocation instr with bitsize=1
+  * 847a5dceea5 iris: Fix MOCS for copy regions
+  * 81573439e22 spirv: Properly mangle generic pointers
+  * 77699bb3bff pan/bi: Don't analyze helper reqs in !frag shaders
+  * 420717c6eb7 panfrost: Fix primitive restart with 32-bit indices
+  * e7398410b55 .pick_status.json: Update to
+    8991e646411b73c1e03278267c80758e921f2352
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Mar 2022 23:03:46 +0200
+
 mesa (22.0.0+git2203251922.f70d648f8b0~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
