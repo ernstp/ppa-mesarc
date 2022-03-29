@@ -1,3 +1,40 @@
+libsdl2 (2.0.21+git2203292100.4d1905c9b~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 4d1905c9b video: wayland: Use viewports for non-fullscreen windows
+    with fractional scaling
+  * fa4c51989 video: wayland: Expose more resolutions for mode emulation
+  * d875416ac wayland: Minor fix for old compilers
+  * 4d76c9cb4 video: wayland: Use wp-viewporter for fullscreen with non-
+    native resolutions
+  * aec86ba8b emscriptenaudio: proxy calls to main thread
+  * 96be9cddc Vita: add hint to select which touchpad generates mouse
+    events
+  * 1db47d468 Fix potential memory leak in QueueCmdFillRects
+  * a60986caa Correct default structure packing on Windows ARM64
+  * 6d1c3cd69 Sync wiki -> header
+  * 95ed83137 Vita: Use preallocated memory pool for textures
+  * 2591f7e39 Sync wiki -> header
+  * 7ba4d24c2 Sync wiki -> header
+  * 0dcfa92e4 testgles2: Call correct function to get shader info log
+    and add link status checking
+  * 6529bf3de Clean up formatting in README-directfb.md
+  * 0bc9e243b Remove URLs from markdown headers in README-visualc.md
+  * 7bc498d32 direct3d: Implement missing blend operations.
+  * a630b0293 configure: improvements to libdecor discovery :
+  * 713a67540 wayland: Relax the check for mismatching output scales
+  * 5655be155 wayland: Avoid overwriting xdg_output position with
+    wl_output position
+  * 40417b188 wayland: Work around a GNOME xdg_output scaling issue
+  * 94ed6b0a5 README-windows: Notes on building with Visual Studio/LLVM.
+  * 5acb4b70a README-windows: Wordwrap text file.
+  * 26bfee857 README-windows: Convert to actual Markdown text.
+  * beecae31f testshader: use SDL_malloc instead of SDL_stack_alloc.
+  * d6122704e Initialize compile status variable and check also program
+    link status
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Mar 2022 23:01:24 +0200
+
 libsdl2 (2.0.21+git2203251754.7a1c45bd1~i~wayland6) impish; urgency=medium
 
   * New snapshot:
