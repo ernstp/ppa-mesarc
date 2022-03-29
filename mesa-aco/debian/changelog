@@ -1,3 +1,48 @@
+mesa (22.1.0~git2203292206.1967fd3b101~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1967fd3b101 intel/compiler: Call inst->resize_sources before setting
+    the sources
+  * 356f6bb8a59 docs: update calendar and link releases notes for 22.0.1
+  * 215ae6b2707 docs: add sah256 sum for mesa 22.0.1
+  * d85cdcad5d1 docs: add release notes for 22.0.1
+  * 5a459b8f6b0 r300: fix swizzle handling in transformation of abs
+  * 85ae6598faf docs: Add calendar entries for 22.1 release candidates.
+  * 01f3504e2f8 zink: remove anv workaround for broken color writes
+  * 408f114830f zink: break out CmdSetColorWriteEnableEXT to util
+    function
+  * a1814067cdc nir: Move the define of snprintf to header nir.h
+  * 153cb830c47 vtn: Fixes compiling error for mingw/ucrt by using
+    setjmp/longjmp function instead compiler builtin
+  * 887d74dd2fc meson: Add predefined macro -D__MSVCRT_VERSION__=0x0700
+    only in mingw environment without _UCRT
+  * 0bef8bc054b zink: fix error logging for 2d z/s checking
+  * 4a08ee7ecf0 spirv/libclc: Add generic versions of arithmetic
+    functions
+  * 688d4780451 v3dv/queue: Rework multisync_free
+  * d001150d0ce doc: update extensions for lavapipe
+  * aed49c89a59 lavapipe: display EXT_graphics_pipeline_library
+  * d4d5a7abba7 lavapipe: implement EXT_graphics_pipeline_library
+  * 22fd70ca818 lavapipe: support KHR_pipeline_library
+  * 0918095b9a6 lavapipe: EXT_primitives_generated_query
+  * 8c3b4dd9963 vulkan: update spec to 1.3.210
+  * 7f6ecb8667c v3dv: add reference counting for descriptor set layouts
+  * ca861bd6f46 v3dv: drop unnecessary memset
+  * 591eed30b23 v3dv: fix sampler array addressing in
+    v3dv_descriptor_set_layout
+  * 00cc52b282b radv: remove now unused
+    radv_nir_compiler_options::layout
+  * 50467aa558f iris: Properly tell the decoder about inherited binder
+    addresses
+  * 9bc97e4fc16 intel/decoder: Fix decoder handling of binding table
+    pool alloc on XeHP
+  * 08f74e71852 radeonsi: merge the copy_image shader generators
+  * c0ef40bbce1 radeonsi: convert copy_image_1d_array shader to NIR
+  * 18722af9d22 radeonsi: convert copy_image shader to NIR
+  * 79ba1962ac8 pvr: Remove duplicate variable queue_create.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Mar 2022 23:01:49 +0200
+
 mesa (22.1.0~git2203252302.2d1e6b756e9~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
