@@ -1,3 +1,9 @@
+xwayland (2:22.1.0+git2203240922.1a7e4e721~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Mar 2022 23:00:30 +0200
+
 xwayland (2:22.1.0+git2203240922.1a7e4e721~i~wayland5) impish; urgency=medium
 
   * New snapshot:
