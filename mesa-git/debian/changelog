@@ -1,3 +1,61 @@
+mesa (22.0.1+git2203310017.8f57afe63e4~b~mesarc6) bionic; urgency=medium
+
+  * New snapshot:
+  * 8f57afe63e4 iris: don't synchronize BO for batch decoding
+  * fed5aa1734b nir/fold_16bit_sampler_conversions: Fix src type
+    mismatches.
+  * 74d08a1fd4c nir/fold_16bit_sampler_conversions: Fix dest type
+    mismatches.
+  * 3eb4174ed38 anv: implement EXT_tooling_info
+  * a592ac7782a panfrost: Process scissor state earlier
+  * ad7b7eeeb59 radv: disable DCC for Fable Anniversary, Dragons Dogma,
+    GTA IV and more
+  * f4b47fe9271 radv: enable radv_disable_aniso_single_level for
+    DXVK/vkd3d
+  * 91b753dea6a .pick_status.json: Update to
+    860e3f6ff9dd396ae44060ef1cc4edc55300922b
+  * fe25af18378 radv: disable DCC for Fable Anniversary, Dragons Dogma,
+    GTA IV and more
+  * 50ecd7977e5 radv,drirc: move RADV workarounds to 00-radv-
+    defaults.conf
+  * 326324d78d7 radv: Don't hash ycbcr sampler base object.
+  * aa701242253 anv: zero-out anv_batch_bo
+  * 46c5337c593 anv: fix variable shadowing
+  * 9b7933bc1c1 .pick_status.json: Update to
+    860e3f6ff9dd396ae44060ef1cc4edc55300922b
+  * c341d782e03 core: don't pass the ui back into commit.apply
+  * 9e780edf98e .pick_status.json: Update to
+    5a459b8f6b0b59814865bc5869a868269f8f7ebf
+  * 7534c0ba733 draw: fix nonzero stream primitives generated queries
+  * 84295ded858 .pick_status.json: Update to
+    5a459b8f6b0b59814865bc5869a868269f8f7ebf
+  * a0941254b82 vulkan: Make sure we've loaded our connectors when
+    querying plane props.
+  * ddaefc0a1e6 .pick_status.json: Mark
+    3ef093f697ad9027ba514c7a4a6a10b7bd95bd47 as denominated
+  * 6eebc8d808f v3dv/queue: Rework multisync_free
+  * 83975cbc306 turnip: enable has_ccu_flush_bug workaround for a660
+  * 4ec474d8d86 .pick_status.json: Mark
+    2132d4278d413351e042153187285c50d78ef215 as needing manual
+    resolution
+  * 9f4a7bb930e .pick_status.json: Mark
+    b8324a7387d5282454e8635cde2d362c873b8a2d as needing manual
+    resolution
+  * eba4de5ee53 .pick_status.json: Mark
+    991a95a352996cac75aed1c4cca7cea78a425f40 as needing manual
+    resolution
+  * 111718c9927 .pick_status.json: Mark
+    f315ea9eff6d8479b995355647ec297d5d9a5651 as needing manual
+    resolution
+  * 45eb525fcf2 r600: Add a workaround and explanation for
+    shadowcubearray TG4.
+  * ff9cbb07115 r600: Fix ordering of SSBO loads versus texturing.
+  * 34674161013 r300: respect output_semantic_index when writing colors
+  * b6264718c2c r600: Update the PS state before checking for cb_misc
+    update.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 31 Mar 2022 13:55:36 +0200
+
 mesa (22.0.1+git2203292212.9f11d715400~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
