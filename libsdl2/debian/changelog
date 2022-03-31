@@ -1,3 +1,19 @@
+libsdl2 (2.0.21+git2203310602.b5700ab31~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * b5700ab31 Cleanup Spaces
+  * 8e5adc62e Update README-vita.md
+  * 8c542a359 Desktop OpenGL 1.X/2.X PSVita Support
+  * 2c04df8d6 joystick: Fix rumble issues on PS5 HIDAPI controllers
+  * 7e15ad2fc x11: Catch X11 errors in X11_SetWindowPosition and
+    X11_SetWindowSize.
+  * 3425e9950 stdinc: SDL_COMPILE_TIME_ASSERT defines shouldn't have a
+    semicolon.
+  * cbdb67b4f Vita: add SDL_GetPreferredLocales support
+  * 178ac1961 Vita: add audio capture support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 31 Mar 2022 13:53:15 +0200
+
 libsdl2 (2.0.21+git2203292100.4d1905c9b~i~wayland6) impish; urgency=medium
 
   * New snapshot:
