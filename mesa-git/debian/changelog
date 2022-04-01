@@ -1,3 +1,12 @@
+mesa (22.0.1+git2204010547.bac8e198fb3~b~mesarc7) bionic; urgency=medium
+
+  * New snapshot:
+  * bac8e198fb3 Revert "draw: fix gs vertex stream counting"
+  * c898d4b4dea Revert "draw: fix nonzero stream primitives generated
+    queries"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 Apr 2022 10:13:06 +0200
+
 mesa (22.0.1+git2203310017.8f57afe63e4~b~mesarc6) bionic; urgency=medium
 
   * New snapshot:
