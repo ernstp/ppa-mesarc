@@ -1,3 +1,52 @@
+mesa (22.1.0~git2204010902.e6d7a6a3b72~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * e6d7a6a3b72 radv: enable VK_EXT_separate_stencil_usage
+  * 7c14671535f radv: use the common vk_framebuffer
+  * 8396a0d1fda radv: remove now unused
+    radv_cmd_buffer_{begin,end}_render_pass()
+  * be28b566b0d radv: convert the meta clear path to dynamic rendering
+  * 67c2a6adc63 radv: convert the meta blit path to dynamic rendering
+  * e6fac090e69 radv: convert the meta resolve HW path to dynamic
+    rendering
+  * b18afccb615 radv: convert the meta resolve depth/stencil FS path to
+    dynamic rendering
+  * 518c6d808e0 radv: convert the meta resolve color FS path to dynamic
+    rendering
+  * 42db5900061 radv: convert the meta blit 2d path to dynamic rendering
+  * fc3125ed6cb radv: convert the meta fast clear flush path to dynamic
+    rendering
+  * 70e663aa215 radv: convert the meta depth decompression path to
+    dynamic rendering
+  * 9309c3d8872 radv: rework the workaround that disables DCC for
+    incompatible copies
+  * be1b30393bd util: Getting u_debug.h not depends on pipe/*
+  * b2ece67f11c util: Rename PIPE_DEBUG_TYPE to UTIL_DEBUG_TYPE
+  * ab225a1e36d util: Rename pipe_debug_type  to util_debug_type
+  * dca7ea4a125 pipe: place `struct util_debug_callback` at the proper
+    place in p_context.h
+  * 2ca6ef22f78 util: Rename pipe_debug_callback to util_debug_callback
+  * 523675e9954 util: Rename pipe_debug_message to util_debug_message
+  * 240cd8088c6 lavapipe: set LVP_POISON_MEMORY for ci
+  * 2d8d7c06381 zink: set LVP_POISON_MEMORY for ci
+  * 0be484ece4c lavapipe: add an env var to enable poisoning memory
+    allocations
+  * dcadeb9a477 llvmpipe: fix nr_sampler_view in key creation.
+  * 57dd05616fa zink/query: rewrite the query handling code to pass
+    validation.
+  * b96ddc37bc9 zink/query: only reset the range of queries in use.
+  * 7f3a959d2f0 zink/query: refactor get_query_result to map upfront.
+  * f090cac54af zink/query: use a single query pool for XFB queries.
+  * 0d14c491dea zink: refactor out number of vk queries per gallium
+    query helper
+  * ce28974d065 zink/query: collapse the xfb_query_pool array into the
+    normal one.
+  * 7303ba3a672 zink/query: consolidate xfb_buffers into one array.
+  * 6bbbe15a783 Reinstate: llvmpipe: allow vertex processing and
+    fragment processing in parallel
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 Apr 2022 10:11:09 +0200
+
 mesa (22.1.0~git2203311321.83ed40cdcd5~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
