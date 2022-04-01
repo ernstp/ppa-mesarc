@@ -1,3 +1,25 @@
+libsdl2 (2.0.21+git2204010812.1c9299b00~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 1c9299b00 Add SDL_list to macosx xcode
+  * 78834b50d Add SDL_list.c/h
+  * ad6bc521b Move SDL_List functions to SDL_list.c to avoid more merge
+    with eventual PR
+  * 0d7edcb70 Fixed loading 32-bit BMP files
+  * ea7d5307a emscripten: Proxy SDL_GetUsableDisplayBounds to the main
+    thread.
+  * fe79eb2fb emscriptenframebuffer: fix formatting
+  * 268cc2a49 emscriptenmouse: remove useless return statement
+  * 3136a5307 fix formatting and cast warnings
+  * 404158595 emscriptenmouse: remove old extra `_INT`
+  * 4dca8f7fb SDL2 thread proxying fixes
+  * 1c7bf478a x11: Ignore BadValue for extremely small XRRSetScreenSize
+    resolutions.
+  * db718998b Vita: fix readme
+  * 95c0fec51 Vita: PVROGL: fix indentation and ifdef guards
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 01 Apr 2022 10:10:41 +0200
+
 libsdl2 (2.0.21+git2203310602.b5700ab31~i~wayland6) impish; urgency=medium
 
   * New snapshot:
