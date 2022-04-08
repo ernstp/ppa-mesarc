@@ -1,3 +1,48 @@
+mesa (22.1.0~git2204081917.949bc15ea51~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 949bc15ea51 nir_to_tgsi: Fix emitting the sample number for non-
+    array MSAA image access.
+  * b18374002e5 virgl: Disable nir_op_ffloor to avoid sending DFLR to
+    virglrenderer.
+  * a652c1653a5 radv: introduce new radv_pipeline_stage structure
+  * 86b1a1d5f27 radv: add missing multi inclusion define to
+    radv_shader_args.h
+  * 000e9ac8742 radv: rework pipeline and shaders creation feedback
+  * 1387593fbfb radv: re-order shader stages directly in
+    radv_create_shaders()
+  * 748c1fdf1b4 pvr: Remove logic to set vk_device::alloc.
+  * 40f0c616e88 v3dv: fix bogus VkDrmFormatModifierProperties2EXT usage
+  * 30be6788cc5 ci: Disable Link Power Management with RTL8153
+  * 9d5fa593221 Revert "ci/freedreno: Disable a618 jobs"
+  * 36066702ade v3d: do not leak BO on query begin
+  * 82ca8a707eb wgl: do not disable error-dialogs by default
+  * ae73a263551 util: limit error-dialogs to win32
+  * 116553b554f wgl: rename force-msaa env-var
+  * 94706601fa2 radv: Disable NGG for GS with suboptimal output vertex
+    count.
+  * 53e83b7031b dzn: Support independent depth/stencil access
+  * 69e8a6042ff dzn: Fix 2D <-> 3D blits
+  * 451a43ae1ee dzn: Lower partial copy of multisample resources to
+    blits
+  * f0667be8b5c vulkan/util: Make STACK_ARRAY() C++-friendly
+  * 8d30204ca4d dzn: Drop extra blank line in dzn_CmdCopyImage2()
+  * 653c362ca6b dzn: Check image view usage instead of image usage when
+    creating an image view
+  * 7ecc22ccaaa dzn: Force sampleCounts to 1 for bgra4 images
+  * 84ad9234820 dzn: Get rid of dzn_GetPhysicalDeviceProperties()
+  * 9a804b63901 dzn: Get rid of dzn_GetPhysicalDeviceFeatures()
+  * e9c69fe39aa dzn: 3D array images don't exist
+  * ad0ac592be3 dzn: Set bufferFeatures to zero on depth/stencil formats
+  * 8dfab9b382d dzn: Make sure the properties are all zero when the
+    format is not supported
+  * dc3dd9690ba dzn: Return a valid imageFormatProperties.maxMipLevels
+  * cfd3dfc0741 dzn: Fix 3D <-> 2D image copies
+  * 94923021d7e dzn: Support 2Darray views on 3D images for color
+    attachments
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 Apr 2022 19:59:13 +0200
+
 mesa (22.1.0~git2204010902.e6d7a6a3b72~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
