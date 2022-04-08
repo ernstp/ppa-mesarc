@@ -1,3 +1,54 @@
+libsdl2 (2.0.21+git2204080847.ba0ba9ef1~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * ba0ba9ef1 direct3d11: Set the swapchain target immediately after
+    creating it.
+  * cb8163081 render: Update the size/scale/viewport on moves, in
+    addition to resizes.
+  * 5613a5603 Make sure the UIKit message box is being handled on the
+    main thread
+  * 2823534fe minor adjustment to os/2 watcom makefile
+  * 49b9e3470 Only update modifier state for keys that are pressed in
+    another application
+  * 85977354f x11: Treat WM setting the window "fullscreen" like
+    FULLSCREEN_DESKTOP.
+  * 6dbca7c91 Compile with recursive mutexes for emscripten
+  * 64c7896f0 Makefile.in: added missing CXX variable.
+  * d1f7f9e35 wayland: Pin the fake window position at (0, 0).
+  * 279aeb59b wayland: Add a bug link for the detach FIXME
+  * 3ada694e6 wayland: Try to detach at the beginning of ShowWindow,
+    just in case.
+  * dcfb7fff0 wayland: Evaluate WINDOWPOS_CENTERED_DISPLAY for move
+    events
+  * 7ea1b69dd Sort controllers by the js* index on Linux
+  * 0249df9d9 x11: Try to keep SDL_WINDOW_FULLSCREEN* in sync with
+    window manager.
+  * eb660e862 Cache the fact that a device didn't look like a joystick
+  * 138d96c8a Send key release event to input method. (#5281)
+  * 8bae343f2 x11: when waiting on fullscreen changes, not window
+    position _and_ size.
+  * 268c2fa88 Don't resize fullscreen windows when hiding or minimizing
+    them (thanks @madewokherd!)
+  * def27267b Ignore focus change messages that contradict
+    GetForegroundWindow.
+  * ff5b67e5e IBus should use ev keycode instead of X keycode
+  * 27fc582b5 Minor cleanup
+  * 86acb1a34 Handle interaction between auto capture and the
+    SDL_CaptureMouse() API
+  * 0e198a879 Added a define VERBOSE_MOTION_EVENTS to show mouse and
+    finger motion events
+  * 006a5a9e0 testgles2: Fix buffer object sizes
+  * a5672b858 x11: Wait a bit to see if window pos changes when changing
+    fullscreen.
+  * 45372b1c2 x11: Don't unload libGL.so to prevent a crash in
+    XCloseDisplay()
+  * 7b3449b89 Minor cleanup
+  * 6cd444f0f Visualise scroll wheel events in testmouse
+  * 57118fb7d render: Fix setting the scale mode for non-native textures
+  * 312c899f4 attempt to fix uwp build
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 Apr 2022 19:58:44 +0200
+
 libsdl2 (2.0.21+git2204010812.1c9299b00~i~wayland6) impish; urgency=medium
 
   * New snapshot:
