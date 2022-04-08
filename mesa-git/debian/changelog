@@ -1,3 +1,74 @@
+mesa (22.0.1+git2204070008.5db72b83e9a~b~mesarc7) bionic; urgency=medium
+
+  * New snapshot:
+  * 5db72b83e9a .pick_status.json: Mark
+    837f781c9a4f909ac1ee0b3b8331af87301b5fc3 as needing manual
+    resolution
+  * 7bbc12a3969 anv: disable preemption on 3DPRIMITIVE on gfx12
+  * 57fdbddadc3 turnip: Correctly store separate stencil in gmem store
+  * 9b7a9e1e8d7 zink: unset resource layout+access when doing storage
+    setup
+  * 537409db3f6 .pick_status.json: Mark
+    c5f44e51fb3a8e2cfc786e4682d8a0193f8e060a as needing manual
+    resolution
+  * 7ee7be974b8 .pick_status.json: Mark
+    3dcb80da9d6d34e567680ef7fecd24aab4537e8a as needing manual
+    resolution
+  * 4a2152598eb .pick_status.json: Mark
+    54509d27d9cf7f85db30111a3b74bbdd031f2d9b as needing manual
+    resolution
+  * 764b8bdf87d vulkan/queue: Destroy wait temps if they are skipped
+  * aedacbd995b .pick_status.json: Mark
+    c439735a91aef2f26f2233825db1f68183283678 as needing manual
+    resolution
+  * e3efd0609fd radv: fix cleaning the image view for
+    CmdCopyImageToBuffer()
+  * 71646cbb8c3 .pick_status.json: Mark
+    dcadeb9a4778b12447dd5c37c80731df1fb1d78f as needing manual
+    resolution
+  * 9c68072f722 radv: Enable global bo list if 1.2 features are used.
+  * 8a4368539bb .pick_status.json: Mark
+    7fd1955412e252957486e0430b2e5a6e7c755364 as needing manual
+    resolution
+  * 53b2c7e36e0 .pick_status.json: Mark
+    738a6760e3723978877bc6ffc02a3792d4c4b3d6 as needing manual
+    resolution
+  * 030293686be .pick_status.json: Mark
+    83ed40cdcd54996b12eb78824f469ae8e44eb6fe as needing manual
+    resolution
+  * c67dfee416c .pick_status.json: Mark
+    b784910ac78ff067b4dd8bb3113738be8c2e8183 as needing manual
+    resolution
+  * 7b67da6f075 .pick_status.json: Mark
+    9c2605ae4270005b33303acb38955fe3ab6c8a51 as needing manual
+    resolution
+  * f86fd2309e5 llvmpipe: handle sampling from 2d views of 3d images
+  * df0c813cb2e zink: force push descriptors cache update if hashing
+    detects changes
+  * a449f2d8ccc lavapipe: enforce monotonic timeline incrementing
+  * 772e41f0453 .pick_status.json: Mark
+    4eca6e3e5d2b9426d6357e9af1514a0c942638f0 as needing manual
+    resolution
+  * cdc8e180343 .pick_status.json: Mark
+    65ec846f777a8a112510d9d7a2da2f225880a0e6 as needing manual
+    resolution
+  * da554fb04de .pick_status.json: Mark
+    1967fd3b1018c8c609b388f4dc49afc641f501c5 as needing manual
+    resolution
+  * 36c044ac31d .pick_status.json: Update to
+    837f781c9a4f909ac1ee0b3b8331af87301b5fc3
+  * a1684b21c6a .pick_status.json: Update to
+    33c800bf913771ddadb5bd632df46582f4d1c9f3
+  * 323ee0c7d84 iris: don't synchronize BO for batch decoding
+  * f818ac50883 nir/fold_16bit_sampler_conversions: Fix src type
+    mismatches.
+  * abdc8314433 nir/fold_16bit_sampler_conversions: Fix dest type
+    mismatches.
+  * 04a44d7a7d6 anv: implement EXT_tooling_info
+  * 4747777f369 panfrost: Process scissor state earlier
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 08 Apr 2022 20:01:14 +0200
+
 mesa (22.0.1+git2204010547.bac8e198fb3~b~mesarc7) bionic; urgency=medium
 
   * New snapshot:
