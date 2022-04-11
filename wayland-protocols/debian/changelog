@@ -1,3 +1,10 @@
+wayland-protocols (1.25+git2204110935.2398378~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2398378 viewport: Remove mention of wl_surface.attach x/y
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 Apr 2022 21:58:44 +0200
+
 wayland-protocols (1.25+git2204060833.9b25b51~b~base2) bionic; urgency=medium
 
   * New snapshot:
