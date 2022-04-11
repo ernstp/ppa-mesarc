@@ -1,3 +1,17 @@
+libsdl2 (2.0.22+git2204111809.b1831715a~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * b1831715a UWP: Require Windows 10 16299 or newer.
+  * 727eef706 audio: SDL_ConvertStereoToMono_SSE3 missed an unaligned
+    load.
+  * 505d6a4a0 Update version to 2.0.22 for release
+  * a256e6ba7 Updated the patch notes with API changes for 2.0.22
+  * 6d7d142b7 Fixed typo
+  * c2093fab9 video: wayland: Set the surface damage region when using
+    fullscreen viewports
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 Apr 2022 21:56:18 +0200
+
 libsdl2 (2.0.21+git2204080847.ba0ba9ef1~i~wayland6) impish; urgency=medium
 
   * New snapshot:
