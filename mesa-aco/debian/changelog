@@ -1,3 +1,47 @@
+mesa (22.1.0~git2204112144.960119008ba~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 960119008ba zink: update radv piglit baseline
+  * b05ac36f01b intel/genxml: Add SAMPLER_MODE bits for enabling Small
+    PL on Icelake
+  * e3defe7ae72 intel/genxml: Delete SAMPLER_MODE register definition on
+    Gfx12+
+  * 80927047052 intel/genxml: Add new "Low Quality Filter" field on
+    Gfx12+.
+  * 9a70385e2bf intel/genxml: Add SAMPLER_STATE::Allow Low Quality LOD
+    Calculation field
+  * 3ac73838433 ci: enable v3dv arm64 jobs
+  * 809dc312235 zink: reorganize radv ci baseline
+  * 5abd95434ec zink: update radv ci baseline
+  * bc58b34087e dzn: Fix loop condition in dzn_descriptor_set_copy()
+  * 7744a477e8e zink: only do swapchain update during fb setup if
+    swapchain is active
+  * 6d263ff5a3e util: Convert util/u_printf.cpp to util/u_printf.c
+  * 1dca31cda65 util: Add tests for u_printf.h
+  * bcf5d2d8f4f zink: force texture barriers when performing in-
+    renderpass clears
+  * 4f6f34456af zink: rework texture_barrier hook
+  * aced1ac2d38 zink: add a self-dependency for fbfetch renderpasses
+  * 42bb760c8d8 zink: remove compiled conditional for lavapipe usage
+  * dd078d13cb6 zink: fix tessellation shader key matching.
+  * ec05155c30f zink only use zs-specific layout for zs attachments
+  * 97d5ebc93ef zink: clamp cube size queries to 2 return components
+  * ab3ee60282b util/hash_table: Remove Unicode byte order mark
+  * ee2741e4511 zink: ci updates
+  * ee29db02706 mesa/st: handle adding pointsize when gl_Position is
+    never written
+  * 9c212e117d5 nir/lower_point_size_mov: handle case where gl_Position
+    isn't written
+  * cfca760d6e8 mesa/st: handle copy_deref cases for adding pointsize
+  * a2823747bbd mesa/st: fix pointsize adding check
+  * 6357ce2b8e4 mesa: set PointSizeIsOne on context creation
+  * f567a832eed ci: disable v3dv arm64 jobs
+  * 5da8c280b74 panfrost: Remove BO mapping from import
+  * 279eea5bda2 amd/llvm: Transition to LLVM "opaque pointers"
+  * 6c0150c389c ci/zink: Mark a new GLX flake that hit an innocent MR.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 Apr 2022 21:56:45 +0200
+
 mesa (22.1.0~git2204081917.949bc15ea51~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
