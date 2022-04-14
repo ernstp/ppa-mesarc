@@ -1,6 +1,12 @@
 xwayland (2:22.1.1+git2203301217.2bddb5add~i~wayland6) impish; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Apr 2022 13:11:12 +0200
+
+xwayland (2:22.1.1+git2203301217.2bddb5add~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
   * 2bddb5add Bump version to 22.1.1
 
  -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 31 Mar 2022 13:51:54 +0200
