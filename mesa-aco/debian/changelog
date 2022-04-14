@@ -1,3 +1,11 @@
+mesa (22.2.0~git2204141101.4d23967e8c1~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4d23967e8c1 radv: exclude PRIMITIVE_{COUNT,INDICES} from the per-
+    vertex output mask
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Apr 2022 13:03:30 +0200
+
 mesa (22.2.0~git2204140214.f2262228467~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
