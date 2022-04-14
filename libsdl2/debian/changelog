@@ -1,3 +1,20 @@
+libsdl2 (2.0.22+git2204140910.55a4e1d33~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 55a4e1d33 CI: update os2.yml to use open-watcom/setup-watcom
+  * c36bd7847 WhatsNew.txt: Document new dependency on libwayland-client
+    1.18.0
+  * 46616af72 WhatsNew.txt: Added SDL_HINT_VIDEO_WAYLAND_PREFER_LIBDECOR
+  * 9c2f46b0d Wayland: Add SDL_HINT_VIDEO_WAYLAND_PREFER_LIBDECOR
+  * 99ae6395b Initialise scandir argument
+  * 68b6fff24 test: Copy utf8.txt to build directory
+  * b4256d03e testevdev: Adapt to a broader definition of keyboards
+  * c2946902f testevdev: Recognise touchpads as such
+  * f708cebe1 fix os2 timer in fallback mode
+  * b75996138 Vita: fix VIDEO_VITA_PVR flag
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Apr 2022 10:50:26 +0200
+
 libsdl2 (2.0.22+git2204111809.b1831715a~i~wayland6) impish; urgency=medium
 
   * New snapshot:
