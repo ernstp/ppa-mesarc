@@ -1,3 +1,14 @@
+mesa (22.0.1+git2204141210.66fefdfb2ec~b~mesarc7) bionic; urgency=medium
+
+  * New snapshot:
+  * 66fefdfb2ec radv: Fix gs_vgpr_comp_cnt for NGG VS without
+    passthrough mode.
+  * 4ebb55c3971 nir: Handle out of bounds access in
+    nir_vectorize_tess_levels.
+  * b8a6eb574db aco: Fix VOP2 instruction format in visit_tex.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Apr 2022 13:05:30 +0200
+
 mesa (22.0.1+git2204141000.4c9b36b5353~b~mesarc7) bionic; urgency=medium
 
   * New snapshot:
