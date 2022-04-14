@@ -1,3 +1,66 @@
+mesa (22.0.1+git2204141000.4c9b36b5353~b~mesarc7) bionic; urgency=medium
+
+  * New snapshot:
+  * 4c9b36b5353 iris: set a default EDSC flag
+  * 686510dc2ac .pick_status.json: Mark
+    fcd6b2a47a9bff248a35edbeef5ae27a3ca643e0 as needing manual
+    resolution
+  * 97b0c93e422 .pick_status.json: Mark
+    ff4dcb76d91daa8dcd5389ca9552695e81687e95 as needing manual
+    resolution
+  * f6b774348ca .pick_status.json: Mark
+    9c8874b9ab3705f6474c1b02de0700ab356ffb18 as needing manual
+    resolution
+  * b65b102e4f3 .pick_status.json: Mark
+    d0ace287902b1fac4a8ddcb91fac65c99218f01b as needing manual
+    resolution
+  * 10f39958c5b .pick_status.json: Mark
+    2b688942c1b1f5ca4f3e4d33231579149aeb8fdb as needing manual
+    resolution
+  * cc376d56c99 .pick_status.json: Mark
+    f844ce66c8afc9104a6bd7c451afb02a8b9da5a8 as needing manual
+    resolution
+  * 8add1f57d16 zink: create pipeline layout if only bindless descriptor
+    set is used
+  * eb8e8309404 zink: handle 0 ubos and 0 ssbos in pipeline layout
+  * b6821117832 .pick_status.json: Mark
+    60c61d7b68803ac7ea783f720bf91920ba966226 as needing manual
+    resolution
+  * ab463677309 .pick_status.json: Mark
+    e0fbdd3eda951d8589a2ea8f3a46fe032fcf1646 as needing manual
+    resolution
+  * c3e1f841a36 .pick_status.json: Mark
+    e858da39e54ed34712ae044d80bcc23c398b53f3 as needing manual
+    resolution
+  * e72d736542e .pick_status.json: Mark
+    dd078d13cb6b445ad02087a3e80433ef053b7490 as needing manual
+    resolution
+  * a34aec2f59f st/glsl-to-tgsi: Fix handling of csel(bool, vec, vec).
+  * 427fc6462c9 .pick_status.json: Mark
+    e15154a735d8507f45117471f854107442e8a339 as needing manual
+    resolution
+  * 063260047a0 radv: use flush vgt streamout like PAL does.
+  * 762550f7d87 .pick_status.json: Mark
+    949bc15ea510be9ad6d1565fa3dd069c0140950b as needing manual
+    resolution
+  * 83f738516d4 radv: Disable NGG for GS with suboptimal output vertex
+    count.
+  * 7d50ab809e1 glsl: fix needs_lowering() call in varying packing pass
+  * 1d60d29486d zink: adds refs to user index buffers when tc is not
+    active
+  * f59b0f71ddf .pick_status.json: Mark
+    6cfcf891c1d5baa1e5e073b875831884ed049b5a as needing manual
+    resolution
+  * e40f0e75b66 nir: Dont set coord_components on txs
+  * ec3b69f1c35 intel/compiler: Fix sample_d messages on DG2
+  * 332d974a5d6 .pick_status.json: Mark
+    56ef501e3aa4b12f41c0520bbc5fa920b0efa0f8 as needing manual
+    resolution
+  * dd8185503c0 .pick_status.json: Update to
+    7478b00c7cc7f7ec8cbe224ce600362f7fdb9411
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Apr 2022 10:52:57 +0200
+
 mesa (22.0.1+git2204070008.5db72b83e9a~b~mesarc7) bionic; urgency=medium
 
   * New snapshot:
