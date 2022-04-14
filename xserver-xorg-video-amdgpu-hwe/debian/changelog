@@ -1,6 +1,12 @@
 xserver-xorg-video-amdgpu-hwe-18.04 (22.0.0+git2202221657.89b3eb9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Apr 2022 13:07:25 +0200
+
+xserver-xorg-video-amdgpu-hwe-18.04 (22.0.0+git2202221657.89b3eb9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
   * 89b3eb9 Update URLs to reflect gitlab migration
 
  -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Feb 2022 00:55:36 +0100
