@@ -1,3 +1,42 @@
+mesa (22.1.0~rc1+git2204141847.c519c37784f~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * c519c37784f VESRION: bump for 22.1.0-rc1 release
+  * 2036a2c5c5e radv: use load_shared2_amd/store_shared2_amd
+  * 67fc0e36555 ac/llvm: implement load_shared2_amd/store_shared2_amd
+  * c883abda763 aco: implement load_shared2_amd/store_shared2_amd
+  * 5aa5af7776f aco: handle read2st64/write2st64 in optimizer
+  * 2135c88d9cc aco: fix signedness of DS_instruction::offset0/1
+  * 778fc176b15 nir/opt_load_store_vectorize: create
+    load_shared2_amd/store_shared2_amd
+  * dc835626b36 nir/opt_load_store_vectorize: fix broken indentation
+  * 8ff122f8b89 nir: add load_shared2_amd and store_shared2_amd
+  * bbdf22ce136 radv: Fix barriers with cp dma
+  * d703a0e8081 aco: remove register hints entirely
+  * 2fe005a3fe5 aco: remove occurences of VCC hint
+  * b10c4d7dee1 aco: make program->needs_vcc independent of VCC hints
+  * 415a3820fc1 aco/ra: omit VCC affinity on VOPC_SDWA for GFX9+
+  * 6ebc61d71b8 aco/ra: create VCC-affinities during RA
+  * 44fb9ba84ac aco/ra: only use VCC if program->needs_vcc == true
+  * 08f3950d6b9 anv: stop using old entrypoint/struct/enum names for 1.3
+  * 5fad6bca72e nir_to_tgsi: Do the required cleanup for
+    nir_opt_find_array_copies().
+  * c8df09ebd4f iris: More gracefully fail in resource_from_user_memory
+  * 85016613324 zink: set optimal tiling on swapchain images
+  * 3017522e74c dzn: Add CI target for vulkan driver
+  * fb24f34fc3e dzn: Add a debug flag to enable D3D12 debug layer
+  * f7ddd584ab6 pvr: Implement vkCreateQueryPool() and
+    vkDestroyQueryPool().
+  * 1250e30929d pvr: Add pvrsrvkm visibility test heap.
+  * 76ee1671f6d pvr: Add core count info and pvr_device_runtime_info.
+  * 93fbaae7d54 v3dv: Add emulated timeline semaphore support
+  * 1cc917bc683 v3dv: Use the core version property helpers
+  * 1973b2da9d9 v3dv: Use the core version feature helpers
+  * 316728a55bc v3dv: Switch to the common submit framework
+  * 321f0b85f2e v3dv: Always wait on last_job_syncs if job->serialize
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 Apr 2022 13:40:57 +0200
+
 mesa (22.0.1+git2204141210.66fefdfb2ec~b~mesarc7) bionic; urgency=medium
 
   * New snapshot:
