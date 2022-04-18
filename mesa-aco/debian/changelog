@@ -1,3 +1,44 @@
+mesa (22.2.0~git2204181439.dd7278aa10a~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * dd7278aa10a mesa: flush bitmap caches when changing scissors or
+    window rects state
+  * f9e424f98dd ci/v3dv: remove fixed test
+  * 4b4bb46af41 nir: fix setting varying from uniform as flat
+  * 67af7e2b400 Use proper types for meson objects
+  * ed7d8315254 radv: fix initializing pipeline_key::topology for GFX9
+    and older
+  * 3dae5442efa glsl/st: vectorise interfaces of SSO shader programs
+  * 04bd0077571 intel/fs: require memory fence commit bit on Gfx9
+  * b07c215c353 intel: fix URB programming for GT1s
+  * ee9997e9324 driconf: add SD Gundam G Generation Cross Rays
+  * ef75752ef86 r600/sfn: Fix store_shared_r600 write masks
+  * 11c462534bd gallium/winsys: move {amdgpu,radeon_drm}_public.h
+    contents into radeon_winsys.h
+  * efac875b666 gallium: move radeon_winsys.h into
+    gallium/include/winsys/
+  * 139f55071bc gallium: move drivers/radeon/* into drivers/radeonsi/
+  * 66a0f318fdb nir: Avoid generating extra ftruncs for array handling.
+  * e4aa5f78897 nir: Skip fround_even on already-integral values.
+  * 6947016b468 nir: Add lowering for fround_even on r300.
+  * c60fea8c228 Revert "egl/wayland: deprecate drm_handle_format() and
+    drm_handle_capabilities()"
+  * f267000240b panfrost: Stop overallocating compressed textures
+  * f68e5790447 docs/panfrost: Document drm-shim usage
+  * 4d460c9fdd3 panfrost: Rework PAN_GPU_ID mechanism
+  * dae5e1bccd1 panfrost: Dirty track batch masks
+  * c4167e8911b panfrost: Rework dirty tracking for Valhall
+  * fc1397d1d7f docs/panfrost: Document u-interleaved tiling
+  * bb6c14a6978 panfrost: Unit test u-interleaved tiling routines
+  * 944049dedc0 panfrost: Document arguments to tiling routines
+  * 1d8ea776456 panfrost: Assert alignment in tiling routine
+  * f96110363aa panfrost: Allow tiling all texture targets
+  * 58a2174f8e2 panfrost: Only tile for 2D dimensions
+  * cd2aa776cfc panfrost: Implement tiled 3D resource access
+  * 594653173b7 panfrost: Only handle 2D in should_linear_convert
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Apr 2022 17:20:04 +0200
+
 mesa (22.2.0~git2204141101.4d23967e8c1~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
