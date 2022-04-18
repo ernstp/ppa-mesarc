@@ -1,3 +1,22 @@
+libsdl2 (2.0.22+git2204172031.c1336b21e~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * c1336b21e hints: Make SDL_VIDEODRIVER and SDL_AUDIODRIVER formal
+    hints.
+  * 634b9edc7 cmake: Fixed indenting and some oldschool `endif(TEXT)`
+    things.
+  * dc5bc5237 Added CMake option to disable the installer
+  * 67e0f546c x11: Update the display when the WM changes a window's
+    fullscreen state.
+  * edb473cf4 video: Wayland: Always round scaled pointer coordinates
+    down
+  * 13393a1c4 video: Wayland: Clamp fullscreen window dimensions to
+    desktop
+  * 0adb67017 avoid NullPointer in SDL_GetRenderTarget
+  * 01b14e14e avoid NullPointer in SDL_GL_MakeCurrent
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Apr 2022 17:19:22 +0200
+
 libsdl2 (2.0.22+git2204140910.55a4e1d33~i~wayland6) impish; urgency=medium
 
   * New snapshot:
