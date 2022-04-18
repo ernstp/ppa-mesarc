@@ -1,3 +1,17 @@
+libdecor-0 (0.1.0+git2204172306.546ed58~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 546ed58 fix 'else' style
+  * 020649b libdecor: compute window geometry from frame border size
+  * 1041b76 libdecor: use border sizes to compute all content and window
+    conversions
+  * 1c5006f libdecor: add an interface for querying the decoration frame
+    border size
+  * 096e49d clean trailing white space
+  * 92dbd3a libdecor: Add LIBDECOR_FORCE_CSD environment variable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Apr 2022 17:19:05 +0200
+
 libdecor-0 (0.1.0+git2202251144.870462b~i~wayland0) impish; urgency=medium
 
   * New snapshot:
