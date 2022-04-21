@@ -1,3 +1,48 @@
+libsdl2 (2.0.22+git2204211747.ba62ead5e~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * ba62ead5e Handle potential out of memory condition when working with
+    hints
+  * 145824f6a WGI: Only call RoUninitialize() if RoInitialize()
+    succeeded
+  * 00b2e10a7 WGI: Keep a reference to the MTA to avoid crashing on COM
+    teardown
+  * 8982d9f40 windows: Fix RoInitialize() failure after a
+    CoInitializeEx() call using apartment threading
+  * 923cb4463 windows: Fix calling convention for
+    RoInitialize/RoUninitialize
+  * d4a01bfef os2: SDL_DestroyMutex should ignore NULL mutexes.
+  * a40405d72 hidapi: Wrap CopyHIDDeviceInfo in define checks.
+  * 5bc293342 test: Basic tests for SDL_FRectEquals
+  * fc944859d SDL_Rect: Use a default epsilon in SDL_FRectEquals()
+  * 00feca27b Add SDL_FLT_EPSILON.
+  * 5d4a1f835 WhatsNew.txt: Add SDL_FRectEqualsEpsilon()
+  * aeadbdd78 Remove an unused function prototype
+  * c8c59a213 Fix a -Wshadow warning
+  * d9009388c SceKernelMemBlockType to unsigned int
+  * 3753a7b1c Fix recent changes in VitaSDK
+  * 02225aa73 Fixed build
+  * 49a2e4b0e x11: Revert "Fix keymap updating for X11 backend"
+  * b9fe6ba0e Fixed compile warnings
+  * 57927a245 Don't call scandir() inside of scandir()
+  * 1ede941f5 SDL_render.c: internally change viewport/cliprect type
+    from SDL_FRect to SDL_DRect (double precision). (see bug #5547)
+  * 9919d1a7a Remove HWND_TOPMOST for fullscreen windows
+  * 009a0ff95 use explicit GetModuleFileNameW
+  * de711e168 simplify SDL_GetBasePath on windows - use
+    GetModuleFileName directly (as recommended)
+  * 7c140429a Enable evdev-based gamecontrollerdb on FreeBSD
+  * e7b01ee74 Added controller mapping for the Thrustmaster Dual Analog
+    3.2 on Linux
+  * 2b5294614 video: Don't minimize fullscreen windows on focus loss by
+    default when mode switching is disabled
+  * c37090f9a wayland: Add support for TOOLTIP/POPUP_MENU
+  * 9e264b921 Certain audio drivers, like the RME "Pro" Audio driver,
+    have resampling quality issues when using WASAPI.
+  * 254fcc90e Revert "video: Prefer Wayland over X11"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Apr 2022 18:54:34 +0200
+
 libsdl2 (2.0.22+git2204172031.c1336b21e~i~wayland6) impish; urgency=medium
 
   * New snapshot:
