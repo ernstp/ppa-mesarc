@@ -1,3 +1,12 @@
+libdecor-0 (0.1.0+git2204191107.099b44e~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 099b44e Avoid infinite loop in init_plugins()
+  * e6f836b libdecor: implement 'frame_get_border_size' for fallback
+    plugin
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Apr 2022 18:54:25 +0200
+
 libdecor-0 (0.1.0+git2204172306.546ed58~i~wayland0) impish; urgency=medium
 
   * New snapshot:
