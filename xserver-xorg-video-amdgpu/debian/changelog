@@ -1,3 +1,15 @@
+xserver-xorg-video-amdgpu (22.0.0+git2204201620.f3f57a5~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f3f57a5 Do not consider disabled crtc anymore when looking for
+    xf86crtc covering drawable.
+  * e39a3ee Prefer crtc of primary output for synchronization when
+    screen has to crtcs with the same coverage
+  * 92fb43b Use randr_crtc_covering_drawable used in modesetting
+  * 57740ae amdgpu: fixup driver for new X server ABI
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Apr 2022 18:58:58 +0200
+
 xserver-xorg-video-amdgpu (22.0.0+git2202221657.89b3eb9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
