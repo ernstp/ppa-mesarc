@@ -1,3 +1,49 @@
+mesa (22.1.0~rc2+git2204210644.7c75d83842e~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 7c75d83842e VERSION: bump for 22.1.0-rc2
+  * b7e08dbc067 zink: remove xfb_barrier flag
+  * f00600e1a36 zink: fix xfb counter buffer barriers
+  * 68b25a57c13 zink: fix synchronization when drawing from streamout
+  * 6a697843357 zink: set VK_QUERY_RESULT_WAIT_BIT when copying to qbo
+  * 39872372207 nouveau/nir: Fix the inverted sense of usesSampleMaskIn.
+  * a6c2047ea0d radv: Enable rt primitive culling for spirv2nir
+  * 8efeb7e3bf0 dzn: Pass the right type to CreateCommandList() in the
+    reset path
+  * 9a28aea2a22 intel/compiler: invalidate metadata in
+    brw_nir_initialize_mue
+  * 30a980fb947 intel/compiler: invalidate all metadata in
+    brw_nir_lower_intersection_shader
+  * 4f031f35fef anv: invalidate all metadata in anv_nir_lower_ubo_loads
+  * df6dc532d20 anv: allow getting the address of the beginning of the
+    batch
+  * c849ae36e00 vulkan: explicitly cast object-type enum
+  * b7fe949ab95 zink: rework zink_kopper_update() assert
+  * 445892367a1 zink: make a kopper debug print into an error
+  * 81b10bd0dd0 zink: fix extended restart prim types without dynamic
+    state2
+  * 24d6489d0db zink: support restart with PIPE_PRIM_LINES_ADJACENCY if
+    ext is available
+  * b27d409cfd8 zink: unconditionally set line width on rasterizer state
+    change
+  * df846640322 zink: use mixed zs renderpass for depth read/write
+  * 357e3130ad3 zink: reject resource creation if format features don't
+    match attachment
+  * 247ecdcc054 zink: remove tcs patch slot map
+  * 72cc88d205b mesa: flush bitmap caches when changing scissors or
+    window rects state
+  * a27af70c1b3 nir: fix setting varying from uniform as flat
+  * 424c9604922 radv: fix initializing pipeline_key::topology for GFX9
+    and older
+  * db3e06f76c3 intel: fix URB programming for GT1s
+  * 353330c094a r600/sfn: Fix store_shared_r600 write masks
+  * f1168c53aed nir: Add lowering for fround_even on r300.
+  * 62b00f70fdc panfrost: Stop overallocating compressed textures
+  * ff76add8055 gallium: fix unused symbols warnings
+  * f48a3cffe73 nir/opcodes: fisfinite32 should return bool32
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Apr 2022 18:56:57 +0200
+
 mesa (22.1.0~rc1+git2204141847.c519c37784f~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
