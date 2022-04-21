@@ -1,3 +1,48 @@
+mesa (22.2.0~git2204211835.68e8f00c441~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 68e8f00c441 ci/zink: Add glx-tfp to skips
+  * c9214768faa radv/ci: add a Van Gogh dEQP runner
+  * 669a3f39912 ci/b2c: update b2c to enable monitoring support
+  * e38d23a3965 ci/b2c: bump the kernel to 5.17.1
+  * c672464844e ci/b2c: fix the generation of the IMAGE_UNDER_TEST
+    variable
+  * ea7cda93f3d misc: replace `#ifdefss__cplusplus` with
+    `#ifdefs__cplusplus`
+  * 9aa094d1b11 misc: Replace `#ifdeft__cplusplus` with
+    `#ifdefss__cplusplus`
+  * 30aab0af07c nir/lower_int64: do not try to clamp floats to int-range
+  * 25acf1d8697 spirv: fix OpBranchConditional when both branches are
+    the same
+  * 4b7ba3869be util/stencil: fix stencil fallback blit shader texture
+    types.
+  * dbc264f5041 u_blitter/stencil: take dstbox x/y into accounts for dst
+    fb width
+  * e0e5cbd5a4a pvr: replace p_compiler.h boolean with stdbool
+  * ec4baed0eef ci/windows: Eliminate duplicate script definition
+  * 0606c7b0dbc ci: Also disable Windows container builds when down
+  * f2ddd59bf68 ci: Allow lima jobs to be globally disabled
+  * 4300b5d9147 dzn: remove stale cpp_args
+  * 85d0d3fede5 dzn: fixup indent
+  * dee89ea027a dzn: drop needless enum-casts
+  * 785b6579ae5 anv: Fix geometry flickering issue when compute and 3D
+    passes are combined
+  * f854e6ec9bc dzn: add space before += operator
+  * 52cde4a1ad8 dzn: clean up pointer syntax
+  * 92964d2bfdd dzn: remove some needless casts
+  * b8d41d5919a dzn: Add support for KHR_descriptor_update_template
+  * 4da5524c9b4 dzn: Split the write desc helpers in two halves
+  * 31dc341f3aa dzn: Pass layout objects to various
+    dzn_descriptor_set_ptr_xxx helpers
+  * fe68cfe82ae dzn: Rename a bunch of dzn_descriptor_set helpers
+  * d257494ec4d intel/dev: Add device info for RPL-P
+  * 3af6631c6d1 dzn: Add support for EXT_vertex_attribute_divisor
+  * d01a149b8b4 ci/windows: Split the windows-related tests
+  * cf930db39cd d3d12: Move the D3D12ResourceState code to the gallium
+    driver
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Apr 2022 18:54:59 +0200
+
 mesa (22.2.0~git2204181439.dd7278aa10a~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
