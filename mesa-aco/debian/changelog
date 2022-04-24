@@ -1,3 +1,52 @@
+mesa (22.2.0~git2204241756.a6a4bf0f1ea~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * a6a4bf0f1ea glsl/nir: set new_style_shadow for sparse tex ops as
+    necessary
+  * 5f0ac8ac191 aux/trace: make get_sparse_texture_virtual_page_size
+    useful
+  * 272f6ede0d8 mesa/st: clamp GL_RENDERBUFFER to GL_TEXTURE_2D for
+    sparse queries
+  * e4a6f09d127 radv: Clean up the accel-struct build shaders
+  * be57b085be6 radv: Build accaleration structures using LBVH
+  * 5d9ef0efb57 radv: Add the fuchsia radix sort
+  * 9c020b525ba radv: Format radv_acceleration_structure.c
+  * 49383fe39e3 radv: Make fill_buffer_shader non-static
+  * 2a004866fb2 radv: Use VAs in radv_meta_buffer.c
+  * 8cb92ce94e4 ci: Always install glslangValidator for build jobs
+  * 6bef59f56b3 pan/bi: Simplify bi_propagate_pass_flags
+  * 46b099e3925 meson: Ignore unused variables in release builds
+  * 3d5ba0e1b70 ac/gpu_info: remove old and unused fields from
+    radeon_info
+  * 1bf39b1f9d1 ac,radeonsi: rework how scratch_waves is used and move
+    it to ac_gpu_info.c
+  * 159b28ad36b ac/llvm: rename tbuffer -> buffer where tbuffer
+    instructions are not generated
+  * 6698753cdb6 ac/llvm: don't use tbuffer_store as a fallback for
+    swizzled stores
+  * 4b63b5caa20 ac/llvm: remove unused code from ac_llvm_build.c/h
+  * 99356c597f2 ac/llvm: remove immoffset parameter from
+    ac_build_tbuffer_load_byte/short
+  * c888e77dfc0 ac/llvm: remove inst_offset parameter from
+    ac_build_buffer_load
+  * e3421ae8ff0 ac/llvm: use soffset correctly in ac_build_buffer_load
+  * f68aeaa2c2e ac/llvm: remove inst_offset parameter from
+    ac_build_buffer_store_dword
+  * 8abb612cba5 ac/llvm: remove immoffset parameter from
+    ac_build_tbuffer_load
+  * 6234d920736 ac/llvm: remove immoffset parameter from
+    ac_build_tbuffer_store
+  * a3e777a89a2 ac/llvm: add AC_WAIT_EXP for ac_build_waitcnt
+  * f7190850071 ac: add more non-shadowed registers to the lists
+  * c16239d464c ac/surface/tests: generalize and extend gfx10 tests
+  * dda718d2bfe amd: document chips
+  * 5af4d0c2dca ac/llvm: remove LLVM pass ac_optimize_vs_outputs
+  * 3777a5d7157 radeonsi: assign param export indices before compilation
+  * 11c28d9798c ac: add ac_nir_optimize_outputs, a NIR version of
+    ac_optimize_vs_outputs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 24 Apr 2022 21:49:09 +0200
+
 mesa (22.2.0~git2204211835.68e8f00c441~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
