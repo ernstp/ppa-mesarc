@@ -1,3 +1,43 @@
+mesa (22.1.0~rc2+git2204221800.cfc3827890c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * cfc3827890c zink: add synchronization for buffer clears
+  * ae858606797 radv: only apply enable_mrt_output_nan_fixup for 32-bit
+    float MRTs
+  * 0776767b150 zink: fix semantics mask for compute control barriers
+  * 5286bd22d8b zink: fix tcs control barriers for use without vk memory
+    model
+  * de0c61c03bb iris: fix race condition during busy tracking
+  * cbee0572eda wgl: support GL 4.6
+  * c5f6ff9d3e5 zink: move the kopper present fence to the displaytarget
+    object
+  * a9a6fb2cf26 .pick_status.json: Update to
+    fbece25a451bb7915891851ee5c72724974ae5e2
+  * 2324083fe9d nir/divergence: handle load_global_block_intel
+  * 08e22fff13a r300: Print warning when stubbing derivatives
+  * af570d37a7b ci/b2c: fix the generation of the IMAGE_UNDER_TEST
+    variable
+  * a427a88f409 spirv: fix OpBranchConditional when both branches are
+    the same
+  * f8dc7e0d374 util/stencil: fix stencil fallback blit shader texture
+    types.
+  * 55d9bd1b648 u_blitter/stencil: take dstbox x/y into accounts for dst
+    fb width
+  * 692d9bce640 anv: Fix geometry flickering issue when compute and 3D
+    passes are combined
+  * 503440f0dc4 intel/dev: Add device info for RPL-P
+  * 2af5c609be5 crocus: export GEM handle with RDWR access rights
+  * f335548405a util/draw: fix indirect draw count readback
+  * 9d020c5b524 util/draw: handle draw_count=0 when reading indirect
+    parameters
+  * 936c5278de4 util/draw: fix map size of indirect buffer in
+    util_draw_indirect_read
+  * 1eda70fb319 zink: handle device-local unsynchronized maps
+  * 3bd963d88bf .pick_status.json: Update to
+    9f44a264623461c98368185b023d99446676e039
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 24 Apr 2022 21:51:10 +0200
+
 mesa (22.1.0~rc2+git2204210644.7c75d83842e~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
