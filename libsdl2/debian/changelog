@@ -1,3 +1,22 @@
+libsdl2 (2.0.22+git2204231935.981e1e3c4~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 981e1e3c4 Fixed logical size synchronization issue on macOS
+  * 7a5743031 hidapi, libusb: import mainstream commit 536bad201e
+  * fa073ed01 Revert "Fix relative mouse input for Unvanquished
+    (unvanquished.net)"
+  * 8986efd64 Added support for the Backbone One controller on iOS
+  * 2ca083788 SDL: sometimes the PS5 controller doesn't report having to
+    power even when connected over USB. Possibly related to being
+    completely charged? Either way we already know that it's USB or BT
+    so let's use the driver's knowledge instead.
+  * 04bf7c943 Fixed build
+  * d9b5805ba Return a correlation error when trigger rumble is
+    attempted without correlation
+  * 0288de852 SDL_Rect: Add sa documentation block to SDL_FRect
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 24 Apr 2022 21:48:39 +0200
+
 libsdl2 (2.0.22+git2204211747.ba62ead5e~i~wayland6) impish; urgency=medium
 
   * New snapshot:
