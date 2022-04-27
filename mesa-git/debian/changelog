@@ -1,3 +1,49 @@
+mesa (22.1.0~rc2+git2204270554.276d23b4bc3~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 276d23b4bc3 zink: ci update
+  * 8cd82ee2566 zink: fix up swapchain depth buffer geometry during fb
+    update
+  * 939a0cf8765 zink: fix/improve swapchain surface info updating
+  * c074592f3d0 kopper: add DISPLAY_TARGET bind for depth buffer
+  * 63d75ac797e kopper: copy a bunch of code for texture_from_pixmap
+  * 5e3b01c515c kopper: store whether screen has dmabuf support
+  * c7830bf8731 kopper: move drawable geometry updating up in function
+  * e34284b7dc4 kopper: always fetch and store drawable info
+  * bad73e09592 wgl: support kopper
+  * 888b4de9d4f zink: support win32 wsi
+  * 5a1b1a07293 kopper: add win32 loader interface
+  * 88b07e972b2 zink: support VK_KHR_win32_surface
+  * 38fd735a72e wgl: add zink to the list of auto-loaded drivers
+  * 3ae788a9374 wgl: add a flag to determine if running on zink
+  * 68998c0c9af ci: Also disable Windows container builds when down
+  * 8a538859993 CI: Disable Windows jobs
+  * c7fe9631507 ci/windows: Add a variable to globally disable jobs
+    using windows runners
+  * f6c77aa5585 vulkan: Set signals[i].stageMask = ALL_COMMANDS for
+    QueueSubmit2 wrapping
+  * fe83982fa62 anv: workaround apps that assume full subgroups without
+    specifying it
+  * 89392243504 radv: fix clearing of TRUNC_COORD with tg4 and immutable
+    samplers
+  * 3dd54edd121 nir: Lower all bit sizes of usub_borrow
+  * 7358faab52d vulkan: bump layer api versions to current vk header
+    version
+  * 100360a3077 r300: set PIPE_BIND_CONSTANT_BUFFER for const_uploader
+  * 5634be6cb84 winsys/amdgpu: fix a mutex deadlock when we fail to
+    create pipe_screen
+  * 1e1b7661e2a anv: skip acceleration structure in binding table
+    emission
+  * f11afdbf9c5 zink: fix group memory barrier emission
+  * ed6d83f01b7 radv: Fix lowering ignore_ray_intersection
+  * 12eb1548bd4 anv: fix acceleration structure descriptor template
+    writes
+  * 4a434c77fc3 intel: fixup number of threads per EU on XeHP
+  * c2037211162 nir: mark XFB varyings as unmoveable to prevent them to
+    be remapped
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Apr 2022 20:45:12 +0200
+
 mesa (22.1.0~rc2+git2204221800.cfc3827890c~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
