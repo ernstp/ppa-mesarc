@@ -1,3 +1,51 @@
+mesa (22.2.0~git2204271913.f17d3a12512~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * f17d3a12512 radeon/vcn: skip create and destroy message for jpeg
+  * de3890daa54 zink: add supported present modes to kopper
+    displaytarget
+  * d89b95b247c ci: Limit Intel CPU scaling frequency for performance
+    tests
+  * 99b04cbb736 ci: Add CPU frequency adjustment capability
+  * 76cea8e27b3 panfrost: Fix pack_32_2x16 implementation
+  * 92e5eee39e5 radv: use correct push constants range for internal
+    operations
+  * 031bcf686b1 v3d/simulator: add support for AMD cards
+  * 9c3144d2efc v3dv: store device_id on device init
+  * 3f824e0e85c panvk: Eliminate unused vertex attributes
+  * e248c64f069 panvk: Take buffer offsets into account in
+    BindVertexBuffers
+  * 657b0ff8615 ci/iris: Enable SKQP on Tiger Lake boards
+  * c1e59bea05c ci: intel: Merge anv and iris into src/intel/ci
+  * 3620e7e71c7 vulkan: drop empty vulkan_wsi_args
+  * 6623f60c34c vulkan: use c_msvc_compat_args for shared code
+  * e6bcdc763c9 radv: enable radv_disable_sinking_load_input_fs for Grid
+    Autosport
+  * 1dbfd2be4b1 radv: allow to disable sinking of load inputs for FS via
+    drirc
+  * 6261ca74257 etnaviv: add tile size helper
+  * 2d2f9572c24 etnaviv: use feature bit to check for big tile support
+  * 41220116978 etnaviv: properly set additional DEC400 compression
+    states
+  * 17d9b0808ab etnaviv: add support for big tile RS states
+  * c2a3236d1a3 etnaviv: clean up tiling setup in etna_compile_rs_state
+  * 8d6b6e31e18 etnaviv: use feature bit for one const src per
+    instuction limitation
+  * 5fcf55bb153 etnaviv: use feature flag to determine which RS states
+    to use
+  * 7c46a488362 etnaviv: use new PE pipe address states on >= HALTI0
+  * 617339ab5b4 etnaviv: correct bits per tile and clear value for
+    HALTI5
+  * dd8a314d3f6 etnaviv: update headers from rnndb
+  * 8c153bb0919 etnaviv: fill all minor GPU features from the kernel
+  * ab942aaed0f etnaviv: don't supertile textures if supertiling is
+    disabled via debug option
+  * f525706e772 radv: fix handling divisor == 0 with dynamic vertex
+    input state
+  * 4f3736595f0 r600: Add support for TGSI_OPCODE_ATOMIMIN and IMAX
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Apr 2022 20:43:13 +0200
+
 mesa (22.2.0~git2204241756.a6a4bf0f1ea~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
