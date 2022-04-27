@@ -1,3 +1,48 @@
+libsdl2 (2.0.23+git2204271822.0f45a4e30~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 0f45a4e30 log: Don't try to SDL_free the static array.  :)
+  * 31e83cd14 log: Fixed build (sorry!)
+  * fde9a7086 log: Make the message buffer static.
+  * c4141bc11 log: Wrap the call to the logging implementation in a
+    mutex.
+  * 2a4295228 log: Don't stack-allocate the message buffer.
+  * 12f15aaa7 fix build
+  * 05bd225a8 x11: If XRandR isn't available, add a generic display.
+  * ccc70e644 x11: Fixed some compiler warnings.
+  * 7d7ec9c95 x11: Remove XVidMode and Xinerama support.
+  * e551384a9 Added functions to get the platform dependent name for a
+    joystick or game controller
+  * b293888c7 Fixes an issue introduced via #5573 when building for i686
+  * 5066910bf audio: Make pregenerated resampler kaiser filter more
+    precise.
+  * 111c3add7 audio: Resampler optimizations.
+  * de019568d audio: Prebake the resampler's kaiser table instead of
+    doing it at runtime.
+  * f6eb4b075 pulseaudio: Feed audio data in response to write
+    callbacks.
+  * 01ef98a5d Don't force keyboard auto-repeat on, if the user has
+    disabled it for some reason
+  * 795744fc7 Turn off relative mouse before window checks as well
+  * e2d268a39 SDL_cocoamouse.m: SetRelativeMouseMode even if out of
+    focus Should fix #3087
+  * d7c07d6b0 Read motion sensor scale from Switch controllers (#5555)
+  * 76afb8583 Introduces Cocoa_GetWindowDisplayIndex. This enable a
+    proper management for dpi when switching between retina and non-
+    retina displays.
+  * c39df2fb0 joystick: get HID top-level collection preparsed data
+    directly from RawInput API.
+  * 8c1584e8e WhatsNew: Start block for 2.0.24
+  * e9ff4fdd4 add SDL_bsearch
+  * 0b2a55ea7 Fix typo
+  * 3dcfe8608 Add joystick battery event
+  * 0964c84d7 Always use SDL_PrivateJoystickBatteryLevel to update
+    battery level
+  * fa29e2d7f Updated to version 2.0.23 for development
+  * 53dea9830 x11: revert checks for _NET_WM_STATE_FULLSCREEN changes.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 27 Apr 2022 20:42:44 +0200
+
 libsdl2 (2.0.22+git2204231935.981e1e3c4~i~wayland6) impish; urgency=medium
 
   * New snapshot:
