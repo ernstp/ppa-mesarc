@@ -1,3 +1,30 @@
+mesa (22.1.0~rc3+git2204281905.40584d7dbfe~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 40584d7dbfe drm-uapi/i915_drm.h: Update from drm-next (2022-04-28)
+  * 3412aaf4f17 isl: disable mcs (and mcs+ccs) for color msaa on DG2
+  * 2820d39bb45 vulkan/wsi/x11: Use atomic_int with sent_image_count
+  * 608ab4d9a29 llvmpipe: add user memory resources to the debug global
+    list.
+  * 2e84b750474 .pick_status.json: Update to
+    1dc697942af7254798f83583f5788e1abf136d27
+  * 431f07fcd98 panfrost: Fix pack_32_2x16 implementation
+  * 46c9e8b811c radv: enable radv_disable_sinking_load_input_fs for Grid
+    Autosport
+  * 0783dd7f7ef radv: allow to disable sinking of load inputs for FS via
+    drirc
+  * 2eba273314a radv: fix handling divisor == 0 with dynamic vertex
+    input state
+  * 7fb345d84a2 drisw: remove dead code
+  * 07a0e16324a nir: Remove single-source phis before
+    opt_if_loop_last_continue
+  * a5191667d33 spirv: Handle Op*MulExtended for non-32-bit types
+  * dea703ff2bf .pick_status.json: Update to
+    f17d3a125126dd7e0f1c2072545976cec1eeb1c8
+  * 53fe3ea095f VERSION: bump for 22.1.0-rc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Apr 2022 01:36:51 +0200
+
 mesa (22.1.0~rc2+git2204270554.276d23b4bc3~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
