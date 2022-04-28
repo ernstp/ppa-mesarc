@@ -1,3 +1,48 @@
+mesa (22.2.0~git2204290027.7ab05e3c3fe~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 7ab05e3c3fe gallium/vl: respect the video codecs configure in meson
+  * 7d969fe9e91 meson: add a video codec support option
+  * 2c3178329b5 gallium/omx: add video codec supported hook for decode
+    paths.
+  * 20dfdcde718 gallium/vl: wrap codec support checks in a common
+    function.
+  * de99a11172e intel_dev_info: Add --hwconfig command line parameter
+  * d9ff9ea9c33 intel/dev: Read hwconfig from i915
+  * 463cb1153f9 nir_to_tgsi: Drop the txl(lod=0)->tex nir_lower_tex()
+    fixup.
+  * 536c8ee96df nir/lower_tex: Make the adding a 0 LOD to nir_op_tex in
+    the VS optional.
+  * fd90a57e281 venus: disable VK_EXT_extended_dynamic_state2
+  * b023f18badf isl,iris: Add DG2 CCS modifier support for XeHP
+  * a53abeb7fbe intel/isl: Add a score for I915_FORMAT_MOD_4_TILED
+  * ac441d0953a isl,iris: Add I915_FORMAT_MOD_4_TILED support for XeHP
+  * acba3efe695 include/uapi: Update drm_fourcc.h from kernel
+  * 2bc8c61fd00 iris: Return a 64B stride for clear color plane
+  * a1277311195 d3d12: Add a unit test for context reset recovery
+  * 869a1a60668 d3d12: Attempt screen reset during context create
+  * 2d7eea08e2b d3d12: Plug screen leaks
+  * d0144255837 d3d12: Plug context leaks
+  * 2bf00b4cff8 d3d12: Hook up robustness extensions
+  * 06ae10bb925 wgl: Implement WGL_ARB_create_context_robustness
+  * a2c9e1cb509 nir: add 16 and 64 bit fisnormal lowering
+  * 081ac731628 kopper: implement texture-from-pixmap for software (non-
+    dmabuf)
+  * 27834266f9d kopper: rename a confusing variable
+  * ab8702c59ec kopper: check whether zink is using sw
+  * 5660cded600 zink/kopper: add a function for determining if running
+    on software
+  * 05ffc5f5ea8 kopper: check for modifiers to use modifier
+    functionality
+  * ca6760948ff kopper: add some error logging for pixmap->texture
+    failure
+  * 6db7dd64b61 d3d12: Don't block DISPLAY based on format for non-
+    Windows
+  * 08bb4988406 ac: remove gallivm header include
+  * 1dc697942af zink: radv ci updates
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Apr 2022 01:34:53 +0200
+
 mesa (22.2.0~git2204271913.f17d3a12512~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
