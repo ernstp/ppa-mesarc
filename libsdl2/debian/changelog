@@ -1,3 +1,12 @@
+libsdl2 (2.0.23+git2204290001.a0cdc1fc3~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * a0cdc1fc3 Added declaration of SDL_LogInit() and SDL_LogQuit()
+  * 29694869b audio: Revert one of the resampler optimizations.
+  * 5c1f5a730 test: Correct invalid enum length.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Apr 2022 01:34:27 +0200
+
 libsdl2 (2.0.23+git2204271822.0f45a4e30~i~wayland6) impish; urgency=medium
 
   * New snapshot:
