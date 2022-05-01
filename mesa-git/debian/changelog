@@ -1,3 +1,37 @@
+mesa (22.1.0~rc3+git2204290353.1d33c5a2fc2~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1d33c5a2fc2 zink: remove drm_fd
+  * 69c861ad584 zink: ignore KMS handle types
+  * e45737c9eb4 zink: export fd info for all 2d images
+  * 9f02b52ba2d zink: fix dmabuf plane returns
+  * f2d04b4fe93 kopper: implement texture-from-pixmap for software (non-
+    dmabuf)
+  * e0bf9a7ea87 kopper: rename a confusing variable
+  * 69936150478 kopper: check whether zink is using sw
+  * 8fb66e77e27 zink/kopper: add a function for determining if running
+    on software
+  * 9b872cc3a51 kopper: check for modifiers to use modifier
+    functionality
+  * 721f054bae8 kopper: add some error logging for pixmap->texture
+    failure
+  * e8d16506250 glx/kopper: Wire up a way for SwapBuffers to fail
+  * c9f29c22b84 zink/kopper: add a mechanism for checking swapchain
+    status
+  * 0d4b79d1117 zink: flag swapchain resources as swapchains
+  * 2096db8aad6 zink: handle swapchain acquire failures more directly
+  * 7decf4056e9 zink: fix return for zink_kopper_acquire
+  * 8ac563d1576 zink: rework swapchain object check for acquires
+  * 8ab5ac0870a zink: unset image layout when killing swapchain
+  * 5694c04cdde zink: handle dead swapchains in acquire
+  * 8bae419dfe4 zink: flag swapchains when updating fails
+  * e1706c29c6d zink: add a util function for finding swapchain resource
+  * ccdebfb26a9 drm-uapi/i915_drm.h: Update from drm-next (2022-04-28)
+  * b39d53761c5 isl: disable mcs (and mcs+ccs) for color msaa on DG2
+  * b674942ecc4 vulkan/wsi/x11: Use atomic_int with sent_image_count
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 01 May 2022 17:53:50 +0200
+
 mesa (22.1.0~rc3+git2204281905.40584d7dbfe~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
