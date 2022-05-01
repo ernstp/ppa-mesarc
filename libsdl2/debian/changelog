@@ -1,3 +1,26 @@
+libsdl2 (2.0.23+git2204302040.5394238cd~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 5394238cd Don't include the internal header for a file intended for
+    use by applications
+  * 41b919851 Fixed Xcode warning about Framework include style
+  * 829f6b3d7 These headers are system headers, not local headers
+  * 0687128c9 Reduce CPU usage in testgamecontroller
+  * 9e5cbf034 Disallow non-positive allocation.
+  * f81419702 Document that SDL_MAX_LOG_MESSAGE is no longer meaningful
+  * 6c2928b4b Switch uses of MIN() to SDL_min()
+  * ca26df340 assert: Allow messages of any length.
+  * 888899244 log: Allow log messages of any length.
+  * 645db217a log: Use malloc for long messages.
+  * 73448fe24 assert: Remove use of alloca()
+  * 97774cdf7 Move in va_copy() define block from stdlib.
+  * 7e636b03c Removed log message length limitation for Apple platforms
+  * 1aa9754d9 Add missing backslashes in README-linux.md command
+  * 2ccb0dfd1 Check for macOS 10.16 to support apps built with older
+    macOS SDKs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 01 May 2022 17:51:20 +0200
+
 libsdl2 (2.0.23+git2204290001.a0cdc1fc3~i~wayland6) impish; urgency=medium
 
   * New snapshot:
