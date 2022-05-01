@@ -1,3 +1,51 @@
+mesa (22.2.0~git2205010011.53fe6f10846~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 53fe6f10846 radv: Use the entire morton code as sort key
+  * 6ba55b40334 radv/radix_sort: Make variable names consistent
+  * f1eb1bd10ad radv/radix_sort: Add missing entry points
+  * 2f8123abab7 venus: enable ANB shared presentable image prop
+  * 2df0aa185ec venus: update vn_GetSwapchainGrallocUsage2ANDROID for
+    shared present
+  * d6b4f746b00 venus: cache front_rendering_usage bit at gralloc init
+  * 52ad0368cd4 venus: refactor android gralloc pieces
+  * 14cad38b190 intel/dev: Compute pixel pipe information based on
+    geometry topology DRM query.
+  * bf02bffe156 nouveau: Enable the NIR backend by default.
+  * 16ead7132f4 nouveau/nir: Put the UBO offset indirect into the
+    address reg.
+  * d1ff453a0df nv50/nir: align tlsspace to 0x10
+  * c228cb38895 nouveau/nir: Add support for pre-GF100 images and ssbos.
+  * 75f0127d783 ci/nouveau: Add MESA_GLES_VERSION_OVERRIDE=3.1 baseline
+    state.
+  * 3ddc505400e nouveau/nir: Move FS output stores to the end of the
+    last block.
+  * 53d87865cac turnip: fix drm modifier support with planar formats
+  * ba9c917149e mesa: add missing error-path
+  * 82b681db997 gallium/xlib: fix stale comment
+  * 202cab3d308 meson: deprecate specifying osmesa-bits
+  * 36250e839b2 meson: remove unused defines
+  * 33456ae5a48 iris: Fix assertion meant to only target the clear-color
+    stride
+  * ab9d649ac3c microsoft/compiler: Unload DXIL validator library
+    *after* calling Release()
+  * 12d7f911c96 aco/optimizer: prevent any overflow between SGPR and
+    const offset on MUBUF
+  * d5dc0c0392d aco: adjust num_waves for LDS before scheduling
+  * 8d8c59b4cd9 aco: split num_waves adjustment into separate function
+  * 6220046ad19 aco: remove 'max_waves' and use 'num_waves' to adjust
+    for LDS and workgroup size
+  * 6e6ba85fd9f turnip: Fix tu_debug_flags values clashing
+  * a47375d4dab mesa: unref syncobj after wait_sync
+  * 1585d12decb radv/ci: stop skipping dEQP-VK.synchronization.* on
+    Bonaire
+  * cdd201010df radv: fix the number of generated primitive queries with
+    NGG GS vs legacy
+  * 725ae34458f turnip: Add debug option to print gmem load/store skip
+    stats
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 01 May 2022 17:51:47 +0200
+
 mesa (22.2.0~git2204290027.7ab05e3c3fe~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
