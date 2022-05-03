@@ -1,3 +1,46 @@
+mesa (22.2.0~git2205031239.6ee9e6ce875~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6ee9e6ce875 radeonsi: generate unique shader name in
+    si_get_nir_shader
+  * f1f2d407e77 radeonsi: don't always strip NIR debug infos
+  * ce7966fcb49 aco: Use movk for AddressHi bits in vertex prolog
+  * 58bd9a379ef aco/ra: fix live-range splits of phi definitions
+  * d639608b8bf ac/nir: Do not set cursor in try_extract_additions
+  * 3829981eb74 radv: use 3D views for 3D internal operations on GFX6-8
+  * 180398f7851 nir: fix sorting before assigning varying driver
+    locations
+  * 067023dce2c util: Add some unit tests of the half-float conversions.
+  * 27e33d5c963 util: Keep quiet NaNs quiet when converting to half
+    float.
+  * acf6bf88c07 iris: use new kernel uAPI to compute video memory
+  * 763744aa8b0 panvk: Add address/range helpers for panvk_buffer
+  * 631f47e83a3 panvk: Only write depth when depth test enabled
+  * 46778f2b2a5 panvk: Lower image deref atomics
+  * 54412afadc3 pan/bi: Handle texture offset + index
+  * 86d32eed38c panvk: Allocate stack for each thread
+  * 7a7403f6aae panvk: Lower global vars to local
+  * 3f44bad1ce8 venus: log performance envs upon instance creation with
+    debug init
+  * 84a53de76ce venus: add VN_RELAX_BASE_SLEEP_US env var for tuning cpu
+    utils
+  * f3fb1d66327 drm-shim: Cleanup on device file close
+  * 409b76511c9 freedreno/drm-shim: Better iova handling
+  * 6c465ad6c76 drm-shim: Add error handling for bo_init()
+  * c4b5ebe1fc9 drm-shim: Better mmap offsets
+  * 97f4e48717c freedreno/drm-shim: Robustify error handling
+  * d06fc7bb4f9 freedreno/drm-shim: Update to latest uapi version
+  * a922997ffd3 drm-shim: Add GET_UNIQUE support
+  * bf04be17f7f vulkan/wsi/wayland: Fix double free on error condition
+  * 1e7ea180268 vulkan/runtime: 0-out pipeline cache object
+  * 7cd9adeb415 intel/compiler: In XeHP prefer <1;1,0> regions before
+    compacting
+  * 562fd989982 llvmpipe: add a ci flake
+  * 2505afc430c d3d12: Destroy empty residency bo set during early-
+    return
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 May 2022 13:10:41 +0200
+
 mesa (22.2.0~git2205010011.53fe6f10846~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
