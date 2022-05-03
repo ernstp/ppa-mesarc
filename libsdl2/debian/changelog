@@ -1,3 +1,14 @@
+libsdl2 (2.0.23+git2205030050.f25a78eed~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * f25a78eed Enable `SDL_TEXTEDITING_EXT` events in `checkkeys` test
+  * 6150245d6 Add new verbosity level for logging of `SDL_SysWMEvent`s
+  * d1a3981bf Fix crash when reading background events for MFi
+    controllers on macOS
+  * bb0b6dd42 Fixed using WGI without XInput
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 May 2022 13:10:12 +0200
+
 libsdl2 (2.0.23+git2204302040.5394238cd~i~wayland6) impish; urgency=medium
 
   * New snapshot:
