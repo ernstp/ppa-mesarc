@@ -1,3 +1,42 @@
+mesa (22.1.0~rc3+git2205022035.ae7c0db4b3c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * ae7c0db4b3c intel_dev_info: Add --hwconfig command line parameter
+  * b29e15e5155 intel/dev: Read hwconfig from i915
+  * 5949ead3150 llvmpipe: add user memory resources to the debug global
+    list.
+  * 4046230c138 pan/bi: Use texture index instead of sampler for message
+    preloading
+  * 01345ad5e91 r600: Allow eight bit, three channel formats for vertex
+    buffers
+  * 9fdb834853b anv: fix clflush usage on utrace copy batch
+  * 2f286bfef5d intel/dev: Compute pixel pipe information based on
+    geometry topology DRM query.
+  * d6accbe0400 nouveau/nir: Move FS output stores to the end of the
+    last block.
+  * 9b6b1445f75 mesa: add missing error-path
+  * 85065859a26 gallium/xlib: fix stale comment
+  * 5d41d82a6f6 meson: remove unused defines
+  * 33c3034765c iris: Fix assertion meant to only target the clear-color
+    stride
+  * ebc9a113189 microsoft/compiler: Unload DXIL validator library
+    *after* calling Release()
+  * 40867789ecc mesa: unref syncobj after wait_sync
+  * 421e4d445ae virgl: don't move input gl_SampleMaskIn to a temp
+  * 238b0187897 vulkan/wsi: keep allocate queue families in image, just
+    don't fill them
+  * d45ccc05f19 isl,iris: Add DG2 CCS modifier support for XeHP
+  * 21753f734e4 intel/isl: Add a score for I915_FORMAT_MOD_4_TILED
+  * 2385ca720bc isl,iris: Add I915_FORMAT_MOD_4_TILED support for XeHP
+  * fa4ad4f679c include/uapi: Update drm_fourcc.h from kernel
+  * 51ddb36a2d6 iris: Return a 64B stride for clear color plane
+  * d630f852b97 .pick_status.json: Mark
+    c025cb9ee9d79ebfb66a577556e04deecfe012ed as backported
+  * 0542f4ab033 .pick_status.json: Update to
+    2505afc430c6b151e7e4243503953ba0b0a2c842
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 03 May 2022 13:12:42 +0200
+
 mesa (22.1.0~rc3+git2204290353.1d33c5a2fc2~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
