@@ -32,18 +32,27 @@ git reset --hard origin/"$GITBRANCH"
 
 cp -r ../debian .
 
-if [ -e VERSION ]; then
-	PACKAGE_VERSION=$(cat VERSION | sed "s/-devel//")
+if [ "$PACKAGE_NAME" = libsdl2 ]; then
+	SDL_MAJOR_VERSION=$(grep -E "^SDL_MAJOR_VERSION=" configure.ac | grep -o -E '[0-9]+') || true
+	SDL_MINOR_VERSION=$(grep -E "^SDL_MINOR_VERSION=" configure.ac | grep -o -E '[0-9]+') || true
+	SDL_MICRO_VERSION=$(grep -E "^SDL_MICRO_VERSION=" configure.ac | grep -o -E '[0-9]+') || true
+	if [ -z "$SDL_MAJOR_VERSION" -o -z "$SDL_MINOR_VERSION" -o -z "$SDL_MICRO_VERSION" ]; then
+		echo "Error, couldn't find SDL version"
+		exit 1
+	fi
+	PACKAGE_VERSION=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION.$SDL_MICRO_VERSION
+elif [ -e VERSION ]; then
+	PACKAGE_VERSION=$(cat VERSION | sed "s/-devel//") || true
 elif [ -e Makefile.os2 ]; then
-	PACKAGE_VERSION=$(grep VERSION Makefile.os2 | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+	PACKAGE_VERSION=$(grep VERSION Makefile.os2 | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+') || true
 elif [ -e CMakeLists.txt ]; then
-	PACKAGE_VERSION=$(grep PROJECT_VERSION CMakeLists.txt | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+	PACKAGE_VERSION=$(grep PROJECT_VERSION CMakeLists.txt | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+') || true
 elif [ -e configure.ac ]; then
-	PACKAGE_VERSION=$(grep AC_INIT -A 1 configure.ac | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+')
+	PACKAGE_VERSION=$(grep AC_INIT -A 1 configure.ac | grep -o -E '[0-9]+\.[0-9]+\.[0-9]+') || true
 elif [ -e meson.build ]; then
-	PACKAGE_VERSION=$(grep -E "^\s+version\s*:" meson.build | grep -o -E '[0-9]+\.[0-9]+(\.[0-9]+)?')
+	PACKAGE_VERSION=$(grep -E "^\s+version\s*:" meson.build | grep -o -E '[0-9]+\.[0-9]+(\.[0-9]+)?') || true
 else
-	echo "Error, couldn't find package version"
+	echo "Error, couldn't find version file"
 	exit 1
 fi
 if [ -z "$PACKAGE_VERSION" ]; then
