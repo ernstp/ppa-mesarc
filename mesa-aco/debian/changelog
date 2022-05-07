@@ -1,3 +1,48 @@
+mesa (22.2.0~git2205070726.81515f6b3c4~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 81515f6b3c4 venus: extend buffer cache to cover layering usage
+  * 6983c8580a2 gallium/clover: LLVM setLangDefaults moved from
+    clangFrontend to clangBasic
+  * b2b810ebff6 anv: advertise rectangularLines only for Gen10+
+  * ef8c5a20ee3 llvmpipe: never infer early zs tests when fbfetch is
+    active
+  * 5c24eb721ac nir/gather_info: flag fbfetch on subpass image loads
+  * 359e60cf5ed aco: split load_sbt_amd result
+  * 594fa057224 radv: use SMEM for a few load_global
+  * 21c1a35d887 radv: remove subtractions in address calculations
+  * 30980464002 radv: allow LBVH on GFX6+
+  * 28a87dee606 radv: add radv_has_shader_buffer_float_minmax
+  * d70688492c5 aco/optimizer: re-combine and copy-propagate
+    p_create_vector(p_split_vector)
+  * 5e6e47ecea8 aco/ra: improve split_vector register assignment if the
+    operand is not killed
+  * 499dc20e6ac aco: don't re-create vectors for load_barycentric_*
+    intrinsics
+  * 0607c27fd11 zink: restore conditional ordering for query begin/end
+  * d74cd2a34b6 radv: emit fewer framebuffer registers
+  * 38ab178c4ad util/blitter: fix sampler restore with 0 saved samplers
+  * 969512d6962 intel: fix stall debug option
+  * cfec9a55ea6 frontend/dri: allow swapped BGR->RGB channel order for
+    MSAA color buffers
+  * 89c94502b66 mesa: consider the sample count when choosing a texture
+    format
+  * dd3179aff0c glsl: Remove unused lower_variable_index_to_cond_assign.
+  * 2529690ee38 glsl: Remove EmitNoLoops and the associated
+    lower_jumps(lower_break=true) code.
+  * c03cc83ef14 compiler/glsl: Remove the dead parts of
+    build_program_resource_list().
+  * 74056f63588 mesa/st: Clean up a bit of st_prepare_vertex_program().
+  * 3a42e92a4f2 glsl: Drop the dead MOD_TO_FLOOR path.
+  * 7f137636907 glsl: Remove the unused lower_if_to_cond_assign.
+  * e9b491f9b51 gallium: Remove now-unused shader caps.
+  * 9617184bc2c glsl: Retire the non-NIR GLSL linking paths.
+  * 7221cc76579 mesa/st: Remove now unused TGSI paths from disk cache.
+  * 8dc99300d6f gallium/tgsi: Remove tgsi_emulate.
+  * 9837370adf8 mesa: Remove unused Mesa IR PROGRAM_* register files.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 07 May 2022 11:25:26 +0200
+
 mesa (22.2.0~git2205031239.6ee9e6ce875~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
