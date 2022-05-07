@@ -1,3 +1,15 @@
+libdecor-0 (0.1.0+git2204290059.a382710~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * a382710 demo: constrain window size to prevent manual resize below
+    minimum
+  * c3b3965 libecor: make getter for min/max limits public
+  * f6e4255 libdecor: drop 'p' prefix for pointer to width and height
+  * 2b32d7c libdecor: reorder set_min/set_max functions
+  * 92e29a2 remove leading and trailing space
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 07 May 2022 11:02:07 +0200
+
 libdecor-0 (0.1.0+git2204191107.099b44e~i~wayland0) impish; urgency=medium
 
   * New snapshot:
