@@ -1,3 +1,50 @@
+mesa (22.1.0~rc4+git2205052013.45cbab0442c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 45cbab0442c radv: disable instance packing to fix pipeline query
+    stats
+  * 718a8223ff4 .pick_status.json: Update to
+    17c98393f9f3cb0801b73b2d4c62442859417368
+  * b929e21fbea lavapipe: lower quad_broadcast intrinsics
+  * b312721d871 egl/kopper: Hook up eglSwapInterval
+  * cbc697d2d6b glx/kopper: Enable GLX_EXT_swap_control etc.
+  * 533117777f9 kopper: Grow a swap interval API
+  * f96b0d640b1 zink: add supported present modes to kopper
+    displaytarget
+  * f857eed827e wsi/x11: Avoid using xcb_wait_for_special_event in FIFO
+    modes
+  * aab9d6df50e vulkan/wsi: Set the right stage flags for semaphore
+    waits
+  * ca8af9c529b anv: remove static_state_mask
+  * 5346b6aac41 anv: don't emit 3DSTATE_VF_TOPOLOGY in pipeline batch
+  * 1cd83f03117 anv: don't emit 3DSTATE_DEPTH_BOUNDS in pipeline batch
+  * 0dcd1ac226d anv: don't emit 3DSTATE_BLEND_STATE_POINTERS in pipeline
+    batch
+  * 265351f03fe anv: don't emit 3DSTATE_WM in pipeline batch
+  * 5eadf0d634e anv: don't emit 3DSTATE_STREAMOUT in pipeline batch
+  * 579a90e3c43 anv: never emit 3DSTATE_CPS in the pipeline batch
+  * c4fac8fbbe9 anv: rework sample location
+  * 218b619ab25 Revert "anv: fix dynamic state emission"
+  * ebb13496c40 anv: add missing logic op set in pipeline dyn state
+  * 96202a0fab5 anv: reset all dynamic state after secondary execution
+  * e5225e485d8 radv: re-emit dynamic line stipple state if the
+    primitive topology changed
+  * aaba210881f aco/ra: fix vgpr_limit
+  * b465069b747 nir: Don't set writes_memory for reading XFB
+  * ae44b3365ff ac/llvm: set the correct cache policy for sparse buffer
+    loads
+  * f936ff86318 .pick_status.json: Update to
+    7f91e8fad94dd34f83c6a124dbbe5d210be7715f
+  * fffad80496b VERSION: bump for 22.1.0-rc4 release
+  * 9c0b0093359 wgl: don't auto-load zink before software drivers
+  * df09d2a0ba6 wgl: always set alpha on kopper windows
+  * 6447169dee3 gallivm: use VPERMPS (x86/AVX2) for 32-bit 8-element
+    shuffles
+  * a5e133250f9 gallivm: use shufflevector for shuffles when index is
+    constant data
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 07 May 2022 11:27:23 +0200
+
 mesa (22.1.0~rc3+git2205022035.ae7c0db4b3c~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
