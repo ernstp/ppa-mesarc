@@ -1,3 +1,13 @@
+libsdl2 (2.23.0+git2205081721.9ef688574~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 9ef688574 Fix MSVC ARM32 builds
+  * b352b7834 Add 'static VCRT' cases to MSVC build matrix
+  * 0e63b514d Don't define memcpy(), memset() when using static VC
+    runtime.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 08 May 2022 19:59:42 +0200
+
 libsdl2 (2.23.0+git2205061951.8cd908e0b~i~wayland6) impish; urgency=medium
 
   * New snapshot:
