@@ -1,3 +1,16 @@
+mesa (22.2.0~git2205081627.a7f44b62694~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * a7f44b62694 vulkan/wsi/x11: Ensure we have the required number of
+    images for acquire.
+  * 24049b8771b wsi/x11: Don't leak xcb_get_geometry_reply_t.
+  * 56070d33225 radeonsi: Use
+    nir_fold_16bit_image_load_store_conversions.
+  * ad864a7c150 nir/lower_tex: Copy more fields in lower_tex_to_txd and
+    friends
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 08 May 2022 20:00:08 +0200
+
 mesa (22.2.0~git2205070726.81515f6b3c4~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
