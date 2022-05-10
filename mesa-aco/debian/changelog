@@ -1,3 +1,47 @@
+mesa (22.2.0~git2205100732.d0f15304a3f~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * d0f15304a3f zink: scale depth bias by factor of 2
+  * f3df3d4c80f glsl: Make all drivers take the
+    GLSLOptimizeConservatively path.
+  * d100c07c48d radeonsi: remove tautologies when setting CU_EN
+  * 74bd5bbf286 radeonsi/vcn: update av1 decoding to support vcn4
+  * 62bb11a5a5a radeonsi/vcn: Add support of array_mode for gfx11
+  * 88075b7ea1c radeonsi/vcn: add jpeg decode support for gfx11
+  * caa09f66ae4 amd: add chip identification for gfx1100-1103
+  * b00ab763a98 radeonsi/vcn: enable vcn 4.0 encode for gfx11 asic
+  * efde05c631c radeonsi/vcn: add session init ib for vcn 4.0
+  * dbd75e0d481 radeonsi/vcn: add encode context ib for vcn 4.0
+  * 38a95f2109c radeonsi/vcn: add vcn 4.0 encode fw interface version
+  * ff2b2584fcf radeonsi/vcn: add vcn 4.0 encode support
+  * f9de35a7313 radeonsi/vcn: add decode software ring support for gfx11
+  * b8a3bafe94d radeonsi/gfx11: update codec support for gfx11
+  * 69f02164b3b amd: update headers to support decode software ring
+  * 2e4e39837ac radeonsi/gfx11: add a workaround for CB perf counters
+  * e3b4e1fe850 radeonsi: inline si_cp_dma_prefetch in si_draw_vbo for
+    lower overhead
+  * 1bc6d6c9338 radeonsi/gfx11: limit CP DMA to max 32KB sizes
+  * 3bc754a9a62 radeonsi/gfx11: mark streamout as unimplemented for now
+  * 66d4bafd5b3 radeonsi/gfx11: resolve MSAA using u_blitter
+  * 8bfb4657c84 radeonsi/gfx11: don't count the non-existent
+    scratch_byte_offset SGPR
+  * c65a303f532 radeonsi/gfx11: change LDS allocation granularity for PS
+  * c749b6f6ae9 radeonsi/gfx11: update the initialization of SGPR0/1
+    registers for HS and GS
+  * 54d85700a12 radeonsi/gfx11: limit MSAA color buffers to the RGBA
+    channel order
+  * 6531ec89225 ac,radeonsi/gfx11: swizzle MRT0/1 for dual source
+    blending
+  * 12a606c1bd1 radeonsi/gfx11: export alpha through mrtz for alpha-to-
+    coverage if mrtz is there
+  * 167b378377e radeonsi/gfx11: VRS changes
+  * 6d0e50f226a radeonsi/gfx11: TF_RING_SIZE changed to a per-SE size
+  * ce950f1d965 radeonsi/gfx11: don't use FLUSH_AND_INV_DB_META
+  * c33a930ceae radeonsi/gfx11: emit SQ_NON_EVENT for tessellation at
+    the end of IBs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 May 2022 07:47:04 +0200
+
 mesa (22.2.0~git2205081627.a7f44b62694~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
