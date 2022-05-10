@@ -1,3 +1,13 @@
+mesa (22.1.0~rc4+git2205092019.8b806828ad1~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 8b806828ad1 kopper: pass the current context to dri_flush
+  * ef86acd25ca kopper: invalidate drawables when resizing textures in
+    place
+  * b78272daa59 wsi/x11: Don't leak xcb_get_geometry_reply_t.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 May 2022 07:49:03 +0200
+
 mesa (22.1.0~rc4+git2205052013.45cbab0442c~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
