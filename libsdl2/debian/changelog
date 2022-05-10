@@ -1,3 +1,20 @@
+libsdl2 (2.23.0+git2205100653.ec8fa5775~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * ec8fa5775 macOS: always use Objective-C ARC (automatic ref
+    counting).
+  * d35c737f1 macOS: change min supported OS from 10.6 to 10.7.
+  * 6422a5d25 updated config.guess and config.sub from mainstream
+  * 2a7948016 cpuinfo: Check for overflow in SIMD allocation
+  * cf1daafa3 cpuinfo: Set padding to 0 if none is needed
+  * d15f6e379 test: Add a unit test for overflow detection
+  * f661654fa stdinc: Add overflow-checking add and multiply for size_t
+  * 6e6e425e2 workflows: Do the equivalent of Automake `make distcheck`
+  * c71ee68b8 Fix enabling tests on platforms without testnative support
+  * 318b5577f Delete gcc-fat.sh
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 May 2022 07:46:37 +0200
+
 libsdl2 (2.23.0+git2205081721.9ef688574~i~wayland6) impish; urgency=medium
 
   * New snapshot:
