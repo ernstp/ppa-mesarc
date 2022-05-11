@@ -1,3 +1,54 @@
+mesa (22.1.0~rc4+git2205110623.d25f3888531~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * d25f3888531 .pick_status.json: Mark
+    8c1d9c7b744b2e5b40fd42cfd51256b16deea6a8 as denominated
+  * b7366e6acb4 radv: fix memory leak of descriptor set layout
+  * 03d5e496d9a anv: re-alloc push constants after secondary command
+    buffers
+  * 0b90d3dc580 gallivm: fix oob txf swizzling
+  * 8e84d6fdeda llvmpipe: always set ssbo data pointers for draw
+  * c6e7e2977f1 gallivm/draw: fix oob ubo reads
+  * 0c50ee124a0 st/draw_feedback: set constant buffer stride
+  * f9cc403ebed lavapipe: fix CmdPushDescriptorSetWithTemplateKHR with
+    refcounting
+  * 659e41fe794 gallivm: fix ssbo oob reads
+  * e2c69cd976b nir/opt_algebraic: Fix mask in shift by constant
+    combining.
+  * 3830fb9769b gallium/u_threaded_context: Use
+    PIPE_MAX_SHADER_SAMPLER_VIEWS for sampler_buffers
+  * 5b82328bbdb pan/mdg: Fix multiple spilt writes in the same bundle
+  * 7c24f4fbc91 pan/mdg: Return the instruction from
+    mir_insert_instruction_*_scheduled
+  * 7feaf6c548f pan/mdg: Fix mask usage when filling before a spill
+  * cf289ff969c pan/mdg: Use MAX2 to set min_alignment
+  * 38ac16dbff2 pan/mdg: Keep min_bound at 16 when alignment requires it
+  * 9adf6d9d7e7 nir/lower_shader_calls: put inserted instructions into a
+    dummy block
+  * 34261b10843 nir/lower_shader_calls: don't insert code after
+    break/continue
+  * a4189af1686 nir/lower_shader_calls: don't use nop instructions as
+    cursors
+  * 29b1c19e6c6 nir/cf: Return a cursor from nir_cf_extract as well
+  * 540fa4ecd7a nir/cf: return cursor after insertion of cf_list
+  * 7b8c243ae5e gallium/clover: pass -no-opaque-pointers to Clang
+  * 287a776bedd vulkan/wsi/x11: Ensure we have the required number of
+    images for acquire.
+  * f5707aae3cf nir/lower_tex: Copy more fields in lower_tex_to_txd and
+    friends
+  * a068671262c anv: advertise rectangularLines only for Gen10+
+  * 07a7306d816 util/blitter: fix sampler restore with 0 saved samplers
+  * 9d05943813c .pick_status.json: Mark
+    8daf8ff730b777bb512a237a36783d781cbf9de9 as backported
+  * 32c596ef909 .pick_status.json: Mark
+    8b28d1751c76b0ba72dae1f6b916cb7f2bbc1c0c as backported
+  * 215b28f5df9 .pick_status.json: Mark
+    ae369e9f6d4f2c826f1f2a748c32a14f9d5f1f54 as backported
+  * aef2c5cb70c .pick_status.json: Mark
+    0e49ef5c9f2ec34567613226ad498edca28bce88 as backported
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 11 May 2022 11:48:34 +0200
+
 mesa (22.1.0~rc4+git2205092019.8b806828ad1~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
