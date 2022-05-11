@@ -1,3 +1,15 @@
+libsdl2 (2.23.0+git2205110112.2f924020e~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 2f924020e Add SDL_SCANCODE_CALL and SDL_SCANCODE_ENDCALL
+  * 2bc373622 Add SDL_SCANCODE_SOFTLEFT and SDL_SCANCODE_SOFTRIGHT
+  * f871c178b macOS: remove dead code for supporting 10.6 at runtime.
+  * 8ab3ae98f stdinc: Add a comment to clarify why inline functions are
+    needed here
+  * f7280dceb log: Check for integer overflow.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 11 May 2022 11:46:06 +0200
+
 libsdl2 (2.23.0+git2205100653.ec8fa5775~i~wayland6) impish; urgency=medium
 
   * New snapshot:
