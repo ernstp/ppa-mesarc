@@ -1,3 +1,50 @@
+mesa (22.2.0~git2205111112.c708da6e291~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * c708da6e291 v3dv: expose VK_KHR_spirv_1_4
+  * e981ed21e36 v3dv: expose VK_KHR_shader_float_controls
+  * 187d3df52c7 tu: Do not flush ccu in clear/blits during renderpass
+  * 66888d51219 radv: remove useless check against
+    nir_texop_samples_identical
+  * 98ea2347a08 radeonsi: report more missing/broken texture formats as
+    unsupported on gfx6-9
+  * e4283708f0d radeonsi: report 10_10_10_2 scaled formats as
+    unsupported on gfx6-9 as well
+  * 9775da11963 radv: optimised command buffer reset of vertex bindings.
+  * 543d52a7a2f radv: only dirty line stipple when necessary.
+  * b20bd9e0dfd radv: cache the slab bo pointer in the pipeline.
+  * 87f4252a51f zink: don't finish barriers cmd buffer if not used.
+  * 57df27be5f2 zink: avoid extra submits for empty wait cmdbufs.
+  * 997dc0a5e87 radeonsi: Move NULL check before dereference.
+  * 14b1ed1ce10 radeonsi: port tess ring calcs to the common helper.
+  * 17fcbd87428 ac: port radeonsi tess factor calculations to common
+    code.
+  * d4c7ffc550f radv/ac: introduce a new common function for hs calcs.
+  * d79c716331f zink: create images with modifiers any time there is an
+    import handle
+  * 4eeabb59f59 zink: rebind resources for export as needed
+  * 4a19ebfafcb zink: add a LINEAR drm modifier if rebinding to add
+    dmabuf export
+  * 565bf8e45bd zink: force memory exports if dmabuf bind is specified
+  * c03f6967ccc zink: fix conditional for modifier usage
+  * 5513597305a zink: add a bind flag to indicate a resource is exported
+    as a dmabuf
+  * 8c1d9c7b744 zink: unset pipe_resource::next pointers when creating
+    resource copies
+  * 9aab9b4a1b2 zink: always check for fb rebinds when starting
+    renderpass
+  * 17ac8e76047 Revert "zink: export fd info for all 2d images"
+  * b978761385f zink: create a copy context for the screen on init
+  * 94d400d5afe zink: introduce copy contexts
+  * afa4c402dd4 zink: break out resource bind-adding into separate
+    function for reuse
+  * 1c20688dcc6 zink: add a flag to indicate whether a resource is
+    exportable
+  * 00591f3a996 zink: outdent some code
+  * d474229ed11 zink: remove unused headers/struct members/linkage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 11 May 2022 11:46:35 +0200
+
 mesa (22.2.0~git2205100732.d0f15304a3f~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
