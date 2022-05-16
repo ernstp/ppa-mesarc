@@ -1,3 +1,46 @@
+libsdl2 (2.23.0+git2205161802.1f2a24168~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * 1f2a24168 Add new virtual joysticks to the end of the list
+  * 3c3ccb1d4 Fixed crash if a virtual joystick was disconnected
+  * 2317a96c8 x11: Use XC_top_left_corner/XC_top_right_corner instead of
+    XC_fleur.
+  * 48b6cd8bc Fixed whitespace
+  * f0bc5c9cb Added effects support for virtual controllers
+  * b3a18706e Removed unused variables
+  * 7e005bd84 Fixed mapping the paddle buttons with the virtual
+    controller
+  * e3fd8feae Fixed getting the controller index when specifying --
+    virtual (thanks @zturtleman)
+  * 5953422c0 Sync wiki -> header
+  * e78a72ec3 fnsince.pl: Fix next version value to match new versioning
+    scheme.
+  * bfac54b59 Added the ability to specify which buttons and axes are
+    present for virtual controllers
+  * 49ca8bf52 Sync wiki -> header
+  * 94eeb587c First pass at extending virtual controller functionality
+  * 7ad15c5b8 Added game controller support for virtual joysticks
+  * 996b3dc37 Fixed warning building with Visual Studio
+  * e0f3da497 Remove unused SDL_ASSEMBLY_ROUTINES define
+  * f93e81078 Sync wiki -> header
+  * 6b9884d40 Fixed bug #4213 - update documentation to reflect SDL2
+    behavior of SDL_RenderGetLogicalSize
+  * e4bb3c864 wayland: Fix build for configs without libdecor
+  * 6222bd314 wayland: Don't create a new libdecor context if one
+    already exists
+  * 6f88cbe4c wayland: Support xdg_decoration requesting client-side
+    decorations.
+  * d7866ffac assert: Check for integer overflow.
+  * 737b4fc32 Added -fobjc-arc to support automatic reference counting
+    on macOS
+  * 9b75fa016 N-Gage port: add changes from code reviews, overall
+    cleanup (#5618)
+  * 2c2cbbe66 Fixed function reference for SDL_SIMDGetAlignment()
+  * 6da99d4a6 Don't use SDL_SIMDFree() if the pixels haven't been
+    allocated with SDL_SIMDAlloc()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 May 2022 20:03:15 +0200
+
 libsdl2 (2.23.0+git2205110112.2f924020e~i~wayland6) impish; urgency=medium
 
   * New snapshot:
