@@ -1,3 +1,49 @@
+mesa (22.1.0~rc5+git2205161905.d6009c3fe99~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * d6009c3fe99 radeonsi: fix a crash when failing to create a context
+  * 36429346129 zink: directly reuse surface ivci when rebinding
+  * 8ddded80510 zink: fix 3d shader image miplevel calc for depth
+  * 83c680e9800 zink: stop leaking shader image surfaces
+  * 16a9904e635 zink: copy incoming shader image struct after doing
+    updates
+  * 3b927d3e416 zink: read shader image r/w usage from incoming data
+    struct
+  * 308af4a479b zink: simplify dumb update flagging in set_shader_images
+  * 78feb8286fa zink: reuse local res pointer in set_shader_images
+  * ca4352581ba zink: remove refs from shader images
+  * f77526a3b8c nir: Preserve metadata if remove_dead_derefs makes no
+    progress
+  * e8887c849d8 .pick_status.json: Update to
+    5c90eb1c53f46e86717c6bf4d5253dd23c4dac1f
+  * 28264dd5c97 radv: always check entry count in descriptor pool when
+    allocating
+  * 2cca7dce1ee anv: disable streamout before emitting mesh shading
+    state
+  * d7ef4f99da0 anv: update task/mesh distribution with the recommended
+    values
+  * aa9b7d349cf zink: remove implicit query resets
+  * a21fe415350 anv: Fix INTEL_DEBUG=bat on XeHP
+  * cdc27459bf4 tu: Fix indices of drm_msm_gem_submit_cmd when filling
+    them
+  * 87c98bed29f radv: disable DCC for Senra Kagura Shinovi Versus
+  * 9c84a343613 intel/dev: Enable first set of DG2 PCI IDs
+  * bb91ddce0b3 intel/dev: Add DG2 G12 PCI IDs
+  * 24626dca6b2 intel/dev: Add INTEL_PLATFORM_DG2_G12
+  * 96eb5bbbb73 amd: fix ac_build_mbcnt_add in wave32 mode
+  * caf526716be radeonsi: don't use wave32 for GE on gfx10 if culling is
+    used
+  * 9546233703a zink: fix sparse texture depth calcs for arrayed
+    textures
+  * b03a2c10e4f zink: set sparse flag in cubemap lowering
+  * c85d45c8845 zink: fix sparse binding for arrayed textures
+  * 41967c91074 zink: clamp out min_lod operands for explicit lod ops
+  * 2649b2c6313 zink: fix up sparse texture sampling for shadow samplers
+  * 1b28c52e441 pps: Open writable renderer node in DrmDevice::create
+  * 8a560a87b40 tu: Do not flush ccu in clear/blits during renderpass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 May 2022 20:05:44 +0200
+
 mesa (22.1.0~rc4+git2205110623.d25f3888531~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
