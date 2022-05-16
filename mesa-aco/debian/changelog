@@ -1,3 +1,49 @@
+mesa (22.2.0~git2205161806.5c90eb1c53f~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 5c90eb1c53f glsl: Delete lower_extracts code
+  * bd665fdd7f7 nir: Use nir_vector_extract to generate code for
+    ir_binop_vector_extract
+  * e944a98826a glsl: Add flag to disable part of
+    do_vec_index_to_cond_assign
+  * 4eff1e64811 glsl: Fix mixed tabs and spaces in
+    lower_mat_op_to_vec.cpp
+  * 3749a6ecd28 nir: honor lower_double options for ffloor and ffract
+  * 9b146368768 glsl: simplify finding cursor in varying packing code
+  * e0bec58340d radv: Fix loading task shader ring buffer addresses.
+  * 063a61a8409 radv: Fix task shader info.
+  * 3382af7f6a7 radeonsi/gfx11: set BIG_PAGE for the attribute ring
+  * 8a2f151ef84 radeonsi: print an error when failing to create a
+    context
+  * 6515b3b2dc0 radeonsi: fix a crash when failing to create a context
+  * 0755d02456b radeonsi: use AMDGPU_VM_PAGE_NOALLOC to disable MALL
+    (infinity cache)
+  * e9e9086b664 radeonsi: use the new flag AMDGPU_GEM_CREATE_DISCARDABLE
+  * 8a04a0c95b1 include: update amdgpu_drm.h
+  * 527e22412a9 winsys/amdgpu-radeon: clean up code related to heaps
+  * ac0becc6481 radeonsi: use PIPE_RESOURCE_FLAG_UNMAPPABLE and
+    DRIVER_INTERNAL more
+  * d21be64b3a1 winsys/amdgpu: handle RADEON_FLAG_ENCRYPTED as a heap
+    modifier
+  * 593f72aa212 winsys/amdgpu-radeon: rework how we describe heaps
+  * ceddd7d49a6 radeonsi: rename RADEON_FLAG_UNCACHED ->
+    RADEON_FLAG_GL2_BYPASS
+  * 5bc289c5476 radv/ci: re-enable fossils testing
+  * 534cc990810 aco: do not emit the primitive ID twice for NGG VS or
+    TES with GS
+  * 3999fcba155 dzn: Fix dzn_cmd_buffer_collect_queries()
+  * b9489ba7d25 radv: do not declare the scratch offset on GFX11
+  * 0ef28ca34a3 dzn: reset correct list
+  * 875643feeb4 ci: uprev piglit 2022-05-10
+  * aa29e0d8587 etnaviv: don't halve max_instructions for GC400
+  * 318d8ce6fc3 glsl: remove now unused GLSL IR varying linker code
+  * 7647023f3bb glsl: enable the use of the nir based varying linker
+  * fa9cee4247d glsl: implement lower_xfb_varying() as a NIR pass
+  * 4600108ddfe glsl: implement opt_dead_builtin_varyings() as a NIR
+    pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 16 May 2022 20:03:41 +0200
+
 mesa (22.2.0~git2205111112.c708da6e291~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
