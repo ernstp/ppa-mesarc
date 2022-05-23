@@ -1,3 +1,48 @@
+mesa (22.2.0~git2205231851.ee2278de654~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * ee2278de654 ci/lava: Fix Gitlab Section markers
+  * e00281f6dae ci/lava: Fix colored LAVA outputs
+  * cc10c533336 nir: Fixes MSVC compiling error about unused variable
+    `_`
+  * 836ff4b5867 nir/algebraic: Add two more pack/unpack rules
+  * 849ebe3057a d3d12: add missing cmath includes
+  * 4513cb8d418 aco: only add/subtract low bits of program addresses
+  * 69d1f4186a0 aco/tests: add test for p_constaddr with a non-zero
+    offset
+  * bd8f8dda8cf aco: fix p_constaddr with a non-zero offset
+  * da49fee80fc radv: introduce radv_graphics_pipeline_info and split
+    existing info structs
+  * 106dc60fc0b lima/ppir: merge branch nodes in simple cases
+  * c3f13ee5511 lima/ppir: optimize branch comparison when possible
+  * 5718629a704 docs/ci: fix literalinclude of caching setup files
+  * 9fb97c75f24 pvr: use UINT64_C for 64-bit constant
+  * 47c6f7ccf33 dzn: Use the correct ICD path on Win32
+  * c79451e23cd spirv: Fix windows build
+  * 1eaba553e24 dzn: Use the vk_sync_binary abstraction
+  * 23be0aad9c5 radv: split radv_pipeline into
+    radv_{graphics,compute,library}pipeline
+  * fc3717df0c3 radv: cleanup using device/physical_device during
+    pipeline creation
+  * 7fb48493144 radv: move gs_table_depth to the physical_device
+  * 6c44e25078a radv: remove unused radv_get_conservative_raster_mode()
+    helper
+  * a1d3b80c5d7 radv: remove couple of useless pCreateInfo pointers in
+    the emit path
+  * f75b80fd80c radv: rename radv_pipeline_generate_XXX() to
+    radv_pipeline_emit_XXX()
+  * 3825c7202b5 radv: constify radv_pipeline in more
+    radv_pipeline_generate_XXX() helpers
+  * 583a4210e5a virgl/ci: Update virglrenderer
+  * d12b97122ea docs/asahi: Add initial driver docs
+  * 1b7304f44b6 asahi: Add wrap library
+  * d814711155a asahi: Guard against encoder overflows
+  * 1d0d27aac77 asahi: Allocate a larger segment list
+  * ac09dcd358b asahi: Handle RECT textures as 2D
+  * 689be69681c asahi: Fix pipeline decoding
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 23 May 2022 21:24:58 +0200
+
 mesa (22.2.0~git2205161806.5c90eb1c53f~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
