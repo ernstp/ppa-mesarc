@@ -1,3 +1,52 @@
+libsdl2 (2.23.0+git2205222324.aeeccb5d1~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * aeeccb5d1 CI, OpenWatcom: remove workaround now that setup-watcom is
+    fixed.
+  * d5e58049a Don't specify a specific SDK when building for UWP
+  * 12cc636c8 Make sdl2-config prefixes configurable again
+  * 6da6a6cba Make sure Objective C files are built with the same flags
+    as C files.
+  * e97b50624 Need SDL_stdinc.h for _SDL_HAS_BUILTIN
+  * 626a3c5ef Use _SDL_HAS_BUILTIN() instead of __has_builtin
+  * f4fc4719a fix CheckCOCOA on modern CMake
+  * 1f48f8cd2 SDL_TriggerBreakPoint update using builtin instead of
+    assembly versions if available
+  * fe46569cc Fix potential memory leak in SDL_AddHintCallback
+  * e4b5afa57 fix unused variable depending on YUV format
+  * e59cba95a add libdecor_dispatch
+  * 1a1cc8028 Use a tagged version of OpenWatcom in CI builds
+  * dc62fec5e audio: Fix locking in backends that manage their own
+    callback threads.
+  * a95f5a792 test: Use install(1) more portably
+  * 848d2008c test/Makefile.w32: fix minor typo
+  * b1cf32297 Fixed HIDAPI PS4 controller being picked up when running
+    under Steam Input with PS4 configuration enabled
+  * 83ae1b498 Convert the test executables to AIF in RISC OS CMake
+    builds
+  * d2b596589 Remove extra path separator in GetNearbyFilename
+  * 9edd411a8 x11: send move/resize events when waiting on fullscreen
+    change.
+  * b798e49c9 Fix build warning with MSVC
+  * b0a27cb1d Avoid unintended float -> double conversion in
+    SDL_FRectEqualsEpsilon
+  * f0566702c Fix enabling SDL_DYNAMIC_API in OpenWatcom builds
+  * 3d52d0497 Remove the '_' prefix from symbol names in Windows
+    OpenWatcom builds
+  * aa51a9791 Run tests with OpenWatcom on CI
+  * 9dfa000bc Initial support for building for Windows with OpenWatcom
+  * 5ef36ead0 Add some missing tests to Watcom builds
+  * 306687312 Split the common code in test/Makefile.os2 into a separate
+    file
+  * 5669743a4 Make sure SDL_CaptureMouse() is only called on the main
+    thread
+  * efa2e6a1e SDL_thread.h: use SDL_ThreadFunction for
+    SDL_CreateThreadWithStackSize
+  * 15781a698 dynapi: fix SDL_DYNAPI_PROC for
+    SDL_iPhoneSetAnimationCallback()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 23 May 2022 21:24:23 +0200
+
 libsdl2 (2.23.0+git2205161802.1f2a24168~i~wayland7) impish; urgency=medium
 
   * New snapshot:
