@@ -1,3 +1,12 @@
+corectrl (1.3.0~git2205211124.4444473~b~mesarc14) bionic; urgency=medium
+
+  * New snapshot:
+  * 4444473 Use CMAKE_CXX_STANDARD to set C++ standard level
+  * e72a1bc Merge branch 'linuxczech4-master-patch-96024' into 'master'
+  * 51eb941 Add Czech translations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 23 May 2022 21:24:02 +0200
+
 corectrl (1.3.0~git2201291503.1335392~b~mesarc14) bionic; urgency=medium
 
   * New snapshot:
