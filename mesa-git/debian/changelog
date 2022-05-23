@@ -1,3 +1,51 @@
+mesa (22.1.0+git2205232009.fbb07048c04~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * fbb07048c04 aco: fix p_constaddr with a non-zero offset
+  * 9f02c76abc9 dzn: Use the vk_sync_binary abstraction
+  * a152b911ed9 turnip: fix assert for max xfb outputs
+  * 8d28a81bd14 panfrost: Copy blend constant into variant even when
+    reusing it
+  * d580824ffe6 .pick_status.json: Update to
+    ee2278de654853f1d6107e6ef6fc8537a668866e
+  * 1f8e71397b0 radv: Fix RTPSO hashing of pGroups.
+  * e6498854f05 radv: Add a sqtt entrypoint for CmdBindVertexBuffers2
+  * 97885f53491 radeonsi: lower nir_intrinsic_sparse_residency_code_and
+  * 4bbf5362163 pan/bi: Fix mov and pack_32_2x16
+  * 2fb30d2ba83 .pick_status.json: Update to
+    95d4e5435bf63239105a50370ebbbbdeb7fed2f8
+  * 3f715abd749 r300: keep negation if w is an inline constant
+  * f432595e358 .pick_status.json: Update to
+    8b13ee75ba9f27ceac6b6180ca05d321caa13612
+  * 28115489bc6 relnotes: Add sha256sum and fix minor formatting issues
+  * 98c1585ccaf VERSION: bump for 22.1.0 final
+  * da38e7e194d docs: add release notes for 22.1.0
+  * 39116021859 gallium/util: Increase the debug_flush map depth to 64
+  * 82c18fe083a svga: Add support for SVGAv3
+  * ca3d123e99e svga: Use direct maps when GB objects are present
+  * 0a0c4009131 svga: finish readbacks before mapping resources
+  * aca012daa67 svga: Don't try to build x86/x64 assembly on different
+    arch's
+  * f1b085cd698 intel/dev: add RPL-S pci ids from drm-intel-next
+  * 39636a083e8 intel/dev: sync ADL-S pci ids with linux
+  * 8894522f413 ci: Disable jobs to the Collabora lab
+  * b8be90b8b45 Revert "st/mesa: Transcode ASTC to BC7 (BPTC) where
+    possible"
+  * e42164124f9 .pick_status.json: Mark
+    b18448e7acfc765ee95505c7cd5e2ce6e6fc36cc as backported
+  * f743f0b4513 .pick_status.json: Mark
+    5e4009fe6c91c34a7cdf8c16aa5aa53c3ff41222 as backported
+  * 84b62db7ed9 .pick_status.json: Mark
+    7aee9f12b9c1f17ae2662c8043c8679ce698b731 as backported
+  * 3388defe64b .pick_status.json: Mark
+    9924fecee6412f1cad65d7d7347681856e3a525c as backported
+  * cb2fed99ade .pick_status.json: Mark
+    7057a363591279c3f65a3c4af41687e6f8142649 as backported
+  * 059a8627f30 .pick_status.json: Mark
+    b6eec12327b65038dd56742dbe272c21c63a3844 as backported
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 23 May 2022 21:35:51 +0200
+
 mesa (22.1.0~rc5+git2205161905.d6009c3fe99~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
