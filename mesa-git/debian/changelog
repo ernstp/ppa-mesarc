@@ -1,3 +1,29 @@
+mesa (22.1.0+git2205261808.f8b312559ba~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f8b312559ba zink: add renderpass bits for color/depth r/w
+  * f33d27a1352 zink: use a zink_render_pass_pipeline_state bit for
+    fbfetch
+  * 82a8fff872f radv: fix writing buffer markers with non-zero memory
+    offset
+  * c8d35579b25 llvmpipe: flush resources for kms swrast path.
+  * b4e5f9bb3da radv: Disable predication for supass clear and image
+    clears.
+  * d1c2bbb9ad1 radeonsi: don't use sel->nir in
+    si_check_blend_dst_sampler_noop
+  * 7883f8f9962 radv: Implement conditional rendering for async compute
+    queue.
+  * 8c26aa8417b lavapipe: fix depth bias offset flag enables.
+  * 31f6c0f7bb9 anv: Update line range
+  * f339dd9eda3 panfrost: Only write depth / stencil once if MRT is used
+  * 1bbf73f9af3 pan/mdg: Read base for combined stores
+  * 813c57056c4 pan/bi: Read base for combined stores
+  * 2ae3cce8f11 nir: Add store_combined_output_pan BASE back
+  * cf72d463a0c .pick_status.json: Update to
+    9773ed1dc74b98019640d909cdc2b5d6cffae85a
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 May 2022 15:18:18 +0200
+
 mesa (22.1.0+git2205232009.fbb07048c04~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
