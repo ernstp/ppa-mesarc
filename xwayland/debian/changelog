@@ -1,3 +1,14 @@
+xwayland (2:22.1.2+git2205251038.daaa9f056~i~wayland6) impish; urgency=medium
+
+  * New snapshot:
+  * daaa9f056 Bump version to 22.1.2
+  * cae60591d xwayland/output: Set the "RANDR Emulation" property
+  * 8ddac82f2 randr: Add "RANDR Emulation" property
+  * 7de3d8573 xwayland: Fix invalid pointer access in
+    drm_lease_device_handle_released.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 May 2022 15:20:29 +0200
+
 xwayland (2:22.1.1+git2203301217.2bddb5add~i~wayland6) impish; urgency=medium
 
   * New snapshot:
