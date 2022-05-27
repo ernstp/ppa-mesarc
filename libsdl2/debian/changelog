@@ -1,3 +1,33 @@
+libsdl2 (2.23.0+git2205270545.bef9f2b2c~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * bef9f2b2c Don't trigger device notifications when Steam Deck
+    backlight changes
+  * 5968f3d82 gen_audio_resampler_filter.c: Precalculate loop-invariant
+    bessel(beta).
+  * 822cf0b34 updated config.guess from mainstream.
+  * 347659e8c riscos: Ensure that last_mouse_buttons is initialised
+    correctly
+  * cb43eb43f riscos: Ensure the mouse focus is set when creating the
+    window
+  * 6eda520f6 riscos: Add a basic implementation of SDL_ShowCursor()
+  * 4c711d2d4 testcustomcursor: Allow running without custom or system
+    cursors
+  * 22d6e09a8 Don't try to call hid_ble_scan() if HIDAPI is disabled
+  * 195ca499c include/SDL_video.h: You can google it.
+  * 7ce311bea include/SDL_system.h: Fixed a link that was still
+    hg.libsdl.org
+  * bed96482f wikiheaders.pl: Deal with links better.
+  * 96a04cb91 wikiheaders.pl: Don't wordwrap truly massive words.
+  * b28d304b2 Only include controller_type.h in SDL_joystick.c
+  * a8e754879 Sync wiki -> header
+  * 9220f92ba hidapi/libusb/hid.c (read_thread): mark as SDLCALL
+  * 179765561 Sync wiki -> header
+  * 5dee08213 updates to windows watcom makefile:
+  * 412ceb84d video: Only check major version in SDL_GetWindowWMInfo
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 May 2022 15:07:05 +0200
+
 libsdl2 (2.23.0+git2205222324.aeeccb5d1~i~wayland7) impish; urgency=medium
 
   * New snapshot:
