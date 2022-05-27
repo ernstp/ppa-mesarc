@@ -1,3 +1,54 @@
+mesa (22.2.0~git2205271414.01ba3460a99~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 01ba3460a99 pan/bi: Test CMP result_type optimization
+  * 501a66cb5ce pan/bi: Fuse result types
+  * 112a856813e nir: Keep track of cross-invocation mesh shader output
+    access.
+  * cd14431b8ca radv/ci: skip dEQP-
+    VK.fragment_operations.transient_attachment_bit
+  * 211db6d3336 radv: Fix redundant subpass barriers due to erroneous
+    comparison
+  * 1a8b03732fd vulkan/wsi: fix extra free if buffer_blit_queue
+  * 77a67f11151 radv: Add mesh and task stage names to pipeline
+    executable properties.
+  * 8aff8d3dd42 nir: Add common task shader lowering to make the
+    backend's job easier.
+  * 9eaf918ed29 nir: Add new launch_mesh_workgroups intrinsic.
+  * c9f0a511e06 ci/panfrost: add RoR and Nheko traces
+  * da70c1b9f08 ci/virgl: traces: add RoR and Nheko traces
+  * 0a9461caf54 ci/radeonsi: add RoR and Nheko traces
+  * 2d42335fb86 ci/llvmpipe: add RoR and Nheko traces
+  * 9f3c91850b7 ci/crocus: add RoR and Nheko traces
+  * b19c858f3d5 ci/intel: add RoR and Nheko traces and reenable most of
+    Valve traces
+  * 270e0d45fb4 ci/i915: add entries for RoR and Nheko traces
+  * b8381aaa376 ci/freedreno: enable ROR and Nheko traces
+  * 6bbe457f683 ci/virgl: fix checksum for valve traces which run on
+    iris
+  * 7577ca7e6a4 mesa: Avoid temp images in _mesa_texstore_*_dxt* for
+    stride = 0
+  * 035e6e32f1c mesa: Require temp images in _mesa_texstore_*_dxt* with
+    SkipImages
+  * 6910891c7f7 mesa: Avoid temp images in _mesa_texstore_rgb_dxt1 for
+    GL_RGBA source
+  * 5602f424c35 mesa: Split tx_compress_dxtn into per-format functions
+  * eb673c55f1f st/mesa: remove unused GENERIC input and output from the
+    clear VS
+  * 3d6e44fd2a1 r300,r600,svga: save the FS constant buffer for
+    u_blitter to fix a regression
+  * d827d433ce5 util: Fixes typo in test_util_get_process_exec_path
+  * aa7446b17ed util: Fixes test_util_get_process_exec_path on windows
+    host with msys2/mingw
+  * 746287d2218 v3dv/format: Add support for
+    VK_KHR_format_feature_flags2
+  * 11a0ea76a26 v3dv/format: no need for
+    GetPhysicalDeviceFormatProperties
+  * 0c4a65ef345 zink: update radv piglit fails
+  * 6450037b321 panfrost: Use tiled AFBC textures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 27 May 2022 15:07:35 +0200
+
 mesa (22.2.0~git2205231851.ee2278de654~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
