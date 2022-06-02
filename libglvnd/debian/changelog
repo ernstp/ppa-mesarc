@@ -1,3 +1,13 @@
+libglvnd (1.4.0+git2206022158.e99a115~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * e99a115 Merge branch 'armv7-use-arm-stubs' into 'master'
+  * b90f235 meson: Use assembly stubs on ARMv6.
+  * d853cf5 GLdispatch: Build ARMv7 stubs as ARM instead of Thumb
+  * 28da996 tests: Add support for __GLDISPATCH_STUB_ARMV7_ARM.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Jun 2022 00:17:50 +0200
+
 libglvnd (1.4.0+git2203212127.5024e57~i~wayland0) impish; urgency=medium
 
   * New snapshot:
