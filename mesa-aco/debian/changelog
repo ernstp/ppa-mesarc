@@ -1,3 +1,46 @@
+mesa (22.2.0~git2206022259.26bb81f3f62~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 26bb81f3f62 intel/compiler: Fix uncompaction of signed word
+    immediates on Tigerlake
+  * 9eee4c79db7 zink: fix radv piglit fails
+  * 2deee5ddb3e ci/vs2019: Clear CI_COMMIT_MESSAGE and
+    CI_COMMIT_DESCRIPTION for please meson
+  * c642ebf8ab7 venus: Add driconf option to enable implicit fencing
+  * 87a53127e9c mesa: throw a log warning any time a fallback texture is
+    used
+  * ad5c84999b9 pan/bi: Rework Valhall register alignment
+  * 0770e7a90ce pan/bi: Align 64-bit register sources
+  * 8553dd97adc pan/bi: Allow vec6 for collects
+  * 1bfff407b96 pan/bi: Use nodearrays for linear constraints
+  * c70daa74f03 pan/bi: Add nodearray datastructure
+  * c24b78cceb8 pan/bi: Reverse linear constraint bits
+  * 65b3decd5b8 d3d12: Align output buffer offset access to
+    D3D12_FEATURE_DATA_VIDEO_ENCODER_RESOURCE_REQUIREMENTS.CompressedBit
+    streamBufferAccessAlignment
+  * bd68559d366 tu: Enable shaderTessellationAndGeometryPointSize
+  * eba8671e406 tu: Fix D32S8 resolves into D32 or S8 in sysmem mode
+  * e680fe224a7 radv/ci: update list of failures for Pitcairn
+  * be4c1a5f527 radv,aco: disable shader cache when ACO debug options
+    are used
+  * d8df87056c5 nir: xfb_buffer_info::stride is in bytes
+  * 7c876a6b2f1 nir/glsl: Use rzalloc for nir_xfb_info
+  * fc5a3e1e37a lavapipe: fix dynamic patchControlPoints
+  * df2dd474c73 include: drop c11_compat.h
+  * 18246ed06a1 include: drop c99_math.h
+  * 6ed10a99bda vulkan/device_select: remove needless c99_compat.h
+    includes
+  * df4fe7c4a26 intel/isl: remove needless c99_compat.h includes
+  * 9633b426724 include: remove needless c99_compat.h includes
+  * beaa26bd753 gallium: remove needless c99_compat.h includes
+  * 75f3373b34c mapi: remove needless c99_compat.h includes
+  * afce7ddacb6 gallium/util: remove needless c99_compat.h includes
+  * 1613aa73419 egl: remove needless c99_compat.h includes
+  * 9f717b5f23c util: remove needless c99_compat.h includes
+  * 9ec514ded7c util: add missing c99_compat.h includes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Jun 2022 00:18:28 +0200
+
 mesa (22.2.0~git2205271414.01ba3460a99~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
