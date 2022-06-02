@@ -1,3 +1,42 @@
+libsdl2 (2.23.0+git2206011732.847539afe~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * 847539afe wayland: Only call libdecor_dispatch() if we've loaded
+    libdecor
+  * 7fa46ec40 The Google Pixel fingerprint sensor also shows up on Linux
+    when running on the phone
+  * 3c3c02518 Add Compatible Interface Properties to VisualC and Xcode
+    SDL2 config file
+  * 4809bd356 Add documentation to autotoo'ls sdl2-config-
+    version.cmake.in
+  * 774c50174 Add CMake section to the Xcode ReadMe.txt
+  * 423c7ef85 Don't set SDL2_LIBRARY, we need the Framework
+    configuration on Apple platforms
+  * 37ef6a765 Use a full path for the framework header include path
+  * f73c25648 cmake: attempt to use framework in Xcode's sdl2-
+    config.cmake
+  * 4c3d1d32a Use INTERFACE_INCLUDE_DIRECTORIES in Xcode's sdl2-
+    config.cmake
+  * 7c2a6ea5f Removed 64-bit check for Apple
+  * e30b9993b Fixed warning about location of CMake support files
+  * 01492a24f Added CMake package support files to the SDL framework
+  * 2c591e408 Add CMake configuration files, meant for Macos framework
+  * 8ac8230bf Add CMake configuration files, meant for VC devel package
+  * 964e979d0 hidapi: Allow disabling libusb support at runtime
+  * c87b0142f Fixed building with C89 compiler
+  * 4ddf85b1d Sync wiki -> header
+  * f78f77523 ime: windows: allocate space for null terminator
+  * fd2a2eea1 Fixed declaration-after-statement warning
+  * d2c4d74dd Fixed build with MinGW-64 windows.devices.power.h
+  * bd22ca762 Revert "Workaround for compiling with MinGW-w64"
+  * efdf43aa9 Workaround for compiling with MinGW-w64
+  * 001d2e2f6 Disable formatting not supported by Visual Studio 2019
+  * c02cd2035 Revert "Disable formatting not supported by Visual Studio
+    2019"
+  * 26a75add3 Disable formatting not supported by Visual Studio 2019
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Jun 2022 00:18:02 +0200
+
 libsdl2 (2.23.0+git2205270545.bef9f2b2c~i~wayland7) impish; urgency=medium
 
   * New snapshot:
