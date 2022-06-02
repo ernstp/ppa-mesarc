@@ -1,3 +1,45 @@
+mesa (22.1.1+git2206012350.53c72db5d3c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 53c72db5d3c .pick_status.json: Update to
+    1c63a0beafefccec599ddbe355ec5a8b61df6438
+  * c4beb72bc7c zink: remove first_frame stalling
+  * 38b59a9e150 st/pbo_compute: fix z coords for compute pbos
+  * d05f81668b9 st/pbo_compute: make compute download conditional in
+    shader slightly more readable
+  * 2e27144bedf nir: introduce and use nir_component_mask
+  * 87e49ea9779 nir/builder: Add a nir_trim_vector helper
+  * 23bcaaeaaa7 docs: Add sh256sums for 22.1.1
+  * a730b834b01 VERSION: bump for 22.1.1 release
+  * 9f09db4ed7e docs: add release notes for 22.1.1
+  * 1d0badd2f3c nir: Mark negative re-distribution on fadd as imprecise
+  * 89b80e6587c zink: drop largePoints requirement
+  * 419920ebd59 zink: drop wideLines requirement
+  * 1a390ad8a32 aco: fix spilling of phis without temp operands
+  * 842ed4b396c editorconfig: remove pl-rule
+  * 392d0088952 editorconfig: remove m4-rule
+  * 63ec50e6dc1 editorconfig: remove html-rule
+  * 10a59a392aa editorconfig: remove scons-ism
+  * f1dd0af4cd1 zink: make swapchain kill message more descriptive
+  * 87a3240d575 glsl/nir: Stop leaking varyings_info
+  * af16f82e15b st/pbo_compute: use different calc for non-3d compute
+    buffer sizing
+  * 43f90a36409 zink: emit spirv cap for subgroup vote ops
+  * 0f7f0574346 zink: require draw params ext/cap in ntv if drawid is
+    used
+  * a4f81cf2c02 nir: Handle register sources in lower_phis_to_regs_block
+  * 7ba0db7afd8 mesa: Drop dead #include "sparc/sparc.h"
+  * c5c3143de42 aco/ra: fix usage of invalidated iterator
+  * 7c337f851c5 radv: Fix handling of primitiveOffset
+  * 901d5b86171 anv: Don't disable the fragment shader if XFB is enabled
+  * 365b1a2daab anv: Handle the null FS optimization after compiling
+    shaders
+  * 84c1da77dea anv: Drop alpha_to_coverage from the NULL FS
+    optimization
+  * 3cceae19867 intel/fs: Copy color_outputs_valid into wm_prog_data
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Jun 2022 00:27:11 +0200
+
 mesa (22.1.0+git2205261808.f8b312559ba~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
