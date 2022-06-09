@@ -1,3 +1,48 @@
+mesa (22.1.1+git2206081958.2a835a2da3c~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2a835a2da3c ac/gpu_info: always retile DCC on gfx10 and newer chips
+  * dc28a8fd88f nir: Consider PNTC to be a varying
+  * 364767c445a panfrost: Fix inverted indirect dispatch condition
+  * 6022ed00791 va/surface: set the correct size in
+    vaExportSurfaceHandle
+  * d4c1b9a5e63 gallium: add size attribute to winsys_handle
+  * 5df18fdb77e .pick_status.json: Update to
+    35dd4ac886283444294238ae0be1a7edcc776c8a
+  * 30a9514258a pan/mdg: Remove uppercase write masks
+  * 01eba9dcb2d pan/mdg: Scalarize with 64-bit sources
+  * 4da856eaacc nouveau/nv30: Make sure fsat is lowered in the VS.
+  * 7026ff18571 iris:Duplicate DRM fd internally instead of reuse.
+  * 8c6c80b0a0b mesa/program: fix nir output reg overflow
+  * 0b37f7dabc1 aco: fix SMEM load_global with VGPR address and non-zero
+    offset
+  * b223bf759dc aco: fix SMEM load_global_amd with non-zero offset
+  * 379aab1a64d v3d: save only required states in blitter
+  * e01d543c76a format_utils: properly parenthesize macro params
+  * c2f4b1acfbf zink: Use VK_USE_64_BIT_PTR_DEFINES to check for 64bit
+    platforms.
+  * e0f34e6bafb zink: fix dmabuf plane layout struct scoping
+  * 39ca39d4f3f kopper: use get_drawable_info path for non-x11 drawables
+  * b3b4b2d5636 egl/wayland: skip buffer creation on zink
+  * 575da2866f5 egl/wayland: manually swap backbuffer when using zink
+  * e58cd4a6f91 st/mesa: use mutex in
+    st_get_texture_sampler_view_from_stobj
+  * e6ad3c0fd77 microsoft/spirv_to_dxil: Fix the push_constant UBO size
+    calculation
+  * 211d980d297 microsoft/spirv_to_dxil: Fix push_constants type
+    declaration
+  * 551396ed7b7 radv: enable radv_zero_vram for Hammerting
+  * dc7c2df02b8 llvmpipe: handle timespec overflow on fence waits.
+  * 9097462c37c zink: force queries to start/end out of renderpass
+  * 5baf33795a5 pan/bi: Fix clper_xor on Mali-G31
+  * d962bdcdd34 intel/compiler: Fix uncompaction of signed word
+    immediates on Tigerlake
+  * 03847428d88 .pick_status.json: Update to
+    49234585772f49626435d3d9324ad144e27fc453
+  * 9b77caa70f2 lavapipe: fix dynamic patchControlPoints
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jun 2022 11:49:10 +0200
+
 mesa (22.1.1+git2206012350.53c72db5d3c~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
