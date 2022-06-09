@@ -1,3 +1,46 @@
+mesa (22.2.0~git2206091124.bcc22b9e4d8~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * bcc22b9e4d8 Init macOS GitHub Action
+  * 69b95b7839f Remove Travis CI config
+  * ef6cc03b175 v3d: add ARB_polygon_offset_clamp extension support
+  * a2463ec271f panfrost: Constant stencil value tracking
+  * 79877d5df51 radv: advertise VK_EXT_primitives_generated_query
+  * 1ebf463a5a6 radv: implement VK_EXT_primitives_generated_query
+  * e0edf8d2408 radv: add few helpers related to streamout
+  * f3daf7ce402 radv: flush the NGG query state when the argument is
+    declared
+  * fe57fe1fd8a ac/nir/ngg: count the number of generated primitives for
+    VS and TES
+  * 60b07a0ab25 radv: declare the NGG query argument for primitives
+    generated query
+  * 11734f935a5 radv: add primitives_generated_query to the graphics
+    pipeline key
+  * dc8cf44f608 radv: track if primitives generated query features are
+    enabled
+  * 3efbbf95886 radv: rename ngg_gs_state to ngg_query_state
+  * 6b9b28f94eb lima/ci: Don't skip piglit opengl 1 tests
+  * 704c9b2825c svga: fix shared memory index
+  * d9aedaa7955 svga: fix reference to NULL offset for atomic counter
+  * 893b4d98f8e glsl: inline do_common_optimization() call
+  * d09a37ef54e glsl: remove never true do_dead_code() parameter
+  * 3223f5b63f7 docs: link releases notes for 21.3.9
+  * c44ece16792 docs Add sha256 sums for 21.3.9
+  * d413674160b docs: add release notes for 21.3.9
+  * 4655ff1f5b3 nir/deref: Handle RESTRICT for SSBO deref bindings
+  * 8492e78f9d1 nir/deref: Handle SSBO array bindings specially
+  * a5b12742758 nir/vars_tests: Use nir_var_mem_global instead of ssbo
+  * 2d221c64e78 nir: Increase nir_variable_data::mode to 16 bits
+  * 0ad2dfe942d nir/deref: Re-arrange variable checks in
+    compare_deref_paths
+  * 130d9d80dbb nir/deref: Make compare_deref_paths take a stop callback
+  * 7ebcdada000 nir/deref: Use an index in compare_deref_paths
+  * 4d80b3217e6 nir/deref: Break out a helper for compare_deref_paths
+  * cb5c1bcb7c6 nir/deref: stop assuming coherent accesses of different
+    SSBOs may alias
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jun 2022 11:40:56 +0200
+
 mesa (22.2.0~git2206022259.26bb81f3f62~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
