@@ -1,3 +1,53 @@
+libsdl2 (2.23.0+git2206082151.6f69bbc54~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * 6f69bbc54 D3D11: Fix SDL_TEXTUREACCESS_TARGET not working if
+    SDL_HAVE_YUV was 0
+  * 8303c5d0a Added missing SDL_zero for renderTargetViewDesc
+  * 6bd49fc00 revert mode changes from commit d58d637ac
+  * d58d637ac Added support for the Qanba Obsidian Arcade Joystick on
+    Linux
+  * 526f41758 updated configury to silence ac2.7x warnings with minor
+    rearrangement.
+  * 51d6d60f1 Updated to autoconf 2.71
+  * e201f338d ci: enable CMake test for Emscripten
+  * 0fcfaf9e9 emscripten: use MAIN_THREAD_EM_ASM for the fb/cursor
+    proxying
+  * b9c2ad839 Added additional check for HAVE_D3D12_H and missing
+    SDL_VIDEO_RENDER_D3D12 in SDL_config.h.cmake
+  * 298ad937c cmake: wrap SDL_STATIC_PIC in double quotes (aka never
+    trust user input)
+  * ad272ac69 Set POSITION_INDEPENDENT_CODE property on SDL2 for CMake
+    3.0
+  * e8d89ce28 < should be <=
+  * 7a335df9c Updated CMakeLists.txt and configure.asc/script so that it
+    checks for the required Windows SDK version before it enables the
+    d3d12 renderer. Also fixed reported warnings in some builds.
+  * 5abd67691 Allow empty default values to the dep_option macro
+  * 2cc226043 Fixed bug #5768 - SDL_RenderGeometry's software backend
+    failed to render when texture coordinates are reversed
+  * 168b97ca3 Updated Xcode project with SDL_guid.c and
+    controller_type.c
+  * 7e71d08ab regenerated configure script.
+  * ef4e0e921 Sync wiki -> header
+  * 408282182 DirectX 12 Renderer (#5761)
+  * 63e12cf60 SDL_windows_main.c: replace CopyMemory() with SDL_memcpy()
+  * ec0204d24 x11: Don't use GetXftDPI() when XRandR can tell us the DPI
+    per-output.
+  * 61115aebd update dynapi after the loongarch support patch
+  * 7cd165e2d Sync wiki -> header
+  * 50d8642fa Add optimiztion function with LSX in LoongArch
+  * 17f63e53f Add loongarch support
+  * 9703f2366 SDL_SetHintWithPriority: actually, this test is good.
+  * 30cf26e08 Show the firmware version in testgamecontroller
+  * 5f25a6ea7 Revert "SDL_SetHintWithPriority: better test if hint value
+    has changed."
+  * c391bdc16 SDL_SetHintWithPriority: better test if hint value has
+    changed.
+  * 55a07d91f SDL_SetHintWithPriority: Allow setting NULL hints.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jun 2022 11:40:28 +0200
+
 libsdl2 (2.23.0+git2206011732.847539afe~i~wayland7) impish; urgency=medium
 
   * New snapshot:
