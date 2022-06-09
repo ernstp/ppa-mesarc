@@ -1,3 +1,10 @@
+libdecor-0 (0.1.0+git2205311549.5e58ec6~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 5e58ec6 os-compatibility: handle EINTR gracefully
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jun 2022 11:40:02 +0200
+
 libdecor-0 (0.1.0+git2204290059.a382710~i~wayland0) impish; urgency=medium
 
   * New snapshot:
