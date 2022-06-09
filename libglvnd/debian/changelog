@@ -1,3 +1,16 @@
+libglvnd (1.4.0+git2206071457.8e5f0f1~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 8e5f0f1 Merge branch 'tests-egl-thread-cleanup' into 'master'
+  * 7b892b7 Merge branch 'fix-gldispatch-thread-state-leak' into
+    'master'
+  * 70e6a30 Fix a memory leak in libGLdispatch
+  * c1fde19 Add a unit test for cleaning up EGL thread state.
+  * 00a65e7 tests: Clean up any remaining contexts in EGL_dummy.
+  * 47063a7 tests: Fix thread state cleanup in EGL_dummy.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jun 2022 11:40:11 +0200
+
 libglvnd (1.4.0+git2206022158.e99a115~i~wayland0) impish; urgency=medium
 
   * New snapshot:
