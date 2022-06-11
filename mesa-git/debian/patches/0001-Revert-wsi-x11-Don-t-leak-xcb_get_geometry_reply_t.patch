@@ -1,0 +1,25 @@
+From 397394759bcdf82c702bd98621161c02728612ae Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ernst=20Sj=C3=B6strand?= <ernstp@gmail.com>
+Date: Sat, 11 Jun 2022 19:46:15 +0200
+Subject: [PATCH 1/2] Revert "wsi/x11: Don't leak xcb_get_geometry_reply_t."
+
+This reverts commit b78272daa59a47f052c31e123b256843cfde29e4.
+---
+ src/vulkan/wsi/wsi_common_x11.c | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/vulkan/wsi/wsi_common_x11.c b/src/vulkan/wsi/wsi_common_x11.c
+index 2860ff3eb06..62508943e12 100644
+--- a/src/vulkan/wsi/wsi_common_x11.c
++++ b/src/vulkan/wsi/wsi_common_x11.c
+@@ -1530,7 +1530,6 @@ x11_manage_fifo_queues(void *state)
+                result = VK_ERROR_SURFACE_LOST_KHR;
+                goto fail;
+             }
+-            free(geometry);
+          }
+       }
+    }
+-- 
+2.34.1
+

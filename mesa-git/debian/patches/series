@@ -1,0 +1,2 @@
+0001-Revert-wsi-x11-Don-t-leak-xcb_get_geometry_reply_t.patch
+0002-Revert-wsi-x11-Avoid-using-xcb_wait_for_special_even.patch
