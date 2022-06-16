@@ -1,3 +1,10 @@
+wayland-protocols (1.25+git2206040957.7350cbe~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 7350cbe build: stop using deprecated Meson functions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Jun 2022 21:53:59 +0200
+
 wayland-protocols (1.25+git2206011849.eb115b3~b~base2) bionic; urgency=medium
 
   * New snapshot:
