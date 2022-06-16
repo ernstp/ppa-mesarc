@@ -1,3 +1,47 @@
+mesa (22.1.2+git2206161855.2a104d5794b~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 2a104d5794b docs: add sha256sum to 22.1.2 notes
+  * a037d8e1998 Bump version to 22.1.2
+  * cea8116d2ec docs: add release notes for 22.1.2
+  * 7711164baf7 zink: fix 32bit bo rewriting
+  * d2dd99d5f4e zink: flag optimization pass after inlining uniforms
+  * ebda38196a1 radeonsi: add helper to use si_screen::aux_context
+  * 9f199d0e02a microsoft/compiler: Images are no longer reprensented by
+    uniform vars
+  * d5a5bcbd54d vulkan/util: Fill
+    VkPhysicalDeviceIDProperties::deviceNodeMask
+  * dfd2cd3ebcf zink: fix cubemap lowering bit size
+  * 3fb2d7b7a8b zink: fix cubemap lowering for array samplers
+  * 245ef2b49dd zink: don't print VK_EXT_shader_atomic_float warning for
+    nir_intrinsic_image_deref_atomic_exchange
+  * 914ff0ab429 zink: avoid uninit values in renderpass state
+  * d9a67ee393f zink: fix generated tcs deletion
+  * d8fa501ca42 zink: unset generated tcs pointer from tes on deletion
+  * 96574ecba3b zink: fix generated tcs update path
+  * 6d41869f1ee gallium: remove stale comment
+  * 7302d43677f broadcom/compiler: disable flags optimization for loop
+    conditions
+  * 2bd2df1aec7 dzn: handle stencil-attachment-optimal layout
+  * 29dac89446e gallium/u_threaded: fix buffer busyness tracking
+  * c1f7b8edd70 zink: fix up KILL to a more sensible log message
+  * 61cf43cea15 zink: unset res->swapchain upon killing a swapchain
+  * 4108785f13b zink: add implicit sync workaround for non-mesa drivers
+  * d0d37c1f9e1 .pick_status.json: Update to
+    ea33e44ce4f95ce45729b75dee34be50df749f09
+  * 1fb2d9ba5c2 zink: only update layout when doing mixed zs attachment
+    renderpass check
+  * 32f640dc057 zink: fix framebuffer attachment usage asserts for dummy
+    attachments
+  * 0080232e6cf radeonsi: prevent recursion in si_decompress_dcc
+  * 791969df972 d3d12: Properly set HS input control point count
+  * f11d7948be6 zink: defer old swapchain destruction
+  * a86a20ed99d zink: keep a count of async presents occuring for a
+    given swapchain
+  * 302c13dc8df zink: use separate pointer for swapchain presents
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Jun 2022 21:51:44 +0200
+
 mesa (22.1.1+git2206081958.2a835a2da3c~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
