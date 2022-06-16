@@ -1,3 +1,50 @@
+mesa (22.2.0~git2206162107.2df90aa562d~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2df90aa562d ci/iris: disable Blender Diorama trace (incompatible
+    with perf. traces)
+  * d7f2e6c8d03 venus: add fence feedback
+  * 9f9d543b12d venus: renderer to store allow_vk_wait_syncs capset
+  * 8ecac4c063d venus: create per queue family command pool for feedback
+    cmd
+  * 1a7632e54b4 venus: add NO_FENCE_FEEDBACK perf option and disable
+    sparse resource
+  * 942ec179f3d venus: add event feedback
+  * f2563788a1c venus: add feedback check/set/reset helpers
+  * e52da323b03 venus: add vn_feedback_pool backed by coherent buffer
+    (part 2)
+  * 27a24caf166 venus: add vn_feedback_pool backed by coherent buffer
+    (part 1)
+  * d578f6c7278 venus: let device track queue families used for device
+    creation
+  * 4cf87d88229 venus: adjust device resources init order
+  * cf55a3f70e1 venus: fix a missing mtx_destroy in vn_device_init
+  * cb8dfa49662 venus: fix the queue init failure path
+  * 01a0bfc3f99 venus: fix a bug on buffer cache init failure path
+  * b91511b9a89 docs: update calendar and link releases notes for 22.1.2
+  * a1ba2bdf3da docs: add sha256sum to 22.1.2 notes
+  * 4b5a73062ba docs: add release notes for 22.1.2
+  * 16c47ad3474 radv: advertise VK_EXT_border_color_swizzle on GFX10+
+  * 09a7304d5ab zink: tu ci baseline update
+  * 4666ef720ed anv: do not get rid of empty/useless fragment shaders
+  * 10f6191fb5e turnip: copy disasm strings for pipeline executables
+  * 9df7ad03203 radv/ci: add vkd3d-proton testing
+  * 5878eca643e ci: add VKD3D_PROTON_RESULTS to the list of variables to
+    pass down for testing
+  * 08113e5c02c ci: print a message when vk3d-proton returns
+    successfully
+  * 70ba820395e ci: update vkd3d-proton builder/runner
+  * 3f2de5e662f radv/ci: refactor test machines and dEQP rules to reduce
+    copy&paste config
+  * 365bf2a3b02 radeonsi/vcn: support unified queue in vcn4
+  * 515112eabd9 radeonsi/vcn: prepare for unified queue in vcn4
+  * 7b747478547 iris: provide a callback to INTEL_MEASURE to clean up
+    snapshots
+  * a1a5f6430a0 intel: provide a callback to clean up after
+    intel_measure_gather
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Jun 2022 21:49:36 +0200
+
 mesa (22.2.0~git2206091124.bcc22b9e4d8~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
