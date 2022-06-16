@@ -1,3 +1,46 @@
+libsdl2 (2.23.0+git2206162145.68beedde9~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * 68beedde9 SDLActivity.java: Compatibility fix for debugSource
+  * 5c1b7f6ea Added instructions for updating Makefile.w32 for release
+  * 5d5488ca7 Fixed test/versioning.sh on macOS
+  * 269fc1bd7 Added more details to WhatsNew.txt
+  * a5949d7b0 Fixed crash on Windows
+  * 16f55fbdb Separate the controller protocol from the controller style
+  * 94f608089 wikiheaders.pl: changes to make this usable with external
+    projects.
+  * 017e23700 Removed the Qanba Obsidian Arcade Joystick from the
+    unknown controller list
+  * a9cf313ee Added the Qanba Obsidian and Dragon Arcade Sticks to the
+    arcade stick list
+  * bfe81a0c0 Added the name of the Qanba Obsidian Arcade Joystick in PC
+    mode
+  * a6a2cdbd7 Added the name of the Qanba Dragon Arcade Joystick in PC
+    mode
+  * fc78d0ff3 Fix Compilation CI
+  * 6b03c1adf Add filesystem driver
+  * 52f00833b Add Thread drivers
+  * 217d3a6da Add systimer support
+  * 7343ece80 Define available PS2 RAM
+  * e4409f673 Include SDL_Log driver
+  * f0a05ed47 Add some PS2 flags
+  * 580416d3c Initial CMake configuration
+  * 273d9e464 Fix atomic support for PS2
+  * 161a316df Add PS2 readme
+  * 52f8d0357 Add PS2 CI config
+  * 5b4f53bc0 Added SDL_memset.c and SDL_memcpy.c to Xcode project
+  * cd8f57ee4 cmake: freebsd: Don't REQUIRE libunwind.pc on FreeBSD
+  * ae7446a95 stlib: Extract SDL_memcpy and SDL_memset to its own file
+    respectively
+  * a5d338bd2 Added support for the Qanba Dragon Arcade Joystick (PS3)
+    on macOS
+  * 7d7c48302 Use python3 for sort_controllers.py
+  * 72fea0ed6 Added support for the Qanba Dragon Arcade Joystick
+  * 6bd3e0b18 Test: Check sqrt and atan against the epsilon.
+  * cee47a9eb Test: Use inexact helper for log10 regular cases.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Jun 2022 21:48:58 +0200
+
 libsdl2 (2.23.0+git2206082151.6f69bbc54~i~wayland7) impish; urgency=medium
 
   * New snapshot:
