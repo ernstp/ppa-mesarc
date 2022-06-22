@@ -1,3 +1,50 @@
+mesa (22.2.0~git2206230022.bc42bbff4ce~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * bc42bbff4ce iris: Wa_14016820455 for GFX_VERx10 == 12.5
+  * 5d05ffa4653 anv: limit RT writes to number of color outputs
+  * 76981e5615f agx: Handle loop { if { loop { .. } } }
+  * 062e822e1b9 ci/bare-metal: Collapse artifacts wget by default.
+  * 13bf36588d4 ci/bare-metal: Consolidate needs declarations in
+    .baremetal-test-*.
+  * 1f9566cbb03 ci/bare-metal: Remove "stage: test" from .baremetal-
+    test.
+  * e13f04fcf09 zink: flag dmabufs for foreign queue transition on
+    flush_resource call
+  * 32c34e93aa7 zink: add flag to indicate if a resource is a dmabuf
+  * 69cad6dcb71 ci/freedreno: Turn a530 back on by default and update
+    expectations.
+  * 4e3c51cbd8a freedreno/a5xx: Set the buffer bit appropriately in
+    XS_CTRL_REG0.
+  * 6cf2b24eafe freedreno/ir3: Disable image/ssbo 16-bit conversion
+    folding pre-a6xx.
+  * fd1f2d3b5a4 nir: Add and use algebraic property "is selection"
+  * a2a2fbc5101 nir/algebraic: Fix NaN-unsafe fcsel patterns
+  * ccd18ec4f34 nir: i32csel opcodes should compare with integer zero
+  * d4558380810 tu: Fix linemode for tessellation with isolines
+  * e812e8892a1 v3d: Drop workaround for u_blitter bug
+  * f1c1b9687e8 tu: Do not expose storage image/buffer features for
+    PACK16 formats
+  * 4309e09d6fe vc4: Propagate txf_ms's dest_type to the lowered txf.
+  * 1de87497bab ci/vc4: Turn on deqp-egl testing by default.
+  * e9fad0b9aac ci/vc4: Merge quick_shader in with deqp-gles
+  * 872a1ae69ec zink: ci updates
+  * 90586f812c9 mesa: explicitly disallow multiple pointsize exports
+    from generating
+  * 096c5aa34a8 mesa: enforce pointsize exports if pointsize is being
+    clamped
+  * 3e2c132eb81 mesa: skip pointsize exports if pointsize attenuation is
+    enabled
+  * de732cf61b5 mesa: rename PointSizeIsOne -> PointSizeIsSet
+  * b2155a044d1 mesa: break out PointSizeIsOne setting to util function
+  * 4830cc77cb8 nir/lower_point_size: apply point size clamping
+  * 42a12649511 virgl: overpropagate precise flags
+  * e1488d93743 radeon: Support shared memory user pointers.
+  * f871aa10a11 intel/compiler: assert that base is 0 for
+    [load|store]_shared intrins
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Jun 2022 01:13:31 +0200
+
 mesa (22.2.0~git2206162107.2df90aa562d~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
