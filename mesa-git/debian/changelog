@@ -1,3 +1,47 @@
+mesa (22.1.2+git2206200313.77e02243c73~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 77e02243c73 zink: cap driver inlining using ssa allocation limit
+  * 6e8bbed87a9 zink: relax zink_resource_buffer_needs_barrier checks
+  * 7ef27bec10f zink: don't short-circuit gfx stage finding during
+    barrier generation
+  * 33b01ebfab8 zink: collect gfx stages for all bindings during barrier
+    generation
+  * f851c180dfd zink: add a #define for vk shader bits
+  * 566aaed0942 zink: track image binds
+  * f5e59958a94 zink: rework buffer barrier generation
+  * 538e62d6747 zink: track vertex buffer bind counts on resources
+  * 5267efa2590 zink: move draw-time barrier generation down a little
+  * dfea92f4295 zink: clamp renderpass layers better
+  * 0c283ca1562 zink: add a function for getting the minimum framebuffer
+    layers
+  * 494b4d0c411 zink: be a little selective about BAR fallback memory
+    type
+  * 4dbda2ee305 zink: move BAR allocation demotion up the stack
+  * e94120e7949 zink: store and reuse memory heap flags for buffer
+    placement
+  * d7b5c1f998d zink: fix buffer transfer flushes with offsets
+  * c549cb7aa1c zink: use only the extents for buffer unmap flushes
+  * c92f4bfffd9 zink: unify actual map calls in buffer mapping
+  * 689cad731dd zink: rename a variable
+  * c6a569f2427 llvmpipe: disable alpha test branch if multisample is
+    enabled.
+  * 0e3d908eb2b venus: fix the queue init failure path
+  * e4c8e591cc1 venus: fix a bug on buffer cache init failure path
+  * 2fcda40ea40 anv: do not get rid of empty/useless fragment shaders
+  * da478e6afa0 .pick_status.json: Update to
+    2866ae32da0348caf71ad2d11c353321df626ff4
+  * 5df89bf7bc9 tu: Save/restore *_BIN_CONTROL in 3d GMEM store path
+  * 74f98739507 tu: Add missing WFI to the 3d GMEM store path
+  * 3984eb34794 tu: Fix 3d GMEM store swizzle in texture descriptor
+  * aa0a47d14a8 d3d12: Keep access masks up-to-date when removing vars
+    in d3d12_disable_multisampling()
+  * 191034cd6a3 nir: Fix unused-variable compile warnings
+  * fa4d2485959 nir/deref: Handle RESTRICT for SSBO deref bindings
+  * c1c7c02aa47 nir/deref: Handle SSBO array bindings specially
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Jun 2022 01:15:33 +0200
+
 mesa (22.1.2+git2206161855.2a104d5794b~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
