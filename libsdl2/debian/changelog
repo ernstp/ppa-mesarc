@@ -1,3 +1,52 @@
+libsdl2 (2.23.1+git2206221704.5f4e9fb9b~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * 5f4e9fb9b cmake: use add_custom_command to copy include files
+  * 485b1037b cmake: copy all headers to the build directory and
+    exclusively use that
+  * 3e1021239 cmake: also add the recently-added include folder to the
+    public interface
+  * 4ad4fe67c cmake: install generated SDL_config.h
+  * c3a5e4aa7 Adding GetGamepadMapping to Vita Joystick driver
+  * 7adb08a79 fixed SDL_BlitMap typedef redefinition errors
+  * 12b371ee0 x11: Don't send diplay-add events for displays connected
+    at init time.
+  * c11bdeeb6 wayland: Round fractional backbuffer sizes halfway away
+    from zero
+  * ff735b3c0 SDL_Surface: don't implicitly declare struct SDL_BlitMap.
+  * d460000b4 cmake: use add_definitions for compatibility with cmake
+    3.0
+  * 9914e87fa Also send DPI change when expected resize.
+  * af733c7a3 Fix DPI-raised SDL_WINDOWEVENT_SIZE_CHANGED with event
+    callback.
+  * 2316e5682 SDL_windows.h: match WINVER value to _WIN32_WINNT.
+  * 22a29321e tweak _WIN32_WINNT value for shellscalingapi.h present but
+    no d3d12
+  * bdcdbfc75 Enable D3D12 detection when using mingw-w64 with cmake too
+  * 48a232969 wikiheaders: Strip `[[wiki hyperlink]]` from See Also
+    fields.
+  * abe38bca3 Support SDL_AUDIODRIVER set to "dsound", which was used by
+    SDL 1.2
+  * a8d41b3b4 check for shellscalingapi.h presence instead of WINVER >=
+    0x0603
+  * 5f6d0abeb SDL_SendEditingText() has int parameters, so use that type
+    for parameter calculation
+  * 00b95e989 Fix read of uninitialised variable
+  * d51a8f530 cmake: freebsd: Fix -Wformat warning during tests build
+  * 12f14bdbe Fixed digit count in sscanf, e.g. "%1x"
+  * 906589751 Added test for digit count in sscanf, e.g. "%1x"
+  * 28ecdc6bc No need to cast from char* to const char*
+  * 53e307050 List the available tests if the filter didn't match
+  * e7ad511b4 cmake: fix location of include dir for SDL2 VC sdk
+  * eb7e29a8b Fixed crash when the joystick product name isn't available
+  * 83b766174 build-scripts/wikiheaders.pl: ignore "Category" wiki
+    pages.
+  * 20c622f09 build-scripts/wikiheaders.pl: Allow a wiki preamble.
+  * adc687587 Added SDL_copyp to avoid size mismatch when copying values
+    (thanks @1bsyl!)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Jun 2022 01:13:00 +0200
+
 libsdl2 (2.23.0+git2206162145.68beedde9~i~wayland7) impish; urgency=medium
 
   * New snapshot:
