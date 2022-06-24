@@ -1,3 +1,42 @@
+mesa (22.1.2+git2206231926.1c5552a3a72~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 1c5552a3a72 Revert "wsi/x11: Avoid using xcb_wait_for_special_event
+    in FIFO modes"
+  * 566409ed124 Revert "wsi/x11: Don't leak xcb_get_geometry_reply_t."
+  * a0b9336cd7d .pick_status.json: Mark
+    420270cb4f73da6251d4caec976358681f05c45c as backported
+  * 755fe3ee278 anv: limit RT writes to number of color outputs
+  * ac10f5a3ab1 nir/algebraic: Fix NaN-unsafe fcsel patterns
+  * ccad18ff9ed nir: i32csel opcodes should compare with integer zero
+  * 4fbc8fb28e5 tu: Fix linemode for tessellation with isolines
+  * e43617904af vc4: Propagate txf_ms's dest_type to the lowered txf.
+  * 3f0815a3338 nir/lower_point_size: apply point size clamping
+  * d4f41e6b8c1 virgl: overpropagate precise flags
+  * 56145283043 wsi/x11: add xcb_put_image support for larger transfers.
+  * 37c256c0deb egl/x11: add missing put_image cookie cleanups
+  * 350afae947c egl/x11: split large put image requests to avoid server
+    destroy
+  * c49c481ca6f zink: fix dual_src_blend driconf workaround
+  * 58a830d9c45 glx/drisw: invalidate drawables upon binding context if
+    flush extension exists
+  * 9b1b760ffaf glx/drisw: store the flush extension to the screen
+  * b5d711a9b25 pan/bi: Fix LD_BUFFER.i16 definition
+  * 940cb75c935 vulkan/wsi: fix crash with debug names on swapchain
+  * 839cd828651 gallium/u_blitter: Fix depth.
+  * 86811cc1786 docs: set language to english
+  * d3050e790f8 r300: prefer old not native swizzle in constant folding
+  * 683d2243296 aco: fix validation of SOP1 instructions without
+    definitions
+  * 404838a3336 anv: Properly clamp attachment layer counts
+  * cb13e00f72b panfrost: Remove sync arguments from
+    panfrost_batch_submit
+  * 0acb0f4a631 intel/fs: Add missing synchronization for WaW dependency
+  * ff1ffa4f037 .pick_status.json: Update to
+    8ce7faab47a77377a6a1313a80580828b052f878
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 24 Jun 2022 10:54:27 +0200
+
 mesa (22.1.2+git2206200313.77e02243c73~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
