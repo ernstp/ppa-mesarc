@@ -1,3 +1,46 @@
+libsdl2 (2.23.1+git2206281600.43555bd1a~i~wayland7) impish; urgency=medium
+
+  * New snapshot:
+  * 43555bd1a regenerated configure script
+  * 1d1fb95a6 Removed double va_end()
+  * f815580dd Fix SIGSEV in SDL_error. Re-apply same pattern on this
+    uncompiled code (see #5795)
+  * d4e6047e3 Fix SIGSEV in SDL_error (After removing the limit on the
+    size of the SDL error message) (see #5795)
+  * 7a02dcf3e Add note to GDK docs about XCurl.dll
+  * cddf095a1 'Refactored by Sourcery'
+  * b6f1c9186 Fixed Watcom C build
+  * cbd018747 Removed the limit on the size of the SDL error message
+  * f25b4b277 Style: Flip `if` statement.
+  * 6c536afdb Fix C89 declaration for macOS modules.
+  * e4a808755 Initial Audio driver
+  * 972391763 Use proper header for OpenBSD PPC CPU detection
+  * 0a9a0a79e Sync SDL wiki -> header
+  * 3b191580c Windows GDK Support (#5830)
+  * 314bb5a1e Fixed bug #5850: Android EGL_BAD_ACCESS because of
+    viewport command while turning the screen off/on.
+  * 7fd46ec58 Initial PS2_Joystick implementation
+  * 84d69da4e Initial SDL_ps2_main implementation
+  * 1f3ae7522 Add ps2_drivers dependency
+  * b2f07d94d Vita: create rendertarget color surface with same format
+    as texture. Fixes #5844
+  * ebe4f47f2 Fixed __VA_ARGS__ in gcc when no args
+  * 51c6488f9 Add support for SDL_render_d3d12.c to compile in C++ mode
+  * fa39f7355 cmake: add generated files to a custom target (#5851)
+  * 787dc260a autotools: properly enable the version static assertions
+  * 76f40e2b3 cmake: remove stray debug line
+  * ca3093631 cmake: check and use clock_gettime by default on android
+  * 118a2189f build-scripts/wikiheaders.pl: ignore the 'FrontPage' wiki
+    pages.
+  * bd4969613 cmake: use CMAKE_CURRENT_BINARY_DIR instead of
+    CMAKE_BINARY_DIR (#5834)
+  * 6dcb2868b cmake: avoid use of possible non-available XEXT_LIB
+  * 78a375165 cmake+ci: fix+test sdl2-config + sdl2.pc for all supported
+    platforms
+  * c61367c27 cmake: do list(APPEND SDLMAIN_SOURCES)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jun 2022 20:02:19 +0200
+
 libsdl2 (2.23.1+git2206221704.5f4e9fb9b~i~wayland7) impish; urgency=medium
 
   * New snapshot:
