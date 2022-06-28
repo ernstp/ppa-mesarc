@@ -1,3 +1,33 @@
+mesa (22.1.2+git2206271818.a21cba54cac~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * a21cba54cac intel/compiler: adjust task payload offsets as late as
+    possible
+  * 02923d76850 intel/common: allocate space for at least one task urb
+  * c7dce6945d1 intel/blorp: Dirty depth bounds dynamic state bits after
+    blorp
+  * ba1d27bdee1 nir/serialize: Put dest last in packed_instr::tex
+  * a836e218bdb .pick_status.json: Update to
+    9d7d1c0637529301d3e319ec5f1c883c5f249783
+  * c426ecb276c zink: fix image bind counting
+  * 78a64e862fa intel/blorp/gen6: Set BLEND_STATEChange only if emitting
+    the blend state
+  * 179ad03f5d5 util: use force_gl_map_buffer_synchronized workaround
+    with RAGE
+  * d36439c235e util: add dri config option to disable
+    GL_MAP_UNSYNCHRONIZED_BIT
+  * a15841aa8d3 lavapipe: skip post-copy pNext checking during pipeline
+    creation for composites
+  * ddaadc3da05 lavapipe: fix renderpass info handling during pipeline
+    creation
+  * d5bcbab926a lavapipe: copy more pNexts for pipeline creation
+  * 50cd0368711 egl/wayland: Don't try to access modifiers u_vector as
+    dynarray
+  * 800651daf3c .pick_status.json: Update to
+    9527fbe596e2ace276c158f67a900c29aad6cdd0
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jun 2022 20:04:57 +0200
+
 mesa (22.1.2+git2206231926.1c5552a3a72~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
