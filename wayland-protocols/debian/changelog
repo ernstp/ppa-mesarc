@@ -1,3 +1,10 @@
+wayland-protocols (1.25+git2206272324.c96e22a~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * c96e22a tablet: fix a copy/paste error
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jun 2022 20:06:55 +0200
+
 wayland-protocols (1.25+git2206040957.7350cbe~b~base2) bionic; urgency=medium
 
   * New snapshot:
