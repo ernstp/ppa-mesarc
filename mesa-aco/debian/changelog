@@ -1,3 +1,52 @@
+mesa (22.2.0~git2206281923.4b5f0d98fd5~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4b5f0d98fd5 tu: Overhaul LRZ, implement on-GPU dir tracking and LRZ
+    fast-clear
+  * 70f1d70ddd7 freedreno: document GRAS_UNKNOWN_810A
+  * 1cd91fdec38 freedreno: Document a650-specific CP_REG_WRITE flag
+  * 5592c366cf1 freedreno: Document rest of GRAS_LRZ_CNTL, clarify
+    UNK_25 event
+  * edc7f40a831 meson: drop dladdr check on win32
+  * 3129520a733 ci/dzn: Add pipeline cache tests to the include list
+  * 91f1bd8f81d dzn: Cache pipeline info
+  * d8b686783ef dzn: Cache DXIL shaders
+  * 52e2ca084af dzn: Caculate a binding translation hash
+  * 276c73580d2 dzn: Cache NIR shaders
+  * 66764904b3a dzn: Move the compute shader compilation logic to a sub-
+    function
+  * 6236d1eead4 dzn: Drop unneeded goto statement in
+    dzn_compute_pipeline_create()
+  * d4630b703d2 dzn: Add a generic cached blob wrapper
+  * 06f37025f14 dzn: Hash pipeline layout stages
+  * 391d3251fa2 dzn: Don't delegate binding translation to
+    dxil_spirv_nir_passes()
+  * c7b43711f38 dzn: Save a few indentation levels in
+    graphics_pipeline_compile_shaders()
+  * 84770a90bb3 dzn: Use vk_to_mesa_shader_stage()
+  * f4a96675ec4 dzn: Fix potential nir_shader leak
+  * af83f104da6 dzn: Let dzn_pipeline_init() initialize the root
+    signature in the stream
+  * 301fb478fee dzn: Drop unused allocator passed to
+    dzn_graphics_pipeline_create()
+  * b886619313f dzn: Drop useless while(link_mask != 0)
+  * 31357f3cf4f dzn: Pass the maximum stream size to
+    d3d12_pipeline_state_stream_new_desc()
+  * e4e531732b5 dzn: Use d3d12_compute_pipeline_state_stream_new_desc()
+    in the compute path
+  * d3e6ef195a2 dzn: Fix assertion in
+    d3d12_pipeline_state_stream_new_desc()
+  * 26ca9a43441 dzn: Add missing D3D12_CACHED_PIPELINE_STATE to
+    MAX_COMPUTE_PIPELINE_STATE_STREAM_SIZE
+  * c66caa1d589 dzn: Drop dzn_pipeline_cache.c
+  * b59abbe3d57 dzn: Initialize UUIDs
+  * be019e69e2c dzn: Fix indentation
+  * aab5d176b83 pytracediff: implement pager ('less') invocation
+    internally
+  * 95fc0e1b7c5 pytracediff: change how 'junk' calls are handled
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Jun 2022 20:02:53 +0200
+
 mesa (22.2.0~git2206230022.bc42bbff4ce~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
