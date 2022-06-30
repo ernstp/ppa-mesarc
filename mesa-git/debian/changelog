@@ -1,3 +1,21 @@
+mesa (22.1.3+git2206291840.f0cda4094d5~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * f0cda4094d5 VERSION: bump to 21.1.3
+  * d1f0630a161 docs: add release notes for 22.1.3
+  * 7aabd416555 nir/serialize: Support texop >= 16
+  * d11aac34435 broadcom/compiler: don't predicate postponed spills
+  * 63ac4309e10 broadcom/compiler: fix postponed TMU spills with
+    multiple writes
+  * c2cbbefe499 v3dv: fix leak
+  * bc26f1c4eeb zink: fix kopper_acquire return value
+  * 93561a98b17 lima,panfrost: Do not ralloc contexts against the screen
+  * 1aebab2a16f .pick_status.json: Update to
+    58313f3257b338928a8ae4ea375eedb50accf2bb
+  * 75d3e33f3bc lima/ci: mark some tests as pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 30 Jun 2022 02:09:14 +0200
+
 mesa (22.1.2+git2206271818.a21cba54cac~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
