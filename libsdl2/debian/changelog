@@ -1,3 +1,41 @@
+libsdl2 (2.23.1+git2207032122.85bbf8eec~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 85bbf8eec Fixed coment after #endif
+  * 643f9e56d Rename folder created in test_filesystem
+  * 7d7c5b803 Improving mkdir creating parents folder
+  * 2a25b69ba Check if GNC is defined before checking its value to solve
+    warns in msvc
+  * 0a600b1df Merge testguid into testautomation (#5873)
+  * cd79e9c4e Removed comment text that looks like doxygen commands
+  * f317d619c Xbox GDKX support (#5869)
+  * 0025621b8 Add a default URL in testurl
+  * 391dd0d94 Don't spin as quickly as possible in the checkkeys
+    rendering loop
+  * 89624485c Updated the test bitmap font to cover the Latin-1
+    character set
+  * e9d5060c4 checkkeys will now render text that is input
+  * 209f457ea Generate backspaces for the text we're going to replace
+    when committing text
+  * bdbf90e3f on-screen keyboard newline is reported as an Enter key
+  * 7ac5d616f Fixed backspace being delivered after committed text on
+    Android 12
+  * 37a517dc3 Re-enable IME text input on Android
+  * 78089e659 Remove unused internal header SDL_sysevents.h
+  * 3e114872e joystick: Fix redetection of HIDAPI joysticks after
+    reinitializing
+  * 4f7321979 Fixed D3D12 renderer not working with batching, and got
+    rid of the vertex buffer size limit
+  * 24251fb54 Fixed checkkeys closing when tapping the screen on a phone
+  * 0ad65277c Refactored code to send scancodes for an ASCII on-screen
+    keyboard key
+  * a054a5f7f Improve SDL2 main, adding memory card and usb drivers
+  * 6a2e6c82a Add SDL_HINT_DIRECTINPUT_ENABLED (on by default)
+  * db7dfece1 cmake: fix name+location of SDL2.dll in configure
+    generated SDL2::SDL2 target
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 Jul 2022 00:17:31 +0200
+
 libsdl2 (2.23.1+git2206281600.43555bd1a~i~wayland7) impish; urgency=medium
 
   * New snapshot:
