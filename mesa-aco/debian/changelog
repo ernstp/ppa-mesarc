@@ -1,3 +1,45 @@
+mesa (22.2.0~git2207032001.b41620f9ed3~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * b41620f9ed3 freedreno/registers: add missing varset="chip" for new
+    enum values
+  * 09934730540 etnaviv: rework resource status tracking (again)
+  * a11fa44b2d8 etnaviv: add function to get resource status
+  * ce4e5198a3d etnaviv: drm: rename etna_drm_table_lock
+  * 6e181476c3f etnaviv: drm: make etna_bo_map thread safe
+  * 5711329cbc0 etnaviv: drm: don't cache mmap offset
+  * 8997b9579ff etnaviv: drm: always use hash to track BO index
+  * 7bb62d9dd85 etnaviv: allow mapped buffers during execution
+  * 07369bf44d0 etnaviv: expose real map buffer alignment
+  * b50aa918f42 radv/ci: do not reboot on soft-recovered hangs, just
+    warn
+  * acbec0fa23e radv/ci: allow specifying a warning pattern
+  * 3e90eb44632 radv/ci: add CI lists for LLVM on NAVI21
+  * c0fbc317374 radv/ci: test the llvm backend on navi21
+  * a0c2b342482 gallium/util: Move u_dl and u_pointer to src/util
+  * 1141ed58590 etnaviv: async shader compile
+  * a427a7f5d4e etnaviv: factor out shader screen related init/deint
+  * 4d7c11aa8d7 ci/x86: update to llvm 13
+  * ff13fc381d5 radv: Use NIR optimization to move discards to the top.
+  * 1b4784c5fbb venus: swizzle the chroma channels for YVU420 to match
+    the VkFormat
+  * 5d2a243dde0 radv: Add CULL_PRIMITIVE to special output mask.
+  * 7144d52d59e radv: Don't assign driver locations to mesh shader
+    outputs.
+  * 8bfeb467bff ac/nir/ngg: Ignore driver location for mesh shader
+    outputs.
+  * 66bd470922d ci/radv: enable vkcts testing on kabini
+  * 1bcb883ea54 ci/freedreno: disable SpecOps trace, each run flaky
+  * de8c769d116 freedreno/registers: add a7xx registers for drm/msm
+    kernel driver
+  * 31fab141df3 dzn: Support Vulkan loader interface v5
+  * 6a90d3832ad radv: Use two bools for ahit_status
+  * 6f2a991f787 ci/freedreno: disable Stellaris trace
+  * f77695d13fb ci/freedreno: temporary disable AmnesiaTDD
+  * 74da4dc2168 ci/freedreno: add more restricted traces
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 Jul 2022 00:18:01 +0200
+
 mesa (22.2.0~git2206281923.4b5f0d98fd5~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
