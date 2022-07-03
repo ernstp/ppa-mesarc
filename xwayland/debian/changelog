@@ -1,3 +1,17 @@
+xwayland (2:22.1.2+git2207011002.5e7ba574e~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 5e7ba574e xwayland: Change randr_output status when call
+    xwl_output_remove()
+  * 29d14492b xwayland: Fix check logic in sprite_check_lost_focus()
+  * 5c14db4b4 xwayland/present: Do not send two idle notify events for
+    flip pixmaps
+  * 8c0fe08c6 os: print registers in the libunwind version of
+    xorg_backtrace()
+  * 891ea8f74 os: print <signal handler called> if unw_is_signal_frame()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 Jul 2022 00:22:02 +0200
+
 xwayland (2:22.1.2+git2205251038.daaa9f056~i~wayland6) impish; urgency=medium
 
   * New snapshot:
