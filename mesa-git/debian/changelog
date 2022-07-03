@@ -1,3 +1,18 @@
+mesa (22.1.3+git2206301758.a066287f1b5~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * a066287f1b5 nir/types: fix glsl_matrix_type_is_row_major() assert
+  * 7d4d33e858d .pick_status.json: Update to
+    8ab1e9826db5936ff287bef7b428ebee27ada507
+  * 4f6fdddf385 .pick_status.json: Mark
+    4480e577a462d43f5c7701d2c1b70c601c626e18 as denominated
+  * 2a453ba93f2 anv: disable non uniform indexing of UBOs
+  * 05d8bc7f818 .pick_status.json: Update to
+    c017dfec62e448fea9ad9d16c575086b0de19b3b
+  * ceb5c0f559b docs: add sah256sum for mesa 22.1.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 04 Jul 2022 00:20:02 +0200
+
 mesa (22.1.3+git2206291840.f0cda4094d5~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
