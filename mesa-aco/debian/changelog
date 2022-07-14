@@ -1,3 +1,48 @@
+mesa (22.2.0~git2207141230.1c2ca3cfb73~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1c2ca3cfb73 radeonsi: no need to call si_pm4_clear_state() in
+    si_pm4_free_state()
+  * 2330c717511 radeonsi: remove tabs from code
+  * 301bcbac0e5 fix(gallivm): Replace LLVMConstF* with LLVMBuild*
+    methods.
+  * a41e8dc5887 spirv: switch to uint64 for rayquery internal type
+  * 05552b46889 lavapipe: support inlined shader spirv for compute
+  * c1d0bf98f49 docs: Update features.txt and new_features.txt
+  * 333432310a8 d3d12: Fix up resource import validation
+  * d119e6a46ff d3d12: Implement fence opening and value setting
+  * ea243ef1d55 d3d12: Implement server signal/wait
+  * 416f10fc3fb d3d12: Support importing fences / timeline semaphores
+  * e3e22ce882e d3d12: Support opening resources and memobj by name
+  * d4623258958 d3d12: Implement resource_from_memobj
+  * bd0407a4a61 d3d12: Support creating memory objects
+  * c87d7cfaade d3d12: PIPE_BIND_SHARED doesn't mean linear and is
+    always on opened resources
+  * e02b11af579 d3d12: Get adapter LUID after device creation
+  * d6fa0a20b07 d3d12: Support B4G4R4A4 format
+  * 5a9cc967845 d3d12: Add pipe getters for Win32 and base external
+    objects device matching
+  * 5f6795309f3 d3d12: Compute UUIDs required by external objects
+    extension
+  * 1b59b542baa d3d12: Store the rest of the device IDs in the screen
+  * acba2bbb0ef gallium, mesa: Support setting timeline semaphore values
+  * cd01e71999c mesa: Implement ImportSemaphoreWin32NameEXT
+  * c760f0e8b85 mesa: Support importing D3D12 fences as timeline
+    semaphores
+  * 8cd391a63e9 gallium: Add a new fence type with a pipe cap to
+    indicate it can be imported
+  * 633a469a7a1 driver_noop: Remove infinite recursion from
+    create_fence_win32
+  * 7c4fa79bfae gallium: Add 'name' field to Win32 semaphore import
+  * 51408dfec41 mesa: Implement ImportMemoryWin32NameEXT
+  * 91b14d4a779 gallium: Add a 'name' field to winsys_handle
+  * 8f11c0553c3 mapi: Add more EXT_external_objects_win32
+    functions/enums
+  * 78ba74cfdab mesa: Support D3D11/D3D12 memory imports
+  * 0ff4f5a7e9e util: Shut down Perfetto before driver unload
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Jul 2022 15:05:10 +0200
+
 mesa (22.2.0~git2207032001.b41620f9ed3~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
