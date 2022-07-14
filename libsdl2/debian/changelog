@@ -1,3 +1,57 @@
+libsdl2 (2.23.1+git2207140140.2201d8025~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 2201d8025 avoid -Werror=declaration-after-statement after last
+    commit.
+  * 24b3efd08 (OpenBSD) Exe Path: Use PWD instead of CWD and use CWD as
+    fallback
+  * 883409ea0 Added support for the misc1 button on the Nintendo Switch
+    Pro Controller when using hid_nintendo kernel driver
+  * 9a4f200d4 gamecontrollerdb: Linux, add mappings for hid-nintendo
+    driver and more Taken from
+    https://github.com/gabomdq/SDL_GameControllerDB/blob/master/gamecont
+    rollerdb.txt
+  * 7e2a99695 Added a virtual joystick automated test
+  * 06c7d2265 Added mappings for the HORI Fighting Stick mini 4 on Linux
+    and macOS
+  * 27d8cbf02 Added PowerA and Qanba vendors for Android USB device
+    support
+  * e24b971a3 Added support for the NVIDIA Shield controller guide
+    button
+  * c92ddddde Sort libraries by version and pick the shortest symlink
+    (thanks @jpalus!)
+  * b321eae51 joystick: Fix spurious battery empty events when opening a
+    Shield controller
+  * a0d8848ba joystick: Plumb SDL_JoystickSendEffect() for the Shield
+    HIDAPI driver
+  * deca77c16 Regenerated configure
+  * d5b8cf72f Revert "autotools: relax soname pattern for dynamic
+    loading"
+  * 36d8460c9 pipewire: Dynamically allocate the buffer for node strings
+  * 996cea31e pipewire: Update default audio devices during runtime
+  * 60da11f0e pipewire: Remove deprecated configuration key
+  * 4fa265339 SDL_GetJoystickGUIDInfo: byte-swap vendor, product and
+    version values.
+  * b8f30c021 SDL_endian.h: check for __powerpc__ and __PPC__ in big
+    endian decision.
+  * 5d09b6315 Sync SDL wiki -> header
+  * ecfbdce64 pipewire: Require version 0.3.24 or newer at runtime
+  * 2f0816adb Add SDL_GetDefaultAudioInfo.
+  * 15d061808 SDL_IMMDevice: Fix a WASAPI-specific leak, clean up Add()
+  * ae105ae1c windows: Move IMMDevice work to common file, implement
+    DirectSound enumeration support
+  * 2373da5d9 Exposed SDL_ResetKeyboard() as a public function
+  * 739155c44 We want to ship the CMake input file, not the generated
+    file
+  * 2c22d7204 Fixed typo in description
+  * cd2dcf54a regenerated configure script.
+  * 855363282 autotools: relax soname pattern for dynamic loading
+  * 6e712d244 joystick: Add HIDAPI driver for NVIDIA SHIELD 2017
+    controller
+  * 3242265ff joystick: Fix endianness issues in Xbox HIDAPI drivers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Jul 2022 15:04:41 +0200
+
 libsdl2 (2.23.1+git2207032122.85bbf8eec~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
