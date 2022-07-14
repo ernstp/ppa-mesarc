@@ -1,3 +1,45 @@
+mesa (22.1.3+git2207121916.6ddbd56174b~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 6ddbd56174b zink: Do the timestamp-to-ns math in a double to have
+    better precision.
+  * cf26e274c72 lavapipe: don't crash on null xfb buffer pointer
+  * 3f76b2a272f lavapipe: don't overwrite entire VkFormatProperties3
+    struct
+  * 56b7c79ccff isl: add new helper for format component compatibility
+  * 9276b2f2f32 aco: fix packed 16bit fneg/fsat optimization
+  * 8a445634860 radv/shader_info: fix load_frag_coord and
+    load_sample_pos read masks
+  * a18fe935701 r300: Keep rc_rename_regs() from overflowing
+    RC_REGISTER_MAX_INDEX
+  * 1678100c3c6 mesa: fix SignalSemaphoreEXT behavior
+  * 4514fdff785 radeonsi: fix random PS wave size
+  * 6da016cded4 nir/serialize: restore ray query variables
+  * 95d522f4757 radv: Fix vkCmdCopyQueryResults -> vkCmdResetPool
+    hazard.
+  * 09588251ffe panfrost: Clear with a quad to avoid flushing
+  * 0869e0aac5f intel/fs: ray query fix for global address
+  * fcb327dd370 vulkan/wsi/x11: Don't leak shm_reply if we don't have
+    dri3 or present
+  * 2b157e92d75 vulkan/wsi: Pass the size to MapMemory in the SW path
+  * eb1fb9305d7 nir: fix documentation for uadd_carry and usub_borry
+    opcodes
+  * 0fec6321023 .pick_status.json: Update to
+    0feedec9e6b630f930605d9681911fe9e2b705ce
+  * 562c1d93b31 anv: use the right helper to invalidate memory
+  * 122e31b5ea5 ttn: Set nir->info.separate_shader
+  * af9b7533187 nir/opt_shrink_vectors: fix re-using of components for
+    vecN
+  * e1cf74f53bf v3dv: fix pool descriptor count for inline uniform
+    buffers
+  * 040658cd264 zink: enforce viewport depth clamping
+  * a9b3df51e02 aco/ra: update register file when updating phi
+    definition
+  * a80fe86c5c4 .pick_status.json: Update to
+    9dbfc21ab9ac99ebec56369d1e1ea9d7b615d5f5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Jul 2022 15:07:24 +0200
+
 mesa (22.1.3+git2206301758.a066287f1b5~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
