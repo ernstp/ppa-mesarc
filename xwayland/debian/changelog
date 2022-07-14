@@ -1,3 +1,13 @@
+xwayland (2:22.1.3+git2207121548.9542cb1ab~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 9542cb1ab Bump version to 22.1.3
+  * 9e0957aee xkb: add request length validation for XkbSetGeometry
+  * 81d70e112 xkb: swap XkbSetDeviceInfo and XkbSetDeviceInfoCheck
+  * d76f4e20a xkb: switch to array index loops to moving pointers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Jul 2022 15:13:20 +0200
+
 xwayland (2:22.1.2+git2207011002.5e7ba574e~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
