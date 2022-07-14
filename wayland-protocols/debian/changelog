@@ -1,3 +1,12 @@
+wayland-protocols (1.26+git2207071628.83866f1~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 83866f1 build: Bump version to 1.26
+  * 3f90354 single-pixel-buffer: new protocol
+  * 08067ae xdg-shell: introduce toplevel wm_capabilities
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Jul 2022 15:09:32 +0200
+
 wayland-protocols (1.25+git2206272324.c96e22a~b~base2) bionic; urgency=medium
 
   * New snapshot:
