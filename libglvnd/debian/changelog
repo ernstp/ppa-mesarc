@@ -1,3 +1,13 @@
+libglvnd (1.4.0+git2207070031.5e289fb~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 5e289fb Merge branch 'meson-modernize' into 'master'
+  * a1a4123 meson: rename idep_glx -> dep_glx
+  * 8ee0213 meson: use meson.override_dependency when possible
+  * ca2eeb5 meson: remove dep_glx
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 14 Jul 2022 15:04:33 +0200
+
 libglvnd (1.4.0+git2206071457.8e5f0f1~i~wayland0) impish; urgency=medium
 
   * New snapshot:
