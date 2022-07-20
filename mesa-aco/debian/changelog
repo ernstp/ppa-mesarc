@@ -1,3 +1,49 @@
+mesa (22.2.0~git2207200937.95fe5401390~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 95fe5401390 v3d/ci: (partially) revert expected list
+  * 2e7ecc02bcf zink: default to lazy/templated descriptors
+  * 6493f6ef795 zink: add an explicit ZINK_DESCRIPTOR_MODE_CACHED
+  * 9172127057e zink: delete ZINK_DESCRIPTOR_MODE_NOFALLBACK
+  * 1c2bd27d812 zink: move descriptor_mode to be a global
+  * d1e36634bdf nir/loop_unroll: clean up after
+    complex_unroll_single_terminator()
+  * bfebf51571e lavapipe: state latest conformance tests passed
+  * 7b0fcd8932a turnip: Disable LRZ fast-clear for gen1 and gen2
+  * 7e381ba9fcc ci/freedreno: Switch a630 to manual/disabled for lab
+    maintenance.
+  * 4ce29c5568e venus: reenable VK_EXT_extended_dynamic_state2
+  * 4eaa7809443 venus: check dynamic state for raster enablement
+  * e14022c0525 crocus: fail query begin if upload allocation fails.
+  * 2159a377c0f Zink: Fix clear being missed when using emulated draws
+    in zink_blit
+  * 3dfd8e4d7dd zink: Fix spirv stream 0 vertex emit for multistream
+    shaders
+  * 9ecc26ff276 anv: Do depth/stencil optimization for dynamic
+    depth/stencil
+  * 07f5f159634 vulkan/graphics_state: Improve the depth/stencil
+    optimization code
+  * 7d25c04236b anv: Switch to using common dynamic state tracking
+  * cc89232f2e9 anv: Stop merging DEPTH_STENCIL state
+  * 97dd1a100d4 anv: Rework setting primitive topology
+  * b656957c563 anv: Convert to using vk_graphics_pipeline_state
+  * 44cbb7d9c8e anv: remove pipeline setting dynamic state
+  * 18868f1c767 anv: Stop recording sample locations per-sample-count
+  * 36417bd05b5 anv: Handle vertex buffer sizes in
+    anv_CmdBindVertexBuffers2
+  * 1faba01c2bc anv: Add an instance multiplier to anv_pipeline
+  * 6f25d45877a spirv: handle phis decorated with RelaxedPrecision
+  * cde8c92ab6d ci/bare-metal: Add timeouts to the shell commands called
+    in fastboot.
+  * 0fb3aa005f8 radv: don't update misaligned_mask in
+    CmdBindVertexBuffers2
+  * 1d019d2ab77 radv: fix vbo_bound_mask indexing
+  * ae003ef78cb r300: disable PIPE_CAP_PREFER_IMM_ARRAYS_AS_CONSTBUF
+  * 3f19a608694 vulkan: Detect pNext chain loops in vk_foreach_struct()
+    (v2)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Jul 2022 11:14:35 +0200
+
 mesa (22.2.0~git2207141230.1c2ca3cfb73~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
