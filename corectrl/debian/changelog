@@ -1,3 +1,22 @@
+corectrl (1.3.0~git2207171720.dec3fe4~b~mesarc14) bionic; urgency=medium
+
+  * New snapshot:
+  * dec3fe4 Fix resource alias of Dutch translation
+  * 2381605 Replace KAuth dependency with Polkit and Qt5::DBus
+  * d322ae6 Replace KArchive dependency with QuaZip
+  * 8696267 Add Dutch translation to resources.qrc and translations list
+  * c869c3d Merge branch 'master' into 'master'
+  * 58a13db Add Dutch translation
+  * 20e1ef8 Add support for unix paths to .exe files on wine launch
+    cmdline
+  * 9cf3085 Fix voltage offset not being restored during the
+    initialization phase
+  * 9b08ea8 Explicitly disable QApplication quit on last window closed
+  * a475e73 Fix warning on FindBotan.cmake
+  * 6297ef1 Fix deprecated calls to QProcess::start
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Jul 2022 11:13:49 +0200
+
 corectrl (1.3.0~git2207091123.6c190c0~b~mesarc14) bionic; urgency=medium
 
   * New snapshot:
