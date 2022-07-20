@@ -1,3 +1,34 @@
+libsdl2 (2.23.1+git2207200601.b700a3263~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * b700a3263 audio, pipewire: fix signatures of pw_get_library_version
+    and pw_init.
+  * 6e210d379 audio, pipewire: pipewire_version_xx globals out of
+    dynamic loading
+  * 78bad6677 video: wayland: Resize the window before sending the
+    SDL_RESIZE event
+  * 53e685168 Fixed declaration-after-statement warning
+  * 6ad7fdecc Fixed infinite loop for values bigger than 0x40000000
+  * 986818143 Fixed missing imports in SDLActivity (thanks @guusw!)
+  * 2be930141 Fixed comment (thanks @pionere!)
+  * cef1514b0 Fixed some Xcode warnings
+  * e3916993e Added SDL_utils.c to the Xcode project
+  * b299cb3d3 Added a utility function to calculate the next power of 2
+    for a value
+  * 90b86b132 audio: Handle non-power-of-two spec.samples when
+    unsupported
+  * d21a18c65 WhatsNew.txt: Add line for Shield HIDAPI driver
+  * cdf9010a1 Added new audio features to WhatsNew.txt
+  * a09d62e4d directsound: Remove redundant SubFormat copy
+  * c5e408ae9 directsound: For channel counts > 2, generate a
+    dwChannelMask for CreateSoundBuffer
+  * fff34f630 windows: SDL_IMMDevice needed more deinit code from the
+    Win32 path.
+  * 37aecda2c pipewire: Use PW_KEY_TARGET_OBJECT to specify stream
+    connection nodes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 20 Jul 2022 11:14:08 +0200
+
 libsdl2 (2.23.1+git2207140140.2201d8025~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
