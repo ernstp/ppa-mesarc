@@ -1,3 +1,57 @@
+libsdl2 (2.23.1+git2207251800.1e492b2f6~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 1e492b2f6 Improve behavior of SDL_events_need_periodic_poll() and
+    SDL_events_need_polling()
+  * d9bda89fc Fix updating SDL_update_joysticks and SDL_update_sensors
+    in response to hint changes
+  * 0ec5bb4e6 Add missing controller events to
+    `SDL_GameControllerEventState()`
+  * f86ec47f8 ci: don't use ANDROID_NDK_HOME environment variable in
+    Android workflow
+  * 4d6650173 Fixed building with 10.9 SDK
+  * 3ab1e303e joystick: Refactor and fix a few bugs in Shield HIDAPI
+    driver
+  * b8a554074 testgamecontroller: Add battery reporting
+  * 4d8bb89c4 Fixed mouse clip rect bounds on Windows
+  * 6bcde52d8 Further adjust implementation of
+    `Cocoa_GetWindowDisplayIndex`
+  * ce8aae141 Fix `Cocoa_GetWindowDisplayIndex` failing and causing a
+    catastrophic crash
+  * 041666e6c video: wayland: Don't switch to libdecor path for
+    borderless windows
+  * 405d1f659 video: wayland: Roundtrip after falling back to libdecor
+    in xdg-decoration handler
+  * fc2497b10 Revert "cmake: don't add -mwindows to link flags in
+    sdl2.pc"
+  * 2fdedd17b Revert 6fa7d62 and 856c99e5
+  * 856c99e58 android: target android-19 by default when building with
+    build-scripts/androidbuildlibs.sh
+  * 832754b97 ci: install SDL when built as a subproject
+  * 6fa7d6240 ci: use android-ndk r25 (LTS) on CI
+  * d211aaddc cmake: don't add -mwindows to link flags in sdl2.pc
+  * d63a699e0 cmake: by default, disable install target when building
+    SDL as a subproject
+  * 8c51cae78 audio/aaudio, audio/openslES: fix -Wdeclaration-after-
+    statement errors
+  * 65647b341 SDL_Render: use high precision texcoords in ES2 shaders,
+    when possible
+  * f9beef760 Added support for the Nintendo Switch Joy-Con Controllers
+    on iOS and tvOS 16
+  * aad7ef6ea Added support for the Nintendo Switch Pro Controller on
+    iOS and tvOS 16
+  * 59963473e Enable bitcode by default for iOS and tvOS builds
+  * 20f51b1fd Fixed crash if debug text wasn't drawn during a session
+  * 8cd515c32 better wording.
+  * 41b89aec1 video: Improve the SDL_WINDOW_ALLOW_HIGHDPI flag
+    documentation
+  * 0a1641635 VIta: enable arm neon/simd optimisations
+  * e5698d139 cmake: allow cmake re-configuration after installation of
+    x11 library
+  * 192ae1e35 WhatsNew.txt: added line for the calling convention fixes.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 25 Jul 2022 18:59:59 +0200
+
 libsdl2 (2.23.1+git2207200601.b700a3263~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
