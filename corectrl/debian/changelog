@@ -1,3 +1,18 @@
+corectrl (1.3.0~git2207251846.7e7b3d9~b~mesarc14) bionic; urgency=medium
+
+  * New snapshot:
+  * 7e7b3d9 Add CHANGELOG.md
+  * a821c5c Add support for disabling a frequency range bound on
+    PMFreqRange
+  * ad9294e Fix compilation issues related to missing polkit
+    includes/libraries
+  * 5fdfd55 Add support for QuaZip pre-1.0 versions
+  * 2ab7c47 Use UPPERCASE for the prefix name on CMake pkg_check_modules
+    calls
+  * 65e3adf Update Archlinux installation instructions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 25 Jul 2022 18:59:39 +0200
+
 corectrl (1.3.0~git2207171720.dec3fe4~b~mesarc14) bionic; urgency=medium
 
   * New snapshot:
