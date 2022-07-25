@@ -1,3 +1,47 @@
+mesa (22.2.0~git2207251838.fbb4b90d7d9~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * fbb4b90d7d9 zink: add a ci flake
+  * 5e600afa33b lavapipe: remove some skips
+  * d23a9380dd6 lavapipe: implement extreme uniform inlining
+  * 1a244e13948 ci/freedreno: 3 pixel change in Raven restricted trace
+  * 2b3b7b692b8 wsi/x11: Synchronously check for error from
+    xcb_present_pixmap
+  * 747913377f2 zink: fix EXT_color_write_enable check
+  * 32b9e639b77 zink: warn about missing image2DViewOf3D feature
+  * 1318a58538c docs/zink: document required VK_EXT_border_color_swizzle
+  * d9064d3c30d docs/zink: document required
+    VK_KHR_swapchain_mutable_format
+  * 28cbb40a986 docs/zink: correct name of extension
+  * fef2004b11d radeonsi/vcn/enc: enable cabac entropy mode
+  * dea360dcf95 frontends/va: get entropy mode info for h264 encode
+  * ea9e8e776a0 vl: add cabac init idc for h264 encode
+  * e13a450bf29 pvr: Add support for input attachment descriptor.
+  * b562d29196f pvr: Add support for storage and uniform texel
+    descriptor.
+  * 08c867972f4 pvr: Add support for image descriptor.
+  * ecfea72c73c pvr: Add support for combined image and sampler
+    descriptor.
+  * 290b9a953af pvr: Add support for sampler descriptor.
+  * 1bf883a8aea pvr: Move binding related checks in common code.
+  * f044676dbb6 pvr: Implement vkCreateBufferView and
+    vkDestroyBufferView.
+  * 8ef42c25a68 pvr: Use common vk_buffer implementation.
+  * 405a407d428 pvr: Init and store default sampler in pvr_device.
+  * dbc82906564 llvmpipe: clean up bresenham implementation
+  * 8f99bab70cc llvmpipe: consolidate legacy_points and multisample
+    state
+  * a1846e39269 llvmpipe: merge all rasterizer-bind functions
+  * 4ff28bd5d86 lavapipe: accurately set image/ssbo access based on
+    shader usage
+  * 878784dbec0 crocus: fix leak in query code.
+  * ad09694cba8 lavapipe: EXT_non_seamless_cube_map
+  * a2f97bd88a0 zink: avoid crashing when bindless texture updates
+    aren't used
+  * 992cd1ae2b7 zink: assert !rp_changed after renderpass has started
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 25 Jul 2022 19:00:27 +0200
+
 mesa (22.2.0~git2207200937.95fe5401390~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
