@@ -1,3 +1,48 @@
+mesa (22.1.4+git2207282028.235dd6c04f0~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 235dd6c04f0 panfrost: Only emit images when they are present
+  * 76ddaeb32af iris: Don't leak compressed resources in
+    iris_create_surface
+  * c2760516821 iris: Don't leak surface states for compressed resources
+  * f8a04c8b6ca radv/rt: fix nir_builder cursor in
+    lower_rt_instructions()
+  * b4ce0d7113f ac/llvm: Add LLVM bug workaround to ac_build_mbcnt_add.
+  * 624c6f94683 llvmpipe: fix aniso cube map arrays.
+  * 5a9ef84f103 vulkan/nir: Don't remove dead XFB outputs
+  * b946850b193 zink: invoke descriptor_program_deinit for programs on
+    context destroy
+  * dc5fcc2da0d zink: fix viewport count tracking
+  * 9ef9b9321c2 zink: call bind_last_vertex_stage() when binding vs
+  * 54a8bb32b7c zink: handle null samplerview in
+    get_imageview_for_binding()
+  * 955729649a8 zink: handle max_vertices=0 in geometry shader
+  * e5ce737b895 lavapipe: state latest conformance tests passed
+  * f0a8da08198 crocus: fail query begin if upload allocation fails.
+  * fa900881f6f Zink: Fix clear being missed when using emulated draws
+    in zink_blit
+  * bb9054a85a0 zink: Fix spirv stream 0 vertex emit for multistream
+    shaders
+  * ca887b3175a radv: fix vbo_bound_mask indexing
+  * 5b86d21334d aco: fix assertion in insert_exec_mask
+  * 5e481bb5b85 v3dv: stop tracking push constant buffer references
+  * d42978b1ea2 anv: fix primitive topology dynamic state emission on
+    gfx7
+  * 1be1029edfb intel/fs: Set NonPerspectiveBarycentricEnable when the
+    interpolator needs it.
+  * 9ab162bf59b kms/dri: add mutex lock around map/unmap
+  * 1b4e99e9298 ac/nir/ngg: add a barrier before prim id export
+  * a9c354cd141 ac/nir/ngg: fix nogs culling scratch size
+  * 0a4b59e1d2d zink: use right glsl length getter for ntv partial
+    stores
+  * 1aa9acc68b3 radv: Skip setting empty index buffers to avoid hang
+  * df24a47e1ad zink: always use 32bit sample ops
+  * 0f7b5c52de0 zink: allow multiple tex components for depth tg4
+  * 595de716556 anv: ensure tile flush before streamout writes
+  * 79ddf69224c spirv: switch to uint64 for rayquery internal type
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Jul 2022 12:48:11 +0200
+
 mesa (22.1.3+git2207141709.cc8a8ebfe97~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
