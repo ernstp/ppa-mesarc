@@ -1,3 +1,55 @@
+mesa (22.2.0~git2207290949.438d5baa369~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 438d5baa369 turnip: expose support for VK_EXT_acquire_drm_display
+  * 42b89276e6f iris|anv: gfx version 12.5 data cache flush is not a
+    workaround
+  * 180af73101a anv: add gfx version 12.5 flushes to CCS path
+  * fc02ce57131 intel/eu: Mark header present in URB memory fences on
+    XeHP
+  * 986b49a56d4 intel/eu: Clarify spec citations for XeHP region
+    restrictions
+  * 5c88488a645 intel/eu: Fix XeHP register region validation for
+    hstride == 0
+  * 0772242feba intel/eu: Don't throw validation errors on float
+    MOV_INDIRECT
+  * 82ee30e5586 intel/eu: Handle compaction when inserting validation
+    errors
+  * ce42fc4fa16 virgL: lower fneg and fabs
+  * 9ba62ea8fba util/reallocarray: add errno.h include.
+  * d5dec00e94f docs/ci: fix Emma's name
+  * a02c026eb71 zink: print result code string on vulkan failure
+  * 91c0d46afd4 r600: Don't set TES_EVAL UCP dirty when it is not
+    supported
+  * 97708505d77 v3dv: expose Vulkan 1.2
+  * 46d43b1ca10 broadcom/ci: update list of slow tests
+  * 15bf6d08c52 v3dv: enable missing mandatory Vulkan 1.2 features
+  * 6a48d381965 v3dv: enable missing Vulkan 1.2 features for supported
+    extensions
+  * 366534768aa v3dv: fill in Vulkan 1.2 missing device properties
+  * efb17fc4f11 v3dv: explicitly set sampler min/max filter properties
+    to false
+  * d6986e95d75 docs/features.txt: mark VK_ANDROID_native_buffer as
+    supported on v3dv
+  * bb75e353e6c docs/features.txt: mark VK_ANDROID_native_buffer as
+    supported on turnip
+  * 065691e299e nouveau: use existing list_first_entry() macro instead
+    of re-writing it
+  * 2c67457e5e1 util/list: rename LIST_ENTRY() to list_entry()
+  * a9ebf55d025 turnip: Simple breadcrumbs implementation to debug hangs
+  * 83d820973c1 util/u_threaded: fix a CPU storage crash due to an
+    invalid codepath taken
+  * 62207cf8855 lavapipe: enable VK_EXT_depth_range_unrestricted.
+  * 876db77baeb llvmpipe/fs: handle unrestricted depth values.
+  * 189755a9ac2 util/pack_color: clamp depth values outside range for
+    unorm formats.
+  * 171e35de919 mesa/st: disable unrestricted fragment depth values for
+    GL/GLES
+  * 0e38db01460 gallium: add a rasterizer state bit for unrestricted
+    depth values.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Jul 2022 12:46:06 +0200
+
 mesa (22.2.0~git2207251838.fbb4b90d7d9~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
