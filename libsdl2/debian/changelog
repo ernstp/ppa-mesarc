@@ -1,3 +1,54 @@
+libsdl2 (2.23.1+git2207290654.181877ebe~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 181877ebe Added SDL_hidapi_combined.c to the Xcode project
+  * f3c1194c0 Removed obsolete comment
+  * aee179e46 Removed debug output
+  * d8fd78736 Added entry for the Nintendo Switch Joy-Con controller
+    pair
+  * 875b737c6 Added support for the Nintendo Online NES Controllers to
+    the HIDAPI driver
+  * 45c1cc817 Compatible with including as <SDL2/SDL.h>
+  * ab967475c Greatly improved Nintendo Joy-Con support using the HIDAPI
+    driver
+  * dfed862a6 Fixed variable shadow warning
+  * 2fa2f9ff7 Greatly improved Nintendo Joy-Con support using the HIDAPI
+    driver
+  * def60ce6f Fixed the name of the HIDAPI Joy-Con controller for
+    consistency with other drivers
+  * 0f1be9401 Updated mapping for Joy-Con controllers using hid-nintendo
+  * 756978a23 Left and right single Joy-Con controllers are mapped as
+    individual mini controllers
+  * 4990bd051 Added debug code to show available inputs on iOS/tvOS
+    controllers
+  * 65473ae36 autoconf: use ax_compute_relative_paths
+  * dbf794054 Enable capturing raw Xinput2 touch events and use to flag
+    global mouse state as dirty
+  * 42165fe8d kmsdrm: slightly better device index hint parsing.
+  * 02c874717 math.h does not always provide M_PI
+  * 5da85376b stdlib: move all mslibc functions to SDL_mslibc.c
+  * a169259f6 Actually we don't need to unlock to send
+    k_eSwitchProprietaryCommandIDs_ForceUSB since we don't wait for
+    reply
+  * c51464d9d Put the Nintendo Switch Pro controller back into enhanced
+    mode as needed
+  * 5c70e45c5 cmake: don't use result of 'find_library' for Android
+    libraries
+  * 430c39082 ci: test 'sdl2-config --static-libs' + 'pkg-config sdl2 --
+    static' on ci
+  * 4690689a4 cmake: on Apple, don't use find_library for frameworks +
+    use EXTRA_LDFLAGS
+  * 613ce7850 Fixed interpreting SDL_KMSDRM_DEVICE_INDEX="" as index 0
+  * 36d456797 CI: Fix CMake workflow.
+  * cc982ea7a kmsdrm: let device indexes be > 2 digits.
+  * c37c1f7ac CI: Make macOS universal build with CMake.
+  * 1f276a514 Fix Main Thread Checker warning on macOS
+  * 31d38f2f3 WhatsNew.txt: Note that minimum macOS version is now 10.9.
+  * 542a4da3d kmsdrm: check SDL_HINT_KMSDRM_DEVICE_INDEX hint in
+    dri_getindex().
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 29 Jul 2022 12:45:33 +0200
+
 libsdl2 (2.23.1+git2207251800.1e492b2f6~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
