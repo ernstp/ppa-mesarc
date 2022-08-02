@@ -1,3 +1,40 @@
+libsdl2 (2.23.1+git2208022040.944111dbc~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 944111dbc Cleaning up video driver
+  * 3f7dda8c7 Remove deinit of video driver
+  * 83c117974 Adding SetViewPortCommand
+  * a9f4cda3f Adding setcliprect command
+  * fb1a205e7 Implement blend modes
+  * 075f9016f Remove some unnecessary comments
+  * ed301b123 Updating supported format
+  * 1d1965b6e Removing the BGR_888 from texture supported
+  * f75c35c07 Add invalidate texture when it changes
+  * 5bb965be3 Implement RenderLines
+  * 0f0e5b44d Increase size of pool for gsKit events
+  * f758cad81 Remove non needed  FillRects function
+  * 3cb124b98 Implement RenderPoints
+  * df6ebc256 Implement FillRect
+  * a152e467b Fix "implicit declaration" with memalign
+  * 33cbf9acb Fix some mixed declaration warnings
+  * acf48f14a Vertex pointer revision
+  * 726180445 Add textured triangle prim
+  * 2a70d492f Destroy texture properly
+  * 7b0486d49 Try triangles
+  * d5305ee09 Do properly color assign
+  * b48c74a31 Add GeometryQueue
+  * 3bfc8f554 Removing some of the QueueCopy functions because they are
+    legacy
+  * be1219bd4 Implement setDrawColor
+  * f1699ce73 Implementing Clear command and texture Update
+  * c472b8dd4 Whole clean around render and video driver
+  * cdf89fde9 Add triangle prim support
+  * 88e64f9ae Add natively supported colors
+  * 4564e8982 put files at the same line
+  * 90e0e5c29 Add point, line and rect support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 02 Aug 2022 22:19:02 +0200
+
 libsdl2 (2.23.1+git2207290654.181877ebe~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
