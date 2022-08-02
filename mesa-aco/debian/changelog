@@ -1,3 +1,49 @@
+mesa (22.2.0~git2208022120.3225d606858~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 3225d606858 vulkan: Improve the docs for vk_subpass_info
+  * 378b398da7c vulkan: Always populate
+    vk_render_pass_state::render_pass
+  * d5cd8f18c2c etnaviv: Move nir_shader_compiler_options to compiler
+  * 5a000b4eb64 ci: set reasonable amount of wget retries for each
+    download
+  * 875ee25e981 r300: don't read from output
+    transform_r300_vertex_SEQ/SNE
+  * 19f8d338761 radv: Use vk_descriptor_set_layout
+  * da2233a1089 vulkan: Handle descriptor set layout alloc fails
+  * ae64b7a08cc vulkan: Fix descriptor set layout allocation scope
+  * 8b13acd715d anv: Move Wa_1806527549 and enable by default
+  * 6498328210d iris: Move Wa_1806527549 and enable by default
+  * 188d1e2b206 freedreno: WFI after PC_TESSFACTOR_ADDR update
+  * 18573e4058f tu: WFI after PC_TESSFACTOR_ADDR update
+  * 8c9dd9e783c intel/dev: remove INTEL_DEVID_OVERRIDE
+  * 7f82ab7104d intel/dev: add a test verifying that device override
+    works
+  * 9d55c5237ed intel/tools/stub: fixup parsing of --platform=
+  * f2bbc959a0e intel/tools/drm-shim: fixup eu_stride for topology
+  * 186ff4696a6 intel/dev: move verification function to a header
+  * 6931ae83ce4 anv: decode init batch with INTEL_DEBUG=bat
+  * 2926a1aa76d virgl: do not share virgl_screen between different
+    drm_files
+  * 883acc41505 intel/compiler: use NIR_PASS more
+  * 7ebae85955c intel/compiler: insert URB fence before task/mesh
+    termination
+  * 30c0f2bfbbd intel/compiler: there are 4 types of fences on gfx >=
+    12.5
+  * 2bd148c9902 intel/compiler: emit URB fences for TASK/MESH
+  * 9afd9553530 intel/compiler: Delete unused Gfx8+ code in
+    brw_find_live_channel()
+  * 49ee3ae9e8b intel/compiler: Lower FIND_[LAST_]LIVE_CHANNEL in IR on
+    Gfx8+
+  * 6401d768b99 intel/dev: drop warning for unhandled hwconfig keys
+  * be0e8a99ee2 r600/sfn: Handle R600 class sin/cos
+  * fe9333f7b5e virgl: Set res->maybe_busy to true when creating
+    resources
+  * a19dd430828 ci/lava: Remove MINIO_RESULTS_UPLOAD if requested
+  * 59f2a072ca2 libsync: Fix compiler warning
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 02 Aug 2022 22:19:29 +0200
+
 mesa (22.2.0~git2207290949.438d5baa369~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
