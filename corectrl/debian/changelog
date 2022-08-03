@@ -1,3 +1,11 @@
+corectrl (1.3.0~git2208031325.05c0f17~b~mesarc15) bionic; urgency=medium
+
+  * New snapshot:
+  * 05c0f17 Merge branch 'master' into 'master'
+  * 38fb838 Fix QuaZip cmake case sensitivity
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 Aug 2022 14:30:09 +0200
+
 corectrl (1.3.0~git2208021827.b4c28db~b~mesarc15) bionic; urgency=medium
 
   * New snapshot:
