@@ -13,13 +13,13 @@ Build-Depends:
  qtdeclarative5-dev,
  libqt5charts5-dev,
  libqt5svg5-dev,
- libkf5auth-dev,
- libkf5archive-dev,
  libbotan-2-dev,
  libqca-qt5-2-dev,
  libdrm-dev,
  qtbase5-dev,
- libegl1-mesa-dev | libegl-dev
+ libegl1-mesa-dev | libegl-dev,
+ libquazip5-dev,
+ libpolkit-gobject-1-dev
 Standards-Version: 4.1.4
 Homepage: https://gitlab.com/corectrl/corectrl
 
