@@ -48,7 +48,7 @@ Build-Depends:
  llvm-14-dev | llvm-13-dev | llvm-12-dev | llvm-11-dev,
  libclang-14-dev | libclang-13-dev | libclang-12-dev | libclang-11-dev,
  libclang-cpp14-dev | libclang-cpp13-dev | libclang-cpp12-dev | libclang-cpp11-dev,
- libclc-dev,
+ libclc-14-dev | libclc-13-dev | libclc-12-dev | libclc-11-dev | libclc-dev,
  wayland-protocols (>= 1.9),
  zlib1g-dev,
  libglvnd-dev (>= 1.3.2),
