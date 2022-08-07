@@ -1,3 +1,46 @@
+mesa (22.3.0~git2208071126.6b86c0ba90f~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6b86c0ba90f radv: Switch to the GLSL leaf implementation
+  * e55c852600a radv: Add a GLSL leaf kernel implementation
+  * 60a91dddf4b radv: Switch to the GLSL internal implementation
+  * f3a457656b3 radv: Add a GLSL internal kernel implementation
+  * b1a8797de91 radv: Switch to the GLSL morton implementation
+  * f79fe32cdc0 radv: Add a GLSL morton kernel implementation
+  * 46c723c7c02 radv: Add the basics for GLSL bvh kerrnels
+  * 83a59403ae4 radv: Add create_build_pipeline_spv helper
+  * dfa56120679 radv: Remove unused push constant structs
+  * de75d9d1d09 radv: Remove accel_struct_build
+  * c39271bb4bc radv: Always emulate fmin/fmax
+  * 4f5da7939cd radv: Remove acceleration structure host builds
+  * d0e20136336 radv: Move radv_acceleration_structure
+  * 0e48165411b radv: Move accel struct structs to bvh/bvh.h
+  * ec454302055 ci/lavapipe: implement traces
+  * f6e59fa5130 ci: prepare piglit-traces for WINE and DXVK
+  * 6aa81bfb306 vulkan: disallow VK_KHR_performance_query on android
+  * cbbd9f3402f ci: Upgrade deqp-runner to 0.15.0.
+  * f01ae0203dc ci: Add testing of the khr-single tests.
+  * 478626fd941 ci/swrast: Add some flakes I've noticed in the IRC
+    channel.
+  * 9d6770d20ae nir/lower_alu: drop unnecessary iand on uadd_carry
+    result
+  * 8ecea47f066 broadcom/compiler: simplify code emitted for centroid
+    coordinates
+  * e035c289b52 ac/nir/cull: Tweak phi for cull_small_primitive branch.
+  * abc4eda8468 radv: Implement radv_flush_before_query_copy to
+    workaround UE Vulkan bugs.
+  * 4148a525201 ci: Windows runner is experiencing DNS issues; disable
+    Microsoft farm
+  * 46396e97bea virgl: Fix unmapping of blob resources
+  * b731be2e96c aco: Remove branch instruction when exec is constant non-
+    zero.
+  * baab6f18c91 aco: Optimize branching sequence during SSA elimination.
+  * e4b0caae61d ac/nir/cull: Make cull functions more consistent.
+  * c721f751f25 ac/nir/ngg: Move LDS store of accepted flag into the
+    inner branch.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Aug 2022 14:04:23 +0200
+
 mesa (22.2.0~git2208022120.3225d606858~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
