@@ -1,3 +1,57 @@
+libsdl2 (2.23.1+git2208070853.198d62d81~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 198d62d81 joystick: remove unused Xbox Controller Keyboard VID/PID.
+  * 2909f6374 Revert "Enable bitcode by default for iOS and tvOS builds"
+  * dd2e31821 wayland: Use libdecor visibility toggle for hiding/showing
+    the window
+  * fbb440d16 Invalidate texture in the UnlockTextureMethod
+  * 52bf5b1de Added the hint SDL_HINT_JOYSTICK_HIDAPI_SWITCH_PLAYER_LED
+    to control whether the player LED is set on Nintendo Switch
+    controllers
+  * f810dede1 Fixed comment so script processing works correctly
+  * bdaf9a92a Sync SDL wiki -> header
+  * f600364b8 wayland: Mark window as MOUSE_CAPTURE while a mouse button
+    is down.
+  * e2452ede6 include: Added documentation to SDL_CaptureMouse about
+    auto-capture.
+  * a6179e85c wayland: Don't double-free clipboard sources if ours gets
+    cancelled.
+  * 3da131c1c Check if port if closed and open it again
+  * 5858c7dfc Fixed OpenGL ES Shaders for systems that don't understand
+    precision keywords
+  * 3685c64ed wayland: Round trip after window show/hide operations.
+  * 17b329d19 cmake: enable disabing hidapi
+  * a4e6f3ca9 cmake: when there are alternatives, don't use libusb by
+    default
+  * d6a8b43cf Added support for the HORIPAD FPS for Nintendo Switch
+  * a2d3be904 Implement create windows method
+  * 4a9ceb7be The HORIPAD S uses the Xbox 360 protocol on all platforms
+    and shows up as multiple styles of controller, depending on what
+    model you have.
+  * 28c01955b Fixed button mapping for the HORIPAD S
+  * 40b714318 Fixed button mapping for the HORIPAD S controller
+  * 16e699a76 Proposing exposing as public api the various arch
+    dependent pause instructions so could be used in app infinite loops.
+    A handful of games do already so we unify it in one place.
+  * 43b90484c Retry a little longer when writing to the Nintendo Joy-Con
+    Charging Grip
+  * 293d29b78 SDL_x11xinput2.c: fix build for macOS
+  * 5907db56f x11: Attempt to deal with XInput2 devices with absolute
+    coordinates.
+  * dfd2c574d Removed unused variable
+  * a2b4f4406 The Nintendo Wii Remote Pro Controller respects the
+    SDL_GAMECONTROLLER_USE_BUTTON_LABELS hint
+  * c84dea094 Fixed detecting the controller type of controllers over
+    USB
+  * ba297f12c Use the Nintendo controller type to determine whether to
+    always use button labels
+  * 946f4777f Don't set Bluetooth controllers to wired power level
+  * 57c3b2c95 Don't rely on the device VID/PID to get the Nintendo
+    controller type
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Aug 2022 14:03:53 +0200
+
 libsdl2 (2.23.1+git2208022040.944111dbc~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
