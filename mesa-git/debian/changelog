@@ -1,3 +1,53 @@
+mesa (22.2.0~rc1+git2208051910.2f18e16512f~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 2f18e16512f radeonsi: don't assume that TC_ACTION_ENA invalidates L1
+    cache on gfx9
+  * eadc134dd85 anv: fixup PIPE_CONTROL restriction on gfx8
+  * e16a613de06 vc4: properly restore vc4 debug option
+  * 8cd9d2fcc07 draw: don't touch info values that aren't valid.
+  * 167af40dae2 zink: don't fixup sparse texops
+  * b525edfce68 zink: add all format modifiers when adding for dmabuf
+    export
+  * aa90b5cd125 zink: don't add modifiers if
+    EXT_image_drm_format_modifier isn't present
+  * 9234bdebed7 zink: use modifier_aspect to check for modifier plane in
+    zink_resource_get_param
+  * fda5f3f6300 zink: demote dmabuf tiling to linear if modifiers aren't
+    supported
+  * 349576d92f7 nine: check return on resource_get_handle
+  * 0d7d35c84a9 zink: fix return for PIPE_CAP_DEPTH_CLIP_DISABLE
+  * 1889d87783a zink: handle !half_pixel_center
+  * 50e133465c3 zink: handle unscaled depth bias from nine
+  * fdbabb07cfa zink: drop mode_changed check from linewidth/depthbias
+    draw updates
+  * 71b113251df zink: force a new framebuffer for clear_depth_stencil if
+    the clear region is big
+  * 0ee8821b83c zink: force flush clears on fb change if fb geometry
+    changes
+  * 3eda2a96a81 .pick_status.json: Update to
+    0a0205f04552ab21971c431a5f8bb7486d664422
+  * 5c8aaa70e8a d3d12/dzn/spirv2dxil: Require version library
+  * 081fd3a4f45 zink: init cache_put program fence on program creation
+  * 08adb7bb9da gallivm: fix printf hook for cached shaders.
+  * c702465d56b bin/gen_release_notes.py: bump advertised vulkan version
+    to 1.3
+  * 5e00b2d8a7e zink: use modifier feature flags during surface creation
+    when necessary
+  * 46fc1b37b5b zink: store VkFormatFeatureFlags on creation
+  * 5814485a103 zink: handle mutable swapchain images with dmabuf
+  * 16d299e40b8 .pick_status.json: Update to
+    8e6bdb2ed31f27c28d258859ec48e8e67f51ff41
+  * f8367fc41e0 VERSION: bump for 22.2.0-rc1
+  * 373b232675b VERSION: bump 22.3.0-devel
+  * fcd96ce0021 turnip: Use the GMEM CCU space for attachments when the
+    stores won't.
+  * b8a334b5477 turnip: Split the tiling config into separate layouts
+    based on CCU usage.
+  * a1db4fcab75 ci/freedreno: Update a630 s8 resolve xfails.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 07 Aug 2022 13:40:03 +0200
+
 mesa (22.1.4+git2207282028.235dd6c04f0~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
