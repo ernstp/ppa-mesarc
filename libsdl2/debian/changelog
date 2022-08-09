@@ -1,3 +1,41 @@
+libsdl2 (2.23.1+git2208090511.593d20d9c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 593d20d9c Removed debug logging
+  * 6204ae500 Restart the IMU if the controller stops sending gyro/accel
+    data
+  * 56c1481ca cocoa: Don't mark fullscreen-desktop windows as non-
+    resizable.
+  * d58bec72a Fixed Joy-Con gyro axes in mini-gamepad mode
+  * 5aa438e80 WGI: fix interop with applications that have their own WGI
+    code QI for Added/Removed events need to handle IAgileObject
+  * ada55c690 Fixed Joy-Con type detection for the Nintendo Joy-Con
+    Charging Grip
+  * a35cff634 Sync wiki -> headers.
+  * a547c185c Fixed crash if uevent info isn't available
+  * 7530bd74b Fix right, bottom computation in
+    `SDL_GetClosestPointOnRect` which should be exclusive, not inclusive
+  * 98bac00dc Add `SDL_GetPointDisplayIndex` and
+    `SDL_GetRectDisplayIndex` and re-implement
+    `SDL_GetWindowDisplayIndex` in terms of `SDL_GetRectDisplayIndex`
+  * 20f9a1b8a Implement SetTextureScaleMode
+  * 47ebf0087 Fixed shadow variable warning
+  * d355ea998 Add a way to avoid IOP reset
+  * c5fe234d5 Improve SDL main adding usb drivers
+  * 0a307628e Fix wrong mapping in some ps2 controller keys
+  * 3f19e36d1 Disable declaration-after-statement warning on Android
+  * 0bcbdfe2b video: dummy: Support evdev psuedo-device with no video.
+  * 8f05b4f83 Fixed iOS/tvOS build
+  * 878259722 Added SDL_GameControllerType enumeration for Nintendo
+    Switch Joy-Con controllers
+  * 4f19421ed Fixed build
+  * 29265d073 Use SDL_GetStringBoolean() to parse the hint value
+  * 8f5932dc2 evdev: Support user-provided devices via SDL_EVDEV_DEVICES
+    in non-udev mode.
+  * f790fc4fc Add contributing guidelines.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 09 Aug 2022 08:37:09 +0200
+
 libsdl2 (2.23.1+git2208070853.198d62d81~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
