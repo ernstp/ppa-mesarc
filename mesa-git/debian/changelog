@@ -1,3 +1,28 @@
+mesa (22.2.0~rc1+git2208082355.f02522adcec~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * f02522adcec docs: fixup link to virgl docs
+  * 679049bf4c2 tu: Fix sysmem depth attachment clear flushing
+  * c9d2f45bf23 aco: fix LdsBranchVmemWARHazard with 2+ branch chains
+  * 2c7c5cc0162 radv: ignore out-of-order rasterization if stencil write
+    mask is dynamic
+  * fe2f7c06aeb Revert "nir: Preserve offsets in
+    lower_io_to_scalar_early"
+  * 515faea62b3 agx: Fix packing of samplers in texture instrs
+  * 25f9046ccd4 radv: Implement radv_flush_before_query_copy to
+    workaround UE Vulkan bugs.
+  * 661d8de3032 virgl: Fix unmapping of blob resources
+  * de6ee5b7821 freedreno/gmem: Fix col0 calc
+  * 9b943044ac4 freedreno/drm: Fix potential bo cache vs export crash
+  * b1dbdecb270 .pick_status.json: Update to
+    1a3b086b06c6c1ff63a4abe3752ca0a7a854dc77
+  * f8bdbbdd901 radv: implement VK_EXT_attachment_feedback_loop_layout
+  * 38d6ae933dd vulkan: add support for
+    VK_IMAGE_LAYOUT_ATTACHMENT_FEEDBACK_LOOP_OPTIMAL_EXT
+  * 2ce1c124778 vulkan: Update the XML and headers to 1.3.224
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 09 Aug 2022 08:39:43 +0200
+
 mesa (22.2.0~rc1+git2208051910.2f18e16512f~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
