@@ -1,3 +1,54 @@
+mesa (22.3.0~git2208090804.8d00c55e9ea~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 8d00c55e9ea radv/ci: bump the console activity timeout of VanGogh to
+    3 minutes
+  * 1db0b566097 radv/ci: skip host_write_transfer_src.1048576 on renoir
+  * e091e56fc16 radv/ci: add more tests to the flake list of vega10
+  * 6bbe3c6d36c radv/ci: move some tests from the vega10 fail to its
+    flake list
+  * 3f8a356bd35 radv/ci: document a recent regression
+  * 401d03e1e94 freedreno: Cap reported video memory by VA size
+  * 2bc1d08c48b freedreno/drm: Add FD_VA_SIZE param
+  * 32d0dfc4627 dzn: Use D3D12 constants instead of naked numbers for
+    device limits
+  * d48ce281f80 dzn: Disable extensions that require multi-view
+  * 1a3b086b06c docs: fixup link to virgl docs
+  * 9efb1d7fbc5 wgl: Release the context before deleting it in
+    wglDeleteContext
+  * 7dafdb58b86 wgl: Always release local references in
+    stw_make_current_by_handles
+  * 3fcd0309790 wgl: Homogenize read framebuffer reference counting
+    logic
+  * a60181e8f2e radeonsi: use do..while loops and other cosmetic changes
+    in display list path
+  * e9a0cae1a13 radeonsi: use si_cp_dma_prefetch_inline for prefetching
+    VBO descriptors
+  * 0e574c801c3 radeonsi: remove temporary
+    si_context::vb_descriptor_user_sgprs
+  * a5d37e161d9 radeonsi: remove vb_descriptors_gpu_list only used for
+    debugging
+  * b4cef2487b5 radeonsi: add vertex buffers into the BO list in
+    set_vertex_buffers
+  * c4ffac8a173 radeonsi: merge both fail paths in si_set_vb_descriptor
+  * a7e64ab63c5 tu: Fix sysmem depth attachment clear flushing
+  * de55058cbc6 docs: document DRI_PRIME
+  * 903e99150f3 vulkan/device_select: allow
+    DRI_PRIME=vendor_id:device_id
+  * a71b92fff82 vulkan/device_select: print the dri_prime warning only
+    if needed
+  * 4005ba3ed42 loader: allow DRI_PRIME=vendor_id:device_id syntax
+  * 6d50e4cdc1b loader: don't return empty string in
+    loader_get_dri_config_device_id
+  * 6daf99fcb2b ci/windows: Re-enable Windows runners
+  * d4b8abe511a radv: simplify radv_bind_dynamic_state() slightly
+  * 18e9ba3e3b0 radv: remove unused states parameter from some
+    radv_emit_XXX() helpers
+  * 1f6e32ff7cf radv: simplify saving/restoring all dynamic states
+  * 1d82ec1b3f9 radv: remove RADV_META_SAVE_SAMPLE_LOCATIONS
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 09 Aug 2022 08:37:39 +0200
+
 mesa (22.3.0~git2208071126.6b86c0ba90f~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
