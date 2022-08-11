@@ -1,3 +1,40 @@
+mesa (22.2.0~rc2+git2208102230.f88ce98ee66~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * f88ce98ee66 turnip: use SPDX-License-Identifier
+  * ffc5316a7cc turnip: remove headers from libtu_files
+  * 5433fb705b4 turnip: remove tu_private.h
+  * 773964fb8be turnip: move away from tu_private.h
+  * 75af03a6536 turnip: update tu_util.h
+  * 61790c60ddd turnip: add tu_android.h
+  * 6094318c4d9 turnip: add tu_cmd_buffer.h
+  * 6225807c858 turnip: add tu_device.h
+  * df69376e684 turnip: update tu_autotune.h
+  * 7c6e24f329b turnip: add tu_wsi.h
+  * c69f749bd8a turnip: add tu_pass.h
+  * 42cd6b0fa03 turnip: add tu_lrz.h
+  * 0d27e5fd631 turnip: add tu_dynamic_rendering.h
+  * a4a7aa5d1ae turnip: add tu_clear_blit.h
+  * a77322c4142 turnip: add tu_pipeline.h
+  * 3b82f4eae28 turnip: add tu_shader.h
+  * d214aa38894 turnip: update tu_descriptor_set.h
+  * 9b266113fe2 turnip: add tu_formats.h
+  * 96df57ad5d1 turnip: add tu_image.h
+  * 9d3c4ea4ecf turnip: add tu_query.h
+  * 853962d850a turnip: update tu_cs.h
+  * c10a10b3acc turnip: add tu_suballoc.h
+  * fe4bc64b9f4 turnip: add tu_drm.h
+  * 1a1ded7d781 turnip: remove includes that are already in tu_common.h
+  * e2ff62782d7 turnip: add tu_common.h as the common header
+  * df035d28941 VERSION: bump to 22.2.0-rc2
+  * 23daa993dfb Revert "VERSION: update to 22.2.0"
+  * bc9e9c39ef7 VERSION: update to 22.2.0
+  * dacab91f27a d3d12: Fixes compile error with mingw/gcc-x64 when
+    static linkage to runtime library
+  * 32ac1133d0e nir: add a nir_opt_if_options enum
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 Aug 2022 17:32:13 +0200
+
 mesa (22.2.0~rc1+git2208082355.f02522adcec~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
