@@ -1,3 +1,45 @@
+mesa (22.3.0~git2208111653.58bf84044bb~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 58bf84044bb radv: copy the sample locations only if the state isn't
+    dynamic
+  * 0ca33a6c0d4 radv: copy line stipple factor/pattern only if the state
+    isn't dynamic
+  * 1d92ab921b1 radv: remove unecessary
+    radv_pipeline::uses_dynamic_stride
+  * 56bb29cb93a anv: don't return incorrect error code for
+    vkCreateDescriptorPool
+  * bc7edc1c7a4 radv: force inlining on another draw function
+  * 64395f0d85a radv: remove stupid conditional from draw path
+  * 50e6a80b5ea radeonsi/tests: cosmetic changes
+  * 7d7275dd886 radeonsi/tests: update navi21 expected results
+  * b4b7162e234 radeonsi/tests: update raven expected results
+  * 4d7637bb73b radeonsi/tests: add testing of the khr-single tests
+  * 62d3f799de7 radeonsi/tests: remove left-over debug print
+  * 6b5aecb1955 virgl: add support for hardware video acceleration
+  * 15c210649d3 gallium/util: add a new helper function
+    pipe_buffer_size()
+  * e2199651b83 vl: change vl_video_buffer_destroy() to non-static
+  * a7366d68ae5 gallium: add key size to the structure pipe_picture_desc
+  * 04d192fccbd pvr: Fix bo mapping on alloc with
+    PVR_BO_ALLOC_FLAG_CPU_ACCESS.
+  * 4e9cce39d3f nouveau: implement and enable PIPE_CAP_QUERY_MEMORY_INFO
+  * 17eda68df3b egl/wgl: Fix some awkward sizeof formatting
+  * efd2ae6c0c8 egl/wgl: Delete unused variables/code
+  * 35e9c7e082d wgl: Use pfi instead of iPixelFormat more often
+  * aeb3147a96d egl/wgl: Support sync objects
+  * e08d2dde220 egl/wgl: Support EGL_MESA_query_driver
+  * 52e663959ed egl/wgl: Hook up image validate/get in smapi
+  * c512b68816b egl/wgl: Use a per-display st_manager
+  * 250bdcbfbee wgl: Pass smapi explicitly to framebuffer creation
+  * f5b1824ce3c wgl: Pass smapi explicitly to context creation
+  * d57a4abcf86 egl,wgl: Support eglCreateImageKHR
+  * 76756ea4c64 egl/wgl: Support eglWaitNative
+  * 0e8271b27a7 egl/wgl: Support eglWaitClient
+  * 1d9e0a4ab0e egl/wgl: Support eglSwapInterval
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 Aug 2022 17:30:06 +0200
+
 mesa (22.3.0~git2208090804.8d00c55e9ea~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
