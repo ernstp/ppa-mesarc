@@ -1,3 +1,57 @@
+libsdl2 (2.23.1+git2208102301.879af7b5c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 879af7b5c Fixed mapping for paired Joy-Con controllers on iOS
+  * 5f682e77c wayland: Remove freed display from `SDL_WaylandOutputData-
+    >output_list`
+  * aaec244cf Don't run the stdio automated tests if libc isn't
+    available
+  * e49321cec Fixed double-free in combined HIDAPI controller code
+  * 6ecfc4069 Sync SDL wiki -> header
+  * d4192850c Added SDL_ResetHint() to reset a hint to the default value
+  * 3119d58ff cocoa: Change the new sync_dispatch hint to
+    async_dispatch.
+  * c6c0a8394 windows: If a display's friendly name is blank, try the
+    generic name.
+  * 9ff498e78 Make HIDAPI_JoystickOpen() more robust against internal
+    logic errors
+  * bdc7f958f cocoa: Added hint to treat MacBook trackpads as touch
+    devices, not mice.
+  * 73d8d0262 Test: Fix Exp base case for Win32.
+  * 8e782876b Fixed spamming the controller with reset IMU commands when
+    they are failing
+  * eab27b904 Make sure Switch controller initialization is synchronous
+    and start the input timeout then
+  * b4660e9d8 macOS: Add hint for blocking thread on OpenGL context
+    update dispatch (#5708)
+  * 7eb13c21c improve behavior of SDL_SetHint(WithPriority) (#5309)
+  * 1db7d33dc Recover from Bluetooth devices temporarily out of range
+  * 6d012b2a5 Better fix for rescanning devices after read failure
+  * 483a010f0 Fixed accidentally deadlocking the rumble thread with
+    combined Joy-Cons
+  * 5d63a3d43 Re-enumerate devices if a read fails
+  * da50f1bd3 Bluetooth devices can recover from over a second of
+    dropped reports
+  * 824f2d465 Added a second hint
+    SDL_HINT_JOYSTICK_HIDAPI_JOYCON_HOME_LED to control the Home button
+    LED on Nintendo Joy-Con controllers separately from Nintendo Switch
+    Pro controllers
+  * 8aa6922fe Fixed detecting Bluetooth disconnection on Nintendo Switch
+    controllers
+  * 3a9295e14 build-scripts: Removed winrtbuild.*, no longer used.
+  * 53141a56b Expand CMake documentation a bit (#5961)
+  * a346c4bbe egl: Add support for SDL_GL_FLOATBUFFERS.
+  * 201484ff6 Don't duplicate the serial number twice if a child doesn't
+    set one
+  * d90c0d41c Include the child serial numbers in the serial number for
+    a HIDAPI combined device
+  * 523bedac1 Sync SDL wiki -> header
+  * aad2df7f0 Document passing -1 to clear the player index for a
+    controller
+  * 8695d982d README-winrt.md: Updates for newer build details.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 Aug 2022 17:29:38 +0200
+
 libsdl2 (2.23.1+git2208090511.593d20d9c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
