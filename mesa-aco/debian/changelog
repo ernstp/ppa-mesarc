@@ -1,3 +1,55 @@
+mesa (22.3.0~git2208142159.5fd8ae15415~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 5fd8ae15415 asahi: Identify depth clip mode bit
+  * a6f88863f61 asahi: Don't advertise ARB_clip_control yet
+  * 5ead9738245 aco: Add faster code path to store_lds for consecutive
+    write mask.
+  * 4588453815c vk/device-select-layer: fix .sType of
+    VkPhysicalDeviceGroupProperties
+  * d08bd9a8d8b etnaviv: don't expose array and 3D texture support on
+    pre-halti GPUs
+  * 2b0f77bde56 etnaviv: allow 3D textures with TS in transfer
+  * 9496b7a2fa0 etnaviv: fix TS buffer allocation for 3D textures
+  * 2d93327cc4b etnaviv: properly check number of layers in surface
+    creation
+  * 88fd397c741 r300: fix variables detection for paired ALU and TEX
+    instructions in different branches
+  * b5df20568a6 frontend/nine: Fix ff position_t fallback when w = 0
+  * 93da6e9f342 frontend/nine: Fix shader multi-use crash
+  * 4c65ccab6d4 frontend/nine: Fix cso restore bug
+  * 4f953ad5129 frontend/nine: Fix ATOC handling
+  * e5124e83ba1 frontend/nine: Fix buffer tracking out of bounds
+  * b74febffe6e frontend/nine: Skip invalid swvp calls
+  * 0d0d245e7e1 ci: Enable llvmpipe on MacOS
+  * e04d4f881e1 ci: Improve MacOS github ci
+  * 1f05b23b4f9 util: Disable usage of __attribute__((__const__)) when
+    the compiler is clang
+  * 075b72ea069 util: Fixes invalid assumption that return non null by
+    function util_format_fetch_rgba_func
+  * a1b7682d10d util: Fixes memory leak in u_printf_test.cpp
+  * 11ab6087797 util: Fixes memory leak in
+    create_cache_item_header_and_blob
+  * 44a64a34bf4 intel: Fixes compile error of aubinator_viewer.cpp with
+    gcc
+  * 1b38ca78449 panfrost: Do no use designated initializer for union
+  * 41af9bc0a55 nine: Fixes compile of nine_pipe.h with clang
+    ../../src/gallium/frontends/nine/nine_pipe.h:377:9: error:
+    unannotated fall-through between switch labels [-Werror,-Wimplicit-
+    fallthrough]         default:         ^
+    ../../src/gallium/frontends/nine/nine_pipe.h:377:9: note: insert
+    'break;' to avoid fall-through         default:
+  * b5b855149ca meson: Microsoft / maybe Intel CLC need the all-targets
+    workaround just like clover
+  * 1df92ed2a68 meson: Don't include glsl compiler if flex/bison aren't
+    found
+  * 5ee3212078e util: Add os_create_anonymous_file support on win32
+  * 24b9ad7cd5e meson: Enable graw tests on mingw
+  * 4f5d9bd9a05 zink: stop skipping bunch of GLESx tests
+  * c3ca94261af zink: Use DETECT_OS_WINDOWS instead of 'WIN32'
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 15 Aug 2022 01:10:54 +0200
+
 mesa (22.3.0~git2208111653.58bf84044bb~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
