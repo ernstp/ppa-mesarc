@@ -1,3 +1,45 @@
+libsdl2 (2.23.2+git2208141600.c6c688ab0~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * c6c688ab0 Add SDL_JOYBATTERYUPDATED event to
+    SDL_JoystickEventState()
+  * b72cf207f core: linux: Don't cache the RealtimeKit D-Bus connection
+  * 7d5ccae22 Fix memory leak when destroying texture
+  * 5b4b4fa1f Decrease audio thread priority when created
+  * cf134235d Removed line wrapping in patch notes
+  * cb46e1b3f Removed unused variable
+  * 67cb3874e Fixed potential uninitialized variable usage
+  * 74bdb2115 wayland: Don't roundtrip in ShowWindow unless restoring a
+    hidden window
+  * 3046d55d0 cocoa: Return an error if GetWindowDisplayIndex() is
+    called too early
+  * f1416ef2b Updated to version 2.23.2 for release candidate
+  * 08d17f47b Removed unused variable
+  * be0cf257f Only force the resize event in the DPI changed case
+  * b880709e9 Added libusb hack for Gamesir-G3w which needs the same
+    adjustment as the Hori controllers
+  * 1b08cd20b wayland: Add roundtrip in SetWindowFullscreen() to get new
+    size
+  * 780b031b1 wayland: Avoid duplicate resize events when entering
+    fullscreen
+  * a28f426ac render: Only update size/scale/viewport when moving to a
+    new display, rather than all window movement.
+  * cfbeb438c fix a bug if XINPUTGETBATTERYINFORMATION is nullptr
+  * f42291ce6 Don't change mouse capture based on touch events
+  * bf925b9ec Fixed build
+  * 24f97dd70 Added an SDL error to SDL_GameControllerMapping* functions
+  * 9f30d4981 Added note about CRC algorithm compatibility
+  * f35bbe0c3 Sync SDL wiki -> header
+  * 3861c557d Added the hint SDL_HINT_MOUSE_RELATIVE_WARP_MOTION
+  * c2db429f9 Added SDL_crc16.c to the Xcode project
+  * e69838e74 add SDL_crc16.c to msvc and watcom builds
+  * b4c4dd84c Added SDL_crc16() to be used in joystick GUIDs after
+    2.24.0
+  * a1e34b5e3 Don't send a resize event when the window is resized to
+    the dock icon
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 15 Aug 2022 01:10:20 +0200
+
 libsdl2 (2.23.1+git2208102301.879af7b5c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
