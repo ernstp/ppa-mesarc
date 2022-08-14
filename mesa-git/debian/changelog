@@ -1,3 +1,33 @@
+mesa (22.2.0~rc2+git2208121942.9998f8e1db3~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 9998f8e1db3 radv: Fix stack size calculation with stage ids
+  * 26c1926a4a0 radv: fix cleaning the meta query state if an error
+    occured
+  * 9a43a1f1d14 mesa: require render target bind for A/L/I in format
+    selection
+  * b3fc8cb419c mesa: fix blending when using luminance/intensity
+    emulation
+  * 9f305dd4e65 isl: fix bug where sb.MOCS is not being set
+  * dbc956920fa glthread: call _mesa_glthread_DeleteBuffers
+    unconditionally
+  * fa4c9491501 glthread: unbind framebuffers in glDeleteFramebuffers
+  * 3490712ad74 mesa/st: fix reference to nir->info after nir_to_tgsi
+  * 260b7902fe6 .pick_status.json: Update to
+    24b9ad7cd5ebc7cfa5d03cf0f243ea4841c971b9
+  * 12f1cabeba3 microsoft/clc: Fixes compiling errors with clang/mingw64
+    in clc/clc_compiler_test.cpp
+  * 4e0637a182f anv: don't return incorrect error code for
+    vkCreateDescriptorPool
+  * 8b0343601c3 egl/wgl: Fix some awkward sizeof formatting
+  * bac7da0264d egl/wgl: Delete unused variables/code
+  * b01498700c1 nir/validate: clamp unsized tex dests to 32bit
+  * 1c6c94424bb radv: fix return type for meta resolve shaders
+  * 87e006ca014 .pick_status.json: Update to
+    a3bf0da1cbd4b10043c80bf44609a3024b5fcc36
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 15 Aug 2022 01:12:59 +0200
+
 mesa (22.2.0~rc2+git2208102230.f88ce98ee66~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
