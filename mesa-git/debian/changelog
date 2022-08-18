@@ -1,3 +1,29 @@
+mesa (22.2.0~rc2+git2208161841.af2892677b0~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * af2892677b0 .pick_status.json: Mark
+    11ab6087797f805cf158048915c67945613c9a72 as denominated
+  * cc504c9887e turnip: fix a use-after-free in autotune
+  * 6561217214a nir/lower_gs_intrinsics: fix primitive count for points
+  * 7b1412130a8 vk/device-select-layer: fix .sType of
+    VkPhysicalDeviceGroupProperties
+  * 40da2cee3dd r300: fix variables detection for paired ALU and TEX
+    instructions in different branches
+  * 30ef443d234 frontend/nine: Fix ff position_t fallback when w = 0
+  * 499a65e88d0 frontend/nine: Fix shader multi-use crash
+  * 35025cbb776 frontend/nine: Fix cso restore bug
+  * 5c4028ac36e frontend/nine: Fix ATOC handling
+  * 53cd211cb91 frontend/nine: Fix buffer tracking out of bounds
+  * bdcffd60dbc frontend/nine: Skip invalid swvp calls
+  * b712253b538 util: Fixes invalid assumption that return non null by
+    function util_format_fetch_rgba_func
+  * ecc41f91adf meson: Microsoft / maybe Intel CLC need the all-targets
+    workaround just like clover
+  * f1a407de47c .pick_status.json: Update to
+    74fc367127ccf945f4c649dd6ddff955c802e36e
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Aug 2022 18:06:59 +0200
+
 mesa (22.2.0~rc2+git2208121942.9998f8e1db3~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
