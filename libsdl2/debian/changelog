@@ -1,3 +1,28 @@
+libsdl2 (2.23.2+git2208180339.51be30f3c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 51be30f3c emscripten-buildbot.sh: force `-s USE_SDL=0`
+  * 8acb4e45b Fixed interactions between mouse capture and grab on X11
+  * 7da74eb5b wayland: Never commit with an undefined window title
+  * 99e9156ff testgles2: Fix typo in help text
+  * 09b6956dc opengl: Support NV12 textures on GPUs with only 2 texture
+    units
+  * 2fcd8f889 Handle SDL_PIXELFORMAT_EXTERNAL_OES in
+    SDL_GetPixelFormatName()
+  * 222f1a269 testgles2: Add --threaded option to use a render thread
+    per window
+  * 9670d2bb9 Make sure we hold the joystick lock when disconnecting a
+    HIDAPI joystick
+  * 26948f01a cocoa: Make SDL_MinimizeWindow() work with borderless
+    windows.
+  * 650612fdc wayland: Eliminate excessive calls to SetFullscreen
+  * cc9cc2028 video: Add video device quirk flags and apply them to the
+    video subsystem
+  * 0cc8dfdb5 Added SDL_system.h for the declaration of
+    SDL_iPhoneSetAnimationCallback() and SDL_iPhoneSetEventPump()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Aug 2022 18:04:23 +0200
+
 libsdl2 (2.23.2+git2208141600.c6c688ab0~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
