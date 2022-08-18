@@ -1,3 +1,10 @@
+mesa (22.2.0~rc3+git2208181949.9a80d2f73b5~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 9a80d2f73b5 VERSION: bump to 22.2.0-rc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 19 Aug 2022 01:01:08 +0200
+
 mesa (22.2.0~rc2+git2208161841.af2892677b0~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
