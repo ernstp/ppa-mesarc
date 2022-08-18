@@ -1,3 +1,12 @@
+xserver-xorg-video-amdgpu (22.0.0+git2208181249.4e011b9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 4e011b9 gitlab CI: enable gitlab's builtin static analysis
+  * dc81177 Fix screen corruption on secondary GPU
+  * a3a012b Initialize present extension for GPU screen
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Aug 2022 18:09:08 +0200
+
 xserver-xorg-video-amdgpu (22.0.0+git2204201620.f3f57a5~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
