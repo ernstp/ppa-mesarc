@@ -1,3 +1,10 @@
+libsdl2 (2.23.2+git2208181958.3bae2d57d~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 3bae2d57d wayland: Set the libdecor app ID after visibility calls
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 19 Aug 2022 00:58:41 +0200
+
 libsdl2 (2.23.2+git2208180339.51be30f3c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
