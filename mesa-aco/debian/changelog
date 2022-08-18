@@ -1,3 +1,46 @@
+mesa (22.3.0~git2208181638.49efa73ba11~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 49efa73ba11 zink: try to reuse swapchain modifier for dmabuf export
+  * f7b1ef37c0b zink: iterate over all modifiers and nuke the ones that
+    aren't supported
+  * 63d70d6dd99 zink: bail out of dmabuf resource creation when srgb
+    explosion is expected
+  * 04e4de6faeb microsoft/compiler: Fix PSV struct when numthreads is 0
+  * f44ca247d4f dxil_nir_lower_int_cubemaps: When not lowering samplers,
+    don't touch sampler types
+  * 34294bd9bbf microsoft/compiler: Discard shouldn't be marked readnone
+  * 2dd641119fa aco: Force tex operand to have the correct sub dword
+    size before packing.
+  * 70871aa50cd radv: refactor descriptor set layout tracking
+  * f97ba1f95d5 c11: #include <threads.h> when the os/platform provide
+    it
+  * f228c26520d llvmpipe: Add some missing locking
+  * 37aa92a3cd8 nir: add uses_bindless flag for shader_info
+  * aaeb5bea29f egl/dri2: Error path cleanups
+  * a4cd1bc9b7f egl/dri2: Indenting fix
+  * 7fcdc07aaa7 egl: Add some locking asserts
+  * a020e9e70af egl: Convert to simple_mtx_t
+  * 8c34ea69d82 egl: Remove redundant fxn param
+  * 7d55729ae51 egl: Drop unused _EGL_FUNC_START() arg
+  * c11583b1644 egl: Drop _eglSetFuncName() return
+  * 45d9c94a285 util: Fix vs2019 build error
+  * bacb04ef625 freedreno/drm/virtio: Add some atrace
+  * b69cbc0caa8 egl: atrace support
+  * 2d0d867935c freedreno/drm: Avoid lock in fd_pipe_del()
+  * 93fa687808f radv: do not compress DCC in presence of render loops on
+    GFX10+
+  * 854e8797ac3 svga: support TGSI_SEMANTIC_TEXCOORD in swtnl draw
+    context
+  * d7e6174c2bd pan/mdg: Remove disassembler stats
+  * 76e8f8b40ed pan/decode: Clean up _bifrost_ decode routines
+  * 5c00efa695d pan/decode: Centrally declare pandecode entrypoints
+  * aba69fc9c81 pan/decode: Defeature disassembler stats
+  * 6dfd0998f24 pan/decode: Unify SFBD/MFBD decoding
+  * e88b4949de7 pan/decode: Reorder MFBD decoding
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 18 Aug 2022 18:04:50 +0200
+
 mesa (22.3.0~git2208142159.5fd8ae15415~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
