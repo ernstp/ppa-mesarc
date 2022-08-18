@@ -1,3 +1,21 @@
+mesa (22.3.0~git2208190003.a9556f97daa~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * a9556f97daa v3dv: Avoid swapchain_info handling on Android
+  * b17ea48f91d v3dv: Limit API version to v1.0 for Android
+  * 5e32e8c962d v3dv: Enable sync_fd importing/exporting on Android
+  * 54f3754107c ci: bumping all tags to make sure we don't have hidden
+    fails
+  * c63303aea24 ci: update fails list
+  * ace13203f30 ci: remove broken device-select-layer from build
+  * 446eeccb1c9 intel/compiler: fix mesh urb write regression
+  * ddc8ab9e432 Revert "radeon: add EFC support to only VCN2.0 devices"
+  * 1ef43ea3c4e iris: Fix PIPE_CAP_UMA
+  * 2cea0d6ef60 intel/compiler: Drop variable group size lowering
+  * 79f47249e8c llvmpipe: Align persistent mappings to page size
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 19 Aug 2022 00:59:09 +0200
+
 mesa (22.3.0~git2208181638.49efa73ba11~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
