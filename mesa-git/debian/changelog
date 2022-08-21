@@ -1,3 +1,46 @@
+mesa (22.2.0~rc3+git2208192033.28902b4746c~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 28902b4746c turnip: lower the queue priority to 1
+  * caaab9f5e33 vk/render_pass: don't deref null resolve attachments
+  * 8dd736aa049 panfrost: Don't segfault on unknown models
+  * 5c6b687e047 nv30: Fix non-scissored clears after a scissor has been
+    set
+  * 537c0efff9b freedreno: Disable LRZ write when alpha-to-coverage is
+    enabled
+  * 1a57c756200 zink: Fix incorrect emission of SPIR-V shift ops
+  * 7e7a0853174 r600: Don't use SB with R600 style scratch reads
+  * 08b7aa08e57 r600/sfn: Handle R600 scratch read
+  * 96073f7f984 r600: Force NOPs when loading AR on R600 class hardware
+  * 5f562b1e007 r600/sfn: Fix color outputs when color0 writes all
+  * 6001a465c03 r600/sfn: Sort FS inputs to make interpolated values
+    come first
+  * 7b68155fa0e r600/sfn: Add GS thread fix just like the TGSI code path
+  * f918de9b422 r600/sfn: Schedule shift instruction on R600 in t-slot
+  * 5a267b1cf9c Revert "radeon: add EFC support to only VCN2.0 devices"
+  * 613e43c87b2 glsl: dont lower precision for textureGatherOffsets
+  * c1e5cfb01fd v3dv: Limit API version to v1.0 for Android
+  * 7b2dc8e7791 v3dv: Enable sync_fd importing/exporting on Android
+  * f73dd21d458 intel/compiler: fix mesh urb write regression
+  * c2d094d0c79 iris: Fix PIPE_CAP_UMA
+  * 9634e7cdf6e microsoft/compiler: Fix PSV struct when numthreads is 0
+  * e7ed89f1bcf microsoft/compiler: Discard shouldn't be marked readnone
+  * ea6aafefd14 aco: Force tex operand to have the correct sub dword
+    size before packing.
+  * 41705b87546 c11: #include <threads.h> when the os/platform provide
+    it
+  * 1faced9ec71 llvmpipe: Add some missing locking
+  * 185b583ae1e svga: support TGSI_SEMANTIC_TEXCOORD in swtnl draw
+    context
+  * 16dc6872c3e radeonsi: prevent u_blitter recursion in
+    si_update_ps_colorbuf0_slot
+  * 0766a4ca0d6 tu: Disable LRZ write when alpha-to-coverage is enabled
+  * 2bb0d73816c nir_to_tgsi_info: drop const_buffers_declared
+  * 705b30837cf .pick_status.json: Update to
+    0c6fbfca0c91ef012e8ab767a317c07f1f6dc5e6
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 21 Aug 2022 17:24:28 +0200
+
 mesa (22.2.0~rc3+git2208181949.9a80d2f73b5~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
