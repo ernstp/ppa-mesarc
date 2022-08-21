@@ -1,3 +1,50 @@
+mesa (22.3.0~git2208210952.9c01fff4453~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 9c01fff4453 r300: merge MOVs with MULs or ADDs in merge channels
+  * 275beae42d4 r300: merge MOVs into ADD using the 0 swizzle
+  * 13607d8c482 r300: don't merge w channel in fragment shaders
+  * 268f317f228 r300: generalize the merge_movs pass
+  * 05785d482ea r300: run dataflow optimizations in separate loops
+  * 2755faf9386 r300: check for identical saturate mode when merging
+    MOVs
+  * 6286e48e5dd r300: fix negate mask computation when merging movs
+  * aeae7b812cc r300: allow constant swizzles with inline constant
+  * 7b60414494b microsoft/clc: Handle a null clc logger
+  * 163390d762b vulkan/device_select_wayland: fix a memory leak with DRM
+    device handling
+  * 995480a3f7e radv/ci: Remove host build related fails
+  * 1762e6b5406 aco: Improve SCC nocompare optimization when SCC is
+    clobbered.
+  * e69de0f81d6 aco: Support s_cselect_b64 in SCC no-compare
+    optimization.
+  * b0ef7c7c828 aco/optimizer_postRA: Don't try to optimize dead
+    instructions.
+  * 4a4e5320a12 ci: implement stress testing jobs in ci_run_n_monitor.py
+  * 607bf3cc41f ci: GraphQL was already implemented in
+    ci_run_n_monitor.py
+  * d6b61fcf60e ci: traces: update freedreno and broadcom to brotli
+    compressed traces
+  * 1d521a5c15f zink: add gfx pipeline lookup shortcut
+  * 6a836eaff55 zink: track which stages in gfx programs are using
+    inlined uniforms
+  * 8a5b3658dfc zink: split resource tracking into two sets for
+    buffer/texture
+  * 8b93f157de4 zink: make batch internal api static again
+  * 40424cbe980 zink: merge all the batch state sets onto the struct
+  * a4830517c26 zink: use PIPE_CAP_RGB_OVERRIDE_DST_ALPHA_BLEND
+  * 16ae4fb8b73 zink: add is_buffer param to
+    zink_batch_resource_usage_set
+  * 0b56ac82eb8 zink: move zink_batch_resource_usage_set to be static
+    inline
+  * 7172c8a4217 zink: remove c++ guard from zink_resource.h
+  * 277590d3e4b zink: add more c++ guards to headers
+  * 58823f054e5 zink: make zink_bo.h compile in c++
+  * bc46d44ba5a zink: constify shader module variable
+  * 98fdcd9f9b6 zink: pass shader stage as param for gfx module update
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 21 Aug 2022 17:22:28 +0200
+
 mesa (22.3.0~git2208190003.a9556f97daa~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
