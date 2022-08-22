@@ -1,3 +1,10 @@
+libglvnd (1.5.0+git2208221502.c7cdf0c~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * c7cdf0c Increment the version number to 1.5.0.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Aug 2022 20:33:23 +0200
+
 libglvnd (1.4.0+git2207070031.5e289fb~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
