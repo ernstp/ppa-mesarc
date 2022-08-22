@@ -1,3 +1,52 @@
+mesa (22.3.0~git2208221926.20fba14f2cb~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 20fba14f2cb wsi/x11: fix memleak in wsi_x11_connection_create()
+  * 9573b24ab41 gallium: Remove util_make_fragment_tex_shader_xrbias
+  * 18539a40997 gallium: Inline away util_make_fragment_tex_shader
+    interp_mode
+  * b61ce265d72 gallium: Inline away
+    util_make_fragment_tex_shader_writemask
+  * c20139c2922 tu: Enable bufferDeviceAddressCaptureReplay
+  * e23c4fbd9b6 tu: Switch to userspace iova allocations if kernel
+    supports it
+  * 3e5aac8fbcf Revert "ci: disable unit tests"
+  * 9fc82560d3f ci: disable glcpp tests for now
+  * 0f9b662f9a7 meson: add enable-glcpp-tests option
+  * 201a62cbbae meson: Use different STRACEDIR folder for
+    intel_devinfo_override_test
+  * 12bb9cba8bd anv: Fixes struct anv_device::info is not initialized
+    with struct anv_physical_device
+  * 8a78fbb8324 radv: move lowering the view index to
+    radv_pipeline_link_shaders()
+  * 98fe5acbdba radv: move lowering patch vertices to
+    radv_pipeline_link_tcs()
+  * b9ed82815d2 radv: move assigning driver locations to the new linking
+    helpers
+  * cac4ad2115a radv: rework linking shaders in NIR
+  * f9e3339e39c radv: add radv_remove_point_size() linking helper
+  * 7e635adb2c9 radv: remove useless parameter from radv_link_shaders()
+  * f461fa19333 radv: use NIR_PASS with
+    radv_export_implicit_primitive_id
+  * 2167a61611c radv: remove unused parameter in radv_lower_io_to_mem()
+  * f66d822d872 radv: move dumping NIR shaders to the previous similar
+    loop
+  * 619da8df77f radv: move lowering FS intrinsics to
+    radv_postprocess_nir()
+  * 0fd0c3871a0 radv: add a radv_postprocess_nir() helper
+  * 22faf8597a5 radv: copy the whole radv_shader_info struct for merged
+    stages
+  * 6262586bd73 radv: copy linked I/O info for merged stages in
+    radv_fill_shader_info
+  * 0eab07bf66d radv: remove useless check when creating the noop FS
+  * 4ac72f7d1a4 r600/sfn: Don't use broken idiv lowering
+  * c38023a9b2c r300: Set more shadow sampler lowering in precompiles.
+  * 58432e56ae1 Update docs/drivers/llvmpipe.rst
+  * 4ba21c3e8ce vc4: store tex sampler in proper register
+  * 177f7fae013 ci: enable lima farm
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Aug 2022 20:33:58 +0200
+
 mesa (22.3.0~git2208210952.9c01fff4453~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
