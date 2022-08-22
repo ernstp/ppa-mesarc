@@ -1,3 +1,15 @@
+libsdl2 (2.25.0+git2208212349.b204db1e6~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b204db1e6 cocoa: change Shape data to use ObjC objects instead of C
+    structs.
+  * 057086e38 wayland: Add high resolution scroll wheel support
+  * d731ad769 wayland: Fix include order when building with libdecor
+  * 4ca7b378c x11: Specify windowed dimensions when creating fullscreen
+    windows.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Aug 2022 20:33:31 +0200
+
 libsdl2 (2.25.0+git2208211605.a7066c527~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
