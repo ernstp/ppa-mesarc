@@ -1,3 +1,18 @@
+corectrl (1.3.0~git2208221329.75a0a3a~b~mesarc16) bionic; urgency=medium
+
+  * New snapshot:
+  * 75a0a3a Preserve aspect ratio of displayed images
+  * 8201e3a Merge branch 'feature-manual_profiles'
+  * 195d93d Add manual profiles note to the CHANGELOG
+  * 35ce014 Update translations
+  * 86f4b2b Add support to toggle manual profiles from the system tray
+  * 08d9ab3 Add support to toggle manual profiles from the profiles view
+  * 43f5d20 Add support to add and edit manual profiles from the profile
+    dialog
+  * 447429d Implement manual profile support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 22 Aug 2022 20:33:04 +0200
+
 corectrl (1.3.0~git2208201745.a78bcd1~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
