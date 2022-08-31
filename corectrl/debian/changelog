@@ -1,3 +1,22 @@
+corectrl (1.3.0~git2208261139.c20bb7d~b~mesarc16) bionic; urgency=medium
+
+  * New snapshot:
+  * c20bb7d Remove unused import in ProfileInfoDialog.qml
+  * 85307c5 Fix missing show the main window menu entry from systray
+  * 179a828 Set window visibility based on systray status during startup
+  * d9d0b23 Add --m, --toggle-manual-profile command line options
+  * 80ed85c Add --toggle-window-visibility command line option
+  * 638a858 Add --minimize-systray command line option
+  * e2de649 Move command line parser setup to its own function
+  * 9523f54 Add support to receive arguments from new application
+    instances
+  * a07cf27 Check path before reading gpu sensor and unique_id /sys
+    files
+  * 3dfa29d Add system tray menu entry to hide and show the main window
+  * 8a21b17 Refactor system tray creation and signal handling
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Aug 2022 18:59:18 +0200
+
 corectrl (1.3.0~git2208221329.75a0a3a~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
