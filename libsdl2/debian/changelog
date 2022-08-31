@@ -1,3 +1,52 @@
+libsdl2 (2.25.0+git2208310412.e5f161bda~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e5f161bda Restored accidentally removed code to guess XInput device
+  * 973a677a2 SDL_xinputjoystick.c: commented out GuessXInputDevice()
+  * 42d09a8f4 wgi: refcount the delegate objects
+  * ca915b188 WGI_JoystickUpdate: bounds-check array sizes
+  * cdaafcec0 The Kinvoca Joy-Cons are handled by the Joy-Con driver,
+    not the Switch Pro driver.
+  * b2c3237b7 Added support for the Kinvoca Joy-Cons
+  * 92d3fc488 Fixed deadlock when shutting down the Windows joystick
+    system
+  * 371735e95 Silence unused variable warning
+  * 0e4baf1c4 Don't crash if SDL functions are passed a closed joystick
+    or gamecontroller
+  * 675d90c70 Revert "wgi: refcount the delegate objects"
+  * 3fe6768ca Sync SDL wiki -> header
+  * 40bd4feed Revamped joystick locking
+  * ff233fe30 wgi: refcount the delegate objects assert if calls become
+    unbalanced.
+  * f1e468580 Adding specific SDL_Hint for the dynamic VSYNC
+  * 2f08bf231 Added the share button to the Linux mapping for the third
+    party Nintendo Switch Pro controllers
+  * 803924b22 CMake: Make SDL_SHARED/STATIC/TEST options
+  * b2ac758f6 Added support for the Hori Fighting Stick Alpha to the
+    HIDAPI driver
+  * 3c78ba570 dbus: Use xdg-desktop-portal Inhibit when running under
+    Flatpak or Snap
+  * e8cb4da71 Add utility function to detect if SDL is inside a sandbox
+  * a3ce700de dbus: Add generic internal function to send messages with
+    reply
+  * 1153aaae0 Fixed compiling with USB_GET_DEVICEINFO on DragonFly BSD
+  * 57cbec109 Added controller mappings for Xbox 360, PS4, and PS5
+    controllers on OpenBSD
+  * 0b8b321f9 Allow the product version to be different when trying to
+    find a controller mapping
+  * 761b9d1e4 Use the HID usage for the button as the button number
+  * a9d3935a8 Improved code to get the name and guid for joysticks on
+    OpenBSD and NetBSD
+  * 32700294e Don't crash if SDL_CreateJoystickGUID() is passed a NULL
+    name
+  * bac8df4ab Fixed memory leak when out of memory
+  * ffbad3617 Use the correct type for the device_instance
+  * 4a800ae14 Created a consolidated define enabling BSD gameport
+    joystick support
+  * 42f90c629 Removed unused path variable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Aug 2022 18:59:49 +0200
+
 libsdl2 (2.25.0+git2208212349.b204db1e6~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
