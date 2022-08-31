@@ -1,3 +1,12 @@
+libglvnd (1.5.0+git2208301616.1d270ce~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 1d270ce Merge branch 'update-opengl-headers' into 'master'
+  * fd1df5e Update GL headers and XML files.
+  * 3144f28 Read gl.symbols when generating stubs for libGL.so.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Aug 2022 18:59:40 +0200
+
 libglvnd (1.5.0+git2208221502.c7cdf0c~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
