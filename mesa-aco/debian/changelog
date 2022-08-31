@@ -1,3 +1,53 @@
+mesa (22.3.0~git2208311740.296eb2918c1~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 296eb2918c1 util: Remove the need of _MTX_INITIALIZER_NP in
+    simple_mtx.h
+  * 064ec944c12 util: Add extern "C" guard in simple_mtx.h
+  * 67cd0c44d23 util: Add api util_call_once_with_context
+  * 201e1ba9dbd pvr: Only destroy the physcial device if it exists
+  * 6fed6161876 pan/mdg: Print 3 sources for CSEL
+  * 4fe755e803c pan/mdg: Always write return address to r1.w
+  * d05a2243d46 radeonsi/sqtt: set stable pstate if possible
+  * 33426a328b7 wayland: avoid writing interface names as free-form
+    strings
+  * 6d34925967c pvr: Change indentation from tab to spaces for xml
+    files.
+  * 7d614fa9b9c pvr: Implement vkResetCommandBuffer
+  * 88bed3babc3 pvr: reset all command buffer state in
+    pvr_cmd_buffer_reset()
+  * 492ec311f79 virgl/ci: remove some flakes
+  * 6e2b01e5b80 virgl: when reading back wait first, then do the
+    transfer
+  * 16143642812 v3dv: expose VK_KHR_synchronization2
+  * 378be25016f v3dv: use VkPipelineStageFlagBits2 when checking
+    semaphore wait stage
+  * 4b50431c3e7 v3dv: port remaining entry points to
+    KHR_synchronization2
+  * 9cd81fb9108 v3dv: implement vkCmdPipelineBarrier2
+  * a27111cdbd1 v3dv: also check GS stage on image access for binning
+    barriers
+  * f5e867712f4 zink: request forcing of fp32-samplers to nearest when
+    needed
+  * 8abb5c8b41b mesa/st: force nearest-filtering for fp32 textures
+  * ec222a20dad mesa/st: always force integer filtering to nearest
+  * 70c71c42003 mesa/st: also override mip filter for integer textures
+  * d2de931c16a radv: determine if the topology uses adjacency from the
+    shaders on GFX9+
+  * 4406905600d radv: allow null descriptor set layouts in pipeline
+    layouts
+  * ca33c319e5d v3dv: implement VK_KHR_zero_initialize_workgroup_memory
+  * a68a2805bf1 nir/lower_variable_initializers: implement non-scoped
+    barrier path
+  * 40ad12126fc radv: Remove redundant radv_QueuePresentKHR.
+  * 0e0e5d1f204 venus: allow no external memory handle when renderers
+    lacks support
+  * 80b35fbefe5 nir/lower_mediump: Lower FS outputs to 16-bit when the
+    value was upconverted.
+  * dbb17f567a2 d3d12: Change displayable format logic
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Aug 2022 19:00:20 +0200
+
 mesa (22.3.0~git2208221926.20fba14f2cb~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
