@@ -1,3 +1,16 @@
+mesa (22.2.0~rc3+git2208232106.38254ea6cdb~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 38254ea6cdb zink: handle nir_intrinsic_sparse_residency_code_and
+    mechanics
+  * a427499f8ce glsl: Remove lower_offset_arrays pass
+  * 03346d62e7a radeonsi: r600: d3d12: st: Use NIR lowering for tg4
+    offset arrays instead of GLSL lowering
+  * dd2c6e59baf nir: spirv: Allow 32-bit version of
+    nir_intrinsic_is_sparse_texels_resident
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 31 Aug 2022 19:02:26 +0200
+
 mesa (22.2.0~rc3+git2208192033.28902b4746c~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
