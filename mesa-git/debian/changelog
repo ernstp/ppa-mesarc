@@ -1,3 +1,32 @@
+mesa (22.2.0~rc3+git2208312110.81e00a2c4d6~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 81e00a2c4d6 radv: Use both aspects for depth/stencil blit
+    destinations
+  * 5ba263a442d anv: fix assert to build with shader cache disabled
+  * 8385e255e56 iris: Always initialize shader compilation queue ready
+    fence
+  * ccc37d7f975 anv: fix assert in memory budget code when extension is
+    not supported
+  * f428de90c86 anv: fixup assertions on lowered storage formats
+  * 4119f13e25b anv: fix GetPipelineExecutableStatistics for ray tracing
+    pipelines
+  * 71d07c5aef0 zink: ignore nir_texop_lod for tex dest matching
+  * 7294c260d43 ir3/spill: Fix extracting from a vector at the end of a
+    block
+  * 6a38482d8f9 wsi/x11: fix memleak in wsi_x11_connection_create()
+  * 79d9c6b7cfb vc4: store tex sampler in proper register
+  * 6ff9216b03b pan/bi: Don't allow ATEST to take a temporary
+  * ee5a27a119e pan/bi: Don't reorder image loads across stores
+  * 7026711410f vulkan/device_select_wayland: fix a memory leak with DRM
+    device handling
+  * e1a95d418c3 Revert "zink: add all format modifiers when adding for
+    dmabuf export"
+  * 3dfae4eec1f .pick_status.json: Update to
+    8eac45b27446cd9b9eaeb147af97fff1e09832cb
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 03 Sep 2022 00:20:07 +0200
+
 mesa (22.2.0~rc3+git2208232106.38254ea6cdb~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
