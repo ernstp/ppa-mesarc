@@ -1,3 +1,53 @@
+libsdl2 (2.25.0+git2209030006.e8f6b7503~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e8f6b7503 Added mappings for the ASUS ROG Kunai 3 Gamepad
+  * 5770e87cb Fixed regression handling touchpad input with PS5
+    controllers using the original shipping firmware
+  * 253f6a913 Variable renaming for consistency
+  * 5002624e8 Fixed crash when extension controllers are hotplugged
+  * 7df571ffc HIDAPI_DumpPacket() takes a const memory pointer
+  * b6d23d21d Fixed interactions with the Linux Wiimote driver
+  * 0c984360d SDL_hidapi_wii.c: fix a -Wshadow warning
+  * b6b3fb002 This was intended to be Uint8
+  * 5be157b3a SDL_hidapi_wii.c: fix -Wpointer-sign warnings
+  * 54356f41a Wii: fixed trigger axis reporting for the Wii U Pro
+    Controller
+  * a35642fa3 Wii: don't bother reading the extension type for the Wii U
+    Pro controller, we already know what it is
+  * c3ecb9d09 Wii: re-request the status if we get a communication error
+  * 0c24b46e9 SDL_hidapi_wii.c: fix build in c89 mode.
+  * 9874fc4e6 Reconnect as a different controller if the Wii extension
+    hardware changes
+  * 5f3cb5497 Updated Wii support with @tellowkrinkle's changes in
+    https://github.com/tellowkrinkle/SDL/commit/2f288e9d5bf596756f92b6c3
+    c983b79dc783eac6
+  * 785d784a9 Set the output value for ParseExtensionResponse() in all
+    return cases
+  * 046aaa2d2 Use auto calibration for the Wii Nunchuk thumbstick axis
+    values
+  * 8381e008e Handle hotplugging of Wii controller extensions
+  * 396411c09 Added mapping for the Wii Nunchuk extension
+  * e19b36d87 Initial support for the Wii Remote with Nunchuk extension
+  * c887cb02a Added the hint SDL_HINT_JOYSTICK_HIDAPI_WII_PLAYER_LED to
+    control whether the player LED should be lit on the Nintendo Wii
+    controllers
+  * 0ffaf5b87 SDL_hidapi_wii.c: fix build in c89 mode and builds using
+    watcom compiler
+  * 397672edf Added SDL_hidapi_wii.c to the Xcode project
+  * c72e14e8f Added initial support for Wii controllers (thanks
+    @tellowkrinkle!)
+  * 284769633 hidapi: really fix dynamic / non-dynamic libusb loading.
+  * 9d77945d3 fixed linkage libusb not dynamicaly loaded after commit
+    3f89d1704d
+  * 5767dc710 regenerated configure script after commit 3f89d1704
+  * 4ebf34857 updated os2 config file after commit 3f89d1704d
+  * 3f89d1704 Fixed building with libusb not dynamicaly loaded
+  * 7708bf0f8 Try matching game controller mappings on CRC and version
+    and fall back to no CRC and no version, in that order.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 03 Sep 2022 00:17:32 +0200
+
 libsdl2 (2.25.0+git2208310412.e5f161bda~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
