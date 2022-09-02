@@ -1,3 +1,45 @@
+mesa (22.3.0~git2209022315.2a2766ce18f~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2a2766ce18f Enable .VALVE_mutable_descriptor_type in physical_device
+  * de5879447b4 Track bitset when create descriptor pool
+  * d5f116feb53 Update bitset when init descriptor layout.
+  * 70394675229 Increase enum type in vn_descriptor_set.
+  * 250c6847505 ci: uprev piglit 2022-08-30
+  * c93173fcecc util/perf: use ALWAYS_INLINE for tracepoints
+  * 4d747d5690b util/perf: simplify u_trace_instrument
+  * 18d7cb4abbd util/perf: add u_trace_instrument
+  * aeb2c5a8daf util/perf: remove u_trace::enabled
+  * 8d8d4347e39 util/perf: ignore ut->enabled for iterators
+  * 8b15025a2ba mesa: add GLSL_SOURCE
+  * 9701b9098f2 anv: enable EXT_mesh_shader
+  * d5dedecfe7e anv: implement draw calls for EXT_mesh_shader
+  * 637063ffc63 anv: implement EXT_mesh_shader
+  * b3354afd896 anv: replace VK_SHADER_STAGE_[TASK|MESH]_BIT_NV with
+    VK_SHADER_STAGE_[TASK|MESH]_BIT_EXT
+  * 9cefaa9b6d5 anv: check EXT_mesh_shader whenever NV_mesh_shader is
+    checked
+  * 2e1b96bb1b9 intel/compiler: implement EXT_mesh_shader
+  * 3ef13ef2349 turnip: Treating non-d/s-write pipelines as not having
+    d/s feedback loops.
+  * 14911e8f83f spirv, compiler: add "bool nv" to shader_info.mesh
+  * 7d1bcf1f55b spirv, nir: Handle EmitMeshTasksEXT opcode.
+  * 42e906485c4 spirv: Support TaskPayloadWorkgroupEXT storage class.
+  * a03c30bd8dd spirv: Support the CullPrimitiveEXT mesh shader built-
+    in.
+  * c5c6cef893a spirv: Support EXT_mesh_shader SetMeshOutputsEXT.
+  * b3cc09cff3b spirv: Support EXT_mesh_shader mesh/task stages.
+  * bbebc1fb357 spirv: Add mesh_shading capability for EXT_mesh_shader.
+  * f6925b84465 spirv: Support EXT_mesh_shader indices and mark them per-
+    primitive.
+  * c315e2e7180 vulkan, spirv: Update to Vulkan 1.3.226 and latest SPIR-
+    V headers.
+  * 3bf3c45ae8b pan/bi: Add and use bi_num_successors helper
+  * 875a34160ac pan/bi: Add and use bi_replace_src helper
+  * f01ccdbf69b pan/bi: Remove assert(bi_is_ssa(dest))
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 03 Sep 2022 00:18:03 +0200
+
 mesa (22.3.0~git2208311740.296eb2918c1~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
