@@ -1,3 +1,29 @@
+mesa (22.2.0~rc3+git2208312110.f44745add97~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * f44745add97 winsys/amdgpu: fix non-page-aligned sparse buffer
+    creation
+  * 1bba5398901 meson: replace manual compiler flags with meson
+    arguments
+  * ad36cf3e4a6 st/mesa: fix potential use-after-free in
+    draw_bitmap_quad
+  * bfc21fbcad2 Revert "mesa: implement a display list / glBitmap
+    texture atlas"
+  * 20c3f70dc79 intel/fs: fixup SEND validation check on overlapping
+    src0/src1
+  * 3262b3220fa tu: fix invalid free on alloc failure
+  * 23ec1aaf9a9 .pick_status.json: Update to
+    6eb4dfca2344d123c1d7115e68d5a208ebbaba83
+  * d109d8547f2 radeonsi: fix tcs_out_lds_offsets arg alignment
+  * 5126da8cebc vulkan/wsi: Take max extent into consideration for
+    modifier selection.
+  * 1f708a72405 iris: Drop extra file-descriptor dup in
+    iris_drm_screen_create()
+  * 3e4b17c2554 intel/fs: fixup scratch load/store handling on Gfx12.5+
+  * f6c42ea33aa intel/fs: fix load_scratch intrinsic
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 03 Sep 2022 11:52:45 +0200
+
 mesa (22.2.0~rc3+git2208312110.81e00a2c4d6~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
