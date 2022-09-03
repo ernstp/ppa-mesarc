@@ -1,3 +1,12 @@
+libsdl2 (2.25.0+git2209030204.1b4e08b89~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 1b4e08b89 Added an entry for the Hori Fighting Stick mini 4 kai
+  * 6bcf2c152 Fixed spinning at a very high framerate
+  * 47f2373dc Added locking for Android joystick events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 03 Sep 2022 11:50:15 +0200
+
 libsdl2 (2.25.0+git2209030006.e8f6b7503~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
