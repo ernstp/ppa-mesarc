@@ -1,3 +1,31 @@
+mesa (22.3.0~git2209030741.6ffbb1abdb2~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6ffbb1abdb2 vulkan: Dirty VP_VIEWPORTS/SCISSORS when copying
+    viewports/scissors
+  * 136a26f271b gallivm: fixes for LLVM-15 opaque pointers in
+    lp_bld_format_soa.c
+  * 4ff7e64e81c gallivm: fixes for LLVM-15 opaque pointers in
+    lp_bld_struct.c
+  * 02b9a8ba12e gallivm: fixes for LLVM-15 opaque pointers in
+    lp_bld_format_s3tc.c
+  * 1b8c4931df9 gallivm: fixes for LLVM-15 opaque pointers in
+    lp_bld_jit_types.c
+  * f30251ef9bf gallivm: fixes for LLVM-15 opaque pointers in
+    lp_bld_nir_soa.c
+  * 8289ac87a40 gallivm: fixes for LLVM-15 opaque pointers in
+    lp_bld_nir_aos.c
+  * 49c6e2fd70a gallium: drop unused macros in draw_llvm.h
+  * 3668ebf8bd4 gallivm: drop unused "emit_load" in
+    lp_llvm_buffer_member()
+  * adf28955162 gallivm: LLVM-15 opaque pointers: disable
+    LLVMGetElementType(ptr_type)
+  * 08615f2807e llvmpipe: fix front/back face system value in the fs
+  * 723ae2368f6 vulkan: fixup 1.3.226 update
+  * 7e282694ed7 anv: remove non present field in upstream spec
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 03 Sep 2022 11:50:44 +0200
+
 mesa (22.3.0~git2209022315.2a2766ce18f~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
