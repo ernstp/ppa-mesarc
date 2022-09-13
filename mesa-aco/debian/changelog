@@ -1,3 +1,42 @@
+mesa (22.3.0~git2209132137.4da147a02b5~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4da147a02b5 mesa: remove fallback for GL_DEPTH_STENCIL
+  * 2baa40b0411 mesa: simplify _mesa_texstore_z24_s8 and s8_z24
+  * a5b1a811053 mesa: avoid reading back textures from VRAM
+  * a6e6ffb7039 venus: add support for VK_EXT_multi_draw
+  * 99378c88739 venus: sync to latest venus protocol headers
+  * 873365caeeb nouveau: Fix compiler warnings about silly address
+    checks in ir_print.
+  * 210807a1a48 turnip: reduce MAX_STORAGE_BUFFER_RANGE
+  * 89dcc52b783 rusticl/device: print error when libclc fails to load
+  * cf7069469cb asahi: Handle blending with MRT
+  * e1715c6a4f0 asahi: Don't crash on <4 channel render targets
+  * 89e0f544223 agx: Don't use nir_find_variable_with_driver_location
+  * 0883f0b3028 agx: Lower txs to a descriptor crawl
+  * bc4f418cb40 agx: Implement load_global(_constant)
+  * 965cc62bddd agx: Implement txd
+  * 7a4e0a4d351 agx: Implement texture offsets and comparators
+  * 4f85a7be8cd agx: Make p_combine take a dynamic src count
+  * ef31dceee8c agx,asahi: Implement nir_intrinsic_load_texture_base_agx
+  * 7371803f145 nir: Add nir_intrinsic_texture_base_agx sysval
+  * ef75dbfddd0 panfrost: Honour cso->req_local_mem
+  * b4dd1b8916d panfrost: Respect buffer offset for OpenCL
+  * 4be56e5e3f0 pvr: Update FWIF 3d and compute register structures
+  * 24e24e9a285 pvr: Emit cs words for load op on
+    vkCmdBeginRenderPass().
+  * ad56b9644d2 pvr: Remove STRIP_RENDERING members from FWIF
+  * 222f3c8a6d9 pvr: Implement vkCmdDrawIndexedIndirect API.
+  * cdf986a3e6a pvr: Implement vkCmdDrawIndirect API.
+  * e14c418862e docs: move rusticl readme into docs/
+  * 0265a231724 pvr: Implement vkGetPhysicalDeviceImageFormatProperties2
+    API.
+  * 1e7a930e104 radv: Enable VK_EXT_load_store_op_none.
+  * cf0e065dccf ci: uprev piglit 2022-09-08
+  * 45eda069531 ci: introduce update_traces_checksum.py
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 13 Sep 2022 22:11:52 +0200
+
 mesa (22.3.0~git2209030741.6ffbb1abdb2~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
