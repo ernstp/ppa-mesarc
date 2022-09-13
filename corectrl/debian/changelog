@@ -1,3 +1,13 @@
+corectrl (1.3.0~git2209121851.910207e~b~mesarc16) bionic; urgency=medium
+
+  * New snapshot:
+  * 910207e Only use constant and ascending curves on fan curves
+  * 1f61a20 Fix crash on application exit when running under some window
+    managers
+  * ba76edb Remove spacing between advanced power management controls
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 13 Sep 2022 22:11:05 +0200
+
 corectrl (1.3.0~git2208261139.c20bb7d~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
