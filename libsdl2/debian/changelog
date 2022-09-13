@@ -1,3 +1,51 @@
+libsdl2 (2.25.0+git2209132143.228b9fb51~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 228b9fb51 Update SDL_windowswindow.c (#6225)
+  * 929d5b80c wayland: Use the backbuffer size for determining if a
+    resize event is required
+  * 4f1b408a7 Fixed button mapping for PS5 controllers
+  * eb0bf2c29 vita: Drop memcmp redirect to sceClibMemcmp.
+  * 5b2884cb0 apply commit d0a3570300812bc81888e7a7eadb9311621dc9a7 to
+    cmake side too.
+  * d93649967 regenerated configure script.
+  * d0a357030 configure.ac: fix configure tests broken with Clang 15
+    (implicit function declarations)
+  * 7f415ce58 android: fix some compiler warnings
+  * 6dfd7a17e cmake: forward HAVE_LIBUSB to HAVE_HIDAPI_LIBUSB
+  * c3495ec6e Fix value of SDL_HIDAPI_DISABLED
+  * 19b13aab9 cmake: mark hidapi as disabled when not found
+  * edfb00c25 wayland: Only commit on move if the display was changed
+  * 97a5e7444 wayland: Remove duplicate code
+  * 78f843f74 wayland: Remove unnecessary function parameter
+  * 69e4c770f video: Make the mode switching function a NOP if mode
+    switching is disabled
+  * 768b6728b wayland: Compare against the old scale when resizing
+  * 07aea476b wayland: Ignore content sizes from libdecor when hiding a
+    window
+  * 6de12b4a0 wayland: Update the internal state when the compositor
+    moves a fullscreen window
+  * a7d345958 wayland: Trigger a commit on fullscreen update
+  * 707b561f9 wayland: Enable compositor fullscreen toggling
+  * 31979e2d9 wayland: Add missing static qualifiers
+  * 1c88a0522 Update Wayland cursors to match X11 cursors
+  * 9f4baeea5 Clean up thread local storage when quitting SDL
+  * a3900a751 Lock joysticks when removing a controller on the WGI
+    thread
+  * 12413ab31 Lock joysticks while attaching a virtual one
+  * 787cd580e silence unused function warning for SDL_endswith() on non-
+    linux.
+  * 407157324 Don't try to second guess DS4Windows, let it remap things
+    as expected.
+  * a0f169603 Fixed the CRC in the mappings for PS2, PSP, and Vita
+    controllers
+  * 90a480a10 Fixed bug #6199 - Broken clip behaviour on a render target
+    (metal)
+  * 0ad8d9d29 SDL_IsXInputDevice() shouldn't return true if XInput isn't
+    enabled
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 13 Sep 2022 22:11:23 +0200
+
 libsdl2 (2.25.0+git2209030204.1b4e08b89~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
