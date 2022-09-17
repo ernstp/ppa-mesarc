@@ -1,3 +1,14 @@
+corectrl (1.3.0~git2209161924.ce6bdf9~b~mesarc16) bionic; urgency=medium
+
+  * New snapshot:
+  * ce6bdf9 Add option to save the window geometry
+  * 3b6bb11 Check that manual profile names are valid file names
+  * 22fbc5c Reduce word redundancy on the Unreleased section of the
+    CHANGELOG
+  * 28cd25f Set a timeout on the process event connector socket
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Sep 2022 11:55:25 +0200
+
 corectrl (1.3.0~git2209121851.910207e~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
