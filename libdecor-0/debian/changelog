@@ -1,3 +1,11 @@
+libdecor-0 (0.1.0+git2209161633.a735d05~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * a735d05 cairo: Keep a ref to the frame while invoking
+    libdecor_frame_close().
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Sep 2022 11:55:42 +0200
+
 libdecor-0 (0.1.0+git2205311549.5e58ec6~i~wayland0) impish; urgency=medium
 
   * New snapshot:
