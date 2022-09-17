@@ -1,3 +1,48 @@
+mesa (22.2.0~rc3+git2209170016.b47e856216e~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * b47e856216e ac/surface: disallow 256KB swizzle modes on gfx11 APUs
+  * ab6ce72fd9b st_pbo/compute: fix 1D coord dimension by pre-trimming
+    vectors
+  * 2adacf55947 st_pbo/compute: fix 1D_ARRAY offsets
+  * 242b4981159 vulkan/device_select_wayland: fix a memory leak with DRM
+    device handling
+  * 20886cf5725 amd/common: some ASICs with gfx9 use compute rings for
+    render
+  * 91ccbb017e7 freedreno: We really don't need aligned vbo's
+  * 8c36939dd60 .pick_status.json: Update to
+    3d4c36a3bcc51ed441b2667d92291bea30ef7449
+  * a021a38f5e4 zink: handle split acquire/present
+  * 5b6aa0c7ee1 tu: Don't preload variable-count descriptors
+  * da97b8a0e13 ir3: Prevent reordering movmsk with kill
+  * fbc7e23afda broadcom: fix dependencies in static_library() calls
+  * 6e574e2c811 venus: ignore pInheritanceInfo if not secondary command
+    buffer
+  * 4698093affa radeonsi: invalidate L2 when using dcc stores
+  * 6ce21ce9104 mesa: avoid reading back textures from VRAM
+  * 2c56768a2f5 panfrost: Respect buffer offset for OpenCL
+  * 4de1373cc4a docs/zink: document rgtc requirement
+  * d30ddb04062 radv: fix pipelineStageCreationFeedbackCount when it's 0
+  * f0dc4ee1cd3 nir/gather_info: Clear cross-invocation output mask.
+  * ac210811e85 zink: fix in-fence lifecycle
+  * a861f9a0b26 zink: fix zink_create_fence_fd to properly import
+  * 4813bc413e7 zink: flag all assigned output slots as mapped
+  * fc8ba10f735 nv50: properly flush the TSC cache on 3D
+  * 9478d1be89b nv50/ir: fix OP_UNION resolving when used for vector
+    values
+  * 842011a4bdf tu: Clamp priority in DRM submitqueue creation
+  * 26b95ed4033 amd/common: Disable DCC retile modifiers on RDNA1
+  * 36ac6a48b99 amd/common: Don't rely on DCN support checks with
+    modifiers.
+  * 314d56e9b82 intel/pci_ids: Drop non-upstream dg2 pci-ids
+  * 4b3daadae0a anv: pipelineStageCreationFeedbackCount is allowed to be
+    0
+  * cbcf1bb4d81 zink: clamp miplodbias when creating sampler
+  * c916ec76ee4 gallium/u_threaded: fix offset calculation for
+    draw_multi slots
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Sep 2022 11:58:24 +0200
+
 mesa (22.2.0~rc3+git2208312110.f44745add97~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
