@@ -1,3 +1,54 @@
+libsdl2 (2.25.0+git2209170041.2e9f5b598~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2e9f5b598 Added support for the HORI Fighting Commander OCTA (Xbox
+    Series X and PS versions)
+  * 5fba31f6f SDL_HasPrimarySelectionText: fix -Wunreachable-code-return
+    warning.
+  * efe01faa8 Replaced Blit4to4CopyAlpha() with optimized SDL_BlitCopy()
+  * c0baa6bf5 move SDL_windowstaskdialog.h contents into
+    SDL_windowsmessagebox.c
+  * 82b40f097 Fixed runaway CPU usage in the metal renderer when the
+    window is minimized
+  * 5892ed437 Fixed Xcode warnings on macOS
+  * 910d499c5 Fixed comment typo
+  * 172865ff1 Don't enumerate HID devices on macOS if we don't have
+    input monitoring permissions
+  * eb046958d Fixed build warning
+  * 8fc133ac2 Updated Xcode project with new offscreen video driver
+    files
+  * e2753e19e Calculate simulated vsync interval based on display
+    refresh rate
+  * 208964f03 Reset the simulated vsync presentation timeline if it's
+    been too long since the last present
+  * 1663cb419 Reset simulated presentation timeline when vsync status
+    changes
+  * d744aafb0 Added support for simulated vsync in the renderer
+  * 339f7a2f6 SDL_windows.h: guard WIN32_LEAN_AND_MEAN and STRICT macro
+    defines.
+  * c23fb235c SDL_render_d3d12.c: Fix uninitialized warning for
+    CreateEventExFunc
+  * d86cb8ec9 SDL_offscreenwindow.c: swap include order of
+    SDL_egl_c.h/SDL_sysvideo.h
+  * 5bc85d678 Only advertise the SDL_PIXELFORMAT_EXTERNAL_OES format if
+    we can build the shader for it
+  * 6de15ffcd Fixed building offscreen video driver without EGL support
+  * cc9638f2f Regenerated configure
+  * 37effc770 Build the offscreen video driver by default.
+  * 2970710b5 Pretty print shaders for debugging purposes
+  * bc57d3e35 Fixed OpenGL ES shader compilation on Linux
+  * 8a15a738f Fixed uninitialized variable warning
+  * 61201e06e Removed obsolete extension definitions
+  * 6dec78ed1 fix permissions of SDL_opengl_glext.h
+  * 2e24708af Makefile.w32: silence lots of W202 warnings from new
+    vulkan headers
+  * c49faabb6 Sync SDL wiki -> header
+  * ac5b9bc4e Add support for X11 primary selection (#6132)
+  * 72fe6cc8f Updated to the latest version of OpenGL and Vulkan headers
+    from the Khronos registry
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Sep 2022 11:55:49 +0200
+
 libsdl2 (2.25.0+git2209132143.228b9fb51~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
