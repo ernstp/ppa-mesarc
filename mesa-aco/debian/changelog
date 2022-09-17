@@ -1,3 +1,50 @@
+mesa (22.3.0~git2209170532.569ade73b4c~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 569ade73b4c panvk: Implement VK_KHR_descriptor_update_template
+  * 42d60aa0bc9 panvk: Fix buffer views
+  * c63cb7f4d24 vulkan/runtime: Compact descriptor update templates
+  * 74cebc5d5d4 hasvk: Switch to the common descriptor update template
+    struct
+  * 94f8222dde1 anv: Switch to the common descriptor update template
+    struct
+  * 3c24f19fa54 vulkan/runtime: Add a comon
+    vk_descriptor_update_template
+  * 571309be31a glx: Remove some excess work from the GLX_FBCONFIG_ID
+    fallback
+  * fed3643eb9a glx/dri: Avoid a weird indirection in driFetchDrawable
+  * 333895bebca glx/dri*: Unify glx_context subclassing
+  * b13d4362b64 turnip: fix kgsl tu_enumerate_devices return code
+  * 3c57d05b47a util: fix missing fcntl.h on musl
+  * 546c40cd661 ci/turnip: Move some 15-second-ish test skips to pre-
+    merge skips.
+  * 5694fe2a44d ci/turnip: Drop a couple of spillall skips.
+  * 1bef39c50f7 ci/turnip: Allow running spirv_ids_abuse in full VK
+    runs.
+  * 3503d5fbdaa ci/turnip: Re-enable the compressed cubemap tests.
+  * 17c27e68edd ci/turnip: Bump the full-run a618 runner count to 3.
+  * 4319e896665 ci/turnip: Use all 9 a618 runners at once for VK
+    testing.
+  * 10ddbf50bb6 r600/sfn: lower tg4 to backend in NIR
+  * 1dca2b8ae96 r600/sfn: Make sure texture lowering is done in the
+    right order
+  * ed6204eb06c r600/sfn: only use 3 channels on Cayman for trans ops
+  * 260cddf9ec2 r600/sfn: Handle shifts on Cayman
+  * 2fbcd3d4a9d r600/sfn: fix some channel pinning
+  * 56ded410af8 r600/sfn: Add a free-channel mask when testing whether a
+    register can switch channel
+  * 668167aac12 r600/sfn: VS inputs are effectively SSA
+  * f3415cb26a6 r600/sfn: copy propagate register load chains
+  * 1852f1e328d r600/sfn: drop some unused code
+  * c0b6c59e084 r600/sfn: Copy propagate into TEX source
+  * 5416d1bc4b2 r600/sfn: Don't assert when setting one value
+  * 4a505609e44 r600/sfn: Add an easy access to get an instruction as
+    ALU
+  * a7c6a7e3458 r600/sfn: Don't allocate un-used components in texture
+    ops
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Sep 2022 11:56:21 +0200
+
 mesa (22.3.0~git2209132137.4da147a02b5~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
