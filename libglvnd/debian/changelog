@@ -1,3 +1,11 @@
+libglvnd (1.5.0+git2209201605.9215f34~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 9215f34 Merge branch 'master' into 'master'
+  * 05f75de Add support for loongarch64.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:15:29 +0200
+
 libglvnd (1.5.0+git2208301616.1d270ce~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
