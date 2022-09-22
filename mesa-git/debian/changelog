@@ -1,3 +1,13 @@
+mesa (22.2.0+git2209211817.3da8d291326~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 3da8d291326 docs: Add sha256 sum for 22.2.0
+  * eb7995d61e0 docs: add release notes for 22.2.0
+  * 4ef98ce435a VERSION: update to 22.2.0
+  * 5c4d90f1aa3 svga: fix invalid component access of domain location
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:18:16 +0200
+
 mesa (22.2.0~rc3+git2209170016.b47e856216e~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
