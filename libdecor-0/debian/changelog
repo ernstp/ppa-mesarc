@@ -1,3 +1,10 @@
+libdecor-0 (0.1.0+git2209191759.8b42120~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 8b42120 plugin: Add vfunc to list commonly conflicting symbols
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:15:24 +0200
+
 libdecor-0 (0.1.0+git2209161633.a735d05~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
