@@ -1,3 +1,48 @@
+mesa (22.3.0~git2209221925.d68e74955c8~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * d68e74955c8 mesa/st: fix a set_sampler_views call parameter order
+  * 672a1a9021e pvr: Implement vkCmdNextSubpass API.
+  * 154ffdbd45e pvr: Pass load-op struct instead of idx to support
+    subpass load-ops.
+  * f1d61d8161f pvr: Add support to create subpass load ops.
+  * 0756a28f2d3 pvr: Add attachment resolve support.
+  * ce5a34aadb2 pvr: Add const to structs that are not supposed to be
+    modified.
+  * 2fc20cff4c3 pvr: Rename userpass_spawn to isp_userpass.
+  * f19697de5a5 pvr: Add missing output register write in
+    pvr_CreateRenderPass2.
+  * 7eff9502151 pvr: Use ~0 for masks instead of ~0U.
+  * 10b6a0d567e pvr: Add support for generating render pass hw setup
+    data.
+  * b57cd626985 pvr: Replace pvr_renderpass_surface_initop with
+    VkAttachmentLoadOp.
+  * 9f9a1ab1189 pvr: General reformatting and renaming some fields.
+  * 88eeece6623 docs: update calendar and link releases notes for 22.1.7
+  * 40bfaa7354a docs: add release notes for 22.1.7
+  * c3df3baf8b7 docs: update calendar and link releases notes for 22.1.6
+  * 2b4a819e60e docs: add release notes for 22.1.6
+  * cd36a297598 aco/optimizer: change inverse_comparison in-place
+  * c8445c16910 aco: Change inverse-comparison optimization to work with
+    s_not
+  * cf5f9854bcb aco/optimizer: optimize s_and(exec, s_and(x, y)) more
+    aggressively
+  * 79a8e8b5b26 aco/optimizer: do can_eliminate_and_exec() optimization
+    later
+  * 14b15b4038d zink: assert on unnormalized texcoords
+  * 37733c100d6 mesa/st: always use normalized coords for samplers
+  * 1a135bdd6ce mesa/st: always use normalized coords for samplers
+  * 484205b7ebf mesa/st: always use normalized coords for samplers
+  * 7eeb0fec8d6 broadcom/compiler: increase V3D_MAX_BUFFE_RANGE to 2^30
+    bytes
+  * 3417a0c4a22 iris: Support up to 128 textures
+  * 06a0de492ac iris: Support up to 64 images
+  * c4ff82d9588 iris: Split max #defines for textures/samplers/images
+  * c9c8134d768 iris: Stop looking at textures_used for samplers
+  * 0edf63de76d Try to fix FTBFS on kfreebsd architecture
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:16:09 +0200
+
 mesa (22.3.0~git2209170532.569ade73b4c~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
