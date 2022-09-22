@@ -1,3 +1,48 @@
+libsdl2 (2.25.0+git2209221910.99e85cc27~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 99e85cc27 Accidentally reverted https://github.com/libsdl-
+    org/SDL/commit/172865ff137532123ec06177119be163ba1811f5
+  * 6cbdc6665 Fixed use of uninitialized 'size' variable (thanks
+    @ozkan!)
+  * 0c4594ac7 Improved PS4 and PS5 third-party controller feature
+    detection
+  * 399cb2f0d wayland: Only clear the key repeat flag when the repeated
+    key is released
+  * eb25f6c91 Fixed Xbox platform name, courtesy of @walbourn
+  * 098a7a043 add missing quotes to the fallback
+    CHECK_OBJC_SOURCE_COMPILES macro
+  * 00b67f557 Fix potential memory leak in GLES_CreateTexture
+  * 301912a5b Fix: Use WIN_ClientPointToSDL for converting additional
+    mouse coordinates
+  * 08a331847 Vita: fix controls on PSTV with opened IME
+  * db225dec4 autotools: stop using AC_FUNC_MEMCMP and AC_FUNC_STRTOD
+  * dc2a682a8 Use the right kind of 0
+  * 246193060 Fixed build on RISC OS
+  * 887ae0c6e fix build failure after commit 2a8d00634ddf if strtod
+    isn't available.
+  * 2a8d00634 Fixed scanning a negative number as an unsigned value
+  * 3f5c46663 SDL_vsscanf: fix an uninitialized warning
+  * 216e3f10b Implemented size_t format specifiers for SDL_snprintf()
+    and SDL_sscanf()
+  * c70ffc2a3 Added size_t format specifier test coverage for
+    SDL_snprintf and SDL_sscanf
+  * 101306edc Do case insensitive matching on test cases
+  * 3b20e0ece cmake: only add -Wl,--undefined=WinMain when building an
+    executable
+  * c83329481 tests, watcom:  silence lots of W202 warnings from new
+    vulkan headers.
+  * 8598f05b4 Support loading 2bpp .bmp files
+  * 1f7a7fd93 haiku: Combine HAIKU_ColorSpaceToBitsPerPixel and
+    HAIKU_BPPToSDLPxFormat
+  * dd51787e0 Fix SDL_PIXELFORMAT_INDEX1LSB test case
+  * 43fc6d593 Fix incorrect return value in
+    X11_GetPixelFormatFromVisualInfo
+  * 202dfea50 Vita: drop memory defines
+  * 7115ceb77 Vita: restore sceClibMemcmp
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:15:36 +0200
+
 libsdl2 (2.25.0+git2209170041.2e9f5b598~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
