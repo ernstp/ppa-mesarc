@@ -1,3 +1,11 @@
+corectrl (1.4.0~git2209221836.30a0d4d~b~mesarc16) bionic; urgency=medium
+
+  * New snapshot:
+  * 30a0d4d Use center alignment for voltage 'Auto' text fields on
+    FVControl
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:15:02 +0200
+
 corectrl (1.4.0~git2209191730.0094008~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
