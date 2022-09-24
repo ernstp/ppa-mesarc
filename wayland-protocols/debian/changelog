@@ -1,3 +1,10 @@
+wayland-protocols (1.26+git2209170849.53cd10a~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 53cd10a xdg-shell: forbid loops in set_parent
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 24 Sep 2022 23:00:28 +0200
+
 wayland-protocols (1.26+git2207071628.83866f1~b~base2) bionic; urgency=medium
 
   * New snapshot:
