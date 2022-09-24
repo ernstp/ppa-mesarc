@@ -1,3 +1,54 @@
+libsdl2 (2.25.0+git2209241901.6b75a592a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 6b75a592a autotools: revised and silenced esound detection a bit.
+  * 3a6b7c9c6 testiconv: Print the total number of errors at the end
+  * 8d2cb1555 Added an entry for the ZEROPLUS P4 Wired Gamepad
+  * cb063db64 Moved XInputPS4 controllers into the PS4 controller
+    section
+  * 5b3b7e6e7 Separated PS4/PS5 effects support into individual
+    capabilities
+  * 33619aa2e Added support for the ZEROPLUS P4 Wired Gamepad to the
+    HIDAPI driver
+  * e888c99fa Fixed the entry for the Nacon PS4 Compact Controller
+  * 4ea64fee9 Fixed manufacturer/product name deduplication for the
+    Razer Raiju Tournament Edition controller
+  * 56b91ea72 Fixed feature detection for the Razer Raiju Tournament
+    Edition controller
+  * f6c9b0656 cmake: output libSDL2-2.0.0.dylib like autotools, not
+    libSDL2-2.0.dylib.
+  * 4a06cc0f7 wayland: Apply modifier changes to the text of repeated
+    keys
+  * 467c82c77 wayland: Add mappings for the Escape and NumLock keys
+  * 34f928abb Generate the correct name for ASTRO Gaming controllers
+  * 6ddef7c23 Generate the correct name for Qanba and Mad Catz
+    controllers
+  * c2ae2ccc3 Added feature support for the Razer Raiju to the HIDAPI
+    driver
+  * 5ea9886bc haiku: Fix when screen color depth was 24 bits,
+    SDL_GetWindowSurface would always fail with 'Unknown pixel format'
+    error
+  * 51fefd1c3 Added support for third party PS3 controllers to the
+    HIDAPI driver
+  * 5b4c10fc7 Return true from IsSupportedDevice if it's a device that
+    we _might_ support
+  * 1d34a5249 Fixed shadowed variable warning
+  * 010d3e644 Fixed function prototype mismatch
+  * b7940c29c Allow HIDAPI controllers to override the default joystick
+    type
+  * 899a1e7cb Skip PS4/PS5 probe message if we already know it's a
+    supported controller
+  * fa2063fb4 Improved detection of third party PS4 and PS5 controllers
+  * 7312b93d3 Fixed crash if a game controller is disconnected while the
+    connect message is in flight
+  * aa2e2f484 Make sure HID devices can be opened before making them
+    available to the application
+  * 2857e3c74 Added an entry for the Mad Catz FightStick TE 2+ PS3
+  * 6812f1b5d Fixed the entry for the HORI Fighting Commander 4 in PS4
+    mode
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 24 Sep 2022 22:57:50 +0200
+
 libsdl2 (2.25.0+git2209221910.99e85cc27~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
