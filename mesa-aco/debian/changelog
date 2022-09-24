@@ -1,3 +1,46 @@
+mesa (22.3.0~git2209241523.0d66ed49b41~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 0d66ed49b41 radv/rtpso: Use the common traversal helper
+  * 3f72061be93 radv/rq: Use the common traversal helper
+  * ac459353450 radv: Add a common traversal build helper
+  * e24a8168189 radv: Fix file descriptor leak.
+  * 5a3411567a3 radv: Properly initialize all memory in RRA dumps.
+  * 19aae066925 radv: Use deterministic order for dumping acceleration
+    stuctures.
+  * 50bb0d64277 radv: Use GLSL matrices for instance transforms in BVH.
+  * 3c09681eddb radv: Use proper matrices for instance nodes.
+  * 0f9fb8e15ff radv: Remove aabb bounds from instance nodes.
+  * b1ddb350402 radv: Translate the BVH copy shader to glsl from
+    nir_builder.
+  * ffc5f527248 radv: Hardcode root node id.
+  * 513d074d398 radv: Fix GLSL BDA struct alignment and use pointer
+    arithmetic SIZEOF.
+  * f446f7a7693 intel/l3: Use L3 full-way allocation setting for gfx12.5
+    (DG2, MTL)
+  * 02d858ef0dd d3d12: Fix usage of %ld with PRIu64 instead for cross-
+    platform build
+  * b3be2ace593 zink: PIPE_CAP_SHAREABLE_SHADERS
+  * 10ed67867e9 zink: use screen param for zink_shader_free()
+  * ac1b343477b zink: use program's context for cache deletion
+  * 275e4a9c895 zink: add locking for program caches
+  * a10cad018b2 zink: don't try to delete programs from the cache if
+    stages have been modified
+  * eab18cb7a29 zink: use screen params for program reference functions
+  * 697eb99d699 zink: track the owner context for gfx programs
+  * 2fa70912633 zink: track a mask of gfx stages remaining in gfx
+    programs
+  * 0f770caa232 freedreno: Disable 8bpp_ubwc on a6xx gen2
+  * 7bf8af2c8d5 radeon/vcn: process invalid frame rate in encoding
+  * 4fdf10fdafe radeonsi/gfx11: don't set VERTS_PER_SUBGRP to 0
+  * 7483e50404a winsys/amdgpu: init 'r' before using it
+  * 58829d9f112 iris: implement Wa_14016118574
+  * f2645229c2f anv: implement Wa_14016118574
+  * c7ff9876d6c zink: correct emulation of luminance-alpha formats
+  * e7f192030ce zink: fix luminance/luminance-alpha emulation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 24 Sep 2022 22:58:23 +0200
+
 mesa (22.3.0~git2209221925.d68e74955c8~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
