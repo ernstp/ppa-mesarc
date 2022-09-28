@@ -1,3 +1,51 @@
+mesa (22.2.0+git2209282103.897e382d9d3~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 897e382d9d3 gallium/u_threaded: buffer sharedness tracking
+  * 8a57b219d16 gallium/u_threaded: Prepare for buffer sharedness
+    tracking
+  * 6b77710d2da u_atomic: Add a helper for pointer compare-exchange
+  * 5383fd12d26 virgl/vtest: fix memory overwrite problem in
+    virgl_vtest_send_get_caps()
+  * 94c771bcdb7 zink: set layouts before possibly reordering image
+    copies
+  * 63a60728ad4 aux/trace: dump depth_clamp for rasterizer state
+  * a4222b0881f tc: don't use CPU storage for glBufferData
+  * 93723998426 tc: do a GPU->CPU copy to initialize cpu_storage
+  * b4c91f086a6 intel/nir: disable assert on async stack id
+  * 63fc4894712 intel/nir: fix potential invalid function impl ptr usage
+  * ce21dde04df intel/nir: fixup preserved metadata in rayquery lowering
+  * 1ab6d664c3a mesa: set normalized_coords for bindless texture buffer
+    samplers
+  * d5370576067 zink: don't flatten 64bit arrays during rewrite
+  * 70e2817f65b zink: always run optimize_nir after lower_64bit_vars
+  * 358e054bfdd .pick_status.json: Update to
+    3ed712f7483791aa0a256472d276ff5a83c643bc
+  * 24af5a7f826 util: Disable usage of __attribute__((__const__)) when
+    the compiler is clang
+  * 5e73858b9e6 .pick_status.json: Mark
+    40a235c9a82027bcb92d34b7386ea6b1a2e1d587 as denominated
+  * bc71af26d63 .pick_status.json: Mark
+    cbad4adc133b16c803ec9445c8dd144bc5023a62 as denominated
+  * bef8fe631ea .pick_status.json: Mark
+    1aacd9492de42412c6c9ca79d48a40c4ffebcd79 as backported
+  * b0a45e65a75 .pick_status.json: Mark
+    5b7c2dffc43eb7ada61807a6e679cc2c1b3b2682 as denominated
+  * 5cba5134705 .pick_status.json: Mark
+    49efa73ba11c4cacaed0052b984e1fb884cf7600 as denominated
+  * a53554f3885 docs: fixup broken rst syntax
+  * 8a40852756b ci/docs: Stick to specific version of python packages
+  * 883c0f7b2ff zink: avoid overflow when clamping bufferviews
+  * 01edc6f174f zink: always unset var->data.explicit_xfb_buffer
+  * cf2be662186 zink: free vertex_state_cache on shutdown
+  * 380ffeb205d lavapipe: propagate shader access info across libraries
+  * 23cab32e264 lavapipe: set writemask for compute shader buffers
+  * 3c44bd11660 .pick_status.json: Update to
+    c268ae9efe602129b848c800dca83411d55c3aab
+  * 73e50fdb0fc llvmpipe: bind sampler views/images properly.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Sep 2022 00:27:00 +0200
+
 mesa (22.2.0+git2209211817.3da8d291326~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
