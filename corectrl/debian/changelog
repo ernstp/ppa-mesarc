@@ -1,3 +1,11 @@
+corectrl (1.4.0~git2209271317.4b54aff~b~mesarc16) bionic; urgency=medium
+
+  * New snapshot:
+  * 4b54aff Fix CPU performance scaling mode not being restored from
+    file
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Sep 2022 00:24:02 +0200
+
 corectrl (1.4.0~git2209221836.30a0d4d~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
