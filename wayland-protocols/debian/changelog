@@ -1,3 +1,10 @@
+wayland-protocols (1.26+git2209261914.b784987~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * b784987 ext-session-lock: add note on client termination
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Sep 2022 00:28:59 +0200
+
 wayland-protocols (1.26+git2209170849.53cd10a~b~base2) bionic; urgency=medium
 
   * New snapshot:
