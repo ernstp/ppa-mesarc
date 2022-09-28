@@ -1,3 +1,50 @@
+libsdl2 (2.25.0+git2209282221.e17f0c283~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e17f0c283 wayland: Call the Wayland hide/show functions directly
+    when changing decoration modes
+  * 8bcbdc706 hidapi, libusb: backport read_thread indefinite loop fix
+    from mainstream
+  * 379d47805 dbus: guard against uninitialized D-Bus
+  * 57b5c9107 kmsdrm: only negative devindex's are not allowed
+  * 508cc225a Update README.md
+  * f648c000b build: Fixed some references to renamed test-versioning.sh
+  * f6565c329 coreaudio: Remove redundant variable.
+  * 411582c71 coreaudio: Don't crash on shutdown in a race condition.
+  * d843d61cc Moved test/versioning.sh to build-scripts/test-
+    versioning.sh
+  * 4471d22eb Updated iOS demos Xcode project
+  * 13c443f22 Removed obsolete search path setting
+  * 26997bc15 Removed unused framework entries from the Xcode project
+  * 229315b01 Updated SDL Xcode test project to build for iOS and tvOS
+  * bb74af1e1 Allow including SDL_uikit_main.c in Apple multi-platform
+    builds
+  * 3a6b4835f Updated macOS Xcode test programs
+  * 8e1464775 build-scripts: Added update-version.sh
+  * a2c575735 video: check for "software" with
+    SDL_HINT_FRAMEBUFFER_ACCELERATION.
+  * d76f0cc75 Android.mk: Build android SDL2.so with `-Wl,--no-
+    undefined`
+  * 70214ed3e cmake: append to CMAKE_MODULE_PATH instead of overwriting
+  * a193a03d8 cmake: add -Wno-declaration-after-statement to cpu-
+    features.c alone
+  * 7becbd7d4 Add joystick locking for controller notifications on
+    iOS/tvOS
+  * 18eb319ad Added sensor timestamp for Nintendo Switch controllers
+  * 5e3a40309 Added sensor timestamp for Steam Controllers
+  * 57b20e7b9 cocoa: Fix new windows setting SDL_WINDOW_BORDERLESS flag
+    incorrectly.
+  * 77c7836c2 fix vita build failure after commit 2c518747b
+  * 36e767014 Sync SDL wiki -> header
+  * 2c518747b Added microsecond timestamp to sensor values for PS4 and
+    PS5 controllers using the HIDAPI driver
+  * d71df6448 Fixed bug #6287 - SDL_FillRect failed for SDL_Surface with
+    BitsPerPixel == 4
+  * 1e1be0b95 Updated logic to match between PS4/PS5/Switch controllers
+  * 8c40a6b0c Drop PS5 Bluetooth reports that fail CRC check
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Sep 2022 00:24:22 +0200
+
 libsdl2 (2.25.0+git2209241901.6b75a592a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
