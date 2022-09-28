@@ -1,3 +1,9 @@
+corectrl (1.3.0+git2209181956.8ea8196~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Sep 2022 00:36:07 +0200
+
 corectrl (1.3.0~git2209161924.ce6bdf9~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
