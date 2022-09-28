@@ -1,3 +1,55 @@
+mesa (22.3.0~git2209282335.2044f2910ca~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2044f2910ca vulkan/wsi: Add a supports_scanout flag
+  * 15fca5ca7e7 vulkan/wsi: Add a typedef for memory type select
+    callbacks
+  * 39f81564aba vulkan/wsi: Don't expose as many image configure helpers
+  * 43c1c2b8885 vulkan/wsi: Always configure images in
+    wsi_swapchain_init()
+  * 5424049e662 vulkan/wsi/win32: Configure images via params passed to
+    wsi_swapchain_init()
+  * 76d15717e37 vulkan/wsi/display: Configure images via params passed
+    to wsi_swapchain_init()
+  * c315e20d619 vulkan/wsi/wayland: Configure images via params passed
+    to wsi_swapchain_init()
+  * 8775f08bf11 vulkan/wsi/x11: Configure images via params passed to
+    wsi_swapchain_init()
+  * 29e3fc8eb1e vulkan/wsi: Support configuring swapchain images as part
+    of swapchain init
+  * bfa08a1681b llvmpipe/cs: move compute code to explicit pointer types
+  * 1d6819bf5b3 llvmpipe/setup: move setup code to explicit pointers.
+  * 977476bb050 llvmpipe/fs: fix invocations access for opaque ptrs.
+  * 98efdc449d1 llvmpipe/cs: convert cs thread data to opaque friendly
+    api
+  * dd60813657b llvmpipe/cs: convert cs context to opaque friendly api
+  * a8bd993809a llvmpipe/fs: convert linear context to opaque pointers
+    friendly
+  * f0e9d3e497e llvmpipe/fs: convert thread data ptr to opaque ptr
+    friendly apis
+  * 1a7250ad966 llvmpipe/fs: start passing explicit context pointer
+    type.
+  * ae201bcd42a gallium: Do not include offscreen winsys if glx is
+    disabled
+  * 521da0360a0 docs/rusticl: Document minimum required bindgen version
+  * 13016d22c57 rusticl/bindgen: Use `allowlist-*` instead of `whitelist-
+    *` switches
+  * 5537f778a06 gallivm: avoid the use of an uninitialized value
+  * 3ed712f7483 zink: set layouts before possibly reordering image
+    copies
+  * 440c1e3702c zink: always unflag unordered_write when binding image
+    descriptors
+  * 4c58b92e44c aux/trace: dump depth_clamp for rasterizer state
+  * 0de63e9774f aux/trace: dump line_rectangular member of rasterizer
+    state
+  * 7c6f407d4c8 radv: Add and use AS and scratch layout structs
+  * bad75ed3f16 radv: fix emitting RBPLUS state when MRTs are compacted
+  * 1dd5d94f65d radv: Do an early check of distance in triangle culling.
+  * e06c332bf77 tc: don't use CPU storage for glBufferData
+  * 8af8dc97bc3 tc: do a GPU->CPU copy to initialize cpu_storage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Sep 2022 00:24:52 +0200
+
 mesa (22.3.0~git2209241523.0d66ed49b41~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
