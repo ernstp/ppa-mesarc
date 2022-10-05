@@ -1,3 +1,12 @@
+wayland-protocols (1.26+git2210032258.03ae934~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 03ae934 build: alphabetically sort list of staging protocols
+  * c605290 staging/content-type: Content type hint support
+  * dc625d5 ext-idle-notify: new protocol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 05 Oct 2022 02:45:25 +0200
+
 wayland-protocols (1.26+git2209261914.b784987~b~base2) bionic; urgency=medium
 
   * New snapshot:
