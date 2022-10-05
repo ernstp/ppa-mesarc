@@ -1,3 +1,53 @@
+libsdl2 (2.25.0+git2210050146.f18fae4c6~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f18fae4c6 Use DWARF 4 debug information when building using mingw
+  * cbb1cf0c9 cmake+xcode: only create SDL2::SDL2main target when it
+    does not exist again
+  * fdef96e23 Android: remove "nativeSetComposingText" since it's not
+    used anymore (and it may fail registering at init if code is cleaned
+    with proguard)
+  * eac3d6d3c SDL_video.c: fix variable 'i' may be uninitialized when
+    used here "_this->name = bootstrap[i]->name;"
+  * ad29875ee Wayland: Emulate mouse warp using relative mouse mode
+  * 9e3c4b9f3 Use the correct platform defines
+  * 5291e5cb7 Added version checking to SDLActivity.java
+  * 3607f8316 Find out if a controller is wireless using WGI (thanks
+    @DJm00n!)
+  * 321ca1091 opengles2: Texture names are GLuint, not GLenum.
+  * 01c5554f0 opengles2: SDL_GL_BindTexture() should bind all YUV
+    textures.
+  * f8f562dac iOS: remove dead pre-iOS 8 codepaths.
+  * bbeacd72c Fix some credit comments.
+  * cf331ef3f Fixed build
+  * 34b28002d Sync SDL wiki -> header
+  * 64ea6cefa SDL_ResetHint() no longer clears the callbacks associated
+    with a hint
+  * 19ecb64e0 Fixed build
+  * bd6afc231 Fixed sensor axes in vertical mode
+  * b4c25f571 Remapped the side button and trigger as paddles for the
+    mini-gamepad mode of the Joy-Cons
+  * f58a6506a Added paddle mapping for combined Joy-Cons
+  * 37dfa2629 Added paddle mapping for combined Joy-Cons
+  * a00565b8b Fixed displaying more than 18 buttons
+  * 6c8bf3af4 Add vertical mode for Nintendo Joy-Con (#6303)
+  * 0672dc8d8 Fixed combined Joy-Cons after https://github.com/libsdl-
+    org/SDL/commit/aa2e2f4843567cfe4e6f2f4ffa3f0b74dd98f1ba (thanks
+    @happyharryh!)
+  * bac54b3d2 Android: add script for building prefab archive
+  * 5e654a4bf Fixed Mac compile errors when OpenGL is disabled.
+  * c29629a5e fix permissions of Android.mk
+  * 6acc7a562 Mark the editbox as multi-line so the return key is always
+    visible
+  * 257cacab1 Android text input now works like iOS, where you get text
+    in progress and then backspaces and new text if autocomplete changes
+    it or the IME commits it.
+  * 28572702b Properly backspace over text that was entered when
+    autocorrect updates text with the iPhone on-screen keyboard
+  * e6640ef2d coreaudio: Possibly fixed another shutdown race condition.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 05 Oct 2022 02:40:52 +0200
+
 libsdl2 (2.25.0+git2209282221.e17f0c283~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
