@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (22.0.0+git2209291642.9c959fa~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 9c959fa Use DRM_CAP_CURSOR_WIDTH/HEIGHT if possible
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 05 Oct 2022 02:45:34 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (22.0.0+git2208181249.4e011b9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
