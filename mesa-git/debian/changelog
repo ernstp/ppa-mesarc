@@ -1,3 +1,32 @@
+mesa (22.2.0+git2210042354.d4d47ef6efa~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * d4d47ef6efa .pick_status.json: Mark
+    ff933485b7e328c5041050d5e41a2dd28a032a92 as denominated
+  * f79525dda6f ir3/analyze_ubo_ranges: Account for reserved consts
+    better
+  * bdc71b81c84 nir_lower_to_source_mods: Don't sneek in an abs modifier
+    from parent
+  * 4d6fe87a248 zink: fix nir_op_unpack_64_2x32 emission
+  * 9566c44069c aco: fix VMEMtoScalarWriteHazard s_waitcnt mitigation
+  * 642b4d6b6e1 pipe-loader: fix zink driinfo header path
+  * 1ff57b2c14b zink: fix/improve handling for multi-component bitfield
+    ops
+  * 1cfd9ec3d7e glthread: handle DeleteBuffers(n=-1) gracefully
+  * 3aa0a2a7c77 .pick_status.json: Update to
+    68f3c38c8011e3ff304a67b6ffb33fd21ee65b0c
+  * 9d1f0e8c829 .pick_status.json: Mark
+    5af6dad179dc4140964ab444a2a7f8cf8d16c561 as denominated
+  * 62ed7e993c5 zink: add a draw barrier when unbinding a sampler-bound
+    fb surface
+  * 71b0b79e581 gallium: Do not include offscreen winsys if glx is
+    disabled
+  * 5a4a4f8f8ef anv: remove HDC flush from invalidate bits
+  * 1ecc6cc1da5 .pick_status.json: Update to
+    e5631add0d1c97da4686f474735d45705facd308
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 05 Oct 2022 02:43:25 +0200
+
 mesa (22.2.0+git2209282103.897e382d9d3~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
