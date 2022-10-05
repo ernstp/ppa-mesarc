@@ -1,3 +1,51 @@
+mesa (22.3.0~git2210050059.537176181ec~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 537176181ec llvmpipe: bump LP_MAX_THREADS to 32
+  * 0a06db8fb98 ci/venus: enable render server for venus testing
+  * dadb29cf2e2 turnip: Don't use the dynamic color write enable during
+    non-dynamic.
+  * 6f27bf25046 gallivm: remove legacy pointer_get apis
+  * 0c865245900 gallivm/sample: use retrieved types to do opaque pointer
+    loads.
+  * 1a9889ae127 draw/llvmpipe: add way to return pointer types to
+    generic code.
+  * 02c675b1960 draw/llvmpipe: move texture/sampler/image member load to
+    opaque.
+  * 9fe8e5ccf7a gallivm/llvmpipe: add opaque pointers support to sampler
+  * 3d242c04475 llvmpipe/tests: port to new pointer interfaces.
+  * 0066e60fc4a anv: Split the debug part of anv_queue_exec_locked()
+  * bc384e24f00 anv: Use Vulkan types for priority as much as possible
+  * f5a58b8886e anv: Split i915 specific parts of
+    anv_queue_submit_simple_batch()
+  * 35ed40f3561 anv: Move fetch of i915 physical device parameters
+  * a17783b066f intel/dev: Split i915 specific parts of
+    intel_get_device_info_from_fd()
+  * 03b959286e2 intel: Make engine related functions and types not i915
+    dependent
+  * 24bc3b76446 docs: move VK_EXT_extended_dynamic_state3 out from 1.3
+  * 68f3c38c801 tu: Implement extendedDynamicState2PatchControlPoints
+  * 1bd3d28050d tu: DS primitive stride does not use patch control
+    points
+  * 042c135a993 tu: Fix param_stride placement
+  * 998122d9c2a mesa: fix GL_INVALID_OPERATION in
+    glEGLImageTargetTexStorageEXT
+  * 66b9c05bb9c ir3: Add missing cat5 encoding to asm parser
+  * dcab399a173 ir3/analyze_ubo_ranges: Account for reserved consts
+    better
+  * c58d633dd2f ir3: Move fixup_regfootprint() to ir3_collect_info()
+  * 7d1b8c8ab27 ir3: Delete outputs from fixup_regfootprint()
+  * 34a390569d3 v3dv/pipeline: use a array instead of individual pointer
+    to stages
+  * cc06b7e00d8 aco: Use s_pack_ll for s_bfe operand on GFX9+.
+  * 1cf1a94f976 intel: revert preemption disable via VFG changes
+  * 9ebe893a61f nir_lower_to_source_mods: Don't sneek in an abs modifier
+    from parent
+  * 8945375b80c vulkan: update beta and video headers to 1.3.230
+  * fbe7b6f6a20 gallium/tgsi: handle temps/outputs array.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 05 Oct 2022 02:41:19 +0200
+
 mesa (22.3.0~git2209282335.2044f2910ca~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
