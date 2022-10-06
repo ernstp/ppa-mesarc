@@ -1,3 +1,43 @@
+libsdl2 (2.25.0+git2210062110.b4aba1015~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b4aba1015 Reverted game controller buttons from interacting with
+    message box dialogs
+  * 893c87b27 Fixed game controller buttons being unresponsive when the
+    on-screen keyboard is up
+  * 914a65e09 wayland: Don't unset min/max values when entering
+    fullscreen via a compositor event
+  * 69cf5fb0e wayland: Remove surface type helpers
+  * c2b0c41c0 wayland: Set/unset the opaque regions on surfaces when
+    transparency is toggled
+  * ea5958009 wayland: Set the damage buffer size when supported
+  * a8cb7bbe2 wayland: Add dedupe logic to window geometry configuration
+  * f687cbd4c Clarified that GNU sort isn't required, we just need the -
+    V option to be supported
+  * 8c587636d GNU sort isn't available on older macOS and some BSD
+    systems
+  * e3b2830f9 updated VS project file
+  * d2160c29d iOS: implement SDL_GetWindowSizeInPixels.
+  * fa7ffa4e8 change the iconv configuration option names to be more
+    verbose.
+  * 4ca86dae2 Sync SDL wiki -> header
+  * ddc3de602 Added mapping for PS5 controller over Bluetooth on Android
+    12
+  * 81afb3e30 Need to swap endianness when extracting the CRC from game
+    controller mappings
+  * 294ccba0a better wording for --enable-iconv description
+  * 92c71ae38 [iOS] respect initial status bar configuration when
+    displaying the launch storyboard
+  * 5b1313647 [UIKit] handle app lifecycle events in a custom object
+    instead of AppDelegate
+  * c9f60cce4 cmake+autotools: add option to enable/disable iconv
+  * e41942e81 fix compilation error SDL_coreaudio mixing declarations
+    and code
+  * d0657fde3 cmake: Use DWARF 4 debug information when building using
+    mingw
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Oct 2022 23:12:52 +0200
+
 libsdl2 (2.25.0+git2210050146.f18fae4c6~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
