@@ -1,3 +1,36 @@
+mesa (22.3.0~git2210060730.1ebd3fb3ad8~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1ebd3fb3ad8 ci/etnaviv: add GC7000 support
+  * 37cddadf293 ci/bare-metal: introduce BM_MKBOOT_PARAMS
+  * 13c6d7e97d5 ci: switch to mkbootimg.py
+  * 1cba34d8d53 ci: include etnaviv support in ARM64 container
+  * df3fdbdeb50 aco: Fix build error with std::max on GCC 12
+  * 3ca8402ec71 ac/nir/ngg: Fix cross-invocation indices and cull
+    outputs.
+  * 458fc9ce815 cso: asst. clean-ups in cso_context.[ch]
+  * faf8398893d cso: asst. clean-ups in cso_cache.[ch]
+  * eaa93d71775 cso: use util_bitcount
+  * 983e06af2ba cso: asst. clean-ups in cso_hash.[ch]
+  * 406a1854d07 vulkan_hasvk: set READ/WRITE_WITHOUT_FORMAT for buffer
+    views
+  * b75fbfdd469 anv: set READ/WRITE_WITHOUT_FORMAT for buffer views
+  * 847361ba072 panfrost: Remove load_kernel_input path
+  * deb3810f1e2 agx: Remove load_kernel_input path
+  * 6dcad8a13b3 lavapipe: zero-init sampler objects
+  * 2aac8ef1256 lavapipe: remove continue statements in emit_state() to
+    be more consistent
+  * 77515d722b5 zink: Map ETC1 to ETC2 to avoid uncompressing in the
+    frontend.
+  * 061914ad833 zink: Enable ASTC texture format translation.
+  * 44894ba8b1d zink: enable native ETC2 if vk driver supports it
+  * 270ea2ac7e7 zink: Skip border color clamping for compressed formats.
+  * da04bbe5862 ci/zink: Clear stale xfails for turnip.
+  * afe4b534b52 freedreno: Fix graphic glitches on a4xx and a5xx
+  * 1d32bcdcb2a iris: better error message with GuC loading failures
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Oct 2022 23:13:19 +0200
+
 mesa (22.3.0~git2210050059.537176181ec~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
