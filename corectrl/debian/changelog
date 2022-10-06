@@ -1,3 +1,11 @@
+corectrl (1.4.0~git2210051705.67d803e~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 67d803e Install app binary and library files into GNUInstallDirs
+    directories
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Oct 2022 23:12:33 +0200
+
 corectrl (1.4.0~git2209271317.4b54aff~b~mesarc16) bionic; urgency=medium
 
   * New snapshot:
