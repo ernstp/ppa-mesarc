@@ -151,7 +151,6 @@ confflags += \
 	-Dvulkan-drivers="[$(VULKAN_DRIVERS_LIST)]" \
 	-Dglvnd=true \
 	-Dshared-glapi=enabled \
-	-Dgallium-xvmc=disabled \
 	-Dgallium-omx=disabled \
 	-Db_ndebug=true \
 	-Dbuild-tests=false \
