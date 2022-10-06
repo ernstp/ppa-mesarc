@@ -1,3 +1,11 @@
+libglvnd (1.5.0+git2210061709.58d49d7~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 58d49d7 Merge branch 'fix-glx-x32-assembly' into 'master'
+  * 6c5497e GLX: Fix assembly stubs for x32
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Oct 2022 23:12:45 +0200
+
 libglvnd (1.5.0+git2209201605.9215f34~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
