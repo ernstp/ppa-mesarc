@@ -1,10 +1,10 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: meson
 Upstream-Contact: jpakkane@gmail.com
-Source: https://github.com/jpakkane/meson
+Source: https://github.com/mesonbuild/meson
 
 Files: *
-Copyright: 2012-2015 The Meson development team
+Copyright: 2012-2021 The Meson development team
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.

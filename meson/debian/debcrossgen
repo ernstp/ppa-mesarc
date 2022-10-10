@@ -80,7 +80,8 @@ def run(options):
         cmd = ['dpkg-architecture']
     else:
         cmd = ['dpkg-architecture', '-a' + options.arch]
-    output = subprocess.check_output(cmd, universal_newlines=True)
+    output = subprocess.check_output(cmd, universal_newlines=True,
+                                     stderr=subprocess.DEVNULL)
     data = {}
     for line in output.split('\n'):
         line = line.strip()
@@ -109,6 +110,10 @@ def run(options):
             ofile.write("pkgconfig = '%s'\n" % locate_path("%s-pkg-config" % host_arch))
         except ValueError:
             pass # pkg-config is optional
+        try:
+            ofile.write("cups-config = '%s'\n" % locate_path("cups-config"))
+        except ValueError:
+            pass # cups-config is optional
         ofile.write('\n[properties]\n')
         write_args_from_envvars(ofile)
         ofile.write('\n[host_machine]\n')

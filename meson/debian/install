@@ -1,0 +1,4 @@
+#!/usr/bin/dh-exec
+meson.py => /usr/bin/meson
+debian/debcrossgen /usr/share/meson
+data/shell-completions/zsh/_meson /usr/share/zsh/vendor-completions
