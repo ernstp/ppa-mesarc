@@ -1,3 +1,13 @@
+corectrl (1.4.0~git2210081937.57d1a18~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 57d1a18 CHANGELOG: add version 1.3.1 notes
+  * a1e658c Merge branch 'fix-array-error' into 'master'
+  * 98a79ea Remove C designate initializations on some structs
+  * 076381c Fix compilation issues with Linux 6.0 api headers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Oct 2022 18:24:20 +0200
+
 corectrl (1.4.0~git2210051705.67d803e~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
