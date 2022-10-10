@@ -1,3 +1,45 @@
+mesa (22.3.0~git2210101220.55f6a2bb51a~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 55f6a2bb51a gallium: normalized_coords -> unnormalized_coords
+  * 4e7b9aaa066 r300: don't use smooth line if not requested
+  * 98944b327b4 util/radeonsi: enable zerovram workaround for Exanima
+  * 3200b5c46b2 util/conf: enable init to zero workaround for Exanima
+  * 091b5b08d44 pps: enable track_event in intel.cfg
+  * e68adf19bc3 radv/rra: Transcode nodes recursively
+  * 0c6c30d2117 ci: uprev DXVK to 1.10.3
+  * 27aa1720120 isaspec: Fix out of date comment
+  * c0cdc148f40 freedreno: Add perf-debug trace
+  * f6f72b56296 freedreno/drm: Don't call kernel with no ops
+  * 6dcc5240352 freedreno: Use TC cpu-storage to shadow buffers
+  * 3aa76e6a05b r600: info.stage MESA_SHADER_KERNEL as
+    MESA_SHADER_COMPUTE
+  * 98cace52246 r600: set clear_buffer = u_default_clear_buffer
+  * 505dd284c1a radv: Remove main_loop_case_visited
+  * d4345ec4d22 radv: Use cache_uuid for accel struct compatibility
+  * 12efb83ae89 gallivm/sample: refactor multisample offset calcs code.
+  * b4f132b2dd0 gallivm/nir: drop some unused struct members.
+  * c457e1f0e4d gallivm/sample: move some first_level/last_level calcs
+    out
+  * 3052d30dc21 CI: Re-enable Collabora devices
+  * b666c203eed gallium/u_threaded_context: remove stale comment
+  * 12acee17fad frontends/va: reallocate surface for yuv400/yuv444
+    picture
+  * 3e2f7905a63 radeonsi/vcn: enable jpeg decode of yuv444 and yuv400
+  * 6b933676cca frontends/va: support yuv 400/444 rt_formats in vaconfig
+  * d2c0ff1cafb frontends/va: add support for yuv400 and yuv444
+  * 9055ab9de33 util/format: add util format y8_400_unorm
+  * 791f1874059 pvr: Add vulkan shader factory headers for Query and
+    clear APIs.
+  * 0923de04bae pvr: Split pds compute shader create and upload code for
+    reuse.
+  * b8d9afe75ce pvr: Remove double error reporting.
+  * b03e73a0241 pvr: Fix allocation size passed in
+    pvr_cmd_buffer_alloc_mem.
+  * 0b694c2eb35 pvr: Fix heap type of availability_buffer allocation.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Oct 2022 18:24:59 +0200
+
 mesa (22.3.0~git2210060730.1ebd3fb3ad8~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
