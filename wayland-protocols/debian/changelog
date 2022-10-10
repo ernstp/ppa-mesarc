@@ -1,3 +1,11 @@
+wayland-protocols (1.27+git2210101020.e631010~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * e631010 build: Bump version to 1.27
+  * 115ba71 xdg-shell: ack_configure must be strictly monotonic
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Oct 2022 18:27:04 +0200
+
 wayland-protocols (1.26+git2210032258.03ae934~b~base2) bionic; urgency=medium
 
   * New snapshot:
