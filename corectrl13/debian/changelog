@@ -1,3 +1,20 @@
+corectrl (1.3.1+git2210081932.b4ea422~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * b4ea422 Bump version to 1.3.1
+  * 86da8ae Fix compilation issues with Linux 6.0 api headers
+  * cc4645c Remove C designate initializations on some structs
+  * a8b62a1 Install app binary and library files into GNUInstallDirs
+    directories
+  * 8d9b2e9 Fix CPU performance scaling mode not being restored from
+    file
+  * 89dc299 Use center alignment for voltage 'Auto' text fields on
+    FVControl
+  * 88aebf1 Add copyright headers to some qml files
+  * afa704f Require Qt 5.9 or compatible version
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Oct 2022 18:24:07 +0200
+
 corectrl (1.3.0+git2209181956.8ea8196~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
