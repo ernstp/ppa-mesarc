@@ -1,3 +1,42 @@
+libsdl2 (2.25.0+git2210101750.b737833d3~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b737833d3 N3DS: Turn on SDL_WERROR in CI.
+  * 6784d84c9 N3DS: Fix `-Wformat` warnings in tests.
+  * 43a2b0b1e N3DS: Use macro to correct axis.
+  * 49c25b1da N3DS: Fix PrivateSensorUpdate call.
+  * cb1972b3b N3DS: ZL and ZR should be considered as triggers.
+  * 86a8714fe N3DS: Refactor joystick module to avoid globals.
+  * 392f3882d N3DS: Use SDL_Sensor instead of Joystick sensors.
+  * 27557b62b N3DS: Prefix timer sources with `N3DS_`.
+  * efc93e685 N3DS: Don't set `num_display` by hand.
+  * c7c0e81c1 N3DS: Update README.
+  * 83ec6062a N3DS: Move gfxInit and hidInit from main to video.
+  * 266014faa N3DS: Use SDL_Touch instead of the Joystick touch.
+  * f9785702a N3DS: Deduce screen from window's display.
+  * 46a13ad97 N3DS: NEON is likely not supported.
+  * af2bc2ed0 N3DS: Use osSetSpeedupEnable instead of PTMSYSM.
+  * 03bbbcd85 N3DS: Use CreateJoystickGUIDForName.
+  * 2b2693ae9 N3DS: Use asprintf instead of snprintf.
+  * 655275378 N3DS port (squashed)
+  * 61b5360e1 Only check to see if the ICC profile changes when the
+    display changes or we gain focus
+  * 6ffc45b0e Removed "undefined" argument for Apple platforms.
+  * ec1137dfb cmake: Apply CETCOMPAT fix from ef988fe1 to tests
+  * f99fc3268 d3d12: fixed window resize handling
+  * 490c20f93 d3d12: reset the vertex buffer size when it is released
+  * efdb390ca Disable the HIDAPI Wii driver by default as it doesn't
+    work with the dolphinbar
+  * 6391ad970 wayland: Factor out common libdecor frame commit code
+  * b0a9396b0 wayland: Remove XDG surface geometry calls
+  * b91ddbc3e wayland: null-terminate drop data
+  * 9df1af352 Sync SDL wiki -> header
+  * d02203952 testhaptic: fix watcom "&array may not produce intended
+    result" warning
+  * 151c23415 ci: Add SDL_WERROR to a few configurations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Oct 2022 18:24:30 +0200
+
 libsdl2 (2.25.0+git2210062110.b4aba1015~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
