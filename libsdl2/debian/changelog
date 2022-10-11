@@ -1,3 +1,31 @@
+libsdl2 (2.25.0+git2210112333.fb32effd1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * fb32effd1 testevdev: Fix detection of word size
+  * e710440f5 Vita: Fix typo in CI CMake command.
+  * be2cb0006 wayland: Check for the input handle before checking the
+    keyboard handle
+  * df1bd07de d3d12: actually execute the pending commands before
+    processing resize
+  * 0b88e609b wayland: Raise wl_seat maximum version to 8
+  * 41c718edc Fix memory leak in PSP_CreateTexture
+  * 6f224e4d9 Made timestamp_us of sensor events increase monotonically
+    for Nintendo controllers
+  * 4227a0b4f Vita: Turn on `SDL_WERROR` in CI.
+  * e99b05d6c Vita: Install bash in CI.
+  * fefd48eb9 PS2: Turn on `SDL_WERROR` in CI.
+  * 8117bfe5d PS2: Ignore warnings from toolchain headers.
+  * 047279460 PSP: Turn on `SDL_WERROR` in CI.
+  * 5ddac7e02 PSP: Fix type mismatch warnings.
+  * c1317175b PSP: Fix `Wformat` warnings.
+  * 669532d52 PSP: Remove dead code.
+  * 17322e2be dynapi: Optionally log every call into the SDL API.
+  * 450708350 Fixed build
+  * 680d0f043 Added support for undefined or centered position for
+    shaped windows
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Oct 2022 00:08:58 +0200
+
 libsdl2 (2.25.0+git2210101750.b737833d3~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
