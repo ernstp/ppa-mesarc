@@ -1,3 +1,31 @@
+mesa (22.2.1+git2210112227.0e2fa1aae82~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 0e2fa1aae82 radv: add radv_zero_vram workarounds for OpenGL games
+  * 9a3f61d9cf0 tu: Reset whether there is DS resolve for dynamic
+    subpass
+  * 12b9969fa47 clc/clover: Link clang statically when shared-llvm is
+    disabled
+  * 542475c0251 r300: don't use smooth line if not requested
+  * 199f2fe9e0f util/radeonsi: enable zerovram workaround for Exanima
+  * 753f3a7d7dc util/conf: enable init to zero workaround for Exanima
+  * db2417625e6 gallium/u_threaded_context: remove stale comment
+  * beb3819d66e nouveau: treat DRM_FORMAT_INVALID as implicit modifier
+  * 87f92ebdd55 r600/sfn: don't propagate registers into conditional
+    test
+  * 4760c763e4f r600/sfn: Always start a new CF after a KILL instruction
+  * 52eac47f751 freedreno: Fix graphic glitches on a4xx and a5xx
+  * c66624f59b0 turnip: Don't use the dynamic color write enable during
+    non-dynamic.
+  * 7173cb4f435 .pick_status.json: Update to
+    243aa6b2ec0c2626b1333ba666a6d6d60ede8505
+  * 610800395d2 docs: Add sha256 sum for 22.2.1
+  * 21e7392eb5f VERSION: update to 22.2.1
+  * d8021bbb094 docs: add release notes for 22.2.1
+  * 3ba10f961e0 docs: remove new_features.txt
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Oct 2022 00:11:34 +0200
+
 mesa (22.2.0+git2210042354.d4d47ef6efa~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
