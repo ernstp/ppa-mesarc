@@ -1,3 +1,41 @@
+mesa (22.3.0~git2210112330.20ad1678ab1~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 20ad1678ab1 docs: update calendar and link releases notes for 22.2.1
+  * b860a2b802f docs: Add sha256 sum for 22.2.1
+  * 7406a3e89f4 docs: add release notes for 22.2.1
+  * 69c22dd8173 zink: fix isNan mismatch between NIR and SPIR-V
+  * a730b1bb0a4 zink: stop enabling minmax filtering when not supported
+  * b87c08b3bf7 zink: fix invalid Offset set for variables which do not
+    need an offset
+  * 6eadd6d1698 radv/rra: Calculate bvh size requirements recursively
+  * e4283d857b8 radv/rra: Handle box16 nodes
+  * 7754f208cea radv: Use half floats for box16 coords
+  * 266f0ae9486 radv: Add radv_bvh_node_box16
+  * 5f859f805b7 radv: Rename node_internal to node_box32
+  * da856af2c92 draw: s/start_or_maxelt/start/ in llvm VS code
+  * 4c73a503e3e draw: move vs_slot var in tgsi/llvm_fetch_gs_input()
+  * 717572e5be3 draw: fix some const-correctness in draw_vbo()
+  * 0a809fca619 draw: make draw_geometry_shader_run() return void
+  * 8d8683ab1d0 draw: replace double conditional expression with if/else
+  * 645a3d24a1b draw: asst. clean-ups in
+    draw_pt_fetch_shade_pipeline_llvm.c
+  * baee3c62f71 draw: asst. clean-ups in draw_private.h
+  * bfaed9dd63e draw: clean-up count assignment in draw_pt_arrays()
+  * e4552632aab draw: asst. clean-ups in draw_pt.c
+  * 529707d4eff draw: asst. clean-ups in draw_split_tmp.h
+  * 39a42c48e3e draw: asst. clean-ups in draw_pt_vsplit_tmp.h
+  * 0a340419cb4 draw: asst. clean-ups in draw_pipe.c
+  * f83e284543c draw: asst. clean-ups in draw_prim_assembler.[ch]
+  * 8613316a31c draw: asst. clean-ups in draw_gs.[ch]
+  * 490f7a14f61 draw: asst. clean-ups in draw_cliptest_tmp.h
+  * 0d27e3b917a draw: asst. clean-ups in draw_llvm.c
+  * 4e6a32219b3 draw: asst. clean-ups in draw_pipe_aapoint.c
+  * 6af739bb9ef draw: asst. clean-ups in draw_pt_so_emit.c
+  * 9daf8531e55 draw: asst. clean-ups in draw_vertex.[ch]
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Oct 2022 00:09:30 +0200
+
 mesa (22.3.0~git2210101220.55f6a2bb51a~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
