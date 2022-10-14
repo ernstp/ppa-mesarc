@@ -1,3 +1,31 @@
+libsdl2 (2.25.0+git2210141936.6af17369c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 6af17369c Added mapping for Qanba Drone on Linux without HIDAPI
+  * 93b719676 Only update the battery level if we're on Bluetooth
+  * 120a957d0 Added support for the Qanba Drone Arcade Stick
+  * 6bb0c2a5c Added documentation for some scancodes
+  * 91ff88451 Disable "The key you just pressed is not recognized by
+    SDL." message by default
+  * 139192140 Fixed reported cases of "Keyboard layout unknown" messages
+  * 2c1923859 Don't remove entries from an existing scancode keymap
+  * 99f2a5039 X11 scancode mapping cleanup
+  * f5afb7d11 directfb: Fix return type of DirectFB_RenderPresent()
+  * fc73386f4 Fixed the mapping from raw joystick values to the expected
+    [SDL_JOYSTICK_AXIS_MIN, SDL_JOYSTICK_AXIS_MAX] range. (thanks Tas!)
+  * eea9f638e CI: Update to actions/checkout@v3.
+  * 7d230af51 testevdev: Explain why the test data is encoded the way it
+    is
+  * 81dee3194 testevdev: Add a static assertion for supported
+    sizeof(long)
+  * 5b9608e08 Remove D3D9 workarounds for Watcom.
+  * 2d7816e35 dynapi: Disable support for API call logging by default.
+  * f69e004d0 Android default to dynamic API disabled (see #6381)
+  * f6ff87788 Android default to dynamic API disabled (see #6381)
+  * 6836273d1 Use XIWarpPointer if compiled with xinput2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Oct 2022 20:36:47 +0200
+
 libsdl2 (2.25.0+git2210112333.fb32effd1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
