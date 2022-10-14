@@ -1,3 +1,45 @@
+mesa (22.3.0~git2210141508.2e50bf19cd9~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2e50bf19cd9 nir: move fusing csel and comparisons to
+    opt_late_algebraic
+  * aea311dbef4 r600/sfn: run cleanup passes after late algebraic opt
+  * cfc6bdb7606 hasvk: Correctly set NonPerspectiveBarycentricEnable on
+    gfx7
+  * eec49374b06 nir: fix NIR_DEBUG=validate_ssa_dominance
+  * 44ccaca41d4 util/mesa/wide: Rename _SIMPLE_MTX_INITIALIZER_NP to
+    SIMPLE_MTX_INITIALIZER
+  * be3c46964bd ci/bin: Remove whitespace from token files
+  * d52d51b24dc ci/bin: Fix requirements.txt
+  * bb6c43027ea agx: Reserve live-in regs at the start of block
+  * de6e11b8482 agx: Pass in max regs as a paramter to RA
+  * 68f89d4cc59 agx: Introduce ra_ctx data structure
+  * bcb2cf96880 agx: Write to r0l with a "nesting" instruction
+  * c9a96d46156 agx: Preload vertex/instance ID only at start
+  * f665229d770 agx: Print agx_dim appropriately
+  * 6c95572ef00 agx: Print instructions as "dest = src"
+  * 72a1e1f33f6 agx: Emit trap at pack-time, not during isel
+  * 1dcaade3e24 agx: Rename "combine" to "collect"
+  * 82e8e709cb8 agx: Dynamically size split instruction
+  * 7c9fba34bca agx: Switch to dynamic allocation of srcs/dests
+  * 544c60a1326 agx: Improve printing of immediate sources
+  * c2bc8c13846 agx: Don't prefix pseudo-ops
+  * 40f0ac20821 agx: Emit smaller combines for nir_op_vec2/3
+  * f4726cf240f agx: Set PIPE_SHADER_CAP_INDIRECT_CONST_ADDR
+  * 6a183a9ffd1 agx: Add iterators for phi/non-phi instructions
+  * d3880a63245 zink: disable fbfetch when flushing clears
+  * 1ae26de36f5 zink: unset rp_changed after initializing renderpass
+    attachments
+  * f72071fbc35 zink: clamp line_stipple_factor to 1 if stipple is
+    disabled
+  * 2710ef4c2af zink: don't add other usage bits for transient images
+  * 3dcc03d979b zink: check core feature for pipeline cache control
+  * 179e638bb82 zink: Fix dummy CB path decision for VK_EXT_cwe
+    presence.
+  * 6a18e154bce rusticl/mem: propper CL_MEM_ALLOC_HOST_PTR support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Oct 2022 20:37:19 +0200
+
 mesa (22.3.0~git2210112330.20ad1678ab1~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
