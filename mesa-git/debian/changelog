@@ -1,6 +1,12 @@
 mesa (22.2.1+git2210121823.d9f989928a6~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Oct 2022 20:48:52 +0200
+
+mesa (22.2.1+git2210121823.d9f989928a6~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
   * d9f989928a6 zink: fix isNan mismatch between NIR and SPIR-V
   * c7ff53ae514 zink: stop enabling minmax filtering when not supported
   * 07734660ad1 zink: fix invalid Offset set for variables which do not
