@@ -1,3 +1,40 @@
+mesa (22.3.0~git2210151015.9fc4cb8067e~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 9fc4cb8067e gallium/vl: Add opaque rgb pixel formats
+  * 8255739a0a5 mesa/main: remove driver-cap for ARB_point_sprite
+  * 310959d9fe1 mesa/st: rip out point-sprite cap
+  * b0d698c5328 rusticl: correctly check global argument size
+  * c935232822f rusticl: use 32-bit address format for 32-bit devices
+  * 66b3df3c152 clc: add 32-bit target
+  * b3a69d1c31a panfrost/ci: Disable t720 jobs
+  * eccc5600c3b zink: use util_dynarray_clear
+  * 17d8ff3a398 zink: fixup dynarray-type
+  * 510a34fbf33 zink: fix broken pool-alloc consolidation
+  * b49b18f0b7a anv: reduce BT emissions & surface state writes with
+    push descriptors
+  * ff91c5ca42b anv: add analysis for push descriptor uses and store it
+    in shader cache
+  * 01e282f23fe anv: initialization pipeline layout to 0s
+  * 8616f11a395 anv: track descriptor set layout flags
+  * d7f1569307b anv: limit push constant reemission
+  * 2db45f713a3 isl: avoid gfx version switch cases on the hot path
+  * 06d955ab210 anv: remove multiple push descriptors
+  * 803f438d852 anv: optimize 3DSTATE_VF emission
+  * 126f5bc15a7 anv: limit calls into cmd_buffer_flush_dynamic_state
+  * 54bc34f70a0 anv: comment out the Gfx8/9 VB cache key workaround for
+    newer Gens
+  * f8136ea5b63 anv: remove unused code
+  * cea113c9770 vulkan/runtime: don't lookup the pipeline disk cache if
+    disabled
+  * 6558ecf3ebb radv: Mark dEQP-VK.ray_query.misc.dynamic_indexing as
+    crashing in CI.
+  * b516f594905 vulkan/wsi: Add dep_libudev to idep dependencies
+  * 9cb251a0b06 ci/traces: Blender demo (Cube Diorama) flakes on Intel
+    APL
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 15 Oct 2022 19:23:44 +0200
+
 mesa (22.3.0~git2210141508.2e50bf19cd9~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
