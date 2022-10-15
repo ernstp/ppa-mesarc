@@ -1,3 +1,17 @@
+libsdl2 (2.25.0+git2210151902.e8fdb861e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e8fdb861e Removed redundant masking when loading the IMU calibration
+  * a6573f94a Fix bugs in IMU calibration loading for Nintendo
+    Controllers
+  * 620476865 wayland: Don't block on libdecor_dispatch()
+  * e89389ba0 wayland: Use MAP_PRIVATE when mapping the keyboard keymap
+    file descriptor
+  * 5129a0770 Steam Controller support defaults off, as documented in
+    SDL_hints.h
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 15 Oct 2022 19:23:15 +0200
+
 libsdl2 (2.25.0+git2210141936.6af17369c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
