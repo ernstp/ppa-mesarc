@@ -1,3 +1,51 @@
+mesa (22.3.0~git2210172233.6fbb87851cd~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6fbb87851cd d3d12: HEVC Set
+    D3D12_VIDEO_ENCODER_CODEC_CONFIGURATION_HEVC_FLAG_USE_ASYMETRIC_MOTI
+    ON_PARTITION when required by caps
+  * 8f654b90005 d3d12: Fix HEVC wrong caps detection due to bad
+    parenthesis in condition
+  * be7e2e5525b d3d12: HEVC Encode workaround for edge case in caps
+    reporting not contemplated by upper layer interface
+  * 3eed5931edf tu: Fix the size of patch control points state
+  * ebf7f7a1827 aco/spill: Fix spilling of Phi operands
+  * 829f769e602 pan/mdg: Fix 16-bit alignment with spiller
+  * 2c446b66364 pan/mdg: Limit work registers for large workgroups
+  * 9b19104a30b pan/mdg: Lower PIPE_COMPUTE_CAP_MAX_THREADS_PER_BLOCK on
+    Midgard
+  * 5c95be85ab5 panfrost/ci: Remove stale fail
+  * 16d061d3acd anv: Enable 16 bit float ops on devices that have a LSC
+  * 43169dbbe5f intel/compiler: Support 16 bit float ops
+  * 2e774180c61 Revert "panfrost/ci: Disable t720 jobs"
+  * c1cb7506bb3 v3dv/pipeline: keep qpu_insts around if we expect them
+    to be used later
+  * 7dcdd519385 glthread: leave dlist dispatch in place for Begin/End
+  * ca02da294ad radv: discard the PS epilog when the pipeline doesn't
+    use a fragment shader
+  * 7b3aae89126 radv: do not create a noop FS when the FS is imported
+    from a library
+  * c8849043a84 Revert "CI: Igalia farm is down"
+  * 675bcbb7a1c mesa: add EXT_debug_label support
+  * 70fef476334 ci/windows: Getting the default supported windows
+    version to be 7 when using mingw
+  * 79891bea1cb ci/windows: Remove -Dlibelf:warning_level=1 as libelf
+    subproject are already removed
+  * 2cb21fdd53f ci/windows: Enable gles1 for msvc
+  * 6905c258298 radv/rra: Use the accel struct type for header
+    validation
+  * 43756a9f76e radv/rra: Continue dumping accel structs if validation
+    fails
+  * e8547392b02 radv/rra: Add basic header validation
+  * 2ccd039174a radv/rra: Validate before gathering bvh info
+  * d83176d1c07 radv/rra: Fix dumps in the case of aliasing
+  * aa405b789eb CI: Igalia farm is down
+  * 2b64ff92843 util: Turn -DWINDOWS_NO_FUTEX to be pre_args
+  * 4c7a44413a0 mesa,gallium: Revert "Make point coord origin a CAP"
+  * 86c9aa6bfeb intel: Add and use intel_engines_class_to_string()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Oct 2022 23:02:51 +0200
+
 mesa (22.3.0~git2210151015.9fc4cb8067e~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
