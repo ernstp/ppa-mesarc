@@ -1,3 +1,24 @@
+libsdl2 (2.25.0+git2210172227.7c7cd2a60~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 7c7cd2a60 Fix issue #6037 (incorrect modifier flags on Wayland)
+  * 3903f4c88 PSP: Use vramalloc instead of conflicting valloc function
+  * 333935ff3 Make sure we completely unlock joysticks when opening
+    HIDAPI devices
+  * 47ba997f0 Disable the RAWINPUT joystick driver by default
+  * 5025f2403 Don't use RAWINPUT joystick driver on Windows XP
+  * f4e3af15a Simplify OSS test by removing OpenBSD specific location of
+    the soundcard.h header
+  * 485bb3565 Fixed bug #6401 - change the order of triangles when using
+    RenderCopy, RenderCopyEx and RenderFillRect
+  * 70dfd6dd1 Added mapping for Xbox Series X controller
+  * ed412c138 wayland: Cleanup event source comments, headers, and error
+    reporting
+  * 22461383c SDL_audiocvt: Respct the SDL_HINT_AUDIO_RESAMPLING_MODE
+    hint
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Oct 2022 23:02:19 +0200
+
 libsdl2 (2.25.0+git2210151902.e8fdb861e~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
