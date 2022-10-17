@@ -1,3 +1,10 @@
+xwayland (2:22.1.3+git2210030917.9e4b7948d~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 9e4b7948d xwayland: Delay wl_surface destruction
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Oct 2022 23:04:58 +0200
+
 xwayland (2:22.1.3+git2209140956.0f1c39de0~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
