@@ -1,3 +1,45 @@
+mesa (22.2.1+git2210181903.aa1df86867f~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * aa1df86867f gallivm: handle llvm coroutines for llvm > 15
+  * ab947b57784 anv: add missing tracepoint
+  * 3ae1f0120b5 virgl: Report CONSTANT_BUFFER_SIZE according to
+    GL_MAX_UNIFORM_BLOCK_SIZE
+  * e2472db43bd d3d12: Implement cap
+    PIPE_VIDEO_SUPPORTS_CONTIGUOUS_PLANES_MAP
+  * 30511c9e059 gallium/va: vaDeriveImage to check
+    PIPE_VIDEO_SUPPORTS_CONTIGUOUS_PLANES_MAP
+  * 6a8e593476d .pick_status.json: Mark
+    dbd022f2ab43ff0a9ecc05c61123467e25f109de as backported
+  * f1328901300 nir: Fix nir_fmax_abs_vec_comp
+  * d39f908b20e .pick_status.json: Mark
+    4c7a44413a07d3fb314f786e047bb7212c082a6c as denominated
+  * 9c1d08b94d6 .pick_status.json: Update to
+    b02e9ef35a0446019cda9473e4c355c7cc4bb24d
+  * f9dc71cebef aco/spill: Fix spilling of Phi operands
+  * 86f250ac272 pan/mdg: Fix 16-bit alignment with spiller
+  * 9a7a02799e8 pan/mdg: Lower PIPE_COMPUTE_CAP_MAX_THREADS_PER_BLOCK on
+    Midgard
+  * 18a57663d31 glthread: leave dlist dispatch in place for Begin/End
+  * 1a52e9be02f util: Turn -DWINDOWS_NO_FUTEX to be pre_args
+  * a6fcc625455 gallium/vl: Add opaque rgb pixel formats
+  * 9ef9b9e6c2f anv: initialization pipeline layout to 0s
+  * 19ac65f5ac7 vulkan/runtime: don't lookup the pipeline disk cache if
+    disabled
+  * 688deb2667b vulkan/wsi: Add dep_libudev to idep dependencies
+  * ab1dffa8f70 zink: disable fbfetch when flushing clears
+  * 266850c3f51 zink: unset rp_changed after initializing renderpass
+    attachments
+  * 6fc9dc68f67 zink: clamp line_stipple_factor to 1 if stipple is
+    disabled
+  * 4631b956889 glthread: fix matrix stack depth tracking
+  * a9dcaf14a3d nir/lower_system_values: Fix cs_local_index_to_id with
+    variable workgroups
+  * a6ac6084465 .pick_status.json: Update to
+    3eed5931edf6e5f45378b013ca21f98f17af2b34
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Oct 2022 20:06:17 +0200
+
 mesa (22.2.1+git2210121823.d9f989928a6~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
