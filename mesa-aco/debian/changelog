@@ -1,3 +1,41 @@
+mesa (22.3.0~git2210191807.3873ef47f7a~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 3873ef47f7a pvr: Remove outdated comments.
+  * 849c2e14abf pvr: Handle pipeline barrier vk_sync.
+  * d19835e43cd pvr: Fix overflow before widen warning for rgn headers
+    size calculation.
+  * 6a35563de0e pvr: Fix possible seg fault on csb copy.
+  * f9eb0c13a03 freedreno/a6xx: Drop max_scissor tracking
+  * 2ad637f52aa freedreno/a6xx: Update caps
+  * dc70a940d4b freedreno/a6xx: Fix primitives-generated query
+  * f26631c6de5 freedreno/a6xx: Fix MAX_GEOMETRY_OUTPUT_VERTICES cap
+  * b96e8050d6f freedreno/ir3: Lower all the 64b
+  * 1b38d233fc5 freedreno/ir3: Fix clipvertex with GS+tess
+  * 0f6f6718247 freedreno/a6xx: Remove unused param
+  * 533b87dff09 mesa/st: ARB_vertex_attrib_64bit depend on glsl>=410
+  * 1aeca308a20 docs: Update freedreno features
+  * 8dba83bb8d9 driconf: add a workaround for Cossacks 3
+  * 53e7f3afbd2 driconf: add a workaround for a cursor issue with
+    kwin_wayland
+  * c849c41b0da docs: correct spelling of "freedreno"
+  * 264080057a3 docs: correct spelling of "traveling"
+  * ead77aeb829 docs: correct spelling of "correctly"
+  * de9449c17a5 docs: ie. -> i.e.
+  * 51481b8f4c8 docs: fractionary -> fractional
+  * f3475859fa7 docs: correct spelling of "rasterizer"
+  * c20f4484d32 docs: correct spelling of "explicitly"
+  * 60e8c443b1c docs: correct spelling of "addition"
+  * b469d9746f7 docs: correct spelling of "average"
+  * f8d047c08b0 docs: correct spelling of "laid"
+  * 9d55200e72c docs: correct spelling of "compression"
+  * 5590fbd5305 docs: correct spelling of "commutativity"
+  * 57db29e967a docs: correct spelling of "hierarchy"
+  * fa210550b0f docs: correct spelling of "maximum"
+  * fcd93216c69 docs: correct spelling of "synced"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Oct 2022 20:04:14 +0200
+
 mesa (22.3.0~git2210172233.6fbb87851cd~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
