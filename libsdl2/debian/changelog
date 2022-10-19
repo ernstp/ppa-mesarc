@@ -1,3 +1,37 @@
+libsdl2 (2.25.0+git2210191705.c6e896197~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * c6e896197 Define _USE_MATH_DEFINES for Visual Studio (thanks
+    @pionere!)
+  * d542f43b2 cmake: add SDL_INSTALL_CMAKEDIR cache variable to override
+    location of cmake config files
+  * f28cf2b0d Also remove the OpenBSD comment about OSS
+  * e7ab581d7 coreaudio: Dispose of AudioQueue before waiting on the
+    thread.
+  * aefc6b5bb Renamed variables, index is the singular of indices
+  * 965ba1e09 fix SDL_SendEditingText when long composition text is
+    enabled and strlen(text) == SDL_TEXTEDITINGEVENT_TEXT_SIZE
+  * dfbb93dd0 SDL_Renderer / GLES2: add specific list of indice to
+    render rect (see #6401)
+  * e8a4c23ce Revert commit 790fa3156cfee847a7c0b34986de0cd7fdd7438f.
+    SDL_BLENDMODE_INVALID case is probably used for custom blendmode
+  * 790fa3156 Fix warning: enumeration value 'SDL_BLENDMODE_INVALID' not
+    explicitly handled in switch
+  * 3ec4c9b3b Merge remote-tracking branch 'refs/remotes/origin/main'
+  * 3d99d3102 Fixed bug #6401 - back-end can choose the order the
+    triangles when rendering rects, attempt to fix small glitch
+    rendering.
+  * 428b5ae54 PSP: Reorder extra imports
+  * 285cbf6fd Revert commit 485bb3565b6da24620e4eedde837fbfbc5cee6d2.
+    "Fixed bug #6401 - change the order of triangles when using
+    RenderCopy, RenderCopyEx and RenderFillRect" because the glitch
+    reappears on other backend
+  * 0bc852ce5 Revert "Disable the RAWINPUT joystick driver by default"
+  * 7e1088167 Fixed command modifier on macOS
+  * cdf312c83 Fixed mouse warp after resizing window on macOS.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Oct 2022 20:03:44 +0200
+
 libsdl2 (2.25.0+git2210172227.7c7cd2a60~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
