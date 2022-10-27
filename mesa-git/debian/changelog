@@ -1,3 +1,37 @@
+mesa (22.2.2+git2210261923.159bc5b3ded~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 159bc5b3ded etnaviv: properly reference flush_resources
+  * e7ef15065e7 r600/sfn: evaluate LDS location for color and clip-
+    vertex too
+  * dd2b4ed6915 r600: Account for color and clipvertex when evaluating
+    LDS space
+  * a08c64401e7 panfrost: Don't use lower_wpos_pntc on Midgard
+  * a784fe2937a .pick_status.json: Update to
+    16e0702ec7103c06f2f33654b6e41498e2eabf8e
+  * 29bb4b3211f frontends/va: fix av1 decoding image distortion issue
+  * b6c47ce3651 gallivm: Fix LLVM optimization with the new pass manager
+  * 9bda61ae91e zink: don't flag ubo0 as used in shaders with indirect
+    ubo access
+  * 677721202e2 r300: respect buffer offset in r300_set_constant_buffer
+  * 80f296268e6 aco: Don't use opsel for p_insert.
+  * 2572a61af1f aco: swap v_perm_b32 operands
+  * 5a11a0f99c6 radeonsi: zero init using the correct components count
+  * b2e3963fd94 nir: Fix ifind_msb_rev constant folding.
+  * 8771aff787b nir/opt_phi_precision: Fix missing swizzles when
+    narrowing phi srcs.
+  * 7a124c19269 meson: with_glx never assigned to 'gallium-xlib', so
+    need add with_glx == 'xlib' for dep_glproto
+  * 4baf2e9c9e3 .pick_status.json: Update to
+    938e13c57d095dafb752a2edf22c6a02afcd0b28
+  * d9612f8e99a .pick_status.json: Update to
+    93febe1198a03c16c18fc413501ba710edc8b1ec
+  * 16d33842101 docs: Add sha256 sum for 22.2.2
+  * c4f06862070 VERSION: update to 22.2.2
+  * 247d83cccfa docs: add release notes for 22.2.2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Oct 2022 05:26:03 +0200
+
 mesa (22.2.1+git2210181903.aa1df86867f~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
