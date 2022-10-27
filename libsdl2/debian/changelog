@@ -1,3 +1,56 @@
+libsdl2 (2.25.0+git2210270419.4223e6ac7~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 4223e6ac7 wayland: Early-out sooner when requesting fullscreen on a
+    popup
+  * 11a24a34e Sync SDL wiki -> header
+  * 41d38c0f6 shape: More robust handling of failure cases in
+    CreateShaper.
+  * c8d20f96b shape: Free platform-specific shaped window data.
+  * 30c2dac78 wayland: Remove duplicate #include statement
+  * 25d0473aa Removed Razer Onza Tournament Edition mapping
+  * e837debc2 Bindings should have a trailing comma, so the CRC can be
+    appended
+  * b6cf889af Use ScreenCount() instead of SDL_GetNumVideoDisplays()
+  * c74ea994a Added support for the Razer Raiju Tournament Edition
+    controller in Bluetooth mode
+  * 72f6e216d Disabled debug logging
+  * e3f5744db Don't use XIWarpPointer() on multi-display configurations
+  * 393acf636 Sync SDL wiki -> header
+  * 98dfc9296 build-scripts/fnsince.pl: Deal with new point-release
+    system.
+  * 5fbf8f6cf Adds DualSense Edge
+  * da478d1f6 Fixed build
+  * a6018ae57 Added support for the NVIDIA SHIELD controller v1.03 to
+    the HIDAPI driver
+  * 20beed302 SDL_EGL_GetProcAddress: remove unnecessary underscore-
+    prepended search.
+  * 053b5f85f SDL_windowsevents: minimize white screen flash on window
+    creation
+  * b6e7c743d SDL_cpuinfo: define __ARM_ARCH=8 for _M_ARM64
+  * d2300516c cocoa: set sRGB colorspace on nswindow
+  * 019e9d4c9 SDL_cocoavideo.m: add missing SDL_cocoaopengles.h include
+  * dd72f3f03 Added comment for #endif
+  * 3d35c0858 fix a few 'unused but set variable' and 'unused function'
+    warnings
+  * f4d1f5ed5 SDL-HIDPS4: fix PS4 Slim controller over BT - it sends the
+    same input report as the it does over USB, but with a larger packet
+    size
+  * 5bd13dec1 Merge commit '8db3a33872cfbefcdfb059beea92338a7873f89e'
+    into main
+  * e6742d05f Merge commit '413500ab69d9ac288a73946073d4414376ca17d2'
+    into main
+  * 5373ad6ff Merge commit '2ebaafa6c9334071b664b15d045656250690dd96'
+    into main
+  * 7acab5045 Merge commit 'c3b13346e0a2200f1521cf064b9a602c8196e6a6'
+    into main
+  * f07673a12 Merge commit 'd4d99e8c29da350379c991a8360d544d2c9eaa32'
+    into main
+  * d41fb3c48 Merge commit 'cfd5d8eb29c8958de3333632a96032d3481816e5'
+    into main
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Oct 2022 05:23:25 +0200
+
 libsdl2 (2.25.0+git2210191705.c6e896197~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
