@@ -1,3 +1,48 @@
+mesa (22.3.0~git2210270416.d9a257b339b~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * d9a257b339b nv50/ir: nir_op_b2i8 and nir_op_b2i16
+  * cc961a28f85 docs: update to latest venus driver support
+  * a408f5cafe9 venus: add VK_EXT_depth_clip_control support
+  * 8f7b5bf34b4 venus: add VK_EXT_primitives_generated_query support
+  * 4f22fb117dc venus: sync to latest venus protocol headers
+  * 4f2471e8c68 venus: handle
+    VkAndroidHardwareBufferFormatProperties2ANDROID
+  * 1c010da0831 venus: remove redundant codes
+  * 6a29cb2654f nir/lower_bool_to_int32: add support for lowering
+    functions.
+  * 117b32a5944 nir/divergence_analysis: add missing
+    desc_set_address_intel
+  * edda5731c09 nir/divergence_analysis: add some missing RT intrinsics
+  * db42ed1e04c vulkan/wsi/wl: correctly find whether the compositor
+    uses the same GPU
+  * 93dbd14ed77 anv: init major/minor before WSI
+  * 324d9455897 anv: disable mesh in memcpy
+  * 2ea481b2f0a Zink: add Zink profiles file
+  * be235edfe2b zink: add profile documentation
+  * 8dd314d2035 zink: handle broken resource mapping deadlocks
+  * 5e05d98848c nir: Unconditionally call nir_trim_vector in
+    nir_lower_readonly_images_to_tex
+  * d9cf6de4a8a nir: Misc. style fixes to
+    nir_lower_readonly_images_to_tex
+  * b684a603f10 nir: Use nir_shader_instructions_pass in
+    nir_lower_readonly_images_to_tex
+  * a3c3d0d2871 nir: Reformat a comment
+  * 16e0702ec71 etnaviv: properly reference flush_resources
+  * 20b9eece6ef winsys/amdgpu: Set RADEON_FLAG_32BIT again
+  * d50db140238 zink: limit gl_Layer clamping to drivers that need it
+  * 2562c9c5c6b zink: clamp gl_Layer output to 0, if framebuffer is not
+    layered
+  * 72d18325dd8 zink: add new framebuffer_is_layered state
+  * fd89690795a zink: add pushconst only pipeline layout
+  * a0c6286485c zink: cleanup zink_pipeline_layout_create
+  * 0f070923e83 zink: use unified pushconst layour for passthorugh tcs
+  * ec4ac380f1e zink: cleanup pushconst interface between
+    driver/compiler
+  * 001c8fdfbf9 lavapipe: stop allocating 0 size const buffer
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Oct 2022 05:23:58 +0200
+
 mesa (22.3.0~git2210191807.3873ef47f7a~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
