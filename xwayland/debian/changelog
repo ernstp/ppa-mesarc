@@ -1,3 +1,14 @@
+xwayland (2:22.1.4+git2210200924.86887aa87~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 86887aa87 Bump version to 22.1.4
+  * 71e8be4e3 xwayland: Clear the "xwl-window" tag on unrealize
+  * f883f6bc6 xwayland: set tag on our surfaces
+  * aff0a4fb5 build: Bump wayland requirement to 1.18
+  * cf29f7d4c Forbid server grabs by non-WM on *rootless* XWayland
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Oct 2022 05:28:02 +0200
+
 xwayland (2:22.1.3+git2210030917.9e4b7948d~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
