@@ -1,3 +1,10 @@
+corectrl (1.4.0~git2210282000.eccb490~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * eccb490 Use SPDX unique license identifiers on file headers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 29 Oct 2022 13:15:09 +0200
+
 corectrl (1.4.0~git2210081937.57d1a18~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
