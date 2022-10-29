@@ -1,3 +1,20 @@
+libsdl2 (2.25.0+git2210282219.b9e1d1b4d~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b9e1d1b4d events: Rename SDL_SendKeyboardKeyComplete to
+    SDL_SendKeyboardKeyAndKeycode.+
+  * 922154811 emscripten: Make an attempt at correct keyboard
+    scancode/keycodes.
+  * 0ddec7e42 docs: Add notes about Emscripten audio quirks.
+  * a8f019b1f Using ST and removing warnings
+  * f2ebedae9 adding texture function
+  * 5de01eb0a Make render to use new functions
+  * f500c1476 Fixed DirectFB build
+  * 9e8d2f394 video: Don't use texture framebuffer on Windows Subsystem
+    for Linux.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 29 Oct 2022 13:15:22 +0200
+
 libsdl2 (2.25.0+git2210270419.4223e6ac7~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
