@@ -1,3 +1,48 @@
+mesa (22.3.0~git2210290420.10ace5de3af~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 10ace5de3af panfrost,asahi: Support ARB_buffer_storage
+  * 99b832008a0 gallium/util: add a helper for get_timestamp
+  * 7fa50ced14d aco: insert waitcnt before/after ds_ordered_count
+  * ea8ddf5c263 aco: add storage_gds
+  * 590f176327a zink: Lazily allocate the dummy surfaces.
+  * f0c033ebbc9 zink: No need to use a 2-sample dummy image for bindless
+    without null descs.
+  * 09c4ed4f2c9 iris: Do not export iris_bo_wait()
+  * 144ccc31d7e iris: Drop duplicated errno handling in iris_bo_wait()
+  * 191f9a39c9d iris: Nuke pci_id from iris_screen
+  * bb9f66800cf intel/perf: Use intel_device_info functions to compute
+    subslice and eu totals
+  * dc4d7d7b0f0 d3d12: Don't align already-aligned size in
+    `d3d12_bufmgr_create_buffer`
+  * e902f2ab8cc gallium/pipe: Align allocation size in
+    `pb_cache_manager_create_buffer`
+  * 416b33337d9 freedreno/ci: Small bit of xfails cleanup
+  * edfc98460b2 freedreno: Enable GL_ARB_enhanced_layouts
+  * 5b7e6b583a7 freedreno/a6xx: Enable
+    GL_ARB_texture_mirror_clamp_to_edge
+  * c50e9f65bd4 freedreno/a6xx: Support GL_ARB_viewport_array + gl43
+  * 23b7948a72b freedreno: Move guardband calc to bind time
+  * d9150eab287 freedreno: Massage scissor state at bind time
+  * e752a26ca43 freedreno: support multiple viewports
+  * 138b513fb70 freedreno/a6xx: Support AMD_vertex_shader_layer
+  * 110a5f4f02f freedreno/a6xx: Fix buffer size clamping
+  * b416c08e869 freedreno/ir3: Drop unused view_zero/layer_zero lowering
+  * 679adcbc3c7 freedreno/a6xx: Move layer_zero handling to interp state
+  * 3a695470862 freedreno: Don't advertise TGSI support for GS/tess
+  * 2e689e9d9d5 Revert "mesa/st: ARB_vertex_attrib_64bit depend on
+    glsl>=410"
+  * c84dbd189bc ac/nir/ngg: fix emitting streamout output by using
+    packed location
+  * 1c37a8342ce rusticl/kernel: fix more 32 bit problems
+  * eae28671228 radv: move nir_opt_idiv_const/nir_lower_idiv after NGG
+    lowering
+  * e2fcbd4a37d radv/llvm: fix dual source blending on GFX11
+  * d172fc1fcab radv: fix VRS limit when attachmentFragmentShadingRate
+    is disabled
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 29 Oct 2022 13:15:50 +0200
+
 mesa (22.3.0~git2210270416.d9a257b339b~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
