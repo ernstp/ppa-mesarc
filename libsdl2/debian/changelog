@@ -1,3 +1,31 @@
+libsdl2 (2.25.0+git2210311922.27ee8c8e1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 27ee8c8e1 Fix mismatch between Init and Quit
+  * 33a430056 wayland: Don't modify the mouse capture flag in relative
+    mode
+  * a66cb8cf2 sdl2.m4: Deprecate AM_PATH_SDL2 in favour of
+    PKG_CHECK_MODULES
+  * e0d904e90 sdl2-config.in: Deprecate sdl2-config
+  * 678ef7977 SDL_KMSDRMOPENGLES.H: Correct spelling mistakes
+  * 8b9c82e14 SDL_RENDER_PSP.C: Correct spelling mistakes
+  * 3369b0163 SDL_PS2_MAIN.C: Correct spelling mistake
+  * d7a46a16e SDL_SYSLOADSO.c: Correct spelling mistake
+  * 6a881302a SDL_IBUS.H: Correct spelling mistake
+  * 61f3662c9 SDL_QSA_AUDIO.C: Correct spelling mistake
+  * 57973cd37 SDL_HINTS.H: Correct spelling mistake
+  * 571ff1a3a wayland: Prepare cursor implementation for reconnect
+    support
+  * 9c8b1fd8b wayland: Cleanup work to aid reconnect support
+  * f6b1e028a Allow vendor matching for hid_enumerate() on all backends
+  * c360ca992 Add UWP-ARM64 Support.
+  * 4556074e1 Re-set the maximize state if we were maximized while
+    fullscreen
+  * ab06a307d Don't report windows being maximized when fullscreen on
+    X11
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Oct 2022 21:04:11 +0100
+
 libsdl2 (2.25.0+git2210282219.b9e1d1b4d~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
