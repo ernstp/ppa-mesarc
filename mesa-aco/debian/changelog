@@ -1,3 +1,46 @@
+mesa (22.3.0~git2210311953.d9f0fef91d4~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * d9f0fef91d4 docs/panfrost: Document Mali-T620 support
+  * 4e14da056d6 zink: Enable mesa/st frontend shader caching.
+  * b4f2b244fae d3d12: Advertise PIPE_CAP_BUFFER_MAP_PERSISTENT_COHERENT
+  * 61afaa0c689 dzn: Set factory flags before creating device
+  * 1c7d208302b radv/rt: Set vars.arg in the traversal shader
+  * 6fd14140161 radeonsi/ci: Test piglit quick_shader profile as well
+  * b7ea47ede62 radv,aco: don't use lower_to_fragment_fetch_amd on
+    GFX11+
+  * b9a3d8b0abe radv/gfx11: don't create texop_samples_identical
+  * d31e5c8efc1 radv/gfx11: don't create fmask copy/expand pipelines
+  * 140cefe95ae ac/nir: lower gfx11 vertex parameter exports
+  * 14a1925727a aco: don't split swizzled store_buffer_amd on GFX9+
+  * e6d26cb2880 nir,ac/nir,aco,radv: replace has_input_*_amd with more
+    general intrinsics
+  * 9f692f5aa64 radv: do not unconditionally disable NGG streamout
+    lowering in NIR
+  * d653ca4c52b radv: lower NIR intrinsics for NGG streamout
+  * 3bafe6e0bcd radv: call nir_io_add_intrinsic_xfb_info() after IO
+    lowering
+  * ed865440db2 radv/llvm: prevent emitting streamout outputs for NGG
+  * fa287c99ed1 aco: remove invalid assertions for NGG streamout
+  * db7ffa40063 aco: implement NIR intrinsics for NGG streamout
+  * fdc212bd7b6 aco: create a new builder variant for ds_add_rtn
+  * 5d040646422 radv: Handle attribute ring intrinsic correctly with
+    LLVM.
+  * 45ff58cfd15 radv: Handle GSVS ring intrinsic correctly with LLVM.
+  * ec9d71498e2 radv: Use correct types for loading the rings with LLVM.
+  * 18e7f5c4287 panfrost: Enable Mali-T620
+  * 333aa0a6e8c r600: Print MOVA_INT dest on Cayman
+  * dfeb96e2771 r600: Only count ALU registers that are not clause local
+  * 04465c10bdd r600: declare for counter locally and fix
+    signed/unsigned warning
+  * d4ec3f21cf5 Revert "radv: add a pointer to radv_shader_binary in
+    radv_shader"
+  * 4f57dfc1151 winsys/amdgpu: clamp up the alignment if zero
+  * 5eaca461a77 freedreno/fdl: Increase alignment for UBWC images
+  * d4b43d1bcfb pvr: setup buffer and image format feature bits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Oct 2022 21:04:40 +0100
+
 mesa (22.3.0~git2210290420.10ace5de3af~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
