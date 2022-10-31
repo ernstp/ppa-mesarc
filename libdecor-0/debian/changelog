@@ -1,3 +1,16 @@
+libdecor-0 (0.1.0+git2210272135.e87dcfd~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * e87dcfd gtk: add GTK plugin that draws widget via cairo surfaces
+  * 2a46514 add GTK dependency to documentation
+  * d421d45 ci: add 'gtk+-3.0'
+  * c1c62e3 libdecor: fix titlebar height calculation order
+  * 2b15f44 add myself to copyright header
+  * 9be00da demo: remove designated initializers
+  * 3b8baf0 cairo: move blur function into common library
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Oct 2022 21:04:04 +0100
+
 libdecor-0 (0.1.0+git2209191759.8b42120~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
