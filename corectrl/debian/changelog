@@ -1,3 +1,11 @@
+corectrl (1.4.0~git2210301235.f79d8d5~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * f79d8d5 Minor adjustments to the default issue template
+  * c815ac2 Add default issue template
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Oct 2022 21:03:52 +0100
+
 corectrl (1.4.0~git2210282000.eccb490~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
