@@ -1,3 +1,15 @@
+wayland-protocols (1.28+git2211041642.c3e3d21~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * c3e3d21 build: Bump version to 1.28
+  * 9238fd2 Add xdg-shell.unresponsive error
+  * cec292a xdg-shell: Add specific errors
+  * c79dbb7 xdg-shell: window menus are optional
+  * c4ca25a xdg-shell: Replace an HTTP link with HTTPS
+  * 8d79352 xwayland_shell_v1: New protocol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Nov 2022 19:38:21 +0100
+
 wayland-protocols (1.27+git2210101020.e631010~b~base2) bionic; urgency=medium
 
   * New snapshot:
