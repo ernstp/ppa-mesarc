@@ -1,3 +1,52 @@
+mesa (22.3.0~rc1+git2211041101.6d38a9768f8~b~mesarc1) bionic; urgency=medium
+
+  * New snapshot:
+  * 6d38a9768f8 v3dv: use vk_alloc instead of malloc
+  * 35ceab79859 v3dv: vkCmdWaitEvents2 takes an array of
+    VkDependencyInfo
+  * f585b74576d zink/ci: mark another test as fixed after the frontend
+    caching series
+  * 4ece394b22a radv: fix setting MIN_LOD for texture descriptors on
+    GFX11
+  * 2dd75eed904 hasvk: fix android build and reported API version
+  * 6726aecc6c1 radv: Use spirv1.5 instead of vulkan1.2
+  * fe4d623b4b3 tu: tu: Clear patchControlPoints dirty state with static
+    patchControlPoints
+  * 4b5428227fa .pick_status.json: Update to
+    22789d34be0fb6d81012e2e4d53b738384eb98db
+  * 701f2772c23 v3dv: fix event synchronization
+  * 70ae34dcd0f v3dv: make the helper to emit pipeline barriers public
+    to other files
+  * 8b213c77cb4 v3dv: always check VK_ACCESS_2_MEMORY_READ_BIT for read
+    accesses
+  * a0b83c80ddd v3dv: increase limit for active event objects
+  * 8db1d34c47e v3dv: do better cleanup on failure during pipeline cache
+    operation
+  * 6d170c27b6a v3dv: handle allocation failure during pipeline
+    initialization
+  * 7c168338a9d v3dv: fix incorrect return type
+  * d843a2ca655 v3dv: do a better job at cleaning up the device on init
+    failure
+  * b6b63c5443a v3dv: avoid freeing already-freed memory
+  * ccafa0f0d00 v3dv: remove unnecessary check for NULL
+  * 718db1becd9 vk/runtime: drop incorrect UNUSED annotation
+  * ece5772028f radv: fix fallback for extreme geometry with
+    tessellation on GFX11
+  * 7400f51cf18 anv: Reduce RHWO optimization (Wa_1508744258)
+  * ba93cfbb948 radv: Make the compute scratch waves per SE as well.
+  * d4a7008dda3 radv: Fix compute scratch buffer emission.
+  * 8e8339e3e4d iris: invalidate sysvals if grid dimension changes
+  * e7a74bd237f glx: Fixes apple/apple_visual.c that include non-exist
+    util/debug.h
+  * baaf07c0bbd panfrost: Replace resource shadowing flush
+  * 89b624848f0 panfrost: Don't copy resources if replaced
+  * 66cd496ac29 zink: add missing build_id linker args
+  * 3e6c00ca9ca .pick_status.json: Update to
+    e6884df088a1e172cd87956fe9afdac63069eb2c
+  * f1beb9bfb3a VERSION: bump to 22.3.0-rc1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Nov 2022 19:33:21 +0100
+
 mesa (22.2.2+git2210261923.159bc5b3ded~b~mesarc1) bionic; urgency=medium
 
   * New snapshot:
