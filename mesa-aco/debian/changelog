@@ -1,3 +1,48 @@
+mesa (23.0.0~git2211041839.1c567ae3a2f~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 1c567ae3a2f dzn: Hook-up format-casting
+  * bda14ae9987 dzn: Try to get a ID3D12Device10 object
+  * 457e9deee17 vulkan: Provide a vk_image_create_get_format_list()
+    helper
+  * d65f4396619 vulkan: Automatically generate helpers to retrieve
+    format information
+  * bbc4b4f59a9 dzn: Query D3D12_FEATURE_DATA_D3D12_OPTIONS12
+  * 40bd7b4307c docs: use code-block
+  * ebf33212edb docs: eg -> e.g.
+  * e082cff56b6 docs/gallium: glsl -> GLSL
+  * 45b4f820917 docs/gallium: fixup broken markup
+  * 1d947e8f7f2 docs: remove spurious backtick
+  * 8458451180c docs: fix a couple of links
+  * 5525d0b196b docs: use inline-code instead of default role
+  * 779b4639b75 docs: consistently use single-quotes in config
+  * 7c5c1816947 ci: Uprev kernel to 6.0
+  * ef5f9c99e05 VERSION: fix version as it will be a new year
+  * e9b81c663da Revert "ci: Collabora farm maintanance"
+  * 67cee534a88 CI: convert to use the new S3 server instead of the
+    legacy minio
+  * a04ed2f971d ci: Update ci-fairy in CI, rootfs and containers
+  * a108e4f70cc ci: Update piglit-traces tests expectations
+  * 70ce1dcacc9 ci: Update piglit with s3 support
+  * 96e251aa86c ci: re-enable scheduled pipelines for git cache
+  * d7ad9e70142 zink/ci: add another subtest to the list of known
+    failures for radv
+  * c7150ad8e6a broadcom/compiler: drop unused v3d_compile parameter for
+    nir pass
+  * 22789d34be0 v3dv: use vk_alloc instead of malloc
+  * 36ef75b6eb9 v3dv: vkCmdWaitEvents2 takes an array of
+    VkDependencyInfo
+  * dc088754150 zink/ci: mark another test as fixed after the frontend
+    caching series
+  * 224f774e61e ci: uprev vkd3d-proton to v2.7
+  * e891e84f4be radv: fix setting MIN_LOD for texture descriptors on
+    GFX11
+  * 617e48ecda4 ci: Collabora farm maintanance
+  * 798aa43b6b6 microsoft/spirv2dxil: Lower sample pos for fragment
+    shaders
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Nov 2022 19:36:17 +0100
+
 mesa (22.3.0~git2210311953.d9f0fef91d4~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
