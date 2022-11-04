@@ -1,3 +1,23 @@
+libsdl2 (2.25.0+git2211041613.689218ebf~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 689218ebf Fix wayland reconnection paths
+  * 33a68f575 Added Linux mappings for the Logitech G29 in PS3 and PS4
+    modes
+  * c70e67590 Wait a bit for devices to initialize before trying to
+    enumerate and open them.
+  * 084fa4c3f cocoa: Reset IME when sending composed text
+  * 61297f703 cmake: on Apple, check for presence of an OBJC compiler
+  * 04bcc910e cmake: don't do enable_language(OBJC)
+  * b50e42935 Fix compilation for .m files extension
+  * 4c704ecfd cmake: use SDL2-static as static library output name when
+    prefix/static == ""/".lib"
+  * 70a41f9bc wayland: Read `window` data only if `window` is valid
+  * b75d31877 Sometimes the HID open doesn't succeed immediately after
+    being notified about the device
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Nov 2022 19:35:49 +0100
+
 libsdl2 (2.25.0+git2210311922.27ee8c8e1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
