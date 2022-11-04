@@ -1,3 +1,11 @@
+xwayland (2:22.1.5+git2211021001.f8795da30~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * f8795da30 Bump version to 22.1.5
+  * dc4d11abf xwayland/input: Do not ignore leave events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 04 Nov 2022 19:38:33 +0100
+
 xwayland (2:22.1.4+git2210281111.eca138fff~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
