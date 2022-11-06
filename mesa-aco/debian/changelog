@@ -1,3 +1,45 @@
+mesa (23.0.0~git2211061803.c37357f4e01~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * c37357f4e01 radv/rra: Remove some node type validation
+  * 868107e16c4 radv/rra: Improve validation message formatting
+  * 07bf85c2eca radv/rra: Rename rra_accel_struct_validation_fail
+  * e5b3efe5825 radv/rt: Restore prev barycentrics when rejecting hits
+  * 7753e80219c util: Add multi-threaded test for util/u_debug.h and
+    util/perf/u_trace.h
+  * 2c1c87f76f8 util: Fixes memory leak in __getProgramName
+  * 171c3c551a5 util: Fixes debug_get_option_* thread safety by set
+    initialized=true after the value get
+  * e2c3739a3f5 util: It's not thread safe to set initialized=true
+    before get the real GALLIUM_PRINT_OPTIONS
+  * 9a8453d07e7 radv: Use compares for node type in traversal.
+  * 4770d3f0bad r600: enable memory objects
+  * 39b9067b712 nine: enable on freedreno
+  * cc485cfd7c4 ci/broadcom: juint is already defined in .piglit-traces-
+    test
+  * c987a727a76 nir: Fix qsort comparator function
+  * d31375b521f math: remove unused matrix_print & print_matrix_floats
+  * c49aca943c0 math: remove vector class
+  * 2d4d4df57ac math: remove unused debug classes
+  * 94e10ced83c math: remove unused matrix_is_general_scale
+  * 18702a28bd4 math: remove unused matrix_has_rotation
+  * 55373642db0 util: remove unused enter debug exit loggers
+  * c7b70ca61ad util: remove fifo class
+  * 0c0812cf6ee util: remove unused debug_dump_enum_noprefix
+  * dc0de85fed5 util: remove unused debug_print_blob
+  * c43c640809e util: remove unused set_random_entry
+  * 0b6c0bfa090 util: remove unused half_to_unorm8
+  * e25fdc701bc gallium/util: remove unused macros and their functions
+    from sse class
+  * 753b31c35ea gallium/util: drop unused
+    sampler_view_default_dx9_template
+  * 7995050462f gallium/util: drop unused rect_area
+  * 4abb08ac60c gallium/util: Drop unused translate_prim_restart_ib
+  * 2c25d2ea90d gallium/util: Remove linear class
+  * 469251c8987 gallium/util: Remove dirty surfaces class
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Nov 2022 00:41:12 +0100
+
 mesa (23.0.0~git2211041839.1c567ae3a2f~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
