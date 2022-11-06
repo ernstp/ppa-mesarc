@@ -1,3 +1,44 @@
+libsdl2 (2.25.0+git2211062151.64c93f780~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 64c93f780 replace AM_PATH_SDL2 usage with corresponding
+    PKG_CHECK_MODULES.
+  * 5dc93451d JANITORIAL : Correct some more spelling mistakes (#6489)
+  * c2675d74c Revert "cocoa: Discard the IME Candidate Window
+    immediately when Escape is pressed"
+  * f2ce7c5fb Added the G29 as a PlayStation controller
+  * 9d1dbd2ad Added note about trigger rumble availability across third-
+    party Xbox One controllers
+  * e7a56323a Make sure we wait after sending the rumble packet when
+    initializing the PowerA Xbox One Mini Wired Controller
+  * 6875e62af Make sure we don't send Xbox controllers rumble so quickly
+    that it overwhelms the firmware
+  * 38af459dd Fixed potential clobbering of packets of different types
+    using SDL_HIDAPI_SendRumble()
+  * e45cb5b1e Fixed initializing the PowerA Xbox One Mini Wired
+    Controller
+  * 0d76e2a8a cocoa: Discard the IME Candidate Window immediately when
+    Escape is pressed
+  * 15a989091 Added SDL_HINT_HIDAPI_IGNORE_DEVICES to specify devices
+    that should be ignored in SDL_hid_enumerate()
+  * 297ecb706 Added SDL_strcasestr() for a case insensitive version of
+    SDL_strstr()
+  * a4626dea8 Fixed initializing the PDP Xbox One and Victrix Gambit
+    controllers
+  * 7e11b09b3 The PowerA Xbox One Mini Wired Controller works with the
+    HIDAPI driver now
+  * a2d66b6a9 SDL_GameControllerMapping() should return the string for
+    the actual mapping that was used when opening a gamecontroller,
+    rather than do a GUID match again
+  * f3bf543e2 recognize game controllers connected via raphnet
+    technologies WUSBMote v2.2
+  * 24cdebe46 Added the hint SDL_HINT_JOYSTICK_HIDAPI_XBOX_ONE_HOME_LED
+    to control the brightness of the Xbox button LED on the Xbox One
+    controller
+  * 78f97108f audio: Avoid accumulation errors in resampler.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Nov 2022 00:40:42 +0100
+
 libsdl2 (2.25.0+git2211041613.689218ebf~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
