@@ -1,3 +1,40 @@
+libsdl2 (2.25.0+git2211110227.f430ef5dd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f430ef5dd Don't change the window position when creating it on iOS,
+    it is already placed on the correct display
+  * 7c05ea0a0 Added mappings for the GameSir T3 and T4 Pro controllers
+  * 404cb2767 Added macOS mappings for the Nintendo Switch Pro
+    Controller over Bluetooth
+  * 29cafa9c9 add SDL_ContextNotSupported and validate flags in
+    SDL_RecreateWindow similar to SDL_CreateWindow
+  * 1008cc8e5 video: Add some braces to match SDL coding style.
+  * ac3349faa solve FIXMEs in SDL_video.c
+  * e5c599f8c fix SOLARIS_ATOMICS - use 'sizeless' int types (int uses
+    32-bit even if _LP64 is set)
+  * b095df7f5 simplify MSC_ATOMICS - use
+    _Interlocked(Compare)ExchangePointer in case of _M_IX86 as well -
+    improve assertions:   1. add assertions to
+    SDL_AtomicAdd/SDL_AtomicSet and SDL_AtomicCAS   2. use sizeof(a-
+    >value) instead of sizeof(int)
+  * 3dc88da02 Fix Dualshock 4 rumble stopping too early
+  * 6432f45a1 Don't treat the Nintendo IMU as a separate game controller
+    on Linux
+  * 2e3b4f3fd Don't send rumble to the Amazon Luna controller on macOS
+  * 02bc359b6 Shorten "Bensussen Deutsch & Associates,Inc.(BDA)" to
+    "BDA" for controller names
+  * b0dc6709b coreaudio: Don't use deprecated
+    kAudioObjectPropertyElementMaster symbol.
+  * db01016dd revert replace AM_PATH_SDL2 usage with corresponding
+    PKG_CHECK_MODULES.
+  * e873d6098 fix handling of SDL_EventQ.active - SDL_EventQ.active is a
+    bool variable -> do not use SDL_AtomicGet/Set, it does not help in
+    any way - protect SDL_EventQ.active with SDL_EventQ.lock - set
+    SDL_EventQ.active to FALSE by default
+  * eb670742f better SDL_AtomicGet(Ptr) implementation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Nov 2022 03:27:02 +0100
+
 libsdl2 (2.25.0+git2211062151.64c93f780~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
