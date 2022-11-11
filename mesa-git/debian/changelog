@@ -1,3 +1,53 @@
+mesa (22.3.0~rc2+git2211102215.15a4d10aab4~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 15a4d10aab4 ir3/ra: Make sure we don't pick a preferred reg
+    overflowing the file.
+  * de2abfc6b36 docs: fixup broken link syntax
+  * 226d14e3484 anv: fixup invalid enum for nir environment
+  * 961a6022c16 panfrost: Require 64-byte alignment on imports
+  * 4f0d0007a61 glsl: fix buffer texture type
+  * ddfccbca0e0 ac/nir: do not convert GS outputs to the expected
+    variable size on GFX11
+  * 0ca487fb966 mesa: fix typo from adding glGetObjectLabelEXT
+  * 161d9f6b6f0 .pick_status.json: Update to
+    c9db71c8ba14e846bac46ec343dcf357099a95d5
+  * 38cb64bfe96 VERSION: bump for 22.3.0-rc2
+  * 80b0483ea9c broadcom/compiler: avoid using ldvary sequence to hide
+    latency of branching
+  * 7701bf1228f intel: Don't cross DWORD boundaries with byte scratch
+    load/store
+  * d580ab88988 intel/lower_mem_access_bit_sizes: Compute alignments
+    automatically
+  * dd860e4bb96 vulkan/wsi/display: Reset connector state in
+    vkReleaseDisplay().
+  * 6c24336ea4c panfrost: Copy resources when necessary
+  * d812245daa5 panfrost: Fix build with Perfetto (again)
+  * e56be98d93f ci: Fixes macos.yml
+  * f4a7f286085 nir: Don't reorder volatile intrinsics
+  * e54150d6e13 anv: fix missing
+    VkPhysicalDeviceExtendedDynamicState3PropertiesEXT handling
+  * 87e7794d7b6 intel/fs: Fix constant propagation into 32x16 integer
+    multiplication
+  * 4eea1cb8cf3 Android.mk: Fix gnu++14 related build failures
+  * 1391564493c ac/nir,radv: rework and fix NGG queries enables for
+    VS/TES
+  * 935aaef3512 radv: re-emit the guardband state when restoring meta
+    operations
+  * 19711e41c5c etnaviv: Use old set of state registers for PE
+    configuration on GC880
+  * a23360cd0fe docs/zink: fix and cleanup rst syntax
+  * a7482cfa89e nir/lower_int64: Fix float16 to int64 conversions.
+  * f4fac39ded0 radeonsi/gfx11: fix compute scratch buffer - WAVES is
+    always per SE
+  * 7110d632c1c radv/rt: Restore prev barycentrics when rejecting hits
+  * 7ba025d5281 nir: Fix qsort comparator function
+  * c0c453e5ca6 radv: invalidate L2 instead of only writeback L2 when
+    using DCC stores
+  * 68b469ba1a8 radv: make the GDS/GDS OA buffer objects resident
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Nov 2022 03:29:38 +0100
+
 mesa (22.3.0~rc1+git2211041101.6d38a9768f8~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
