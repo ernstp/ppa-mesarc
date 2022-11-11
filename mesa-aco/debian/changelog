@@ -1,3 +1,48 @@
+mesa (23.0.0~git2211110227.5a6f95db135~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 5a6f95db135 freedreno/drm/virtio: Pre-allocate cmdstream buffers
+  * 1bb0cd66828 freedreno/drm: Use same-sized "chunks" for growable
+    rings
+  * cb02cf464c1 ci/broadcom: v3dv-rpi4-vk:arm64 flakes too often
+  * 41a929d94ca util/glsl2spirv: pass path to glslangValidator into the
+    script
+  * ae30c6c375a meson: prog_glslang should always be for the build
+    machine
+  * 9a85d2ed984 util/glsl2spirv: cleanup list extension
+  * 9a165945a9d util/glsl2spirv: use f-strings
+  * 7c88c3a05bb util/glsl2spirv: use if `x in str` instead of `str.find`
+  * 5488fa80dde util/glsl2spirv: simplify subprocess handling
+  * 87c83c041a9 util/glsl2spirv: close resources as soon as possible
+  * 949c3b55dbd util/glsl2spirv: add type annotations
+  * c01cd8cad1f util/glsl2spirv: add some error handling for unexpected
+    code paths
+  * 6a5863df828 util/glsl2spriv: make --vn required
+  * 4ffa8a9ac01 util/glsl2spirv: fix appending extra flags
+  * 041d9ac3dc9 util/glsl2spirv: let argparse actually enforce the
+    restrictions we've set
+  * f9df046436b util/glsl2spirv: drop inconsistent use of `io.open`
+  * 76e3b482be1 util/glsl2spirv: fix type error in argument handling
+  * f562e37c932 ci/freedreno: disable antichambers trace
+  * c9db71c8ba1 turnip: Don't disable LRZ for color write mask channels
+    beyond the format's
+  * 062d4d83e15 ir3: Re-fuse ffmas after nir_lower_imul cleanup breaks
+    them.
+  * a39113b6160 ir3/ra: Make sure we don't pick a preferred reg
+    overflowing the file.
+  * ecc2dfc503d intel/compiler: Use std::unique_ptr for tracking the
+    fs_visitors
+  * b79d9ee5a8a docs: add linkcheck job
+  * 4f26b5fa0fa docs: do not linkcheck relnotes
+  * 80b5a7d48fe docs: configure linkcheck
+  * 72718daeac3 docs/ci: allow overriding sphinx builder
+  * 1efc92fe8c0 docs/panfrost: drop anchor before channel-name
+  * 67b77d8adeb docs: apply some redirects
+  * e9826708f99 docs: update lavasoftware.org link
+  * 0d96b8ea2f6 docs/perfetto: update documentation links
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Nov 2022 03:27:34 +0100
+
 mesa (23.0.0~git2211061803.c37357f4e01~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
