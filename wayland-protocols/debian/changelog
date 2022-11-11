@@ -1,3 +1,11 @@
+wayland-protocols (1.28+git2211060509.6d068c1~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6d068c1 content-type: fix enum name in
+    wp_content_type_v1.set_content_type
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Nov 2022 03:31:38 +0100
+
 wayland-protocols (1.28+git2211041642.c3e3d21~b~base2) bionic; urgency=medium
 
   * New snapshot:
