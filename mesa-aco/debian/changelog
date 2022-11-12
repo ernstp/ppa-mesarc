@@ -1,3 +1,45 @@
+mesa (23.0.0~git2211120404.ad5c9c3fa46~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * ad5c9c3fa46 llvmpipe: drop cache stats code
+  * 4a14ba6fce8 disk_cache: add env var to show stats
+  * f7d7e558c95 venus: handle VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT
+  * 8a5de0b6cf1 freedreno/pm4: Use unsigned instead of uint to fix musl
+    build
+  * bc286e85869 ci: avoid triggering vc4 & v3d tests on v3dv-only MRs
+  * 2f85d9095e3 etnaviv: fix late Z with MSAA active
+  * 804bf2eba2a etnaviv: update headers from rnndb
+  * 4035b0fa42f radv: Use a lds stack for ray queries when possible
+  * 3a50dcb3f47 radv: Always create ray query vars as shader temp
+  * 2dc93e284eb radv: Add a field for the max shared memory size
+  * 19c5739b744 spirv: Add MESA_SPIRV_DEBUG environment variable
+    processing
+  * 6addb8566db ci: remove duplicate entries from Fedora build
+  * 88f1fad3f76 pvr: Use common pipeline & dynamic state frameworks
+  * a89ff8d4bc8 pvr: Use PVRX(TA_PASSTYPE) for
+    pvr_fragment_shader_state.pass_type
+  * 9056817a6c9 pvr: Store format aspects on render pass attachments
+  * 0e708609cbe pvr: Remove scissor_accum dynamic state
+  * 082ad18cea0 pvr: VDMCTRL_INDEX_LIST[5-9] are not needed
+  * e21448d0d31 aco: Don't create useless exec movs while creating
+    v_cmpx.
+  * a653a390e11 aco: Make vcmpx definition handling clearer.
+  * bdf680cd3fe intel/fs: use nir_opt_ray_query_ranges
+  * bd9396c357b radv: Use nir_opt_ray_query_ranges
+  * f5b65765858 nir: Add a pass for combining ray queries
+  * d22037b96c8 nir: Add and use nir_intrinsic_is_ray_query helper
+  * 04abfbca57f nir: Remove gather_info after removing dead vars
+  * 34c52d8cb98 nir: fix typo in lower_double options handling
+  * d558309d67b freedreno/cffdec: Add NOP debug messages
+  * d151ba5c300 tu: Implement utrace CS marker support
+  * ac5a55ef115 common/utrace: Add CS logging support
+  * 8370a0d6bfc common/utrace: Prefix all environment variables with
+    `MESA_`
+  * 086b50078d1 common/utrace: Rename `u_trace_context_actively_tracing`
+    to `u_trace_should_process`
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 12 Nov 2022 08:27:26 +0100
+
 mesa (23.0.0~git2211110227.5a6f95db135~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
