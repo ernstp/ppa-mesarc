@@ -1,3 +1,26 @@
+libsdl2 (2.25.0+git2211111948.85aa9b8b6~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 85aa9b8b6 wasapi: Favor the system resampler again, for now.
+  * 9f8b68a27 Fixed building without linux/input.h
+  * b7e65a81f Fixed incorrect WGI controller state when the application
+    loses focus
+  * 875e9b35d N-Gage: additional cleanup
+  * afbafc2ae Remove redundant dependency to bitdraw.h, minor cleanup
+  * d09edcbca video: sync Metal_CreateView with GL_CreateContext and
+    Vulkan_CreateSurface no need to check if _this->Metal_CreateView,
+    since it is already checked in Re(create)Window
+  * b71d92742 video: add NOT_AN_OPENGL_WINDOW define (similar to
+    NOT_A_VULKAN_WINDOW)
+  * 36c6ed4b6 video: add SDL_DllNotSupported - add SDL_DllNotSupported
+    and use it to sync the behavior of SDL_GL_LoadLibrary with
+    SDL_Vulkan_LoadLibrary
+  * dd44cacbd remove duplicated SDL_hidapi_steam.c additions to watcom
+    makefiles.
+  * 0dfc829a6 Added simple BLE Steam Controller support on all platforms
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 12 Nov 2022 08:26:56 +0100
+
 libsdl2 (2.25.0+git2211110227.f430ef5dd~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
