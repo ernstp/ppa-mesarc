@@ -1,3 +1,23 @@
+mesa (22.3.0~rc2+git2211111231.d7e96d12f90~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * d7e96d12f90 meson: only enable intel-clc for x86_64 builds
+  * 35e0e08c33c radv: re-emit NGG culling settings when conservative
+    rast mode is dynamic
+  * 2074706b3fa meson: Fixes name_prefix for clover on mingw
+  * d8a75b54e1e clover: Fixes building with mingw-x86
+  * e2811aed2fa clover: Rename *OpenCL.def to *OpenCL.def.in
+  * df2bfda882a meson: fixes mingw-clang32 building
+  * 4de4cd95d8e meson: Refactoring shared
+    gen_vs_module_defs_normal_command out
+  * 76237c75c75 radv: Fixes prototypes
+  * 18a4af62356 util/glsl2spirv: fix appending extra flags
+  * 8aa43904222 util/glsl2spirv: fix type error in argument handling
+  * b33fe51c556 .pick_status.json: Update to
+    b142a7790edac567b3acd5d003721ececedb9653
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 12 Nov 2022 08:29:30 +0100
+
 mesa (22.3.0~rc2+git2211102215.15a4d10aab4~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
