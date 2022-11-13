@@ -1,3 +1,14 @@
+libsdl2 (2.25.0+git2211132009.674989261~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 674989261 Fixed warning
+  * 1b0277da6 Move SDL_mslibc.c into the source file list
+  * c4b9f6216 x11: Add support for the Steam Deck on-screen keyboard
+  * 5f2a1231d video: check graphics flags the same way as the type flags
+  * 22354b414 video: simplify window-type check in SDL_CreateWindow
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Nov 2022 22:35:13 +0100
+
 libsdl2 (2.25.0+git2211111948.85aa9b8b6~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
