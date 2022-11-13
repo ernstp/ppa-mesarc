@@ -1,3 +1,23 @@
+mesa (22.3.0~rc2+git2211121656.d21106b3910~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * d21106b3910 venus: handle VK_QUERY_TYPE_PRIMITIVES_GENERATED_EXT
+  * 0889382796c etnaviv: fix late Z with MSAA active
+  * 498f0ab03bf etnaviv: update headers from rnndb
+  * b0d599d3338 nir: fix typo in lower_double options handling
+  * 76f4ac80976 v3dv: fix debug dump on BO free
+  * 71edfbd539a disable zinks shader cache when the needed functions do
+    not exist
+  * 301d69ee0cb anv: setup stage bitmask for Wa_22011440098
+  * 4718fd92a36 iris: setup stage bitmask for Wa_22011440098
+  * 58d0e6b12b6 anv: split internal surface states from descriptors
+  * 3fd9b2526f4 nir/algeraic_opt: use double options too for lowering
+    ftrunc@64
+  * a93b02da638 .pick_status.json: Update to
+    145cb3e349d080dce3d6e8f41722dffe33ab7b9f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Nov 2022 22:37:44 +0100
+
 mesa (22.3.0~rc2+git2211111231.d7e96d12f90~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
