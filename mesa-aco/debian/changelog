@@ -1,3 +1,19 @@
+mesa (23.0.0~git2211132134.11b2a063bf1~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * 11b2a063bf1 vulkan: Unconditionally add barriers for missing
+    external subpass deps
+  * 4ff5051944e vulkan: Handle VK_SUBPASS_EXTERNAL at the end of a
+    subpass
+  * fee00421575 r600/sfn: Fix f2u32 and remove backend lowring of f2u64
+    and f2i64
+  * fd27b18631b r600/sfn: Fix source modifiers for ffract64
+  * e63d6ed85e0 spirv: Make vtn_fail and friends trap in debug mode
+  * ae76bba34a8 anv: bump pool bucket max allocation size
+  * 145cb3e349d vulkan/wsi/wayland: fix unaligned load of dev_t
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 13 Nov 2022 22:35:43 +0100
+
 mesa (23.0.0~git2211120404.ad5c9c3fa46~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
