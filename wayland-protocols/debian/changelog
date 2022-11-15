@@ -1,3 +1,11 @@
+wayland-protocols (1.29+git2211141227.6a85dc1~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 6a85dc1 build: Bump version to 1.29
+  * 4f18a5b linux-dmabuf: fix references to tranche_formats
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Nov 2022 05:08:41 +0100
+
 wayland-protocols (1.28+git2211060509.6d068c1~b~base2) bionic; urgency=medium
 
   * New snapshot:
