@@ -1,3 +1,54 @@
+mesa (23.0.0~git2211150405.cb32f9515e2~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * cb32f9515e2 nir_scale_fdiv: Respect vector swizzles
+  * 57863e21f6f radeonsi: print the number of shader outputs for shader-
+    db
+  * e2b044fe3fc lavapipe: Prevent integer overflow adding index buffer
+    offset and start index.
+  * f47253c5c70 draw,util: Refactor draw_overflow_uadd into util.
+  * cb904ceb805 util/disk_cache: Prevent ‘sha1’ may be used
+    uninitialized warnings.
+  * b2835674568 radeonsi/vcn: adding av1 decoding film grain block
+  * 0b02db30070 frontends/va: fixed av1 decoding 10bit ffmpeg output YUV
+    issue
+  * 35606096de6 ci/llvmpipe: Switch rusticl and clover testing over to
+    deqp-runner.
+  * b0acae5f03c ci: Update to deqp-runner v0.16.0 for SKQP and CL
+    support.
+  * 57b2211cf0c radv/rt: Clone specialization infos
+  * 39628c89999 radv/rt: Clone entrypoint names
+  * a4d6c57e654 radv: Use ralloc for allocating pipeline library
+    resources
+  * 08b194fb465 vulkan,radv: Remove vk_shader_module_clone
+  * 902ec1fe0e8 replace sys/poll.h with poll.h
+  * 48c1e0e1667 intel/crocus: do not redefine PAGE_SIZE
+  * 9d81729c02c kopper: guard unused variable behind ifdef
+  * 92854b96bc9 docs/releasing: add convenient command to rebase
+    everything since last release
+  * 68f942f2178 docs/releasing: checkout the staging branch at the end
+    of its creation process
+  * 739ecdf367a docs/releasing: update branchpoint instructions to be
+    friendlier to our Marge-bot-based workflow
+  * fa10735da36 docs/releasing: fix instructions to create a branch from
+    a tag
+  * 6833138b5dd docs/releasing: add VERSION variable to avoid typos when
+    copy/pasting
+  * 494e2edb90d intel/compiler: Fix missing tie-breaker in
+    brw_nir_analyze_ubo_ranges() ordering code
+  * 9fd1d47aa0f intel/compiler: Fix dynarray usage in intel_clc
+  * 71c4543af1a radv/rt: Get rid of null index AABB intersection
+    handling
+  * ff896d5d098 r600/sfn: Call lower_flrp from driver code
+  * e5646382ba9 r600/sfn: use only one undef in tex lowering
+  * df54aa7e339 r600/sfn: Use a bitfield for some register properties
+  * dba46bb8bc3 r600/sfn: handle possible inline const as array base for
+    scratch loads
+  * 307b81747e2 r600/sfn: Simlify check for zero and one
+  * a81c50a2144 r600/sfn: implement finalize_nir
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Nov 2022 05:06:39 +0100
+
 mesa (23.0.0~git2211132134.11b2a063bf1~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
