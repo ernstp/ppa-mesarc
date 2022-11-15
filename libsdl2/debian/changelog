@@ -1,3 +1,19 @@
+libsdl2 (2.25.0+git2211142203.a40b7cde1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * a40b7cde1 Workaround for views being in portrait instead of
+    landscape mode on iOS 16
+  * 9f784b188 The iOS and tvOS demos link SDL statically, not as a
+    framework
+  * b886f4c6c events: eliminate redundant code in SDL_SendEditingText
+  * dad8df3ed video: check graphics flags the same way in
+    SDL_RecreateWindow as in SDL_CreateWindow - single check to validate
+    the graphics flags - check it before tearing down the window
+  * eef4d3c86 wayland: Clamp wl_seat version on older versions of
+    libwayland
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Nov 2022 05:06:09 +0100
+
 libsdl2 (2.25.0+git2211132009.674989261~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
