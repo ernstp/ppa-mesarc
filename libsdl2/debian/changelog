@@ -1,3 +1,34 @@
+libsdl2 (2.25.0+git2211152220.06492c598~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 06492c598 CI, MSVC: update to use microsoft/setup-msbuild v1.1.3.
+  * 02ab7f374 Fixed release build using clang on Windows
+  * 98f93d0aa Fixed building without xkbcommon support
+  * 615901dbf Removed unnecessary header
+  * c85518476 wayland: Handle virtual keyboards that don't fit the X
+    mapping
+  * d1858eb12 events: Add a helper function to get the default keycode
+    for a scancode
+  * 0e446c54b events: Factor out the xkb keysym to scancode conversion
+    from the X11 driver
+  * 44d7b8b91 egl: Check for a NULL pointer in SDL_EGL_GetProcAddress.
+  * f3cc99fb9 x11: Minor style fixes for recent OSK changes
+  * e6c4db816 The SDL2::SDL2 target in SDL2.framework needs to see the
+    SDL2 include folder
+  * 70656b133 Don't recreate the window when creating a Metal renderer
+    on an OpenGL window.
+  * a71ad40ac CMake: Add option to use Ccache.
+  * 5e61f245a Sync SDL wiki -> header
+  * 80ff20f6f N3DS: Set keyboard focus to newly created windows.
+  * 491d0bcc3 N3DS: Refactor N3DS_FileOpen.
+  * dcfa127fd N3DS: Document the SDL_GetBasePath behaviour.
+  * de5fa89b5 N3DS: Prepend PrefPath with `sdmc:`.
+  * 7d536d524 N3DS: Put `SDL_Log.txt` in the proper directory.
+  * bf4f9aaa6 N3DS: Use designated initialiser for drivers.
+  * d080e3bf3 Silence `-Wmaybe-uninitialized` warnings in tests.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Nov 2022 04:18:00 +0100
+
 libsdl2 (2.25.0+git2211142203.a40b7cde1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
