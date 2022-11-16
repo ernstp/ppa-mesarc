@@ -1,3 +1,59 @@
+mesa (23.0.0~git2211160345.cf6b2699ca4~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * cf6b2699ca4 panfrost: Don't set job_barrier on vertex jobs
+  * 51457b19cea r300: tweak nir loop unrolling hint for r500 vertex
+    shaders
+  * 6ac678df43b freedreno: Add one flake
+  * f3ee9be836b glsl: Drop borrow/carry lowerings in favor of nir
+  * 339d80d5f22 pps: make pps-producer RT only on freedreno
+  * 557120b593c util: Include the needed util/detect*.h headers in
+    multiple files
+  * 4ff21b4a47f util: Remove the unused PIPE_(ARCH|OS|CC) macro defines
+    from src/util/detect_arch.h and src/util/detect_cc.h
+  * 1accc0df640 tree-wide: Convert all usage of PIPE_(OS|ARCH|CC)_* to
+    DETECT_(OS|ARCH|CC)_* by use grep
+  * 27fe4bd29fd tree-wide: Convert all usage of #ifndef
+    PIPE_(OS|ARCH|CC)_* to #if DETECT_(OS|ARCH|CC)_* by use grep
+  * 1817659bb65 tree-wide: Convert all usage of #ifdef
+    PIPE_(OS|ARCH|CC)_* to #if DETECT_(OS|ARCH|CC)_* by use grep
+  * eab0da3c641 tree-wide: Convert all usage of defined
+    PIPE_(OS|ARCH|CC)_* to DETECT_(OS|ARCH|CC)_* by use grep
+  * 80fac8637b9 tree-wide: Convert all usage of
+    defined(PIPE_(OS|ARCH|CC)_*) to DETECT_(OS|ARCH|CC)_* by use grep
+  * 4304177675a util: Add DETECT_ARCH_* and DETECT_CC_* macros for
+    latter usage
+  * db01b983ede util: Move compiler configuration defines from
+    detect_arch.h into detect_cc.h
+  * 845222dbae5 util: Rename src/gallium/include/pipe/p_config.h to
+    src/util/detect_arch.h
+  * 7710cc8506b util: Test __PPC64__ for getting PIPE_ARCH_PPC_64
+    respond to __PPC64__ take effect
+  * d81e40b20c3 frontend/va: Fix WIN32 VA_DRIVER_INIT_FUNC declaration.
+    Remove declspec as it uses .def file
+  * 59f11b76124 util: Add test for util_get_process_name_may_override
+  * 3325c5b80e1 util: Add tests for os_mman.h and
+    util_get_process_name_may_override
+  * 660b1104949 util: Move src/gallium/auxiliary/os/os_mman.h to
+    src/util/os_mman.h
+  * f5050d0fcd2 util: Replace the usage of os_get_command_line with
+    util_get_command_line
+  * d600a0ed342 util: Merge the code from os_process.c into u_process.c
+  * fdad0477f0f util: Remove usage of boolean and duplicated code in
+    os_process.*
+  * 3f4586575e1 util: Merge the __getProgramName code under HAIKU os
+  * ed4fd1d90e3 util: cleanup cpuinfo.* and it's related files
+  * 7436669d55d mesa/vbo: Replace the usage of cpu_has_sse4_1 with
+    util_get_cpu_caps()->has_sse4_1 in vbo/vbo_minmax_index.c
+  * b84678ea28e util: Use util_get_cpu_caps instead cpu_has_sse4_1 macro
+  * 6dab1896d11 util: Drop include "pipe/p_config.h" in
+    src/util/u_cpu_detect.h
+  * 3549439068d ci/nouveau: Add some recent flakes
+  * 72d66aa9878 microsoft/compiler: Delete now-unused memcpy lowering
+    pass
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Nov 2022 04:18:39 +0100
+
 mesa (23.0.0~git2211150405.cb32f9515e2~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
