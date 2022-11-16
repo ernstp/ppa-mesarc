@@ -1,3 +1,30 @@
+mesa (22.3.0~rc2+git2211150849.2dec7a721ac~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 2dec7a721ac v3dv/bo: reset bo and then call gem close
+  * e183a524bbb v3dv: ignore imported BOs when tracking BO memory usage
+  * 76e1a130a30 ac/llvm: fix gfx11 fs input load for 16bit varying
+  * 8146a890efe ac/nir/ngg: remove nuw for negative value add
+  * 9f7dee2f816 ac/nir/ngg: fix nogs culling with nuw add
+  * e0665b31a12 gallivm: add coro malloc hooks earlier and always.
+  * ed36e0ff001 intel/compiler: Fix missing tie-breaker in
+    brw_nir_analyze_ubo_ranges() ordering code
+  * 9479b49d6a9 intel/compiler: Fix dynarray usage in intel_clc
+  * 4404a7bef89 radv: enable lowering of subgroup shuffle in NIR on
+    GFX11+
+  * f03f5019a98 vulkan: Unconditionally add barriers for missing
+    external subpass deps
+  * 788e58a3d00 vulkan: Handle VK_SUBPASS_EXTERNAL at the end of a
+    subpass
+  * 52a2e71442e r600/sfn: Fix f2u32 and remove backend lowring of f2u64
+    and f2i64
+  * 038b22ecd93 r600/sfn: Fix source modifiers for ffract64
+  * d910ff421b4 anv: bump pool bucket max allocation size
+  * 9416e3fc930 .pick_status.json: Update to
+    88b1bb326dae2d4cc7e069849f82c08f35c407d5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Nov 2022 04:20:43 +0100
+
 mesa (22.3.0~rc2+git2211121656.d21106b3910~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
