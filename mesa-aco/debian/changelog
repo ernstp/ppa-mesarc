@@ -1,3 +1,39 @@
+mesa (23.0.0~git2211192125.cee2c4624d0~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * cee2c4624d0 asahi: Advertise all supported renderable formats
+  * 74e92274af3 asahi,agx: Use new tilebuffer infrastructure
+  * c5c0ea39f6a asahi: Add new clear/reload/store infrastructure
+  * 4f96651f1e4 asahi: Use correct tib settings for USC
+  * 555447769d3 asahi: Extend texture descriptor packing for MSAA
+  * cc555e0c04f asahi: Remove some bogus asserts
+  * bbe7d8e4f5d asahi: Implement texture_barrier trivially
+  * 03dc4bc3e80 asahi: Calculate tilebuffer layout per batch
+  * b1f5004ee79 asahi: Add agx_usc_shared_none helper
+  * c713197c25c asahi: Add R16 SNORM formats
+  * d637189d366 asahi: Add more XML via PowerVR
+  * a3907e92da4 asahi: Add note to XML about 16-bit varyings
+  * 94a8fe51d5a asahi: Identify more depth-related fields in XML
+  * 6ce615d852f asahi: Add XML for layered rendering
+  * 74de571402a asahi: Add NIR pass to lower tilebuffer access
+  * 66a680a0435 asahi: Add tilebuffer layout helpers
+  * 5d3243ea2db asahi: Add some notes about unknowns to the XML
+  * 363ffa779da asahi: Identify multisampling fields of shared layout
+  * 5a20c90508c asahi: Add _with_bo pool uploads
+  * 4a166acc930 agx: Add block_image_store instruction
+  * 0e106681e0d agx: Add helper to map pipe formats to agx_formats
+  * db0461a8d0a agx: Implement nir_texop_txf_ms
+  * 53d013a6050 ail: Handle multisampling
+  * 8781aef6b43 asahi: Make libasahi_lib depend on libasahi_decode
+  * 6ee6cfec412 asahi: Use PIPE_FORMATs for driver-compiler ABI
+  * 940b871dbab nir: Define AGX intrinsics for local pixel access
+  * 7befecf5004 turnip: Apply the RB_DBG_ECO_CNTL_blit workaround.
+  * 9076b38610d freedreno: Don't WFI and set RB_DBG_ECO_CNTL if it's not
+    changing.
+  * 4ab489a0b7b freedreno: Update RB_DBG_ECO_CNTL/RB_DBG_ECO_CNTL_blit.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 19 Nov 2022 22:09:15 +0100
+
 mesa (23.0.0~git2211191759.be570cd3225~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
