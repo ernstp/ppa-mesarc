@@ -1,3 +1,52 @@
+libsdl2 (2.25.1+git2211191815.fe396e306~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * fe396e306 wayland: Use the cached window size when switching from
+    non-floating to floating window state
+  * 509939b1b Disable the third party PS3 HIDAPI driver by default, the
+    L3/R3 buttons are unknown
+  * ff99e56d3 Fixed KMSDRM window creation failing if OpenGL libraries
+    are not available, but GLES 2.0 libraries are
+  * da9ba3a2a If a CRTC doesn't have a mode configured, use the
+    preferred or largest mode as the default mode
+  * ea4ea27a5 Don't trigger an error if we try to delete a touch device
+    after shutting down the touch system
+  * 81479d878 wayland: keyboard: Cache text input parameters.
+  * 6dc96aa74 SDL_UDEV_DelCallback: return early if _this is NULL
+  * 16824865c Cleanup of SDL_SetError that already return -1 value
+  * 3e70553c4 Unneed test before calling SDL_FreeSurface
+  * 920994294 Revert "sdl2-config.in: Deprecate sdl2-config"
+  * 769ae185d Revert "sdl2.m4: Deprecate AM_PATH_SDL2 in favour of
+    PKG_CHECK_MODULES"
+  * 78ea6af2c Updated to version 2.25.1 for release candidate
+  * 1f87e9e24 Updated patch notes for 2.26 release
+  * 71f2864b3 Fix usage of sizeof() in test/testgles*.c files
+  * 89572af6a Fixed bug #6537 - AIX: use PAUDIO_WaitDevice
+  * cd0d5a5fc Don't compare pointer against '0', but NULL
+  * ddad901c0 Remove unneeded semicolon
+  * 60c6cd554 Fixed bug #6533 - PS2_JoystickUpdate: some invalid
+    condition
+  * b7358e47d Don't compare pointer against '0', but NULL
+  * 77bcd269b Allow creating an empty surface with pitch 0
+  * a1702d463 ibus: Try to use org.freedesktop.portal.IBus first if
+    available.
+  * bb0b8adac mac: Fix handling of deprecated symbol.
+  * 913e403f2 Fixed error message when trying to create an OpenGLES2
+    renderer on macOS
+  * fcc994e13 ensure that SDL2 does not set conflicting window flags
+    (thanks @pionere!)
+  * 4192d1a1c Fix compilation. It needs to be casted to 'int' type
+  * ce5da5d57 Don't compare pointer against '0', but NULL
+  * 1d7966df1 Remove un-needed check for NULL pointer. They were
+    previously checked just before.
+  * 8ea96f365 events: Remove X and XKB keysym constants and headers
+  * 20af698b0 GDK: Updated MicrosoftGame.config files to use placeholder
+    identifiers from the GDK project template rather than using
+    Microsoft sample identifiers
+  * 389ffab73 Code style fixes, etc.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 19 Nov 2022 18:36:33 +0100
+
 libsdl2 (2.25.0+git2211152220.06492c598~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
