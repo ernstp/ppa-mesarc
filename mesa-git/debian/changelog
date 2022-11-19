@@ -1,3 +1,49 @@
+mesa (22.3.0~rc3+git2211171818.76e3938fec4~b~mesarc2) bionic; urgency=medium
+
+  * New snapshot:
+  * 76e3938fec4 VERSION: bump for 22.3.0-rc3
+  * 3de72d74c85 ci: avoid triggering vc4 & v3d tests on v3dv-only MRs
+  * 7964efaa975 radv: suspend/resume XFB queries with NGG for meta
+    operations
+  * bbcde41cb2e aco: fix FS inputs loads in WQM with 16-bit
+  * e566cd6addd Revert "egl/glx: add fallback for zink loading"
+  * 7d19be3eb5c util: include sys/time.h for timespec functions
+  * 1f23f529d1d aco: fix dual source blending on GFX11
+  * 578f84373ba aco: add p_dual_src_export_gfx11 for dual source
+    blending on GFX11
+  * df117562bfd r600/sfn: Fix location for reading cube array image
+    dimensions
+  * 30ea71b9b00 r600/sfn: Honor shader key w.r.t. atomic counter layout
+  * a5c8473a59b aco: fix missing SCC for p_interp_gfx11 in
+    emit_interp_mov_instr()
+  * 09623eb2fd4 panfrost: Use
+    PIPE_CAP_VERTEX_ATTRIB_ELEMENT_ALIGNED_ONLY
+  * 449eb0798fb panfrost: Fix reference counting with batch->resources
+  * d09f780bf34 iris: Set priority for replaced engine context
+  * a44264e3c0d ci: Add va frontend to windows-build-rules
+  * e39b25b788d util: Test __PPC64__ for getting PIPE_ARCH_PPC_64
+    respond to __PPC64__ take effect
+  * 7f9e923959b frontend/va: Fix WIN32 VA_DRIVER_INIT_FUNC declaration.
+    Remove declspec as it uses .def file
+  * 64b775c972a aco: fix p_interp_gfx11 to not overwrite SCC
+  * 559530f151a clover: empty soversion when on win32
+  * 62a6fd3983d docs: remove stale envvar-reference
+  * 86e7eb18301 docs: do not mention EGL_MESA_drm_display
+  * 2aae392bba3 etnaviv: switch to late Z when linear PE is used
+  * f55b090c84e etnaviv: fix shader register control with MSAA
+  * 4734048d516 ci/update_traces_checksum.py: check if checksum is in
+    the array, not it's value
+  * 053f0f5934c freedreno/ci: Skip civilization-v/CivilizationV-trim
+    trace
+  * 34319c7d843 ci/freedreno: disable antichambers trace
+  * 76dc28e3ffb CI: convert to use the new S3 server instead of the
+    legacy minio
+  * 935ba13ee4c ci: Update ci-fairy in CI, rootfs and containers
+  * 03d1edf3c84 ci: Update piglit-traces tests expectations
+  * f3c55ddd42a ci: Update piglit with s3 support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 19 Nov 2022 18:39:13 +0100
+
 mesa (22.3.0~rc2+git2211150849.2dec7a721ac~b~mesarc2) bionic; urgency=medium
 
   * New snapshot:
