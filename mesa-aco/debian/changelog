@@ -1,3 +1,45 @@
+mesa (23.0.0~git2211191759.be570cd3225~b~mesaaco2) bionic; urgency=medium
+
+  * New snapshot:
+  * be570cd3225 r600/sfn: sort FS color outputs before all other outputs
+  * 85e140aa5ce r600: Print RAT instruction names in disassembly
+  * 684e90b15c7 r600: Update scratch buffer late
+  * 394d8e4122e freedreno/drm/virtio: Defer flush on BO free
+  * b4a54824e5c freedreno/drm: Support for batched frees
+  * e5a60e1df27 freedreno/drm: Add optimized path for freeing many BOs
+  * d7511ad784c asahi: Add batch tracking logic
+  * de1eb9400f1 asahi: Use the batch for submission
+  * 0d3b4ff2aa2 asahi: Use batch_reads for sysvals
+  * 84f623ae7b4 asahi: Use a pipe_framebuffer_state batch key
+  * d36c911b7b1 asahi: Use batch instead of ctx for pipelines
+  * fb7257af4e6 asahi: Hide ctx->batch
+  * 3104b1aaaf9 asahi: Factor out prepare_for_map
+  * 9c1c1888d98 intel/fs: put scratch surface in the surface state heap
+  * daab1615357 iris: move bindless surface state heap inside the
+    surface state heap
+  * 64f1ae4bc51 iris: prevent crash in decoder
+  * 1b5dc33caac radv: Convert instance bvh address to node in bvh build.
+  * d09ed23b9a3 radv: Fiddle with opaque flag positions to reduce
+    instructions.
+  * 38842109020 radv: Skip and for node_to_addr with bvh_base.
+  * 0a269758407 radv: Move ray flag compares out of the loop.
+  * e2dadda35f8 Revert "nir/lower_shader_calls: put inserted
+    instructions into a dummy block"
+  * 3686d5a3129 nir/lower_shader_calls: wrap only jumps rather than
+    entire code blocks
+  * 96d84e2a775 nir/lower_shader_calls: update metadata before
+    validation
+  * 6f45c98b580 radv/bvh: Adjust sah cost based on depth
+  * 2ba55ec504f nir/range_analysis: Set higher default maximum for
+    max_workgroup_count
+  * d989746e55b iris: Pass devinfo directly in iris_setup_uniforms
+  * a9602134a32 intel/compiler: Require C++17
+  * 11a607dbc8d asahi: Don't support 16-bit vertex attributes
+  * 9dddbfeaef2 asahi: Fix logic ops
+  * a22ed999068 asahi: Restrict rendering to what we support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 19 Nov 2022 18:37:06 +0100
+
 mesa (23.0.0~git2211160345.cf6b2699ca4~b~mesaaco2) bionic; urgency=medium
 
   * New snapshot:
