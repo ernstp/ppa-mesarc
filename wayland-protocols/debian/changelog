@@ -1,3 +1,10 @@
+wayland-protocols (1.30+git2211211708.29e7c27~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 29e7c27 build: Bump version to 1.30
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 21 Nov 2022 20:19:25 +0100
+
 wayland-protocols (1.29+git2211142344.6394f0b~b~base2) bionic; urgency=medium
 
   * New snapshot:
