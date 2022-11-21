@@ -1,3 +1,42 @@
+mesa (22.3.0~rc3+git2211211917.d119da17ee0~b~mesarc3) bionic; urgency=medium
+
+  * New snapshot:
+  * d119da17ee0 aco: ensure MRT0 is written with dual source blending
+  * 8661d5e8888 radv: disable MRT compaction with dual-source blending
+  * 629f2d10fce radv: Fix custom build id with C90 compilation.
+  * 2ab54847ed8 v3d: Minor fixes on sand8 blit based on sand30
+    modifications
+  * 045d7f8cdc0 zink: require extendedDynamicState3ColorBlendEquation
+    for full ds3
+  * f4d23670c47 ac/llvm: fix 16bit varying llvm compile error
+  * 2b8d0713052 v3d(v): account for debug flags when using the cache
+  * ec425bca362 r600/sfn: sort FS color outputs before all other outputs
+  * c0129df994f Revert "nir/lower_shader_calls: put inserted
+    instructions into a dummy block"
+  * d1253241543 nir/lower_shader_calls: wrap only jumps rather than
+    entire code blocks
+  * 959ae105020 nir/lower_shader_calls: update metadata before
+    validation
+  * 4c0ccc9bea3 nir/range_analysis: Set higher default maximum for
+    max_workgroup_count
+  * 8376e5342b0 nir/lower_explicit_io: fix metadata preserve
+  * d409cf763c7 radv: lower 8/16-bit uadd_carry/usub_borrow
+  * 69b9ac41d97 nir/lower_bit_size: lower uadd_carry
+  * 88141493d34 intel/perf: fix B/C counters accumulation in non query
+    mode
+  * 314d1b884ca intel/perf: allocate cleared counter infos
+  * fd3497119d7 anv: get rid of ilog2_round_up
+  * 82d326ad9d8 vulkan/wsi/wayland: Set num_modifier_lists = 0 if
+    num_drm_modifiers == 0
+  * 2cada383062 radv/rra: Fix copying accel structs that were not built
+    yet
+  * c9aa691ea55 d3d12: Video Screen - Do not crash if HEVC not
+    supported, return no support instead
+  * 651b84d7c19 .pick_status.json: Update to
+    8d8caa44bd5a3e7397a77789a5fd1b1593df9d25
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 21 Nov 2022 20:16:55 +0100
+
 mesa (22.3.0~rc3+git2211171818.76e3938fec4~b~mesarc3) bionic; urgency=medium
 
   * New snapshot:
