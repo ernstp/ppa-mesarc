@@ -1,3 +1,16 @@
+libsdl2 (2.25.1+git2211211802.d167cd671~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d167cd671 Added the Gunfighter Mk.III ‘Space Combat Edition’ as a
+    flight stick
+  * 8b20b568b Don't report battery level for disconnected batteries
+  * 8ae46a49e Save the version in VERSION.txt instead of VERSION
+  * 802c624ab Strip trailing newline when reading the VERSION file
+  * 3bc4bad8f add missing strcasestr checks to cmake and autotools build
+    systems,
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 21 Nov 2022 20:14:23 +0100
+
 libsdl2 (2.25.1+git2211191815.fe396e306~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
