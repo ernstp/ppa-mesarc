@@ -30,6 +30,8 @@ else
   endif
 endif
 
+export DEB_BUILD_MAINT_OPTIONS=optimize=-lto
+
 DRI_DRIVERS =
 EGL_PLATFORMS = x11
 GALLIUM_DRIVERS = swrast
