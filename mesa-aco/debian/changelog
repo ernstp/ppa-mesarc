@@ -1,3 +1,52 @@
+mesa (23.0.0~git2211211834.368be872555~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 368be872555 nir/algebraic: shrink 64-bit bitwise operations with 0/-
+    1 constant half
+  * 8133d5551de radv/rt: Return the correct result for requested
+    deferral
+  * 8d8caa44bd5 frontends/va: remove unused slice_param_idx variable
+  * 3061bc792d3 aco: ensure MRT0 is written with dual source blending
+  * ea0ae17fc45 radv: disable MRT compaction with dual-source blending
+  * 68652dca0c2 iris: Fix iris_bo_alloc() flags call argument
+  * f1305d49d91 tu: Implement VK_EXT_post_depth_coverage
+  * 1ec172646cd r300: more informative too many ALU instructions error
+  * b70543a9558 r300: delete backend branch emulation
+  * 2fe73e3bcb0 r300: abort shader compilation early on loops and
+    branches
+  * 8d37ab6bfa0 radv: Fix custom build id with C90 compilation.
+  * d34f3a1db59 v3dv: fix multiple typos
+  * 67ffe25fd9d r600: Fix lower-to-scalar on TTN path
+  * a69eafc4226 r600: reference glsl type system during translation
+  * 089ae08ab1f intel_batch_decoder: disasm shaders when decoding states
+    besides VS
+  * c82775e3c72 v3d: Minor fixes on sand8 blit based on sand30
+    modifications
+  * e97b20f3ca5 v3d: Also expose DRM_FORMAT_MOD_BROADCOM_SAND128 with
+    PIPE_FORMAT_P030
+  * 653cf8c8d23 v3d: Blit for P030 format with BROADCOM_SAND128 modifier
+    to P010 UIF
+  * 4ea41479359 gallium/dri: Add P030 format
+  * e253729e037 zink: require extendedDynamicState3ColorBlendEquation
+    for full ds3
+  * 390c4b337aa radv: Support accelerationStructureCaptureReplay.
+  * 165ef452fd7 radv/ci: add one more pipeline barrier test as flake
+  * 5c5735fd681 radv: advertise VK_EXT_descriptor_buffer
+  * 46e0c77582d radv: implement VK_EXT_descriptor_buffer
+  * e3fae40e966 radv: always restore NULL descriptor sets for meta
+    operations
+  * a59be04ea55 radv: rework writing image/buffer/accel_struct
+    descriptors slightly
+  * e8cff91bd5f radv: avoid RMW operations in
+    radv_make_texel_buffer_descriptor()
+  * fcd53eda0e1 radv: force 32-bit address-space for descriptor buffers
+    usage
+  * 94bea63936b radv: add 32-bit memory types for visible VRAM and
+    cached GTT
+  * d6d772d3d16 asahi: Fix memory leak on error path.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 21 Nov 2022 20:14:50 +0100
+
 mesa (23.0.0~git2211192125.cee2c4624d0~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
