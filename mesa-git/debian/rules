@@ -30,7 +30,9 @@ else
   endif
 endif
 
-export DEB_BUILD_MAINT_OPTIONS=optimize=-lto
+export DEB_BUILD_MAINT_OPTIONS=optimize=-lto
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
 
 DRI_DRIVERS =
 EGL_PLATFORMS = x11
