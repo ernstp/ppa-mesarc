@@ -1,3 +1,18 @@
+libsdl2 (2.27.0+git2211242213.e19c532eb~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e19c532eb Add bitdraw.h, remove non-working stub class
+  * e426617c9 cmake: add X11 include dir to check dirs
+  * 192cdf3d0 SDL_mfijoystick.m: remove VLA, so that projects can be
+    built with error on vla
+  * 64a5e7be9 added missing FGREP to Makefile.in. fixed syntax.
+    regenerated configure.
+  * 66bd15555 wayland: Fix build when not using the shared Wayland
+    libraries
+  * 4c7156c1e Avoid use of deprecated egrep/fgrep
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Nov 2022 00:20:37 +0100
+
 libsdl2 (2.27.0+git2211240239.33e5de31d~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
