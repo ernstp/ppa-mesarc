@@ -1,3 +1,25 @@
+mesa (22.3.0~rc4+git2211241755.4c07e4acc34~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 4c07e4acc34 venus: enable VK_KHR_push_descriptor
+  * 6b8eeae95b5 venus: implement vkCmdPushDescriptorSetWithTemplateKHR
+  * 504b00b2793 venus: extend VkPipelineLayout lifetime for batched
+    VkCmdPushConstants()
+  * 09b6bc0628a venus: extend lifetime of push descriptor set layout
+  * af963203bb3 docs/zink: add missing required device-feature
+  * ee652f8fddf zink: update textureCompressionBC requirement
+  * 3ee50172c0d zink: fix incorrect requirements
+  * c3c2e88567d zink: remove needless requirements
+  * 35fba662ec1 zink: fix json-errors in profile-file
+  * 0531b8fd215 gallivm: use valid LLVM_VERSION_MAJOR instead of
+    LLVM_VERSION
+  * 996e3d1d6ef etnaviv: Hide MSAA support behind debug flag
+  * 776a74b46b4 pan/mdg: Fix out-of-order execution
+  * 58424ac4266 .pick_status.json: Update to
+    8ec6cb06e3bc154609d3212c9a1568783ccf549d
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Nov 2022 00:23:14 +0100
+
 mesa (22.3.0~rc4+git2211232013.e16ab1b4cb6~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
