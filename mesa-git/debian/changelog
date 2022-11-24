@@ -1,3 +1,53 @@
+mesa (22.3.0~rc4+git2211232013.e16ab1b4cb6~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * e16ab1b4cb6 VERSION: bump for 22.3.0-rc4
+  * 11f33e6198a vk/runtime: Fix narrowing of timeline signal and wait
+    value to u32.
+  * 4b38684f60c nir/divergence: add missing btd_shader_type_intel
+  * a4eeeb8f784 anv: generate correct addresses for state pool offsets
+  * 532521adbc5 blorp: support negative offsets in addresses
+  * ac303c5d5b3 intel/fs: improve Wa_22013689345 workaround
+  * 3982e3aca72 r600/sfn: allow building with clang 6 (Android 9)
+  * 174236d2ed7 aco: fix emitting DEALLOC_VGPRS in the discard block
+  * 46bb7eaf56c radv: fix possible hangs with NGG streamout and
+    secondary cmdbuf
+  * 33ebcd5d102 radv: fix NGG streamout when it's never enabled in
+    runtime
+  * 654d0cebb80 radv: re-mit streamout buffers to unbind them when NGG
+    streamout is disabled
+  * 562e8a17d55 radv: enable NGG XFB queries only if streamout is
+    enabled
+  * fb51066b48c radv: fix computing the pervertex LDS size with NGG
+    streamout
+  * c0bc23f1945 radv: stop overallocating LDS for VS/TES when NGG
+    streamout is enabled
+  * 1e46b971c92 etnaviv: nir: lower extract byte/word
+  * 8090e45618e etnaviv: Support negative float inline immediates
+  * 569c230e228 st/mesa: suppress async glthread flushing for
+    GLX_EXT_texture_from_pixmap
+  * 2946c2b3b33 etnaviv: fix tile status interaction with write mappings
+  * b92f135377c anv: fixup context initialization on DG2
+  * 17b00ea533b vulkan: Add a dummy
+    vk_common_CmdSetColorBlendAdvancedEXT()
+  * b3754a5b170 vulkan: Add a common implementation of
+    CmdSetSampleLocationsEnableEXT
+  * e32d17def79 vulkan: Add state for extraPrimitiveOverestimationSize
+  * 77a9b631db4 anv: ensure CPS is initialized when
+    KHR_fragment_shading_rate is disabled
+  * 46517e0b659 anv: fix 3d state initialization
+  * 73580de2e8c nir/loop_analyze: Fix get_iteration for nir_op_fneu
+  * aee1c4ca006 nir/loop_analyze: Fix get_iteration for nir_op_ine
+  * 949c4ec5b71 rusticl/device: put space at the end of
+    CL_DEVICE_VERSION
+  * 3b282d2c3dd virgl: don't a use staging when a resources created with
+    the shared flag
+  * d567ac1dc8d intel/fs: put scratch surface in the surface state heap
+  * fbc9f23653a .pick_status.json: Mark
+    56bd81ee21cb42e4a5afa2939514b570a1283754 as denominated
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 24 Nov 2022 04:56:31 +0100
+
 mesa (22.3.0~rc3+git2211211917.d119da17ee0~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
