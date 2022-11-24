@@ -1,3 +1,47 @@
+mesa (23.0.0~git2211242236.4a8134975e7~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 4a8134975e7 ci/alpine: bump to 3.17, new GCC 12 and LLVM 15
+  * 629e940b2ce ci/alpine: enable Mold linker
+  * c85d09bcddf radv/ci: do not create jobs that will fail outside of
+    mesa's namespace
+  * 4b63667f313 hud: add GALLIUM_HUD_ROTATION option
+  * 8ec6cb06e3b ac/nir: Avoid data race with task shader payloads.
+  * a2a0ac21e4f docs/zink: add missing required device-feature
+  * 13bccac5a7d zink: update textureCompressionBC requirement
+  * 754353c4170 zink: fix incorrect requirements
+  * b60bc529925 zink: remove needless requirements
+  * b707cf24a3b zink: fix json-errors in profile-file
+  * f71944ae0e2 v3dv: specialize query copy pipelines
+  * ae4351e9391 v3dv: allocate one BO for both occlusion results and
+    availability
+  * 7a65b3f006a v3dv: reimplement occlusion queries
+  * 40500864396 v3dv: add a helper to create compute pipelines from nir
+  * cc9db4eac24 v3dv: reset pending cpu job state once processed
+  * 79063617877 Apply 1 suggestion(s) to 1 file(s)
+  * 61bdc2a2e03 docs/perfetto: update section about vulkan app tracing
+  * a126ed19f93 r300: fix r300_max_vertex_count
+  * 00bc06bc27c zink/ci: mark the two remaining GLES3 failures as CTS
+    test bug
+  * e3506dd06fc radv/ci: don't download back the vkd3d-proton.cache
+    files
+  * 909fa621c45 radv/ci: set B2C_JOB_VOLUME_EXCLUSIONS in all jobs
+  * bd743d7db56 radv/ci: do not sync back the install folder
+  * 128a19caf11 radv/ci: run test automatically only for the mesa
+    namespace
+  * 3bf7791e93b util: Remove unused WIN32 and MSVC related staff in
+    p_compiler.h
+  * f70f20433bd util: Rename PIPE_CDECL to UTIL_CDECL and moved into
+    util/macros.h
+  * b0203b5d47b util: Move EXCLUSIVE_CACHELINE and CACHE_LINE_SIZE
+    macros into u_memory.h
+  * 50ab93afdea util: Remove the latest PIPE_ALIGN_VAR in p_compiler.h
+  * 5670636598c clover: Fixes -Wundef in memory.cpp
+  * 172e8a0e6a8 gallium: Fixes -Wundef in draw_gs.c
+  * 84d6a615ea6 util: Fixes -Wundef in u_debug_stack_test.cpp
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 25 Nov 2022 00:21:07 +0100
+
 mesa (23.0.0~git2211240356.970c8dfd98e~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
