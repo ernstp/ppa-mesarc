@@ -1,3 +1,30 @@
+libsdl2 (2.27.0+git2211240239.33e5de31d~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 33e5de31d vulkan_metal.h: Make compatible with ObjC ARC
+  * 3eaf56894 wayland: Fix libdecor_dispatch signature
+  * 242ce20cb SDL_mfijoystick.m: fix build with Xcode < 9
+  * f52e7199d Check build-time SDK in LoadMainMenuNibIfAvailable
+  * e12c831b1 SDL_cocoaopengl.h: ensure CVDisplayLinkRef is defined
+  * cd399caf6 fix dynapi after SDL_GDKSuspendComplete addition.
+  * f6144dfe0 adds GDK suspend/resume basic handling (#6596)
+  * ac2fcfcb6 Sync SDL2 wiki -> header
+  * 4ac2d45a0 Testing the wiki, disregard this commit.
+  * dce6ed56d Removed G29 from controller_type.c
+  * e3d430b83 Revert "Added Linux mappings for the Logitech G29 in PS3
+    and PS4 modes"
+  * 511bab5bb .wikiheaders-options: Move SDL2 documentation to a
+    subdirectory.
+  * 156bf7e6a android.mk: LOCAL_EXPORT_C_INCLUDES does not need to add
+    include subfolder
+  * 938b720a9 Update SDL info and Xcode marketing version to 2.27.0
+  * 44975d40e Update SDL info and Xcode marketing version with version
+    update scripts
+  * ea8f8b6dc Updated to version 2.27.0 for development
+  * 0bfeed061 Updated to version 2.26.0 for release
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 24 Nov 2022 05:05:19 +0100
+
 libsdl2 (2.25.1+git2211211802.d167cd671~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
