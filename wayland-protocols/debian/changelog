@@ -1,3 +1,10 @@
+wayland-protocols (1.30+git2211231503.813e5c2~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 813e5c2 governance: improve consistency of ACK requirements
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 24 Nov 2022 04:59:04 +0100
+
 wayland-protocols (1.30+git2211211708.29e7c27~b~base2) bionic; urgency=medium
 
   * New snapshot:
