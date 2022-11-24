@@ -1,3 +1,49 @@
+mesa (23.0.0~git2211240356.970c8dfd98e~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 970c8dfd98e r600: Fixes -Werror,-Wunused-but-set-variable for clang-
+    15
+  * cdbe1ad570b aco: Fixes -Werror,-Wbitwise-instead-of-logical for
+    clang-15 in aco_optimizer.cpp
+  * 55b35e6193a mesa: fixes -Werror,-Wunused-but-set-variable for clang-
+    15 in program_parse.y
+  * 77c29bfffd7 mesa: indent fixes after replace tab with 3 space by
+    find and replace in program/program_parse.y
+  * 59fb86ea6f1 mesa: replace tab with 3 space in
+    mesa/program/program_parse.y by tools
+  * 20c936bee1f rusticl: print missing context features
+  * bdc240e13eb meson: Don't depend on expat for !use_xmlconfig
+  * 6cd392cbe20 util: Gate installing drirc on use_xmlconfig
+  * 662bb5977b6 util: Add xmlconfig build option
+  * fb0a4a5d6c5 util: Define WITH_XMLCONFIG from Meson
+  * fc6bb139456 zink: Don't check WITH_XMLCONFIG
+  * 218ddd032ef docs/features: Get Asahi on the board
+  * 4f5e59d1146 etnaviv: Hide MSAA support behind debug flag
+  * 4002640f8de docs: update calendar for 22.3.0-rc4
+  * 3a406688f26 st/mesa: only call st_manager_validate_framebuffers at
+    FBO change or SwapBuffers
+  * 044428211c9 pan/mdg: Fix out-of-order execution
+  * af79e631eec freedreno/replay: Add option to replay specific range of
+    cmdstreams
+  * a7773c3c4c7 freedreno/rddecompiler: Add shader disasm/asm support
+  * 03d80e0a6d3 freedreno/decode: Add 'rddecompiler' tool
+  * 86d27ac4ffd freedreno/cffdec: Add type0/type4 vs type3/type7 pkt
+    helpers
+  * 13ab0088e05 freedreno/cffdec: Remove packet types
+  * 00e2f9eff6d freedreno/cffdec: Remove dead code
+  * 86e8b9339f5 freedreno/replay: Add option to override selected
+    cmdstream
+  * 6d72407d395 freedreno/decode: Print cmdstream idx
+  * 060e1686232 freedreno/decode: Move rd section parsing to a common
+    header
+  * 4701508ec0b i915g: fix typo in #if
+  * 52a34309f6c iris: s/#if/#ifdef/ to fix -Wundef
+  * 8261f9ce4f9 freedredno: s/#if/#ifdef/ to fix -Wundef
+  * cf520806b11 freedreno/ir3: fix -Wundef warning
+  * 0f0dac0f659 freedreno: fix HAVE_FREEDRENO_KGSL check
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 24 Nov 2022 04:54:25 +0100
+
 mesa (23.0.0~git2211211834.368be872555~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
