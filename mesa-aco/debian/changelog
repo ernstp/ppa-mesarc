@@ -1,3 +1,47 @@
+mesa (23.0.0~git2211261535.a97a6d0f0e7~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * a97a6d0f0e7 radv: reserve space for the scissor in
+    vkCmdBeginRendering.
+  * 2a3ed9521d2 radv: Enable
+    rayTracingPipelineShaderGroupHandleCaptureReplay[Mixed].
+  * dba75d345df nir: fix a leak of ralloc ctx in
+    nir_opt_ray_query_ranges
+  * 2de7d6d1d81 etnaviv: remove copy of resource level in etna_surface
+  * b6fa3cdb0e6 etnaviv: fix wrong surface TS clear size
+  * d9e2a7d6ada etnaviv: blt: use correct TS offset in clear operations
+  * 58259e14377 etnaviv: fix ZS clear value computation
+  * 4449b5a2714 etnaviv: fix stencil operation without Z write
+  * ea3f73ba85b Revert "glx/dri: Fix DRI drawable release at MakeCurrent
+    time"
+  * 0cee008fee1 Revert "glx: Fix drawable refcounting for naked Windows"
+  * 797454edfcc etnaviv: rs: fix blits with insufficient alignment for
+    dual pipe operation
+  * fd06b313b01 etnaviv: always use RS align when GPU has TEXTURE_HALIGN
+    feature
+  * 20cdc35fdbb asahi: Add missing #include
+  * 5e379acd314 asahi: Enable framebuffer compression
+  * 59824c1ecb2 asahi: Fix incorrect debug string
+  * 9b80ebd86c0 asahi: Print debug info about unsupported blits
+  * efa240b74b7 asahi: Don't hardcode is_dmabuf_modifier_supported
+  * a6079e5aa8d asahi: Hook up compressed Z/S support on macOS
+  * 6f15873d44c asahi: Introduce compressed resource support
+  * 78948c03f03 asahi: Identify compression-related XML
+  * bea975b2988 ail: Add unit tests for compression
+  * 0ba63d5c26e ail: Introduce support for compression
+  * 478ffe71276 driconf/intel: Use fake vendor to WA bad detection in
+    Source engine games
+  * f9e11c71c7f asahi: Fix undefined behaviour with samplers
+  * b102f045ab0 asahi: Set GPR count accurately for background/EOT
+  * bcba473eac5 asahi: Fix UB in union with logic ops
+  * 8d83ffe531d radv/ci: Add coverage for ETC2 emulation.
+  * 13d755441c7 vulkan: Remove asserts that weren't valid for RADV ETC2
+    emulation.
+  * eab61863c0b radv: Fix sampler types in ETC2 decode.
+  * c6ec4925c06 radv: Use correct init order for ETC2 image views
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 26 Nov 2022 20:16:30 +0100
+
 mesa (23.0.0~git2211242236.4a8134975e7~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
