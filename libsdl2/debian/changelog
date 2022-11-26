@@ -1,3 +1,15 @@
+libsdl2 (2.27.0+git2211261959.3f5593d61~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 3f5593d61 cocoa: Patched to compile on macOS SDK < 10.10.
+  * dcd125236 cmake: test for lsx and lasx intrinsics for loongarch
+  * edb75bc29 cmake: make all assembly options depend on SDL_ASSEMBLY
+    and architecture
+  * 660cec69b cmake: find libudev library so it gets priority
+  * a2611edcf cmake: add support for some BSD's wscons input
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 26 Nov 2022 20:16:04 +0100
+
 libsdl2 (2.27.0+git2211242213.e19c532eb~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
