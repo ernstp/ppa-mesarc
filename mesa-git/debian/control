@@ -6,12 +6,12 @@ Uploaders: Andreas Boll <aboll@debian.org>
 Standards-Version: 4.1.4
 Build-Depends:
  debhelper (>= 11),
- directx-headers-dev [linux-amd64 linux-arm64],
+ directx-headers-dev (>= 1.602.0) [linux-amd64 linux-arm64],
  glslang-tools [amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  meson (>= 0.45),
  quilt (>= 0.63-8.2~),
  pkg-config,
- libdrm-dev (>= 2.4.101),
+ libdrm-dev (>= 2.4.107-4),
  libx11-dev,
  libxxf86vm-dev,
  libexpat1-dev,
@@ -45,13 +45,13 @@ Build-Depends:
  libelf-dev [amd64 arm64 armel armhf i386 kfreebsd-amd64 kfreebsd-i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64],
  libwayland-dev (>= 1.15.0) [linux-any],
  libwayland-egl-backend-dev (>= 1.15.0) [linux-any],
- llvm-15-dev | llvm-14-dev | llvm-13-dev | llvm-12-dev | llvm-11-dev,
- libclang-15-dev | libclang-14-dev | libclang-13-dev | libclang-12-dev | libclang-11-dev,
- libclang-cpp15-dev | libclang-cpp14-dev | libclang-cpp13-dev | libclang-cpp12-dev | libclang-cpp11-dev,
- libclc-15-dev | libclc-14-dev | libclc-13-dev | libclc-12-dev | libclc-11-dev | libclc-dev,
- wayland-protocols (>= 1.9),
+ llvm-15-dev | llvm-14-dev | llvm-13-dev | llvm-12-dev,
+ libclang-15-dev | libclang-14-dev | libclang-13-dev | libclang-12-dev,
+ libclang-cpp15-dev | libclang-cpp14-dev | libclang-cpp13-dev | libclang-cpp12-dev,
+ libclc-15-dev | libclc-14-dev | libclc-13-dev | libclc-12-dev,
+ wayland-protocols (>= 1.24),
  zlib1g-dev,
- libglvnd-dev (>= 1.3.2),
+ libglvnd-core-dev (>= 1.3.2),
  valgrind [amd64 arm64 armhf i386 mips64el mipsel powerpc ppc64 ppc64el s390x],
 Vcs-Git: https://salsa.debian.org/xorg-team/lib/mesa.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/mesa
@@ -400,10 +400,11 @@ Description: Mesa VDPAU video acceleration drivers
 
 Package: mesa-vulkan-drivers
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el s390x sparc64 x32
+Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
  libvulkan1,
+ python3:any | python3-minimal:any,
  ${shlibs:Depends},
  ${misc:Depends}
 Provides: vulkan-icd
@@ -414,11 +415,10 @@ Description: Mesa Vulkan graphics drivers
 
 Package: mesa-opencl-icd
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el s390x sparc64
+Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
- libclc-r600 (>= 0.2.0+git20180312-1~),
- libclc-amdgcn (>= 0.2.0+git20180312-1~),
+ libclc-15,
  ocl-icd-libopencl1 | libopencl1,
  ${shlibs:Depends},
  ${misc:Depends},
