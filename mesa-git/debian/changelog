@@ -1,3 +1,45 @@
+mesa (22.3.0~rc4+git2211260030.ec63a4d6854~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * ec63a4d6854 etnaviv: fix wrong surface TS clear size
+  * 97201487e35 etnaviv: blt: use correct TS offset in clear operations
+  * 64632ebb78f Revert "glx/dri: Fix DRI drawable release at MakeCurrent
+    time"
+  * 1a806c11137 Revert "glx: Fix drawable refcounting for naked Windows"
+  * b2e5c24b626 .pick_status.json: Update to
+    dba75d345df2a96c3b37d8fb5c6c4fdc80df43de
+  * 167ae0f5469 etnaviv: rs: fix blits with insufficient alignment for
+    dual pipe operation
+  * 8ae5b96d5f5 etnaviv: always use RS align when GPU has TEXTURE_HALIGN
+    feature
+  * 5da90b02cd7 driconf/intel: Use fake vendor to WA bad detection in
+    Source engine games
+  * 6912943e04b .pick_status.json: Update to
+    797454edfcc4d2a6d0c21db451e9a0ea6e0a8023
+  * a1631f2de22 vulkan: Remove asserts that weren't valid for RADV ETC2
+    emulation.
+  * 85b19c2de91 radv: Fix sampler types in ETC2 decode.
+  * d14baa828e6 radv: Use correct init order for ETC2 image views
+  * f08af9b8d59 radv: make sure to mark DCC as compressed on GFX11
+  * 57bf78d53a6 ac/nir: mask shift operands
+  * 234890aee6f .pick_status.json: Update to
+    f9e11c71c7f09c7415bf81188175c0cee030356e
+  * f29de92740f virgl: Fix injection of double from const mov
+    instruction
+  * 6d36eb02591 .pick_status.json: Update to
+    d5217b024eac4e725a671b1c3992ab282c9c50f1
+  * 12a776989b5 .pick_status.json: Mark
+    470fbb35efe1935242b346427ec0fa22b40fff2b as denominated
+  * 5fcbce37596 radv: re-emit dynamic depth clamp enable if depth clip
+    enable changed
+  * 84b91a871a2 mesa: treat unsupported queries as dummies
+  * 78637de1ddd st/vdpau: fix interop with GL
+  * b3fd810d57a panfrost: Revert "Require 64-byte alignment on imports"
+  * 1c4e2952851 .pick_status.json: Update to
+    762e5cccb5cdb518e1c6f263ab39d856d53c8b73
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 26 Nov 2022 20:18:39 +0100
+
 mesa (22.3.0~rc4+git2211241755.4c07e4acc34~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
