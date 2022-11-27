@@ -1,3 +1,43 @@
+mesa (23.0.0~git2211271945.c5d91ab254e~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * c5d91ab254e radv/rt: Check space before emitting descriptors
+  * 0966fb2c100 radv/ray_queries: Fix AABB handling
+  * 409556f0480 radv/ray_queries: Move some initialization outside a
+    likely branch
+  * 8fdaa25c54e frontend/dri: rewrite and comment dri_make_current to
+    make it make sense
+  * 51fcabfb044 frontend/dri: unduplicate flush_drawable callback
+  * eaf99194eac frontend/dri: remove the drawable ctx hack, we should
+    always use current context
+  * f2c4aba9e11 frontend/dri: clean up updating dri_drawable::refcount
+  * 7d5b1cd02c4 frontend/dri: move callbacks from the VTable into
+    dri_screen, dri_drawable
+  * f34d607d2f4 frontend/dri: clean up the hacky implementation of
+    kopper_drawable
+  * 165b8a9fef2 frontend/dri: inline __DRIscreen in dri_screen, make
+    __DRIscreen opaque
+  * 0a622f61ea0 frontend/dri: inline __DRIcontext in dri_context, make
+    __DRIcontext opaque
+  * c65bde7b1e0 frontend/dri: inline __DRIdrawable in dri_drawable, make
+    __DRIdrawable opaque
+  * 449a35a3971 frontend/dri: replace the CopySubBuffer callback with a
+    direct call
+  * 2941eacb22a frontend/dri: replace the DestroyBuffer callback with a
+    direct call
+  * f408bb647c5 frontend/dri: replace the DestroyScreen callback with a
+    direct call
+  * d57284d673a frontend/dri: inline __DriverAPIRec
+  * e061affa7fb frontend/dri: remove __DRIdrawableRec::dri2::stamp
+  * f890714b701 frontend/dri: add comments describing drawable
+    invalidation logic
+  * 426f1cbea3c dri: move private __DRIDriverVtableExtension out of
+    dri_interface.h
+  * 8cb8a3c03dc glx,dri: simplify indirect function call syntax
+  * fbf93ef8214 ci/amd: add raven flakes which was previously failing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Nov 2022 23:30:48 +0100
+
 mesa (23.0.0~git2211261535.a97a6d0f0e7~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
