@@ -1,3 +1,13 @@
+libsdl2 (2.27.0+git2211270536.2df39e64a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2df39e64a Fix build with Xcode < 7
+  * 8fddf146b Temporary hack to address performance issues in
+    https://github.com/libsdl-org/SDL/issues/6581#issuecomment-
+    1327987916 (thanks @icculus!)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Nov 2022 23:30:20 +0100
+
 libsdl2 (2.27.0+git2211261959.3f5593d61~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
