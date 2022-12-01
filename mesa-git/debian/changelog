@@ -1,3 +1,47 @@
+mesa (22.3.0+git2211302228.32552010d1e~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 32552010d1e VERSION: bump for 22.3.0
+  * 1df8ddafb85 commit_in_branch.py: add support for checking staging
+    branches
+  * a5841169502 ir3: Don't save/restore disasm string pointer
+  * d28350a8107 tu: Fix binding NULL descriptor sets
+  * b392942486a radv: disable VRS entirely on GFX11
+  * a3013b1df4f radv: do not enable NGG culling on GFX11
+  * ed0cb79072b radv: do not enable DCC for MSAA images without FMASK
+  * 488f186c2a0 radv: set INTERPOLATE_COMP_Z to 0 on GFX11
+  * 49d1eae7c14 radv: set missing SPI_SHADER_PGM_xxx registers on GFX11
+  * da6c352d7a4 radv: introduce RADV_DEBUG=nofmask
+  * 3955e72587f panfrost/blend: Fix invalid const values leading to NIR
+    validation errors
+  * fdde4e622e2 venus: fix android wsi with global fencing disabled
+  * e8aededfe71 radeonsi/vcn: set current pic index correctly
+  * 7a285492478 nir/lower_int64: fix shift lowering
+  * 304005ff813 tu: Use right enum for compute active_shader_stages
+  * a569c68e87e meson: Enable system_has_kms_drm for android
+  * d4f0c6a30c6 d3d12: fix max-array-layers
+  * 3f80abc103b AOSP: Add intel_hasvk vulkan library suffix
+  * 94b2aebf6f4 r600/sfn: always use four slots for Cayman trans ops
+  * 3148738adfe radv/rt: Check space before emitting descriptors
+  * d6f992b1ebc radv/ray_queries: Fix AABB handling
+  * 3aa65abd14a radv: reserve space for the scissor in
+    vkCmdBeginRendering.
+  * fe062fe1827 etnaviv: fix wrong surface TS clear size
+  * a318f3c8b75 etnaviv: blt: use correct TS offset in clear operations
+  * e13d53e1fdb Revert "glx/dri: Fix DRI drawable release at MakeCurrent
+    time"
+  * ac18e931fa7 Revert "glx: Fix drawable refcounting for naked Windows"
+  * 27b92b131c0 etnaviv: rs: fix blits with insufficient alignment for
+    dual pipe operation
+  * a47ce0b9387 etnaviv: always use RS align when GPU has TEXTURE_HALIGN
+    feature
+  * 1869c2ebf55 driconf/intel: Use fake vendor to WA bad detection in
+    Source engine games
+  * 6c2a5ad0845 vulkan: Remove asserts that weren't valid for RADV ETC2
+    emulation.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 01 Dec 2022 08:35:42 +0100
+
 mesa (22.3.0~rc4+git2211260030.ec63a4d6854~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
