@@ -1,3 +1,13 @@
+wayland-protocols (1.31+git2211291437.4624cfa~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 4624cfa build: Bump version to 1.31
+  * 86f894b Add Victoria as Smithay/cosmic-comp member
+  * 7260581 xdg-shell: add defunct_role_object error
+  * 9bd70a3 wp-fractional-scale-v1: new protocol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 01 Dec 2022 08:38:24 +0100
+
 wayland-protocols (1.30+git2211231503.813e5c2~b~base2) bionic; urgency=medium
 
   * New snapshot:
