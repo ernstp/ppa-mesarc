@@ -1,3 +1,54 @@
+libsdl2 (2.27.0+git2212010318.b067ab920~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b067ab920 restore SDL_malloc.c original formatting.
+  * 6e40c7a9b Added support for the Logitech Cordless Precision PS3
+    controller
+  * 01541bc35 Added support for the HORIPAD Pro for Xbox Series X
+  * 4504c10f3 Re-enabled support for third party PS3 controllers
+  * 7b1000013 Reverted code formatting for Apple platforms
+  * 9e997cc78 Fixed Victrix FS Pro V2 controller hang on reboot
+  * d87048fd5 Fixed crash if GetRectDisplayIndex() is called before
+    SDL_VideoInit()
+  * 6926d046c Fixed build after cherry-pick of
+    5750bcb174300011b91d1de20edb288fcca70f8c from SDL3
+  * b8d85c693 Update for SDL3 coding style (#6717)
+  * 5c4bc807f Revert "SDL_test_md5.h: fix MD5UINT4 type to be really 32
+    bits."
+  * 8eeca8c7d SDL_test_md5.h: fix MD5UINT4 type to be really 32 bits.
+  * d7664a6ef Support wayland fractional scale protocol
+  * 5df106603 cmake: move platform detection to cmake/sdl/paltform.cmake
+    for re-use by SDL2-compat
+  * 69f022347 dynapi: Abstract out the environment variable name.
+  * 724845110 video: fix error messages - do not overwrite error message
+    set by SDL_InitFormat (SDL_AllocFormat) - set proper error message
+    (Cocoa_Metal_CreateView) - protect against allocation failure
+    (UIKit_Metal_CreateView)
+  * 84039e251 cmake: use target_link_libraries to pass -Wl,--
+    undefined=WinMain
+  * 2d24baaad Fixed building on Windows with SDL_VIDEO=OFF
+  * b7cc4dce7 Fixed bug #6698 - VISA: wrong check sceKernelPollSema
+  * 0b7a9a8e9 thread: code style
+  * 8cda5102f Fixed bug #6698 - VISA: wrong check sceKernelPollSema
+  * ee13e8c76 thread: return -1 from SDL_SemWaitTimeout if semaphore is
+    NULL
+  * fcd7d658d thread: fix inconsistent return values - SDL_CreateMutex
+    returns NULL when the creation fails (ngage) - SDL_SemValue returns
+    0 when the semaphore is NULL (n3ds)
+  * 89e9f7b42 Added support for the Xbox Elite controller paddles with
+    firmware version 5.13+
+  * b6c875a92 Add support for the 8BitDo Ultimate Wireless 2.4GHz
+    Controller in DirectInput mode
+  * a65d1bfb1 Fix broken solaris build. (missing brace).
+  * 37d244ea8 Added support for the 8BitDo Ultimate Wired Controller in
+    DirectInput mode, including the misc button and paddles
+  * a937b5c4a Add 8BitDo to the list of Xbox 360 third party vendors
+  * fb0ce375f Cleanup add brace (#6545)
+  * 0739d237a [skip ci] Solaris getexecname() returns argv[0]
+  * 814521210 SDL_ResampleAudio: Fix float accumulation error
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 01 Dec 2022 08:32:54 +0100
+
 libsdl2 (2.27.0+git2211270536.2df39e64a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
