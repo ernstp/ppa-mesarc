@@ -1,3 +1,45 @@
+mesa (23.0.0~git2212010707.ccef6d1f5fd~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * ccef6d1f5fd freedreno/fdl: Set sRGB bit for storage images
+  * 1555ac6f0ba agx: Clamp point sizes
+  * 7108619c0d6 agx: Handle 32-bit gl_FragCoord.zw
+  * eb4187b02db agx: Handle large varying indices
+  * 21f9a72c77c asahi: Support one-sided polygon modes
+  * 5e15b3c3236 asahi: Handle NULL sampler views
+  * 63d4f30aa71 asahi: Unset GL_CLAMP
+  * 47cb8278be4 asahi: Set frag coord caps correctly
+  * 0bd71f74216 asahi: Set
+    PIPE_CAP_QUADS_FOLLOW_PROVOKING_VERTEX_CONVENTION
+  * 1bf7d7139fa asahi: Set PIPE_CAP_SUPPORTED_PRIM_MODES
+  * 216e5d6e10e hasvk: Drop anv_nir_add_base_work_group_id()
+  * 2806968af84 anv: Drop anv_nir_add_base_work_group_id()
+  * b4dd3df2279 intel/nir: Set has_base_workgroup_id for
+    lower_compute_system_values
+  * 19ad2629d06 hasvk: Implement lower_base_workgroup_id
+  * 3c09571f67c anv: Implement lower_base_workgroup_id
+  * f2aee04d280 crocus: Lower load_base_workgroup_id to zero
+  * 4abdecce226 iris: Lower load_base_workgroup_id to zero
+  * 7d2e3f660c7 intel/fs: Support load_workgroup_id_zero_base
+  * 4fb33124c32 nir/divergence: Handle base_workgroup_id and
+    workgrpu_id_zero_base
+  * 9a311a1891d radv: Remove the old LBVH shader.
+  * 5ba950eb146 radv: Switch to new LBVH implementation.
+  * ea159e47a59 radv: Add new LBVH shaders.
+  * f531f671ef6 radv: Handle nodes with 2 invalid children in internal
+    node converter.
+  * 8e125b6c15b panfrost: Enable AFBC of more formats
+  * c7eb6a9fbb9 panfrost: Enable AFBC of sRGB formats
+  * 8b7038ab3e3 panfrost: Enable AFBC of cube maps
+  * cd21cf5ab62 panfrost: Handle all RGB AFBC modes on v9
+  * a3beb82cf6b aco: Use wave size specific opcode for s_or in cube map
+    coord code.
+  * 0531630658e nir/builder: Also short-circuit for auto-generated
+    nir_t2t<N>()
+  * e67e2293fa7 nir/builder: Rework the boolean conversion helpers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 01 Dec 2022 08:33:30 +0100
+
 mesa (23.0.0~git2211271945.c5d91ab254e~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
