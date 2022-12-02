@@ -1,3 +1,42 @@
+mesa (23.0.0~git2212021729.b2c43388629~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * b2c43388629 microsoft/spirv_to_dxil: Properly handle load- and
+    is_helper_invocation
+  * e22491c8326 clc: fetch clang resource dir at runtime
+  * cd2609b12ca clc: generate sources only with with_microsoft_clc
+  * 5d025f4003b nir/nir_opt_offsets: Prevent offsets going above max
+  * f7e76eee28a ci/amd: re-enable previously OOM tests
+  * 3e80c5f1ece ci/kernel: enable ZRAM on all archs
+  * 89663828ea6 aco: Don't use v_lshrrev_b64 for moves on GFX11.
+  * 91fe2a23617 aco: Use more detailed wave64 timing for GFX10+.
+  * 09caa570b18 docs: update calendar and link releases notes for 22.3.0
+  * 9d665ae4397 docs: add release notes for 22.3.0
+  * 5797af2d8d3 Revert "ci: disable Collabora's LAVA lab for maintance"
+  * 2fb1097bac6 ac/nir/ngg: merge multi stream gs shader queries
+  * b7b91ae51e2 anv: enable VK_KHR_ray_tracing_maintenance1
+  * d844fa4defa anv: implement new queries for
+    VK_KHR_ray_tracing_maintenance1
+  * 4d05be49c25 anv: implement vkCmdTraceRaysIndirect2KHR
+  * 675c5bd4ccc anv: refactor ray tracing dispatch
+  * df384260721 intel/rt/nir: add support for RayCullMaskKHR
+  * 6202a2c6b47 intel/rt/nir: enable the trampoline shader to load the
+    indirect ray shader bsr
+  * af3f7948d14 anv: correctly predicate ray tracing
+  * 7d7c32de4c1 anv/genxml: make gen_rt more like other genxml files
+  * 8baacba4d66 hasvk: remove coarse pixel checks
+  * 2d150f3ecd7 hasvk: Drop more DG2 code
+  * d0fea83d7bc hasvk: Rip out local memory support
+  * 4256d2cbc20 hasvk: Rip out scratch surfaces
+  * eea49c7d32c hasvk: Drop SKL+ features
+  * b71ac720a8d hasvk: Drop support for atomic_int64 and atomic_float2
+  * 49201fe8c10 hasvk: Drop bindless image support
+  * 7b700369b1b hasvk: Drop A64 descriptor set support
+  * 85cfa21e04c hasvk: Drop remnants of ray queries
+  * e490434479a hasvk: Drop CCS_E support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 02 Dec 2022 18:12:02 +0100
+
 mesa (23.0.0~git2212010707.ccef6d1f5fd~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
