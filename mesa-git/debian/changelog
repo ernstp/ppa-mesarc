@@ -1,3 +1,28 @@
+mesa (22.3.0+git2212021230.9254827da8c~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 9254827da8c v3dv: fix job serialization for single sync path
+  * 7c6704e96f0 v3dv: make single-sync paths more explicit
+  * cf19c1d3a49 intel/compiler: user payload starts after TUE header &
+    its padding
+  * 1ff5bc3419c nir/lower_task_shader: allow offsetting of the start of
+    payload
+  * 86f0320da81 intel/compiler: adjust [store|load]_task_payload.base
+    too
+  * 471eb0bd988 freedreno/fdl: Set sRGB bit for storage images
+  * 572f103b81c radv: Handle nodes with 2 invalid children in internal
+    node converter.
+  * 3d212024d95 aco: Use wave size specific opcode for s_or in cube map
+    coord code.
+  * 93f91f8de7e pan/mdg: Emulate 8-bit with the 16-bit pipe
+  * 382ec2eaa07 .pick_status.json: Update to
+    686ada78cdc642340b91b35ef00da0452a462966
+  * 61921b880d7 iris: move bindless surface state heap inside the
+    surface state heap
+  * 623bdc3c376 docs: add release notes for 22.3.0
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 02 Dec 2022 18:14:12 +0100
+
 mesa (22.3.0+git2211302228.32552010d1e~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
