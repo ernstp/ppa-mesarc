@@ -1,3 +1,23 @@
+libsdl2 (2.27.0+git2212020943.07d6d116e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 07d6d116e Commented out syntax that causes Visual Studio 2019 to
+    complain on every edit
+  * b5483f2c6 Fix formatting on Wayland and Pipewire function signatures
+  * b990e9145 build fixes after d0bbfdbfb881e5407911d84c12899bd5b442a130
+  * 3bdc62215 Fixed Apple build after
+    d0bbfdbfb881e5407911d84c12899bd5b442a130
+  * 423c558e4 Detect the G923 (Xbox style) and PXN V900 (PS3 mode) as
+    wheels
+  * 42238f88e Fixed build after d0bbfdbfb881e5407911d84c12899bd5b442a130
+  * d0bbfdbfb Clang-Tidy fixes (#6725)
+  * e29c0661c Removed check for _HAVE_STDINT_H, which nobody defines
+  * e57554ea6 SDL_main.h: added  field to SDL_GDKSuspendComplete
+    documentation.
+  * 09ee811f4 Small format changed (using clang-format 15.0.2-1)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 02 Dec 2022 18:11:31 +0100
+
 libsdl2 (2.27.0+git2212010318.b067ab920~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
