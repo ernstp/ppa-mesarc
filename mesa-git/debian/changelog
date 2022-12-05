@@ -1,3 +1,29 @@
+mesa (22.3.0+git2212051537.13bc65d39e6~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 13bc65d39e6 radv: do not set ZPASS_INCREMENT_DISABLE on GFX11
+  * 50fb212ed22 radv: fix emitting invalid color attachments
+  * 13ae16e4eef dzn: Don't crash when libd3d12.so can't be found
+  * b465fae5ffe d3d12: Don't crash when libd3d12.so can't be found
+  * 2e04f86e7e5 anv: Defer flushing PIPE_CONTROL bits forbidden in CCS
+    while in GPGPU mode
+  * 7153595a6dc dxil: Use nir_const_value_for_uint in
+    dxil_nir_lower_int_samplers
+  * 3c8e638b1b3 r600/nir: Fix u64vec2 immediate lowering
+  * 0bde5d5bd55 st/mesa: Use nir_const_value_for_bool() in ATIFS
+  * d467bf312dd nir: Use nir_const_value_for_int in nir_lower_subgroups
+  * 89466502648 radv/rra: Set the metadata size correctly
+  * 88e2544173d nir/nir_opt_offsets: Prevent offsets going above max
+  * aeb0ae20871 anv: correctly predicate ray tracing
+  * 30d1dcf2033 isl: don't report I915_FORMAT_MOD_Y_TILED_CCS on Gfx8
+  * bab826c80bb ir3: Reduce the maximum allowed imm offset for shared
+    var load/store
+  * 70f4b8ed415 .pick_status.json: Update to
+    8c506c4b03aa17ba1c71ed4ce80464d489c29de7
+  * 588d7e23bd4 ci: Rebalance radv/grunt testing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Dec 2022 17:41:57 +0100
+
 mesa (22.3.0+git2212021230.9254827da8c~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
