@@ -1,3 +1,53 @@
+mesa (23.0.0~git2212051651.712fcaba1f4~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 712fcaba1f4 frontends/va: return proper error for unsupported
+    profile
+  * da32cbb5c69 aco: fix missing uses of MRT output flags
+  * 40f09f4e1c3 pvr: Add empty PDS program
+  * 46c2492a5d1 pvr: Add pvr_pds_compute_shader_program_init()
+  * 8c506c4b03a pvr: Use util_dynarray_append_dynarray()
+  * b051719b058 radv: do not set ZPASS_INCREMENT_DISABLE on GFX11
+  * 3ab9218820a radv: fix SPI_SHADER_Z_FORMAT for alpha-to-coverage via
+    MRTZ on GFX11
+  * a297ac10a4e radv,aco: stop lowering FS outputs in NIR
+  * 3be728f1d0f aco: fix indexing MRT0 alpha channel for alpha-to-
+    coverage via MRTZ on GFX11
+  * 20856bfe0f0 aco: always use 32-bit for exporting alpha-to-coverage
+    via MRTZ on GFX11
+  * 664aa7a37b5 radv: fix emitting invalid color attachments
+  * 64d584b8e4f r600/sfn: Silence warning for unused parameters in
+    override
+  * d7393c6b9cd r600/sfn: Allow more copy-propagation into TEX src
+  * 1975d5eaf4e r600/sfn: use only as many components as needed for tex
+    backend coord
+  * bcd9da1b38a r600/sfn: drop useless const specifier in return value
+  * 0a0dc7c04b3 r600/sfn: simplify if clauses with empty then branch
+  * d4dfae313e6 r600/sfn: legalize image acccess on Cayman
+  * fc75c1e07f2 r600/sfn: use three channels only for unary trans opts
+    if possible
+  * 71df6ba92d7 r600/sfn: lower-to-scalar in optimization loop
+  * b47928043dc r600/sfn: Fix scheduling with limited channel
+    availability
+  * 1f7d34b4a2d r600/sfn: Don't copy propagate using non-allocated dest
+    channel
+  * ca0164f4876 r300: improve conversion to native swizzles
+  * 384fc52dd33 r300: doublecheck for free alpha source when coventing
+    to alpha
+  * eb9f17b309c radeonsi: fix a regression causing GPU hang with GLCTS
+    using streamout
+  * b5133894005 dzn: Don't crash when libd3d12.so can't be found
+  * b3d1ae19f2f d3d12: Don't crash when libd3d12.so can't be found
+  * 55ffbf867b7 radeonsi: fix ngg lds base load intrinsic llvm
+    implementation
+  * 77ecf9149c7 anv: Defer flushing PIPE_CONTROL bits forbidden in CCS
+    while in GPGPU mode
+  * cd5c66e1653 dxil: Use nir_const_value_for_uint in
+    dxil_nir_lower_int_samplers
+  * f3f1c28f8e6 r600/nir: Fix u64vec2 immediate lowering
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 05 Dec 2022 17:39:50 +0100
+
 mesa (23.0.0~git2212021729.b2c43388629~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
