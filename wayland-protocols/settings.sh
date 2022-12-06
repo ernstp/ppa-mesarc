@@ -1,5 +1,5 @@
 GIT="https://gitlab.freedesktop.org/wayland/wayland-protocols.git"
 GITBRANCH="main"
-DISTROS="bionic focal jammy kinetic"
+DISTROS="bionic focal jammy kinetic lunar"
 INC=2
 PPA=base
