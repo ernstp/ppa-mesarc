@@ -1,6 +1,12 @@
 libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 06 Dec 2022 19:33:01 +0100
+
+libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
   * b5a9029 Link to gitlab.freedesktop.org
   * 80e4691 libdecor: print an error message when a plugin has a
     conflicting symbol
