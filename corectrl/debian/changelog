@@ -1,6 +1,12 @@
 corectrl (1.4.0~git2211121313.09ae5cc~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 06 Dec 2022 19:32:23 +0100
+
+corectrl (1.4.0~git2211121313.09ae5cc~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
   * 09ae5cc CONTRIBUTING: Require merge requests created from new
     branches
 
