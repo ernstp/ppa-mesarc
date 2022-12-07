@@ -1,3 +1,16 @@
+mesa (22.3.0+git2212061509.31eecbe8cb6~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 31eecbe8cb6 radv: use LATE_Z for depth/stencil attachments used in
+    feedback loops
+  * 1665b1c8f8f nir: fix nir_link_varying_precision
+  * 41d8339da40 intel: add missing restriction on fragment simd dispatch
+  * c80375793c3 intel: factor out dispatch PS enabling logic
+  * bda88150d07 .pick_status.json: Update to
+    b75b9d6324e0f3a31e72bd501034cf9c2a6c43af
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Dec 2022 01:19:47 +0100
+
 mesa (22.3.0+git2212051537.13bc65d39e6~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
