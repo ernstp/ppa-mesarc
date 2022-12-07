@@ -1,3 +1,10 @@
+mesa (22.3.0+git2212071228.3a8b71c7b7f~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3a8b71c7b7f radeonsi/vcn: adding av1 decoding film grain block
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Dec 2022 19:20:11 +0100
+
 mesa (22.3.0+git2212061509.31eecbe8cb6~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
