@@ -1,3 +1,54 @@
+mesa (23.0.0~git2212071643.bdb7fd69d65~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * bdb7fd69d65 radv: mark extendedDynamicState3SampleLocationsEnable as
+    not required by Zink
+  * 06a65be3d44 radv: advertise
+    extendedDynamicState3LineRasterizationMode
+  * 10092763123 radv: add support for dynamic line rasterization mode
+  * f992e663c77 radv: advertise
+    extendedDynamicState3RasterizationSamples
+  * a2fe4e9b048 radv: add support for dynamic rasterization samples
+  * c88d4037aac radv: store the number of color/ds samples to the
+    rendering state
+  * 613e9b8e7a8 nir: fix digit order in print_bitset()
+  * 0320dbaff55 nir: print shader_info bools with the value
+  * da2d36a9d59 nir: print shader_info inputs/outputs as bit ranges
+  * 89eca6a2fa9 radeonsi: add AMD_DEBUG=elements for printing vertex
+    elements
+  * 6dd170e5a42 util: minor refactor _mesa_sha1_print()
+  * e9f3f80b1d5 nir: print_shader_info(): brief output
+  * 814ba7d13d6 nir: print_shader_info: print stage-specific shader info
+  * 37b7233c15e nir: print_shader_info() print bitsets
+  * 4ed85c16f90 nir: print more in print_shader_info()
+  * 185e65f0f5d nir: extract print_shader_info() from
+    nir_print_shader_annotated()
+  * 2e775b8bdbc anv/hasvk: Clamping Scissor Rect values in a valid range
+  * 029919f3c83 tu: allow using resolve engine for SRGB MSAA resolves
+  * 1cfc413c9a4 meson: Do not enable drm for KGSL Turnip build
+  * 3c3e5cc40d1 st/mesa: stop using redundant
+    st_context::vp,tcp,tep,gp,fp,cp
+  * 33ca53ac79a st/mesa: fix the glBitmap cache wrt FS, scissor, and
+    clamp color changes
+  * 525c70c61aa st/mesa: don't flag ST_NEW_RASTERIZER for _NEW_PROGRAM
+  * 2a25b47c87e mesa: flag ST_NEW_RASTERIZER for
+    !needs_texcoord_semantic if changing FS
+  * 7950661aa01 mesa: remove unused composite _NEW_* flags
+  * 0a8d741b6d9 mesa: don't flag _NEW_PROGRAM for "texture_unit ->
+    sampler" mapping changes
+  * dbc9cb69954 mesa: set fewer flags for VertexProgram.TwoSideEnabled
+    changes
+  * 5acc0fa1d22 mesa: set fewer dirty flags for PointSizeEnabled state
+    changes
+  * 5b97b452afd mesa: flag ST_NEW_FS_CONSTANTS instead of _NEW_PROGRAM
+    for ATI_fs constants
+  * 4bc0edd1cf9 st/mesa: update st_context::active_states in
+    _mesa_update_state
+  * aaa4b0e6186 st/mesa: move check_program_state code into
+    _mesa_update_state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Dec 2022 19:18:00 +0100
+
 mesa (23.0.0~git2212062331.57b7102ef96~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
