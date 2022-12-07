@@ -1,3 +1,53 @@
+mesa (23.0.0~git2212062331.57b7102ef96~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 57b7102ef96 glx: fix xshm check to init xshm_opcode.
+  * 2ccf481c17c zink: don't use defunct custom-flag
+  * 91ed8fb13a5 nir: Add missing includes
+  * 0033ec1f693 venus: check against the Vulkan type rather than type
+    index.
+  * fbf4c6e43ff venus: fix deqp tests failed on iub descriptor type
+  * 12f26b5e6d5 radv: fix guardband if the polygon mode is points or
+    lines
+  * 12b0f7ac19a tu: Destroy disk_cache during tu_physical_device_finish
+  * f7d414b3e3c mesa: Add missing dep on generated marshal header in the
+    tests build.
+  * 1c3671d2ba3 ir3: Disallow `noperspective` texture preloads
+  * 5b8917bb911 ir3: Propagate `coord_offset` result from `alu` src
+    insts
+  * 83b8687264d turnip: Initialize *memory on 0-sized alloc early exit.
+  * 7809f76fe8a intel/compiler/mesh: align payload size to the size of
+    vec4
+  * ffefa386fda nir/lower_task_shader: fix task payload corruption when
+    shared memory workaround is enabled
+  * bd30adf89d3 aco: apply NUW to additions for scratch access
+  * 381de3c809f aco: more carefully apply constant offsets into scratch
+    accesses
+  * fae8c75ad0b radv/rt: set additions for scratch access as NUW
+  * 9b7217d12e9 nir/range_analysis: unsigned upper bound analysis for
+    b2i
+  * ccbb4648cba ci/freedreno: temporarily disable godot-trive on
+    zink+freedreno
+  * b75b9d6324e ac/llvm: set invariant.load on image loads with
+    ACCESS_CAN_REORDER
+  * de3fcc77c78 ac/llvm: inline ac_get_load_intr_attribs
+  * ce860953a62 ac/llvm: rename attribute enums
+  * ce0a83efb86 ac/llvm: use invariant.load metadata on load intrinsics
+    instead of readnone
+  * d3a03d24fce ac/llvm: don't set "readnone" on non-memory intrinsics
+  * 50bece9322c ac/llvm: don't set "convergent" on intrinsics where it's
+    automatic
+  * 2b5edf96ff3 ac/llvm: simplify how function attributes are set
+  * 9b4142ae9f2 ac/llvm: simplify how call attributes are set
+  * e94b040add0 ac/llvm: remove illegal function attributes READONLY and
+    WRITEONLY
+  * 89cd402c9b7 gallivm: remove illegal and unused function attributes
+  * 6ab5f570394 gallivm: remove unused LP_FUNC_ATTR_LEGACY
+  * e54f2286bea gallivm: remove unused
+    LP_FUNC_ATTR_INACCESSIBLE_MEM_ONLY
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Dec 2022 01:17:39 +0100
+
 mesa (23.0.0~git2212051651.712fcaba1f4~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
