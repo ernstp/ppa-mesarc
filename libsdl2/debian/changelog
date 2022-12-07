@@ -1,3 +1,10 @@
+libsdl2 (2.27.0+git2212052236.d1b481054~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d1b481054 Fixed centering the D-pad on some joysticks
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 07 Dec 2022 01:16:59 +0100
+
 libsdl2 (2.27.0+git2212042235.bcccbbd89~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
