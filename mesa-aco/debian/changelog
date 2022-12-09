@@ -1,3 +1,59 @@
+mesa (23.0.0~git2212091658.20e670d0603~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 20e670d0603 aco/ra: don't swap create_vector operand with definition
+    blocker for SGPRs
+  * a05dd58309c aco/ra: don't swap p_create_vector operand with
+    definition blocker for scc
+  * 4dff3ff005b nir/opt_algebraic: Optimize open coded bfm.
+  * a73e86e0a5e frontends/va: fix gst videotestsrc h264 enc fail issue.
+  * ee10a5f7a69 frontend/osmesa: inherit pipe_frontend_drawable instead
+    of allocating separately
+  * 5be128f67da frontend/hgl: inherit pipe_frontend_drawable instead of
+    allocating separately
+  * 3ba24ad153e gallium: rename st_framebuffer_iface ->
+    pipe_frontend_drawable, etc.
+  * 279dfeff1d2 gallium: remove pipe_frontend_screen::destroy callback,
+    call it directly
+  * ab7a86a0ee8 gallium: clean up comments in api.h, cosmetic changes
+  * e7a1cce4eec gallium: remove st_framebuffer_iface::st_manager_private
+  * 4f376f32396 frontend/glx: inherit st_framebuffer_iface instead of
+    allocating separately
+  * e51cb3ae20b gallium: remove unused ST_CONTEXT_ERROR_*
+  * ab281457aa4 gallium: rename st_manager_private -> st_screen
+  * 8543dcb275e gallium: remove st_profile_type in favor of gl_api, move
+    out st_context_attribs
+  * 81020faf20e gallium: remove unnecessary ST_PROFILE_*_MASK
+    definitions
+  * 9fdb0ce755d gallium: use PIPE_CONTEXT_* flags instead of
+    ST_CONTEXT_FLAG_*
+  * 0122a67c814 gallium: move st function declarations from api.h into
+    st_context.h
+  * be8f1d685e7 gallium: remove enum st_texture_type
+  * 59c9e62f482 st/mesa: remove st_context callbacks for dri/glx/wgl
+    frontends
+  * 263dc7b6056 gallium: remove st_context_iface, use st_context
+    directly
+  * c61aa8fa816 gallium/pp: don't use st_context_iface, use an explicit
+    callback
+  * fdec3529030 gallium/hud: don't use st_context_iface, use an explicit
+    callback
+  * 64ee8d2430a gallium: rename st_context_iface::st_manager_private to
+    frontend_context
+  * ec564cf0435 gallium: remove duplicated
+    st_context_iface::st_context_private
+  * cf2d71ec068 gallium: rename st_manager to pipe_frontend_screen
+    (think dri_screen)
+  * 597b2648d2d zink: do not leave needless shader temps around
+  * 8c2448d4e67 intel/compiler: Delete sampler key handling for planar
+    format stuff
+  * 88918baf5ca intel/compiler: Delete key->msaa_16
+  * 5d2a290cc7b intel/blorp: Set key->msaa_16 unconditionally on Gfx9+
+  * 584e18863e6 intel: Drop compressed_multisample_layout_mask from the
+    compiler keys
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 09 Dec 2022 18:37:21 +0100
+
 mesa (23.0.0~git2212071643.bdb7fd69d65~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
