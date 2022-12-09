@@ -1,3 +1,31 @@
+mesa (22.3.0+git2212090959.02d23a79bec~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 02d23a79bec anv: emit sample mask state independent of fragment
+    stage
+  * 122b3731b50 radeonsi: disable av1 decode for navi24
+  * 06544954d8c intel/fs: implement Wa_14017989577
+  * eda16334f0e intel/compiler: Set NoMask on cr0 access for float
+    controls mode
+  * d851099113f .pick_status.json: Update to
+    586ba9c2234cadba8f74eae30f7bca1601970512
+  * 3c4dd867326 vulkan: VkPolygonMode has a bit more than two values
+  * b9b674a4ed5 anv/hasvk: Clamping Scissor Rect values in a valid range
+  * 625be8b22f8 meson: Do not enable drm for KGSL Turnip build
+  * f03e6328f7f glx: fix xshm check to init xshm_opcode.
+  * 1ccff821121 zink: don't use defunct custom-flag
+  * 0d0aa320d0d venus: fix deqp tests failed on iub descriptor type
+  * efdc5df791b radv: fix guardband if the polygon mode is points or
+    lines
+  * 4fbd4ddc10b nir/lower_task_shader: fix task payload corruption when
+    shared memory workaround is enabled
+  * 4df6bf5de28 aco: more carefully apply constant offsets into scratch
+    accesses
+  * 2b08782540d .pick_status.json: Update to
+    b6616b036f7e8d88be50d46448890b1dee057cbb
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 09 Dec 2022 18:39:31 +0100
+
 mesa (22.3.0+git2212071228.3a8b71c7b7f~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
