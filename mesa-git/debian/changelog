@@ -1,3 +1,14 @@
+mesa (22.3.0+git2212112252.3da2a751840~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 3da2a751840 aco/ra: don't swap p_create_vector operand with
+    definition blocker for scc
+  * b0b39adb0cb frontends/va: fix gst videotestsrc h264 enc fail issue.
+  * d7fe32c3499 .pick_status.json: Update to
+    110d550941fd26f5e9ae450521a177d5be20a445
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 11 Dec 2022 23:25:56 +0100
+
 mesa (22.3.0+git2212090959.02d23a79bec~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
