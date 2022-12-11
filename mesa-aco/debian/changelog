@@ -1,3 +1,43 @@
+mesa (23.0.0~git2212112306.c9c44d63da4~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * c9c44d63da4 docs/release-calendar: add 22.3.x dates
+  * 110d550941f zink: Don't set dynamic color attachment state for 0
+    attachments.
+  * efa4e9568b2 radv: Use correct watermark for early loop exit.
+  * f0d6a1a6854 radv: Rename stack_base to stack_low_watermark.
+  * b0a6e0e1741 Revert "r600/sfn: Make use of variable length DOT"
+  * c9b13a93385 cso: remove cso_draw_vbo from all draws, call the driver
+    or u_vbuf directly
+  * 85f01982a08 cso: add a base class cso_context_base holding
+    pipe_context*
+  * 37e89b41f1f cso: unify cso_draw_vbo and cso_multi_draw
+  * 8b4201d6bd7 gallium/u_vbuf: change u_vbuf_draw_vbo to accept
+    pipe_context as first param
+  * 4a92492a8a0 gallium: add the u_vbuf pointer into pipe_context
+  * a9934a9f649 asahi: Implement occlusion queries
+  * 4dabbb761b4 asahi: Move query functions to agx_query.c
+  * 7a5f88cb38c asahi: Don't upload samplers for clears/stores
+  * d2f27d282f2 asahi: Avoid reloads with staging blits
+  * dc4cf64a768 asahi: Don't reload uninitialized surfaces
+  * 949a760c9f5 asahi: Fix Z32S8 harder
+  * 0c2500168d0 asahi: Don't shadow idle resources
+  * c9144eff488 asahi: Model alignment of occlusion query indices
+  * 3a318e4265a asahi: Identify some more fields used with layered
+  * c3eb81fd169 asahi: Identify XML for anisotropic filtering
+  * 7f247743a3c asahi: Check-box implement rasterizer discard
+  * d2a2d1997ec asahi: Wire in 1D (array) textures
+  * 5612d2cbeb9 asahi: Dirty track VS/FS key updates
+  * 37feaf9c0c5 asahi: Separate VS/FS shader keys
+  * 720ff76de42 asahi: Implement invalidate_resource
+  * 28b652af801 asahi: Track batch masks on ZS/blend CSO
+  * 33b18768575 asahi: Dirty track blend state
+  * 29e6c00e3c7 asahi: Enable dirty tracking
+  * b28fe26d7c6 ail: Save level_offsets_compressed_B
+  * 3895545b834 panfrost: implement clear_depth_stencil
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 11 Dec 2022 23:23:48 +0100
+
 mesa (23.0.0~git2212091658.20e670d0603~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
