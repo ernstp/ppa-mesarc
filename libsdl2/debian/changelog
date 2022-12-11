@@ -1,3 +1,18 @@
+libsdl2 (2.27.0+git2212101922.faa7e3cc2~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * faa7e3cc2 Update DYNAPI SDL_WinRTRunApp() prototype which was wrong
+    (see #6783)
+  * 5efc9bd19 SDL_dynapi_procs: fixed SDL_UIKitRunApp prototype (see
+    #6783)
+  * 4bae75387 docs: Note that you don't need to free
+    SDL_GetDefaultCursor's results.
+  * f57776836 Fixed build
+  * 569fa3f57 Added test event logging for
+    SDL_WINDOWEVENT_ICCPROF_CHANGED and SDL_WINDOWEVENT_DISPLAY_CHANGED
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 11 Dec 2022 23:23:07 +0100
+
 libsdl2 (2.27.0+git2212090203.be3b1cff0~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
