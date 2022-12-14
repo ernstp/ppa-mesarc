@@ -1,3 +1,21 @@
+xwayland (2:22.1.6+git2212140403.5437e5385~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 5437e5385 Bump to version 22.1.6
+  * 779f9cfa9 xkb: reset the radio_groups pointer to NULL after freeing
+    it
+  * 3ccee821a Xi: avoid integer truncation in length check of
+    ProcXIChangeProperty
+  * 783557278 Xi: return an error from XI property changes if
+    verification failed
+  * 8f8bba3d0 Xext: free the screen saver resource when replacing it
+  * 707b36b4c Xext: free the XvRTVideoNotify when turning off from the
+    same client
+  * 7efdf37d0 Xi: disallow passive grabs with a detail > 255
+  * 922a10f6c Xtest: disallow GenericEvents in XTestSwapFakeInput
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Dec 2022 17:34:37 +0100
+
 xwayland (2:22.1.5+git2211021001.f8795da30~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
