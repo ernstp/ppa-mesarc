@@ -1,3 +1,55 @@
+mesa (23.0.0~git2212141652.f94bd1d7233~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * f94bd1d7233 freedreno: Document various preemption-related
+    registers/packets
+  * 34010a50d42 wsi/x11: Rename the present progress objects.
+  * 9e55766f630 wsi/x11: Fix possible deadlock with wait_ready.
+  * 657d1be1539 radv: Don't lower subgroup shuffle on GFX11.
+  * db5c3f170f1 aco: Emulate Wave64 bpermute on GFX11.
+  * 853e76f0076 aco: Stylistic changes to emit_gfx10_wave64_bpermute.
+  * 640e8016510 aco: Split opcodes for GFX6 and GFX10 emulated bpermute.
+  * 614348f28be aco: Don't accept constants on p_bpermute.
+  * 27b70f28d97 ci/venus: add a VKCTS mapping test to the flakes list
+  * 16a7e15d4fc iris: Enable compression for image load/store in more
+    cases
+  * bf3d6ca94fa iris: Allow fast clears on compressed image load/store
+    access
+  * 7b2a690a354 iris: Update aux state tracking for image views after
+    draws/dispatches
+  * a9652fe5885 iris: Drop disable_rb_aux_buffer handling for image
+    views
+  * 806082e96fa iris: Drop 'isl_' prefix from
+    'formats_are_fast_clear_compatible'
+  * 880fab60a79 iris: Pin the clear color BO in use_image()
+  * 699e60681a3 iris: Drop batch parameter from
+    iris_update_postdraw_resolve_tracking
+  * 9dedbf66f62 zink: Fix reversed cap declarations for ImageBuffer
+  * bedb9b73db9 radv/ci: bump most jobs to the kernel to 6.1 + latest
+    firmwares
+  * 264a0cabd1d anv: assert when number of primitives is higher than max
+  * d7a1916798b anv: handle mesh shaders with max primitives == 0
+  * c26a053f2b6 radv: disable more NIR opts in radv_postprocess_nir()
+    with DISABLE_OPTIMIZATIONS
+  * 05d2ed7350c radv: move a conditional check to
+    radv_remove_color_exports()
+  * a43482e8d67 radv: advertise
+    VK_AMD_shader_early_and_late_fragment_tests
+  * 3ff58049b5a radv: implement AMD_shader_early_and_late_fragment_tests
+  * 877c10efd16 spirv: add support for
+    AMD_shader_early_and_late_fragment_tests
+  * ac8131b564e radeonsi/vcn: add support for 10bit input and enc 8bit
+    output
+  * eb76cee9f88 nir: Eliminate nir_op_i2b
+  * 8b37046765c nir/builder: Handle i2b conversions specially in
+    nir_type_convert
+  * edae161d989 intel/fs: Use nir_type_convert instead of
+    nir_type_conversion_op
+  * e34b8866b41 microsoft/compiler: Use nir_type_convert instead of
+    nir_type_conversion_op
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Dec 2022 17:29:48 +0100
+
 mesa (23.0.0~git2212112306.c9c44d63da4~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
