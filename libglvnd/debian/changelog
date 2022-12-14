@@ -1,3 +1,11 @@
+libglvnd (1.6.0+git2212141536.dba80d0~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * dba80d0 Merge branch 'error' into 'master'
+  * 112a6f5 meson.build: error out on unsupported OSes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Dec 2022 17:28:48 +0100
+
 libglvnd (1.6.0+git2211212205.b05bbcd~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
