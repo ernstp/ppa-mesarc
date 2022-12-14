@@ -1,3 +1,19 @@
+libsdl2 (2.27.0+git2212130528.c70974187~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * c70974187 Detect display change when fullscreen desktop windows move
+    displays
+  * 817454cfe Don't try to open the Razer Huntsman Elite keyboard as a
+    controller
+  * e986c7984 wasapi: Fixed incorrect assertions.
+  * dfd7efaf1 wayland: Set xdg surface geometry
+  * 802b5ef7d Added support for the STRIKEPAD PS4 Grip Add-on to the
+    HIDAPI driver
+  * e580e087f N3DS: Backport semaphore fixes from #6776.
+  * b79732b96 cmake: use FindALSA.cmake to find ALSA library
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Dec 2022 17:29:06 +0100
+
 libsdl2 (2.27.0+git2212101922.faa7e3cc2~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
