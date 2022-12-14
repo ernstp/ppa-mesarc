@@ -1,3 +1,41 @@
+mesa (22.3.0+git2212141255.6d5ce49956b~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6d5ce49956b gallium/vl: return the buffer plane order for yuv444p
+    format
+  * bb9619bac11 frontends/va: fix crash during grayscale rendering
+  * d2a8fa8e59a anv: disable Wa_1806565034 when robustImageAccess is
+    enabled
+  * 7ef813b3795 intel/fs: make Wa_1806565034 conditional to non robust
+    access
+  * a5e3911bc88 isl: make Wa_1806565034 conditional to non robust access
+  * fd1f90a2ba2 glsl_to_nir: Fix NIR bit-size of
+    ir_triop_bitfield_extract and ir_quadop_bitfield_insert
+  * 9f5709390d0 v3dv: skip some invalid tests
+  * 620b244b5c1 .pick_status.json: Update to
+    264a0cabd1dd2a619f24e34f21f767c6bf36fe76
+  * 12de900bdee radeonsi/vcn: fix regression in yuv422 jpeg decode
+  * a7a652c9002 radv: do not remove the PointSize built-in for polygon
+    mode as points
+  * 6c8ea3869b8 .pick_status.json: Update to
+    e2dc32d755b15697765719acec1d23f12f9c938c
+  * 869c15f85c2 vdpau: allow building vdpau st with virgl only
+  * bf7d6a5bbff radv: Handle NULL miss shaders
+  * b5b6c0349ff intel: Fix crashes for importing drm buffer
+  * f54c9a53118 anv: fixup descriptor copies
+  * adea25aa03b hasvk: pipelineStageCreationFeedbackCount is allowed to
+    be 0
+  * fae249898a1 .pick_status.json: Update to
+    f6929e7c3bc907ecc8284f1e6220bcd2a3351b3b
+  * ad2ec395acf intel/nir/rt: fixup primitive id
+  * 79395b9402c radv: fix hashing descriptor set layout
+  * 7802f393bfc nir: Do not consider phis with incompatible dests equal
+  * 55d2952e4d7 Revert "anv: compile anv_acceleration_structure.c"
+  * c03444bf856 .pick_status.json: Update to
+    610639682533783796fe32bdcb2b4d3375fae56f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 14 Dec 2022 17:32:01 +0100
+
 mesa (22.3.0+git2212112252.3da2a751840~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
