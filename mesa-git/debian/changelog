@@ -1,3 +1,48 @@
+mesa (22.3.1+git2212142340.6db008a8bb9~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6db008a8bb9 docs/relnotes: add 22.3.1 to index
+  * c20f1fc62e1 docs/relnotes: add sha256sum for 22.3.1
+  * c36706142be VERSION: bump for 22.3.1
+  * 840eef75bd2 docs: add release notes for 22.3.1
+  * 9b02e5c023b gallium/vl: return the buffer plane order for yuv444p
+    format
+  * cdbba253c2c frontends/va: fix crash during grayscale rendering
+  * a60641d1328 anv: disable Wa_1806565034 when robustImageAccess is
+    enabled
+  * fcb34f031c2 intel/fs: make Wa_1806565034 conditional to non robust
+    access
+  * b5820a84a24 isl: make Wa_1806565034 conditional to non robust access
+  * c1fad08d696 glsl_to_nir: Fix NIR bit-size of
+    ir_triop_bitfield_extract and ir_quadop_bitfield_insert
+  * ae1fa524c4c v3dv: skip some invalid tests
+  * 74d17cba5c5 radeonsi/vcn: fix regression in yuv422 jpeg decode
+  * 0565b834b64 radeonsi/vcn: enable yuv422 jpeg decode
+  * a8911c50c81 radv: do not remove the PointSize built-in for polygon
+    mode as points
+  * a9b3fee4b03 vdpau: allow building vdpau st with virgl only
+  * 63e1ccd5989 radv: Handle NULL miss shaders
+  * 3e3def96200 intel: Fix crashes for importing drm buffer
+  * 0c7a3133ac6 anv: fixup descriptor copies
+  * dc889d95bca hasvk: pipelineStageCreationFeedbackCount is allowed to
+    be 0
+  * bf1d05b8e4b intel/nir/rt: fixup primitive id
+  * 5e0dfcb9c71 radv: fix hashing descriptor set layout
+  * 57827e69036 nir: Do not consider phis with incompatible dests equal
+  * 68fece9af5a Revert "anv: compile anv_acceleration_structure.c"
+  * 2c738559376 aco/ra: don't swap p_create_vector operand with
+    definition blocker for scc
+  * 6922882d8ff frontends/va: fix gst videotestsrc h264 enc fail issue.
+  * e17740493fe anv: emit sample mask state independent of fragment
+    stage
+  * bcc73ba6f7a radeonsi: disable av1 decode for navi24
+  * 5b6718728bd intel/fs: implement Wa_14017989577
+  * d936394cf49 intel/compiler: Set NoMask on cr0 access for float
+    controls mode
+  * 75e55ca05a0 vulkan: VkPolygonMode has a bit more than two values
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 15 Dec 2022 17:26:12 +0100
+
 mesa (22.3.0+git2212141255.6d5ce49956b~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
