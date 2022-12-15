@@ -1,3 +1,47 @@
+mesa (23.0.0~git2212151700.ffc8d490b7d~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * ffc8d490b7d radv/rra: Fix leaf node id order
+  * 3a8c3b813e9 radv/rra: Validate geometry_id
+  * 446c49cdf76 radv/rra: Refactor resource management during dumping
+  * ab8777b384e radv/rra: Emit leaf node ids for leaf nodes instead of
+    internal nodes
+  * 5a5f3fe561b ac/sqtt: bump the maximum number of traces to 6 for
+    GFX11
+  * 5f7955ff74a ac/rgp: add missing GFX11 bits for RGP
+  * 54ae38042ab ac/nir: remove num_es_threads_var
+  * 69e55d9c1b4 ac/nir: fix ngg culling on gfx11
+  * ba31ec0d6fe vc4: replace open-coded F_DUPFD_CLOEXEC with
+    os_dupfd_cloexec()
+  * 78a75e0d257 intel/common/intel_genX_state.h: Add
+    intel_set_ps_dispatch_state()
+  * f16e76d9409 intel/common: Add intel_genX_state.h
+  * ed28705994f radv/ci: add lists for GFX1100
+  * 3440e89437e st/mesa: Enable Alpha writes when writing RGB faked as
+    RGBA
+  * c1144c82647 docs: update calendar and link releases notes for 22.3.1
+  * 42de551b836 docs: add release notes for 22.3.1
+  * a8615016322 panfrost: Add tool to print supported texture formats
+  * dafbdd8a35f ci/nouveau: Add a bunch of the top hits of gk20a flakes.
+  * 3890df33829 ci/nouveau: Sort some uncategorized gk20a flakes.
+  * 0521027182c nir: Allow more than just ALU instructions in 'weak' GVN
+  * d5d03a7273d nir: Perform 'weak' global value numbering in all GCM
+    passes
+  * e930bff19e7 anv: remove anv_reloc_list->array_length
+  * 1358622878b anv: remove anv_reloc_list->reloc_bos
+  * f1c4c646b8a anv: remove anv_reloc_list_grow()
+  * 4168d3ef30b anv: remove anv_reloc_list->num_relocs
+  * 4b1c4925e74 anv: remove anv_execbuf->surface_states_relocs
+  * c14857e915d intel/common: clean up AUX macros
+  * 9ff471fdc65 intel/vulkan: replace AUX macros with interfaces
+  * 78a4b6deed3 intel/isl: Support 1MB alignment for AUX mapping
+  * 9698eee50d9 intel/common: Support 1MB granularity AUX mapping format
+    (Bspec 44930)
+  * 49c6e306115 ci/bare-metal: Avoid a bug in armhf stripping causing
+    tempfiles in artifacts.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 15 Dec 2022 17:24:02 +0100
+
 mesa (23.0.0~git2212141652.f94bd1d7233~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
