@@ -1,3 +1,13 @@
+libsdl2 (2.27.0+git2212151439.8e72be311~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 8e72be311 testime.c: fix wrong {} in switch
+  * 7a9966af9 Fixed crash in SDL_PrivateGameControllerRefreshMapping()
+  * d59caffe2 Added support for clang thread-safety analysis
+  * 582fb3901 DBus: add a reference to the connection
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 15 Dec 2022 17:23:20 +0100
+
 libsdl2 (2.27.0+git2212130528.c70974187~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
