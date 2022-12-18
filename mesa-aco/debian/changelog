@@ -1,3 +1,40 @@
+mesa (23.0.0~git2212180634.47feb2b0134~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 47feb2b0134 docs: update to latest venus driver support
+  * 553c0a30672 venus: fix VK_EXT_pci_bus_info support
+  * 63cb570ef3d venus: sync protocol fixes and support for
+    VK_EXT_pci_bus_info
+  * 18f4dc6b75b etnaviv: Do expose 2D texture support on pre-halti GPUs
+  * 486c3417691 panfrost: Add architecture description XML for v10
+  * a9cdbed5a28 freedreno/drm: Short-circuit kernel for timeout=0 waits
+  * 90b9b1330d0 freedreno/drm/virtio: Guest side fence waits
+  * 995c64ddcbb freedreno/drm/virtio: More tracepoints
+  * be6d21ed56a freedreno: Limit cached staging BOs to PIPE_MAP_READ
+  * 4be235af7ca freedreno/drm/virtio: Remove prealloc_list
+  * 48610676897 freedreno/drm: Add sub-allocator
+  * 7d0d82f25ff util/vma: Add "nospan"
+  * 793741c9369 freedreno/drm: Merge in_fence_fd's
+  * 137cd3b0fa9 freedreno/drm: Move no_implicit_sync accounting
+  * 7b02bc6139f freedreno/drm: Drop fd_bo_fence
+  * 434a8412e83 freedreno/drm: Re-enable submit fence merging
+  * 932ce591ac7 freedreno/drm: Simplify deferred submit flushing
+  * 48b5164356c freedreno/drm: Return fence from submit flush
+  * 7469574814e freedreno: Rename fd_fence -> fd_pipe_fence
+  * c1a621813b3 freedreno/drm: Combine fd_fence and fd_submit_fence
+  * 803df07d9ed freedreno/drm: Replace shared/nosync fields
+  * e6b364f9248 freedreno/drm: Reorg BO alloc flags
+  * fd20df8f094 freedreno/drm: Invert BO destruction
+  * 84f44137ff7 freedreno/drm: Shuffle around BO init
+  * db0f273cfb4 freedreno/drm: Drop pipe ref to device
+  * c196e13e1f0 freedreno/drm: Get rid of fd_bo_del_locked()
+  * 5136f25667a freedreno/drm: Rework batch BO delete
+  * 75a4d902806 freedreno/drm: Start prying apart table_lock
+  * 2ee7012c2c6 freedreno/drm: Simplify cleanup_fences()
+  * 73ab83d2287 freedreno/drm: Add bo list iterator macros
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 18 Dec 2022 18:29:36 +0100
+
 mesa (23.0.0~git2212151700.ffc8d490b7d~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
