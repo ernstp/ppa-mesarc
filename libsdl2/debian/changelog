@@ -1,3 +1,19 @@
+libsdl2 (2.27.0+git2212181656.36c87d9f2~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 36c87d9f2 Android JAVA DetectDevices: 'is_capture' is inverted
+    (#6845)
+  * 4e3fc0c1d Android: make Detect devices common between aaudio and
+    android driver. (#6828)
+  * 187708e54 Fixed compiler warning
+  * 3b0cd4415 Fixed compiler warning
+  * 741499dea Android audio device selection (#6824)
+  * a53382e46 Sorted PS4 controllers, note that the NACON Wireless
+    Controller for PS4 actually reports as an XInput device
+  * e99b9ca9c Note that the NACON Daija Arcade Stick is an arcade stick
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 18 Dec 2022 18:28:54 +0100
+
 libsdl2 (2.27.0+git2212151439.8e72be311~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
