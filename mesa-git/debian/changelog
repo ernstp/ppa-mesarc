@@ -1,3 +1,27 @@
+mesa (22.3.1+git2212161138.bc7a7510145~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * bc7a7510145 r300: be more careful with presubtract and non-native
+    swizzles
+  * dc4ad5de1e8 v3dv: honor render area in subpass resolve fallback
+  * 7cf790d377d v3dv: handle depth/stencil resolves we can't implement
+    via TLB
+  * 0b5cbe95f56 v3dv: don't resolve by averaging samples on
+    depth/stencil resolves
+  * f55f873652a v3dv: always store/restore attachment state during meta
+    operations
+  * 37e9cd15a70 anv: fixup another dirty issue with gpu_memcpy
+  * 70f3e316222 radv/rra: Emit leaf node ids for leaf nodes instead of
+    internal nodes
+  * 619575418c0 .pick_status.json: Update to
+    a093a44d457070f2470c5daf64630c71498d5918
+  * e6f7dc039ef aco: Don't accept constants on p_bpermute.
+  * 5e710916829 zink: Fix reversed cap declarations for ImageBuffer
+  * e031d72a7ca .pick_status.json: Update to
+    c1144c82647b441c39308e57cb50649092209e96
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 18 Dec 2022 18:31:46 +0100
+
 mesa (22.3.1+git2212142340.6db008a8bb9~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
