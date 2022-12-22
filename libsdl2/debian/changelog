@@ -1,3 +1,15 @@
+libsdl2 (2.27.0+git2212210522.c542aef60~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * c542aef60 Fix GDK OpenGL build error
+  * abffa1194 Fix dynapi signature for SDL_GDKSuspendComplete
+  * 3b3c141ff gdk: Add support for building with OpenGL on Xbox
+  * 6969b3be3 Don't send Razer devices the Sony third-party query
+    feature report
+  * 311b02f0b Android active driver check (#6850)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Dec 2022 16:12:49 +0100
+
 libsdl2 (2.27.0+git2212181656.36c87d9f2~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
