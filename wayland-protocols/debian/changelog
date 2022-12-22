@@ -1,3 +1,10 @@
+wayland-protocols (1.31+git2212191341.37a7b9d~b~base2) bionic; urgency=medium
+
+  * New snapshot:
+  * 37a7b9d Fix typo in xdg-activation-v1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Dec 2022 16:18:09 +0100
+
 wayland-protocols (1.31+git2211291437.4624cfa~b~base2) bionic; urgency=medium
 
   * New snapshot:
