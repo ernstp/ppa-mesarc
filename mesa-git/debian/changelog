@@ -1,3 +1,32 @@
+mesa (22.3.1+git2212202357.7332b170eda~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 7332b170eda r600/sfn: Don't try to re-use the iterator when uses is
+    updated
+  * da89a603b15 radv: Destroy mesh shader scratch ring in
+    radv_queue_state_finish.
+  * b36b92d23d1 anv: Ensure we clear ANV_PIPE_PSS_STALL_SYNC_BIT on
+    flush
+  * cf006915dfe radv/rt: Refactor exiting PLOC
+  * 31c9f43dcd2 radv/rt: Execute memory barrier before updating the
+    phase end count
+  * cae8517b63b radv/rt: PLOC fixes for active_leaf_count
+  * 39fd2bc87eb etnaviv: Do expose 2D texture support on pre-halti GPUs
+  * 508fcc13577 panfrost: Align WSI strides for tiled AFBC
+  * 096da36f55a OpenCL/draw module: Support linking with LLVM and clang
+    15 static libraries
+  * 804b024650e radv/gfx11: disable mesh shaders
+  * b26ea4e86d1 aco/gfx11: export mrtz in discard early exit for non-
+    color shaders
+  * b189457a8a9 v3dv: be more careful when restoring dirty state after
+    meta operations
+  * c538b37465f v3dv: pipeline creation feedback may not request all
+    stages
+  * 12107728bf2 .pick_status.json: Update to
+    55df7ad571470562ffa3f6d71c32787f11b61b14
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Dec 2022 16:15:38 +0100
+
 mesa (22.3.1+git2212161138.bc7a7510145~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
