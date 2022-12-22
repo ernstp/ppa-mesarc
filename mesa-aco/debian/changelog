@@ -1,3 +1,56 @@
+mesa (23.0.0~git2212221532.fa07dcb5885~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * fa07dcb5885 radeon: drmGetVersion can return NULL
+  * 739a08ad235 anv: handle null push descriptors in deferred
+    optimization
+  * c52b7aa732e ci: Windows runner is experiencing DNS issues; disable
+    Microsoft farm
+  * 0d36f7f76d5 radv: Only apply taskmesh indirect 0 bug workaround when
+    necessary.
+  * 50330aaccbb ac: Add has_taskmesh_indirect0_bug field to ac_gpu_info
+    struct.
+  * d368914a388 radv: Include view index SET_SH_REG in
+    ace_predication_size.
+  * 590f74084d5 ci/lava: Show LAVA job info during fails
+  * 2e723cdc10a ci/lava: Anticipate overlayfs download
+  * 584762c2168 ci/lava: Fix Gitlab section rendering
+  * f040122bedb ci/lava: Feed yaml.load with raw bytes data
+  * ce0ca7ed21d Revert "ci: Lima farm maintenance"
+  * d004b4929d5 radv: Don't assume there is always at least 1 preamble.
+  * 376a947c09e venus: fallback to passthrough pci bus info when not
+    natively supported
+  * 55df7ad5714 r600/sfn: Fix possible dest channels for variable size
+    dot
+  * 281c07d89f1 radv: Fix uninitalized struct for trap handler
+  * 05fab97b2ce r600/sfn: Don't try to re-use the iterator when uses is
+    updated
+  * aace38c2d83 radv: Enable EXT_mesh_shader by default on GFX10.3.
+  * b8e4cc73bfa radv/amdgpu: Remove cs_add_buffers because it's no
+    longer necessary.
+  * 97d3377b56a radv/amdgpu: Remove command submission with scheduled
+    dependencies.
+  * 7cb128ffb1e radv: Add gang wait preambles and postambles to ensure
+    correct behaviour.
+  * c47c4d5f802 radv: Remove ACE->GFX wait at the end of each command
+    buffer.
+  * 0b0c941d755 radv: Rename radv_update_ace_preambles to
+    radv_update_gang_preambles.
+  * bcadea6af69 radv: Implement gang submit in radv_queue_submit_normal.
+  * d065abef758 radv: Update ACE preambles in radv_queue_submit_normal.
+  * 76deaa1b1a9 radv: Refactor command buffer handling in
+    radv_queue_submit_normal.
+  * 5ec9a96b91d radv: Remove radv_queue_submit_with_ace and disable
+    task/mesh shaders.
+  * ce62ec3bbb4 radv: Enable gang submit on the null winsys.
+  * 24404d83305 ac: Add has_gang_submit field to ac_gpu_info.
+  * 294604bc56c radv/amdgpu: Allow using more than 1 preamble with
+    cs_submit.
+  * e9d5b5c9b34 radv/amdgpu: Add IP type to IB info and use it when
+    submitting.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Dec 2022 16:13:30 +0100
+
 mesa (23.0.0~git2212180634.47feb2b0134~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
