@@ -1,3 +1,11 @@
+xwayland (2:22.1.7+git2212191017.ef2e1be3f~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * ef2e1be3f Bump version to 22.1.7
+  * 8015095a1 Xext: fix invalid event type mask in XTestSwapFakeInput
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Dec 2022 16:18:23 +0100
+
 xwayland (2:22.1.6+git2212140403.5437e5385~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
