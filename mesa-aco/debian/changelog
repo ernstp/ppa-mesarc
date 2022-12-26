@@ -1,3 +1,43 @@
+mesa (23.0.0~git2212261357.e584447aed4~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * e584447aed4 panvk: Fix null pointer dereference on cmd_buffer->ops
+  * 2024115b798 intel/ds: add missing generate draws perfetto glue
+  * bb4aa8a3eab panfrost: Fix race condition in BO imports
+  * f401599f79a vc4: Fix race condition in BO imports
+  * 7dbb1a091aa v3d: Fix race condition in BO imports
+  * 8c3c11ad33d Revert "ci: Windows runner is experiencing DNS issues;
+    disable Microsoft farm"
+  * ad4d7ca8332 kmsro: Fix renderonly_scanout BO aliasing
+  * 3e568cc6fe4 freedreno/perfetto: Add grid information for compute
+    jobs
+  * b53fa255873 panfrost: Clang-format pan_layout.c
+  * 0afd691f296 panfrost: clang-format the tree
+  * a4705afe634 panfrost: Fix up some formatting for clang-format
+  * e35719be6fb panfrost: Add missing #includes
+  * 90e128ae03b panfrost: Remove perfetto-specific .clang-format
+  * ee2dcdc3df7 panfrost: Add clang-format file
+  * c950fe97a05 anv: implement generated (indexed) indirect draws
+  * 3596a8ea7a3 anv: factor out some indirect draw count entry points
+  * 61b730f1f48 anv: decouple util function from anv_cmd_buffer
+  * bd83e5ddaf5 pan/bi: Use write masks on Valhall texture instrs
+  * 7d9c771b9b8 pan/va: Pack texture write masks
+  * 182087245da panfrost: Don't flush readers for reads
+  * 3c56b9c7a3f panfrost: Remove rsrc->track
+  * 955417aa3ec panfrost: Upload sysvals to a staging buffer
+  * b481507c03e panfrost,asahi: Set vendor to Mesa
+  * 3e28c5b9f96 anv: Pass anv_bo as parameter to anv_gem_mmap()
+  * 95ce9664d5d intel/common: Move i915 gem specific code to its own
+    file
+  * f51bafc3683 intel/common: Move i915 engine specific code to its own
+    file
+  * c14060e0d8e iris: Make iris_bo_export_gem_handle() static
+  * f6d73ea7b40 pan/lower_framebuffer: Remove unused pack
+  * 8dd35e0ac79 pan/mdg: Remove unused disassembler functions
+  * 8e1a4668829 panfrost: Remove unused so_mask calculation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 26 Dec 2022 17:20:59 +0100
+
 mesa (23.0.0~git2212221532.fa07dcb5885~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
