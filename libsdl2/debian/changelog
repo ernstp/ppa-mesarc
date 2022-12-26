@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2212231829.af54c8213~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * af54c8213 kmsdrm: Fix wrong check on KMSDRM_CreateWindow.
+  * 232ed540d Add SDL_HINT_WINDOWS_ENABLE_MENU_MNEMONICS.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 26 Dec 2022 17:20:16 +0100
+
 libsdl2 (2.27.0+git2212210522.c542aef60~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
