@@ -1,3 +1,48 @@
+mesa (23.0.0~git2212300139.05ca7d114ea~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 05ca7d114ea bin/gen_release_notes.py: read Closes/Fixes tags case-
+    insensitively
+  * e67578a264b bin/gen_release_notes.py: parse "Fixes" tags as well as
+    "Closes"
+  * 52cd87ea16f bin/gen_release_notes.py: don't fail if "Closes" refers
+    to an MR
+  * 334123a908c bin/gen_release_notes.py: do not fail on confidential
+    features
+  * bd807eecd16 bin/gen_release_notes.py: do not end "features" with
+    "None"
+  * cf24b70dc6c docs: update calendar for 22.3.2
+  * b22dd4d2d33 docs: add release notes for 22.3.2
+  * 980d6a91eec gen_release_notes: strip second newline in new features
+  * 75eb0d2891c freedreno/ir3: Allow isam for non-bindless ssbo loads
+  * 7cf7bf8b9ee ci/broadcom: add rpi3 flake
+    color_clears.multi_context.gles2.rgba8888_pbuffer
+  * def474e916b intel/genxml/gen12.5: Pipe_Control::Remove Global
+    Snapshot Count Reset
+  * c6d1f76da28 anv: Add and use emit_pipeline_select()
+  * 57f73d097ec ci/iris: add iris-kbl flake
+  * 4bd1829a5a4 ci: Enable gl-renderer in weston for wayland testing
+  * dcae3018281 pan/va: Fix MUX.i32 and MUX.v2i16 description. Should
+    be:
+  * d14d7c49db2 pan/va: Fix d0 description in enum "Load lane (8-bit)"
+  * f102b574235 pan/va: Fix description for constant 0xFAFCFDFE: -2, -3,
+    -4, -6
+  * db9cd8b5daa ci/amd: decrease number of stoney runners
+  * 2b2824b9eaa util/xmlconfig: fix memory leak triggered by duplicates
+  * f603d8ce9e8 asahi: Clang-format the subtree
+  * bf93fd46e21 asahi: Clang-format the twiddled tests
+  * c4c4f0502be asahi: Add missing #include's
+  * d9dc77f068e asahi: Add some clang-format commas
+  * c1f175c9fa7 asahi: Manually format some parts of the code
+  * de0fcd08d3f asahi: Add .clang-format file
+  * 680c873b353 agx: Undo sed fail
+  * b9aa66d5d0a anv: disable preemption for 3DPRIMITIVE during streamout
+  * 910f5a18cf8 intel/genxml: add disable preemption field for gen125
+  * afdbed9e9c3 anv: fix potential integer overflow
+  * eb2576902d9 radv: Use common vkEnumerateDeviceLayerProperties
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 30 Dec 2022 11:52:10 +0100
+
 mesa (23.0.0~git2212261357.e584447aed4~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
