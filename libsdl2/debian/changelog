@@ -1,3 +1,22 @@
+libsdl2 (2.27.0+git2212300000.78d3a713d~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 78d3a713d Fixed documentation for SDL_JoystickGetDeviceInstanceID
+  * 74229d4a4 Fixed keyboard scancode mapping for parenthesis
+  * 29a4c5ebc Fixed getting the VID/PID of a virtual joystick
+  * 903df79b2 Make sure we match the same way when adding a mapping and
+    looking up a mapping
+  * d47ff8ae7 SDL_thread.h: fix SDL_CreateThreadWithStackSize macro for
+    OS/2
+  * 738442b82 SDL_thread.h: fix beginthread param of
+    SDL_CreateThreadWithStackSize for win32
+  * 68073c627 Fix SDL_CreateThreadWithStackSize not passing staacksize
+    with win32 static api
+  * 920acb75c editorconfig: remove trailing whitespace in source code
+  * 3dbc6a40a render: only enable clipping when the rectangle is valid
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 30 Dec 2022 11:51:29 +0100
+
 libsdl2 (2.27.0+git2212231829.af54c8213~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
