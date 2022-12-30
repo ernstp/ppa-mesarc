@@ -1,3 +1,54 @@
+mesa (22.3.2+git2212292220.8c57a972306~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 8c57a972306 docs/relnotes: add sha256sum for 22.3.2
+  * a09d5e27472 VERSION: bump for 22.3.2
+  * e217d5d25ef docs: add release notes for 22.3.2
+  * 72356c713eb etnaviv: disable linear PE by default
+  * 1010e2ca89c anv: handle null push descriptors in deferred
+    optimization
+  * 76e8cb61fb2 radv: Include view index SET_SH_REG in
+    ace_predication_size.
+  * b62e66a9be5 r600/sfn: Don't try to re-use the iterator when uses is
+    updated
+  * b37fb247961 radv: Destroy mesh shader scratch ring in
+    radv_queue_state_finish.
+  * fa4a0b7f634 anv: Ensure we clear ANV_PIPE_PSS_STALL_SYNC_BIT on
+    flush
+  * 192b3125501 radv/rt: Refactor exiting PLOC
+  * 9b1d9d169b2 radv/rt: Execute memory barrier before updating the
+    phase end count
+  * b65b1a782c0 radv/rt: PLOC fixes for active_leaf_count
+  * 20dd926beaa etnaviv: Do expose 2D texture support on pre-halti GPUs
+  * 1fa1009ef21 panfrost: Align WSI strides for tiled AFBC
+  * 3cfe9bb623f OpenCL/draw module: Support linking with LLVM and clang
+    15 static libraries
+  * d03c94fa820 radv/gfx11: disable mesh shaders
+  * e6e692e19a9 aco/gfx11: export mrtz in discard early exit for non-
+    color shaders
+  * 7a9c1e17fee v3dv: be more careful when restoring dirty state after
+    meta operations
+  * 538a66b027e v3dv: pipeline creation feedback may not request all
+    stages
+  * edb0e10b5ab r300: be more careful with presubtract and non-native
+    swizzles
+  * 49d8af74ed5 v3dv: honor render area in subpass resolve fallback
+  * 4847a0845c1 v3dv: handle depth/stencil resolves we can't implement
+    via TLB
+  * c92aaf6d09e v3dv: don't resolve by averaging samples on
+    depth/stencil resolves
+  * 02b95befed8 v3dv: always store/restore attachment state during meta
+    operations
+  * 9c1899e93ff anv: fixup another dirty issue with gpu_memcpy
+  * ae0c9ee7e12 radv/rra: Emit leaf node ids for leaf nodes instead of
+    internal nodes
+  * da887a635b4 aco: Don't accept constants on p_bpermute.
+  * 02d32bac724 zink: Fix reversed cap declarations for ImageBuffer
+  * c4843e4ab4c .pick_status.json: Update to
+    def474e916b69b86ed49c895c7418ba54a0e8252
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 30 Dec 2022 11:54:18 +0100
+
 mesa (22.3.1+git2212202357.7332b170eda~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
