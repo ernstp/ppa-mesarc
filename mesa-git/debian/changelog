@@ -1,3 +1,33 @@
+mesa (22.3.2+git2301031004.aa8efb43552~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * aa8efb43552 radv: fix missing initialization of
+    radv_resolve_barrier::dst_stage_mask
+  * bd23f965221 aco: fix reset_block_regs() in postRA-optimizer
+  * 622e565ec42 bin/gen_release_notes.py: read Closes/Fixes tags case-
+    insensitively
+  * 0793555ff92 bin/gen_release_notes.py: parse "Fixes" tags as well as
+    "Closes"
+  * ab2d85cc837 bin/gen_release_notes.py: don't fail if "Closes" refers
+    to an MR
+  * 193c6fefc96 bin/gen_release_notes.py: do not fail on confidential
+    features
+  * d648d496048 bin/gen_release_notes.py: do not end "features" with
+    "None"
+  * 62d81fe2f1e gen_release_notes: strip second newline in new features
+  * 44bbd92d680 .pick_status.json: Update to
+    980df9ede1887c60d9fc82e7e08b3f63c3745d59
+  * 80891799ce8 radeonsi/vcn: av1 film_grain output fix
+  * 13872b0434d frontends/va: pass in film_grain_target as new output
+  * df124acd487 frontneds/va: use current_display_picture from VA for
+    film grain
+  * 037bf0f556d frontends/omx: initialize film_grain_target
+  * 7ce0bd2e909 gallium: add film_grain_target into av1 dec desc
+  * 44bb614c378 intel: Fix a hang caused by invalid dispatch enables on
+    gfx6/7
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 04 Jan 2023 18:08:05 +0100
+
 mesa (22.3.2+git2212292220.8c57a972306~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
