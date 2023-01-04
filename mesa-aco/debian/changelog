@@ -1,3 +1,48 @@
+mesa (23.0.0~git2301041730.0b72ff00b15~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 0b72ff00b15 pvr: Remove PVR_STATIC_CLEAR_.*_BIT and use
+    VkImageAspectFlags.
+  * 7509e259f85 pvr: Implement color/depth/depth+stencil attachment
+    clear.
+  * 6e2ec310431 pvr: Add clear attachment programs in device.
+  * 72151aa4260 pvr: Add comments documenting large/normal clear words.
+  * a308d38fae0 pvr: Add empty clear attachment usc programs.
+  * 821c6b93423 pvr: Implement depth/stencil/depth+stencil attachment
+    clear.
+  * 5611dedd787 pvr: Fix typo in 'err_free_verices_buffer'.
+  * 603570535d1 pvr: Add pvr_clear_vertices_upload().
+  * 13fc4b1780f pvr: Move static clear state into pvr_clear.c .
+  * aa37415f1c8 pvr: Add layer count support to pvr_clear_vdm_state().
+  * 4a9f23c564a pvr: Move clear VDM state into pvr_clear.h .
+  * a70b7245193 pvr: Add clear rta vert shader pds program.
+  * 22bad762f47 pvr: Add pvr_clear.{h,c} .
+  * 821da19046b pvr: Add multi layer passthough vert shader upload in
+    device.
+  * 37e8e0a4942 pvr: Change "ID" to "id" in instance_ID_modifier.
+  * 305f0de7a32 ci: Remove MESA_ARM_BUILD_TAG environment variable
+  * 37d56a05764 ci: Bump crosvm and virglrenderer versions
+  * 234e8fd157f r600/sfn: make sure we return a non-negative number of
+    registers
+  * c3e2e71b501 radv: rework generating the PS epilog key
+  * 4f6f53a18ae radv: simplify removing unused color exports
+  * 476a1552c1b docs/freedreno: Extract debug tooling docs and improve
+    gpu dbg docs
+  * f5de21336b7 radv/winsys: set has_3d_cube_border_color_mipmap for
+    null winsys
+  * e176eb6c390 docs/freedreno: Extract LRZ docs from tu_lrz
+  * 22543653d5b radv: fix multiple resolves in the same subpass
+  * 043508d8f84 glsl: Remove bit_count lowering
+  * abe5acf7fda glsl: Remove bitfield_reverse lowering
+  * f5722c49734 glsl: Remove bitfield_extract and bitfield_insert
+    lowering
+  * db241fbd70c nir: Don't allow conflicting bitfield lowering passes
+  * 8ab7ec01290 intel/compiler: Enable lower_bitfield_extract_to_shifts
+    and lower_bitfield_insert_to_shifts for pre-Gfx7
+  * 13f7ef5e0c0 util: Drop the ENUM_PACKED macro
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 04 Jan 2023 18:05:58 +0100
+
 mesa (23.0.0~git2212300139.05ca7d114ea~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
