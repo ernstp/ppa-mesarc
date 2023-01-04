@@ -1,3 +1,25 @@
+libsdl2 (2.27.0+git2301040024.a09917275~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * a09917275 Added support for the ThrustMaster eSwap PRO Controller
+    Xbox
+  * 988866ca4 Fixed line wrapping for HID packet dump
+  * 2cb7a0a0b Added support for the ThrustMaster eSwap PRO Controller
+    Xbox
+  * b8d5fa4ae Improved handling of binding buttons and axes
+  * 0a9f61fbf Wayland / Drag and Drop: find the current window
+  * c7f22f032 render/SDL_yuv_sw.c: fix build after commit d234f7a
+  * d234f7a49 SDL2: backport SDL_CalculateYUVSize() that checks for YUV
+    size overflow (#6972)
+  * 2fd9e63f1 Android: orientation, check for exact match to "Portrait".
+    (see #6959) (Portrait is also contained in PortraitUpsideDown)
+  * 874ebed14 Android: inverse LandscapeLeft and LandscapeRight (see
+    #6959)
+  * 5b904a103 windows: more HANDLE -> HMODULE changes.
+  * 0a8f9777a SDL_dynapi.c: LoadLibraryA() returns HMODULE.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 04 Jan 2023 18:05:17 +0100
+
 libsdl2 (2.27.0+git2212300000.78d3a713d~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
