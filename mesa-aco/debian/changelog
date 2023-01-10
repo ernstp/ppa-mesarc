@@ -1,3 +1,51 @@
+mesa (23.0.0~git2301101701.b1e59646de7~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * b1e59646de7 aco/gfx11: increase vgpr_limit to 256
+  * 6872f8d861b aco/gfx11: allow true 16-bit instructions to access
+    v128+
+  * 254b178d5bb aco: disallow SGPRS/constants with interpolation
+    instructions
+  * 5af891a747d aco: add more opcodes to can_use_DPP()
+  * c3dd1931d99 aco: allow Builder::Result to be dereferenced
+  * e386523380d aco/gfx11: fix discard early exit removal optimization
+  * 9d814c405bb microsoft/spirv_to_dxil: Let linking report the need of
+    runtime data
+  * 6481805e000 etnaviv: properly check for new clear value in sampler
+    TS setup
+  * 03fdcbba19b etnaviv: blt: properly use upper half of clear value
+  * a358890667a ir3/print: Consider the size of input when matching it
+    to a reg
+  * d474cc935e7 ir3: Force flat.b sources to be equal
+  * a45d32b10b3 tu: Fix varyings interpolation reading stale values
+  * 25a151533cd loader/dri3: Overhaul draw->cur_num_back handling
+  * 27366cb5107 loader/dri3: Add dri3_set_render_buffer helper
+  * 5d25a4cab40 loader/dri3: Move NULL handling into
+    dri3_free_render_buffer
+  * 6e888f61593 radv: enable PS epilogs on-demand for some dynamic
+    states
+  * eb07a11b8f4 radv: add support for compiling PS epilogs on-demand
+  * 11469f7553d radv: copy the non-compacted color format at pipeline
+    bind time
+  * bbd7f700739 radv: rework PS epilog emission
+  * 7de50e4c6c0 radv: keep track of SPI_SHADER_COL_FORMAT for PS epilogs
+  * c9f30c4aa0e radv: enable the PS epilogs cache when some ds3 states
+    are enabled
+  * 75b0d6de040 radv: add support for a PS epilogs cache in the device
+  * c0f95913a09 ci/rpi4: add a couple of tests as flaky
+  * 7931b4026f3 ci/rpi3: add another test variant (draw-copypixels-sync)
+    as flaky
+  * 28d6caad605 gallium/draw: assert shader-stage
+  * 7c1b9ee6b76 gallium/draw: use nir_shader_instructions_pass for
+    nir_lower_aaline_fs
+  * 3897a233fb1 radv: add a new dirty flag for the RB+ state
+  * f1e06b46a9d lvp: avoid redundant sampler views and image views
+  * f18827e0153 zink: stop using
+    VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT
+  * 2e9ac9278c2 agx: Remove obsolete comment
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Jan 2023 18:20:31 +0100
+
 mesa (23.0.0~git2301041730.0b72ff00b15~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
