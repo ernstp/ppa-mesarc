@@ -1,3 +1,46 @@
+mesa (22.3.2+git2301091959.62bf995958a~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 62bf995958a radv: fix re-emitting tessellation domain origin when
+    it's dynamic
+  * 0d8f1ea19ff util/00-mesa-defaults: add Limbo workaround
+  * c0f77c01aea .pick_status.json: Update to
+    b64afc1d37a2ed165f0f3bb059c71a298253c9a5
+  * 7e0a6cad2cd driconf: add a workaround for plasmashell freezing
+  * 253bcd1047c .pick_status.json: Update to
+    41eb491fb6460f401a4c845fc28a53de92e9075b
+  * b29b67c0bd6 virgl: Use virgl host side shader stage IDs when reading
+    caps
+  * b6fce3114e1 aco/gfx11: update s_code_end padding
+  * 0032ab28b91 .pick_status.json: Update to
+    c91a78c03a67afa5f0792669a58a7d19f87c5ba0
+  * 8031dcffda9 meson: add missing dependency
+  * 94e6ff06b47 radv: fix returning VK_PIPELINE_COMPILE_REQUIRED from
+    library
+  * 24b6fb21bd2 .pick_status.json: Update to
+    aab4a260db6563d676a8e43fcdf7c653e61bf698
+  * fb04df7807a kmsro: Fix renderonly_scanout BO aliasing
+  * 375d4abe12e egl: handle NULL loaderPrivate in dri_is_thread_safe
+  * c21ba4b934b v3dv: initialize fd variable for proper error handling
+  * 3ac697560c2 zink: Only expose PIPE_CAP_SHADER_ATOMIC_INT64 if we can
+    do shared and ssbos.
+  * 7ded36020bb zink: Only expose PIPE_CAP_IMAGE_ATOMIC_FLOAT_ADD if we
+    can actually add.
+  * af6ee9e23d6 util/00-mesa-defaults: add Metal Slug XX workaround
+  * f616fbbc50f hasvk: Emit CS stall on INTEL_MEASURE timestamp
+  * 4739f19e69e anv: Emit CS stall on INTEL_MEASURE timestamp
+  * 6d6770f45b4 radv: fix multiple resolves in the same subpass
+  * c8f21e8bd0d nv30: Fix an offset for vbos being applied to a buffer
+    twice
+  * b3d7408e0ab venus: properly ignore the sampler for immutable sampler
+  * 6c6744dd850 lvp: properly ignore sampler write for immutable sampler
+  * a9c4a77370a frontends/va: Update state var frame_num disregarding
+    cap check
+  * 765ab662b37 .pick_status.json: Update to
+    32925bf7080cd43cf90f41e10be8c61bafb1d11e
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Jan 2023 18:22:41 +0100
+
 mesa (22.3.2+git2301031004.aa8efb43552~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
