@@ -1,3 +1,25 @@
+libsdl2 (2.27.0+git2301091848.0479df53c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 0479df53c Updated copyright for 2023
+  * 0b0d256a6 Fix loongarch64 support
+  * d09d0aaab cmake (CheckPTHREAD): remove _GNU_SOURCE define after bug
+    #7026 fix
+  * 460b7b247 cmake: do all compile tests with -D_GNU_SOURCE=1
+  * ebc2fb411 Fixed infinite loop shutting down WGI controllers
+  * 0d5467a6e cmake: check for math library functions even in the
+    absence of libm
+  * 305e7b55b cmake: fix detection of library functions when -Werror is
+    enabled.
+  * ad0d1e2ad wayland: Fallback to default cursor if chosen one wasn't
+    found
+  * 7bf4319eb fix computation of alpha in BlitRGBtoRGBPixelAlphaMMX3DNOW
+    (see #6990)
+  * 0ebda8742 Fixed bug #6990: fix computation of alpha in
+    BlitRGBtoRGBPixelAlphaMMX
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 10 Jan 2023 18:19:48 +0100
+
 libsdl2 (2.27.0+git2301040024.a09917275~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
