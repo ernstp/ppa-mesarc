@@ -1,3 +1,50 @@
+mesa (22.3.3+git2301111908.163489ab935~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 163489ab935 docs/relnotes: add sha256sum for 22.3.3
+  * 08341a7b16a VERSION: bump for 22.3.3
+  * 56c1c201619 docs: add release notes for 22.3.3
+  * 4c8bca5afbd v3dv: fix alpha-to-one for single sample setup
+  * 5b0971c64d2 zink: set surface->dt when updating swapchain
+  * 936c86f52ad mesa: add missing count_scale attributes
+  * 05125049cb5 mesa: add missing count_scale attribute
+  * cdac7338745 radeonsi: rewrite si_update_ps_colorbuf0_slot to fix
+    crashes and recursions
+  * ac676fee533 etnaviv: blt: properly use upper half of clear value
+  * 958ab782e75 tu: Fix varyings interpolation reading stale values
+  * b4691829638 zink: stop using
+    VK_PIPELINE_CACHE_CREATE_EXTERNALLY_SYNCHRONIZED_BIT
+  * ac128236d29 util/driconf: add Dune: Spice Wars workaround
+  * 453cb59d034 lavapipe: add some safety asserts when beginning
+    rendering
+  * d8cf98bcb81 anv: use the null surface with unused push descriptor
+    binding table entries
+  * 7d2915088d7 anv: return properly typed value for no ubo promoted
+  * b95e5a8cc2d anv: check that push range actually match binding
+    considered
+  * 605feb02812 anv: don't nullify entries
+  * 859e2de1f35 iris: let isl set tiling mode for external resources
+  * 888bb9c3808 vc4: Fix running process_mux_deps on irrelevant type of
+    instructions
+  * 09676cf5e83 vc4: Fix RADDR_A field extraction of branch instruction
+  * 1249d31af26 zink: protect against invalid scissored renderpass
+    clears
+  * 93f2eec67b9 zink: only update framebuffer object during swapchain
+    update if framebuffer exists
+  * 60474e53eab radv: fix re-emitting tessellation domain origin when
+    it's dynamic
+  * 6f1f06eacfa util/00-mesa-defaults: add Limbo workaround
+  * c59b6e6c884 driconf: add a workaround for plasmashell freezing
+  * b979eadb9d2 virgl: Use virgl host side shader stage IDs when reading
+    caps
+  * b582b7f1b60 aco/gfx11: update s_code_end padding
+  * 32e567d411f meson: add missing dependency
+  * eab2bbe2910 radv: fix returning VK_PIPELINE_COMPILE_REQUIRED from
+    library
+  * 2adab724e59 kmsro: Fix renderonly_scanout BO aliasing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 11 Jan 2023 19:55:16 +0100
+
 mesa (22.3.2+git2301091959.62bf995958a~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
