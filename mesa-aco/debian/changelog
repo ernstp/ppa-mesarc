@@ -1,3 +1,49 @@
+mesa (23.0.0~git2301111655.e11e68b56b1~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * e11e68b56b1 radv,aco: fix enable_mrt_output_nan_fixup for RAGE2
+    again
+  * 38d6185432d ci: debian-build-testing, build only the LTO variant
+  * f44bd88c9dd docs: fixup envvar-directive syntax
+  * 0c58ad3e321 docs: use envvar directive more
+  * c2200a410bf v3dv: expose VK_KHR_shader_integer_dot_product
+  * 22ef66bcc96 v3d/compiler: remove unused sample_coverage field from
+    fs key.
+  * 09782e5e6d5 v3dv: fix alpha-to-one for single sample setup
+  * f40afe98836 v3d: add a debug option to optimize shader compile times
+  * dee97e7b998 dzn: Allow multiple graphics queues
+  * 5f1b8b3e6c9 dzn: Use DXGI swapchains
+  * 2f462105fac vulkan/wsi: Hook-up DXGI swapchains and DComp
+  * e4d81c05ea4 vulkan/wsi: Port Win32 WSI to C++
+  * a40913b3e00 vulkan/wsi: Allow platform code to define extra
+    dependencies
+  * 2975a7f453a vulkan/wsi: Add support for image -> image blits
+  * 65e4873d829 vulkan/wsi: Dissociate the blit context and image
+    configuration steps
+  * fa4e7291658 vulkan/wsi: Prepare things for image to image blits
+  * bbcbf2cd91b vulkan/wsi: Don't set use_buffer_blit manually in the
+    win32 WSI logic
+  * 5fb2adb8fdb vulkan/wsi: Simplify
+    wsi_win32_surface_create_swapchain() error path
+  * 52c87d0b839 vulkan/wsi: Indent fixes in ws_common_win32.c
+  * a67f5f32a8d meson: Define VK_USE_PLATFORM_WIN32_KHR for C++
+  * 9ff54a52ec7 docs: update new_features.txt for additional work with
+    RADV
+  * bed18ab3e2f intel/compiler: fine-grained control of dispatch widths
+  * bf3112805ce ci/venus: re-enable venus-lavapipe
+  * 3c91168c71c ci/venus: specify render server path to enable server
+    config
+  * e86c99bb28f ci: uprev virglrenderer
+  * f13a42e5a15 Fix incorrect stage reference
+  * 63345d59b02 d3d12: Unionize shader variables in d3d12_shader_key to
+    reduce size
+  * e1cbff228a7 docs: Add short documentation about RMV tracing
+    variables
+  * e624494c0f1 radv: Enable RMV tracing
+  * abf3bcd6ea6 radv: Add RMV resource tracking
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 11 Jan 2023 19:53:06 +0100
+
 mesa (23.0.0~git2301101701.b1e59646de7~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
