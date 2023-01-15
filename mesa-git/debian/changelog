@@ -1,3 +1,32 @@
+mesa (22.3.3+git2301131951.6cac735d521~b~mesarc5) bionic; urgency=medium
+
+  * New snapshot:
+  * 6cac735d521 aco: Pass correct number of coords to Vega 1D LOD
+    instruction.
+  * 5f3c0ac83e4 nir/nir_opt_move: fix ALWAYS_INLINE compiler error
+  * 6fe9c3fe1e5 radv: fix missing implementation of creating images from
+    swapchains
+  * 431d6784787 docs/perfetto: Fix the name of the i915 render stages
+    data sources.
+  * 1c05b424cb2 zink: fix PIPE_RESOURCE_PARAM_NPLANES with format
+    modifier
+  * 2ebc48364b5 gen_release_notes: include links in relnotes.rst when
+    generating the new release note
+  * 2ff92fcdac5 radv/gfx11: increase radeon_check_space for occlusion
+    query begin
+  * e0ec07046c6 lavapipe: fix one more descriptor set reference issue
+  * 2d9bfcd86bf vk_cmd_queue: add a callback to free push descriptors
+    set khr
+  * bf0280025e3 llvmpipe: unref images correctly in the fragment shader
+    path
+  * 0b3e1af4761 lavapipe: fix merged layout ref counting
+  * e0f369a244f lavapipe: fix descriptor set layout reference counting
+    in layout merge
+  * 82f72cd0192 .pick_status.json: Update to
+    edca10e9c907a21f44698121e97d0eef92c7961a
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 15 Jan 2023 12:41:14 +0100
+
 mesa (22.3.3+git2301111908.163489ab935~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
