@@ -1,3 +1,21 @@
+libsdl2 (2.27.0+git2301150130.b47b6e02f~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b47b6e02f fix prefix path not resolving symlinks
+  * 381312a02 Use filesystem drivers
+  * f836b465a Revert "wayland: Don't try to restore non-resizable
+    windows"
+  * a47a04512 wayland: Don't try to restore non-resizable windows
+  * e8ae15558 wayland: Perform a round trip when maximizing and
+    restoring windows
+  * 2cb422360 Fixed the hat_map to avoid segmentation fault
+  * fa934dd4d hidapi: switch: Add user calibration support
+  * 6a5201772 SDL_dynapi.c: add extern "C" guards, just in case..
+  * 32fd45cf4 Using UV instead of STQ
+  * c5a09ca7a Remove dummy flag
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 15 Jan 2023 12:38:23 +0100
+
 libsdl2 (2.27.0+git2301110515.b42503680~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
