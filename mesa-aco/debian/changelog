@@ -1,3 +1,45 @@
+mesa (23.1.0~git2301151119.4fb2463a37f~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 4fb2463a37f etnaviv: nir: use lower_fround_even
+  * 5fdfd8044d7 panfrost: Don't use AFBC of sRGB luminance-alpha
+  * 48a0478126f zink: add renderdoc handling
+  * 7e52bd7b182 venus: vn_queue: align vulkan object variable naming
+  * 32660a41ea8 venus: refactor QueueSubmit/QueueSubmit2
+  * 6863092d956 venus: append fence feedback batch
+  * 2889a0478b7 venus: drop VkQueueBindSparse
+  * 3b107962a29 venus: remove filtering external semaphores for
+    QueueSubmit
+  * f6ffb5ac365 venus: require exportable/importable bit for ext
+    semaphores sync fd
+  * 31e7471be2e venus: require exportable bit for ext fence sync fd
+  * 75e369335f9 venus: require importable external semaphores for WSI
+  * f09cc33dfb7 venus: refactor VK_KHR_synchronization2 ext sync fd
+    requirements
+  * 72371af332c venus: refactor out vn_feedback_event_cmd_record2
+  * 842ca284650 gbm/backend: fix gbm compile without dri
+  * f1faf30a5f0 dzn: Fix clear bind flag logic
+  * 59495215086 dzn/ci: Add image test group, which is all passing now
+  * 889f03fc243 dzn/ci: Remove flakes/fails that don't hit anymore
+  * 9f9a58eb952 ci/windows: Download updated WARP 1.0.4 package
+  * a5a19903ab6 mesa: Trivially advertise NV_generate_mipmap_sRGB
+  * 2aad8dbfa52 mesa: Fix extension table formatting
+  * d3feccfa6f5 radv: Use the new NIR builder tex helpers for meta
+  * 433fe592ace nir/builder: Add some texture helpers
+  * 30f3fec3801 nir: Add more opcodes to nir_tex_instr_is_query()
+  * 7d8b90a4705 glx: Harmonize glXCreateGLXPixmap with glXCreatePixmap
+  * 2cc3763d045 glx: Fix drawable type inference in visual/fbconfig
+    setup
+  * 86c9a31d99d glx: Inline a few single-use constant strings into their
+    user
+  * 07292d6e76b glx: Move 1.2 GLXPixmap code into glx_pbuffer.c
+  * cf90a2b28f0 glx: Check for initial "glX" first in glXGetProcAddress
+  * f8d3c222db2 glx: Reflow MakeContextCurrent a little
+  * cf9debb6397 glx: Clean up some funny business from context
+    bind/unbind
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 15 Jan 2023 12:39:05 +0100
+
 mesa (23.0.0~git2301111655.e11e68b56b1~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
