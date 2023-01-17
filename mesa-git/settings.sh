@@ -1,6 +1,6 @@
 PACKAGE_NAME=mesa
 GIT="https://gitlab.freedesktop.org/mesa/mesa.git"
-GITBRANCH="staging/22.3"
+GITBRANCH="staging/23.0"
 DISTROS="bionic focal jammy kinetic lunar"
-INC=5
+INC=0
 PPA=mesarc
