@@ -1,3 +1,46 @@
+mesa (23.0.0~rc1+git2301171916.05e95550465~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 05e95550465 intel/compiler: add cpp_std=c++17 when building tests
+  * c1393d14303 panfrost: Fix clears with conditional rendering
+  * 7dd8437e096 panfrost: Fix logic ops on Bifrost
+  * 6b139c2be7d panfrost: Enable NV_primitive_restart on Valhall
+  * 0b4c673810b pan/bi: Fix incorrect compilation of fsat(reg.yx)
+  * e8dd7a275ed radv/bvh: Prevent NANs when computing node cost
+  * 20f8f6ebc68 Revert "ci: build hasvk if we're building anv"
+  * ec70534827f vulkan/wsi: check if image info was already freed
+  * fdf09a06ca3 radv: Fix memory leak.
+  * 35213f18b84 radv/rt: Divide by the correct workgroup size
+  * bbf46758470 panfrost: Don't use AFBC of sRGB luminance-alpha
+  * 668503534d3 dzn: Fix clear bind flag logic
+  * 4b0a1e19d6a .pick_status.json: Update to
+    8084b412ca97c048b43043c80946498b346c3016
+  * 2114fdf5eb5 aco: Pass correct number of coords to Vega 1D LOD
+    instruction.
+  * 54cfb552abc nir/nir_opt_move: fix ALWAYS_INLINE compiler error
+  * 264d64cc6cb radv: fix re-emitting RB+ when the non-compacted color
+    format changes
+  * a56dcf635ed .pick_status.json: Update to
+    a5a19903ab671ebdf4130fdf3cc782a8a0a2a3d9
+  * f081fa40471 VERSION: bump for rc1
+  * 376f8131d0c docs: add missing updates to new_features.txt
+  * ebdf6a79266 intel/genxml: Drop CACHE_MODE_SS definition.
+  * 18e91ad3291 radv: Fix deadlock in radv_rmv_log_event_create
+  * af55e36d798 dzn: Declare debug only root_dwords as ASSERTED
+  * f67a0a77459 anv: Add a tracepoint for the fallback implicit sync
+    wait path.
+  * 25edfcdb2ae perfetto: Add the intel data sources to system.cfg.
+  * dbd6031c067 docs/perfetto: Fix the name of the i915 render stages
+    data sources.
+  * b4d3d11e435 ci: build hasvk if we're building anv
+  * 329e0173004 vulkan/rmv: Only trace on the n-th frame
+  * 0b081731cb3 radv/rmv: Capture names of pipelines but not command
+    buffers
+  * 681871ade17 radv/rmv: Fix resource ids for name tokens
+  * ab9a9f702aa hud: fix values printing
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 17 Jan 2023 20:44:44 +0100
+
 mesa (22.3.3+git2301131951.6cac735d521~b~mesarc5) bionic; urgency=medium
 
   * New snapshot:
