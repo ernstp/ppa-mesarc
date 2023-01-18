@@ -1,3 +1,22 @@
+mesa (23.0.0~rc2+git2301182043.41648b0e3f1~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 41648b0e3f1 intel/blorp: Lower base_workgroup_id to zero
+  * 269dba25b61 zink: fix depth-clip disable cap
+  * de650de6d8b ac/nir: clear unused components before storing XFB
+    outputs to LDS
+  * 48adf7ae1e6 freedreno: Restore GL_VENDOR string
+  * 0b3e2cda247 gallium,util: Pull u_indices and u_primconvert back into
+    gallium
+  * d6c199ae152 dri2: Fix exposing robustness with swkms.
+  * aeb5a360036 freedreno: Fix tracking of enabled SSBOs
+  * 1c6b8b8ad69 r600/sfn: Fix readport check
+  * 805065606d7 .pick_status.json: Update to
+    926ba335fdf357e8bc8df0959c1ae72ba35204a4
+  * 667218a8d22 VERSION: bump for 23.0.0-rc2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Jan 2023 00:43:33 +0100
+
 mesa (23.0.0~rc1+git2301171916.05e95550465~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
