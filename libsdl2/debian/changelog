@@ -1,3 +1,17 @@
+libsdl2 (2.27.0+git2301181956.73a68c6ea~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 73a68c6ea regenerated configure script.
+  * 44dc90dcc autotools: Add check for libdecor get min/max functions
+  * 8efa1f8fc add support for libsamplerate's "linear" resampling mode
+  * 5d1e6b28d SDL_test_harness: fix memory leak when generated seed
+  * c638b4a68 SDL_CreateAudioStream: check for invalid parameters
+  * 01a4cf8a1 ci: don't require EXTRA_ prefix on input environment
+    variables
+  * f51f7fbb9 n3ds: fix exported libraries of n3ds
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Jan 2023 00:40:08 +0100
+
 libsdl2 (2.27.0+git2301150130.b47b6e02f~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
