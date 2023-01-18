@@ -1,3 +1,46 @@
+mesa (23.1.0~git2301182332.b82d9b1a3d0~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * b82d9b1a3d0 nir/divergence: add missing RT intrinsinc handling
+  * 7e68cf91d74 mesa: Set info.separate_shader for ARB programs
+  * 696069bc0d1 ci: Add some new folks to the restricted-traces access
+    list.
+  * 9db7c1a509f r300: remove backend negative addressing emulation
+  * 7bec63c0249 r300: set ubo_vec4_max ntt option properly
+  * cd18d541de6 ntt: pass ubo_vec4_max nir_opt_offsets flag through ntt
+    options
+  * 4c0a54fc364 tool/pps: Fix 32-bit build issue with format string
+  * a32d6071e15 d3d12: Lower minimum supported Shader Model to 6.0
+  * 5e3ca1f97fa lima: fix memory leak related to
+    u_transfer_helper_create()
+  * 926ba335fdf pvr: add support for tile buffer output clear
+  * 96784f6cc18 pvr: fix uses_tile_buffers in clear color attachment
+  * 027dd2c246c radeonsi/sqtt: implement offset workaround for gfx11
+  * 215babd3ca9 radeonsi/sqtt: update registers for gfx11
+  * a3dc8b870d6 radeonsi/sqtt: disable SE1+ on GFX11
+  * 2e3dc3838ec radeonsi/sqtt: don't read results for disabled SEs
+  * f10f2c9bbb7 ac: add TC_OP_ATOMIC_SUB_32
+  * 50bb7745ca8 v3dv: enable shaderStorageImageReadWithoutFormat
+  * b56be4c37ec broadcom/compiler: treat PIPE_FORMAT_NONE as 32-bit
+    formats for output type
+  * 41a081380a8 broadcom/compiler: v3d_nir_lower_txf_ms doesn't need
+    v3d_compile
+  * a6c6a4ad04d intel/blorp: Lower base_workgroup_id to zero
+  * a6ac4cbae88 freedreno: add support for markers.
+  * ab9dd18b68d util/u_trace: pass utrace context to marker functions.
+  * c7fc30421cb radv: Advertise rt pipelines for Control (DX12)
+  * 0429f11dfb9 zink: remove depth_clip_control_missing workaround
+  * c12fed18049 zink: fix depth-clip disable cap
+  * 09a87d21711 zink: whitespace fixup
+  * 84241b1f75a ac/nir: clear unused components before storing XFB
+    outputs to LDS
+  * e39bf3e6aa8 zink: skip implicit feedback loop layout changes if
+    feedback loop not present
+  * 9ba06579035 zink: make implicit feedback loop application stricter
+  * 230a5547190 zink: outdent code in add_implicit_color_feedback_loop()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Jan 2023 00:41:01 +0100
+
 mesa (23.1.0~git2301151119.4fb2463a37f~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
