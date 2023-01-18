@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (22.0.0+git2212051652.6ee3209~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 6ee3209 config: Add hotplug driver name
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 19 Jan 2023 00:46:08 +0100
+
 xserver-xorg-video-amdgpu (22.0.0+git2211110315.2ec854d~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
