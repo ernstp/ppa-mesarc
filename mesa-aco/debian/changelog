@@ -1,3 +1,55 @@
+mesa (23.1.0~git2301212126.d59683ab898~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * d59683ab898 radv: Enable extended SAH for shallow BVHs
+  * da87c2883df radv: Wrap internal build type inside a build_config
+    struct
+  * c53eb2f3d4b radv: Add a shader variant for PLOC with extended SAH
+  * b1755c0b21f radv/bvh: Add a define for extended SAH
+  * 13a8a4071a4 radv/bvh/meson: Add the option to set defines
+  * e4ccd74cbc8 ci: be explicit about the `meson setup` subcommand
+  * 4f50eba5a57 r600/sfn: Fix splitting of multislot alu ops
+  * ac30c402112 r600/sfn: Fix opcode and result dest slot mask for
+    variable size dot
+  * 797b8391110 glthread: disallow glthread if buffer uploads are
+    unsupported
+  * aca09e4f719 glthread: do vertex uploads if an index buffer is
+    present for MultiDrawElements
+  * 7921396c7bf glthread: remove the vbo_upload_ratio_too_large fallback
+    for glMultiDrawElements
+  * 98a0e8c9080 glthread: make marshal functions for glBegin/End attribs
+    non-static
+  * e9abed5315d glthread: pack and name the type of glthread_vao::Attrib
+  * 02f1968696f mesa: move gl_vertex_format_user definition into
+    glthread.h
+  * c00db0dbc86 glthread: do vertex uploads if an index buffer is
+    present for glDrawElements
+  * ed7d3b33b0f glthread: change multi_draw_elements_async() to never
+    fail due to large size
+  * fc93c69701f glthread: execute glMultiDrawArrays(draw_count < 0)
+    asynchronously
+  * 68a926a15b7 glthread: set GL_OUT_OF_MEMORY if we fail to upload
+    vertices
+  * e39b90311ca glthread: set GL_OUT_OF_MEMORY if we fail to upload
+    indices
+  * 777166cc66c glthread: handle GL_*_ARRAY in glEnable/Disable
+  * a4d813ba547 glapi: autogenerate function parameters with no space
+    between * and variable
+  * 721526227cd mesa: allow GL_UNSIGNED_INT64_ARB as vertex format for
+    ARB_bindless_texture
+  * 4f6e7858762 util: fix util_is_vbo_upload_ratio_too_large
+  * 4d4995b32bd glthread: fix an upload buffer leak
+  * 6f02f9d1084 anv: fix preemption enable emission in gpu_memcpy
+  * b3fd72fd091 radv: remove redundant type sizing
+  * 46e2cc5d4ce radv: add some graphics pipeline hints to optimize
+    pipeline bind
+  * 8fc5d93060c radv: simplify depth aspect check in
+    radv_handle_image_transition()
+  * f9ff2d9d078 radv: reorder dynamic state checks during bind
+  * 83c290ff842 radv: repack radv_graphics_pipeline struct
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Jan 2023 04:43:58 +0100
+
 mesa (23.1.0~git2301182332.b82d9b1a3d0~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
