@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2301210815.880ac537a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 880ac537a typo fix to config.sub,
+  * 7b8f0ba8b wayland: Set `APPLICATION` scancode name to `Menu`
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Jan 2023 04:43:02 +0100
+
 libsdl2 (2.27.0+git2301181956.73a68c6ea~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
