@@ -1,3 +1,51 @@
+mesa (23.0.0~rc2+git2301201947.8cd595d11ef~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 8cd595d11ef radeonsi: report 0 block size for Polaris HEVC encoding
+  * eb5c4bd20e7 iris: add restrictions for
+    3DSTATE_RASTER::AntiAliasingEnable
+  * 806da6842e9 hasvk: add restrictions for
+    3DSTATE_RASTER::AntiAliasingEnable
+  * dd26391827e anv: add restrictions for
+    3DSTATE_RASTER::AntiAliasingEnable
+  * a683719dabf tu/kgsl: do not use kgsl_command_object::offset
+  * a3d4bd9688f radv: Fix depth-only-with-discard when epilogs are used.
+  * daacd482477 .pick_status.json: Update to
+    e8a60633daec2989df718d28e0baa873bb9b1d15
+  * ba47c359994 anv: check the return value of
+    anv_execbuf_add_bo_bitset()
+  * 21896930e7d anv: don't leave undefined values in exec-
+    >syncobj_values
+  * 6159e97183f zink: handle modifier nplanes queries correctly for
+    planar formats
+  * 0f97e541108 zink: store drm format as internal_format for imported
+    resources
+  * fe411b5537c radv: fix creating BC image views when the base layer is
+    > 0
+  * dab9121a5eb radv: fix buffer to image copies with BC views on the
+    graphics queue
+  * bf513bc488f radv: fix setting MAX_MIP for BC views
+  * 61b12e5373b glthread: fix glArrayElement handling
+  * 1b0eb443342 vbo: lower VBO_SAVE_BUFFER_SIZE to avoid large VRAM
+    usage
+  * 7a0e138de92 vbo: remove bogus assert
+  * a9c8c99577c nir/lower_io: fix bounds checking for
+    64bit_bounded_global
+  * 5d9915806c6 intel/compiler: Drop redundant 32-bit expansion for
+    shared float atomics
+  * ef78f34d18a anv: fix generated indirect draw shader stats checks
+  * 3ce4002041b intel/fs/gfx12: Ensure that prior reads have executed
+    before barrier with acquire semantics.
+  * 7623ebeb922 v3dv: remove unused clamp_to_transparent_black_border
+    property
+  * f8240ef45ab Revert "nouveau/ci: temporary disable gk20a-gles"
+  * fe332954521 nir/divergence: add missing RT intrinsinc handling
+  * 5ae613661ed mesa: Set info.separate_shader for ARB programs
+  * 291c51a2ec8 .pick_status.json: Update to
+    75276deebcf76f8fafa68f4e4ecb29768d98c764
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Jan 2023 04:46:09 +0100
+
 mesa (23.0.0~rc2+git2301182043.41648b0e3f1~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
