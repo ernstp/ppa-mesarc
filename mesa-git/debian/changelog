@@ -1,3 +1,9 @@
+mesa (23.0.0~rc2+git2301201947.8cd595d11ef~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 22 Jan 2023 13:42:39 +0100
+
 mesa (23.0.0~rc2+git2301201947.8cd595d11ef~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
