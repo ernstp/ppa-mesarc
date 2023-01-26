@@ -1,3 +1,55 @@
+mesa (23.0.0~rc2+git2301250027.ea4ecc3e72b~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * ea4ecc3e72b intel/compiler/mesh: handle const data in task & mesh
+    programs
+  * 598e985d652 radv/winsys: fix incorrect PCIID for GFX11 in the null
+    winsys
+  * 0a9dc200945 intel/fs: avoid cmod optimization on instruction with
+    different write_mask
+  * 488c900b08b .pick_status.json: Update to
+    12a471afac2e0c458db785681c88d045a2175ac3
+  * eb112a38f61 zink: correct sparse bo mem_type_idx placement
+  * 6f59991d295 zink: trival renames heap_idx -> memoryTypeIndex
+  * b435372078f zink: zink_heap isn't 1-to-1 with memoryTypeIndex
+  * becfa703df6 anv: fix preemption enable emission in gpu_memcpy
+  * a3c2f78c3de radeonsi: respect smoothing_enabled
+  * 01ff451d344 Revert "aco: Combine v_cvt_u32_f32 with insert to
+    v_cvt_pk_u8_f32."
+  * 14ecd96183f zink: use actual swapchain object for surface comparison
+  * 6bd3bd5ae1f egl/dri2: avoid undefined unlocks
+  * 1984d994fb8 glthread: handle GL_*_ARRAY in glEnable/Disable
+  * 9cd9c7e863d mesa: allow GL_UNSIGNED_INT64_ARB as vertex format for
+    ARB_bindless_texture
+  * 7289901ce7e util: fix util_is_vbo_upload_ratio_too_large
+  * cb9b1891666 glthread: fix an upload buffer leak
+  * f0d643eb274 zink: don't use ds3 blend states without color
+    attachments
+  * 0255c80d782 zink: delete need_blend_constants
+  * 73091e4d273 zink: preserve present resources during async
+    presentation
+  * 440050346e2 .pick_status.json: Update to
+    5039acfd9df6f4d3fc7cc655717b1c5389120260
+  * c1d8827f5ae radeonsi: report 0 block size for Polaris HEVC encoding
+  * c34510badf7 iris: add restrictions for
+    3DSTATE_RASTER::AntiAliasingEnable
+  * 53e77d072b0 hasvk: add restrictions for
+    3DSTATE_RASTER::AntiAliasingEnable
+  * 97cdeddcf38 anv: add restrictions for
+    3DSTATE_RASTER::AntiAliasingEnable
+  * e6bc0076e16 tu/kgsl: do not use kgsl_command_object::offset
+  * 03980525cdd radv: Fix depth-only-with-discard when epilogs are used.
+  * 89e4ad1b834 .pick_status.json: Update to
+    e8a60633daec2989df718d28e0baa873bb9b1d15
+  * a1e3b3964c9 anv: check the return value of
+    anv_execbuf_add_bo_bitset()
+  * 2d11fda237d anv: don't leave undefined values in exec-
+    >syncobj_values
+  * 34055e7822b zink: handle modifier nplanes queries correctly for
+    planar formats
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Jan 2023 02:20:53 +0100
+
 mesa (23.0.0~rc2+git2301201947.8cd595d11ef~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
