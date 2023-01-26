@@ -1,3 +1,48 @@
+mesa (23.1.0~git2301260148.f6c06ef2f66~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * f6c06ef2f66 ci: Add manual rules variations to disable irrelevant
+    driver jobs.
+  * 67547a04b60 ci: Move the performance jobs' allow_failure:true to the
+    gl rules.
+  * e27d217fb16 vulkan/wsi/wayland: improve same gpu detection
+  * 56e758d9e9b mesa: fix out of bounds stack access on big endian
+  * 6c80f7c5552 zink: Fix non debug builds failing to compile on
+  * 7b5e9336298 intel/fs: Fix src and dst types of LOAD_PAYLOAD ACP
+    entries during copy propagation.
+  * 51b8abe0ba5 docs: Lower Python requirement to 3.6
+  * bca22a65781 util/glsl2spirv: Fix build with Python 3.6
+  * e5e64e5c51d zink: validation ci updates
+  * 23d3783f587 zink: force GENERAL layout for all fb attachments with
+    image binds
+  * 1b52e85ead1 zink: update sampler layout when detecting feedback loop
+    for first time
+  * d791e9a77db zink: return false for implicit feedback loop check with
+    image binds
+  * bdaded5a188 zink: don't skip repeated handling feedback loops
+  * fda5f83ced1 zink: move barrier jit to zink_context.c
+  * 06a125942be zink: fix VK_DYNAMIC_STATE_LINE_WIDTH usage
+  * a5bff81f473 radv/winsys: prefix all error messages with RADV
+  * d5846bd1e5a radv: Move constant flushing check out to callers.
+  * 5ccc2049fae intel/ds: Nuke intel_ds_queue::queue_id
+  * f2fdd14907a hasvk: Nuke anv_queue:index_in_family
+  * 013e849a2c6 anv: Nuke anv_queue:index_in_family
+  * 80dd6ed074b intel: Add kmd_type parameter to necessary intel_gem.h
+    functions
+  * 162695f0b87 intel: Add intel_kmd_type parameter to
+    intel_engine_get_info()
+  * 2c42641994c intel/dev: Detect what is the kernel mode driver loaded
+  * 0504a3b0792 radeonsi: correctly declare YUV420_10 RT Format support
+    for AV1
+  * 3eb646efd0d radv: Merge the leaf and internal converter
+  * 883f18f761b radv: skip creation of null TLAS for null winsys
+  * 345d41155fe ci/b2c: uprev to b2c v0.9.9
+  * 7b51a583edb ci/android: add android to the ci
+  * 068dc91317d ci: export artifacts from debian-android
+  * 3cb7a8537be ci: debian-android compile virgl
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Jan 2023 02:18:36 +0100
+
 mesa (23.1.0~git2301212126.d59683ab898~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
