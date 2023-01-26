@@ -1,3 +1,11 @@
+xwayland (2:22.1.7+git2301250416.8e3926281~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 8e3926281 dix: Use CopyPartialInternalEvent in EnqueueEvent
+  * 905bc7f70 dix: Correctly save replayed event into GrabInfoRec
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Jan 2023 02:23:18 +0100
+
 xwayland (2:22.1.7+git2212191017.ef2e1be3f~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
