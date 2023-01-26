@@ -1,3 +1,20 @@
+libsdl2 (2.27.0+git2301250022.d9d84c8d7~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d9d84c8d7 ci: test PVR_PSP2 (gles/gl) and gib (gles)
+  * e927e5d44 vita: add missing static libraries for using gles with pib
+  * 33ec2a5e9 vita: fix reformatting error in SDL_vtagl_pvr.c
+  * a8a5bd3d6 cmake: allow disabling OpenGL support when building with
+    GLES using PSP2-PVR
+  * 038ccd764 Support MIN/MAX blend on opengles2
+  * c0445c23b vita: PVR needs to link to sceIme_stub library
+  * 9670f233c Support MIN/MAX blend on OpenGL + ES
+  * ea179abdb wayland: Enforce or override libdecor minimum window size
+  * eabd88ed2 Update SDL_vitagles_pvr.c
+  * a44b64610 Blacklist Konami Amusement Controllers From HIDAPI.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Jan 2023 02:17:49 +0100
+
 libsdl2 (2.27.0+git2301210815.880ac537a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
