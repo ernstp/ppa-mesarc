@@ -1,3 +1,11 @@
+wayland-protocols (1.31+git2301231806.930bc80~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 930bc80 staging/drm-lease: clarify connector naming
+  * 1dbb673 Add merge request template for new protocols
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 26 Jan 2023 02:23:03 +0100
+
 wayland-protocols (1.31+git2212191341.37a7b9d~b~base2) bionic; urgency=medium
 
   * New snapshot:
