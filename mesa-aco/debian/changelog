@@ -1,3 +1,50 @@
+mesa (23.1.0~git2301300341.4b841cfec8b~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 4b841cfec8b rusticl: fix build error with valgrind being enabled
+  * 4a675f93b9f asahi: Omit extra call to clock_gettime
+  * 2f467fb1547 gallium/draw: Enable polygon stipple NIR helpers to
+    generate bool1 or bool32 Booleans
+  * d3a95f0f713 gallium/draw: Enable aapoint NIR helpers to generate
+    bool1, bool32, or float32 Booleans
+  * 17b610771dd ir3: support texture and sampler index with offsets
+  * 196882a1477 etnaviv: drm: fix check if BO is on a deferred destroy
+    list
+  * c59369005bf etnaviv: free pm queries dynarray on screen destroy
+  * 3156b15f70c etnaviv: drm: fix BO array leaks
+  * 0d7f8aa2499 anv: fix null descriptors
+  * d7ef1331b5e turnip: make debug_flags a global variable
+  * 511c42ef4ed turnip: replace TU_DEBUG_DONT_CARE_AS_LOAD by a bool
+  * c0122b81a4e dzn: Consider linked shaders when computing DXIL hash
+  * 134c49072a1 pvr: Process wait event sub command.
+  * 6d7a076daa0 pvr: Process set and reset event sub commands.
+  * ac339d97978 zink: set VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT
+    when using DB
+  * 6f7b752fdd2 zink: disable bindless texture ext with descriptor
+    buffer
+  * cc9fa060ee1 zink: always set RESOURCE usage for descriptor buffers
+  * 59989d04623 zink: assert that buffer descriptor usage is populated
+    before bind
+  * 3c562cfc064 zink: set vkusage/vkflags for buffer resource objects
+  * c545300f30b zink: add VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT for
+    buffers if ext is enabled
+  * ccde3e02bad zink: fix heap/memory type selection
+  * 07809c45271 Revert "zink: allow direct memory mapping for any
+    COHERENT+CACHED buffer"
+  * 38a087c4ce2 anv: there's no need to set exec_obj offsets twice
+  * 5de60fbc3eb radv: Loop over shader stages in
+    flush_indirect_descriptor_sets.
+  * 0b2fad04267 radv: Fix emitting tess indirect descriptors twice.
+  * 9c5e47e66d7 pvr: Split render job submission for multi-layer
+    framebuffers
+  * 8cc474cd87b pvr: Rename global_queue_job_count to
+    global_cmd_buffer_submit_count
+  * 187a95e617d pvr: Add pvr_csb_bake()
+  * 695cf75266f aco: set has_color_exports with GPL
+  * 1a93cd15563 radv: add a layer for fixing rendering issues with RAGE2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Jan 2023 07:13:51 +0100
+
 mesa (23.1.0~git2301260148.f6c06ef2f66~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
