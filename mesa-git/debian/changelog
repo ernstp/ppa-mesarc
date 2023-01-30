@@ -1,3 +1,49 @@
+mesa (23.0.0~rc3+git2301271817.eac64397de9~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * eac64397de9 radv: add a layer for fixing rendering issues with RAGE2
+  * 89f0b692071 llvmpipe: Honor zero sample_mask when multisample is
+    disabled.
+  * 0d6434c8421 egl: Rewrite eglGetMscRateANGLE to avoid probes and
+    handle multi-monitor
+  * 98a6cfd3953 loader: Add infrastructure for tracking active CRTC
+    resources
+  * 48de75f4382 dzn: Report as a software device for non-Windows
+  * 5f76187f230 .pick_status.json: Update to
+    1a93cd15563a5d0bb6faf12c5d4c852cb3534415
+  * 406ef423b9e zink: fix VK_DYNAMIC_STATE_LINE_WIDTH usage
+  * 3962bcfdae7 kopper: Do not free the given screen in initScreen
+    implementation
+  * c172f1de89d radv: fix ignoring graphics shader stages that don't
+    need to be imported
+  * f89be5c1d6f radv/rmv: Correct timestamp shifting
+  * 36ba0f36fda radv/rmv: Log bo destruction before freeing it
+  * 9eec52701f3 radv/rmv: Avoid more CPU unmap deadlocks
+  * b204c4fb23a radv/rmv: Also check the other pid field
+  * 611a7b9f750 vulkan/wsi/wayland: improve same gpu detection
+  * 603914384a0 intel/fs: Fix src and dst types of LOAD_PAYLOAD ACP
+    entries during copy propagation.
+  * 924a4de013c util/glsl2spirv: Fix build with Python 3.6
+  * ab083f34d8c panfrost: fix off-by-one when exporting format modifiers
+  * 450ac592e27 radv: fix RADV_DEBUG=hang with multiple cmdbuffer per
+    submission
+  * 497e3028f09 radeonsi/gfx11: fix ge_cntl programming
+  * 233f61ccdd6 iris: Add missing untyped data port flush on
+    PIPELINE_SELECT
+  * 09480330d6d anv: Add missing untyped data port flush on
+    PIPELINE_SELECT
+  * e3ec2e2ea9a zink: Re-emit the SpvBuiltInSampleMask access chain each
+    load.
+  * 06072d3bb55 zink: Fix up mismatches of memory model vs addressing
+    model.
+  * 4ad9d7be369 zink: Fix validation failure for maxLod < minLod.
+  * d6418b173d0 zink: Add missing Flat decorations on some inputs.
+  * f5a5b74b02b .pick_status.json: Update to
+    50dee85b684e321708460afc3c1abd2148fd5891
+  * b27354806a1 VERSION: bump for 23.0.0-rc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Jan 2023 07:16:04 +0100
+
 mesa (23.0.0~rc2+git2301250027.ea4ecc3e72b~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
