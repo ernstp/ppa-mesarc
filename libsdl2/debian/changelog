@@ -1,3 +1,17 @@
+libsdl2 (2.27.0+git2301291746.7ac43cfb6~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 7ac43cfb6 Note that version.rc is public domain.
+  * dfc56cfc0 Fix For issue #6948 (#6991)
+  * c83428475 wikiheaders: Link to the SDL3 wiki in the preamble.
+  * d5680c5d2 wikiheaders: Allow markdown in the wikipreamble string.
+  * 1069c8931 wikiheaders: Add a `threadsafety` tag to document
+    threading details.
+  * 507fc462d SDL_atomic.h: Update SDL_CPUPauseInstruction for Watcom.
+    (#7157)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Jan 2023 07:13:10 +0100
+
 libsdl2 (2.27.0+git2301250022.d9d84c8d7~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
