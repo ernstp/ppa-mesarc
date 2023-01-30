@@ -1,3 +1,13 @@
+corectrl (1.4.0~git2301291938.1fa2140~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 1fa2140 Fix crash due to bogus power cap range bounds
+  * 1dd884a Update trompeloeil to v43
+  * 46df4c7 Update catch2 to 2.13.10
+  * d92d4ad Update units to 2.3.3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 30 Jan 2023 07:12:50 +0100
+
 corectrl (1.4.0~git2211121313.09ae5cc~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
