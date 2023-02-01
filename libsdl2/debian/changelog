@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2302011905.8800d4044~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 8800d4044 cmake: assume autotools static libraries with lib prefix
+    and .a suffix
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Feb 2023 19:10:00 +0100
+
 libsdl2 (2.27.0+git2301291746.7ac43cfb6~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
