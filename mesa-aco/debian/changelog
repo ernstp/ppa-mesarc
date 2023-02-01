@@ -1,3 +1,46 @@
+mesa (23.1.0~git2302011828.e29001d0e75~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * e29001d0e75 freedreno/a6xx: Remove excess CS flushing
+  * 9b22bdc956b freedreno/a6xx: Also FLUSH_CACHE on image barrier
+  * 23e65c60845 freedreno/a6xx: Make shader state independent of grid
+    info
+  * 1faf7133d44 freedreno: Don't open-code setting dirty CS state
+  * 5a37cd8569d freedreno/a6xx: Don't double-write SP_CS_OBJ_START
+  * a063caa46a1 freedreno: Skip flush_resource with explicit sync
+  * 2503e227178 freedreno: nondraw-batch
+  * 0e3f2646ddf freedreno/a6xx: Add CS instrlen workaround
+  * bfd7d9e22e9 freedreno/a6xx: Add missing CS_BINDLESS mapping
+  * 13fe9c3e635 freedreno/ir3: Scalarize load_ssbo
+  * 951d963565f freedreno/a6xx: LRZ for MSAA
+  * 5eb85ef756e freedreno/decode: Increase size of offsets table
+  * 2b264455b51 aco: use s_pack_ll_b32_b16 for constant copies
+  * 9ee9b0859be aco: use s_bfm_64 for constant copies
+  * bbc5247bf71 aco/spill: always end spill vgpr after control flow
+  * 850d945baf5 aco/tests: add setup_reduce_temp.divergent_if_phi
+  * 44fdd2ebcb2 aco: end reduce tmp after control flow, when used within
+    control flow
+  * e2d63c9a62a ac/gpu_info: add PCIe info
+  * e267b86d808 amd: update amdgpu_drm.h
+  * cd6712e3a82 radv: pass pCreateInfo to
+    radv_graphics_pipeline_compile()
+  * 6f17ce08fc2 radv: pass radv_compute_pipeline to
+    radv_compute_pipeline_compile()
+  * b4deb3aa32d radv: move retained shaders info to
+    radv_graphics_pipeline
+  * b982f8bbe46 radv: pass radv_graphics_pipeline to
+    radv_graphics_pipeline_compile()
+  * d1b36b01a20 radv: add helpers for capturing shaders and statistics
+  * e1bc8b0b214 radv: simplify pipeline_has_ngg during graphics shaders
+    compilation
+  * 08e496c29d5 radv: remove useless check about CS in radv_lower_io()
+  * 6eb75dc74cc anv: expose EXT_load_store_op_none
+  * 9b0c688f515 mailmap: Remap name and email for Val Packett
+  * 6bdc29e2e6d intel: enable existing workaround for ICL platform
+  * 7e072cfba2c radv: Improve the BVH size estimation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Feb 2023 19:10:57 +0100
+
 mesa (23.1.0~git2301300341.4b841cfec8b~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
