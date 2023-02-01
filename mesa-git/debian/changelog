@@ -1,3 +1,38 @@
+mesa (23.0.0~rc3+git2301312318.49d677d3266~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 49d677d3266 rusticl: fix build error with valgrind being enabled
+  * 53c7beedec9 ci/debian/x86_test-vk: drop an outdated dependency
+  * 7c846e46064 zink: always unref old images when adding new binds
+  * 0758a961179 zink: stop leaking push descriptor templates
+  * 7d62b72c65f zink: don't add dmabuf export type if dmabuf isn't
+    supported
+  * 00923a7d443 radv: fix RB+ for SRGB formats
+  * e89933a6764 radv: stop setting INTERPOLATE_COMP_Z
+  * 950f54d6a1e radv: Shift left the tile swizzle more on GFX11.
+  * 7013b3204cb radv: Set FDCC_CONTROL SAMPLE_MASK_TRACKER_WATERMARK
+  * b9984bbc7da etnaviv: drm: fix check if BO is on a deferred destroy
+    list
+  * 0bb555b64d6 etnaviv: free pm queries dynarray on screen destroy
+  * 19f9d41f804 etnaviv: drm: fix BO array leaks
+  * e2153c29fec anv: fix null descriptors
+  * f9cf3599b45 zink: set VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT
+    when using DB
+  * 633a208f1ef zink: disable bindless texture ext with descriptor
+    buffer
+  * 3adff1c9d79 zink: always set RESOURCE usage for descriptor buffers
+  * 364a15c3529 zink: set vkusage/vkflags for buffer resource objects
+  * 6d973fed483 zink: add VK_BUFFER_USAGE_SHADER_DEVICE_ADDRESS_BIT for
+    buffers if ext is enabled
+  * 86a7567ca60 Revert "zink: allow direct memory mapping for any
+    COHERENT+CACHED buffer"
+  * 1b444a75745 aco: set has_color_exports with GPL
+  * 23659a5cce0 .pick_status.json: Update to
+    0f087b56d03a32e84ca2f5326fb4dcc2cb142bc9
+  * a5b18bd4785 gallium/auxiliary/vl: clean-up progressive shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Feb 2023 19:13:19 +0100
+
 mesa (23.0.0~rc3+git2301271817.eac64397de9~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
