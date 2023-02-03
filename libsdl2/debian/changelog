@@ -1,3 +1,18 @@
+libsdl2 (2.27.0+git2302031540.06b305d23~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 06b305d23 dynapi: cast GetProcAddress() result to void*
+  * c4a493de9 Don't accept official mappings for controllers that aren't
+    unique
+  * 4a87abc96 Fixed sort_controllers.py and resorted game controller
+    database
+  * 2290d7133 Added gamepad mappings for the Xin-Mo Dual Arcade
+    Fightstick
+  * 17ecb11ed macOS: fix initial Metal drawable size in certain multi-
+    display setups
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Feb 2023 18:44:27 +0100
+
 libsdl2 (2.27.0+git2302011905.8800d4044~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
