@@ -1,3 +1,28 @@
+mesa (23.0.0~rc4+git2302031355.2b500ada012~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 2b500ada012 Revert "radeonsi: enable glthread by default"
+  * ee990dccce9 mesa: Set info.separate_shader for ARB programs
+  * 3b2985fa35f zink: rework descriptor buffer templating to use offsets
+  * 9c00c2d9ff4 zink: fix zink_mem_type_idx_from_bits()
+  * d34ff0b916a intel/fs: Always stall between the fences on Gen11+
+  * ccdb1221ea3 .pick_status.json: Update to
+    3c25edfdb7456648d4226cf08bf62c57c998e894
+  * 8bb100fc02b nir: mark progress when removing trailing unused
+    load_const channels
+  * 23336938cad nir: mark progress when removing trailing unused alu
+    channels
+  * c954ea7b3d6 aco: limit VALUPartialForwardingHazard search
+  * bdeb93fb0f6 aco/spill: always end spill vgpr after control flow
+  * 7c53e5748b0 aco: end reduce tmp after control flow, when used within
+    control flow
+  * 1cafb71a192 intel: add missing PS restriction on BDW+
+  * 9ac14f49cf5 .pick_status.json: Update to
+    7e6acfd58772fbfbcd59404c26444939cfb84555
+  * 2c2629f280a VERSION: bump for 23.0.0-rc4
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Feb 2023 18:47:27 +0100
+
 mesa (23.0.0~rc3+git2301312318.49d677d3266~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
