@@ -1,3 +1,53 @@
+mesa (23.1.0~git2302031821.7f98a9ba2bd~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 7f98a9ba2bd panfrost: Implement GL_EXT_render_snorm on Bifrost+
+  * b6bd9040193 ci/lvp: Drop the subgroupbroadcast skips.
+  * 70be21e7c60 gallivm: Use first active invocation in some image/ssbo
+    accesses.
+  * 8c2493d041c gallivm: Use cttz instead of a loop for
+    first_active_invocation().
+  * c11fa55f6db gallivm: Return 0 first_active_invocation when we know
+    that up front.
+  * dc7c518abea gallivm: Refactor out a shared "get the first active
+    invocation" loop.
+  * 0b0246706ed gallivm: Optimize emit_read_invocation's first-
+    invocation loop.
+  * d73f72120ae asahi: Lower texcoords late
+  * 6908a0decea asahi: Run nir_lower_fragcolor during preprocessing
+  * 071ac599604 nir: Add a late texcoord replacement pass
+  * 4397c166c01 radv: Work around shader_call_data variables in raygen
+    shaders
+  * 002707ff094 ci/lavapipe: use dxvk for the traces
+  * 3bc1bf7eea1 ci: uprev piglit (etag md5 checksumming support)
+  * ed419f46aae aco: remove early_rast wait insert
+  * f6b194b6483 nir,ac/llvm,aco,radv,radeonsi: remove
+    nir_export_vertex_amd
+  * f44872c7b6d nir,ac/llvm,aco: remove nir_export_primitive_amd
+  * aea109e25d3 ac/nir/ngg,radv: ms use
+    ac_nir_export_(primitive|position|parameter)
+  * 80d928c20e8 ac/nir/ngg: gs use ac_nir_export_(position|parameter)
+  * bae5a3157f9 ac/nir/ngg: prepare gather_vs_outputs to be used by gs
+  * 80506be31bf ac/nir/ngg,radv,radeonsi: nogs use
+    ac_nir_export_(position|parameter)
+  * f084e9bbe81 ac/nir/ngg: change clipdist_neg_mask_var type to uint32
+  * d798214c7b2 ac/nir/ngg: fix clip dist culling mask uninitialized
+  * 7c41cdb81f5 ac/nir,radv,radeonsi: gs copy shader use
+    ac_nir_export_(position|parameter)
+  * 7308637bb46 ac/nir,radv,radeonsi: legacy vs use
+    ac_nir_export_(position|parameter)
+  * df8c93a9f38 radeonsi: set nr_pos_exports outside of llvm translation
+  * 048d4de5e59 radeonsi: remove the extra handling for VS/TES primitive
+    id
+  * 59135678cf6 radeonsi: update outputs written nir info
+  * dcccd94faf8 radeonsi: clamp vertex color in legacy gs instead of gs
+    copy shader
+  * 601ad9e0a9c amd,radeonsi: implement nir_load_force_vrs_rates_amd in
+    driver abi
+  * 58988c32393 ac/nir: add force_vrs to ac_nir_export_position
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 03 Feb 2023 18:45:13 +0100
+
 mesa (23.1.0~git2302011828.e29001d0e75~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
