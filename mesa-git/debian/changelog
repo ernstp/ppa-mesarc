@@ -1,3 +1,28 @@
+mesa (23.0.0~rc4+git2302031849.47557044cbc~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 47557044cbc ac/nir/ngg: fix clip dist culling mask uninitialized
+  * cf18e9d3889 anv: handle ATTACHMENT_OPTIMAL layout
+  * 127d328f335 zink: set VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT
+    on compute pipelines
+  * 399ea13b337 zink: skip updating descriptor buffer sets that aren't
+    active
+  * d539e26ae0d amd: fix typo in shadowed uconfig registers on gfx11
+  * 3dfd0429d13 amd: fix tile_swizzle on gfx11 - should be shifted by 10
+    bits, not 8
+  * 6f53119c274 amd: split GFX1103 into GFX1103_R1 and GFX1103_R2
+  * 251ee9b2b19 radeonsi/gfx11: unset SAMPLE_MASK_TRACKER_WATERMARK to
+    fix hangs
+  * 67068c91ff8 radeonsi: fix RB+ blending with sRGB formats
+  * b0402b6bf74 wsi/win32: Don't require buffer blits for software
+    drivers
+  * b84c43476c9 etnaviv: fix double scanout import of multiplanar
+    resources
+  * 099b95adaab .pick_status.json: Update to
+    d73f72120aef71629cf2a26ef654f68c83b30504
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 06 Feb 2023 17:55:22 +0100
+
 mesa (23.0.0~rc4+git2302031355.2b500ada012~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
