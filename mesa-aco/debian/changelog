@@ -1,3 +1,48 @@
+mesa (23.1.0~git2302061735.89cf0a3bdc9~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 89cf0a3bdc9 zink: fix max acquired image count
+  * 22e91af1a77 zink: clear null image surfaces to 0
+  * 2fe3cef3675 radv: do not insert fast-linked libraries to the shaders
+    cache
+  * 104040b5c71 zink: fix leak when rebinding same image surface
+  * 4c647c9e259 zink: only save frag const buffers when used by blit
+  * c68f9ed0208 radv/llvm: use the ring_offsets shader arg
+  * be6f30a0db2 ac/llvm: let ring_offsets be accessed like a normal arg
+  * 24618721d39 ac: move ring_offsets to ac_shader_args
+  * 10a5035c836 radv: set state.vbo_misaligned_mask_invalid in
+    radv_bind_vs_input_state
+  * 21f0fc65b22 pvr: add padding bytes when allocating buffer memory
+  * 4e75e1bfec3 pvr: Set SPMSCRATCHBUFFER flag.
+  * ad8c0878b4a pvr: Update comment about ZS and MSAA buffers for
+    pvrsrvkm submission.
+  * 3457f8083a6 pvr: Acquire scratch buffer on framebuffer creation.
+  * ad9c61c2925 pvr: Add SPM scratch buffer infrastructure.
+  * e37f4582078 intel/ds: track end of pipe bits
+  * a242500eb47 anv: rename a few internal functions to highlight gfx
+    use
+  * 6a23b187306 anv: rename RT pipeline function helper
+  * fd7debc8bbb intel/fs: make alpha_to_coverage a tristate
+  * f3969e2413d intel/fs: Rework dynamic coarse handling
+  * 964b8789869 intel/fs: Break out yet another FB write helper
+  * 9c658b1fc86 intel/fs/validate: Assert SEND [extended] descriptors
+    are uniform
+  * 949b42c4dc6 intel/compiler: Convert wm_prog_key::multisample_fbo to
+    a tri-state
+  * 5644011f063 intel/compiler: Convert wm_prog_key::persample_interp to
+    a tri-state
+  * d8dfd153c50 intel/fs: Make per-sample and coarse dispatch tri-state
+  * 43ca7f4178a intel/compiler: Convert brw_wm_aa_enable to
+    brw_sometimes
+  * 5d1c5384490 intel/fs: Return early in a couple builtin setup helpers
+  * 714a2916731 intel/compiler: Use SHADER_OPCODE_SEND for PI messages
+  * 9c62e0c77dc nir: Remove nir_lower_io_force_sample_interpolation
+  * d25e5310bc1 intel/nir: Lower barycentrics to per-sample in a
+    dedicated pass
+  * 991d5461021 intel/compiler: Document wm_prog_key::persample_interp
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 06 Feb 2023 17:53:08 +0100
+
 mesa (23.1.0~git2302031821.7f98a9ba2bd~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
