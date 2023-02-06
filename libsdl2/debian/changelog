@@ -1,3 +1,20 @@
+libsdl2 (2.27.0+git2302052014.af5efadd9~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * af5efadd9 Setting the same mouse cursor twice is a no-op
+  * 5b5a72e33 Sorted controller list
+  * 58fa43e7c Added Elecom 8button gamepad
+  * 4266cf850 Add Linux mapping for 8BitDo Pro 2 Wired Controller for
+    Xbox
+  * 4f7f72c25 replaced line comments in public header.
+  * c5035d8ff include: add comment documenting the change(s) to
+    SDL_opengl_glext.h
+  * 92779a5bd Adds Stadia BT mapping
+  * 0dc4373aa opengl: make SDL_opengl_glext.h's include compatible with
+    macos
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 06 Feb 2023 17:52:21 +0100
+
 libsdl2 (2.27.0+git2302031540.06b305d23~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
