@@ -1,3 +1,34 @@
+libsdl2 (2.27.0+git2302121847.a23d1af0a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * a23d1af0a Guard against _USE_MATH_DEFINES redefinition
+  * 2b66ef0df Fixed audio
+  * 7285f0d44 Sorted controller list
+  * ca3468cb5 Add Hori Pokken Tournament DX Pro Pad
+  * 7d2012af8 emscripten: Update deprecated calls to EM_ASM*.
+  * 17515f4ae Backport simplify flags PR #7220
+  * f71178a16 Fixed MFI controller being opened while HIDAPI controller
+    was being opened
+  * d77eb8a8d Make sure we synchronously re-enable USB reporting mode
+    for Switch controllers (thanks @SortaCore!)
+  * 3fb9118cb Note the Google Stadia controller doesn't support rumble
+    over Bluetooth
+  * 71fb4e3d7 Fixed mis-detecting the share button on the Xbox
+    controller over NDIS
+  * 2518e32de Dynamically update the serial number if it isn't available
+    at first
+  * e8938fc66 Enable paddles on the Xbox Elite controller when connected
+    over USB
+  * fde632366 fix build after the Logitech ChillStream patch.
+  * 715460598 Added support for the Logitech ChillStream
+  * c68cfcdb2 make sure to not enable SDL_PASSED_BEGINTHREAD_ENDTHREAD
+    for WinRT
+  * 7bf3e28dc windows/SDL_systhread.c: remove some dead code.
+  * 3fa5a2f79 Fixed warning running a command queue without any vertex
+    operations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 12 Feb 2023 20:04:27 +0100
+
 libsdl2 (2.27.0+git2302052014.af5efadd9~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
