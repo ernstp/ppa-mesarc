@@ -1,3 +1,11 @@
+xwayland (2:22.1.8+git2302070830.92c35190d~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * 92c35190d Bump version to 22.1.8
+  * 8660dd164 Xi: fix potential use-after-free in DeepCopyPointerClasses
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 12 Feb 2023 20:09:52 +0100
+
 xwayland (2:22.1.7+git2301250416.8e3926281~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
