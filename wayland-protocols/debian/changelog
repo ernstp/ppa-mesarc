@@ -1,3 +1,13 @@
+wayland-protocols (1.31+git2302121116.380bdd6~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 380bdd6 xdg-output-unstable-v1: deprecate name and description
+  * a9fbc22 ext-session-lock-v1: relicense to MIT
+  * 2e1e07e ext-session-lock-v1: clarify to fix race
+  * 5dc6efd ext-session-lock-v1: use RFC 2119 key words
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 12 Feb 2023 20:09:37 +0100
+
 wayland-protocols (1.31+git2301231806.930bc80~f~base2) focal; urgency=medium
 
   * New snapshot:
