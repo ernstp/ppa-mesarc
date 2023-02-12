@@ -1,3 +1,58 @@
+mesa (23.0.0~rc4+git2302092141.73cb9863a5c~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 73cb9863a5c iris: disable fast clear for cube array image views
+  * 9397b1d83fd meson: don't check for expat if we've disabled it
+  * ad2d0532011 zink: fix pointcoord y inversion
+  * 8766da2cdbd anv: uncompressed views of compressed 3d images are now
+    valid
+  * aa6b386915c .pick_status.json: Update to
+    dec49ec50a2f017dabe72f5ec882054de85540b7
+  * 725bec93721 aco: fix imod/omod for gfx11 VOP3 opcodes
+  * f0d63e70f1c util/vbuf: fix multidraw unrolling
+  * e0b3d5c76a0 zink: set PIPE_CAP_VALIDATE_ALL_DIRTY_STATES
+  * b6ccf26d268 gallium/auxiliary/vl: add crop to compute shader
+  * 39c160dd26c lavapipe: Fix bad array index scale factor in
+    lvp_inline_uniforms pass
+  * 59ccc2966d1 zink: use screen indexing for bindless descriptor set in
+    template bind
+  * a4b64b6c9cc zink: fix gpl lib hashing
+  * 07e5de3b2be zink: set zs feedback loop bit from driver workaround on
+    ctx create
+  * dd8e1b26935 zink: set gfx feedback loop bit in pipeline state for
+    driver workaround
+  * a6267c38019 zink: add VK_PIPELINE_CREATE_DESCRIPTOR_BUFFER_BIT_EXT
+    for gpl libs
+  * 1001fa6aaf5 zink: add a define for testing that an optimal key is
+    the default
+  * 3024083f5d5 zink: add a define for the "default" optimal key
+  * c70770b4f4a zink: make last_vertex_stage the first bit in
+    zink_vs_key_base
+  * 778a63e791b .pick_status.json: Update to
+    dec49ec50a2f017dabe72f5ec882054de85540b7
+  * 887e598277e radv: Disable NGG culling when conservative
+    overestimation is used.
+  * bb0222b5cf6 zink: clear null image surfaces to 0
+  * 656b086fcfc intel/ds: Fix crash when allocating more intel_ds_queues
+    than u_vector was initialized
+  * edc9ab9b0fb aco: fix out-of-bounds access when moving
+    s_mem(real)time across SMEM
+  * 7c4a9a4c99d lavapipe: disable
+    VK_FORMAT_FEATURE_2_COLOR_ATTACHMENT_BLEND_BIT for int formats
+  * 1d82337a2ba v3dv: ensure we apply binning syncs to secondary command
+    buffers
+  * abd2f1ee448 v3dv: ensure at least V3D_CL_MAX_INSTR_SIZE bytes in
+    last CL instruction
+  * c0b137db138 meson: Ignore unused variables when assertions are
+    disabled
+  * 7a979fc2dde loader: unregister special event in
+    loader_dri3_drawable_fini
+  * 73aa5be27ef .pick_status.json: Update to
+    eb9ab4efeb14e567321495596dc6f09a9952481a
+  * 039a200e43d zink: Fix non debug builds failing to compile on
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 12 Feb 2023 20:07:27 +0100
+
 mesa (23.0.0~rc4+git2302031849.47557044cbc~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
