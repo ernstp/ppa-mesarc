@@ -1,3 +1,52 @@
+mesa (23.1.0~git2302121811.1e73fd4aa89~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 1e73fd4aa89 u_pipe_screen_lookup_or_create: avoid re-querying the fd
+    to have a consistent hash key
+  * cd152ec9305 asahi: use u_pipe_screen_lookup_or_create() to keep
+    track of and reuse screens
+  * 8193efec836 panfrost: use u_pipe_screen_lookup_or_create() to keep
+    track of and reuse screens
+  * 7b3ee9335f1 vc4: use u_pipe_screen_lookup_or_create() to keep track
+    of and reuse screens
+  * 769b5110543 v3d: use u_pipe_screen_lookup_or_create() to keep track
+    of and reuse screens
+  * 759496cc455 lima: replace custom code with
+    u_pipe_screen_lookup_or_create()
+  * e17c3af5933 freedreno: replace custom code with
+    u_pipe_screen_lookup_or_create()
+  * 013f05872c8 gallium: move etnaviv screen_lookup_or_create function
+    to common code
+  * 1dea6aea204 etnaviv: use simple_mtx to avoid breaking windows in the
+    next commit
+  * a72035f9c55 util: avoid calling kcmp on Android
+  * 0d6c240fcc8 gallium/u_screen.h: add missing stdint.h include
+  * e40ed0f88b5 radv: Implement
+    VK_ACCESS_2_DESCRIPTOR_BUFFER_READ_BIT_EXT.
+  * 7efabfbbe4f radv: Fix missing VK_ACCESS_2_SHADER_SAMPLED_READ_BIT.
+  * 97aa8d9547e radv: Fix invalid 64-bit shift.
+  * 49a6bdde8ef glsl/standalone: Do not pass memory allocated with
+    ralloc_size to free
+  * bf67f32d4b4 glsl/standalone: Fix up
+    _mesa_reference_shader_program_data signature
+  * c0bc0ecf9ea freedreno: Avoid screen lock when no rsc tracking needed
+  * b70ea03302f freedreno: Add FD_DIRTY_QUERY
+  * 3a98822cc7d freedreno: Remove impossible NULL check
+  * 918caaad598 freedreno: Move num_vertices calc to backend
+  * b15aaea1d58 freedreno/a6xx: Move num_driver_params to program state
+  * 0a17c3afc5e nir: Apply a maximum stack depth to avoid stack
+    overflows.
+  * 7ead7173937 dzn: Enable 16bit types when supported
+  * d7f9e2db598 dzn: Get options4
+  * 08fc7315c52 dzn: Delete unused extensions table
+  * cc906c0eed0 dzn: Enable get_surface_capabilities2
+  * a7d4309234f spirv2dxil: Support 16bit types
+  * 536ab16bc1e spirv2dxil: Move shader model into runtime conf struct
+  * 4c527f4fc07 spirv2dxil: Lower unaligned loads and stores
+  * 9e2683c6f02 spirv2dxil: Set min UBO/SSBO alignments
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 12 Feb 2023 20:05:13 +0100
+
 mesa (23.1.0~git2302061735.89cf0a3bdc9~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
