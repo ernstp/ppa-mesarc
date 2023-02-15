@@ -1,3 +1,49 @@
+mesa (23.0.0~rc5+git2302152123.ee901376828~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * ee901376828 zink: unref image buffer descriptors on unbind
+  * 9d15468353d zink: unset gfx shader read when unbinding shader images
+  * 6ce07955f60 zink: add newlines to some debug printfs
+  * 9b784bd43cf zink: relax bresenhamLines requirement for non-
+    strictLine drivers
+  * e3fd0d9965e anv/hasvk: handle a SAMPLED_READ/STORAGE_READ access
+    flags
+  * d4334e5b0ab radv: Implement
+    VK_ACCESS_2_DESCRIPTOR_BUFFER_READ_BIT_EXT.
+  * 1f3074363e5 radv: Fix missing VK_ACCESS_2_SHADER_SAMPLED_READ_BIT.
+  * 8aed4428e45 radv: Fix invalid 64-bit shift.
+  * 534504e670f glsl/standalone: Do not pass memory allocated with
+    ralloc_size to free
+  * ad61f386782 glsl/standalone: Fix up
+    _mesa_reference_shader_program_data signature
+  * 639381eda78 nir: Apply a maximum stack depth to avoid stack
+    overflows.
+  * d4e2ee1ae22 anv: Handle
+    VkAccelerationStructureBuildRangeInfoKHR::transformOffset
+  * 0731af2c24f turnip: Disable draw states after dyn renderpass in all
+    cases
+  * 9ed84be8a0d tu: Prevent using stale value of GRAS_SC_CNTL in sysmem
+    clear
+  * 55c333815a9 tu: Prevent using stale value of RB_UNKNOWN_88D0 on BLIT
+  * e273ed46bea panfrost: drop no-longer-needed libglsl
+  * 9061eba1479 crocus: disable Y tiling for render targets properly.
+  * 764151a3222 iris: disable preemption for 3DPRIMITIVE during
+    streamout
+  * f94c72e41e0 intel/fs: fix mesh indirect movs
+  * 774f4e49084 radv: Fix missing rbplus_allowed check for dynamic PS
+    epilogs.
+  * fec0297b2c3 intel/blorp: disable REP16 for gfx12+ with
+    R10G10B10_FLOAT_A2
+  * e3e63fe555d aco: don't allow output modifiers for
+    v_cvt_pkrtz_f16_f32
+  * 129d86bf912 ac/nir/ngg: Include culled primitives in query.
+  * 460bdd2b610 .pick_status.json: Update to
+    bd848ac92d9d77d72a1edb5645488639df91937e
+  * f5b26533493 radv: Fix creating accel structs with unbound buffers
+  * 95b9a13e270 VERSION: bump for 23.0.0-rc5
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 21:57:35 +0100
+
 mesa (23.0.0~rc4+git2302092141.73cb9863a5c~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
