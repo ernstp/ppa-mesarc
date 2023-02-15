@@ -1,4 +1,4 @@
-GIT="https://gitlab.gnome.org/jadahl/libdecor.git"
+GIT="https://gitlab.freedesktop.org/libdecor/libdecor.git"
 DISTROS="jammy kinetic lunar"
 PPA=wayland
 INC=1
