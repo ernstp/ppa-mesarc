@@ -1,3 +1,19 @@
+libsdl2 (2.27.0+git2302150304.69b2baec5~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 69b2baec5 Map the Android MENU button back to the SDL MENU key
+  * 2c6995778 Fixed handling simple mode PS4 reports
+  * 22df57297 look for clock_gettime() in libc first, then in librt if
+    not found.
+  * 634705851 cmake: really fix detection of pthread_setname_np() on
+    Apple platforms.
+  * 1194f52a5 cmake: fix detection of pthread_setname_np() on Apple
+    platforms.
+  * 45e5f0f10 Fixed bug #7302 - Memory 'leak' in
+    SDL_SetMouseSystemScale()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 21:54:37 +0100
+
 libsdl2 (2.27.0+git2302121847.a23d1af0a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
