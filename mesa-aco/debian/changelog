@@ -1,3 +1,49 @@
+mesa (23.1.0~git2302152121.c7f18e4183e~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * c7f18e4183e tu: Don't expose KHR_present_id,KHR_present_wait without
+    KHR_swapchain
+  * 09501fe5a7d anv,hasvk: flush what UNIFORM_READ flushes on
+    SHADER_READ
+  * 6de8b9a65b9 egl/kopper: Pass ancillary invalidate flush flags down
+    to gallium.
+  * 53780b7a3ac egl/kopper: Use the kopper private interface for
+    swapBuffers.
+  * 3e1b40be54f egl: Add a note explaining the swapBuffers badness in
+    dri2_x11_copy_buffers().
+  * a6b850e3358 egl/kopper: Add assert for no kopper in
+    dri2_copy_region.
+  * 24a32b2cab9 Revert "meson: Fix Asahi build on macOS"
+  * 29ffc794104 meson: don't pass vk wsi args where they don't belong
+  * 7ea85871fe7 vulkan: prefer vulkan_core.h over vulkan.h
+  * f5bde99cbdd gallium: plumb resolve attachments through from
+    frontends -> pipe_framebuffer_state
+  * 073cced8681 radv/ci: add missing expected failures with
+    RADV_PERFTEST=gpl on GFX1100
+  * bd848ac92d9 hasvk: use Vulkan runtime's robust buffer access
+  * 5053527806f anv: use Vulkan runtime's robust buffer access
+  * 9873ccb0714 frontends/va: Map VAEncCodedBufferType buffer as
+    PIPE_MAP_READ
+  * e832d6a1bbe fix: clover/llvm: replace llvm::None with std::nullopt
+    for LLVM 17+
+  * b7ab83d59fd ir3: Consider dst type in ubo_vec4 to ldc lowering
+  * e089166776d pvr: Add support for VK_ATTACHMENT_LOAD_OP_LOAD.
+  * c75c58e54c5 pvr: Upload spm load programs to device.
+  * d6408e08df0 pvr: Add SPM load usc empty programs
+  * 5d24682aaeb iris: Drop iris_cache_flush_for_render
+  * 7c367bef0d5 iris: Flush caches for aux-mode changes more often
+  * ad9c0b7a84c iris: Update comment in iris_cache_flush_for_render
+  * 9e934ee0681 meson: Combine duplicated c_args and cpp_args
+  * 26269464904 meson: Split c_cpp_args from pre_args
+  * 4ff295e1d8b meson: drop `TODO: opengl`, it's done
+  * 1fa68d91c68 meson: only build glsl when needed
+  * e0adef2652b meson: only build libglsl_util when needed
+  * 0404918f614 meson: only build the loader when needed
+  * ef564f9391f meson: only build mapi when needed
+  * de90690aba9 meson: move float64_glsl_file one meson.build up
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 21:55:21 +0100
+
 mesa (23.1.0~git2302121811.1e73fd4aa89~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
