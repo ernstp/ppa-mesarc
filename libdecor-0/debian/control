@@ -11,6 +11,7 @@ Build-Depends:
  libdbus-1-dev,
  libegl-dev <!noinsttest>,
  libgl-dev <!noinsttest>,
+ libgtk-3-dev ,
  libopengl-dev <!noinsttest>,
  libpango1.0-dev,
  libwayland-dev (>=1.18),
@@ -31,7 +32,7 @@ Depends:
  ${misc:Depends},
  ${shlibs:Depends},
 Recommends:
- libdecor-0-plugin-1-cairo | libdecor-0-plugin-1,
+ libdecor-0-plugin-1-cairo | libdecor-0-plugin-1-gtk | libdecor-0-plugin-1,
 Conflicts:
  libdecor,
 Replaces:
@@ -83,6 +84,24 @@ Description: default decoration plugin
  decoration drawing.
  .
  This package contains a backend that draws window decorations using Cairo.
+
+Package: libdecor-0-plugin-1-gtk
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends},
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Provides:
+ libdecor-0-plugin-1,
+Description: GTK decoration plugin
+ libdecor is a library that can help Wayland clients draw window
+ decorations for them. It aims to provide multiple backends that implements the
+ decoration drawing.
+ .
+ This package contains a backend that draws window decorations using GTK.
 
 Package: libdecor-tests
 Build-Profiles: <!noinsttest>
