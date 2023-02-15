@@ -1,3 +1,18 @@
+libdecor-0 (0.1.0+git2302060814.cb610d8~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * cb610d8 meson: add libdecor_includepath to libdecor_dep
+  * 3f3e5e1 Fix pixel size of cairo-drawn titlebar label.
+  * 4b2c5f4 gtk: don't redraw decoration redundantly
+  * 90c323e meson: add devenv settings for GTK plugin
+  * b244489 meson: configure devenv only for sufficient meson version
+  * 25f29fe gtk: inhibit assertion about invalid widget
+  * 8e870cc replace whitespace with tabs
+  * 92d8522 c++-demo: update window state before content size
+    calculation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 19:55:00 +0100
+
 libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
