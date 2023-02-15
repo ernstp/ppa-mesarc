@@ -1,3 +1,9 @@
+libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 19:50:01 +0100
+
 libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
