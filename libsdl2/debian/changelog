@@ -1,3 +1,15 @@
+libsdl2 (2.27.0+git2302162305.817141c16~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 817141c16 ci: install pkg-config on Macos runner
+  * e86f49431 Hold the joystick lock while opening the HID device on non-
+    Android platforms
+  * d948e6c3c Fix potential de-referencing null pointer in
+    SDL_EVDEV_kbd_keycode()
+  * e7376b7b7 Fixed Steam Runtime sandbox detection
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 17 Feb 2023 04:07:24 +0100
+
 libsdl2 (2.27.0+git2302150304.69b2baec5~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
