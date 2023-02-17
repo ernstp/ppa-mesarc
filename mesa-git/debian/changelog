@@ -1,3 +1,52 @@
+mesa (23.0.0~rc5+git2302170017.07b90461283~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 07b90461283 nir/from_ssa: Move the loop bounds check in
+    resolve_parallel_copy
+  * 8eb3e6d1a31 nir/from_ssa: Only re-locate values that are
+    destinations
+  * db645ee3903 .pick_status.json: Update to
+    4e09d37f3bd4b2f5837040cb1695d151672944e1
+  * ed32fa0d74d Revert "freedreno/a5xx: Fix clip_mask"
+  * d515593a40d vulkan/wsi: avoid deadlocking dri3 when polling deleted
+    windows for events
+  * f4990da4a0f dri3: avoid deadlocking when polling deleted windows for
+    events
+  * 1cee00b887a radv: Hash VK_PIPELINE_CREATE_RAY_TRACING_NO_NULL_*
+    flags
+  * e0bbed4db1e frontend/dri: Initialize callbacks in
+    dri_swrast_kms_init_screen
+  * b972c025fec amd/surface: fix base_mip_width of subsampled formats
+  * 66f888c1e1b turnip: fix a null descriptor set dereference
+  * 80aeef9a50c turnip: fix a major leak with GPL LTO
+  * 2c7fd2bca19 anv,hasvk: flush what UNIFORM_READ flushes on
+    SHADER_READ
+  * dace9adafb3 iris: Drop iris_cache_flush_for_render
+  * de4afae42a4 iris: Flush caches for aux-mode changes more often
+  * 76e3530f45a iris: Update comment in iris_cache_flush_for_render
+  * 4a983470b87 zink: block LINEAR filtered blits for zs formats
+  * 25e614486e4 intel/fs: bound subgroup invocation read to dispatch
+    size
+  * 14c06751359 aco: Don't use vcmpx with DPP.
+  * 8405d14633e zink: remove incorrect trailing comma
+  * fbad1555855 anv/grl: Use union for reinterpreting integer as float
+  * ba02305bfd5 anv: enable task redistribution
+  * 971a99fb6dd radv: disable DCC for mipmaps on GFX11
+  * 2f7d65b0f1d crocus: switch gen4/5 tiling flags to follow
+    suggestions.
+  * e57dfe766db .pick_status.json: Update to
+    e050a00b9f4d057e93f61f79019b5cf8bcd04e49
+  * 416a1c41b30 .pick_status.json: Mark
+    6af3a12e700065ca4b8b3a5d12b97a75142dd185 as denominated
+  * 2378cb093d5 gbm/backend: fix gbm compile without dri
+  * 4edf52da3d0 radv: fix a hang with binning on CHIP_RENOIR
+  * 4367c9eef87 d3d12: Video Encode - Fix ID3D12CommandAllocator leak
+  * 960c5906439 util/disk_cache: Handle OS'es without d_type in struct
+    dirent
+  * 4a5d669479e zink: always use NEAREST for zs blits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 17 Feb 2023 04:10:19 +0100
+
 mesa (23.0.0~rc5+git2302152123.ee901376828~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
