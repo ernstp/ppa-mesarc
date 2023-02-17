@@ -1,3 +1,43 @@
+mesa (23.1.0~git2302170245.e787ddf2981~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * e787ddf2981 panfrost: fix tiny sample_positions BO memory leak
+  * f8aa83f0c86 intel/nir: Use nir_lower_mem_access_bit_sizes()
+  * 2e2d7803c7f nir: Add a load/store bit size lowering pass
+  * 34e11963faa ci: enable dEQP-VK.ubo.random.all_shared_buffer.48
+  * cb58d75224c nir/nir_opt_copy_prop_vars: don't call memset when
+    cloning
+  * d1a41d9c647 nir/nir_opt_copy_prop_vars: reorder clone calls
+  * 2a2d85e254e nir/nir_opt_copy_prop_vars: reuse dynamic arrays
+  * ffe0f3fda18 nir/nir_opt_copy_prop_vars: reuse hash tables
+  * 731e9fd535a nir/nir_opt_copy_prop_vars: avoid comparison explosion
+  * 8f6f5730f62 nir/nir_opt_copy_prop_vars: remove extra loop
+  * 4e09d37f3bd nir/from_ssa: Move the loop bounds check in
+    resolve_parallel_copy
+  * 5afba073c6b nir/from_ssa: Only re-locate values that are
+    destinations
+  * 9673502b3b7 freedreno/drm: Optimize stateobj re-emit
+  * 6747d301557 freedreno: Add seqno helper
+  * 8f2b22ba667 freedreno: Drop batch lock
+  * 9a6de00e98b freedreno/batch: Stop tracking cross-context deps
+  * a4b949fe61b freedreno: Avoid taking screen lock
+  * 35fc1595b37 freedreno/a6xx: Pre-compute PROG related LRZ state
+  * c938101bb55 freedreno: Move FD_MESA_DEBUG cases out of draw_vbo
+  * 8942f4b7340 freedreno: Move blend out of dirty-rsc tracking
+  * 67d4bc7be44 freedreno/a6xx: Remove tex-state refcnting
+  * cfd4721ee03 freedreno/drm: Make rb refcnt non-atomic
+  * f91bcd24559 freedreno/a6xx: Do tex-state invalidates in same ctx
+  * e7993d68e27 freedreno/a6xx: Multi-draw support
+  * cc31997f1b5 freedreno/a6xx: Split out flush_streamout() helper
+  * 911d67bdadc freedreno/a6xx: Drop unused return
+  * c4e2e821a20 freedreno: Push num_draws down to backend
+  * 6bfee9e6697 freedreno: Account for multi-draw in num_draws
+  * f6251b21f94 radv/rt: don't hash maxPipelineRayRecursionDepth
+  * 8e718c5b639 radv/rt: use dynamic_callable_stack_base also for static
+    stack_sizes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 17 Feb 2023 04:08:08 +0100
+
 mesa (23.1.0~git2302152121.c7f18e4183e~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
