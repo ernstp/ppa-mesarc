@@ -1,3 +1,22 @@
+mesa (23.0.0~rc5+git2302172054.2b8579c7ab2~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 2b8579c7ab2 hasvk: Fix SPIR-V warning about TF unsupported on gen7.
+  * 9ead567ce7b radv: Call nir_lower_array_deref_of_vec in
+    radv_lower_io_to_scalar_early.
+  * ddf8ae7b1aa radv: Make accel struct meta state initialization thread
+    safe
+  * af1ae57d156 intel/perf: also add the oa timestamp shift on MTL
+  * f5a40f4d23c radv/amdgpu: only set a new pstate if the current one is
+    different
+  * 52519519760 Revert "radv: acquire pstate on-demand when capturing
+    with RGP"
+  * 1690c1e041a panfrost: fix tiny sample_positions BO memory leak
+  * de40ab9921b .pick_status.json: Update to
+    4459668b6e74094b93f13da377077c4f26c9b7b9
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Feb 2023 01:16:52 +0100
+
 mesa (23.0.0~rc5+git2302170017.07b90461283~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
