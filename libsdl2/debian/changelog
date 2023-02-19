@@ -1,3 +1,12 @@
+libsdl2 (2.27.0+git2302191858.7b0600726~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 7b0600726 Fixed typo (thanks @Iniquitatis!)
+  * 7d55ccb8b Fix GetGlobalMouseState when xi2 is not available at
+    runtime
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Feb 2023 21:03:06 +0100
+
 libsdl2 (2.27.0+git2302162305.817141c16~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
