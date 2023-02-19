@@ -1,3 +1,64 @@
+mesa (23.1.0~git2302182116.2c40215ab9d~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 2c40215ab9d aco/optimizer: Change v_cmp with subgroup invocation to
+    constant.
+  * 616d595d18d glthread: don't restore non-VBO vertex arrays after all
+    draws
+  * 201038a80d3 glthread: don't free glthread for
+    GL_DEBUG_OUTPUT_SYNCHRONOUS, only disable it
+  * 068670a79ab glthread: remove unnecessary debug code
+  * cabc08a184a glthread: convert (Multi)DrawIndirect into direct if
+    user buffers are present
+  * 72b336dbdcb glthread: add API to allow passing DrawID from glthread
+    to mesa
+  * aabca21c7e0 glthread: handle non-VBO uploads for
+    glMultiModeDraw{Arrays,Elements}IBM
+  * 85108145280 glthread: don't execute Draw and BufferSubData calls if
+    the context is lost
+  * faf476ea4ff glthread: inline draw functions that have only one use
+  * 21ab24acd0d glthread: remove goto statements and add unlikely() into
+    draw functions
+  * 3b897719e63 glthread: add ctx->GLThread.draw_always_async to
+    simplify draw checking
+  * 15aaef4d365 glthread: reorder draw code a little
+  * 50d791ca73e glthread: add a vertex upload path that unrolls indices
+    for glDrawElements
+  * 28724de0d7f glthread: track vertex formats for all attributes
+  * e97d0b318b2 glthread: don't bind/unbind uploaded indexbuf, pass it
+    to glMultiDraw directly
+  * a078374b101 glthread: don't bind/unbind uploaded indexbuf, pass it
+    to glDraw directly
+  * 5c0c0dc5cd0 glthread: move some draw call parameters closer to their
+    use
+  * c2806a836b2 glthread: don't pass index bounds to the driver for
+    async calls
+  * 38efb766d3a glthread: don't execute glDraw code if we're inside
+    glBegin/End
+  * 07ef2652fec glthread: change glMultiDrawElements to execute
+    draw_count < 0 asynchronously
+  * 7aff69bcddf glthread: rewrite glMultiDrawArrays to never fail to
+    upload vertices
+  * e6231a1320c Revert "ci/zink: Disable Amnesia trace until the linked
+    issue gets fixed."
+  * efb531fcb5a glthread: ignore non-VBO vertex arrays with NULL data
+    pointers
+  * 3ed141e9d80 glthread: add a heuristic to stop locking global mutexes
+    with multiple contexts
+  * 78c61140f16 glthread: upload non-BO indices in the core profile to
+    fix GStreamer
+  * 2e0cb30bd5b glthread: initialize indices[i] for no-op
+    MultiDrawElements
+  * e2ad086f485 mesa: ignore indices[i] if count[i] == 0 for
+    MultiDrawElements
+  * 55682e958bf glthread: track the current element array buffer in the
+    Core profile too
+  * 37b544e410a hasvk: Fix gfx8/9 VB range > 32bits workaround
+    detection.
+  * 4cd7976208b anv: Fix gfx8/9 VB range > 32bits workaround detection.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Feb 2023 01:14:40 +0100
+
 mesa (23.1.0~git2302170245.e787ddf2981~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
