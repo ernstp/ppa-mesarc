@@ -1,3 +1,22 @@
+corectrl (1.3.2+git2302191934.b1fbb63~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * b1fbb63 Bump version to 1.3.2
+  * 7bb5368 Prefer external third-party libraries over the bundled ones
+  * 4b523b1 Clean unused variable in cmake files
+  * 1537119 Fix typos
+  * 7d55456 Remove split tests configuration option
+  * f360c59 Update pugixml to 1.13
+  * ccc46a6 Update fmt to 9.1.0
+  * f159d0f Update trompeloeil to v43
+  * 25da8eb Update catch2 to 2.13.10
+  * 5efeab3 Update units to 2.3.3
+  * 698785a Fix crash due to bogus power cap range bounds
+  * c1a3f21 Handle wine app launches without wine[64]-preloader
+  * a09c558 Use SPDX unique license identifiers on file headers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Feb 2023 21:02:38 +0100
+
 corectrl (1.3.1+git2210081932.b4ea422~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
