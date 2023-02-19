@@ -1,3 +1,25 @@
+corectrl (1.4.0~git2302181622.eceb5f6~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * eceb5f6 Merge branch '3rdparty-prefer-external-libs'
+  * 6c081fa Prefer external easyloggingpp over the bundled one
+  * 3871343 Prefer external trompeloeil library over the bundled one
+  * 68cb831 Prefer external catch2 library over the bundled one
+  * a2f9e8a Prefer external units library over the bundled one
+  * b37223d Prefer external pugixml library over the bundled one
+  * 7d928b6 Prefer external fmt library over the bundled one
+  * 37fae7b Isolate compile definitions for application, helper and
+    tests
+  * 82c2545 Simplify 3rdparty libs source files handling in cmake files
+  * 80fd694 Move 3rdparty libs to project root directory
+  * b6f8b31 Update pugixml to 1.13
+  * f9a7345 Update fmt to 9.1.0
+  * 9e85f23 Clean unused variable in cmake files
+  * c08bc0a Fix typos
+  * 1757daa Remove split tests configuration option
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Feb 2023 01:12:27 +0100
+
 corectrl (1.4.0~git2301291938.1fa2140~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
