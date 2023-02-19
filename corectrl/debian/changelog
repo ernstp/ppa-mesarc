@@ -1,3 +1,10 @@
+corectrl (1.4.0~git2302191949.993e96d~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 993e96d CHANGELOG: add version 1.3.2 notes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Feb 2023 21:02:51 +0100
+
 corectrl (1.4.0~git2302181622.eceb5f6~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
