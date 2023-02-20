@@ -1,3 +1,40 @@
+mesa (23.1.0~git2302202226.8bc78e8eb9f~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 8bc78e8eb9f util/u_process: implement util_get_command_line for BSDs
+  * 923758a5c22 winsys/amdgpu: use amdgpu_device_get_fd
+  * 919c5568bf8 freedreno: check for conditional rendering in
+    launch_grid
+  * e93a221024d agx: Handle group_memory_barrier
+  * e9cec966334 agx: Implement b2b32
+  * 955797bb00d agx: Pack local atomics
+  * 14f546726e3 agx: Lower shared memory offsets to 16-bit
+  * a21f6f8cb04 agx: Translate load/store_shared
+  * f8b9dfbbada agx: Translate NIR atomics
+  * 2a021b1818e agx: Pack local load/store instructions
+  * 96904f83b44 agx: Pack global atomics
+  * eea3674f36a agx: Disallow immediate bases to device_load
+  * 6b0ef2b4629 agx: Model local loads/stores
+  * 0d07d271739 agx: Model atomic instructions
+  * ec7584130f5 iris: Export num_fences()
+  * 780dd291c5f iris: Export update_batch_syncobjs()
+  * 102e180d0f5 iris: Export batch debug functions
+  * 9e67d3f2378 asahi: Advertise ARB_texture_barrier
+  * 5f8a59ac89e asahi: Advertise ARB_derivative_control
+  * c6c61d052e3 docs/features: Sync Asahi with reality
+  * cf96edff1cf agx: Implement gathers (nir_texop_tg4)
+  * 978d3fefa88 agx: Model and pack gathers
+  * 8dc861dbb59 agx: Lower offsets in NIR
+  * a5dfee1c22b ci: revert download of git cache to the wget
+  * 44f40ff9417 pvr: Use descriptor/set/table offsets from driver
+  * e64288a0ba5 pvr: Split pvr_private.h
+  * 5694755fa02 pvr: Load descriptors from memory
+  * 3355749105e pvr: Support loading immediate values
+  * e0e58e96595 pvr: Additional register subarray support
+  * 888e06b8cc6 pvr: Add bitwise instruction support
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 21 Feb 2023 00:15:41 +0100
+
 mesa (23.1.0~git2302182116.2c40215ab9d~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
