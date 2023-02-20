@@ -1,3 +1,14 @@
+libsdl2 (2.27.0+git2302201943.0efb31ef3~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 0efb31ef3 cocoa/gles: do not unload EGL when context is destroyed
+  * eb22fbc89 windows/gles: do not unload EGL when context is destroyed
+  * 479bc2d5e windows/gles: correct indentation
+  * e6e654e25 include: Fix symbols in public headers that start with an
+    underscore.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 21 Feb 2023 00:14:59 +0100
+
 libsdl2 (2.27.0+git2302191858.7b0600726~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
