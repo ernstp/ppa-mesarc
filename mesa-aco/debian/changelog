@@ -1,3 +1,45 @@
+mesa (23.1.0~git2302222333.4229d9324f4~f~mesaaco2) focal; urgency=medium
+
+  * New snapshot:
+  * 4229d9324f4 iris: Avoid creating uncompressed view with unaligned
+    tile offsets on BDW
+  * 7ebdddf319f docs: update calendar for 22.3.6
+  * 2ad59278164 docs/relnotes: add sha256sum for 22.3.6
+  * e581901132a docs: add release notes for 22.3.6
+  * ecabc824c2e glsl: Drop the (v.x + v.y + v.z + v.w) -> dot(v, 1.0)
+    optimization.
+  * 3c668513b9e freedreno/a6xx: Fix view_seqno in tex cache key
+  * 818b49932a3 freedreno/a6xx: Static-ify sampler_view_update()
+  * e9fa92d6fa9 freedreno/a6xx: Small cleanup
+  * 936f2ebb468 freedreno/a6xx: Remove needs_invalidate flag
+  * b6778995d7c freedreno/a6xx: Add a way to assert valid format
+  * ea9d1cfb20c freedreno/a6xx: Fix sampler view rsc_seqno for X32_S8X24
+  * b40e3c9e6c9 freedreno/a6xx: Drop unneed fd6_texture_state() arg
+  * 29445505f6f freedreno/a6xx: Fix set_sampler_views(start != 0)
+  * a3c73987ab9 freedreno/a6xx: Move rsc seqno out of tex cache key
+  * 94abccf3ce5 aco: fix pathological case in LdsDirectVALUHazard
+  * ee47cc8256d amd,nir: remove byte_permute_amd intrinsic
+  * e316416dd0d docs: include explicit `setup` in instructions
+  * a502f4fc133 radeonsi/video: use specific PIPE_BIND_ value for video
+    buffers
+  * 635d62ba992 mesa: use mesa_log from output_if_debug
+  * f18f43338eb mesa: add missing newlines for _mesa_debug/_mesa_log
+    callers
+  * 40e45eaef02 util/log: add logger_windbg
+  * 8f0a7e848f4 util/log: add support for MESA_LOG_FILE
+  * 7d8d64426b1 util/log: add logger_syslog
+  * bbd19527c1f util/log: improve logger_android
+  * 7a18a1712a0 util/log: improve logger_file newline handling
+  * 63864d4dfcd util/log: allow multiple loggers
+  * 337d58f6fca util/log: refactor mesa_log
+  * dd3b67b9746 v3dv: handle ASPECT_MEMORY_PLANE aspect flags when
+    getting plane number
+  * f4ce19063c2 loader: do not check the mesa DRI_Mesa version if it was
+    not found
+  * 6e666c6303b nir: Skip samplers and textures in lower_explicit_io
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 00:01:39 +0100
+
 mesa (23.1.0~git2302202226.8bc78e8eb9f~f~mesaaco2) focal; urgency=medium
 
   * New snapshot:
