@@ -1,3 +1,37 @@
+mesa (23.0.0+git2302230407.329da73d91c~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 329da73d91c docs: Add sha256 sum for 23.0.0
+  * bbf142b8de7 docs: add release notes for 23.0.0
+  * 78ca47a5923 docs: truncate new_features.txt
+  * 34ae4e4629b VERSION: bump for 23.0.0
+  * f6a8dfe7e1f microsoft/clc: Set features that are used by CL tests
+  * 785cf852962 nir/deref: Preserve alignments in opt_remove_cast_cast()
+  * d55de21f0f6 clc: Include opencl-c-base.h with LLVM 15 (using
+    builtins)
+  * f2fb52d61a7 glthread: ignore non-VBO vertex arrays with NULL data
+    pointers
+  * 6dfc7eaeb2b intel/compiler/mesh: use slice id of task urb handles in
+    mesh shaders
+  * a3c6a52cf12 loader: do not check the mesa DRI_Mesa version if it was
+    not found
+  * 3491da20432 driconf: add zink glthread disable for a game
+  * 89e9c440424 driconf/anv: Apply limit_trig_input_range WA to Rise of
+    the Tomb Raider
+  * 925f9f19dd1 kopper: fix loop iterating for msaa texture creation
+  * 9fdfa9d9bbc svga: use upload buffer if texture has pending changes
+  * da8139e5e4e svga: fix compatible formats for shareable surfaces
+  * b1e25936085 svga: fix resource_get_handle from resource created
+    without SHARED bind flag
+  * 09c6627fa3b glsl: isolate object macro replacments
+  * 34170edbb6b glsl: add _token_list_prepend() helper to the parser
+  * 0bb13b2df23 mesa: ignore indices[i] if count[i] == 0 for
+    MultiDrawElements
+  * a4e31549730 .pick_status.json: Update to
+    dd3b67b9746f1d0f2766d6c39bb23e59d6548aba
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 04:17:05 +0100
+
 mesa (23.0.0~rc5+git2302172054.2b8579c7ab2~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
