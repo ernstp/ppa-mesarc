@@ -1,3 +1,10 @@
+mesa (23.1.0~git2302232000.e4ebb541c5a~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * e4ebb541c5a meson: update flex/bison requirement to cover all usages
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 20:45:52 +0100
+
 mesa (23.1.0~git2302231931.61f45a6f44e~f~mesaaco3) focal; urgency=medium
 
   * New snapshot:
