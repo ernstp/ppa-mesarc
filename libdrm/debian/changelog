@@ -1,3 +1,9 @@
+libdrm (2.4.115+git2302101558.332809f3~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 13:09:35 +0100
+
 libdrm (2.4.114-1) unstable; urgency=medium
 
   * New upstream release.
