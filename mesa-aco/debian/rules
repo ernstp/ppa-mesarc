@@ -12,9 +12,6 @@ DEB_HOST_ARCH      ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
 DEB_HOST_ARCH_OS   ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 DEB_HOST_ARCH_CPU  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
-dpkg_late_eval ?= $(or $(value DPKG_CACHE_$(1)),$(eval DPKG_CACHE_$(1) := $(shell $(2)))$(value DPKG_CACHE_$(1)))
-DEB_DISTRIBUTION = $(call dpkg_late_eval,DEB_DISTRIBUTION,dpkg-parsechangelog -SDistribution)
-
 # for finding the correct llvm-config when meson doesn't know about it yet
 export PATH:=/usr/lib/llvm-15/bin/:/usr/lib/llvm-14/bin/:/usr/lib/llvm-13/bin/:/usr/lib/llvm-12/bin/:/usr/lib/llvm-11/bin/:$(PATH)
 
@@ -128,7 +125,7 @@ else
 	GALLIUM_DRIVERS += radeonsi
 	confflags_GALLIUM += -Dllvm=enabled
 	confflags_GALLIUM += -Dgallium-opencl=icd
-	ifneq ($(DEB_DISTRIBUTION),focal)
+	ifeq ($(DEB_HOST_ARCH),amd64)
 		confflags_GALLIUM += -Dgallium-rusticl=true
 	endif
 
