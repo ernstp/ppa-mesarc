@@ -1,3 +1,22 @@
+libsdl2 (2.27.0+git2302221931.5a7ea76ed~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 5a7ea76ed fix MSVC build failures in CI after commit 1e5e8e2f
+  * 9403c9e95 resampler: Work at double precision on x86-64 machines.
+  * 13969f856 De-duplicate Google Stadia controllers on macOS
+  * 9be85b846 Rumbling the Google Stadia Controller over Bluetooth works
+    on Linux and macOS
+  * 35c9b1042 Fixed the packet size for Xbox One controllers
+  * 31a57c05d Fixed the share button on the ThrustMaster eSwap PRO
+    Controller Xbox
+  * 3dff5d3cb Added support for the Turtle Beach REACT-R and Recon Xbox
+    controllers
+  * 4c9a79ddd Removed duplicated conditional
+  * 7c4f5e1de Fixed rumble caps for the Nintendo Joy-Con controllers
+  * abe8dbbf1 Added support for the Razer Wolverine V2 controllers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 04:20:19 +0100
+
 libsdl2 (2.27.0+git2302201943.0efb31ef3~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
