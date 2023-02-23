@@ -1,3 +1,10 @@
+corectrl (1.4.0~git2302212116.086e814~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 086e814 Add easylogging++ configuration to tests
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 04:20:06 +0100
+
 corectrl (1.4.0~git2302191949.993e96d~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
