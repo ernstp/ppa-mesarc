@@ -1,5 +1,6 @@
-URL="https://dri.freedesktop.org/libdrm/"
-COMPR="xz"
-RELEASE_VERSION="2.4.110"
-INC=2
-DISTROS="bionic focal jammy kinetic"
+PACKAGE_NAME=libdrm2
+GIT="https://gitlab.freedesktop.org/mesa/drm.git"
+GITBRANCH="main"
+DISTROS="focal jammy kinetic lunar"
+INC=0
+PPA=mesarc

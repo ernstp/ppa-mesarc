@@ -3,19 +3,19 @@ Priority: optional
 Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
 Uploaders: Andreas Boll <aboll@debian.org>
 Build-Depends:
- debhelper (>= 11),
+ debhelper-compat (= 12),
  meson,
  quilt,
  xsltproc,
- docbook-xsl,
  libx11-dev,
  pkg-config,
- python3-docutils,
  python3-setuptools,
  xutils-dev (>= 1:7.6+2),
  libudev-dev [linux-any],
- libpciaccess-dev
-Standards-Version: 4.1.4
+ libpciaccess-dev,
+ python3-docutils,
+# valgrind [amd64 armhf i386 mips mipsel powerpc s390x],
+Standards-Version: 4.6.0
 Section: libs
 Vcs-Git: https://salsa.debian.org/xorg-team/lib/libdrm
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/libdrm
@@ -23,10 +23,10 @@ Homepage: https://cgit.freedesktop.org/mesa/drm/
 
 Package: libdrm-dev
 Section: libdevel
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any kfreebsd-any hurd-any
 Depends:
  libdrm2 (= ${binary:Version}),
- libdrm-intel1 (= ${binary:Version}) [amd64 i386 kfreebsd-amd64 kfreebsd-i386 x32],
+ libdrm-intel1 (= ${binary:Version}) [amd64 i386 kfreebsd-amd64 kfreebsd-i386 hurd-i386 x32],
  libdrm-radeon1 (= ${binary:Version}),
  libdrm-nouveau2 (= ${binary:Version}) [linux-any],
  libdrm-amdgpu1 (= ${binary:Version}),
@@ -35,6 +35,8 @@ Depends:
  libdrm-exynos1 (= ${binary:Version}) [any-arm],
  libdrm-tegra0 (= ${binary:Version}) [any-arm arm64],
  libdrm-etnaviv1 (= ${binary:Version}) [armhf arm64],
+ libpciaccess-dev,
+# valgrind [amd64 armhf i386 mips mipsel powerpc s390x],
  ${misc:Depends},
 Multi-Arch: same
 Description: Userspace interface to kernel DRM services -- development files
@@ -47,7 +49,7 @@ Description: Userspace interface to kernel DRM services -- development files
  This package provides the development environment for libdrm.
 
 Package: libdrm2
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any kfreebsd-any hurd-any
 Depends:
  libdrm-common (>= ${source:Version}),
  ${shlibs:Depends},
@@ -78,10 +80,25 @@ Description: Userspace interface to kernel DRM services -- common files
  .
  This package provides common files for libdrm.
 
+Package: libdrm-tests
+Depends:
+ libdrm2 (= ${binary:Version}),
+ ${shlibs:Depends},
+ ${misc:Depends}
+Architecture: any
+Description: Testing tools from the libdrm project
+ This library implements the userspace interface to the kernel DRM
+ services.  DRM stands for "Direct Rendering Manager", which is the
+ kernelspace portion of the "Direct Rendering Infrastructure" (DRI).
+ The DRI is currently used on Linux to provide hardware-accelerated
+ OpenGL drivers.
+ .
+ This package contains a variety of tools for testing from the libdrm project.
+
 Package: libdrm2-udeb
 Package-Type: udeb
 Section: debian-installer
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any kfreebsd-any hurd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -89,7 +106,7 @@ Description: Userspace interface to kernel DRM services -- runtime
  This is a udeb, or a microdeb, for the debian-installer.
 
 Package: libdrm-intel1
-Architecture: amd64 i386 kfreebsd-amd64 kfreebsd-i386 x32
+Architecture: amd64 i386 kfreebsd-amd64 kfreebsd-i386 hurd-i386 x32
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -116,7 +133,7 @@ Description: Userspace interface to nouveau-specific kernel DRM services -- runt
  OpenGL drivers.
 
 Package: libdrm-radeon1
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any kfreebsd-any hurd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -186,7 +203,7 @@ Description: Userspace interface to tegra-specific kernel DRM services -- runtim
  OpenGL drivers.
 
 Package: libdrm-amdgpu1
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any kfreebsd-any hurd-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},

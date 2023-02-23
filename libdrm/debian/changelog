@@ -1,8 +1,247 @@
-libdrm (2.4.97-1ubuntu1) disco; urgency=medium
+libdrm (2.4.114-1) unstable; urgency=medium
 
-  * sync-i915-pciids.diff: Sync pci-ids with the kernel. (LP: #1821863)
+  * New upstream release.
+  * symbols: Updated.
 
- -- Timo Aaltonen <tjaalton@debian.org>  Fri, 29 Mar 2019 11:21:10 +0200
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 08 Nov 2022 12:53:26 +0200
+
+libdrm (2.4.113-2) unstable; urgency=medium
+
+  * rules: Fix arm FTBFS.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 19 Sep 2022 18:52:34 +0300
+
+libdrm (2.4.113-1) unstable; urgency=medium
+
+  * New upstream release.
+  * rules: Rework confflags to match current upstream.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 19 Sep 2022 10:53:18 +0300
+
+libdrm (2.4.112-3) unstable; urgency=medium
+
+  * libdrm-tegra0.symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 29 Jul 2022 15:25:31 +0300
+
+libdrm (2.4.112-2) unstable; urgency=medium
+
+  * rules: Fix arm build.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 29 Jul 2022 14:39:16 +0300
+
+libdrm (2.4.112-1) unstable; urgency=medium
+
+  * New upstream release.
+  * symbols: Updated.
+  * rules: Add more test binaries for arm. (Closes: #1016096)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 29 Jul 2022 11:24:00 +0300
+
+libdrm (2.4.111-1) unstable; urgency=medium
+
+  * New upstream release.
+  * install, rules: libkms got removed.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 06 Jul 2022 08:26:24 +0300
+
+libdrm (2.4.110-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Update signing-key.asc.
+  * symbols: Updated.
+  * control: Bump debhelper-compat to 13, policy to 4.6.0.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 18 Feb 2022 15:22:07 +0200
+
+libdrm (2.4.109-2) unstable; urgency=medium
+
+  * amdgpu1.symbols: Updated. (Closes: #1001965)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 20 Dec 2021 07:39:47 +0200
+
+libdrm (2.4.109-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #1001840)
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sat, 18 Dec 2021 19:00:42 +0200
+
+libdrm (2.4.108-1) unstable; urgency=medium
+
+  * New upstream release.
+  * libdrm-tests: Add amdgpu_stress.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 17 Nov 2021 11:33:25 +0200
+
+libdrm (2.4.107-8) unstable; urgency=medium
+
+  * rules: Forcibly disable valgrind.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 27 Sep 2021 20:10:39 +0300
+
+libdrm (2.4.107-7) unstable; urgency=medium
+
+  * Drop valgrind support, it's not ready for multi-arch. (Closes:
+    #994955)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 27 Sep 2021 14:36:51 +0300
+
+libdrm (2.4.107-6) unstable; urgency=medium
+
+  * control: Fix valgrind dependency archs for libdrm-dev.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 23 Sep 2021 14:09:08 +0300
+
+libdrm (2.4.107-5) unstable; urgency=medium
+
+  * control: Add valgrind to libdrm-dev Depends. (Closes: #994873)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 23 Sep 2021 05:26:53 +0300
+
+libdrm (2.4.107-4) unstable; urgency=medium
+
+  * control: Add libpciaccess-dev to -dev Depends, required by
+    libdrm_intel.pc.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 22 Sep 2021 11:51:51 +0300
+
+libdrm (2.4.107-3) unstable; urgency=medium
+
+  * Include static libs in -dev again. (LP: #1944107)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 21 Sep 2021 16:52:54 +0300
+
+libdrm (2.4.107-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 20 Aug 2021 12:22:03 +0300
+
+libdrm (2.4.107-1) experimental; urgency=medium
+
+  * New upstream release.
+  * revert-set-fb-modifiers-flag.diff: Dropped, upstream.
+  * control: Add python3-setuptools to build-depends.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 04 Aug 2021 13:25:07 +0300
+
+libdrm (2.4.105-3) experimental; urgency=medium
+
+  * Revert a commit causing additional dependencies to be added to *.pc.in.
+    Also drop libpciaccess-dev from libdrm-dev Depends.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Sat, 08 May 2021 22:52:07 +0300
+
+libdrm (2.4.105-2) experimental; urgency=medium
+
+  * control: Add libpciaccess-dev to libdrm-dev depends.
+  * revert-set-fb-modifiers-flag.diff: Revert a commit which broke
+    chrome on certain setups.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 05 May 2021 18:04:17 +0300
+
+libdrm (2.4.105-1) experimental; urgency=medium
+
+  * New upstream release. (LP: #1923880)
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 15 Apr 2021 08:45:32 +0300
+
+libdrm (2.4.104-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add signing-key from Simon Ser.
+  * control: Manpages now need python3-docutils instead of docbook-xsl
+    to build, make it so.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 28 Jan 2021 12:18:32 +0200
+
+libdrm (2.4.103-2) unstable; urgency=medium
+
+  * hurd-port.diff: Dropped. (Closes: #975658)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 27 Nov 2020 09:32:38 +0200
+
+libdrm (2.4.103-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #970304)
+  * control, rules, hurd-port.diff: Add support for Hurd. (Closes:
+    #909436)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 10 Nov 2020 19:51:20 +0200
+
+libdrm (2.4.102-1) unstable; urgency=medium
+
+  * New upstream release.
+  * fix-realpath-vs-firefox.diff: Dropped, upstream.
+  * libdrm-tests.install: Added /usr/bin/drmdevice.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 22 Jun 2020 15:33:54 +0300
+
+libdrm (2.4.101-2) unstable; urgency=medium
+
+  * fix-realpath-vs-firefox.diff: Fix webgl on intel with firefox.
+    (Closes: #956665) (LP: #1872586)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Tue, 14 Apr 2020 16:32:57 +0300
+
+libdrm (2.4.101-1) unstable; urgency=medium
+
+  * New upstream release.
+  * source, watch: Upstream provides only xz tarballs, bump source to
+    3.0 (quilt).
+  * Add my key to signing-key.asc.
+  * control: Use debhelper-compat, bump to 12.
+  * control: Bump policy to 4.5.0.
+  * local-options: Update extend-diff-ignore.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Fri, 03 Apr 2020 21:49:01 +0300
+
+libdrm (2.4.100-4) unstable; urgency=medium
+
+  * rules: Override dh_missing.
+  * rules: Include additional test binaries on arm. (Closes: #944752)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 21 Nov 2019 14:47:00 +0200
+
+libdrm (2.4.100-3) unstable; urgency=medium
+
+  * Revert dropping libdrm-tests, since the package ended up in NEW
+    anyway.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 07 Nov 2019 09:19:11 +0200
+
+libdrm (2.4.100-2) unstable; urgency=medium
+
+  * control, rules: Disable libdrm-tests, 2.4.100 is needed for mesa 19.3
+    now and not after waiting for the NEW queue to clear.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Wed, 06 Nov 2019 20:04:53 +0200
+
+libdrm (2.4.100-1) experimental; urgency=medium
+
+  [ Timo Aaltonen ]
+  * New upstream release. (Closes: #943777)
+  * symbols: Updated.
+
+  [ Rohan Garg ]
+  * Add a libdrm-tests package. (Closes: #868898)
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Thu, 31 Oct 2019 23:27:08 +0200
+
+libdrm (2.4.99-1) unstable; urgency=medium
+
+  * New upstream release. (Closes: #934494)
+  * 02_kfreebsd.diff: Dropped, upstream.
+  * symbols: Updated.
+
+ -- Timo Aaltonen <tjaalton@debian.org>  Mon, 12 Aug 2019 12:01:03 +0300
 
 libdrm (2.4.97-1) unstable; urgency=medium
 

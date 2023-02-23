@@ -10,35 +10,38 @@ DEB_HOST_ARCH_OS  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
 confflags = \
-	-Dradeon=true \
-	-Damdgpu=true \
-	-Dlibkms=false \
-	-Dvalgrind=false \
+	--auto-features=disabled \
+	-Ddefault_library=both \
+	-Dman-pages=enabled \
+	-Dradeon=enabled \
+	-Damdgpu=enabled \
+	-Dinstall-test-programs=true \
+	-Dvalgrind=disabled \
 	$()
 
 # Linux vs. the rest:
 ifeq (linux, $(DEB_HOST_ARCH_OS))
 	confflags += -Dudev=true
-	confflags += -Dvmwgfx=true
-	confflags += -Dnouveau=true
+	confflags += -Dvmwgfx=enabled
+	confflags += -Dnouveau=enabled
 	NOUVEAU = yes
 else
 	confflags += -Dudev=false
-	confflags += -Dvmwgfx=false
-	confflags += -Dnouveau=false
+	confflags += -Dvmwgfx=disabled
+	confflags += -Dnouveau=disabled
 	NOUVEAU = no
 endif
 
 # Intel is only on x86:
 ifneq (,$(filter amd64 i386,$(DEB_HOST_ARCH_CPU)))
-ifneq (,$(filter linux kfreebsd,$(DEB_HOST_ARCH_OS)))
+ifneq (,$(filter linux kfreebsd hurd,$(DEB_HOST_ARCH_OS)))
 	INTEL = yes
 endif
 endif
 ifeq ($(INTEL), yes)
-	confflags += -Dintel=true
+	confflags += -Dintel=enabled
 else
-	confflags += -Dintel=false
+	confflags += -Dintel=disabled
 endif
 
 # Exynos/Omap/Tegra are only on arm
@@ -46,11 +49,11 @@ ifneq (,$(filter arm,$(DEB_HOST_ARCH_CPU)))
 	ARM = yes
 endif
 ifeq ($(ARM), yes)
-	confflags += -Dexynos=true
-	confflags += -Domap=true
+	confflags += -Dexynos=enabled
+	confflags += -Domap=enabled
 else
-	confflags += -Dexynos=false
-	confflags += -Domap=false
+	confflags += -Dexynos=disabled
+	confflags += -Domap=disabled
 endif
 
 # Etnaviv is on armhf and arm64
@@ -58,9 +61,9 @@ ifneq (,$(filter armhf arm64,$(DEB_HOST_ARCH)))
 	ETNAVIV = yes
 endif
 ifeq ($(ETNAVIV), yes)
-	confflags += -Detnaviv=true
+	confflags += -Detnaviv=enabled
 else
-	confflags += -Detnaviv=false
+	confflags += -Detnaviv=disabled
 endif
 
 # Tegra is on arm and arm64
@@ -68,9 +71,9 @@ ifneq (,$(filter arm arm64,$(DEB_HOST_ARCH_CPU)))
 	TEGRA = yes
 endif
 ifeq ($(TEGRA), yes)
-	confflags += -Dtegra=true
+	confflags += -Dtegra=enabled
 else
-	confflags += -Dtegra=false
+	confflags += -Dtegra=disabled
 endif
 
 # Freedreno is on arm and arm64
@@ -78,9 +81,9 @@ ifneq (,$(filter arm arm64,$(DEB_HOST_ARCH_CPU)))
 	FREEDRENO = yes
 endif
 ifeq ($(FREEDRENO), yes)
-	confflags += -Dfreedreno=true -Dfreedreno-kgsl=true
+	confflags += -Dfreedreno=enabled -Dfreedreno-kgsl=true
 else
-	confflags += -Dfreedreno=false
+	confflags += -Dfreedreno=disabled
 endif
 
 ###
@@ -95,7 +98,23 @@ override_dh_auto_test:
 
 override_dh_install:
 	find debian/tmp -name '*.la' -delete
-	dh_install --fail-missing
+	dh_install
+
+  ifneq (,$(filter $(DEB_HOST_ARCH_CPU),arm))
+	for file in debian/tmp/usr/bin/exynos_*; do \
+		mv $$file debian/libdrm-tests/usr/bin; \
+	done
+  endif
+  ifneq (,$(filter $(DEB_HOST_ARCH_CPU),arm arm64))
+	for file in debian/tmp/usr/bin/tegra-*; do \
+		mv $$file debian/libdrm-tests/usr/bin; \
+	done
+  endif
+  ifneq (,$(filter $(DEB_HOST_ARCH),armhf arm64))
+	for file in debian/tmp/usr/bin/etnaviv*; do \
+		mv $$file debian/libdrm-tests/usr/bin; \
+	done
+  endif
 
 override_dh_makeshlibs:
 	dh_makeshlibs -plibdrm2 -V'libdrm2 (>= 2.4.89)' --add-udeb=libdrm2-udeb -- -c4
