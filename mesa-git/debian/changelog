@@ -1,3 +1,16 @@
+mesa (23.0.0+git2302230412.8b9b246a2f8~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 8b9b246a2f8 nir/deref: don't replace casts with deref_struct if we'd
+    lose the stride
+  * e7f040961eb iris: Avoid creating uncompressed view with unaligned
+    tile offsets on BDW
+  * 3f745471f56 aco: fix pathological case in LdsDirectVALUHazard
+  * 00b36241f79 .pick_status.json: Update to
+    56a9aad4010ff9f2c0afcadec0ac61a6274de0a3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 04:21:00 +0100
+
 mesa (23.0.0+git2302230407.329da73d91c~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
