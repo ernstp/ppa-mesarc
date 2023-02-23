@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (23.0.0+git2302221807.7025aef~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 7025aef Bump version for the 23.0.0 release
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 04:23:26 +0100
+
 xserver-xorg-video-amdgpu (22.0.0+git2212051652.6ee3209~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
