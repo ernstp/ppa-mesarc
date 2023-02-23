@@ -1,3 +1,28 @@
+mesa (23.1.0~git2302231931.61f45a6f44e~f~mesaaco3) focal; urgency=medium
+
+  * New snapshot:
+  * 61f45a6f44e gbm: drop unnecessary vulkan dependency
+  * 2bf24c84f3e glx: include directly the useful vulkan header, instead
+    of including everything
+  * c8d7e0c0235 egl: include directly the useful vulkan header, instead
+    of including everything
+  * e97ed4fc89d anv: process utrace payloads on queue submission
+  * aa791961a82 pvr: Add support for dynamic buffers descriptors
+  * 2bef26ed043 ci/intel: Update hasvk HSW xfails
+  * d6d8edf9ae6 hasvk: Handle subpass self-dependencies for stencil
+    shadow copies
+  * d3162f97b5a hasvk: Mark VK_IMAGE_LAYOUT_ATTACHMENT_OPTIMAL as
+    stencil write optimal
+  * 79a58cb79bc hasvk: Enable PixelShaderKillsPixel when omask is used
+  * 15b302179a7 aux/tc: add a 'has_resolve' member to tc_renderpass_info
+  * ce68824bdfb anv: fix invalid masking of 48bit address
+  * af994570f02 intel/blorp: Allocate only necessary amount of
+    VERTEX_BUFFER_STATE
+  * a364f23a6cf intel: Make gen12 URB space reservation dependent on
+    compute engine presence
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 20:22:05 +0100
+
 mesa (23.1.0~git2302231114.63278778c64~f~mesaaco3) focal; urgency=medium
 
   * New snapshot:
