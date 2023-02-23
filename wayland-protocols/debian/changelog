@@ -1,3 +1,10 @@
+wayland-protocols (1.31+git2302211331.cf838fd~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * cf838fd xdg-output: clarify goal
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 04:23:08 +0100
+
 wayland-protocols (1.31+git2302121116.380bdd6~f~base2) focal; urgency=medium
 
   * New snapshot:
