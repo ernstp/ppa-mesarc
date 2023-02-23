@@ -1,3 +1,15 @@
+mesa (23.0.0+git2302231752.02c243ede38~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 02c243ede38 hasvk: Mark VK_IMAGE_LAYOUT_ATTACHMENT_OPTIMAL as
+    stencil write optimal
+  * 7c90f3a42fb anv: fix invalid masking of 48bit address
+  * 82b554edd81 r600: fix shader blob memory leak
+  * 713ee4a61f1 .pick_status.json: Update to
+    aa791961a82e1f5a9dd841c3e0398c3e80d09652
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 20:24:20 +0100
+
 mesa (23.0.0+git2302230412.8b9b246a2f8~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
