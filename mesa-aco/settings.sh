@@ -3,5 +3,5 @@ GIT="https://gitlab.freedesktop.org/mesa/mesa.git"
 GITBRANCH="main"
 DISTROS="focal jammy kinetic lunar"
 PREBUMP=1
-INC=3
+INC=4
 PPA=mesaaco
