@@ -1,3 +1,22 @@
+mesa (23.1.0~git2302231114.63278778c64~f~mesaaco3) focal; urgency=medium
+
+  * New snapshot:
+  * 63278778c64 pvr: Add push consts support to descriptor program.
+  * fbd644c59d9 meson: replace vk_wsi_args with dependencies to let
+    meson take care of transitivity
+  * f059213f5dd meson: reuse vulkan_wsi_list for defining vk_wsi_args
+  * 22c1f4be8c1 docs: mention `meson configure` and drop broken
+    workaround script
+  * e5cf2831216 docs: mention the meson summary
+  * 512126b26d5 intel/compiler: remove unused field from
+    fs_thread_payload
+  * 9b4eb739079 r600: fix shader blob memory leak
+  * cc3c97d8c94 venus: Add VkBuffer cache statistics for debug
+  * 7d53d4d078e venus: add VN_DEBUG_CACHE flag
+  * ef255444c19 venus: switch to lazy VkBuffer cache
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Feb 2023 12:45:27 +0100
+
 mesa (23.1.0~git2302230244.56a9aad4010~f~mesaaco3) focal; urgency=medium
 
   * New snapshot:
