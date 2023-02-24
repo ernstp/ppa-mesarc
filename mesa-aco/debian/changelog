@@ -1,3 +1,41 @@
+mesa (23.1.0~git2302240249.94906337232~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 94906337232 d3d12: Fix VP9 Decode - Checking 0xFF instead of 0x7F
+    for invalid frame_ref[i].Index7Bits
+  * fb2a6248d2e hasvk: Update driver name in debug information
+  * ed768337050 radv: Implement & expose
+    VK_EXT_pipeline_library_group_handles.
+  * d0f7587109d radv: Use group handles based on shader hashes.
+  * 913de78731a radv: Use provided handles for switch cases in RT
+    shaders.
+  * 430170702e5 radv: Hash group handles as part of RT pipeline key.
+  * 9eb76ab6386 radv: Add helper to hash stages.
+  * 211ed8745f7 zink: add debug marker tracing for qbo updates
+  * 26aedae568b zink: add ZINK_DEBUG=map
+  * 03610a5aab5 zink: actually hook up ZINK_DEBUG=norp
+  * 9e8450b65cc freedreno/crashdec: Disable GALLIUM_DUMP_CPU
+  * 3f227957d64 freedreno/crashdec: Handle multi-IB prefetching
+  * ddc4e87438e freedreno/crashdec: Add another prefetch test
+  * 643ee851030 freedreno/crashdec: Refactor crashdec tests
+  * 7417432a285 freedreno/crashdec: Add prefetch test
+  * 9ececfc6e63 freedreno/cffdec: Fix hang location detection
+  * 924f2640812 freedreno/cffdec: Add helper to parse CP_INDIRECT_BUFFER
+  * c01ac4b5836 freedreno/cffdec: Add helper to find next pkt
+  * cb13e24758c freedreno/cffdec: Fix unitialized count for pkt2
+  * 4060cf5772c freedreno/crashdec: Fix apparent off-by-one with ROQ
+    size
+  * ce7225c0f90 freedreno/a6xx: Fill in ROQ status registers
+  * 44054b1f3b3 freedreno/a6xx: Fix CP_ROQ_THRESHOLDS_1
+  * aba8aea2be7 freedreno/a6xx: Add CP_ROQ_*_STAT
+  * 8c6d741e263 freedreno/a6xx: Rename CP_CSQ_IB*_STAT
+  * 880a3efe6c2 anv: implement emission of 3DSTATE_HS for Wa_1306463417
+  * f8a1100ca1b anv: limit generated draws to pipelines without HS stage
+  * 2028f1caa38 anv: emit 3DSTATE_HS in cmd_buffer_flush_gfx_state
+  * a043ae8e249 iris: implement emission of 3DSTATE_HS for Wa_1306463417
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 24 Feb 2023 05:10:34 +0100
+
 mesa (23.1.0~git2302232000.e4ebb541c5a~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
