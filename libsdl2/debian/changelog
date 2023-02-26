@@ -1,3 +1,21 @@
+libsdl2 (2.27.0+git2302261200.0c7346ec3~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 0c7346ec3 USE_DEV_RANDOM close the file descriptor even in the rare
+    case it can't read it
+  * 711a458be x11: Fix duplicate Xinput2 event reception
+  * 171fba320 wikiheaders: Fix wikilinks inside code sections a little.
+    Not perfect yet.
+  * ad09976ec Fixed relative mouse motion over remote desktop
+  * 7abb74813 Sync wiki -> headers.
+  * 858ae9900 wikiheaders: fixed see-also conversion
+  * f87f0fe78 wikibridge: Fixes for manpage generation from Markdown
+    format.
+  * b3ea81b33 wikiheaders: Work to make the wiki exist primarily in
+    Markdown format.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Feb 2023 14:28:35 +0100
+
 libsdl2 (2.27.0+git2302232124.3bf9c70a7~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
