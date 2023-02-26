@@ -1,3 +1,11 @@
+corectrl (1.3.3+git2302261226.3d2b8ea~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 3d2b8ea Bump version to 1.3.3
+  * 69e3787 Add easylogging++ configuration to tests
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Feb 2023 14:28:08 +0100
+
 corectrl (1.3.2+git2302191934.b1fbb63~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
