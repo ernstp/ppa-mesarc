@@ -1,3 +1,46 @@
+mesa (23.1.0~git2302252358.964323fe97b~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 964323fe97b pvr: remove duplicate define
+  * cbfa4d52ed2 pvr: stop restricting the compiler to the Sascha Willems
+    triangle demo
+  * cb7403b9095 d3d12: Track up to 16 active context resource states
+    locally in d3d12_bo
+  * 2c00c069fee d3d12: Assign up to 16 simultaneously active contexts
+    unique IDs
+  * bd0e1b3d02c d3d12: Move d3d12_context_state_table_entry to
+    d3d12_resource_state.h
+  * 4c711460d4e tu/kgsl: Propagate tu_physical_device_init() errors
+  * 6a28986eb4d tu+meson: Re-work KMD selection
+  * 407e4929de9 turnip: Refactor device loading
+  * 3b3882d4c5f turnip: Handle kgsl vs drm specifics at runtime
+  * fc06e35a58f turnip: Move QueueWaitIdle entrypoint to kgsl
+  * 1170efcf014 turnip: Allow knl backend specific entrypoints
+  * fd2b014a12a turnip: Split out vfuncs for kernel interface
+  * f84fce767d3 turnip: drm code-motion
+  * 1cb702def49 turnip: Move things to prep for multi-kernel support
+  * 73dfcbf7e85 vk/runtime: Allow enumerate and try_create_for_drm to
+    coexist
+  * 08ba87481bc ci/freedreno: add flaking KHR-
+    GL45.buffer_storage.map_persistent_dispatch
+  * 54f2074ebef docs: update link to intel optimization reference manual
+  * 8203618d455 ci: correct typo in name of linkcheck job
+  * b52917f9fcc intel: use c_see2_arg instead of explicit -msse2
+  * 1851ca714b7 intel: enable -mfpmath=sse on x86
+  * 182066538f3 r600/sfn: Fix minimum required registers
+  * 13a9ce7f2fe radv/rt: Merge cull_mask and flags
+  * 8ae5a429903 nir: Add cull_mask_and_flags_amd intrinsic
+  * 8441d565ec9 anv: remove assert typed write support when using NULL
+    surface
+  * 65b62db0fb9 ci: uprev virglrenderer
+  * 297fda6cf13 zink: fix build with -Dvulkan-beta=true
+  * f1acdeba6b8 zink: fix slab allocator sizing
+  * fe4271c42d1 vbo/save: fix possible crash related to fixup_vertex()
+  * b71957635f1 anv: stop tracking color blend state in the pipeline
+  * dd5c6446b4f anv: fix testing for dynamic color blend bits
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Feb 2023 14:29:15 +0100
+
 mesa (23.1.0~git2302240249.94906337232~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
