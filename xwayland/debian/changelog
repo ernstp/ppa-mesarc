@@ -1,3 +1,43 @@
+xwayland (2:23.0.99+git2302221020.c41ff4502~j~wayland6) jammy; urgency=medium
+
+  * New snapshot:
+  * c41ff4502 Bump version to 23.0.99.901
+  * 92c54bea2 dix: fix wheel emulation lockup when a negative increment
+    is set
+  * 30069ced5 Bump version to 23.0.99.1
+  * 987e88b2c meson: Change project name to xwayland
+  * 409177620 Don't install Xvfb
+  * cfba10c7c meson: Build Xwayland unconditionally
+  * 93fde076e Drop miext/shadow directory
+  * fae259c82 Drop EXA code
+  * 321ef5400 Drop config directory
+  * 5e992036b Drop Xephyr / kdrive DDX
+  * 14e8b26fa Drop Xorg DDX
+  * 162f91ec8 Drop Xwin DDX and x86 MinGW-w64 cross build
+  * b52f412f1 Drop Xnest DDX
+  * 14ee43536 Drop Xquartz DDX
+  * 0a22502c3 dix: switch scroll button emulation to multiples of
+    increment
+  * 6f0cd1515 dix: remove pointless "flexible" x/y axis mapping
+  * 462b06033 present: Send a PresentConfigureNotify event for destroyed
+    windows
+  * 098fcedf5 xwayland: override Meson dependency
+  * c06ba3328 xwayland: generate pkg-config file from Meson
+  * 0c93394d7 xwayland: Use wl_output.name for XRandR
+  * b63ef10f1 xwayland: Pass the wl_output version
+  * 3c07a01c4 xwayland: Use xdg-output name for XRandR
+  * ddcbb46f9 xwayland: Tell RR has changed only when done
+  * 5aebc0109 xwayland: fix GBM on driver without explicit modifiers
+  * d01a075d5 xwayland: Do not use "XWayland" spelling in code
+    identifiers
+  * b5aa70503 xwayland: Spell XWAYLAND consistently in debug messages
+  * df75d90a2 xwayland: Spell Xwayland consistently in error messages
+  * ba644a64a xwayland/window: Do not double add window to damage list
+  * e196535ab dix: Clear device sprite after free in AttachDevice()
+  * 2f8778ca6 xwayland: wl_pointer.axis_v120 is no longer optional
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Mar 2023 08:12:54 +0100
+
 xwayland (2:22.1.8+git2302070830.92c35190d~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
