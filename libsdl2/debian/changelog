@@ -1,3 +1,27 @@
+libsdl2 (2.27.0+git2303010115.6ff3e49b6~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 6ff3e49b6 Follow the same pattern for releasing the window data in
+    the UIKit driver
+  * e58a8639e docs: Removed bogus file from wiki bridge.
+  * 5b7b3da70 Sync wiki -> headers.
+  * 0a0dfdb2f wikiheaders: Sort pages before listing them in
+    README/FrontPage.md.
+  * 8572e1932 wikiheaders: Use Windows endlines in the source, Unix in
+    the wiki.
+  * 031348d37 Fixed SDL windows getting the maximized state after
+    leaving fullscreen on macOS
+  * 462d95ab4 wikiheaders: ignore wiki's README/FrontPage.md
+  * a48bb80ea wikiheaders: Bridge README files in the docs directory to
+    wiki.
+  * c0fb09242 Fixed locking up the Logitech F310 with the PlayStation
+    controller detection
+  * 37de5d484 wikiheaders: fixed wikilinks in Markdown code sections.
+  * 715749f57 Added mapping for DualSense Edge Wireless Controller on
+    Linux
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Mar 2023 06:46:01 +0100
+
 libsdl2 (2.27.0+git2302261200.0c7346ec3~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
