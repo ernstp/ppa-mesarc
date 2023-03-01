@@ -1,3 +1,10 @@
+wayland-protocols (1.31+git2302271226.94482ce~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 94482ce xdg-output: Remove and tweak contradicting examples
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Mar 2023 06:51:16 +0100
+
 wayland-protocols (1.31+git2302211331.cf838fd~f~base2) focal; urgency=medium
 
   * New snapshot:
