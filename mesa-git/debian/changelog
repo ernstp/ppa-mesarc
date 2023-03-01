@@ -1,3 +1,53 @@
+mesa (23.0.0+git2302282115.1301e568674~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 1301e568674 anv: fix vma heap memory leak
+  * 52ddeed25e5 radv: fix draw calls with 0-sized index buffers and
+    robustness on NAVI10
+  * 896d6df474c glapi/meson: drop duplicate line in deps
+  * 9e777a4b5a3 radv: fix flushing non-coherent images in
+    EndCommandBuffer()
+  * fe2f5e6b760 radv: fix flushing non-coherent images inside
+    secondaries on GFX9+
+  * 11c2063e68a util: rzalloc and free hash_table_u64
+  * 7a49d1fc29e aco/optimizer_postRA: assume all registers are
+    untrackable in loop headers
+  * f8d901be620 zink: remove suspended queries from list before resuming
+  * a5af95b4a19 gallivm: Fix handling of nir_intrinsic_scoped_barrier
+  * 71bcf70ccf8 .pick_status.json: Update to
+    baea3b328b7a39abcee48c733236f242e1f4cf0e
+  * 44eb06247e7 aco: always update orig_names in get_reg_phi()
+  * 784b7529816 radv: split linker script for android since it requires
+    different symbols
+  * 77a5590de3e zink: avoid adding ubo/ssbo bindings multiple times for
+    different bitsizes
+  * 5f7806b4169 zink: fix shader read access removal for barrier
+    generation
+  * 45fab91421c nir: lower to fragment_mask_fetch/load_amd with EQAA
+    correctly
+  * e8132999ae0 docs: Fix formatting for RMV tracing docs
+  * cfe483ac1a3 r600/sfn: Fix minimum required registers
+  * ed3e6b1d18a anv: stop tracking color blend state in the pipeline
+  * e98fbda5811 anv: fix testing for dynamic color blend bits
+  * 2da7b58139e vulkan: track the right value on CmdSetColorWriteMasks
+  * a816d0c7a8b radeonsi: disable Smart Access Memory because CPU access
+    has large overhead
+  * a8ff70af5dd radeonsi/gfx11: set CB_COLORi_INFO.MAX_COMP_FRAG on
+    GFX1103_R2
+  * fab5d33190e radeonsi/gfx11: don't set non-existent
+    VGT_STRMOUT_BUFFER_CONFIG
+  * cbf1c106a19 radeonsi/gfx11: fix the CU_EN clear mask for RSRC4_GS
+  * ded180720d2 amd: add missing gfx11 register definitions
+  * 364e16059bb r600/sfn: be more conservative with channel use in multi-
+    slot ops
+  * 750dff3b0cb anv: Move WA MEDIA_VFE_STATE after stalling PIPE_CONTROL
+  * c2cc0c0f63c mesa: Report GL_SHADER_BINARY_FORMAT_SPIR_V as supported
+  * 3bc45e037f2 anv: Handle all fields in
+    VkAccelerationStructureBuildRangeInfoKHR
+  * 6a63ffb5ce7 iris, crocus: Align workaround address to 32B
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Mar 2023 06:49:07 +0100
+
 mesa (23.0.0+git2302231752.02c243ede38~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
