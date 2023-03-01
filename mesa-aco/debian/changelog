@@ -1,3 +1,50 @@
+mesa (23.1.0~git2303010437.1f0fdcb6194~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 1f0fdcb6194 anv: always pick graphics queue to execute prime blits
+    on.
+  * 494cb2e5cac asahi: Flush USC caches on the first draw
+  * 70169c7488a asahi: Identify USC cache invalidate
+  * 860ac5c1498 asahi: Add readonly BO flag
+  * 0498ad3e26d asahi: Add BO_SHAREABLE flag
+  * 672b2f9ad18 anv: remove more Gfx7 code
+  * fc7680b7df7 iris: fix Wa_16011107343 for Gfx12
+  * 3cd72a28402 anv: fixup Wa_16011107343 for Gfx12 only
+  * 6cb0c8b6d74 ci: Reuse MESA_CI_PERFORMANCE_ENABLED in performance-
+    rules
+  * 5b9a6106041 ci: Use workflow to make CI aware of performance jobs
+  * c91f4b2efbf ci: Use release builds in perf jobs
+  * 2fcd6df1075 ci: Create debian-arm64-release job
+  * c65eb88f0b4 ci: Upload debian-release artifact to S3
+  * 53dda476a9e llvmpipe: fix compute address bits to return native
+    pointer size.
+  * 67904a36a6d pvr: Don't update fragment signal sync when fragment
+    stage is disabled
+  * 4af1cf89abc pvr: Clear wait syncs after job submission
+  * 18fb8d3b55a pvr: Enable threaded submit when supported
+  * 5be2e44095f pvr: Add support for VK_KHR_timeline_semaphore
+  * 80f864cd23b pvr: Use common queue submit implementation
+  * 5ce99bc5688 radv: Only init geometry infos if RRA is enabled
+  * 7bd265bc863 radv: Move header and geometry info init into separate
+    functions
+  * e74a3284f53 anv: halve the push constants space in mesh pipelines
+  * 814eb9e2cea iris: consider bufmgr creation to have failed if
+    `dup`ing of the fd fails
+  * 0912b14b3ae ci/freedreno: add flaking KHR-
+    GL45.buffer_storage.map_persistent_flush
+  * baea3b328b7 intel/vulkan: add missing dependency on generated
+    headers
+  * c356f1b4edc radv: fix draw calls with 0-sized index buffers and
+    robustness on NAVI10
+  * b1c19498c64 pvr: replace nop binary shader with run-time compiled
+    shader
+  * fa1cf83217e meson: allow checking for null pointers even if they're
+    supposed to be non-null
+  * bf5cfb64868 v3dv: Enable (leased) direct display extensions.
+  * 12f0daddfc8 pvr: initialise size for placeholder "zeroed" shaders
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 01 Mar 2023 06:46:49 +0100
+
 mesa (23.1.0~git2302252358.964323fe97b~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
