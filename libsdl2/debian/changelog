@@ -1,3 +1,12 @@
+libsdl2 (2.27.0+git2303020147.f47a08ab8~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f47a08ab8 Fixed typo in previous cherry-pick
+  * 660fc8996 Don't clobber an existing entry with a different version
+    when adding a gamepad mapping
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Mar 2023 17:49:41 +0100
+
 libsdl2 (2.27.0+git2303010115.6ff3e49b6~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
