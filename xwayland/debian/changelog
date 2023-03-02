@@ -1,3 +1,9 @@
+xwayland (2:23.0.99+git2302221020.c41ff4502~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Mar 2023 23:57:35 +0100
+
 xwayland (2:23.0.99+git2302221020.c41ff4502~j~wayland6) jammy; urgency=medium
 
   * New snapshot:
