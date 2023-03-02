@@ -1,2 +1,3 @@
 usr/bin/Xwayland
 usr/share/man/man1/Xwayland.1
+usr/share/applications/org.freedesktop.Xwayland.desktop
