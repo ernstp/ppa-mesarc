@@ -1,3 +1,55 @@
+mesa (23.1.0~git2303021733.9905322df96~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 9905322df96 pvr: Advertise STORAGE_IMAGE_BIT for
+    B10G11R11_UFLOAT_PACK32
+  * 225ae963571 pvr: Don't advertise currently unsupported features
+  * 4ec6850210d radv: fix DCC decompress on GFX11
+  * 57ab623f0bb radv: Use common helpers to translate format in SDMA
+    copy.
+  * 4f681d5e2c9 radv: Remove SDMA padding from copy helpers.
+  * e9a55b332a3 radv: SDMA v4 size field is size - 1
+  * 4f50497a968 radeonsi: SDMA v4 size field is size - 1
+  * c914e70bceb anv/hasvk: speed up null image/view descriptor writes
+  * 646cff13bca Revert "iris: Avoid abort() if kernel can't allocate
+    memory"
+  * 5aae8a05264 iris: Retry DRM_IOCTL_I915_GEM_EXECBUFFER2 on ENOMEM
+  * 207eb944450 intel/compiler: add comment about workaround on simd
+    width
+  * 427fd83d27f radv: use new EVENT_WRITE_ZPASS packet3 on GFX11
+  * 87444bb7ab4 radv: ignore alpha_is_on_msb on GFX11 because the hw
+    ignores it
+  * 0a3387a190e nir/lower_mediump: don't use fp16 for constants if the
+    result is denormal
+  * ede0630f9e1 aco: use v_fma_mix_f32 for v_fma_f32 with 2 fp16
+    representable, different literals
+  * ed349951cb7 aco: mark mad definition as precise if the mul/add were
+    precise
+  * f19fccd9f8c amd,ac/rgp: fix SQTT memory types
+  * bb122202b6d gallivm: Add some notes about other
+    invocation_0_must_be_active usages.
+  * 66dff3d39c5 gallivm: Use first_active_invocation for scalar SSBO
+    loads.
+  * a2b054c8f0a gallivm: Use first_active_invocation for ubo/kernel
+    memory loads.
+  * 1be626b618b gallivm: Return 0 for first active invocation when no
+    invocations are active.
+  * e2c67ed63ec ci/radv: remove dEQP-VK.image.sample_texture.*
+    fails/flakes
+  * 3c9a8f7a6d2 intel/dev: generate helpers to identify platform
+    workarounds
+  * f11aab743b6 util: add macro to support gcc/clang poison
+  * a0fa31bcdd8 intel/dev: create a helper dependency for libintel_dev
+  * 98198a77820 glthread: fix a perf regression due to draw_always_async
+    flag, fix DrawIndirect
+  * 1eab7e69e2b glx: fix indirect initialization crash
+  * cc3c8c241e7 d3d12: Use memcmp for full tcs/gs variant keys
+  * f53188b7fa4 d3d12: Cache varying info to reduce compare/copy cost
+  * e4ba343ac91 d3d12: Compare shader key common parts with memcmp,
+    instead of if's
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Mar 2023 17:50:29 +0100
+
 mesa (23.1.0~git2303010437.1f0fdcb6194~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
