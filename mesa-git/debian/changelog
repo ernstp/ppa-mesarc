@@ -1,3 +1,13 @@
+mesa (23.0.0+git2303012048.79cf2f6d015~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 79cf2f6d015 llvmpipe: fix compute address bits to return native
+    pointer size.
+  * 042a4edec51 .pick_status.json: Update to
+    6cb0c8b6d746fe055bbe905025550140c0980720
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 02 Mar 2023 17:52:46 +0100
+
 mesa (23.0.0+git2302282115.1301e568674~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
