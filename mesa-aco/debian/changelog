@@ -1,3 +1,44 @@
+mesa (23.1.0~git2303051534.b73b7015796~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * b73b7015796 ci/freedreno: rare flake KHR-
+    GL45.sample_variables.mask.rgba8i.samples_4.mask_3
+  * 5ee724e180b ci/lavapipe: add recent occasional flake
+  * 9b09f244f07 r600/sfn: Fix atomic lowering
+  * 3c3ecdab36c r600/sfn/tests: Add a test for the copy prop into a
+    group
+  * 244cc152d1b r600/sfn: redirect copy propagation to alu parent group
+  * 2028465bd86 r600/sfn: Add print method to AluReadportValidation
+  * ee0010213f5 r600/sfn: Add method to AluGroup to replace sources
+  * 61807210059 r600/sfn: Split AluInstr replace_source into test and
+    actual replace
+  * afa545b9265 r600/sfn: Add AluGroup method to update readport
+    validation from scratch
+  * ed587ae6ac2 asahi/meta: Use lowered I/O
+  * 485eddcc851 asahi: Bump shader buffers
+  * c7b5f014615 agx: Only lower int64 late
+  * 811f8b899da agx: Don't print pre-optimization shader
+  * ea37d7f81fe agx: Use agx_emit_collect for st_tile
+  * 7bb8112fd1e agx: Refactor vector creation
+  * 037609f1dc3 agx: Constify agx_print
+  * a9c5956f2fb agx: Inline 16-bit load/store offsets
+  * c9728b41d51 agx: Factor out allows_16bit_immediate check
+  * 445ca949cd8 agx: Clean up after lowering address arithmetic
+  * 4b1f4b86ea3 agx: Add AGX_MESA_DEBUG=nopreamble option
+  * c22a18c9afa agx: Don't write sample mask from preambles
+  * e9f7d14de67 asahi: Mark PIPE_FORMAT_NONE "supported"
+  * 8bb40ce4ad2 agx: Fix 2D MSAA array texture register allocation
+  * 3032e3ad23d agx: Mask shifts in the backend
+  * f4e2b226466 asahi: Advertise dual-source blending
+  * af953616a10 wsi/display: check alloc failure in
+    wsi_display_alloc_connector()
+  * 82cc236458c freedreno/a6xx: Fix mirror x/y blits
+  * ec9e03fb396 freedreno/a6xx: Convert blitter to OUT_REG()
+  * 149f2a2e81d freedreno/a6xx: Namespace reg/pkt packer vars
+  * 1d2c1b8bd65 pan/mdg: Use nir_lower_helper_writes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Mar 2023 16:54:27 +0100
+
 mesa (23.1.0~git2303021733.9905322df96~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
