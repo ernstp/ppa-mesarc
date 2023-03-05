@@ -1,3 +1,17 @@
+libsdl2 (2.27.0+git2303032341.6c495a92f~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 6c495a92f cmake: use compatible interface properties to disallow
+    linking to a different version of SDL
+  * 96a2a6b94 evdev_kbd: Use current keymap
+  * fd4bb4154 dynapi: replace uses of deprecated SDL_assert_state and
+    SDL_assert_data
+  * 46945354c dataqueue: Make thread safe.
+  * f5bb286b7 dataqueue: Removed non-public SDL_ReserveSpaceInDataQueue
+    function
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Mar 2023 16:53:41 +0100
+
 libsdl2 (2.27.0+git2303020147.f47a08ab8~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
