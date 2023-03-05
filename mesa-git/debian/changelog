@@ -1,3 +1,42 @@
+mesa (23.0.0+git2303031837.42e6c344b57~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 42e6c344b57 anv: remove MI_NOOPs at the end of the generation batch
+  * 6fbd4f5fef9 anv: make sure mi_memcpy lands before push constant
+    loads
+  * 3310cc18012 anv: fix indirect draws VF cache tracking of index
+    buffer
+  * 36757838951 anv: remove commented code
+  * cdc55956e87 anv: remove pre hasvk split assert
+  * 312e719033e anv: limit push constant dirtyness with generation
+    shaders
+  * 8f3a3f8b431 anv: correctly program 3DSTATE_SF in generation shaders
+  * 9cbf652de55 anv: remove BTI related flush in generation shaders
+  * abef38d6ef0 anv: remove copied code from generation shader
+  * 0fc4f8d1ff5 anv: fix generated forward jump with more than 67M draws
+  * aa02967a4c7 anv: fix incorrect parameter
+  * 97ccb8c43d7 anv: pull Wa_14016118574 out of some loop not changing
+    state
+  * 5ea2a0a485f anv: fixup condition for Wa_14016118574
+  * 492c62c47f6 radeonsi: don't merge SET_* packets that have a
+    different index in si_pm4_state
+  * 26e875c9ac8 mesa: fix glPopClientAttrib with fixed-func VP and zero-
+    stride varyings
+  * 131c85f9c84 hasvk: Disable non-zero fast clears for 8xMSAA images
+  * bc71da322f7 radv: fix DCC decompress on GFX11
+  * 7698a9afd78 radv: SDMA v4 size field is size - 1
+  * 44859eb3d70 radeonsi: SDMA v4 size field is size - 1
+  * 7f8411e9e46 amd,ac/rgp: fix SQTT memory types
+  * b278472cc75 glx: fix indirect initialization crash
+  * 8ef56665c26 venus: fix VK_EXT_image_view_min_lod feature query
+  * e37dae65a91 genxml: fix border color offset field on Gfx12+
+  * ed62561621a genxml: Fix STATE_BASE_ADDRESS::BindlessSurfaceStateSize
+    field size
+  * 76e3be3d9c2 .pick_status.json: Update to
+    8e0c832c30763ca08ac25d2bb7f73782496c51e9
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 05 Mar 2023 16:56:45 +0100
+
 mesa (23.0.0+git2303012048.79cf2f6d015~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
