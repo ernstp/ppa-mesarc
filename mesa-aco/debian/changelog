@@ -1,3 +1,51 @@
+mesa (23.1.0~git2303062027.399012a911b~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 399012a911b freedreno/common: Replace or_mask() with BitsetEnum<T>
+  * 30d469215be v3d/ci: add dEQP-
+    GLES3.functional.texture.specification.teximage2d_pbo.*_cube flakes
+  * 62f1a8a3a62 zink: unbind fb on context destroy
+  * 7600e2cca2a ci: Handle carriage return characters in LAVA logs
+  * 3174cfcaf27 hud: add GALLIUM_HUD_OPACITY envvar
+  * 7ace1bab731 hud: use defines for default scale/rotation/visibility
+    values
+  * 0f3370eede2 raseonsi/vcn: fix a h264 decoding issue
+  * 340f2d1a256 zink: add frame trace markers on the queue
+  * bb796f70a14 radeonsi: Add NV12 support for AV1
+  * 0ed28d2715c wsi: move an assertion in
+    wsi_xxx_surface_get_capabilities2()
+  * c3cc8455d4a zink: when skipping a TRANSFER_DST image barrier, set
+    access tracking
+  * e650ff4ea08 zink: remove debug markers for u_blitter ops
+  * 271ebdd735e zink: pass cmdbuf to debug marker begin
+  * 60496f63762 zink: reorder some blit debug markers
+  * d677c00f6dd zink: be more descriptive with perfetto buffer barriers
+  * 8c037193fb5 zink: determine whether debug markers are used on screen
+    create
+  * 8c226ba2426 zink: skip buffer barriers if the buffer can be easily
+    proved idle
+  * 0a7092b2853 zink: use split image barriers if the image can be
+    easily proved idle
+  * 5be506c16ec zink: fix zink_resource_access_is_write()
+  * 772d92bfa62 zink: add functions for faster batch-usage completion
+    checks
+  * 5b64d7267b3 zink: skip attachment barrier for redundant layout-
+    setting if !valid
+  * 16946782944 zink: avoid unnecessary read-only layout changes for zs
+    attachments
+  * 73df715c110 zink: add perfetto tracing for barriers
+  * 7fadee9b70c radv/rt: only reserve stack_sizes after rt_case
+    insertion
+  * 3e03fe44e7d radv/rt: move stack_sizes into radv_ray_tracing_module
+  * 48edcd03c53 radv/rt: introduce struct radv_ray_tracing_module
+  * 4dafb69d618 radv/rt: defer library_pipeline allocation
+  * a62d699664e radv/rt: rename library_pipeline->groups to
+    library_pipeline->group_infos
+  * d79d62c6380 ci: do not exit when an error happens inside the section
+  * 944a3af5315 glx: Fix glXGetFBConfigFromVisualSGIX
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 06 Mar 2023 21:17:43 +0100
+
 mesa (23.1.0~git2303051534.b73b7015796~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
