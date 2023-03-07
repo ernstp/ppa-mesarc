@@ -1,3 +1,13 @@
+libsdl2 (2.27.0+git2303070037.8fc10ac95~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 8fc10ac95 Added mapping for the Xbox Elite Core controller connected
+    via Bluetooth on Android
+  * 91ad208d1 Fix Xbox One gamepad axis assignment on
+    SDL_JOYSTICK_ANDROID API (#7405)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 07 Mar 2023 18:38:31 +0100
+
 libsdl2 (2.27.0+git2303032341.6c495a92f~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
