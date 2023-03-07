@@ -1,3 +1,47 @@
+mesa (23.1.0~git2303071800.26f430d6ce3~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 26f430d6ce3 radv/rt: move radv_pipeline_key from rt_variables to
+    traversal_data
+  * d87bbee0be8 radv: remove unused parameters from
+    radv_compute_pipeline_compile()
+  * d06aa7b71d1 radv/rt: introduce and use radv_rt_pipeline_compile()
+  * f1565de4cc9 radv: expose radv_pipeline_capture_shaders()
+  * 2fbd495ce7c radv: expose radv_postprocess_nir()
+  * c87c34bbba3 radv: fix defining RADV_USE_WSI_PLATFORM
+  * a6dcd62f448 iris: Move iris_bo_wait_gem() to i915/iris_bufmgr.c
+  * 97becc1b6f0 iris: Move iris_bo_busy_gem() to i915/iris_bufmgr.c
+  * 7553d921f66 iris: Move bo_set_caching to kmd backend
+  * bdfcc980016 iris: Move bo_madvise to kmd backend
+  * d636e772c0c intel/common: Implement the Xe functions for intel_gem
+  * 19aa1fb851f intel/common: Implement the Xe functions for
+    intel_engine
+  * 7b2086d7419 radv: fix border color swizzle for stencil-only format
+    on GFX9+
+  * 889c3ee6b84 anv: fix sends_count_expectation assert on simd32
+  * 347a5b79f97 ac/surface: only adjust pitch if surf_pitch was modified
+  * f72774f13f4 ci/lavapipe: fixes typo
+  * de4805f25f9 aco: use bitfield array helpers for valu modifiers
+  * e7559da7570 aco: add bitfield array helper classes
+  * 097a97cc426 aco: remove VOP[123C]P? structs
+  * 08542318e76 aco/optimizer: simplify using VALU instruction
+  * 4591703e791 aco/print_ir: simplify using VALU instruction
+  * 17ff2e8c52b aco: validate VALU modifiers
+  * fc193ab4dbb aco/ra: set opsel_hi to zero when converting to VOP2
+  * 366cf4efaa3 aco/ir: rework IR to have one common valu instruction
+    struct
+  * 77afe7d9604 aco: treat VINTERP_INREG as VALU
+  * c119b19f98d radv: fix incorrect stride for primitives generated
+    query with GDS
+  * a278eeb7197 nir: fix nir_ishl_imm
+  * 5ec80ab37c6 radv: do not add descriptor BOs on update when the
+    global BO list is used
+  * 1aca36815ee gallivm: fix lp_vec_add_offset_ptr for 32 bit builds
+  * 4c24ff0a341 rusticl/kernel: Images arg sizes also have to match the
+    host pointer size
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 07 Mar 2023 18:39:15 +0100
+
 mesa (23.1.0~git2303062027.399012a911b~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
