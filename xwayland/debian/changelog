@@ -1,3 +1,26 @@
+xwayland (2:23.0.99+git2303091033.7f2181bcc~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 7f2181bcc Bump version to 23.0.99.902
+  * d11237f11 xwayland: Fix uninitialised value created by a stack
+    allocation
+  * d06f27078 xwayland/glamor: Track if a xwl_pixmap uses explicit
+    modifiers
+  * 8c1cad5b7 xwayland/glamor/gbm: Use helper for implicit buffer params
+    too
+  * 7d05c0536 xwayland/glamor/gbm: Initialize explicit buffer params in
+    helper
+  * 8e7a131e8 xwayland/glamor/gbm: Only use modifier gbm API if explicit
+  * 8ff383276 Allow disabling the SHAPE extension at runtime
+  * 97233c985 xwayland: use drmDevice to compare DRM devices
+  * bdb023b34 Add libdrm 2.4.109 requirement
+  * 2b441cea7 xwayland: Use MAP_PRIVATE for keymaps
+  * e1133bcd5 xwayland: don't fall back to wl_drm with explicit modifier
+  * fd27fc3f2 xwayland: fix error path when modifier is not supported
+  * 29d75b092 xwayland: Include <sys/type.h> where needed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Mar 2023 17:41:53 +0100
+
 xwayland (2:23.0.99+git2302221020.c41ff4502~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
