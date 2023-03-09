@@ -1,3 +1,46 @@
+mesa (23.0.0+git2303081945.f579b86b015~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * f579b86b015 vulkan/wsi: fix crash in failed swapchain creation for
+    wayland
+  * 3a188967161 aco: fix NIR infinite loops
+  * 7fea758f9a6 nir: use xyzw order for precise fdot
+  * 3e1f12d563c aux/tc: fix rp info resizing clobbering current info
+  * ec622e11db8 radv: disable DCC with signedness reinterpretation on
+    GFX11
+  * 31bc3bf9965 radeonsi: fix fast depth_clear_value/stencil_clear_value
+  * d14bfc19559 llvmpipe: fix LP_PERF=no_depth to ignore depth format
+  * f5a2633e1c3 radv: fix border color swizzle for stencil-only format
+    on GFX9+
+  * c0da5b1b494 ac/surface: only adjust pitch if surf_pitch was modified
+  * e7cf5d395f9 radv: fix incorrect stride for primitives generated
+    query with GDS
+  * 6e365a9b995 nir: fix nir_ishl_imm
+  * 9bbd7c1dbf6 gallivm: fix lp_vec_add_offset_ptr for 32 bit builds
+  * f22d90752da rusticl/kernel: Images arg sizes also have to match the
+    host pointer size
+  * b2dd6f23bf8 zink: propagate valid_buffer_range when replacing buffer
+    storage
+  * b44d7cbb52e zink: fix descriptor update flagging on null ssbo set
+  * bda61a39762 zink: only add deferred barrier on fb unbind when layout
+    needs to change
+  * f7bc3d9729e nouveau: Fix null dereference in nouveau_pushbuf_destroy
+  * f6868b7f85a raseonsi/vcn: fix a h264 decoding issue
+  * 3991afd889c zink: fix zink_resource_access_is_write()
+  * 721a6867bce glx: Fix glXGetFBConfigFromVisualSGIX
+  * 28f288dc702 zink: disable queries for clear_texture()
+  * 698b1eb73a5 r600/sfn: Fix atomic lowering
+  * a64755566d0 wsi/display: check alloc failure in
+    wsi_display_alloc_connector()
+  * 5889cdf7ed7 d3d12: VP9 Decode - Fix use_prev_in_find_mvs_refs
+    calculation
+  * c881ee9888b frontend/va: Keep track of some VP9 previous frame data
+    for current frame use_prev_in_find_mvs_refs
+  * 94564ba8276 .pick_status.json: Update to
+    bf1b4ed54e204e88420a3aa329bf0a41506ebb45
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Mar 2023 17:39:13 +0100
+
 mesa (23.0.0+git2303031837.42e6c344b57~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
