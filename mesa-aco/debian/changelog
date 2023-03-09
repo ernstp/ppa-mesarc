@@ -1,3 +1,42 @@
+mesa (23.1.0~git2303091515.13ff4a5f64a~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 13ff4a5f64a aco: use bitfield_array for temporary neg/abs/opsel
+  * d0eebb0e8b0 aco: access neg/abs as int in usesModifiers
+  * 828aff2a2de aco: use array indexing for opsel/opsel_lo/opsel_hi
+  * a47c3f84fb2 aco: use integer access for neg_lo/neg_hi
+  * 60cd3ba39f1 aco: copy abs/neg with assignment
+  * 5fdbc4a23e1 intel/isl: disable TILE64 for YCRCB formats
+  * fad9c69e42d ci/radv: Drop raven quick_shader load
+  * a19739f1b05 v3dv/ci: add a test to the known failures
+  * ec513270e3d zink: Pass the cmdbuf to the end of the marker, too.
+  * 11a4e10fe24 ci/zink: fixup the zink-lvp job
+  * 27c8d6ca7b3 drirc: set `zink_emulate_point_smooth` for Quake II
+  * ffe36abf7c4 zink: handle point_smooth emulation
+  * 3a59b2a6702 nir: handle output beeing written to deref in
+    `nir_lower_point_smooth`
+  * 4b07182c8cc zink/nir_to_spirv: add support for
+    `nir_intrinsic_load_point_coord`
+  * e121b6d9eb6 zink: add `lower_point_smooth` to `zink_fs_key`
+  * c32a5b8d048 zink: add `zink_emulate_point_smooth` driconf
+  * e280d6a7c95 zink: fix line smooth lowering
+  * 5f5e30b5bbd docs: update calendar for 22.3.7
+  * 1f61bca5fe0 docs/relnotes: add sha256sum for 22.3.7
+  * 2488afec117 docs: add release notes for 22.3.7
+  * b8b0a0d1351 docs/relnotes: add 23.0.0 to relnotes.rst
+  * b687a62566d docs: Add sha256 sum for 23.0.0
+  * 882c4ef59be docs: add release notes for 23.0.0
+  * 0ad320af128 docs: Add calendar entries for 23.0 release.
+  * c28f144c814 osmesa: add exported symbols check
+  * 8b75b726135 anv+hasvk: Use driconf to disable 16-bit for zink.
+  * daa1468b543 intel/isl: Don't scream FINISHME into logs for 3D vs.
+    CCS
+  * df7b40d0024 ci/anv: Temporarily halve TGL testing load
+  * b8017243523 util: allow align64() to do alignments >= 4Gb
+  * 9a058f6b4c9 radv: use 1ull for alignment computations
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Mar 2023 17:36:50 +0100
+
 mesa (23.1.0~git2303071800.26f430d6ce3~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
