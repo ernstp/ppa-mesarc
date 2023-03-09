@@ -1,3 +1,26 @@
+libsdl2 (2.27.0+git2303090733.d9c07d9ef~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d9c07d9ef Fixed the documentation for SDL_SetRelativeMouseMode()
+  * 8f7427c15 tests: Always set valid dimensions for the fullscreen mode
+  * 6a999d16f wayland: Always use a scale factor of 1 for exclusive
+    fullscreen emulation
+  * cfd6b34b8 Make mappings for "Retrolink SNES Controller" with
+    `SDL_GAMECONTROLLER_USE_BUTTON_LABELS` both on and off
+  * a70964aaf fix SDL_FindFreePlayerIndex so it can really return -1.
+  * 35c13196f Fixed uninitialized variable
+  * bc8798331 tests: added -DHAVE_SIGNAL_H to CFLAGS in watcom makefiles
+  * f5c0760c6 Disassociate the SDLOpenGLContext from the view before
+    deleting it
+  * 63e6c19b7 Use SDL_GL_DeleteContext instead of Cocoa_GL_DeleteContext
+    for context cleanup
+  * 1bd9ebf53 If we're not the current fullscreen window and we don't
+    want to be fullscreen, don't touch the current video mode
+  * e0e79419b Fixed which window we check flags for when updating
+    fullscreen mode
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Mar 2023 17:36:04 +0100
+
 libsdl2 (2.27.0+git2303070037.8fc10ac95~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
