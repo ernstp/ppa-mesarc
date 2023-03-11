@@ -1,3 +1,26 @@
+libsdl2 (2.27.0+git2303110046.ab1670386~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * ab1670386 Added support for the trigger buttons on the Victrix Pro
+    FS for PS5
+  * 76e9d64b3 Removed space between sizeof and parentheses
+  * e9f9cb29f Fixed build warning on Android
+  * 3e1d7e6a1 Specify bash for androidbuildlibs.sh
+  * ef347776c Uses integer arithmetics in SDL_ResampleAudio
+  * 5e3530991 fix bad merge of sizeof style patch
+  * 71dc7169d Added header for SDL_Delay()
+  * 1e6ffc629 Removed a duplicate delay accidentally added during code
+    refactor
+  * 3f00fa16c Wait for the GCController framework to see IOKit devices
+  * 0d7638004 Code style: changed "sizeof foo" to "sizeof(foo)" (thanks
+    @sezero!)
+  * 46d143376 If the client rect is empty, use the last known window
+    size
+  * 22de91a94 Removed guard around the enabled assertions support code
+  * 1c2f82523 Fixed incorrect modifier keys handling on macOS
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Mar 2023 10:49:38 +0100
+
 libsdl2 (2.27.0+git2303090733.d9c07d9ef~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
