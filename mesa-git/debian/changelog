@@ -1,3 +1,14 @@
+mesa (23.0.0+git2303101827.0bba1055306~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 0bba1055306 genxml: fix border color offset field on Gfx12+
+  * 4c1655dbee0 genxml: Fix STATE_BASE_ADDRESS::BindlessSurfaceStateSize
+    field size
+  * 5e650a9fcf5 .pick_status.json: Update to
+    e61d022313a06e058e2585735c5d2daebe959d96
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Mar 2023 10:52:38 +0100
+
 mesa (23.0.0+git2303081945.f579b86b015~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
