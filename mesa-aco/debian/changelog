@@ -1,3 +1,42 @@
+mesa (23.1.0~git2303110730.b190d08a8aa~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * b190d08a8aa pan/mdg: Remove reference to removed macro
+  * cc16e7322ff panfrost: Remove MALI_POSITIVE macro
+  * 131845eb84c panfrost: Inline the last MALI_POSITIVE use
+  * 14eb964e59c panfrost: Remove FBD tag enum from XML
+  * 67cbbf94175 panfrost: Use framebuffer pointer XML
+  * 1a5546293cf panfrost: Add XML for framebuffer pointers
+  * 35985be275f panfrost: Handle fixed-point packing in GenXML
+  * 17c55e0d12e panfrost: Don't use DECODE_FIXED16 for sample position
+  * e0752673bec docs/panfrost: Move description of instancing
+  * 07b43d6231f panfrost: Remove some unused definitions
+  * 341f1011a67 intel/perf: Hide extended metrics by default
+  * 6b22a02f908 asahi,agx: Implement buffer textures with gnarly NIR
+  * 826649ba195 asahi, agx: Implement dummy samplers
+  * bc178c044ec ci/baremetal: Wrap artifact download curl with xtrace
+  * 256e7888fd0 ci: Fix release build use for performance jobs
+  * 91a129b44a4 iris: Move i915 submit_batch() to i915 backend
+  * 21d5034edb6 iris: Add batch_check_for_reset() to kmd backend
+  * e0ce31d7cf9 iris: Add gem_mmap() to kmd backend
+  * c5888bf6103 build: Block build of HASVK, Crocus and i915 in non-x86
+    architectures
+  * 757e2dd692b intel/perf: Disable it for Xe KMD
+  * 266d961fdc9 iris: Don't mark protected bo as reusable
+  * e61d6540e63 asahi: Don't allow linear depth/stencil buffers
+  * e61d022313a ci/android: Use a more aggressive timeout for the job
+  * 0cadc3830fa nir/lower_int64: Optionally lower ufind_msb using
+    uadd_sat
+  * 831f9d3f615 nir/algebraic: Optimize some ifind_msb to ufind_msb
+  * db6d1edc1b6 nir: Restrict ufind_msb and ufind_msb_rev to 32- or 64-
+    bit sources
+  * 2d6f48f6efd nir/algebraic: Do not generate 8- or 16-bit find_msb
+  * 2119ab7319c nir/builder: Do not generate 8- or 16-bit find_msb
+  * 28311f9d029 nir: intel/compiler: Move ufind_msb lowering to NIR
+  * a4052e70ea7 nir/algebraic: Only lower ufind_msb with 32-bit sources
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Mar 2023 10:50:22 +0100
+
 mesa (23.1.0~git2303091515.13ff4a5f64a~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
