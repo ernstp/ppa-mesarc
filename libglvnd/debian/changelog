@@ -1,3 +1,11 @@
+libglvnd (1.6.0+git2303101704.056feac~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 056feac Merge branch 'update-symbols-check' into 'master'
+  * 5013d35 Update bin/symbols-check.py from mesa/mesa@9d42e31b
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 11 Mar 2023 10:49:21 +0100
+
 libglvnd (1.6.0+git2212141536.dba80d0~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
