@@ -1,3 +1,44 @@
+mesa (23.1.0~git2303142225.2409ddb5dbb~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 2409ddb5dbb zink: fix copy box iteration
+  * 7d41b8fe4ee tu: don't set startup debug on debug builds
+  * 1115a290259 pvr: Fix segfaults when pDepthStencilAttachment is NULL
+  * 7176e0c1602 ci: group RESULT logic in a single place
+  * 755282accc6 ci/rustfmt: print which files are checked
+  * 6c2d1778962 ci/rustfmt: simplify getting all the rust files
+  * 488d5c6fa6e ci: drop redundant .no_scheduled_pipelines-rules + .core-
+    rules since the latter already includes it
+  * a0bf0adade0 ci/broadcom: move rare failure to the flakes
+  * 179fadb3327 venus: make external fence and semaphore export async
+  * a37771b42a1 venus: refactor to add vn_sync_payload_external
+  * 891af34bca2 venus: make common wsi bo submission async
+  * 0a3f612ab3e venus: let vn_instance_submit_command track ring seqno
+  * 1cb42a629fa venus: make vn_instance_wait_roundtrip asynchronous
+  * 9b7a78cac67 venus: switch to use 64bit roundtrip seqno
+  * 932073d3e6c venus: sync to latest protocol for asyncRoundtrip
+  * 82f0a012917 ci/valve-farm-rules: allow running jobs from outside the
+    mesa namespace
+  * 9dd4c03dd6c ci: bring back the valve farm online
+  * 10e0c5fd466 ci/b2c: move away from the hand-rolled initscript
+  * a0d8ed757ec ci/init-stage2: always set XDG_RUNTIME_DIR
+  * 226c2479458 ci/init-stage2: allow sourcing the job env vars from the
+    CWD
+  * 4affc3b3611 zink: rename shadow key to zs swizzle
+  * 24a2530ed8c zink: workaround undefined swizzle 1 for z/s textures
+  * 2cf117ee39f zink: add depth/stencil needs shader swizzle workaround
+    field
+  * cc15dbc4f89 zink: extend shadow swizzle pass to all zs textures
+  * 79557c2747c zink: add needs_zs_shader_swizzle shader key
+  * b707cdccf5c zink: minor formatting change
+  * f7257b1c755 zink: track shadow swizzle for all shader stages
+  * a83e63437f9 zink: fix shadow mask change logic when binding sampler
+    views
+  * 5903868f991 zink: fix stale point sprite mode state
+  * 4b4306fe10e zink: super reorder buffer copies
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Mar 2023 23:34:09 +0100
+
 mesa (23.1.0~git2303110730.b190d08a8aa~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
