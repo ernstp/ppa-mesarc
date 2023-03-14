@@ -130,7 +130,7 @@ else
 	confflags_GALLIUM += -Dgallium-opencl=icd
 
 	# Rusticl!
-	ifneq ($(DEB_DISTRIBUTION),focal)
+	ifeq (,$(filter $(DEB_DISTRIBUTION),bionic focal jammy))
 		ifeq ($(DEB_HOST_ARCH),amd64)
 			confflags_GALLIUM += -Dgallium-rusticl=true
 		endif
