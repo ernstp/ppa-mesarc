@@ -1,3 +1,15 @@
+mesa (23.0.0+git2303141958.bab96f8d961~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * bab96f8d961 genxml: Fix STATE_BASE_ADDRESS::BindlessSurfaceStateSize
+    field size
+  * fed4450b957 ci: Re-enable some swrast testing using fd.o's shared
+    runners for now.
+  * a1765e44bf4 .pick_status.json: Update to
+    8c51c8697ab122472b9136f9a17813a7a6513c59
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Mar 2023 23:37:55 +0100
+
 mesa (23.0.0+git2303101827.0bba1055306~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
