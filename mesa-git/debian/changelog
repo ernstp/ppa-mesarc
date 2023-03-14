@@ -1,6 +1,12 @@
 mesa (23.0.0+git2303141958.bab96f8d961~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Mar 2023 23:52:07 +0100
+
+mesa (23.0.0+git2303141958.bab96f8d961~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
   * bab96f8d961 genxml: Fix STATE_BASE_ADDRESS::BindlessSurfaceStateSize
     field size
   * fed4450b957 ci: Re-enable some swrast testing using fd.o's shared
