@@ -1,3 +1,12 @@
+libsdl2 (2.27.0+git2303140400.57ae9f466~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 57ae9f466 Ignore the PS4 packet CRC if it's not being set correctly
+  * dca3fd830 Android: indicate gamepaddb entries where axis order
+    changed.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 14 Mar 2023 23:33:25 +0100
+
 libsdl2 (2.27.0+git2303110046.ab1670386~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
