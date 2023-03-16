@@ -1,3 +1,27 @@
+mesa (23.0.0+git2303152104.0c622c766a3~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 0c622c766a3 radeonsi: don't merge SET_* packets that have a
+    different index in si_pm4_state
+  * a53b7f1ccb3 mesa: fix glPopClientAttrib with fixed-func VP and zero-
+    stride varyings
+  * ad6a3696cc4 hasvk: Disable non-zero fast clears for 8xMSAA images
+  * d65ca8cc99d radv: fix DCC decompress on GFX11
+  * 799da5966a7 radv: SDMA v4 size field is size - 1
+  * fc43cca80a3 radeonsi: SDMA v4 size field is size - 1
+  * b12597d94f7 amd,ac/rgp: fix SQTT memory types
+  * 4ffe464165a glx: fix indirect initialization crash
+  * d8700f60863 venus: fix VK_EXT_image_view_min_lod feature query
+  * 7561efc4175 genxml: fix border color offset field on Gfx12+
+  * 70f56ecdd12 .pick_status.json: Update to
+    8c51c8697ab122472b9136f9a17813a7a6513c59
+  * eac51f90f56 genxml: Fix STATE_BASE_ADDRESS::BindlessSurfaceStateSize
+    field size
+  * e3e93f14d39 ci: Re-enable some swrast testing using fd.o's shared
+    runners for now.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Mar 2023 15:57:58 +0100
+
 mesa (23.0.0+git2303141958.bab96f8d961~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
