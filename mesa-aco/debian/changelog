@@ -1,3 +1,44 @@
+mesa (23.1.0~git2303161528.cb7e9a6cfb4~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * cb7e9a6cfb4 asahi: replace copies of .clang-format with symlinks
+  * 9faaff45613 radv/rt: Don't upload the prolog twice.
+  * 8f6126e21a7 v3dv/ci: fix test name (`,Fail` is not part of the test
+    name)
+  * 77c3df53ae2 zink/ci: update the radv expectations
+  * c69e2849a67 zink/ci: increase the parallelism of zink-radv-vangogh-
+    valve
+  * 928aab57a36 radv/ci: reduce the parallelism for vkcts-vangogh
+  * 5c5c114fa29 meson: correct typo in comment
+  * 3ddbf64e417 virgl: Lower binding start into buffer indices
+  * 99416624e52 ntt: add option to lower SSBO bindings to buffer index
+  * 1247b23f287 virgl: Don't try to do re-alloc or readback by transfer
+    for blob resources
+  * 831e7818aad virgl: Enable AMD_vertex_shader_(layer|viewport_index)
+    when host supports it
+  * d53aba56dbc anv: use vk_get_physical_device_features
+  * ded810ded50 panvk: Use vk_get_physical_device_features
+  * 723825f5c7a vulkan: use vk_features for vk_device::enabled_features
+  * c7300a6a3b6 vulkan: add hepler for vkGetPhysicalDeviceFeatures2
+  * efaf3fd5fc2 vulkan: delete trailing namespace
+  * cd35ab95706 vulkan: tidy up vk_physical_device_features
+  * b0b3b9e8b11 vulkan: relocate rmv to its correct home
+  * 51e725df297 radeonsi: monolithic TCS emit tessfactor in nir directly
+  * 3f5d42a28a8 radeonsi: lower nir_load_ring_tess_factors_offset_amd
+  * 719366c2b24 ac/llvm,radeonsi: lower nir_load_ring_tess_factors_amd
+  * 99828e0390d ac/nir: handle tess factor output missing case
+  * 700e24941c5 ac/nir: init tess factor location with IO remap
+  * c06329eb3f8 ac/nir: tcs write tess factor support pass by reg
+  * e070a9e8d00 ac/nir: move store_var_components to common place
+  * f2617944bfd panfrost: Don't round up Midgard polygon list BOs
+  * 174d6e6a545 glsl: allow 64-bit integer on RHS of shift
+  * 39c828cb9fd aco: remove aco::rt_stack variable
+  * f123d65e9f5 radv/rt: use prolog for raytracing shaders
+  * bea022d1f6a radv/rt: Add shader config combination/postprocessing
+    utils
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Mar 2023 15:55:41 +0100
+
 mesa (23.1.0~git2303142225.2409ddb5dbb~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
