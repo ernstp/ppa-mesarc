@@ -1,3 +1,10 @@
+libdrm (2.4.115+git2303171824.d1681af0~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * d1681af0 test/amdgpu/hotunplug: add apu check for hotplug test
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 18 Mar 2023 02:30:36 +0100
+
 libdrm (2.4.115+git2302101558.332809f3~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
