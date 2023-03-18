@@ -1,3 +1,48 @@
+mesa (23.1.0~git2303180058.082368cd842~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 082368cd842 radeonsi: remove unused vs_output_param_mask
+  * 6eddc6dd5af ac/nir: use plural correctly in the
+    ac_nir_export_parameters name
+  * 3626bc2daa7 ac/nir: don't emit duplicated parameter exports
+  * c86d6c8af8b iris: Move to iris_i915_batch.c code to destroy i915
+    context
+  * cb40ff3ecb3 iris: Move to i915/iris_batch.c code to create and
+    replace i915 context
+  * 7a1d0b31a67 iris: Store iris_context's priority
+  * 75b9d0b3d84 llvmpipe: remove debug printf spam in
+    lp_setup_wait_empty_scene()
+  * a882cf09c35 ci/b2c: increase the console timeout to 4 minutes
+  * d3c1cc92610 radv/ci: update VanGogh's expectations
+  * 8e6ac356588 asahi: fix a few typos
+  * b6878d456f0 st/mesa, iris: Add optional CPU-based ASTC void extent
+    denorm flushing
+  * f534c36ca5e ci: Enforce clang-format for asahi
+  * 5c1b360eaad ci: Add clang-format to the amd64 container
+  * d2621ef81d9 iris: Implement gem_mmap() in Xe kmd backend
+  * 16dbf50ad9b iris: Implement gem_create() in Xe kmd backend
+  * c9fdfae334a iris: Implement the function to destroy VM in Xe
+  * 60f4bd61b6f iris: Implement the Xe version of
+    iris_bufmgr_init_global_vm()
+  * 7f65b94451d iris: Only mark buffer as exported if
+    drmPrimeHandleToFD() succeed
+  * 596f2ef3619 aco: set needs_flat_scr=true for RT
+  * 184cf1cb794 aco/gfx11: fix RT prolog scratch initialization
+  * 2ead574abe4 ci: Enable LTO for fedora-release job
+  * eb9cd45ef68 ci: Install procps-ng in Fedora image
+  * 2b739ca31de ci: Drop ccache from Fedora image
+  * bca2bcfec92 ci: Make ccache optional
+  * fe53fa5117e ci: Allow passing c{,pp}_link_args to meson
+  * b6e0bf8b76b ci: Pass -Werror to compiler linking stage for LTO
+  * 86c6634897d intel/vk/grl: Do not use no_override_init_args for C++
+  * 66e34fe914e ci: Split up -Werror workarounds for debian-mingw32-
+    x86_64 job
+  * 86496167ea8 ci: Remove some -Werror workarounds for debian-android
+    job
+  * 2f3dc689487 iris: Use ralloc_free for memory allocated with rzalloc
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 18 Mar 2023 02:34:59 +0100
+
 mesa (23.1.0~git2303161528.cb7e9a6cfb4~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
