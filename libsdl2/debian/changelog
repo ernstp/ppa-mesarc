@@ -1,3 +1,19 @@
+libsdl2 (2.27.0+git2303172255.d78072fcd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d78072fcd Fixed SDL_RenderSetVSync does not update flags if
+    simulated vsync is on
+  * 446e0943d wasapi: Force WIN_CoInitialize duing device open.
+  * 23bce27b2  Change SDL_BLENDMODE_MUL for gl renderers  Add FIXME for
+    PSP and DirectFB
+  * c078dfcf6 Refresh generation of SDL_blit_auto.c after simplifying
+    sdlgenblit.pl
+  * 18c4db678 Simplify SDL_BLENDMODE_MUL in sdlgenblit.pl
+  * 7d26ba754 Simplify SDL_BLENDMODE_MUL
+  * bd70ce7f9 Refresh generation of SDL_blit_auto.c
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 18 Mar 2023 02:34:19 +0100
+
 libsdl2 (2.27.0+git2303151455.ce4c54e2b~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
