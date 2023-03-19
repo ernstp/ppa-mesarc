@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2303181936.b57a6a1ad~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b57a6a1ad Added gamepad mapping for Flydigi Vader 2 with the latest
+    firmware (6.0.4.9)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Mar 2023 17:48:25 +0100
+
 libsdl2 (2.27.0+git2303172255.d78072fcd~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
