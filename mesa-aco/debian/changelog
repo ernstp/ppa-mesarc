@@ -1,3 +1,36 @@
+mesa (23.1.0~git2303191621.dc34413f43a~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * dc34413f43a meson: implement quirk for the compilation under armv7
+    GCC with LTO
+  * afb82e553be ci: disable weston session timeout for llvmpipe
+  * fb3632d24f4 ci: distribute XDG_RUNTIME_DIR with setup-test-env
+    script
+  * 210c6c11cc6 freedreno+tu: Add a690 support
+  * b012a4a9cd7 freedreno+tu: Big GMEM support
+  * 60bc7c0e221 freedreno: Specify GMEM tile alignment per GPU
+  * ad4271439c0 Update my mailmap aliases
+  * 0f18bb40763 radv: Fix inserting stack_size into the cache
+  * 3887f64dc3c radv: Fix loading stack_size from the cache
+  * 3823d4696a2 ci/intel: add dEQP-
+    EGL.functional.wide_color.window_fp16_default_colorspace flake
+  * 161799d2c7d ci/traces: add two skips due to flakes
+  * 9e6c88c96b7 ci/freedreno: add recent occasional flakes
+  * 9ed6487ba02 zink: expand ZINK_DEBUG=sync to cover copy ops
+  * e1bfae1d4db zink: add tracing for copy ops
+  * 4dd81b4e2f4 intel/fs: handle interpolation modes for at_sample and
+    at_offset too
+  * 22d6556a4b3 radv: Fix missing wait of GS copy shader upload for
+    dmashaders.
+  * 3ce2b711935 dzn: Claim the arithmetic subgroup bit
+  * b4de74165dc spirv2dxil: Handle arithmetic subgroup ops
+  * ccc9540dae9 microsoft/compiler: Add a lowering pass for scan ops
+    that aren't supported
+  * 981fe2bf42d microsoft/compiler: Implement wave reduce/exclusive scan
+    ops that are supported
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 19 Mar 2023 17:49:13 +0100
+
 mesa (23.1.0~git2303180058.082368cd842~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
