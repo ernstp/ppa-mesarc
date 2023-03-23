@@ -1,3 +1,11 @@
+xwayland (2:23.1.0+git2303221453.603c14b96~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 603c14b96 Bump version to 23.1.0
+  * 20170b7e1 test: Use either wayland-info or weston-info
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Mar 2023 21:25:16 +0100
+
 xwayland (2:23.0.99+git2303091033.7f2181bcc~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
