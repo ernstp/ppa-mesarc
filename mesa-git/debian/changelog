@@ -1,3 +1,53 @@
+mesa (23.0.0+git2303232117.92685742db6~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 92685742db6 radv: fix border color swizzle for stencil-only format
+    on GFX9+
+  * 2f3741fbeac radv: fix incorrect stride for primitives generated
+    query with GDS
+  * 945f966e0fe .pick_status.json: Update to
+    0cd89a27ed0da0bf79c3eae9aac314ee33c3a852
+  * 0bf345fbcc3 anv: force MEDIA_INTERFACE_DESCRIPTOR_LOAD reemit after
+    3D->GPGPU switch
+  * e4cfb10d476 .pick_status.json: Update to
+    69cbc2e7eea599fb63f93373408a589f4345c6de
+  * 64bf7683078 radeonsi: fix fast depth_clear_value/stencil_clear_value
+  * c634916c135 ac/surface: only adjust pitch if surf_pitch was modified
+  * a0b65ff6701 nir: fix nir_ishl_imm
+  * 7fe567f98db gallivm: fix lp_vec_add_offset_ptr for 32 bit builds
+  * 5f9a416b22b rusticl/kernel: Images arg sizes also have to match the
+    host pointer size
+  * fc4bbae59a2 zink: propagate valid_buffer_range when replacing buffer
+    storage
+  * f2b4378a5ed zink: fix descriptor update flagging on null ssbo set
+  * db8e2cfb9f4 zink: only add deferred barrier on fb unbind when layout
+    needs to change
+  * 42a848a079e nouveau: Fix null dereference in nouveau_pushbuf_destroy
+  * 3a23a708751 raseonsi/vcn: fix a h264 decoding issue
+  * 70587e21da3 anv: remove MI_NOOPs at the end of the generation batch
+  * ebd5b241bf1 anv: make sure mi_memcpy lands before push constant
+    loads
+  * 4589af195fc anv: fix indirect draws VF cache tracking of index
+    buffer
+  * 33f1877e7fc zink: fix zink_resource_access_is_write()
+  * 9986f8fe66a glx: Fix glXGetFBConfigFromVisualSGIX
+  * 87fe5d26e3c zink: disable queries for clear_texture()
+  * 3fb500f802c r600/sfn: Fix atomic lowering
+  * 960dec4d503 wsi/display: check alloc failure in
+    wsi_display_alloc_connector()
+  * 773ba3c8458 d3d12: VP9 Decode - Fix use_prev_in_find_mvs_refs
+    calculation
+  * 35a50efedf1 frontend/va: Keep track of some VP9 previous frame data
+    for current frame use_prev_in_find_mvs_refs
+  * d3714a63ffb anv: remove commented code
+  * 97d34c4a7db anv: remove pre hasvk split assert
+  * 9c9e40920e8 anv: limit push constant dirtyness with generation
+    shaders
+  * 6be107ad67b anv: correctly program 3DSTATE_SF in generation shaders
+  * a4cbfde1923 anv: remove BTI related flush in generation shaders
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Mar 2023 21:23:02 +0100
+
 mesa (23.0.0+git2303152104.0c622c766a3~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
