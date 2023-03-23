@@ -1,3 +1,50 @@
+mesa (23.1.0~git2303232013.33d03e57ad2~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 33d03e57ad2 intel/fs: use generated helpers for Wa_14013363432 /
+    Wa_14012688258
+  * c029b1499fa freedreno/decode: fix possible overflow
+  * 6c5888b890c ci/freedreno: do not build tools executables without
+    explicitly enabling them
+  * 79725115c60 d3d12: Remove now-unused UAV format from shader info
+  * 4f56f2188cb d3d12: Fix buffer SRV/UAV creation
+  * efe3f246b1e d3d12: Report correct texel buffer max size
+  * 78fc1197eba microsoft/compiler: Handle writable buffer UAV size
+    queries
+  * 0016b8c9ea7 d3d12: Encode - Only upload headers when written headers
+    size is > 0
+  * cd575ff72b8 d3d12: Encode H264/HEVC - Do not write PPS unless
+    different from active
+  * 4cb76bd2802 d3d12: H264/HEVC Encode - Set both VBV
+    InitialCapacity/Size in CBR Rate Control to same value when
+    requested
+  * 75d029b7170 freedreno/rnn: Fix reg names for regs with variants
+  * 8da3494d533 freedreno, nir, ir3: implement
+    GL_EXT_shader_framebuffer_fetch
+  * ca92183845e nir: Add memory coherency information to shaders.
+  * 1462da2a70f nir: allow nir_lower_fb_read to support multiple render
+    targets
+  * c54b8dfe672 tu: Fix tile_align_h on a650
+  * f5d325a8d02 v3d: add link to issue investigating failure
+  * 2c1da7fbde0 frontends/va: check decoder in va surface call
+  * 3f544150bb3 anv: Implement Xe version of execute_simple_batch()
+  * 41cba37c4a1 anv: Handle Xe queue/engine priority
+  * 45cb2819f6a anv: Implement Xe version of check_status()
+  * 13874840bf6 anv: Create Xe engines
+  * 0818d18d489 anv: Replace I915_ENGINE_CLASS_VIDEO by
+    INTEL_ENGINE_CLASS_VIDEO
+  * e743ddbbb47 radv: Enable mesh shading on GFX11.
+  * 59a4fb6af71 ac/nir/ngg: Store special MS outputs in attribute ring
+    for PS to read.
+  * b2a71c56d95 ac/nir/ngg: Fix mesh shader layer on GFX11.
+  * 9d2f5a4adae ac/nir/ngg: Split legacy workgroup index function.
+  * 240e16fc8e2 ac/nir/ngg: Use attribute ring for mesh shader params.
+  * 0af22af5487 ac/nir/ngg: Clarify mesh shader scratch ring.
+  * 36edbebe8be radv: Adjust mesh draw packets for GFX11.
+  * 9c1571bc56a radv: Include per-prim params in NUM_INTERP on GFX11.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 23 Mar 2023 21:20:35 +0100
+
 mesa (23.1.0~git2303191621.dc34413f43a~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
