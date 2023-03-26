@@ -1,3 +1,16 @@
+libsdl2 (2.27.0+git2303252311.9ed1b778e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 9ed1b778e Made the Android documentation more clear and
+    understandable (#7535)
+  * b970dd1be Android: Fix mismatching JNI method signature
+  * 576df8724 Android: Fix missing type in SDLControllerManager
+  * 2dddaa7dc backport x11/sdl2 fixes
+  * 45a6ad8e5 wikiheaders.pl: make it work with older perl versions,
+    e.g. 5.10.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Mar 2023 12:03:34 +0200
+
 libsdl2 (2.27.0+git2303181936.b57a6a1ad~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
