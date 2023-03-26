@@ -1,3 +1,14 @@
+libdrm (2.4.115+git2303241447.28d9a3c4~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 28d9a3c4 tests/amdgpu: Allow to exclude a test or a suite of tests
+  * 41121251 tests/amdgpu: Add all 9 options to the help output
+  * 25e08fd9 tests/amdgpu: Fix Usage string
+  * bf867aed amdgpu: add marketing names from amd-5.4.3 (22.40.3)
+  * 466e3c0c amdgpu: remove va::dev member
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Mar 2023 12:03:13 +0200
+
 libdrm (2.4.115+git2303171824.d1681af0~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
