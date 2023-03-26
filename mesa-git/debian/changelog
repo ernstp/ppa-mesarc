@@ -1,3 +1,23 @@
+mesa (23.0.0+git2303250008.c77df3547d1~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * c77df3547d1 d3d12: Fix video decode for interlaced streams with
+    reference only textures required
+  * 479f5a59f37 iris: Don't mark protected bo as reusable
+  * da7bb8a29b8 docs/zink: fixup wording of the GL 4.6 requirements
+  * 819de00e5cb intel/fs: Fix inferred_sync_pipe for F16TO32 opcodes
+  * 7851d43c02a zink: fix line smooth lowering
+  * b41d3ae907f intel/isl: Don't scream FINISHME into logs for 3D vs.
+    CCS
+  * 9dff8d2cc76 vulkan/wsi: fix crash in failed swapchain creation for
+    wayland
+  * 6e8473b20c3 aco: fix NIR infinite loops
+  * 032a428fac0 aux/tc: fix rp info resizing clobbering current info
+  * 06f3b4d8693 radv: disable DCC with signedness reinterpretation on
+    GFX11
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Mar 2023 12:06:31 +0200
+
 mesa (23.0.0+git2303232117.92685742db6~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
