@@ -1,3 +1,41 @@
+mesa (23.1.0~git2303260116.5b5fd8d4376~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 5b5fd8d4376 CODEOWNERS: s/jekstrand/gfxstrand
+  * 877473b4a0e util: Update some copyright tags
+  * 9d1c1379e74 vulkan: vk_android.c should be copyright Intel
+  * e001995dc59 util,mesa,panfrost: Drop some author tags
+  * 789992b7c91 intel: Drop some author comments and update Faith's name
+  * cf1da3ef402 spirv: Drop a bunch of Authors tags
+  * 01275a1a95c nir: Drop a bunch of Authors tags
+  * 329398b99a7 docs: Fix Faith's name in relnotes
+  * a02ed15067e intel/blorp: Drop the TODO file
+  * 0f045d43d61 ac/surface,radv: Opt out of stencil adjust.
+  * 3bfa0d44fb1 ac/surface: Only allow stencil pitch adjustment for
+    mipmaps.
+  * 71a50bdaade ac/surface,radv: Avoid pitch weirdness if image not used
+    for rendertarget.
+  * 102445d2c35 freedreno/registers: Add control reg for zap fw base
+  * c3ed8d0e7b5 freedreno/afuc: Add raw mode for disasm
+  * e5dae7d9459 driconf: make glthread=true default for source games
+  * cece2aa2c14 intel/compiler: Add Wa_14014063774 for slm_fence
+  * 4a4b05869a6 venus: check and configure new ringMonitoring feature
+  * c4c09464ce8 venus: update to latest protocol for ringMonitoring
+  * 476c771e34f venus: init exp features before ring init again
+  * 3812a946d22 venus: set/check ring status bits independently
+  * bb4c10f85e5 venus: add vn_relax_init/_fini()
+  * 0f147240398 iris: Implement Wa_14015297576
+  * 86d931724db anv: Implement Wa_14015297576
+  * 7f04fa7364b ci/zink: Add zink-tu-a618-traces-performance job
+  * 38074e8d6dd ci/zink: Add zink-turnip-manual-rules
+  * 2bb917282ae ci/zink: Add zink-a618 trace jobs
+  * bbfc9b517d9 ci/freedreno: create a618-traces and perf jobs
+  * 93e3d37b47c ci: Add piglit traces hidden jobs
+  * cadceac2a73 ci/freedreno: Make traces work on LAVA caching proxy
+  * a114bf1cd28 ci/freedreno: define Google farm specific includes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 26 Mar 2023 12:04:15 +0200
+
 mesa (23.1.0~git2303232013.33d03e57ad2~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
