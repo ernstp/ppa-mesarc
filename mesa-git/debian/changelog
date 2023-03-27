@@ -1,3 +1,19 @@
+mesa (23.0.1+git2303271906.fe36ead872b~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * fe36ead872b nir/algebraic: remove duplicate bool conversion
+    lowerings
+  * b94117ec594 nir/algebraic: make patterns for float conversion
+    lowerings imprecise
+  * 96a918299e8 nir/algebraic: insert patterns inside optimizations list
+  * 0bf9bb911a2 .pick_status.json: Update to
+    5e9ea154849ebe19b96a243b9716bd264545bf8b
+  * 8797c8a2f6a docs: Add sha256 sum for 23.0.1
+  * b590fd1951a VERSION: update to 23.0.1
+  * 2d13f73d200 docs: add release notes for 23.0.1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 27 Mar 2023 20:32:42 +0200
+
 mesa (23.0.0+git2303250008.c77df3547d1~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
