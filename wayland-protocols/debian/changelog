@@ -1,3 +1,10 @@
+wayland-protocols (1.31+git2303251717.c622ae7~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * c622ae7 Add a .mailmap file
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 27 Mar 2023 20:34:51 +0200
+
 wayland-protocols (1.31+git2302271226.94482ce~f~base2) focal; urgency=medium
 
   * New snapshot:
