@@ -1,3 +1,31 @@
+libsdl2 (2.27.0+git2303271802.ed5a343d2~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * ed5a343d2 SDL_hidapi_steam.c: Fix compilation under c2x.
+  * 008117468 Fix clang-tidy error on LLVM 16.
+  * cd64e0b6e SDL_blit_copy: Don't call potentially FPU using SDL_memcpy
+    in SDL_memcpyMMX
+  * 51c10bef0 cmake: disable warnings in libm + warning about EMMS
+    instruction
+  * d1dc19520 Implement _intel_fast_(memcpy|memset)
+  * 5e5b029d6 cmake: add /Q_no-use-libirc flag when building a no-libc
+    library
+  * b58285b7e ci: test with (old) Intel compiler + (new) oneAPI compiler
+  * e5ebbdafd cmake: add support for building with Intel C compiler
+  * 977781d3f testautomation_math: avoid equality tests with INFINITY
+  * 984af1a72 cmake: new LLVM based Intel compiler does not recognize
+    MSVC's /MP
+  * 5aa76de35 cpuinfo: use __cpuidex instead of __cpuid
+  * 1158cff9e cmake: increase threshold for stack probes
+  * ae3a34a38 byteswap: Don't use intrinsic byteswap functions with
+    Intel C compiler
+  * c0824cd49 events: Increase the size of the name buffer when logging
+    events
+  * 6ed29f47c testgles2_sdf: Call correct function to get shader info
+    log
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 27 Mar 2023 20:29:43 +0200
+
 libsdl2 (2.27.0+git2303252311.9ed1b778e~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
