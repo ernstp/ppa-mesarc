@@ -1,3 +1,29 @@
+mesa (23.1.0~git2303271929.cb9f94f84c4~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * cb9f94f84c4 radv: stop checking dynamic states when emitting the
+    guardband state
+  * 66fec16238a radv: add DI_PT_RECTLIST to si_conv_prim_to_gs_out()
+  * 5e9ea154849 aco: fix p_interp_gfx11 comment
+  * b1668aedaf2 aco: don't check usesModifiers for pseudo instructions
+  * 9df5a2bd627 etnaviv: fix texture barrier implementation
+  * 77ab87e5a71 etnaviv: flush VS texture cache when texture data is
+    changed
+  * e7ee11f89a7 docs/freedreno: fix turnip-heading level
+  * 8f6998ad8a9 radv: separate the sample shading state between FS and
+    graphics pipeline
+  * 774e0558233 radv: move uses_user_sample_locations to
+    radv_multisample_state
+  * 609edd6e96f radv: copy the multisample state to radv_cmd_state
+  * f5e8944dd6e amd: Add radv_foreach_stage to ForEachMacros.
+  * 698135fd3e2 anv,hasvk: remove stale comments
+  * 4dc40c3b644 radv: move radv_meta_* to a new folder
+  * 5e0c8a6555b ci/broadcom: test occasionally fails, but typically
+    passes
+  * 04bfb71fa1c docs: prefer http-links over ftp
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 27 Mar 2023 20:30:27 +0200
+
 mesa (23.1.0~git2303260116.5b5fd8d4376~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
