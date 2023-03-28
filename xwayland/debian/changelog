@@ -1,3 +1,15 @@
+xwayland (2:23.1.0+git2303271334.468e2d90b~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 468e2d90b xwayland: Prevent nested
+    xwl_present_for_each_frame_callback calls
+  * 95119c9c6 xwayland: Refactor xwl_present_for_each_frame_callback
+    helper
+  * f217a68d5 glamor: Don't glFlush/ctx switch unless any work has been
+    performed
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Mar 2023 23:28:25 +0200
+
 xwayland (2:23.1.0+git2303221453.603c14b96~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
