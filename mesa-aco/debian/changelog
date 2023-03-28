@@ -1,3 +1,44 @@
+mesa (23.1.0~git2303282157.aa314c746f8~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * aa314c746f8 radeonsi: monolithic PS emit epilog in nir directly
+  * c1821544562 ac/nir: add ac_nir_lower_ps
+  * bf9c1699cd7 nir: add nir_fisnan helper function
+  * c9d60547ef3 nir,radeonsi: add and implement
+    nir_load_alpha_reference_amd
+  * 67f295f1e21 aco: implement float16 nir_op_pack_(s|u)norm_2x16
+  * 3df1c4455e8 ac/llvm: implement float16 nir_op_pack_(s|u)norm_2x16
+  * 6848e05f9c2 nir: pack_(s|u)norm_2x16 support float16 as input
+  * c30194e9ec5 intel: Allocate mesh shader URB space before task shader
+  * b69ec8bde33 radv/rt: Refactor rq_load lowering
+  * 83929f99557 aux/trace: fix GALLIUM_TRACE_NIR handling
+  * 62789086e46 aux/trace: dump blend states with enums
+  * c1050b53303 radv: add RADV_DEBUG=extra_md
+  * f315774727a radeonsi: don't use si_decompress_dcc if the blitter is
+    running
+  * 46d2655a18d radeonsi: add AMD_DEBUG=extra_md
+  * 7f94b800015 ac/surface: introduce umd metadata v2
+  * 4abb911bd20 amd/surface: rename metadata functions
+  * e272e59e405 mesa: fix CopyImageSubDataOES with
+    GL_TEXTURE_EXTERNAL_OES
+  * 0c76e088f2a anv: call nir_shader_gather_info early
+  * 6a16ed8d794 CI: Disable freedreno
+  * 16c03fd756a aco/util: override default assignment operator for
+    bitfield helpers
+  * ed03696ed9d aco/ir: fix copy paste bug in convert_to_SDWA
+  * 1979e551a8b aco: Swap operands for v_and_b32 in RT prolog
+  * fd1e27a8f88 radv: Fix swizzled VS input loads when some components
+    are unused.
+  * 5bf6f6fed12 radv/rt: bind the pipeline stack when it's not dynamic
+  * 0f974d1f907 asahi: Convert to SPDX headers
+  * ede5fed450b mailmap: Add Lina's new google.com address
+  * ecf7a7da1bf docs/svga3d: Fix typo
+  * 1ffd5915625 docs/panfrost: Fix typo
+  * eff5d950ea8 docs/freedreno: Fix typos
+  * c9378106ed9 docs/gallium: Fix typos
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Mar 2023 23:23:57 +0200
+
 mesa (23.1.0~git2303271929.cb9f94f84c4~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
