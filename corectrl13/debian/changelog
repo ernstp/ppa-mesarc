@@ -1,3 +1,11 @@
+corectrl (1.3.4+git2303281553.947719d~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 947719d Bump version to 1.3.4
+  * 76da1c0 Restrict power limit control creation upon faulty drivers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Mar 2023 23:22:50 +0200
+
 corectrl (1.3.3+git2302261226.3d2b8ea~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
