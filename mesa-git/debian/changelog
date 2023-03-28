@@ -1,3 +1,36 @@
+mesa (23.0.1+git2303282246.5fe3b05f983~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 5fe3b05f983 glsl: Fix codegen for constant ir_binop_{l,r}shift with
+    mixed types
+  * 86487ffe665 panfrost: Don't round up Midgard polygon list BOs
+  * 530c9bdce56 glsl: allow 64-bit integer on RHS of shift
+  * c8991ee56fc aco_validate: allow for wave32 in
+    p_dual_src_export_gfx11
+  * d4b25d3bee8 turnip: Don't push inline uniform buffer contents
+    outside constlen.
+  * e239111ec61 aux/trace: delete GALLIUM_TRACE_NIR log message
+  * 91bd2510eba zink: fix `final_hash` update in
+    `zink_gfx_program_update`
+  * 45c7e3b416e vbo: fix current attribs not updating gallium vertex
+    elements
+  * 9bfe45edbe1 intel/fs: fix subgroup invocation read bounds checking
+  * 6caeb11fe9a radv/rt: Fix any_hit scratch variables.
+  * 3e383010d1b intel/fs: fixup sources number from opt_algebraic
+  * 7fa4eb305a1 intel/fs: fix nir_opt_peephole_ffma max vec assumption
+  * d444199779f intel/fs: don't SEND messages as partial writes
+  * 2f12abb3269 radv/sqtt: Skip dumping pipeline libraries
+  * 3b2a93418fc Revert "driconf: add a workaround for plasmashell
+    freezing"
+  * 6d111ffba61 yegl/wayland: fix glthread deadlocks
+  * 21642581612 radv/rt: place any-hit scratch vars after intersection
+    scratch vars
+  * c2c3131e795 pps: Fix build errors.
+  * f2ea1431710 nir/algebraic: remove duplicate bool conversion
+    lowerings
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Mar 2023 23:26:12 +0200
+
 mesa (23.0.1+git2303271906.fe36ead872b~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
