@@ -1,3 +1,25 @@
+libsdl2 (2.27.0+git2303282129.d043c8535~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d043c8535 Fixed the accelerometer and gyro axes for the Armor-X Pro
+    controller
+  * d2a278778 Fix remaining -Wimplicit-fallthrough warnings
+  * 85fecbb10 video: fix warnings about unused variables when building
+    without duff's loop
+  * ec3e333fb testautomation_audio: fix -Wimplicit-fallthrough warning
+  * 1402d1355 video/blit: fix -Wimplicit-fallthrough warnings
+  * 03c239ded testsurround: fix channel names
+  * 16c9bad78 Safety fix: clear "_this->wakeup_window" when destroying
+    the window
+  * 6574e5eb5 Safety fix: clear "_this->current_glwin" when destroying
+    the window
+  * 4fa21ee5e Fixed bug #7515 - Window still grabbed after destroying
+  * 8bfbda1ea Fixed the accelerometer sensitivity for the Armor-X Pro
+    controller
+  * 93c289b47 Increased precision for PS4 sensor data conversion
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Mar 2023 23:23:17 +0200
+
 libsdl2 (2.27.0+git2303271802.ed5a343d2~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
