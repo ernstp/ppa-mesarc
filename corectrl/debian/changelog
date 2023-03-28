@@ -1,3 +1,11 @@
+corectrl (1.4.0~git2303281557.f8f2081~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * f8f2081 CHANGELOG: add version 1.3.4 notes
+  * 9d2cecc Restrict power limit control creation upon faulty drivers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 28 Mar 2023 23:23:02 +0200
+
 corectrl (1.4.0~git2302261233.1cfa233~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
