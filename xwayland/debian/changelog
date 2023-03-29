@@ -1,3 +1,13 @@
+xwayland (2:23.1.1+git2303291426.f03dd4129~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * f03dd4129 Bump version to 23.1.1
+  * 5789e30d9 composite: Fix use-after-free of the COW
+  * 77d77c8b4 xkbUtils: use existing symbol names instead of deleted
+    deprecated ones
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Mar 2023 23:57:26 +0200
+
 xwayland (2:23.1.0+git2303271334.468e2d90b~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
