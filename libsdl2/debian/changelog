@@ -1,3 +1,14 @@
+libsdl2 (2.27.0+git2303292343.2aeac8de5~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2aeac8de5 include: Fixed a C++-style single line comment.
+  * 6d01ffcd9 Split up CFLAGS construction so it can be overridden
+  * c2ee45f5f The Xinmotek Controller is used in multiple products with
+    different mappings
+  * 0bf63175a Fixed gyro values for the Armor-X Pro controller
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Mar 2023 23:52:17 +0200
+
 libsdl2 (2.27.0+git2303282129.d043c8535~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
