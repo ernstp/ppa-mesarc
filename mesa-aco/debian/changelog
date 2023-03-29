@@ -1,3 +1,47 @@
+mesa (23.1.0~git2303292236.43dc19f44d9~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 43dc19f44d9 radeonsi: simplify binning settings to work around GPU
+    hangs
+  * 281126f1d65 radeonsi/gfx11: reduce MSAA samples to 8 for no-
+    attachment framebuffer
+  * e0d449dd401 amd: set the correct LLVM processor name for gfx1036
+  * 0b6a7cba0b4 amd: rename GFX1036 -> RAPHAEL_MENDOCINO
+  * 52b68869922 amd: update addrlib
+  * 5fb8ba0eb8b zink/ci: remove `primitive-id-no-gs-quads` from radv-
+    vangogh-fails
+  * 1c3a4ab8962 zink: unbind generated gs in `bind_last_vertex_stage`
+  * 303e06b19df zink: improve generated gs unbinding
+  * 431795b9b91 zink: zink: add `parent` to `zink_shader::non_fs`
+  * d80a35a7f76 zink: unified `zink_set_primitive_emulation_keys` and
+    `zink_create_primitive_emulation_gs`
+  * d786f52f1ff zink: prevent crash when freeing
+  * 2748301a09d zink: advertise support for the quad primitive
+  * 49329b89045 zink: keep xfb properties in quad emulation gs
+  * 2bd72a4101d nir: keep xfb properties in nir_create_passthrough_gs
+  * 1c7d846bccb zink: handle provoking vertex mode for filled quads
+  * 0b655147759 nir/zink: handle provoking vertex mode in
+    `nir_create_passthrough_gs`
+  * 1a5bdca2dda zink: implement flat shading using inlined uniforms
+  * 009ba806c9b zink: add `needs_inlining` to `zink_shader`
+  * a6de15eff56 zink: add flags to `zink_gfx_program` and `zink_context`
+  * 027ba4ccefb zink: fix flat shading on filled quads
+  * 7eab64f1c66 zink: handle quads
+  * f48b699654f zink: add `zink_rast_prim` enum
+  * e2220ee55e4 zink: filled quad emulation gs generation function
+  * 0cb81ac38c2 zink: force line strip out when emulating stipple
+  * 3b5fb8b0607 nir: allow to force line strip out in
+    nir_create_passthrough_gs
+  * 90a8525d703 zink: handle edgeflags
+  * a93685ef557 zink: add `has_edgeflags` flag to zink_shader and
+    zink_gfx_program
+  * 24535ffb3d5 nir: handle edge flags in nir_create_passthrough_gs
+  * a0751e8088d nir: calculate number of vertices in
+    nir_create_passthrough_gs
+  * edecb66b018 nir: avoid generating conflicting output variables
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Mar 2023 23:53:00 +0200
+
 mesa (23.1.0~git2303282157.aa314c746f8~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
