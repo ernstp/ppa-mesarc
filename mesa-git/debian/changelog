@@ -1,3 +1,10 @@
+mesa (23.0.1+git2303292256.9d9de1b0fd9~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 9d9de1b0fd9 zink: track tc fences better
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 29 Mar 2023 23:55:16 +0200
+
 mesa (23.0.1+git2303282246.5fe3b05f983~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
