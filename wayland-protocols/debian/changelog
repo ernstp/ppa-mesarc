@@ -1,3 +1,12 @@
+wayland-protocols (1.31+git2303302247.275fce4~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 275fce4 xdg-shell: Clarify relationship between [un]set_maximized
+    and configure
+  * 5c274ff unstable/xdg-shell v6: clarify when which errors are used
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Apr 2023 07:54:38 +0200
+
 wayland-protocols (1.31+git2303251717.c622ae7~f~base2) focal; urgency=medium
 
   * New snapshot:
