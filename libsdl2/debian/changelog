@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2303301920.eb0d214c1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * eb0d214c1 Haiku: use a BLooper for events.
+  * 55f74c328 x11: Don't allow the changing of certain scancodes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Apr 2023 07:49:35 +0200
+
 libsdl2 (2.27.0+git2303292343.2aeac8de5~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
