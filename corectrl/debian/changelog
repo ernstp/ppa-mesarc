@@ -1,3 +1,10 @@
+corectrl (1.4.0~git2304011521.098218f~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 098218f Restore 0 as a valid power limit lower range bound value
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Apr 2023 07:49:08 +0200
+
 corectrl (1.4.0~git2303281557.f8f2081~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
