@@ -1,3 +1,49 @@
+mesa (23.1.0~git2304040337.e84cf80fe15~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * e84cf80fe15 zink: always store nir serialized
+  * 4e1668384d5 zink: store num_inlinable_uniforms separately for cs
+    programs
+  * 517146f5400 zink: move nir cloning out to callers of
+    zink_shader_compile
+  * dfa8c15164c zink: break out nir blob deserializing
+  * 0563499db0a zink: simplify assign_io() further
+  * fd2714b5a98 zink: store nir as serialized on zink_shader structs
+  * e40134aea85 zink: streamline nir cloning for assign_io
+  * 2e1ad9f8178 zink: directly return nir from zink_shader_tcs_create
+  * d3c91124046 zink: swap nir pointers when compiling compute shaders
+  * fdb9c919228 zink: pass nir directly to zink_shader_tcs_create()
+  * 6524b9285fd zink: simplify fbfetch output detection from fs
+  * edc804e50f2 zink: use zink_shader::info instead of
+    zink_shader::nir::info
+  * b33d5d1a982 zink: generate flat_flags during shader creation
+  * f26526ff33d zink: pass nir_shader to update_so_info()
+  * f7b76d681be zink: add and populate a shader_info struct to
+    zink_shader
+  * eb307445623 zink: delete shader reordering in assign_io()
+  * bbd124fd005 v3dv/pipeline: use pipeline depth bias enabled to fill
+    up CFG packet
+  * a88aedbfa5b intel/perf: fix OA format selection on MTL
+  * c61101f1511 intel/dev: set a default valid kmd_type
+  * 2016d9f46c6 intel/fs: Rework the loop of opt_combine_constants that
+    collects constants
+  * 9e4bb4bfcfe intel/fs: Refactor part of opt_combine_constants to a
+    separate function
+  * 593cde04322 intel/fs: Output opt_combine_constants debug to stderr
+  * eadc64ab248 vulkan/wsi/display: do not dereference a NULL pointer
+  * 6ad5f885afe vulkan: Drop VkRenderingSelfDependencyInfoMESA
+  * b4c18b9b769 vulkan: Drop vk_render_pass_state::*self_dependenc*
+  * 6d4e605378c hasvk/pipeline: Use feedback loop flags for self-
+    dependencies
+  * 8df8a3c19bc anv/pipeline: Use feedback loop flags for self-
+    dependencies
+  * f3876db1ee5 vulkan: Plumb rendering flags through
+    vk_graphics_pipeline_state
+  * f4b534d50f2 vk/render_pass: Support VK_EXT_fragment_density_map
+  * df9694e98e8 tu: Use vk_pipeline_get_renderpass_flags()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Apr 2023 07:50:15 +0200
+
 mesa (23.1.0~git2303292236.43dc19f44d9~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
