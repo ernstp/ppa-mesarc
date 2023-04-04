@@ -1,3 +1,23 @@
+mesa (23.0.1+git2304040450.6a0c20df84b~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 6a0c20df84b amd/common: fix a typo
+  * 6d9fe91af65 radv/rt: Handle load_constant instructions when inlining
+    shaders
+  * 05de28d01b6 v3d: fix `dirty` bitset being too small to accept
+    V3D_DIRTY_SSBO
+  * deebec40a01 util/00-mesa-defaults: add Akka Arrh workaround
+  * 83816982156 zink: double check layouts for possible feedback loop
+    images
+  * 1b18b9a415e .pick_status.json: Update to
+    2cc9364c2061fe4a66398678cabf61e3464e4d77
+  * fe618a5be77 intel/fs: Fix register coalesce in presence of
+    force_writemask_all copy source writes.
+  * 682b695e4a3 nir: Propagate alignment when rematerializing cast
+    derefs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Apr 2023 07:52:30 +0200
+
 mesa (23.0.1+git2303292256.9d9de1b0fd9~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
