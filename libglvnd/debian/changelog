@@ -1,3 +1,13 @@
+libglvnd (1.6.0+git2304040327.65c23a8~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 65c23a8 Merge branch 'haiku' into 'master'
+  * 37c244b tests/egl: Fix LIBRARY_PATH on Haiku
+  * 5f35862 symbols-check: Add Haiku platform symbols
+  * 70f784a HGL: add Haiku libGL.so implementation based on EGL
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 04 Apr 2023 07:49:22 +0200
+
 libglvnd (1.6.0+git2303101704.056feac~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
