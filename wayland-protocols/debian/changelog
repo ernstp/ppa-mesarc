@@ -1,3 +1,12 @@
+wayland-protocols (1.31+git2304041314.f9ef5fd~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * f9ef5fd xdg-shell: Clarify window geometry bounds
+  * fce1d30 xdg-shell: Clarify that geometry doesn't automatically
+    change
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 07 Apr 2023 19:58:10 +0200
+
 wayland-protocols (1.31+git2303302247.275fce4~f~base2) focal; urgency=medium
 
   * New snapshot:
