@@ -1,3 +1,11 @@
+libglvnd (1.6.0+git2304041449.179d727~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 179d727 Merge branch 'pthread-fix' into 'master'
+  * 1f9aff1 EGL/libeglcurrent: fix crash on library unload
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 07 Apr 2023 19:52:15 +0200
+
 libglvnd (1.6.0+git2304040327.65c23a8~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
