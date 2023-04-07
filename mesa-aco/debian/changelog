@@ -1,3 +1,46 @@
+mesa (23.1.0~git2304071751.4dc7256bf96~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 4dc7256bf96 anv: reset query pools using blorp
+  * bb49610973a anv: replace query flush before gpu copy by semaphore
+    wait
+  * abc4111d197 anv: pass steam output as argument for
+    anv_dump_pipe_bits
+  * 2415d57a99f anv/blorp: add flush reasons to RT flushes
+  * 43f93f50431 anv/blorp: implement anv_cmd_buffer_fill_area
+  * 0130a4f6676 anv/blorp: support surf generation for addresses
+  * 9d38c9ca2f3 dzn: Enable VK_KHR_get_memory_requirements2
+  * a9a0dc3cca3 dzn: Enable VK_KHR_bind_memory2
+  * bcd33d2937a radv: import retained NIR shaders later in the
+    compilation process
+  * e9097649305 radv: do not retain noop FS for libs when a cache hit
+    happened
+  * 34fa60e138d radv: simplify a check when retaining NIR shaders
+  * 3b5ea90f1d4 radv: move the serialized NIR to
+    radv_graphics_lib_pipeline
+  * 4672c6c43b9 radv: add a helper for retaining NIR shaders
+  * dc18570c0aa zink: don't access non_fs part of zink_shader from fs
+  * 215beee16d9 zink: more explicitly track/check rp optimizing per-
+    context
+  * 2c78cbbfe15 ac/llvm: remove some unused code replaced by nir
+  * a2cecbbc44b ac/nir/ngg: fix store shared alignment
+  * c082cdacae8 ac/nir/ngg: fix gs culling vertex liveness check for odd
+    vertices
+  * fc3d8e11255 radeonsi: fix max scrach lds size calculation when ngg
+  * 9fcadd0c8d5 asahi: Allow explicit non-LINEAR modifiers for scanout
+  * 534a04d557f asahi: Flip kmsro around to allocate on the GPU
+  * 9db36376a68 asahi: Fix compressed ZS support
+  * 2296f696293 asahi: Print reasons why compression is disabled
+  * 888d443f298 asahi: Add resource debugging
+  * 0a132b06406 asahi: Add a helper macro for debug/error messages
+  * 883ba4b1616 asahi: Make BO import path failures more robust
+  * fcf594d00b1 asahi: Implement valid buffer range tracking
+  * 00064ba4e30 asahi: Fix style nits
+  * a88b9c5540d asahi: Locate low VA BOs correctly
+  * 030b2306a44 asahi: Enable glthread
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 07 Apr 2023 19:53:18 +0200
+
 mesa (23.1.0~git2304040337.e84cf80fe15~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
