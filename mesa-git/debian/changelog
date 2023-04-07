@@ -1,3 +1,48 @@
+mesa (23.0.2+git2304071910.afd0f404807~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * afd0f404807 docs: Add sha256 sum for 23.0.2
+  * 4d5e73870ec VERSION: update to 23.0.2
+  * 64b2db36a73 docs: add release notes for 23.0.2
+  * 2d4b0238fbd Revert "iris: Avoid abort() if kernel can't allocate
+    memory"
+  * f2b262feefa iris: Retry DRM_IOCTL_I915_GEM_EXECBUFFER2 on ENOMEM
+  * f73b7aa8132 lima: don't use resource_from_handle while creating
+    scanout
+  * 9551329ee09 .pick_status.json: Update to
+    debc543904235ed7dfc14217bf43f33f9f768e5a
+  * 6936304bc7f rusticl/icd: Make it work in case Rustc shuffles struct
+    around
+  * 0e28382eee8 rusticl/util: extract offset_of macro
+  * ac5af2ddf29 intel/fs: UNDEF fixup_nomask_control_flow temp register
+  * 600f80c8c22 intel/fs: don't consider fixup_nomask_control_flow SENDs
+    predicate
+  * f6a518de2d6 r600/sfn: fix container allocators
+  * 761adfcab84 vulkan/wsi/display: set pDisplay to NULL on error
+  * f33cca563ad r600: fix typo that could lead to a possible crash
+  * 82f1ec9d14d gallium/pipe: change
+    PIPE_DEFAULT_DECODER_FEEDBACK_TIMEOUT_NS to 1 second
+  * b9df35b5531 util/vbuf: fix index_bo leak
+  * 9df373d050c mesa: fix invalid index_bo refcounting
+  * 33e4fe697fd intel/perf: fix OA format selection on MTL
+  * 1b6fa2f4070 vulkan/wsi/display: do not dereference a NULL pointer
+  * d4456f4579a .pick_status.json: Update to
+    7abd8c499b4388f1e2947d78c59aafa0b52c254a
+  * 54cf68b72b7 aco: Don't remove exec writes that also write other
+    registers.
+  * 1ea135b8420 aco: Consider p_cbranch_nz as divergent branch too.
+  * d55ee3cf60e isl: update max buffer size for SKL+
+  * 1f47f7dd4ba anv: take care of maxStorageBufferRange being uint32_t
+  * 3e0dfb0017d ac/nir: Store only lowest 8 bits for task draw ring
+    DWORD3.
+  * 8f7da2aecdd aco: fix nir_var_shader_out barriers for task shaders
+  * 2ce6652a7a6 zink: flag vertex buffers for rebind after vstate draws
+  * a09d1d6bfa5 zink: block resolves where src extents > dst extents
+  * b7a41938993 llvmpipe: fix handling of unused color attachments
+  * 876a67ef6d1 llvmpipe: fix linear fs analysis with nonzero fs outputs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 07 Apr 2023 19:55:48 +0200
+
 mesa (23.0.1+git2304040450.6a0c20df84b~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
