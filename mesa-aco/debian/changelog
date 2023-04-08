@@ -1,3 +1,43 @@
+mesa (23.1.0~git2304080810.c7da969f8fe~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * c7da969f8fe mesa: Enable NV_texture_barrier in GLES2+
+  * 98bcf650f15 intel/compiler: Use nir_dest_bit_size() for ballot bit
+    size check
+  * f5471ca9657 nir/validate: Only walk uses once
+  * 9a350790741 nir/repair_ssa: Refactor some use handling
+  * dcb59a7672d nir: Remove nir_if_rewrite_condition_ssa
+  * ed85a497271 dxil: Use nir_src_rewrite_ssa
+  * e25c182993c nir: Use nir_src_rewrite_ssa
+  * e9e0956d623 nir: Factor out nir_src_rewrite_ssa helper
+  * 2285b5daae4 nir: Reduce indirection
+  * 373bd37b85e dxil: Avoid list_length
+  * c4a91c12dc2 nir/validate: Don't treat if-uses specially
+  * f3b420692b5 nir: Remove 2nd argument from nir_before_src
+  * 8505f0bd84d nir/opt_loop_unroll: Avoid list_length
+  * 7356f3eee7b nir/opt_ray_queries: Don't use list_length
+  * 7f6491b76d5 nir: Combine if_uses with instruction uses
+  * fd9c69218ae tu: Use vk_features2_to_features
+  * 4fa2924610c anv,hasvk: Use vk_features2_to_features
+  * 672a06a1b63 pvr: Use vk_features2_to_features
+  * c517d45341a lavapipe: Use vk_features2_to_features
+  * b222b02d3d1 v3dv: Use vk_features2_to_features
+  * a7389f68948 radv: Use vk_features2_to_features
+  * 657e82a72f7 vulkan: Add common features2_to_features
+  * 6894548d6c4 Revert "zink: don't trigger shader variants on pcp
+    change if driver supports dynamic pcp"
+  * 79655e2ea83 radv: copy stages instead of serializing NIR for GPL
+    with the RETAIN flag
+  * edb198e0b12 radv: create a helper for copying
+    VkPipelineShaderStageCreateInfo
+  * 6181ba11d56 radv/rt: stop storing unused hashes/identifiers
+  * a782393b1aa zink: fix sampler array collision in `nir_to_spirv`
+  * 4579fe5fade zink: add `descriptor_bindless_id` to `zink_shader_info`
+  * c0c16d1ae24 dzn: Remove xfail for test that passes (if run)
+  * e4da9c2dfc7 dzn: Support >2K samplers with bindless
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Apr 2023 13:55:24 +0200
+
 mesa (23.1.0~git2304071751.4dc7256bf96~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
