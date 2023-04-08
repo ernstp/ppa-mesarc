@@ -1,3 +1,19 @@
+mesa (23.0.2+git2304080929.48885116d2c~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 48885116d2c aux/tc: flag late zs clears as partial clears
+  * d461dd2f233 zink: fix stale point sprite mode state
+  * f4a612e4048 .pick_status.json: Updates notes for
+    3668da7c83bf52f639313e9527878f9bd27b4a1c
+  * 0f008bb01a2 llvmpipe: fix LP_PERF=no_depth to ignore depth format
+  * 084d32b1088 .pick_status.json: Updates notes for
+    7e68cf91d74e6bd9a88c2b52417451d9afec4782
+  * acf880140e7 .pick_status.json: Update to
+    9d38c9ca2f3d1248e269e1d1eb19ed5a9603c209
+  * 992303ef474 bin/pick: Add support for adding notes on patches
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Apr 2023 13:57:50 +0200
+
 mesa (23.0.2+git2304071910.afd0f404807~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
