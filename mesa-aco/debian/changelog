@@ -1,3 +1,13 @@
+mesa (23.1.0~git2304082224.4ac56e3e5a4~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 4ac56e3e5a4 ci/v3d: add flaking spec@ext_framebuffer_blit@fbo-sys-
+    blit
+  * ba537ac25ad ac/llvm: Cover runtime 0 in GFX10 gs_alloc_req
+    workaround.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Apr 2023 01:25:43 +0200
+
 mesa (23.1.0~git2304080810.c7da969f8fe~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
