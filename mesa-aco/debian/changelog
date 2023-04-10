@@ -1,3 +1,23 @@
+mesa (23.1.0~git2304101202.6476abd821a~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 6476abd821a radv: enable VK_EXT_graphics_pipeline_library by default
+  * 719a0e269e2 vulkan/pipeline_cache: move vk_log on failed
+    deserialization to vk_pipeline_cache_load()
+  * 53eb3ad375b vulkan/pipeline_cache: add cache parameter to
+    deserialize() function
+  * a6360a32031 vulkan/pipeline_cache: use
+    vk_pipeline_cache_create_and_insert_object() during
+    vk_pipeline_cache_load()
+  * f524f91d6fa vulkan/pipeline_cache: implement
+    vk_pipeline_cache_create_and_insert_object()
+  * 84fa7b17454 vulkan/pipeline_cache: Don't re-insert disk-cache hits
+    into disk-cache
+  * 5daff41e275 vulkan/pipeline_cache: remove vk_device from
+    vk_pipeline_cache_object
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 10 Apr 2023 12:57:07 +0200
+
 mesa (23.1.0~git2304082224.4ac56e3e5a4~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
