@@ -1,3 +1,47 @@
+mesa (23.1.0~git2304111539.4b182dbcf28~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 4b182dbcf28 v3dv/ci: mark known dEQP-
+    VK.wsi.xlib.surface.query_formats failure
+  * a8cb837703d radv: Align atomic values.
+  * 02c46fa1e84 util/disk_cache: Align atomic size.
+  * 1c2d90f17ac util: Add aligned int64_t types for x86(non 64).
+  * 9ccaf5583f6 radv: fix re-emitting vertex user SGPRs when binding a
+    graphics pipeline
+  * 35805d172ad radv/ci: add 2 more Flakes for Navi21
+  * dcfca69e67e radv: clean up pipeline-cache interface
+  * c2b9279227e radv: use vk_pipeline_cache
+  * 9b3679aff2a radv: implement radv_shader_create_cached()
+  * 55cc2fb0885 radv: add struct radv_pipeline_cache_object
+  * 577d76f60f7 radv: add radv_shader_serialize() and
+    radv_shader_deserialize() functions
+  * efbf0e70eba radv: unconditionally store the binary code in
+    radv_shader
+  * 5303a57964f radv: derive struct radv_shader from
+    vk_pipeline_cache_object
+  * daa8003e45c intel/fs: use nomask for setting cr0 for float controls
+  * 45a682650ca mesa: Add EXT_instanced_arrays support
+  * 8aa4d37b833 glapi: Make EXT_draw_instanced functions available for
+    GLES 2.0
+  * b3793dc4425 mesa: OpenGL ES 3.0 requires EXT_instanced_arrays
+  * cff71ae8ff6 anv: fixup streamout write barriers
+  * 2bf9ae78c52 radv: Remove radv_bvh_aabb_node::aabb
+  * 1ce50f0774b radv/bvh: Remove calculate_node_bounds
+  * f791cd9e435 radv: Pack and encode geometry id and flags on the CPU
+  * 8391639b5f3 radv: Remove has_previous_stage
+  * b4bae8a2c06 aco: Remove is_gs_copy_shader
+  * 58ab7831537 radv: Remove some dead radv_shader_args setup
+  * 6f9bb453ef8 radv: Add radv_shader_type to fix gs_copy and trap
+    handler handling
+  * c66be7521fb nir/lower_blend: Enable per-sample shading
+  * a74c2ac4033 nir/lower_blend: Set uses_fbfetch_output conservatively
+  * d998217e179 mesa/st: Set uses_sample_shading when forcing per-sample
+  * 52ba7e967b7 d3d12: Support creating PSOs with no attachments with
+    MSAA without TIR
+  * 1fda55ba094 venus: forward ARM driverVersion for ANGLE workarounds
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 11 Apr 2023 16:38:51 +0200
+
 mesa (23.1.0~git2304101202.6476abd821a~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
