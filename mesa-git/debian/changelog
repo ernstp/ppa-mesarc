@@ -1,3 +1,28 @@
+mesa (23.0.2+git2304110411.b138fb6caeb~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * b138fb6caeb zink: try to prune resources from barrier jit on fb
+    unbind
+  * f1a15950007 ac/llvm: Cover runtime 0 in GFX10 gs_alloc_req
+    workaround.
+  * 5df3ebc8b0d intel/compiler: Use nir_dest_bit_size() for ballot bit
+    size check
+  * 969d11a1907 tu: Use vk_features2_to_features
+  * df3dac85bd7 vulkan: Add common features2_to_features
+  * 2389a17f864 ac/nir/ngg: fix store shared alignment
+  * d8890b6d400 ac/nir/ngg: fix gs culling vertex liveness check for odd
+    vertices
+  * d76c2120171 dzn: Don't use write-combine memory for cache-coherent
+    UMA
+  * 25de836e9d7 dzn: Ensure pipeline variants are used for dynamic
+    stencil masks
+  * 1d4b8b0ff41 dzn: Fix SRV barrier state on compute command lists
+  * b5bb12d7afc etnaviv: don't read too much from uniform arrays
+  * fe429ab8448 .pick_status.json: Update to
+    642a88df3d9a0d6319a6eeb0a24d2603c450236d
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 11 Apr 2023 16:41:21 +0200
+
 mesa (23.0.2+git2304080929.48885116d2c~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
