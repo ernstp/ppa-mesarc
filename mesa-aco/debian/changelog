@@ -1,3 +1,48 @@
+mesa (23.2.0~git2304141813.cd861b7f38e~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * cd861b7f38e meson: ensure i915 Gallium driver includes Intel sources
+  * cf90be90ade intel: split URB space between task and mesh
+    proportionally to entry sizes
+  * f11a4a09b02 radv: try to keep HTILE compressed for READ_ONLY_OPTIMAL
+    layout
+  * 3e22c3a8bcf broadcom/ci: deduplicate script definition
+  * bdb03ecdd9e vulkan: ignore rasterizationSamples when the state is
+    dynamic
+  * 6af78baa237 ci: update shebang to make it more portable
+  * 9120f17b278 ci: bump tags
+  * 8eb5de31262 ci: start documenting which image tags need to be bumped
+  * 9a45d3ee139 ci: move deqp-egl instead of copying it
+  * efd2067a8f9 ci: add -android suffix for android build of deqp-egl
+  * e876a018e91 ci: stop removing -x11 suffix for x11 build of deqp-egl
+  * 08cf224c4a1 intel/vec4: force exec_all on float control instruction
+  * df784c03fb5 glthread: disable by default with fewer than 4 (big)
+    CPUs
+  * 8c42c353b6e driconf: rework glthread enablement
+  * 0cc93a46031 util/cpu: add big.LITTLE cpu detection
+  * 54d01db8a84 docs/asahi: Add hardware glossary
+  * 44fb5ceb364 nouveau: nouveau_copy_buffer can deal with user_ptrs
+    just fine
+  * 47e0c6764b0 nouveau: allow to enable SVM without having to enable CL
+  * 7cfb8cb1a58 nv50/ir: ignore CL system values
+  * bfee3a8563d rusticl: add support for fine-grained system SVM
+  * bfcd9148255 rusticl/mem: add get_parent helper
+  * 816bab4c234 rusticl/memory: Rework mapping of memory located in
+    system RAM
+  * 2ee082ef8a8 rusticl/context: add helper to get the max mem alloc
+    size for all devices
+  * 50097ffae04 gallium: correctly name the flags of svm_migrate
+  * e5654cb3ee6 zink: remove screen param from zink_prune_query()
+  * 7119a344f3d zink: always defer query pool deletion
+  * 50e3974e258 zink: pass ctx through query destroy paths
+  * cb83606279d zink: remove atomics from zink_query
+  * c987eed9cd7 frontends/va: report min width and min height values if
+    available
+  * 413235d164b radeonsi: return min width and min height video cap
+    values
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Apr 2023 18:48:52 +0200
+
 mesa (23.1.0~git2304111539.4b182dbcf28~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
