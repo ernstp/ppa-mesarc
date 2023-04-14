@@ -1,3 +1,36 @@
+mesa (23.2.0~git2304150030.8f0da0851f2~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 8f0da0851f2 radeonsi/vcn: engage all jpeg engines on gfx940 for
+    mjpeg decode
+  * 87a44c44b45 radeonsi/vcn: enable RGBP format on gfx940 jpeg
+  * bdb7f36aa8e frontends/va: add support for RGBP rt_format
+  * 23580b09a34 util/format: add planar3 r8_g8_b8_unorm pipe format
+  * 33886e5ef2c docs: add INTEL_MEASURE=cpu
+  * b661149921a iris: Enable INTEL_MEASURE=cpu
+  * 0417cfd7a0a anv: Enable INTEL_MEASURE=cpu
+  * 55ba4575be4 intel: INTEL_MEASURE cpu mode
+  * c45dee34aab anv: split INTEL_MEASURE multi events
+  * 50bda45d15b anv: Add flush reason to NEEDS_END_OF_PIPE_SYNC
+  * bdeb849e25b anv: Add flush reasons to raytracing flushes
+  * 9a30493ccb2 anv: Add END_OF_PIPE_SYNC reporting to INTEL_DEBUG=pc
+  * bfce57c7a5b radeonsi/vcn: add an exception of field case for h264
+    decoding
+  * f23d54cfaaf llvmpipe: fix some corner cases with line rendering
+  * 9b6abe4206b llvmpipe: minor cleanups in line rendering code
+  * 82c22580192 v3d: set depth compare function correctly
+  * c84989c4cf3 zink: use correct primitives for passthrough gs with
+    tess
+  * 7e6191f6055 zink: don't emulate edgeflags for patches
+  * 3ad751f043f radv: tidy up dirtying RBPLUS state in
+    radv_bind_dynamic_state()
+  * ba71b142f8a radv: re-emit the guardband state when related PSO are
+    bound
+  * 28cb33fadaf r600: fix refcnt imbalance related to
+    r600_set_vertex_buffers()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 15 Apr 2023 01:55:39 +0200
+
 mesa (23.2.0~git2304141813.cd861b7f38e~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
