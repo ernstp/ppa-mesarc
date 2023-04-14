@@ -1,3 +1,47 @@
+mesa (23.1.0~rc1+git2304150008.f53f445b972~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * f53f445b972 VERSION: bump for 23.1.0-rc1
+  * 117b9673216 v3d: disable GL_NV_conditional_render
+  * 45826e42c53 ac,aco: move gfx10 ngg prim count zero workaround to nir
+  * b967cbba57c intel/compiler: use intel_needs_workaround for
+    Wa_14012437816
+  * ccf16693e14 intel/fs: use intel_needs_workaround for Wa_22013689345
+  * 1a9727a81e0 ci/rustfmt: make sure to only check each file once
+  * 36fd2bbd98f ci/android: Make armv8's arch aarch64 instead of arm.
+  * 1a63ccc9aa5 zink: remove a fixed validation error for ci
+  * 55c9356d290 rusticl/program: rework source code tracking
+  * 6d7b705125d rusticl/program: extract common code of compile and
+    build
+  * d7e9b4ef5b4 rusticl/program: validate the SPIR-V when created from
+    IL
+  * 8fcfc51dad6 clc: add clc_validate_spirv
+  * ab032f4bfd7 rusticl/program: make IL programs look closer to CLC
+    ones
+  * ca1e9917a9b rusticl/program: allow dumping compilation logs through
+    RUSTICL_DEBUG
+  * 22808d542bf rusticl/platform: move device initialization to the
+    platform
+  * 53025688bba rusticl/platform: move getter into the type
+  * 3e59a2860e6 rusticl/platform: rename _cl_platform_id to Platform
+  * 11250d7a9e6 rusticl: split platform into core and api parts
+  * 3320eee8776 radv: cleanup after splitting radv_pipeline.c
+  * 30d141ba635 r600: Alpha to coverage dithering on Evergreen+
+  * 7a7d374ac3f pan/decode: Print compute job payloads
+  * de01ae120dd panfrost: Allocate shared memory in OpenCL
+  * 2f2738dc902 pan/bi: Use nir_lower_mem_access_bit_sizes
+  * 934b0f1add1 pan/bi: Respect swizzles for more vector ops
+  * d00d2ae701c pan/bi: Lower swizzles for 8-bit CSEL
+  * 66edd030ab7 anv: add utrace tracking of frame boundaries
+  * da6842007fa intel/ds: add a new timeline row for frames
+  * 68bba1539f7 anv: exclude performance queries from blorp clears
+  * 7036d1a1553 ac/nir/ngg: Don't store primitive IDs from culled
+    primitives.
+  * 31c4087cb34 frontends/va: disable skip_frame_enable in vaapi
+    interface.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 15 Apr 2023 01:57:58 +0200
+
 mesa (23.0.2+git2304140454.cff3fd39d7f~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
