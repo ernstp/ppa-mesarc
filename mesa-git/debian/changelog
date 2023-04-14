@@ -1,3 +1,54 @@
+mesa (23.0.2+git2304140454.cff3fd39d7f~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * cff3fd39d7f util/prim_convert: Don't set index_bounds_valid
+  * a2afd8b7642 lavapipe: set render_condition_enabled=false for
+    vkCmdClearDepthStencilImage
+  * 7d0aee96e7f lavapipe: fix dynamic depth clamping
+  * 6e7dea81637 .pick_status.json: Updates notes for
+    a553d3cd2985b604f92ef02568b2164880d1fe7f
+  * 4e571a73b9f frontends/va: disable skip_frame_enable in vaapi
+    interface.
+  * 9a53a2d865d radv: Reserve space in framebuffer emission.
+  * 86e663c0286 zink: free GPL input/output libs on context destroy to
+    avoid leaking
+  * 0d37be3b90a radv/amdgpu: Use correct alignment when creating CS BOs.
+  * b8a3ad84fae radv/amdgpu: Only allow IB BOs on graphics and compute
+    queues.
+  * d1ef4c5d6b4 radv/amdgpu: Fix mismatching return type of
+    radv_amdgpu_cs_submit.
+  * 13bcd319992 zink: bs->dd.push_pool[1].pool should be freed
+  * 9a1f5e26d8d egl: fix memory leak related to _eglRefreshDeviceList()
+  * 7e85200a6e9 .pick_status.json: Update to
+    6124f8f371f92be6c5c3b4053fd6bcb18034a3c9
+  * e9e50d2258e intel/fs: use nomask for setting cr0 for float controls
+  * 8804196a6ed anv: fixup streamout write barriers
+  * 8747a905589 .pick_status.json: Update to
+    1fa1c285fcadec60e93382d53b6723728ef05bbb
+  * 9a94c553245 zink: try to prune resources from barrier jit on fb
+    unbind
+  * e65b280f121 ac/llvm: Cover runtime 0 in GFX10 gs_alloc_req
+    workaround.
+  * 7ed9e586655 intel/compiler: Use nir_dest_bit_size() for ballot bit
+    size check
+  * 2d73e3284cc tu: Use vk_features2_to_features
+  * 084c318fa08 vulkan: Add common features2_to_features
+  * 23719c6d8a8 ac/nir/ngg: fix store shared alignment
+  * ca6e734cedf ac/nir/ngg: fix gs culling vertex liveness check for odd
+    vertices
+  * bc3355a8687 dzn: Don't use write-combine memory for cache-coherent
+    UMA
+  * 045dca717e6 dzn: Ensure pipeline variants are used for dynamic
+    stencil masks
+  * 4ebd4dc138c dzn: Fix SRV barrier state on compute command lists
+  * fb33c683189 etnaviv: don't read too much from uniform arrays
+  * 431209ba257 .pick_status.json: Update to
+    642a88df3d9a0d6319a6eeb0a24d2603c450236d
+  * 66deaca9bb2 aux/tc: flag late zs clears as partial clears
+  * 9058fb5f56b zink: fix stale point sprite mode state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 14 Apr 2023 18:51:23 +0200
+
 mesa (23.0.2+git2304110411.b138fb6caeb~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
