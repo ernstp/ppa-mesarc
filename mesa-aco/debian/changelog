@@ -1,3 +1,54 @@
+mesa (23.2.0~git2304161928.74525f8576d~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 74525f8576d ci: uninstall libdrm from the GL and VK containers
+  * 74e42359162 ci: polish deqp-runner a bit
+  * 2933976e78b ci/freedreno: fix the a530_piglit job and switch to
+    Weston
+  * f84aee451d0 ci/freedreno: update a530 flakes, fails and skips
+  * 2092f959751 ci/freedreno: a530 behaves stable in 6.3
+  * 1fcfcaf008e ci: drop overriding new a530 firmware due to preemption
+    issues with older kernel
+  * cad794594b9 ci/freedreno: do not restrict to 2 cpus on a530
+  * a925c59f83d ci: bump kernel to the 6.3, support HDK 888 based on
+    sm8350
+  * f3e8aeb2e9e tu/perfetto: s/MRTs/attachment_count/ in traces.
+  * 947f5d4d7ad tu/perfetto: Drop unused arg to send_descriptors().
+  * 020baed66e4 tu/perfetto: Use tu_CmdBeginDebugUtilsLabelEXT as a
+    stage event in perfetto.
+  * 69bff073ca1 tu/perfetto: Clean up an extra token paste to just use
+    the arg being passed.
+  * b4b18e41652 tu/perfetto: Refactor code out of the macro, to
+    stage_end.
+  * 60cfe15d799 rusticl/event: drop work item before updating status
+  * 00b9685d966 symbol_table: Prehash the key on insert, and reuse the
+    entry on shadowing.
+  * 46498abbacb symbol_table: Don't bother resetting the key on popping
+    scope.
+  * 0a400f933fa symbol_table: Don't maintain the HT as we're destroying
+    the table.
+  * 6db7d72b4bf symbol_table: Store the symbol name in the same
+    allocation as the symbol entry.
+  * c6906448425 ci/amd: update checksums after DXVK 2.1 update
+  * 5cf3b92661c ci/dxvk: uprev to 2.1
+  * 0dcb3994a5a ci/amd: 4/5 runners TPad-C13 runners are online, restore
+    most of the tests
+  * a7877289062 anv: enable blorp query reset for performance queries
+  * 20c330e95d4 ci: Drop executable permissions from backend compiler
+    wrapper script
+  * 1ec3c16c54a ci: Remove shebang from backend compiler wrapper script
+  * 21b190bf44e ci: Use set -e in frontend compiler wrapper scripts.
+  * 1915185648e ci: Explicitly test for meson feature checks in compiler
+    wrapper
+  * 2fbedd442a3 util: Delete Offset() macro from u_memory.h
+  * 7706d1cc33e spirv/tests: Add test for single-block loop
+  * 5672b6cb021 dzn: Remove #if D3D12_SDK_VERSION blocks now that 610 is
+    required
+  * 290bb7a7067 microsoft/clc: Remove #if D3D12_SDK_VERSION blocks now
+    that 610 is required
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Apr 2023 20:14:16 +0200
+
 mesa (23.2.0~git2304150030.8f0da0851f2~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
