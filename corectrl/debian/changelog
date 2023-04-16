@@ -1,3 +1,14 @@
+corectrl (1.4.0~git2304162005.4ffde6c~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 4ffde6c README: update installation method for Debian / Ubuntu
+  * 12056a3 CONTRIBUTING: update merge request guidelines
+  * 29cd788 Add Intel CPU temperature sensor for coretemp driver
+  * 36dc5c6 Add CPU usage sensor
+  * bd37882 Rename CPUInfo socketId to physicalId
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 16 Apr 2023 20:13:56 +0200
+
 corectrl (1.4.0~git2304011521.098218f~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
