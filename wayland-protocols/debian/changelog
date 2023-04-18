@@ -1,3 +1,10 @@
+wayland-protocols (1.31+git2304181406.fefd185~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * fefd185 linux-dmabuf: Fix a couple of typos
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 18 Apr 2023 20:08:42 +0200
+
 wayland-protocols (1.31+git2304041314.f9ef5fd~f~base2) focal; urgency=medium
 
   * New snapshot:
