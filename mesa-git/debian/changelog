@@ -1,3 +1,48 @@
+mesa (23.1.0~rc1+git2304171001.033738b6deb~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 033738b6deb radv: disable fast-clears with CMASK for 128-bit formats
+  * 47bea0f65a7 zink: restore BAR allocation failure demotion
+  * 596b6230594 Revert "ci: disable lima farm, currently out-of-space,
+    needs to be fixed"
+  * d7acb8f0434 .pick_status.json: Update to
+    0d7912d239dac5bf3c8b07f2a6ca467f760d6aa6
+  * 1ec9bcd8444 anv: disable reset query pools using blorp opt on MTL
+  * f4f4e8186fa v3dv/ci: drop fixed failure from fails.txt
+  * cdedebf839d ci/freedreno: fix the a530_piglit job and switch to
+    Weston
+  * 3daf2038d1f rusticl/event: drop work item before updating status
+  * 279c4822c53 meson: keep Mako version checking in accord with build
+    msg
+  * 2fe4eaa3d01 radeonsi/vcn: add an exception of field case for h264
+    decoding
+  * 06d86757d5f v3d: set depth compare function correctly
+  * 4ce4823f4e6 zink: use correct primitives for passthrough gs with
+    tess
+  * 72969b2c87c zink: don't emulate edgeflags for patches
+  * d43aff3a21f radv: re-emit the guardband state when related PSO are
+    bound
+  * 7809a85f142 r600: fix refcnt imbalance related to
+    r600_set_vertex_buffers()
+  * bf6c8ee8645 radv: try to keep HTILE compressed for READ_ONLY_OPTIMAL
+    layout
+  * 1becf6be485 vulkan: ignore rasterizationSamples when the state is
+    dynamic
+  * 4ed3b1ae6b3 intel/vec4: force exec_all on float control instruction
+  * 14df131f8f1 zink: always defer query pool deletion
+  * 204995f16fb zink: pass ctx through query destroy paths
+  * f3969bf7df2 zink: remove atomics from zink_query
+  * 61d1cdba6ea vulkan/runtime: discard unused graphics stages in
+    libraries
+  * 3b6c72fa75e mesa/st/program: don't init xfb info if there are no
+    outputs
+  * 46ff518ebfd radv: fix detecting FMASK_DECOMPRESS/DCC_DECOMPRESS meta
+    pipelines
+  * acce8ed1443 .pick_status.json: Update to
+    8ebc5cbe2b828f34b9bfb32c528d3514ead59798
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 18 Apr 2023 20:06:28 +0200
+
 mesa (23.1.0~rc1+git2304150008.f53f445b972~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
