@@ -1,3 +1,54 @@
+mesa (23.2.0~git2304181649.135039f5264~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 135039f5264 ci: do not retry on forks to get the upstream kernel and
+    rootfs
+  * 2dcd6bed6a9 util: enforce unreachable()'s argument being a literal
+    string
+  * 5863bafbdc9 vk/util: fix buggy usage of unreachable()
+  * 2f9520a5d0e pvr: fix buggy usage of unreachable()
+  * f5ed1c79ae5 compiler: fix buggy usage of unreachable()
+  * 0a0e4854211 amd: fix buggy usage of unreachable()
+  * d291f368a00 ac/llvm: support implicit LOD for nir_texop_tg4
+  * 25b1974e1b7 aco: support implicit LOD for nir_texop_tg4
+  * dbb9f3a8a9e vtn: set is_gather_implicit_lod
+  * 48158636bf1 nir: add is_gather_implicit_lod
+  * 73e9cf60626 anv/format: Fix
+    GetPhysicalDeviceSparseImageFormatProperties definition
+  * 4ec052187a2 vulkan: Fix GetPhysicalDeviceSparseImageFormatProperties
+    definition
+  * 0f7d01cdbe0 mesa/st: Make st_convert_image(_from_unit) declaration
+    match definition
+  * 92a47ba1ae4 llvmpipe: Make lp_build_interp_soa declaration match its
+    definition
+  * 2420b190b8b tgsi: Make ureg_DECL_output_masked definition match its
+    declaration
+  * 3beaaa9ae8c anv: drop lowered storage images code
+  * d04d701cc61 intel/nir: add options to storage image lowering
+  * d4f498a5835 isl: fix a number of errors on storage format support on
+    Gfx9/12.5
+  * c221bfbd85d radv/amdgpu: remove legacy code for querying context
+    status
+  * 767a9324b9c radv/amdgpu: remove legacy code path for creating the BO
+    list
+  * c920d676c01 radv: require DRM 3.27
+  * d561bac6bb1 isl: disable mcs (and mcs+ccs) for color msaa on gfxver
+    125
+  * f6fb189cbd0 rusticl/mem: more region and origin validation
+  * 1c1fb288fdb rusticl: add create_pipe_box to better deal with
+    pipe_box restrictions
+  * 74c43834e7c winsys/gdi: GDI B5G6R5 display target support
+  * d75e631e761 d3d12: Support blit texture uploads
+  * 81595cc8234 d3d12: Respect buffer offsets for sampler views
+  * 2d4fbb3025e anv: Work around the spec question about pipeline
+    feedback vs GPL.
+  * e433925789e anv: Refactor repeated pipeline creation feedback output
+    code.
+  * 647ca816540 anv: Only enable GPL if ANV_GPL=true, or if zink or DXVK
+    are the engine.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 18 Apr 2023 20:04:05 +0200
+
 mesa (23.2.0~git2304161928.74525f8576d~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
