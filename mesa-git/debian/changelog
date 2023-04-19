@@ -1,3 +1,17 @@
+mesa (23.1.0~rc1+git2304182330.9bfd616f198~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 9bfd616f198 zink: make general bo allocation more robust by
+    iterating
+  * 258b472640d zink: restore BAR allocation failure demotion
+  * de46ef3e912 zink: slightly rework memoryTypeIndex selection to pre-
+    determine heap
+  * bb4dd78aa9f zink: move memoryTypeIndex selection down in general bo
+    allocation
+  * 3366b925679 Revert "zink: restore BAR allocation failure demotion"
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Apr 2023 13:18:23 +0200
+
 mesa (23.1.0~rc1+git2304171001.033738b6deb~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
