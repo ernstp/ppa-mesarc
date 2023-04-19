@@ -1,3 +1,35 @@
+mesa (23.2.0~git2304191926.957009978ef~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 957009978ef pvr: Handle special built-in variable loading in vertex
+    shader
+  * d6b30d42b05 ci/lava: Skip regression test if LAVA log file is not
+    present
+  * a893b06691f ci/lava: Use f-strings in job definition
+  * 11a97b644cb ci/lava: Refactor LAVAJobSubmitter and add tests
+  * 710b568dcda ci/lava: Force use of UTC timezones
+  * 5c5aec15b15 ci/lava: Integrate StructuralLogger with AutoSaveDict
+  * eb1945c3d9c bin/ci: Add StructuredLogger to improve log handling
+  * 0ac38249222 ci/lava: Add a simple Structural Logger into submitter
+  * 41f29c53333 ci/lava: Update LogFollower for better section handling
+    and history
+  * cfe644a9e59 ci/lava: Use python-fire in job submitter
+  * c03f7233ca9 ci/lava: Extract LAVA proxy and LAVAJob abstractions
+  * 6f6b892dcad ci/lava: Move job definition stuff to another file
+  * 3fbe699a43d egl: inline driver.GetProcAddress() as it's always
+    _glapi_get_proc_address()
+  * 8b366b6bc09 zink: Use malloc to allocate libs
+  * f89c85e5d01 zink: Use malloc instead of ralloc
+  * c91fa697e9e pvr: Add handling for missing entries in
+    pvr_setup_vertex_buffers()
+  * f0659728e4f pvr: Fix typo in PDS function name
+  * b288ec803ca radv/rt: fix total stack size computation
+  * efc629389ad pvr: Use driver vertex input data in the compiler
+  * 361f58f0eed pvr: Fix a comment in the PDS code
+  * ddda8b88c60 pvr: Collect vertex input data and fill info struct.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Apr 2023 21:15:21 +0200
+
 mesa (23.2.0~git2304191301.da0739b4e4e~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
