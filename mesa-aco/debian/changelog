@@ -1,3 +1,46 @@
+mesa (23.2.0~git2304191301.da0739b4e4e~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * da0739b4e4e pvr: Finish
+    pvr_perform_start_of_render_attachment_clear().
+  * 95820584d06 pvr: Add deferred RTA clears for cores without
+    gs_rta_support.
+  * 060c3db4efd pvr: Complete pvr_generate_custom_mapping()
+  * 9930cafbf28 pvr: Support multiple sources per pass in TQ job
+    submission
+  * f7ff71aec98 pvr: Complete pvr_3d_validate_addr()
+  * 71fe789d354 pvr: Support ipf_creq_pf in pvr_isp_ctrl_stream()
+  * 86ad8681428 pvr: Implement pvr_reroute_to_clip()
+  * 35d2b51c11b pvr: Implement pvr_isp_scan_direction()
+  * 8bcc40ed22c pvr: Complete pvr_double_stride()
+  * 9cfe3b52835 pvr: Complete pvr_unwind_rects()
+  * 8a0a357b652 pvr: Complete pvr_modify_command()
+  * 240bac1e85f pvr: Implement pvr_pbe_setup_modify_defaults()
+  * 0a8334e0545 pvr: Complete pvr_isp_ctrl_stream()
+  * 5ac3c8d0df3 pvr: Support single core transfer queue commands on
+    multicore GPUs
+  * c3e7060ba19 pvr: Implement simple internal format v2 transfer paths.
+  * 838132c0a95 pvr: Implement vkCmdClearDepthStencilImage API.
+  * c468cf29a89 pvr: Implement vkCmdResolveImage2KHR API.
+  * de9c53e3bb6 pvr: Implement vkCmdFillBuffer API.
+  * ed243eca907 pvr: Implement vkCmdCopyImageToBuffer2 API.
+  * 29e120c0924 pvr: Implement vkCmdClearColorImage API.
+  * 5827f0098c9 pvr: Implement vkCmdBlitImage API.
+  * 4c311213294 pvr: Implement vkCmdCopyImage2KHR API.
+  * dc260f6fc33 pvr: Implement vkCmdCopyBufferToImage API.
+  * 96b6b69d8a5 pvr: Implement vkCmdUpdateBuffer().
+  * 480bdff4b52 pvr: Add support to process transfer and blit cmds
+  * 1cdd0ccb373 pvr: replace transfer EOT binary shaders with run-time
+    compiled shaders
+  * 11dea16dee4 pvr: Add support for generating transfer EOT programs
+  * f0b47cfd658 pvr: Add support for generating transfer fragment
+    programs
+  * eeac8336ef7 pvr: Use movc for reading special registers
+  * e8cd78b3196 pvr: Amend validation when checking multiple supported
+    types
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Apr 2023 13:16:04 +0200
+
 mesa (23.2.0~git2304181649.135039f5264~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
