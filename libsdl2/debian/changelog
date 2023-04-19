@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2304182010.535ec1a92~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 535ec1a92 cmake: allow users of sdl2-config.cmake to not add -
+    mwindows to the link options
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Apr 2023 13:15:17 +0200
+
 libsdl2 (2.27.0+git2304062221.7ec9a4385~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
