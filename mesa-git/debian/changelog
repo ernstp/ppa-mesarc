@@ -1,3 +1,47 @@
+mesa (23.1.0~rc2+git2304192014.aa348a35ec8~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * aa348a35ec8 VERSION: bump for 23.1.0-rc2
+  * d6d94ccb59b v3d: add flake spec@ext_framebuffer_blit@fbo-sys-sub-
+    blit
+  * fc2d749a10e iris: use util_framebuffer_get_num_samples when setting
+    ps dispatch samples
+  * bf988cdafa0 zink: avoid zero-sized memcmp for descriptor layouts
+  * 9d8fdeb296d vk/util: fix buggy usage of unreachable()
+  * c90c223c980 pvr: fix buggy usage of unreachable()
+  * f2911b79e50 compiler: fix buggy usage of unreachable()
+  * 0a0822e6014 amd: fix buggy usage of unreachable()
+  * 3eeb4bedfac isl: fix a number of errors on storage format support on
+    Gfx9/12.5
+  * 0ffe4381b1c isl: disable mcs (and mcs+ccs) for color msaa on gfxver
+    125
+  * 27404a86178 d3d12: Respect buffer offsets for sampler views
+  * 846080db5d4 isl: don't set inconsistent fields for depth when using
+    stencil only
+  * e6eb4df3384 lima: fix refcnt imbalance related to framebuffer
+  * db5c94d170b iris/bufmgr: Handle flat_ccs for BO_ALLOC_ZEROED
+  * 808a95d24a4 iris/bufmgr: Add and use zero_bo
+  * 612e6e6038f iris: Allocate ZEROED BOs for shared resources
+  * 599749570ce iris: Fix close of exported bos
+  * e5df9a1d74a vulkan/overlay: deal with unknown pNext structures
+  * eb3df9b189d r600: fix refcnt imbalance related to
+    evergreen_set_shader_images()
+  * de36799f158 r600: Report multi-plane formats as unsupported
+  * 8687ef15a3a egl/wayland: fix oob buffer access during buffer_fds
+    clean up
+  * 61cfafda57b .pick_status.json: Update to
+    543b6ca7c4b00c4bfff5668ba0a0643d565db201
+  * 0cd5d686181 zink: make general bo allocation more robust by
+    iterating
+  * ad7cbe25904 zink: restore BAR allocation failure demotion
+  * 3c2be41e1c4 zink: slightly rework memoryTypeIndex selection to pre-
+    determine heap
+  * 27dd6245d3c zink: move memoryTypeIndex selection down in general bo
+    allocation
+  * 907621dc09d radv: disable fast-clears with CMASK for 128-bit formats
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 19 Apr 2023 21:17:53 +0200
+
 mesa (23.1.0~rc1+git2304182330.9bfd616f198~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
