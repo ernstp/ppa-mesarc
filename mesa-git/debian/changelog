@@ -1,3 +1,40 @@
+mesa (23.1.0~rc2+git2304201810.0a544636d8d~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 0a544636d8d zink: check for
+    extendedDynamicState3DepthClipNegativeOneToOne for ds3 support
+  * fcae6690a89 drisw: don't leak the winsys
+  * a8b33077d50 zink: don't bitcast bool deref loads/stores
+  * 58288e433d8 radv: fix usage flag for 3D compressed 128 bpp images on
+    GFX9
+  * dac2144474e radv: do not allow 1D block-compressed images with
+    (extended) storage on GFX6
+  * 7fb9d5480dd aco: fix nir_f2u64 translation
+  * 1d74e3ca8e0 vulkan/wsi: fix -Wnarrowing warning
+  * 8de2b467202 util/debug: move null checks out of debug message macro
+  * 47e1f5857a4 zink: only print copy box warning once per resource
+  * 7b2ba0fa1d7 zink: emit demote cap when using demote
+  * ec7e11cfda9 nine: add fallback for D3DFMT_D16 in
+    d3d9_to_pipe_format_checked
+  * 26a1bbda0b8 nir: fix 2 bugs in nir_create_passthrough_tcs
+  * ca5634d85b4 translate: do not clamp element index in generic_run
+  * 2eb50cdcf5c aco: remove SMEM_instruction::prevent_overflow
+  * 25756dd35f5 radv/rt: fix total stack size computation
+  * 31f95de776a zink: fix non-db bindless texture buffers
+  * 7c1dd3e93b1 nir/lower_alpha_test: rzalloc state slots
+  * d5b5a10603e .pick_status.json: Update to
+    3017d01c9ded9c9fd097b600081b1bbe86e90fb8
+  * fec80690cce zink: avoid recursion during msrtss blits from flushing
+    clears
+  * 5d8f3fce1be zink: skip msrtss replicate if the attachment will be
+    full-cleared
+  * 6c3329a5199 zink: handle 'blitting' flag better in msrtss
+    replication
+  * 69a03f8dd23 zink: manually re-set framebuffer after msrtss replicate
+    blit
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Apr 2023 19:59:19 +0200
+
 mesa (23.1.0~rc2+git2304192014.aa348a35ec8~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
