@@ -1,3 +1,48 @@
+mesa (23.2.0~git2304211919.c3c63cb1d89~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * c3c63cb1d89 broadcom: fix typos
+  * 177c92fe7ca zink/ci: remove xt_framebuffer_multisample-interpolation
+    fail
+  * a004825266f zink: don't render with multisampling when it is
+    disabled
+  * 14d58926099 zink: add to multisample field to
+    `zink_gfx_pipeline_state`
+  * 420f2c0878f zink: add `single_sample` to fs key
+  * d2ccdc3e8da mesa: fix ms fallback texture creation
+  * c29359a008d mesa/st: try to block multisampled texsubimage from
+    doing cpu writes
+  * 56840e4c895 anv: rework Wa_14017076903 to only apply with occlusion
+    queries
+  * 8f23a5dd965 radv/ci: remove one expected test failure on PITCAIRN
+  * e45fa939b09 r600/sfn: fix memory leak related to sh_info->arrays
+  * bfabd2dec73 zink/ci: document that some tests no longer fail
+  * 7af6616030d radv/ci: only reboot on hangs for vkcts-navi10-valve
+  * a65fe883f44 ci/b2c: allow not specifying a reboot condition
+  * 64822bc35fe radv/ci: document all the flakes we hit while I was away
+  * ad508e50bfe radv/ci: disable the vkcts-navi21-llvm-valve job
+  * a4d99aee917 v3d/ci: annotate failure
+  * a86d18a8c49 v3d: use primitive type to get stream output offset
+  * 0e88c04ed0a ci: Move Vulkan CTS patches to their own directory
+  * 9a6b70da0bb zink: Add some printfs when initialization fails
+  * a1098a1e45f mesa/draw: fix -Wformat warning
+  * b83af7e5b81 freedreno/a6xx: Fix valid_format_cast logic for newer
+    a6xx
+  * 31ced4c5ad2 dzn: Support aniso-with-point-mip samplers
+  * 4e2c5ba1007 dzn: Use narrow quadrilateral lines when supported
+  * 0b3f2a3c7db dzn: Support dynamic depth bias via command list instead
+    of PSO
+  * c6bc4459e5f dzn: Add physical device arg to format lookup
+  * 1e11645a309 dzn: Remove driconf for quad ops in vertex stages
+  * fe128dca28c spirv2dxil: Lower quad ops in non-fragment/compute
+    stages
+  * 3c64f3dcbca ci: rework vulkan validation layer build script
+  * fcb72ffd0c6 intel/compiler/gfx12.5+: Lower 64-bit cluster_broadcast
+    with 32-bit ops
+  * 74ab9401561 radv: update binning settings to work around GPU hangs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Apr 2023 19:57:00 +0200
+
 mesa (23.2.0~git2304191926.957009978ef~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
