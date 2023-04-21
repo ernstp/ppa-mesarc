@@ -1,3 +1,10 @@
+libsdl2 (2.27.0+git2304192212.120bc77e9~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 120bc77e9 Report PS3 accelerometer values in m/s2 instead of Gs
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Apr 2023 19:56:12 +0200
+
 libsdl2 (2.27.0+git2304182010.535ec1a92~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
