@@ -1,3 +1,11 @@
+mesa (23.1.0~rc2+git2304212200.e3ebeedf4be~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * e3ebeedf4be wsi/x11: Fix present ID signal when IDLE comes before
+    COMPLETE.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 22 Apr 2023 15:31:51 +0200
+
 mesa (23.1.0~rc2+git2304201810.0a544636d8d~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
