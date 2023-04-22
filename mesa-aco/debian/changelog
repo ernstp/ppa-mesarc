@@ -1,3 +1,31 @@
+mesa (23.2.0~git2304220328.068738eea9e~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 068738eea9e util: Add mesa_blake3 wrappers.
+  * 0e30076d834 util/blake3: Patch with hidden visibility for asm
+    symbols.
+  * 77826e83524 util: Add a copy of BLAKE3 hash library.
+  * a01d9ac330e docs: update calendar for 23.0.3
+  * 404e8991caa docs: update calendar for 23.0.2
+  * 328e832750e docs: update calendar for 23.0.1
+  * d6821080cda docs: Add sha256 sum for 23.0.3
+  * 48e753d4c89 docs: add release notes for 23.0.3
+  * 63ad833dd0a docs: Add sha256 sum for 23.0.2
+  * 10a5ca13b56 docs: add release notes for 23.0.2
+  * 6a5a7e791fd docs: Add sha256 sum for 23.0.1
+  * ef3e17bfb01 docs: add release notes for 23.0.1
+  * 37622b33c4b freedreno: Inline single-caller helpers
+  * d4e42d31c05 freedreno: Remove unused fd_batch_reset()
+  * e3e077c9d48 r600/sfn: Lower tess levels to vectors in TCS
+  * 32f7ff2c204 wsi/x11: Fix present ID signal when IDLE comes before
+    COMPLETE.
+  * 0b1cd7eb079 Revert "ci/radv: Demote navi21 to manual until recent
+    flakiness resolves."
+  * 84d8ea6e2b4 radv/amdgpu: fix adding continue preambles and
+    postambles BOs to the list
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 22 Apr 2023 15:29:32 +0200
+
 mesa (23.2.0~git2304211919.c3c63cb1d89~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
