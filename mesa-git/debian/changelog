@@ -1,3 +1,50 @@
+mesa (23.1.0~rc2+git2304242318.eef5cfa9011~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * eef5cfa9011 zink: fix array copying in pv lowering
+  * 24a283eefd5 nir/gs: fix array type copying for passthrough gs
+  * d9223041217 zink: add z32s8 as mandatory GL3.0 profile attachment
+    format
+  * b62f65c9cc1 zink: don't pin flush queue threads if no threads exist
+  * 5e69474f24d rusticl: don't set size_t-is-usize for >=bindgen-0.65
+  * 08f3e5b8897 ac/llvm: support shifts on 16 bit vec2
+  * d8f9c72f739 radeonsi: lower mul_high
+  * 2f9c0e8486f broadcom/compiler: fix incorrect check for SFU op
+  * 84d12a8d14c broadcom/compiler: add a v3d_qpu_instr_is_legacy_sfu
+    helper
+  * c1b0f51310b broadcom/compiler: fix v3d_qpu_uses_sfu
+  * 2a0c7a841a6 zink: fix line strip offsets in pv mode emulation
+  * 04d7bedac76 zink: fix exit condition on pv emulation loop
+  * 3641d998146 zink: use ring buffer to preserve last element
+  * 7ba0df589d4 zink: fix pv mode lowring index calculation
+  * 987a2a74fa8 zink: refcount the correct query pool
+  * ca0ac6eae51 zink: fix incorrect line mode check for bresenham
+  * 147ebc76380 zink: take location_frac into account in
+    lower_line_smooth_gs
+  * 64b04ee9230 zink: do not emit line stipple dynamic state when
+    emulating
+  * 0bddae469f9 radv: add the perf counters BO to the preambles BO list
+  * c92c6a2b23a draw: fix viewmask iterating
+  * 53838076188 ci: rework vulkan validation layer build script
+  * 439c9b11969 .pick_status.json: Update to
+    c060b649c5a866f42e5df73f41c6e2809cf30e99
+  * 8cdf019db72 radv: track DB_COUNT_CONTROL changes to avoid context
+    rolls
+  * fca7908b9ee radv: delay enabling/disabling occlusion queries at draw
+    time
+  * 5a21346e0c5 radv: wait for occlusion queries in the resolve query
+    shader
+  * 6f31d823a3a r600/sfn: make sure f2u32 is lowered late and correctly
+    for 64 bit floats
+  * 1fceb50fffc r600/sfn: Lower tess levels to vectors in TCS
+  * 52d902665eb radv/amdgpu: fix adding continue preambles and
+    postambles BOs to the list
+  * 04bca7b5a3c anv: rework Wa_14017076903 to only apply with occlusion
+    queries
+  * 30788636b3b r600/sfn: fix memory leak related to sh_info->arrays
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Apr 2023 18:20:24 +0200
+
 mesa (23.1.0~rc2+git2304212200.e3ebeedf4be~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
