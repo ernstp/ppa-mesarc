@@ -1,3 +1,12 @@
+wayland-protocols (1.31+git2304251341.cc0cd4a~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * cc0cd4a ci: skip ci-fairy checks on main branch
+  * fbf7fc3 ci: use detached CI pipelines
+  * 77b4681 Add ext-foreign-toplevel-list protocol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Apr 2023 18:22:38 +0200
+
 wayland-protocols (1.31+git2304181406.fefd185~f~base2) focal; urgency=medium
 
   * New snapshot:
