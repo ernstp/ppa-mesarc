@@ -1,3 +1,14 @@
+libsdl2 (2.27.0+git2304242100.8b39eb9b1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 8b39eb9b1 wayland: Fixes a memory leak wheere primary selection
+    isn't freed
+  * 0f2322acf hidapi/mac: replace sprintf uses with snprintf.
+  * 5f344c17c hidapi/mac: import mainstream commit c1b9d2ad
+  * a688ecd6f Check return value of SDL_malloc()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 25 Apr 2023 18:17:21 +0200
+
 libsdl2 (2.27.0+git2304192212.120bc77e9~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
