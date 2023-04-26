@@ -1,3 +1,45 @@
+mesa (23.1.0~rc3+git2304261905.d04b95b27e7~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * d04b95b27e7 VERSION: bump for 23.1.0-rc3
+  * e2066032598 aco: don't move exec reads around exec writes
+  * ca6ceb43967 r300: fix unconditional KIL on R300/R400
+  * 7ddbf31e624 ac/nir/ps: fix null export write mask miss set to 0xf
+  * 72d641acf7c svga: set PIPE_CAP_VERTEX_ATTRIB_ELEMENT_ALIGNED_ONLY
+    for VGPU10 device
+  * 4cc6a3f4819 radv/rt: properly destroy radv_ray_tracing_lib_pipeline
+    on error
+  * a2a577ea17b aux/draw: fix memory leak related to ureg_get_tokens()
+  * 75b3939cf7c radv: Don't leak the RT prolog binary
+  * 93f4b5667c7 radv/rt: Plug some memory leaks during shader creation
+  * 40cdd22a1ff nouveau/codegen: Check nir_dest_num_components
+  * b44e6d297f9 freedreno: Fix resource tracking vs rebind/invalidate
+  * ef41157341f radv/rmv: Fix import memory
+  * ec55e467f50 radv/rmv: Fix creating RT pipelines
+  * b7fb9937a25 zink: fix store subsitution in `lower_pv_mode_gs_store`
+  * 025b6a79c6d anv: implement state cache invalidate for Wa_16013063087
+  * aa48b8dc8da anv: cleanup bitmask construction for PIPELINE_SELECT
+  * 49d09360b5c iris: implement state cache invalidate for
+    Wa_16013063087
+  * a1016ce65c4 llvmpipe: do late init for llvm builder
+  * 34a8362025c gallivm: break out native vector width calc for reuse
+  * 372e70b03b7 util/log: Fix log messages over 1024 characters.
+  * 55dc3b50092 blob: Don't valgrind assert for defined memory if we
+    aren't writing.
+  * e6d8483846f .pick_status.json: Update to
+    3f14fd8578549e34db2f564396f300819b2ff10f
+  * 67f32f8ac87 zink: fix array copying in pv lowering
+  * 68a35bad861 nir/gs: fix array type copying for passthrough gs
+  * 1f92626c0bc zink: add z32s8 as mandatory GL3.0 profile attachment
+    format
+  * a59f776b74b zink: don't pin flush queue threads if no threads exist
+  * 834a0807327 rusticl: don't set size_t-is-usize for >=bindgen-0.65
+  * 1a81041677a ac/llvm: support shifts on 16 bit vec2
+  * 29aa8c52b3e radeonsi: lower mul_high
+  * e56bc0410a3 broadcom/compiler: fix incorrect check for SFU op
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Apr 2023 00:32:21 +0200
+
 mesa (23.1.0~rc2+git2304242318.eef5cfa9011~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
