@@ -1,3 +1,43 @@
+mesa (23.2.0~git2304262345.ad1e64551d1~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * ad1e64551d1 frontend/nine: Fix num_textures count
+  * 13eaa7cdd0c zink: reapply VkImageViewUsageCreateInfo when rebinding
+    a surface
+  * 792c2956ac3 zink: break out VkImageViewUsageCreateInfo applying for
+    reuse
+  * c39a2d67eac crocus: fix refcnt imbalance related to framebuffer
+  * 3af2ab02f3c rusticl/program: use if let to get rid of an unwrap in
+    build
+  * f745a07b36c rusticl/program: rework dynamic Program state
+  * 2b01934bc87 rusticl: Move nir compilation to Program
+  * feb41032724 zink: prune some validation errors from ci
+  * 1ede7c053b7 pan/bi: Don't set has_fsub
+  * 5e6c7161734 docs: add missing ACO_DEBUG=force-waitdeps
+  * b0b55dc602b docs: rename ACO_DEBUG=noscheduling to ACO_DEBUG=nosched
+  * 218aa779413 egl: Clear EGL_WINDOW_BIT for non-double-buffered
+    EGLConfigs
+  * 3f14fd85785 radv: reserve command buffer index for SQTT
+  * 9c33c4dcbe8 ac/sqtt: add a helper to get cmdbuf IDs per queue
+  * a7b4573c119 ac/sqtt: add rgp_sqtt_marker_cb_id definition
+  * 5e20fbd4245 aco: don't move exec reads around exec writes
+  * 2c773440484 bump VVL to 1.3.248
+  * 5c214117ad1 intel/tools: add ability to dump out raw kernels data
+  * ca634459c72 r300: add CI list of known rv370 dEQP failures
+  * db6c3cd13de r300: fix unconditional KIL on R300/R400
+  * 7d4eb78e1b2 radv/ci: document another vkcts flake on vega10
+  * c5ad3d3bc92 docs: correct spelling of "frame"
+  * 2234a7f86fa docs: correct spelling of "tagged"
+  * 870871c6a72 docs: correct spelling of "source"
+  * c3400a787b5 docs: toplevel -> top-level
+  * 690a05579bf docs: vlan -> VLAN
+  * 1a42e8ac442 docs: use correct tick for "doesn't"
+  * 9f410bcb96b docs: perfetto -> Perfetto
+  * c1ebded76e5 docs: Anv -> ANV
+  * 1c35ad0d63d docs: cma -> CMA
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Apr 2023 00:29:25 +0200
+
 mesa (23.2.0~git2304251736.bc8f7c53af7~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
