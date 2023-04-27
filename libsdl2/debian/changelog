@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2304271908.132b88749~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 132b88749  wayland: Destroy proxy wrappers and callbacks before
+    event queues
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Apr 2023 20:52:31 +0200
+
 libsdl2 (2.27.0+git2304242100.8b39eb9b1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
