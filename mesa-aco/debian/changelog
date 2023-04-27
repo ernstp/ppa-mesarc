@@ -1,3 +1,48 @@
+mesa (23.2.0~git2304271824.5969541123d~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 5969541123d zink: set when pipeline dirty flag when multisample
+    changes
+  * 9c4e3c90206 tgsi: use locale independent float and double parsing
+  * 27eafdcbd55 util: check and initialize locale before using it
+  * 7373f25c093 mesa/main: rework locale setup/teardown
+  * 306c6e12a59 frontends/va: define va av1 encoding caps
+  * 03c9a81959c radeonsi/vcn: use PIPE_ENC_FEATURE enum
+  * 5edbecb8569 frontends/va: adding va av1 encoding functions
+  * 35c21509888 radeonsi/vcn: add av1 encoding ib packages and get_info
+  * 4697b71c4e3 radeonsi/vcn: add some av1 encoding function
+  * 8b3295b9ed7 radeonsi/vcn: add av1 enc data structure
+  * 0b31c5a00c9 gallium/pipe: add av1 encoding data structure in pipe
+  * f33f26e9ffb radeonsi/vcn: add av1 dpb variables and cdf table
+  * b13f87031fd radeonsi/vcn: remove extra zero bytes from bitstream
+  * bb08f061d96 radeonsi/vcn: merge get_output_format_param function
+  * a4f96446fb9 radeonsi/vcn: enable swizzle mode in encoding ref
+    frames.
+  * 0a11d5f598e radeonsi/vcn: enable 2 pass search center map
+  * 869c34c1ca3 radeonsi/vcn: add macros used in av1 encoding
+  * d0caa50dcda aco: don't move exec writes around exec writes
+  * 65265d3e32d anv: Take into consideration physical device max heap
+    size to set maxStorageBufferRange
+  * 7508f4b4b6d pvr: drop unused variable
+  * 49cc6edf840 mesa: remove unused bools
+  * 71c5db5e112 mesa: don't share reset status across contexts
+  * b4a2cb1e166 winsys/amdgpu: use the no-op helper to detect if reset
+    completion
+  * 45cd75cdad3 winsys/amdgpu: add a helper function to submit a no-op
+    job
+  * e528823400e radeonsi: stop reporting reset to app once gpu recovery
+    is done
+  * 50225311200 amd: update amdgpu_drm.h
+  * e996599ed07 ac/rgp: update SQTT_FILE_CHUNK_TYPE_ASIC_INFO to minor
+    version 5
+  * dd91faaddc2 ac/rgp: update SQTT_FILE_CHUNK_TYPE_API_INFO to minor
+    version 2
+  * 4cbb0f7ec38 ac/sqtt: add missing EventUnknown to
+    rgp_sqtt_marker_event_type
+  * 637a6813db2 ac/sqtt: add new bits to rgp_sqtt_marker_barrier_end
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Apr 2023 20:53:14 +0200
+
 mesa (23.2.0~git2304262345.ad1e64551d1~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
