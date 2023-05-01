@@ -1,3 +1,46 @@
+mesa (23.1.0~rc3+git2305011352.7d70a8d820c~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 7d70a8d820c ci: disable all a306/a530/a630 jobs
+  * cd65f4b40a1 radv: Reserve space for indirect descriptor set address
+    writes.
+  * ec208bcb48a zink: add extendedDynamicState3DepthClipNegativeOneToOne
+    to profile
+  * 0d37bf2a31b llvmpipe: fix native vector width init
+  * 865ff2c5bad radeonsi/vcn: correct cropping for hevc case
+  * 0d879e5bbd3 ac/nir: fix 8-bit/10-bit PS exports clamping
+  * 91859a9a546 iris: Allow shared scanout buffer to be placed in smem
+    as well
+  * 192de0108c2 clc: Add clang frontendhlsl module to fix build of
+    microsoft-clc with llvm 16+
+  * 8dbb8a42da4 clc: Add clangASTMatchers to fix static llvm build of
+    microsoft-clc with LLVM 16+
+  * 731681db4b0 compiler/clc: Fix embedded clang headers (microsoft-clc)
+    for LLVM 16+
+  * 46d57d5de94 intel/fs: fix per vertex input clamping
+  * 2d24f535ae3 draw: fix robust ubo size calc
+  * 664eada4e9c dri/android: Fix MSAA resolve
+  * ff08a6b4021 tgsi: use locale independent float and double parsing
+  * 4b36d85fad9 util: check and initialize locale before using it
+  * 9ecc019d4d1 mesa/main: rework locale setup/teardown
+  * f24980f7413 aco: don't move exec writes around exec writes
+  * 78f568bdc6c wgl: Fix unintentional assignment on assert.
+  * ddd39dbf89b anv: fix anv_nir_lower_ubo_loads pass
+  * 3a9a3356d35 nir/divergence: add missing load_global_constant_*
+    intrinsics
+  * b1c12c5eef0 radv: only enable
+    extendedDynamicState3ConservativeRasterizationMode on GFX9+
+  * 9ebda0a63c1 frontend/nine: Fix num_textures count
+  * 2236dd6d551 zink: reapply VkImageViewUsageCreateInfo when rebinding
+    a surface
+  * bed64b7062f zink: break out VkImageViewUsageCreateInfo applying for
+    reuse
+  * 1314f03123b crocus: fix refcnt imbalance related to framebuffer
+  * 4811f46d839 .pick_status.json: Update to
+    040aeb5a23e5cc8a71a352e55282d514dd2ab64f
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 01 May 2023 17:32:58 +0200
+
 mesa (23.1.0~rc3+git2304261905.d04b95b27e7~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
