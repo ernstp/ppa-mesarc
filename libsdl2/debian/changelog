@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2305010638.707e9397c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 707e9397c Removed memset_pattern4() from SDL headers
+  * f72213c4a By default, OpenBSD uses Linux controller mappings
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 01 May 2023 17:29:56 +0200
+
 libsdl2 (2.27.0+git2304271908.132b88749~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
