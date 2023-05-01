@@ -1,3 +1,52 @@
+mesa (23.2.0~git2305011615.98bb47ee455~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 98bb47ee455 ci: Enable rusticl in the fedora-release job
+  * 96dd3947875 ci: Upgrade fedora-release job to Fedora 38
+  * 5c6b07246d8 ci: Drop -Wno-error=array-bounds from fedora-release job
+  * dce97f090a7 clover/llvm: Use std::nullopt already with LLVM 16
+  * 4ee15720087 clover/llvm: Use llvm::DataLayout::getABITypeAlign with
+    LLVM >= 16
+  * 6bab67f5a66 svga: Make declaration of emit_input_declaration match
+    definition
+  * ee8b572b403 svga: Make vmw_svga_winsys_buffer_map definition match
+    declaration
+  * 6c7400f4e80 vulkan: Fix GetPhysicalDeviceSparseImageFormatProperties
+    definitions
+  * dbab98d9d63 radv: enable RADV_THREAD_TRACE_CACHE_COUNTERS by default
+  * f092f548cb8 r600/sfn: assign window_space_position in shader state
+  * bbd265b8e8b r600+sfn: Assign ps_conservative_z and switch to NIR
+    defines
+  * c8151891124 v3d: apply 1D texture miplevel alignment in arrays
+  * 040aeb5a23e radv: Add asserts in radeon_emit{,_array}.
+  * 7893040f807 radv: Add stricter space checks.
+  * 4c204db0a79 radv: Reserve space in the ACE pre/postambles.
+  * 17a7c55ea7e radv: Reserve space for indirect descriptor set address
+    writes.
+  * 775e42e6b84 r300: remove simple duplicate ARL instructions
+  * c5b3d488f9b mesa/main: make ffvertex output nir
+  * 7610747e944 mesa/main: allow passing nir-shaders to
+    st_program_string_notify
+  * fdd20b9469d mesa/main: drop disasm-code from ffvertex_prog.c
+  * 972c9235928 mesa/main: clean up white-space in ffvertex_prog.c
+  * 02493aeffc2 ci/skqp: update to the Android CTS 12.1_r5 version
+  * a3ae424e0c0 ci/skqp: replace license with SPDX and extract the used
+    branch
+  * 5c1a8d3b774 meson: Don't use masm with VS backend
+  * b7f815117ef Revert "zink: add `single_sample` to fs key"
+  * e7b03fa3dcb Revert "zink: add to multisample field to
+    `zink_gfx_pipeline_state`"
+  * 8cbd6acf12b Revert "zink: don't render with multisampling when it is
+    disabled"
+  * 6b9f1a540d9 Revert "zink/ci: remove xt_framebuffer_multisample-
+    interpolation fail"
+  * 9a8a397294c Revert "zink: set when pipeline dirty flag when
+    multisample changes"
+  * 0b64c737796 zink: add extendedDynamicState3DepthClipNegativeOneToOne
+    to profile
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 01 May 2023 17:30:37 +0200
+
 mesa (23.2.0~git2304271824.5969541123d~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
