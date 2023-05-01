@@ -1,3 +1,10 @@
+libdecor-0 (0.1.99+git2304041214.05f132e~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 05f132e Fix creation of narrow, non-resizeable window
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 01 May 2023 17:29:41 +0200
+
 libdecor-0 (0.1.99+git2302151956.a254d0c~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
