@@ -1,3 +1,53 @@
+mesa (23.2.0~git2305032028.300327ba19d~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 300327ba19d ci/zink: Disable Freedoom trace on ANV
+  * 36bb5f1f704 radv/ci: document a series of recent regressions
+  * 11a853e912c wsi/wayland: Do not assert that all present IDs have
+    been waited on.
+  * 577b3c7bb2d wsi/wayland: Simplify wait logic for present wait.
+  * 43f868d1757 wsi/wayland: Support VK_KHR_present_wait
+  * 47cd010931a wayland: generalize wayland-protocols code generation
+  * 0b251d43622 radv: Add driconf to always drain waves before writing
+    timestamps
+  * 284e6048722 radv: Always call si_emit_cache_flush before writing
+    timestamps
+  * b59935e2e77 radv/meta: rename dest to dst
+  * 63b5b93dd31 radv: replace radv_get_levelCount() by
+    vk_image_subresource_level_count()
+  * 963f51158d4 radv: replace radv_get_layerCount by
+    vk_image_subresource_layer_count()
+  * a77c88f1e89 radv: fix fast-clearing images with
+    VK_REMAINING_{ARRAY_LAYERS,MIP_LEVELS}
+  * de61eddc02e radv: fix invalid type for usage in
+    radv_get_buffer_memory_requirements()
+  * c950098abb5 broadcom/compiler: move buffer loads to lower register
+    pressure
+  * efc94390f71 docs: fix edit-links
+  * 2cbc24b9da0 turnip: fix buffer markers using wrong addresses
+  * df08ed7d1c8 radv: Move all the dirty flags from TES binding to TCS
+    binding.
+  * f572344901e radv: use lower_ballot_bit_count_to_mbcnt_amd
+  * b93c92eba33 nir: lower ballot_bit_count_exclusive/inclusive to
+    mbcnt_amd
+  * 5489033fa85 intel/compiler: make uses_pos_offset a tri-state
+  * ef01a9cf3b4 mesa/main: drop unused variable
+  * 9f522ac0c65 broadcom/compiler: don't allocate undef to rf0
+  * 4ca8be82d57 r600: fix refcnt imbalance related to
+    atomic_buffer_state
+  * 0937a02d96b vulkan: rename vk_physical_device_features.py to
+    vk_physical_device_features_gen.py
+  * 9cf1cdfaa89 vulkan: put TEMPLATE_H before TEMPLATE_C
+  * 005cfc63fc7 vulkan: put interesting code before boring code
+  * 64f4b277ea6 vulkan: inline vk_get_physical_device_features into
+    vk_common_GetPhysicalDeviceFeatures2
+  * 528d430ca11 v3dv: use common vkGetPhysicalDeviceFeatures2
+  * 99bc68f042f panvk: use common vkGetPhysicalDeviceFeatures2
+  * a252a9dc24d anv: move get_features after get_device_extensions (ugly
+    diff)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 May 2023 21:05:22 +0200
+
 mesa (23.2.0~git2305011615.98bb47ee455~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
