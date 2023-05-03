@@ -1,3 +1,36 @@
+mesa (23.1.0~rc4+git2305031907.fd6968991a1~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * fd6968991a1 VERSION: bump for 23.1.0-rc4
+  * 84889a982cf radv: Move all the dirty flags from TES binding to TCS
+    binding.
+  * 61b937290ec .pick_status.json: Update to
+    efc94390f716b70ac1d5b09c6f949f938aeadcac
+  * 88f1aac5b28 r600: fix refcnt imbalance related to
+    atomic_buffer_state
+  * 788cfe061bc vulkan: Actually increment the count of objects in
+    GetPipelineCacheData.
+  * 4514207d25c vulkan: Handle alignment failure in the pipeline cache.
+  * e561939b053 dzn: Hook up subgroup size to compute shader compilation
+  * a72e0e57eb2 crocus: fix refcnt imbalance related to
+    crocus_create_surface()
+  * 53efaeca180 zink: only unset a generated tcs if the bound tcs is the
+    generated one
+  * d4b5487508c nvc0: do not randomly emit fences.
+  * 4e2e63ee002 radv: add padding to radv_shader_binary_legacy
+  * 6ad6513226e vulkan/pipeline_cache: replace raw data objects on cache
+    insertion of real objects
+  * e2ccae5faed nir: fix constant-folding of 64-bit fpow
+  * b4f9c82d5df radv: fix dynamic depth clamp enable support
+  * 2be3b5f78d0 radv: respect VK_QUERY_RESULT_WAIT_BIT in
+    GetQueryPoolResults
+  * 8bddabbf534 r600/sfn: assign window_space_position in shader state
+  * 45540ed3890 v3d: apply 1D texture miplevel alignment in arrays
+  * 69b024168df .pick_status.json: Update to
+    9f522ac0c65ceae11ad1a4e84ec9f32a9393a25c
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 May 2023 21:07:39 +0200
+
 mesa (23.1.0~rc3+git2305011352.7d70a8d820c~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
