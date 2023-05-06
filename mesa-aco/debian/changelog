@@ -1,3 +1,41 @@
+mesa (23.2.0~git2305060935.1ae09f3effd~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 1ae09f3effd r600/sfn: fix cube to array lowering for LOD
+  * 05a3eba0946 r600/sfn: Ass support for image_samples
+  * 19961f81950 docs/tgsi: use ll and gg for left and right shift
+  * abcd3423e9b docs/tgsi: fixup latex for TEX and TEX2
+  * b7327296d52 docs/tgsi: do not use math-block for non-latex
+  * f94c95ab5a1 docs/tgsi: use math-notations for conditionals
+  * 02908b26bbb docs/tgsi: wrap overly long lines
+  * d22ee93f97e docs/tgsi: fixup bad latex
+  * d8871ac2edf docs/tgsi: fix bad latex
+  * f84d1033c16 docs/tgsi: fix up indent
+  * cb4e4fc5de4 dzn: fix pointer type mismatch
+  * 191fa52d0cd ci/turnip: Drop the IUB bug fallout flakes.
+  * 12c10f2fe99 ci/turnip: Drop an xfail from the full run for a recent
+    fix.
+  * 80b541513dd ci/radv: Disable flaky heaven d3d9 trace.
+  * a8af5040419 ci/radeonsi: Mark glx-make-current as flaky.
+  * d6ece34418d intel/tools: decode ACTHD printed by newer kernels
+  * 499f332a3a5 radeonsi/vcn: fix decoding bs buffer alignement issue.
+  * 6d84b34359d zink: add ZINK_DEBUG=optimal_keys
+  * dcf3adbde7e zink: disable EXT_shader_object if !optimal_keys
+  * 4cb900609fc zink: break out optimal key handling into separate
+    function
+  * 13f98c8101b zink: move EXT_shader_object check to another place
+  * e64f5f261e2 anv: increase instruction heap to 2Gb
+  * c60e94d61ff anv: make internal address space allocation more dynamic
+  * 843afd4c639 anv: link anv_bo to its VMA heap
+  * bb8e31b7ed5 anv: avoid hardcoding instruction VA constant in shaders
+  * 53b77a8102c anv: remove 48bit address space checks
+  * c35d430460d isl: fix layout for comparing surf and view properties
+  * 9471ffa70a0 intel/fs: fix scheduling of HALT instructions
+  * 9b6945bb652 amd: Cleanup old GS intrinsics code.
+  * 5bb04dc5286 ac/nir/ngg: Use sendmsg in NGG lowering.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 06 May 2023 12:23:08 +0200
+
 mesa (23.2.0~git2305032028.300327ba19d~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
