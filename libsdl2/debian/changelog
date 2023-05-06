@@ -1,3 +1,10 @@
+libsdl2 (2.27.0+git2305041601.3e64fec9f~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 3e64fec9f Fix bug memory acess
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 06 May 2023 12:22:25 +0200
+
 libsdl2 (2.27.0+git2305010638.707e9397c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
