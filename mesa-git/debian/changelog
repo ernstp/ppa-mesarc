@@ -1,3 +1,55 @@
+mesa (23.1.0~rc4+git2305052013.4f1de84cbd7~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * 4f1de84cbd7 pvr: Don't advertise S8_UINT support
+  * 430124f005c ci/radeonsi: Mark glx-make-current as flaky.
+  * f07e8d0a36b radeonsi/vcn: fix decoding bs buffer alignement issue.
+  * 9a1bc5e34a0 isl: fix layout for comparing surf and view properties
+  * 6e3d86c8099 intel/fs: fix scheduling of HALT instructions
+  * bbe4e42945c aco: Disallow constant propagation on SOPP and fixed
+    operands.
+  * 0de2d41055e zink: take location_frac into account in pv emulation
+  * 566a97ce4a6 panvk: clear dangling pointers
+  * 46fa88e80a0 llvmpipe: fixup refactor copypasta
+  * 1d92d341a7e dzn: fix pointer type mismatch
+  * 5b220799d58 dzn: Delete queue-level event waits
+  * 94fddc4324c device_select_layer: pick a default device before
+    applying DRI_PRIME
+  * 30ed0886644 device_select_layer: apply DRI_PRIME even if default
+    device is > 1 to match opengl behavior
+  * 8b8fd819066 device_select_layer: fix inverted strcmp in
+    device_select_find_dri_prime_tag_default (v1)
+  * f4fc26abdfb svga: use util_unreference_framebuffer_state to unref fb
+    state
+  * fa4bf92733b llvmpipe: use util_unreference_framebuffer_state to
+    unref fb state
+  * bd9518ceb58 vc4: use util_unreference_framebuffer_state to unref fb
+    state
+  * 79377dae8cf v3d: use util_unreference_framebuffer_state to unref fb
+    state
+  * d8b3feeb8a3 softpipe: use util_unreference_framebuffer_state to
+    unref fb state
+  * 95354d8285c iris: use util_unreference_framebuffer_state to unref fb
+    state
+  * 67ccf01ff5e i915: use util_unreference_framebuffer_state to unref fb
+    state
+  * 5b037aaac41 i915: use util_copy_framebuffer_state to set fb state
+  * fca009ad9a9 cso: unbind fb state when unbinding the context
+  * 1aaef5b067a zink: sync queries at the end of cmdbufs
+  * b21db0bb8d4 zink: null some descriptor buffer pointers during
+    destruction
+  * 0c6903846fa zink: set depth dynamic state values unconditionally
+  * 6d9fdc7faa0 radv: Add driconf to always drain waves before writing
+    timestamps
+  * e7c6e9e3590 radv: Always call si_emit_cache_flush before writing
+    timestamps
+  * 67e01cb74a8 radv: fix fast-clearing images with
+    VK_REMAINING_{ARRAY_LAYERS,MIP_LEVELS}
+  * 3274e601619 .pick_status.json: Update to
+    cb4e4fc5de48886758a26ff19d322947b5abfcec
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 06 May 2023 12:25:32 +0200
+
 mesa (23.1.0~rc4+git2305031907.fd6968991a1~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
