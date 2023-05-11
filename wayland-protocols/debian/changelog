@@ -1,3 +1,11 @@
+wayland-protocols (1.31+git2305111410.14ae0a9~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 14ae0a9 CI: bump ci-templates
+  * 18aa7b2 tablet-v2: fix typo in set_cursor serial description
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 May 2023 17:27:41 +0200
+
 wayland-protocols (1.31+git2304251341.cc0cd4a~f~base2) focal; urgency=medium
 
   * New snapshot:
