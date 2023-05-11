@@ -1,3 +1,11 @@
+libdrm (2.4.115+git2305111709.7784d571~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 7784d571 tests/amdgpu/vcn: fix drm test failure
+  * 03d18b44 tests/amdgpu/vcn: change vbv_buffer name to input
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 May 2023 17:22:06 +0200
+
 libdrm (2.4.115+git2303241447.28d9a3c4~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
