@@ -1,3 +1,53 @@
+mesa (23.1.0+git2305101848.be4f7fb6561~f~mesarc1) focal; urgency=medium
+
+  * New snapshot:
+  * be4f7fb6561 VERSION: bump for 23.1.0
+  * aa234e276ef drirc: Set limit_trig_input_range option for Nier games
+  * 34936765d45 zink: also cache swapchain semaphores
+  * 752c2f66432 zink: block more flushes during unordered blits
+  * baba0ca1f67 zink: adjust bindless texel buffer handle before
+    indexing
+  * 0c447913c0e zink: compare desc set to detect bindless vars in
+    separate shaders
+  * c7f257a09cf zink: bind bindless db set when updating separate shader
+    db sets
+  * 8d8c01f6716 radeonsi: set proper drm_amdgpu_cs_chunk_fence alignment
+  * eaf658e3f44 .pick_status.json: Update to
+    31e6d15801a9904089aa2913c8eb5a31b79c7dfc
+  * fb1c2a3dcd3 lavapipe: honor dst base array layer when resolving
+    color attachments
+  * 3e9b9fdc778 glsl/lower_samplers_as_deref: apply bindings for unused
+    samplers
+  * 4e4604521ee ac/nir/cull: fix line position w culling
+  * 266e8c80b4a zink: fix uncached memory readback
+  * 05e349fdc81 zink: block batching of unordered barriers if previous
+    usage was write
+  * bd01721da24 zink: disable batched unordered barries with
+    ZINK_DEBUG=noreorder
+  * ad8e43e36c8 zink: flush INDIRECT_BUFFER mem barrier for compute
+  * e70c232a018 zink: unbind the ssbo slot being iterated, not the index
+    of the buffer
+  * 68e639c56ca zink: use an intermediate variable for binding ssbo
+    slots
+  * bc403d5f4fc zink: delete unnecessary pipeline stage flags from
+    inference
+  * 4563390f4ed zink: add PERSISTENT for db buffer maps
+  * 43f74533272 zink: delete persistent map tracking
+  * 1f5edc9bdd1 zink: stringify unsupported prim restart log error
+  * f4b0904fde2 zink: allow vk 1.2 timelineSemaphore feature if
+    extension isn't supported
+  * 1ec1c1ad172 zink: don't init mutable for swapchain src during blit
+  * 2fd81796687 zink: don't init mutable resource bit for swapchain
+    images
+  * 4d9874ce8b1 tu: Don't override depth for GMEM
+  * 892a2ddd34c radv: disable RB+ blend optimizations on GFX11 when a2c
+    is enabled
+  * 057c71bc420 asahi: Fix disk cache disable with AGX_MESA_DEBUG
+  * f3fb0dd9a5a asahi: Fix typo in debug/error message helper macro
+  * 4c4780997e6 nir/lower_fp16_casts: Fix SSA dominance
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 May 2023 17:25:27 +0200
+
 mesa (23.1.0~rc4+git2305052013.4f1de84cbd7~f~mesarc1) focal; urgency=medium
 
   * New snapshot:
