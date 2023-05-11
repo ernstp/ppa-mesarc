@@ -1,3 +1,52 @@
+mesa (23.2.0~git2305111523.5a80bf2eb04~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 5a80bf2eb04 agx: Optimize multiplies
+  * c2793a304d4 agx: Fix packing of imsub instructions
+  * 8289fa253bc agx: Handle imadshl_agx, imsubshl_agx
+  * 18e19882fa6 nir: Model AGX-specific multiply-shift-add
+  * 3df4ae33343 agx: Use nir_alu_src_as_uint
+  * 445e2f16200 pan/bi: Use nir_alu_src_as_uint
+  * 0eb5f8e7654 nir: Add nir_alu_src_as_uint helper
+  * 73814050959 anv: fixup workaround 16011411144
+  * 5a7520d2529 egl/loader: move crtc resource infrastructure as common
+    helper
+  * 2a1e6a140da aco: also reassign p_extract_vector post ra
+  * c1cf40da8a5 aco: Assert that operands have the same byte offset when
+    reassigning split vectors
+  * d3f06cf5ce0 vulkan/pipeline_cache: don't log warnings for internal
+    caches
+  * b4b17f8aaac Revert "intel/compiler: make uses_pos_offset a tri-
+    state"
+  * 728e3168647 v3d/ci: annotate failures
+  * df387306d6b amd/drm-shim: add amdgpu drm-shim
+  * 0b6283e2e6b drm-shim: apply file overrides for open
+  * e169a402a8c microsoft/compiler: Do basic I/O analysis for dependency
+    tables
+  * 8ff95b766d3 microsoft/compiler: Allocate space for I/O and viewID
+    dependency tables before instruction processing
+  * 63904240f21 tu: Re-enable bufferDeviceAddressCaptureReplay
+  * d2f9346d9d5 tu: Move queue deletion to last
+  * 0df8532777f tu: Move VMA heap to the logical device
+  * 3a8fac0ccd9 tu: Create drm fd per logical device
+  * 0d9ceeee3f6 ci/zink+anv: Skip a couple more long tests pre-merge.
+  * 5546e57b90b ci: Re-enable some piglit tests that should be fast
+    enough post-uprev.
+  * 9ab31d56b27 Uprev Piglit to 536975d94a40cf76a69fcfa786c2513eccd0c989
+    https://gitlab.freedesktop.org/mesa/piglit/-
+    /compare/79a084c56b6dd79f7c3a97b57a72963121ebb1e6...536975d94a40cf76
+    a69fcfa786c2513eccd0c989
+  * deb064d98dd zink: Don't flag legacy_shadow_mask for RED-only reads
+    in the shader.
+  * dd426964124 zink: Fix silly void * type in rewrite_tex_dest.
+  * e9ad9ab3d2d zink: Explain some of the current pathway for shadow
+    sampling.
+  * 0b22b311900 mesa: Fix precompile of GLSL programs with shadow
+    samplers.
+  * 63f8964d5a7 mesa: Fix debug logging of fp compile compare func.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 11 May 2023 17:23:06 +0200
+
 mesa (23.2.0~git2305060935.1ae09f3effd~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
