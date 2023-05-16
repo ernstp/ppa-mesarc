@@ -1,3 +1,10 @@
+libdecor-0 (0.1.99+git2305151457.0fc00cb~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 0fc00cb ci: Update workflow
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 16 May 2023 20:40:52 +0200
+
 libdecor-0 (0.1.99+git2305020024.db4e508~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
