@@ -1,3 +1,43 @@
+mesa (23.2.0~git2305162009.c0a39545386~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * c0a39545386 pvr: Transfer add s8_uint support
+  * b5aff655607 pvr: Transfer add depth merge support for X8_D24
+  * 71ca4412298 pvr: Add PBE packmode for depth stencil formats
+  * b106752782d pvr: Add back S8_UINT support
+  * d8bd30d9b24 pvr: Transfer multiple emits clip rectangle
+  * 9bce479efc7 pvr: Transfer fix blit with multiple emits
+  * 48bf9c736f9 pvr: Use original binding numbers instead of reassigning
+  * bac048e1dfe pvr: Add missing NULL checks in some vkDestroy...()
+    functions
+  * 7cb77cb089c pvr: Transfer PBE gamma is unset
+  * 9fccc25bdf1 pvr: Transfer PBE source snorm format should be signed
+  * a495cdb09ee pvr: Allow block compressed source blit
+  * b59eb30e886 pvr: Fix cs corruption in pvr_pack_clear_vdm_state()
+  * 27d55436173 tu: Use common GetPhysicalDeviceFeatures2
+  * 4aea3fb3dd2 lvp: Use common GetPhysicalDeviceFeatures2
+  * 1ec09769014 radv/ci: document more flakes for navi21
+  * 47f08019495 zink: Move the workaround before the EDS setting.
+  * 6ee0bba3ae6 crocus: fix scratch_bos memory leak
+  * e2e6adbe378 pvr: switch pvr_spm to use pvr_bo_suballoc
+  * 983f98d8581 pvr: switch pvr_clear to use pvr_bo_suballoc
+  * 073bdbdea75 pvr: switch pvr_descriptor_set_create to use
+    pvr_bo_suballoc
+  * 547a10f8702 pvr: switch pvr_cmd_buffer_alloc_mem to use
+    pvr_bo_suballoc
+  * 42d10112169 pvr: switch pvr_gpu_upload_* to use pvr_bo_suballoc
+  * 06c6cfc55b0 pvr: introduce suballocator for internal allocations
+  * 882fd3c522a radv: small fix for
+    VkDescriptorSetVariableDescriptorCountLayoutSupport
+  * cd406eae7db mesa: set a type for depth fallback texture
+  * e0c3324695c drm-shim: Use anonymous file for file override
+  * 730834aa6b3 drm-shim: Set file type in readdir()
+  * c1cb168888e ac/llvm: remove redundant nir_lower_legacy_atomics
+  * 4fb3133cdf2 radeonsi: fix aco compile for atomic ops
+  * 8cc7ad48d5c ac/llvm: remove the double frcp special handling
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 16 May 2023 20:42:04 +0200
+
 mesa (23.2.0~git2305111523.5a80bf2eb04~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
