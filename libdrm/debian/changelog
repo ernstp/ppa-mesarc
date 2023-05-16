@@ -1,3 +1,11 @@
+libdrm (2.4.115+git2305111853.98e1db50~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 98e1db50 amdgpu: add an environment variable that overrides the
+    context priority
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 16 May 2023 20:41:05 +0200
+
 libdrm (2.4.115+git2305111709.7784d571~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
