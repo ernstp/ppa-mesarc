@@ -1,3 +1,11 @@
+libsdl2 (2.27.0+git2305160644.d42c303b2~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d42c303b2 Check to make sure the Windows joystick device has buttons
+    and axes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 16 May 2023 20:41:22 +0200
+
 libsdl2 (2.27.0+git2305101529.237348c77~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
