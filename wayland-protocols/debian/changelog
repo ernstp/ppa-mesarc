@@ -1,3 +1,10 @@
+wayland-protocols (1.31+git2305181022.f89eb17~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * f89eb17 cursor-shape-v1: new protocol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 19 May 2023 17:25:10 +0200
+
 wayland-protocols (1.31+git2305111410.14ae0a9~f~base2) focal; urgency=medium
 
   * New snapshot:
