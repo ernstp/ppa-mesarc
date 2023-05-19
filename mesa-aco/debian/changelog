@@ -1,3 +1,48 @@
+mesa (23.2.0~git2305191551.1fc40c081eb~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 1fc40c081eb mesa/program_cache: remove unused shader-cache functions
+  * a0683e243a1 mesa/main: compile ff_fragment_shader as c-code
+  * e607a89f22f mesa/main: ff-fragshader to nir
+  * a37051304a4 compiler/nir: move find_state_var to common code
+  * 5e997beeb75 mesa/st: allow using nir for ff-fragment shaders
+  * 793840937fc mesa/st: refactor st_translate_fragment_program
+  * 30d9be1f9f6 mesa/main: clean up white-space in
+    ff_fragment_shader.cpp
+  * 185001a86fb meson: remove needless c++17-overrides
+  * 886ad3b4ec1 pvr: fix array overflow in
+    pvr_device_tile_buffer_ensure_cap()
+  * b83ce03a7d1 radv: reserve cmdbuf space in
+    radv_flush_gfx2ace_semaphore()
+  * a1b88c06647 ci: rework vkd3d-proton runner and fix detecting
+    failures
+  * 5a2a042ec72 ci: stop using the hang-detection tool for vkd3d-proton
+  * bec100f9b5b ci,radv: use drm-shim instead of the null winsys for
+    radv-fossils
+  * 66a33888f06 ci: build drm-shim in debian-testing
+  * 9f9feda85f1 amd/drm-shim: update README about which file to modify
+  * 400434e5ea2 amd/drm-shim: add bonaire
+  * 9234558a60a amd/drm-shim: add pitcairn
+  * 714ae976692 amd/drm-shim: add navi21
+  * e5536173dc0 anv/ci: Add tests for video formats to the failing
+    tests.
+  * 60f871dc9ef anv: enable the video h265 decode extension.
+  * a64ae20d0f0 anv: support HEVC 10-bit decoding
+  * ad02e21ad20 anv/image: get width/height for each plane of a surface
+    for video decoding.
+  * 50374b1f9a2 anv: support P010 format for video 10-bit hevc decoding
+  * 8d519eb5f59 anv: add initial video decode support for h265
+  * 91235092ab3 anv/image: allow VK_IMAGE_CREATE_ALIAS_BIT with a
+    private binding.
+  * 23c338af5d8 anv/image: allocate mv storage buffers for h265
+  * b4b31828e02 anv/image: Add a surface usage bit for video decoding
+  * b08614b96ba vulkan/video: add h265 reference structures and relevant
+    util functions.
+  * efdcacb230c vulkan/video: add to parse h265 slice.
+  * c78c5466e42 util/vl: initialize data/end pointers.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 19 May 2023 17:22:48 +0200
+
 mesa (23.2.0~git2305162009.c0a39545386~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
