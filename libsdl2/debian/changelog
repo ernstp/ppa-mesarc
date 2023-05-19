@@ -1,3 +1,24 @@
+libsdl2 (2.27.0+git2305191600.feeec9087~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * feeec9087 test/testgles2_sdf.c: type fixes from commit e26e893daf,
+    style clean-up.
+  * d361acdd4 testgles2_sdf: build with CMake + fix build
+    errors/warnings
+  * 92a487f2e style fixes for SDL_PROC macros.
+  * df9d0fb33 power: On Linux, compare status strings as case-
+    insensitive.
+  * 4a0b9522b audio: Load .WAV files with format->blockalign==0.
+  * 32999798e dynapi: Accept a comma-separated list of libraries to
+    attempt to load.
+  * 424bc4bcf SDL emscripten port: preventDefault should not be called
+    on mousedown. Otherwise mouseup will not be fired outside iframe in
+    Chrome-based browsers
+  * 0eea92c8f blit: Add a case for 8-bit blits that sdl12-compat
+    exposed.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 19 May 2023 17:22:03 +0200
+
 libsdl2 (2.27.0+git2305160644.d42c303b2~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
