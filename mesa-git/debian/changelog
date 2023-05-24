@@ -1,3 +1,55 @@
+mesa (23.1.0+git2305232227.bb19edd2d20~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * bb19edd2d20 virgl: Make query result resource as dirty before
+    requesting result
+  * d54cc8bf07f intel/fs: fix size_read() for LOAD_PAYLOAD
+  * e80a213ba13 nir: Fix serializing pointer initializers.
+  * abacfa7c5e8 zink: also declare int size caps inline with signed int
+    type usage
+  * 01c6bc56457 zink: flag 'has_work' on batch when promoting a cmd
+  * 985202b04a4 zink: explicitly disable reordering after restricted
+    swapchain readback blits
+  * d36d565db32 zink: disable unordered blits when swapchain images need
+    aqcuire
+  * 688ed292867 zink: add special-casing for (not) reordering certain
+    image barriers
+  * 80ff3e8efa7 zink: try update fb resource refs when starting new
+    renderpass
+  * 54179eda353 anv: fix push descriptor deferred surface state packing
+  * 2758003c9fb radv: fix radv_emit_userdata_vertex for vertex offset -1
+  * 682911cf339 radv: disable IMAGE_USAGE_STORAGE with depth-only and
+    stencil-only formats
+  * 12840ed4586 radv: bump the global VRS image size to maximum
+    supported FB dimensions
+  * 236e1424722 .pick_status.json: Update to
+    1f586f94097f6c8fca3987e03c4ed671fd280a67
+  * 2a61f5dd590 util: add Pixel Game Maker MV workaround
+  * 3191f467e22 intel/compiler: Fix 64-bit ufind_msb, find_lsb, and
+    bit_count
+  * 88ba65b2b07 nir: Add find_lsb lowering to nir_lower_int64.
+  * 2d07012a9a3 anv: Fix ANV_BO_ALLOC_NO_LOCAL_MEM flag
+  * 9d14863e7c8 radv: reserve cmdbuf space in
+    radv_flush_gfx2ace_semaphore()
+  * c5f8051b872 radv: fix a sync issue with primitives generated query
+    and NGG/legacy
+  * 551dd78a8ff loader/dri3: temporarily work around a crash when front
+    is NULL
+  * 4c286d79b81 mesa/main: Exit early when trying to create an
+    unsupported context API
+  * 2bc24cdcfcf anv: mark images compressed for untracked layout/access
+  * fb280ebea0f anv: put private binding BOs into execlists
+  * e280f2a009b intel/dev: remove dg2 0x5698 pci id
+  * c910d8d6e9b zink: add feedback loop usage for swapchains
+  * 48737e7fe4f vulkan/wsi: add feedback loop usage to swapchain caps if
+    supported
+  * b7d6660a291 radv: fix resetting VRS if the graphics pipeline doesn't
+    enable it
+  * 6bad9f01611 aco: use c++17
+  * fe6c7b1438a nir/lower_shader_calls: Remat derefs earlier
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 24 May 2023 14:47:02 +0200
+
 mesa (23.1.0+git2305101848.be4f7fb6561~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
