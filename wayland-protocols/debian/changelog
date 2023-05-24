@@ -1,3 +1,12 @@
+wayland-protocols (1.31+git2305221547.bbe9298~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * bbe9298 stable/xdg-shell: clarify when which protocol errors are
+    used
+  * 60c6b51 build: add Wayland subproject
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 24 May 2023 14:49:18 +0200
+
 wayland-protocols (1.31+git2305181022.f89eb17~f~base2) focal; urgency=medium
 
   * New snapshot:
