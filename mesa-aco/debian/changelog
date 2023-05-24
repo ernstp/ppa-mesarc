@@ -1,3 +1,48 @@
+mesa (23.2.0~git2305241128.3ba839bf734~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 3ba839bf734 v3dv: align compressed image regions to block size
+  * 74e797e6ba6 v3dv: allow TFU transfers for mip levels other than 0
+  * 1cb2d2a5eed v3dv: store slice dimensions in pixels
+  * b439bd5a584 radv: do not enable VRS flat shading if the VRS builtin
+    is read
+  * 1a8dd84ec61 nir: Propagate the type sampler type change to the used
+    variable.
+  * f4aa99f0da8 radv/video: add missing space checks for video.
+  * 3a9e8a4d730 mesa: validate shader binary format in
+    _mesa_spirv_shader_binary
+  * 688f03e3699 iris: use COMPUTE_WALKER post sync field to track
+    compute work
+  * 521c216efcc anv: use COMPUTE_WALKER post sync field to track compute
+    work
+  * ddc37cf430b anv: move timestamp vfunc initialization to genX code
+  * 7f5613903c2 docs/features: fix empty line error
+  * 613eb64011a iris: add required invalidate/flush for Wa_14014427904
+  * 60b0d2c2cbe anv: add required invalidate/flush for Wa_14014427904
+  * abcef5a4769 intel/dev: provide helper to check if devinfo is ATS-M
+  * b43e5aec0d2 freedreno/batch: Move submit bo tracking to batch
+  * 5d26070f086 freedreno/a6xx: Optimize max_indices calculation
+  * f4fc45d63df freedreno/a6xx: Template specialization for pipeline
+    type
+  * 778cdb156e7 freedreno/a6xx: Template specialization for draw type
+  * 15c66adc8a6 mesa: Skip update_gl_clamp() if samplers need clamp
+  * 3e44b14af84 broadcom: Fix slice memory allocation logic for
+    compressed textures
+  * fe973222a9a broadcom: Add support for
+    VK_FORMAT_A2R10G10B10_UNORM_PACK32
+  * cb60ca3b1d6 docs: update calendar for 23.1.0
+  * 7fe482d4ce4 docs: add release notes for 23.1.0
+  * 622779e5cbc dxil: Rely on scoped_barrier
+  * e3676176680 ac/nir: fix slots in clamping legacy colors
+  * dd0469e4014 lavapipe: VK_EXT_pageable_device_local_memory
+  * 54c981e4a02 lavapipe: store memory allocation size onto
+    lvp_device_memory
+  * 0c79c04f49a lavapipe: EXT_memory_priority
+  * 1c42056ee12 lavapipe: EXT_memory_budget
+  * 2111a3fcdb6 lavapipe: report full memory in heap for 64bit processes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 24 May 2023 14:44:37 +0200
+
 mesa (23.2.0~git2305191551.1fc40c081eb~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
