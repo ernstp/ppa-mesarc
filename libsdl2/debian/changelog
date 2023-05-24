@@ -1,3 +1,35 @@
+libsdl2 (2.27.0+git2305240345.63b8af355~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 63b8af355 Disable unused local typedefs warning
+  * 3f1fd5abf Updated source to match SDL function prototype style
+  * 92f72682e Document the Android SDK versions checked in Java code
+  * 891c89eeb Fix unused variable warnings
+  * e2b8d9652 wayland: Validate surfaces and window data before sending
+    touch events
+  * 78a92b4f9 Fixed duplicate Joy-Con controllers on macOS
+  * 7b2b99a99 Fixed handling the Saitek P3600, which doesn't use the
+    Xbox 360 controller protocol
+  * b6d051e22 Fixed reporting backspace key if there is no text in the
+    edit buffer (thanks @312937!)
+  * 0ad0347ac Use numeric codes for Android versions, to avoid SDK
+    dependencies
+  * a2f4783e7 Don't map the top keyboard row to numbers when using the
+    one-handed DVORAK layouts (thanks @tormol!)
+  * 2001a891c Fix Xbox link error from IsRectEmpty
+  * 1ee9a437f Stop beep when running iOS apps on ARM-based Macs
+  * 69644346a Added the hint SDL_HINT_ENABLE_SCREEN_KEYBOARD to control
+    whether the on-screen keyboard should be shown when text input is
+    active
+  * 00b87f1de Make sure the sentinel is at the end of the current event
+    pump cycle
+  * beca41480 Undo name change for the controller list
+  * 43b12fd9b Moved the controller list out so it can be included
+    elsewhere
+  * e8ec8ba1d Added support for the Astro C40 in Xbox 360 mode
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 24 May 2023 14:43:49 +0200
+
 libsdl2 (2.27.0+git2305191600.feeec9087~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
