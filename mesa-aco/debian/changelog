@@ -1,3 +1,53 @@
+mesa (23.2.0~git2305281526.744e9cb2132~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 744e9cb2132 gitlab: add template for merge requests
+  * b3b883ca00b bin/ci: mention requirements.txt
+  * 92a7cba4f26 intel: Sync xe_drm.h
+  * 264cf37348f radeonsi: re-enable fp16_rtz for compute blits to fix
+    PBO tests on gfx11
+  * cc199c2baa9 radeonsi: update test results and flakes
+  * c5806422a53 radeonsi: reduce the supported compute grid size
+  * ebb784f2683 radeonsi/gfx11: use DISABLE_FOR_AUTO_INDEX to disable
+    non-indexed prim restart
+  * 1f90a2be60a radeonsi: move emitting draws states out of
+    si_emit_all_states
+  * 9d7eab2ab17 radeonsi: don't enable WGP_MODE because of high cost of
+    workgroup mem coherency
+  * 038fb6573a8 radeonsi: remove the gl_SampleMask FS output if MSAA is
+    disabled
+  * 7b95be35752 radeonsi: cosmetic changes in si_shader.h
+  * b914c2601c4 radeonsi: reorder code in si_texture_create_object as
+    preparation for the future
+  * dcbe4b89eaa radeonsi/gfx11: fix alpha-to-coverage with blending
+  * 2f6665efc54 ac/llvm: use LLVM 0/1 constants from ac_llvm_context
+    instead of LLVMConstInt
+  * 39da12b7c7c ac/llvm: clean up visit_load_local_invocation_index and
+    visit_load_subgroup_id
+  * 1dd2fa01c72 ac/llvm: clean up translation of
+    nir_intrinsic_load_invocation_id
+  * ea7c89d1f57 ac/surface: move determing ADDR_FMT_* into a helper
+    function
+  * 78d5626d177 ac/surface: move CB format translation helpers here
+  * 8642740aef5 ac/gpu_info: give has_msaa_sample_loc_bug a more
+    accurate name
+  * 587ad3430dd ci/windows: Update WARP to 1.0.7
+  * 0373b02cf6b dxil: Don't run opt_remove_phis before lower_returns
+  * cc136cacfa4 radv: Don't run opt_remove_phis before lower_returns
+  * 505b81b8c10 nir: Add undef phi srcs when adding successors
+  * 5d238c0c2cd nir_lower_returns: Optimize phis before beginning the
+    pass
+  * a1b27c364ff panfrost: rename *.cc files to *.cpp
+  * 63c3768cf38 panfrost: fix formatting of a couple of files that were
+    missed
+  * 480204aeed3 ci: show diff when clang-format check fails
+  * 648b5f30706 ci: split clang-format list of folders for easier
+    maintenance
+  * 564562eb050 mesa: Implement GL_CLEAR_TEXTURE flag
+  * d240a630e79 wsi/display: drop unused parameters from local functions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 28 May 2023 16:23:52 +0200
+
 mesa (23.2.0~git2305241128.3ba839bf734~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
