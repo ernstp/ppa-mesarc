@@ -1,3 +1,16 @@
+libdecor-0 (0.1.99+git2305162237.93a4c06~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 93a4c06 libdecor: Exit plugins elegantly if we don't have required
+    globals
+  * 0d77393 libdecor: Roundtrip wl_display after setting up global
+    callback
+  * 8cc8de2 gtk: Fix crash on destroy when globals could not be obtained
+  * a40348a cairo: Fix crash on destroy when globals could not be
+    obtained
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 28 May 2023 16:22:54 +0200
+
 libdecor-0 (0.1.99+git2305151457.0fc00cb~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
