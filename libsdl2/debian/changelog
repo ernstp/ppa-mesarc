@@ -1,3 +1,20 @@
+libsdl2 (2.27.0+git2305270234.d6cd45062~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d6cd45062 windows: SDL_Delay expects a 32-bit integer
+  * e87577594 windows: SDL_immdevice needs SDL_timer.h include
+  * 72606d97e cmake: allow #include "SDL2/SDL.h.h" when using SDL2 as
+    subproject
+  * 48e71ae87 wasapi: Deal with HDMI or DisplayPort-based audio devices.
+  * 730832555 Added support for printing wide strings using "%ls" syntax
+  * 9dea06f5b fix mingw build failures in CI with clang-tidy.
+  * c68976360 Fix -Wunused-function warning when configuring with -
+    DSDL_X11_XINPUT2=OFF
+  * a535cc62a video: Only specify some GL context attributes if not the
+    explicit default.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 28 May 2023 16:23:09 +0200
+
 libsdl2 (2.27.0+git2305240345.63b8af355~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
