@@ -1,3 +1,54 @@
+mesa (23.1.1+git2305260127.3ca493c2acf~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 3ca493c2acf radeonsi: fix uses_instanceid for merged mono shader
+    stage
+  * fae5b32981b docs/relnotes: add sha256sum for 23.1.1
+  * fa55e3c0262 VERSION: bump for 23.1.1
+  * 42789565a65 docs: add release notes for 23.1.1
+  * e16268059d2 vulkan/pipeline_cache: remove a bogus assert when
+    inserting objects
+  * ca9cfa13a72 iris: rework Wa_14017076903 to only apply with occlusion
+    queries
+  * d4f5fc709ed radv/video: use correct h264 levels
+  * 1a86a603d00 winsys/radeon: fix the scratch buffer on gfx6-7
+  * d86101f0487 winsys/radeon: set has_image_opcodes to unbreak gfx6-7
+  * 600c9dff968 dzn: Fix src/dest confusion for some non-bindless
+    descriptor copies
+  * a59bb82ce76 dzn: Partial revert of 8887852d
+  * 04affaa5673 glthread: fix typo related to upload_vertices()
+  * a8da5a0c0d6 mesa: fix a VBO buffer reference leak in
+    _mesa_bind_vertex_buffer
+  * c54295e9938 zink: use the per-context track_renderpasses flag in
+    more places
+  * c517ab7ce1a zink: don't wait on queue thread if disabled
+  * 46afe552b05 mesa: fix refcnt imbalance related to
+    egl_image_target_texture()
+  * d3ae7a755f1 radv: do not enable VRS flat shading if the VRS builtin
+    is read
+  * caa1ba767c0 ac/nir: fix slots in clamping legacy colors
+  * cc5a2ca0968 frontends/va: remove private member and update target
+    buffer
+  * 744d5524eb4 radeonsi/vcn: apply update_decoder_target logic
+  * 9d4bc470cd5 gallium/pipe: add interface update_decoder_target
+  * d2e028f6332 .pick_status.json: Update to
+    4af6b601e05cf1a9f2002698b5fb1d0b971124db
+  * e3937abbb7f virgl: Make query result resource as dirty before
+    requesting result
+  * 28f89e96cd3 intel/fs: fix size_read() for LOAD_PAYLOAD
+  * cb9d82bc2a5 nir: Fix serializing pointer initializers.
+  * ae7dacac62a zink: also declare int size caps inline with signed int
+    type usage
+  * 3b23995a8c9 zink: flag 'has_work' on batch when promoting a cmd
+  * c60508ba3b5 zink: explicitly disable reordering after restricted
+    swapchain readback blits
+  * 66ed3b4f0c4 zink: disable unordered blits when swapchain images need
+    aqcuire
+  * f38120d63fd zink: add special-casing for (not) reordering certain
+    image barriers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 28 May 2023 16:26:12 +0200
+
 mesa (23.1.0+git2305232227.bb19edd2d20~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
