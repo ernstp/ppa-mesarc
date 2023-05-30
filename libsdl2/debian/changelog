@@ -1,3 +1,14 @@
+libsdl2 (2.27.0+git2305292047.d275851df~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d275851df windows: Don't allow non-resizable windows to be
+    maximized.
+  * a9ded76df VisualC: turn on multi-processor compilation.
+  * 5007b9636 Fixed build warning
+  * b2e88ecfe Disable SDL_JOYSTICK_RAWINPUT_XINPUT
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 30 May 2023 16:53:08 +0200
+
 libsdl2 (2.27.0+git2305270234.d6cd45062~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
