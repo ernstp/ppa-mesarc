@@ -1,3 +1,49 @@
+mesa (23.2.0~git2305301624.b50c9ba6922~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * b50c9ba6922 zink: do not lower line-smooth for non-lines
+  * ffc77d52629 zink: compute correct location for line-smooth gs
+  * 955a6ffa6e4 zink: keep gl46_optimal extensions/features sorted
+  * c6ef6a39cc4 zink: explicitly avoid ci errors due to unrecognized
+    extensions in VVL
+  * bf97afa2ab5 zink: update profiles schema
+  * 76a82c3ac9d nir/opt_if: use nir_alu_instr_is_comparison directly
+  * 94958e637d1 aco: improve printing of s_delay_alu
+  * 54c0088629f aco: insert s_delay_alu on the linear CFG
+  * d7f48a61ece aco: use pass_flags to recover s_delay_alu cycles
+  * d9cdb3524a3 aco: fix update_alu(clear=true) for exports
+  * a63a38aeafd d3d12: HEVC Encode - Fix num_subregions_per_scanline
+    rounding
+  * 3fc24c64e18 pvr: Fix page faults in occlusion query tests
+  * 43f0fef92f4 pvr: Handle barrier load and store flags.
+  * a04f244c0c0 pvr: Reorder execution in pvr_cmd_buffer_end_sub_cmd()
+  * 173df8f15d5 pvr: Fix out of range stream errors for geometry-only
+    jobs on pvrsrvkm
+  * dae68cf4aa7 pvr: Do not free deferred pvr_transfer_cmd instances
+  * 85fa24e0614 pvr: Rename shadowing loop variable in
+    pvr_add_deferred_rta_clear()
+  * 6e6cd3eb3a4 pvr: Use correct surface for deferred RTA clear
+  * 0be6f8b5c17 pvr: Correct error flow in
+    pvr_compute_pipeline_compile()
+  * a49a2f87658 pvr: Correct error flow in
+    pvr_graphics_pipeline_compile()
+  * 9bfd3997b4e pvr: Fix memory leaks on realloc failure in
+    pvr_pipeline.c
+  * 4af6a9507f4 pvr: Fix allocation scopes in vkCreateRenderPass2() code
+    path
+  * 4c0541abb3e v3d: only warn about bining sync for indirect draw once
+  * 5731ebac404 anv: override vendorID for Cyberpunk 2077
+  * 96c33fb0270 anv: enable direct descriptors on platforms with
+    extended bindless offset
+  * 26e2436823d anv: ensure descriptor addresses are used with bindless
+    stages
+  * 0502a92199b anv: descriptor binding for direct descriptors
+  * a8ef34bd31a anv: bring back the max number of sets to 8
+  * 06dfd216d35 anv: add direct descriptor support to apply_layout
+  * 1d24d0bdcc8 anv: track descriptor data size
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 30 May 2023 16:53:55 +0200
+
 mesa (23.2.0~git2305281526.744e9cb2132~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
