@@ -1,3 +1,37 @@
+libsdl2 (2.27.0+git2306041440.4700fbcbd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 4700fbcbd Don't bother re-encoding Latin1 characters in the ASCII
+    range
+  * 2660da6f5 Always allocate zt in output of SDL_iconv_string()
+  * 7c86d96e8 Fixed SDL_iconv_string() truncation when handling
+    SDL_ICONV_E2BIG
+  * a1dea11d3 fix MSVC build error.
+  * bfef7c302 Only convert the result of XLookupString() if it's not
+    already UTF-8
+  * b9d1c483b Fixed building with the 16.1.4479499 Android toolchain
+  * dc94cca8d Fixed typo in cherry-pick (thanks @HadesD!)
+  * 97fe777ab Steam uses a different VID/PID for the Steam Virtual
+    Gamepad on Windows
+  * f1bad83a2 Revert "Fixed detection of the Steam Virtual Gamepad on
+    macOS"
+  * 7aa28ce27 Fixed detection of the Steam Virtual Gamepad on macOS
+  * c89a46067 Fixed build if SDL_JOYSTICK_RAWINPUT_MATCHING isn't
+    enabled
+  * e3bfacde3 Don't use raw input while Remote Desktop is active
+  * 9c05098ed Fixed WGI immediately being correlated with raw input
+    devices with no input
+  * c39524042 hints: clarify support for comma-separated values for
+    QtWayland orientation that's available since 2.0.22
+  * 68e3e9908 wayland: reset orientation bitmask before reading values
+    from hint on QtWayland
+  * 7f7ea909b testautomation_guid.c: fix integer warning in 32 bit
+    builds.
+  * 379a6f4da x11: Attempt to wait for SDL_MaximizeWindow to complete
+    before returning.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 04 Jun 2023 21:54:51 +0200
+
 libsdl2 (2.27.0+git2305292047.d275851df~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
