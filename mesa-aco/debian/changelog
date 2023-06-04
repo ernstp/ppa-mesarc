@@ -1,3 +1,54 @@
+mesa (23.2.0~git2306040242.bfb092b9555~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * bfb092b9555 nv50: Fix memory leak in error path
+  * 87ac5d7d0a1 nir: Remove unnecessary assert in nir_before_src
+  * ee2764d5e86 nir: Rematerialize derefs in use blocks before repairing
+    SSA
+  * cf323446e70 amd/ci: run gl(es) cts & piglit on radeonsi on vangogh
+  * 070d02b04b4 docs: Update document about pipe_prim_type with
+    mesa_prim
+  * 12256136e0c compiler: Rename shader_prim to mesa_prim and replace
+    all usage of pipe_prim_type with mesa_prim
+  * 5393156da4d compiler: Add SHADER_PRIM_COUNT to be SHADER_PRIM_MAX +
+    1
+  * e4b6a0a8245 compiler: Getting shader_prim to be PACKED that
+    consistence with pipe_prim_type
+  * fcef3f040be microsoft/compiler: Getting function impl to be
+    consistence with decl in dxil_enums.*
+  * 9ca0bdba01b intel/tools/error2aub: Fix potential out of bounds read
+  * 39e057028cb vulkan/wsi: fix double free on error condition
+  * d22a86c77c5 iris: Implement external object implicit syncronization
+    for Xe kmd
+  * ba373a298da iris: Add iris_implicit_sync struct and functions to do
+    implicit synchronization for Xe kmd
+  * f26467a3432 iris: Extend iris_bo_wait_syncobj() to wait on external
+    implicit syncobj
+  * 8971a878c7f iris: Add functions to import and export implicit sync
+    state
+  * d0a3a055438 iris: Attach a dma-buf to bo flink
+  * 127bdefe503 iris: Store prime fd of external bos for Xe KMD
+  * c1ac4ea13e2 hasvk: Use intel_ioctl() helper for GEM_SET_TILING
+  * 4a2655d084c anv: Use intel_ioctl() helper for GEM_SET_TILING
+  * 16cc0c0eda1 intel/dev: Use intel_ioctl() helper for GEM_SET_TILING
+  * 2d3c1707fa5 iris/bufmgr: Use intel_ioctl() helper for GEM_SET_TILING
+  * 5140ff19484 ci: rename x86 and amd64 to x86_64, armhf to arm32, and
+    i386 to x86_32
+  * 653a3741261 dzn: Fix incremental binding of VBs
+  * fb722ca6fff dzn: Don't create D3D objects for secondary command
+    buffers
+  * ec9efee9070 anv: Remove alignment to aux ratio on size of main
+    surface
+  * d2b6f16145d anv: Support 1MB AUX mapping (MTL)
+  * a98f2468574 isl: use generated workaround helpers for Wa_1806565034
+  * 3a5a7203af4 rusticl/device: set preferred vector size of doubles if
+    fp64 is enabled
+  * d1b17a5edcd pvr: Implement ZLS subtile alignment
+  * 620e7d4cf25 pvr: Rename ds_{image,iview} in
+    pvr_gfx_sub_cmd_job_init()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 04 Jun 2023 21:55:37 +0200
+
 mesa (23.2.0~git2305301624.b50c9ba6922~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
