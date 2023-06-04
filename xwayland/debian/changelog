@@ -1,3 +1,29 @@
+xwayland (2:23.1.1+git2306011027.dfaf3af99~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * dfaf3af99 xwayland: Use our CVT function for fixed mode as well
+  * 9d2cc63a9 xwayland: Do not round non-standard modes
+  * 7cfa26d0b xwayland/window: Queue damage after commits are allowed
+  * fe2153e15 xwayland/window: Move set-allow functions lower down
+  * a3a0644d4 build: set _GNU_SOURCE when checking for SO_PEERCRED
+  * 73e0510de xwayland: Use the new API to set scanout
+  * 1f5cdc9cf xwayland: Add
+    xwl_glamor_get_drawable_modifiers_and_scanout()
+  * 474ba97ba xwayland: use gbm_bo_create_with_modifiers2()
+  * 8448a4140 xwayland: Fix build without GBM
+  * b9ebae110 glamor: Fix build without GBM
+  * 87c1df306 xwayland: Make Wayland logs non-fatal
+  * 070f6a99f xwayland: Recycle buffers when dmabuf feedback changes
+  * 1cb6417f7 xwayland: Try the Xwayland glamor hook to create pixmaps
+  * c69a0527c xwayland: Create scanout capable BO with the fallback path
+  * 6aa998182 xwayland: Add create_pixmap_for_window() to GBM backend
+  * 6af05c71d xwayland: Add a direct hook to create pixmaps with glamor
+  * 2f7624ef2 xwayland: Check for implicit scanout availability
+  * 5340f14fa xwayland: Check for scanout support in tranches
+  * 1a32a8c2a xwayland: Use a dedicated feedback callback for windows
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 04 Jun 2023 22:00:15 +0200
+
 xwayland (2:23.1.1+git2303291426.f03dd4129~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
