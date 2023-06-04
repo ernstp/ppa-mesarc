@@ -1,3 +1,50 @@
+mesa (23.1.1+git2306022034.f63bcc8ad22~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * f63bcc8ad22 freedreno/a6xx: Fix memory leak on error path.
+  * 794821b05fb nir_opt_algebraic: Don't shrink 64-bit bitwise ops if
+    pack_split is going to be lowered
+  * ce18d3d8977 mesa/st: fix buffer overflow related to
+    set_program_string()
+  * 0fd50430aea intel: Fix support of kernel versions without
+    DRM_I915_QUERY_ENGINE_INFO
+  * a64cb5c1751 driconf: set vk_x11_strict_image_count for Wolfenstein
+    II
+  * 7b6fc2c9cd3 hasvk: enable single texel alignment
+  * bdc40be4181 anv: fix incorrect asserts when combining CPS and per
+    sample interpolation
+  * 7d72d282747 mesa/st: fix refcnt imbalance related to
+    st_feedback_draw_vbo()
+  * b252da5b40d radv: fix msaa feedback loop without tc-compat cmask
+  * 8f964924fae etnaviv: update derived state after forced commandstream
+    flush
+  * a8ca4600561 radv/meta: fix uninitialised stack memory usage.
+  * 137753ae28d zink: fix layout(local_size_variable) for vk1.3+
+  * cdbe5cef343 gallivm: Fix gather/scatter types for newer llvm
+  * f9b33147321 aco: fix alignment check in emit_load
+  * 85de50a077f zink: do not lower line-smooth for non-lines
+  * f4a5cbcdf5c zink: compute correct location for line-smooth gs
+  * 841d63ab08d anv: fix null descriptor handling with A64 messages
+  * 0340da7c829 anv: fix push range for descriptor offsets
+  * 1fe7896f47e radv/video: fix physical device format property count.
+  * 5fa1f9115d1 radv/video: add missing offset to the dpb binding.
+  * a588c59ccaa radv/video: fix h264/265 dpb usage.
+  * d3f47768bca mesa: fix refcnt imbalance related to
+    _mesa_delete_semaphore_object()
+  * 499cac9c469 util: add Jamestown+ workaround
+  * 81a611a92cf .pick_status.json: Mark
+    c9288808db08fd804c68750d7400c01e550c70d0 as denominated
+  * a913343de5e anv: enable single texel alignment
+  * 16d8815c09e radv: Make shader related destruction happen before
+    hw_ctx.
+  * 805a3219ec8 vulkan: complete the usage flags for video layouts
+  * a8253221790 anv: Fix calculation of guardband clipping region.
+  * 1794199bf81 radeonsi: re-enable fp16_rtz for compute blits to fix
+    PBO tests on gfx11
+  * 63b4c80c90b virgl: Fix IB upload when a start >0 is given
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 04 Jun 2023 21:57:58 +0200
+
 mesa (23.1.1+git2305260127.3ca493c2acf~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
