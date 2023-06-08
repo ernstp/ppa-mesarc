@@ -1,3 +1,46 @@
+mesa (23.2.0~git2306080917.75b63a5d3e4~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 75b63a5d3e4 r600/sfn: Fix warning about overloads hiding virtual
+    functions
+  * 1eda220f18e compiler: use align instead glsl_align and remove
+    glsl_align
+  * 4134f9ac095 util: Do not use align as variable name
+  * 586391720b3 util: use uint32_t as the parameter of align function
+  * 9ce8ff9bb1e util: Remove redundant type cast in function align64
+  * 93f047b6ffa gallivm: Zero initialize param structs
+  * a2159dfe8aa gallivm: Handle invalid image format/op combinations
+  * 1841dd7549c gallivm: Add lp_img_op_from_intrinsic
+  * 6a0383e518f gallivm: Add lp_build_nir_sample_key
+  * 9d3dbc6400e llvmpipe: Add lp_storage_render_image_format_supported
+  * cfb37e73833 llvmpipe: Add lp_storage_image_format_supported
+  * fbe7c970f69 llvmpipe: refactor out the pipe->lp_jit structure
+    fillers.
+  * c3c9e28131e gallivm: Cast read_first_invocation source to an int
+  * 3101f900a02 gallivm: Fix anisotropic sampling with num_mips=1
+  * d99dca86ceb lavapipe: ignore another yuv format.
+  * da54b57888c radv/video: fix hevc scaling lists.
+  * 3f12103be96 radv/video: fix hevc st rps programming
+  * f0597a1514b radv/video: rework h265 reference frame bindings.
+  * b8191cd6030 radv/video: don't supply an 8-bit format for a 10-bit
+    dpb.
+  * b2e1e17ff66 radv/video: convert session memory requirements to
+    outarray.
+  * 28f2a6b2813 radv/video: convert video format properties to an
+    outarray
+  * d0d7dda8293 radv: fix non-square compressed image copy on gfx9
+  * 8616c0a52c7 rusticl/event: flush queues from dependencies
+  * 86dd5dd8530 rusticl: bump rust req to 1.60
+  * e285a05c2a2 doc/rusticl: add Rust Update Policy
+  * 19092576ce3 u_format: Use memcpy to avoid unaligned accesses
+  * 96cf4531e11 Revert "gallium/u_threaded: buffer sharedness tracking"
+  * 965503ae220 anv: allow binding tables allocations on compute only
+    queues
+  * b1faeae4fe8 draw: repack some members of context.
+  * 73f79482986 draw: add a max stage define and use it in a few places
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Jun 2023 10:06:44 +0200
+
 mesa (23.2.0~git2306040242.bfb092b9555~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
