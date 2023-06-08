@@ -1,3 +1,12 @@
+libdecor-0 (0.1.99+git2306062334.7326039~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 7326039 libdecor_plugin_gtk fix read after frees
+  * 82a581f libdecor-gtk: immediately set NULL after free
+  * 6ca6dac libdecor-gtk: reset hdr_focus.type in pointer_leave
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Jun 2023 10:05:48 +0200
+
 libdecor-0 (0.1.99+git2305162237.93a4c06~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
