@@ -1,3 +1,46 @@
+mesa (23.1.1+git2306081002.777f883c362~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 777f883c362 gallivm: Cast read_first_invocation source to an int
+  * 835fa3d9f86 lavapipe: ignore another yuv format.
+  * 4315db675fb radv: fix non-square compressed image copy on gfx9
+  * c531c55b735 rusticl/event: flush queues from dependencies
+  * cdb3785e57a rusticl: bump rust req to 1.60
+  * af7dfed07da u_format: Use memcpy to avoid unaligned accesses
+  * e4d7ddd4685 Revert "gallium/u_threaded: buffer sharedness tracking"
+  * b777bf57821 gallivm/nir: fix shuffleup tests.
+  * 7ba74a46eb6 lavapipe: handle index buffers with offsets for indirect
+    draws
+  * 6d4a65c68f4 etnaviv: nir: do not call nir_lower_idiv(..)
+    unconditionally
+  * 2bc5c7a89a8 vulkan/wsi: Remove duplicate NULL check
+  * 8d8b4533e9d .pick_status.json: Update to
+    75b63a5d3e4c0816b55deaf8d105d28bfebea98b
+  * 4ebd09e4453 anv: Set CS stall bit during HIZ_CCS_WT surface fast
+    clear
+  * 416da95aa21 freedreno/a6xx: Use idalloc for samp/view seqno's
+  * 5ca2634de56 freedreno/a6xx: Directly invalidate on samp view update
+  * b2a9f0797a5 freedreno/batch: Add driver-thread assert
+  * 7d5adf65180 freedreno: Add extra assert
+  * 826c5874f45 .pick_status.json: Update to
+    476022cbe1d1a06e43aacd81448a7a22c6331b1f
+  * ea1a2066e6f lavapipe: don't remove queue family barriers.
+  * 361ef31169c llvmpipe: emit fences for barrier.
+  * 4439dc7e231 r600: fix r600_draw_vbo() buffer overflow
+  * 17a0c96f639 dzn: Fix qpool->queries_lock double lock
+  * 8c92afe67a1 radeonsi: don't use SET_SH_REG_INDEX on gfx7-9
+  * 4224ef07d94 radv: correctly skip vertex loads with packed formats
+  * 09b915b9017 virgl: Array cmdline on stack should initialized to 0
+  * 4a63542d72a radv: initialize the device cache UUID even if on-disk
+    cache is disabled
+  * aee1f9afe8b tu: Ignore unused shader stages in pipeline library
+    creation.
+  * 3cd454d4c2c lavapipe: fix pipeline sanitizing.
+  * a247e59a7cc lavapipe: when in doubt, swizzle the swizzle
+  * fa32914337f nv50: Fix memory leak in error path
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Jun 2023 10:09:05 +0200
+
 mesa (23.1.1+git2306022034.f63bcc8ad22~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
