@@ -1,3 +1,14 @@
+xwayland (2:23.1.2+git2306061120.79a529dc3~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 79a529dc3 Bump version to 23.1.2
+  * f24e14ef4 xwayland: Stop using event address as event_id
+  * 30dc81f4f xwayland: Stop relying on event_id being a valid pointer
+  * 74ecd7752 xwayland: Pass vblank pointer itself to xwl_present_flip
+  * b90eda50a xwayland: Avoid gratuitous round trip through event_id
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Jun 2023 10:11:23 +0200
+
 xwayland (2:23.1.1+git2306011027.dfaf3af99~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
