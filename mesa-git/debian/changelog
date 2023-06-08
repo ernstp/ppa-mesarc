@@ -1,3 +1,13 @@
+mesa (23.1.2+git2306081617.1c6f2ef1f98~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 1c6f2ef1f98 docs/relnotes: add sha256sum for 23.1.2
+  * ffdc2d248dc VERSION: bump for 23.1.2
+  * 53d17ca9c5d docs: add release notes for 23.1.2
+  * 09696b02800 docs: clear new_features.txt
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Jun 2023 23:25:06 +0200
+
 mesa (23.1.1+git2306081002.777f883c362~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
