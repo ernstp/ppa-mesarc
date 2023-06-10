@@ -1,3 +1,43 @@
+mesa (23.2.0~git2306101200.51cd2965c71~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 51cd2965c71 aco/rt: Do not initialize the next shader addr
+  * 4bf3d7d8cf2 radv/rt: Clear NIR metadata after lowering the ABI
+  * b577f8b547f radv/rt: Do not guard the raygen shader
+  * ed3f23029be ac/llvm: replace MESA_SHADER_COMPUTE checks with
+    gl_shader_stage_is_compute
+  * e65f561a75c ac/llvm: support vec2 on b2i16
+  * 5ae953b5e97 radv: disable calibrated timestamps on raven/raven2
+  * e1d948b6a24 frontends/va: Fix missing unlock
+  * bb3cf3ff8ee zink/ci: remove spec@nv_shader_atomic_int64@* from the
+    fail lists
+  * 0ce595a89a7 intel: use generated helpers for Wa_1508744258
+  * 256f64dc456 ci/android: remove the artifact file just as we unpack
+    it
+  * 32007270b52 ci/lava: rename rest local MINIO_ variables to S3_
+  * 78aaec836a9 ci: remove BUILD_PATH, always use S3_ARTIFACT_NAME
+  * 2af371b3f31 ci: replace MINIO_RESULTS_UPLOAD with S3_RESULTS_UPLOAD
+  * deba02fddff ci: rename MINIO_HOST variable to S3_HOST
+  * 7b6629a6943 ci: rename MINIO to S3
+  * e1737c46b96 ci: rename S3 artifacts according to scheme mesa-$arch-
+    $config-$buildtype
+  * d4670eea0f2 ci: explicitely state BUILDTYPE
+  * 40042ed25ae nir: Rematerialize derefs after opt_dead_cf
+  * fb8c48f4fcc anv: allow intel_clflush_range only on igpu
+  * 26f6ea5c304 intel/compiler: Remove unused functions and declarations
+  * 8f4b9ed4d8a CODEOWNERS: add r300 driver
+  * 62e0f6bf328 etnaviv: Add support for conditional rendering
+  * a603413eb8a etnaviv: optimize transfer flushes
+  * 64fda091de9 aco: Lower divergent bool phis iteratively
+  * ba27071c8bc agx: Fold addressing math into atomics
+  * 13535d3f9dd agx: Refactor expressions in agx_nir_lower_address
+  * 5a55ef2fd13 nir: Add AGX atomic intrinsics
+  * 06f4608c5b4 ir2: Drop lower_locals_to_regs call
+  * 10fb9de9f68 lima: Drop lower_locals_to_regs call
+  * 03175f61fc2 pan/mdg: Drop lower_locals_to_regs call
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 10 Jun 2023 15:13:26 +0200
+
 mesa (23.2.0~git2306080917.75b63a5d3e4~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
