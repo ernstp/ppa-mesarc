@@ -1,3 +1,14 @@
+libsdl2 (2.27.0+git2306100343.320f3fffb~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 320f3fffb Fixed querying device info on the MOBAPAD M073
+  * 30b4d90f1 Only update the serial number if it hasn't already been
+    set
+  * 1cdd6dc82 Fixed reading input from the Razer Atrox Arcade Stick
+    using Windows Gaming Input
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 10 Jun 2023 15:12:40 +0200
+
 libsdl2 (2.27.0+git2306080240.f5b3247aa~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
