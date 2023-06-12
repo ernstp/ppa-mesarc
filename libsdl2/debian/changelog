@@ -1,3 +1,15 @@
+libsdl2 (2.27.0+git2306111847.2afb49ba9~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2afb49ba9 cocoa: Warp mouse to center of window before enabling
+    relative mouse.
+  * 154ad6faa SDL_dynapi.c: minor cosmetics.
+  * 2aa8525ec Fixed build
+  * 36033e383 Make it clear that you can't mix 2D rendering and the
+    window surface API
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 12 Jun 2023 19:46:56 +0200
+
 libsdl2 (2.27.0+git2306100343.320f3fffb~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
