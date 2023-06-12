@@ -1,3 +1,49 @@
+mesa (23.2.0~git2306121840.3aa1aed2370~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 3aa1aed2370 radv/ci: Test ray tracing on vkd3d-proton
+  * bbd42840169 Revert "glx: Remove pointless GLX_INTEL_swap_event
+    paranoia"
+  * 1980934d0d1 nouveau: fix nouveau_heap_destroy() memory leak
+  * d0e0ba897fd anv: split ANV_PIPE_RENDER_TARGET_BUFFER_WRITES for
+    finer grained flushing
+  * 06b436e51e2 anv: add query tracepoints
+  * 9de81344107 aco: Fix assert in insert_exec_mask
+  * 3ea01b86f0a aco: Fix live_var_analysis assert
+  * 7f3cfcc96a1 aco: Reset scratch_rsrc on blocks without predecessors
+  * 67a0f2532fd aco: Mark exec write used when it writes other
+    registers.
+  * da4b27452b3 rusticl/event: ensure even status is updated in order
+  * e7d336bb85d rusticl/api: remove some repr(C)
+  * 30559a399b9 rusticl/icd: fix ReferenceCountedAPIPointer::from_ptr
+    for NULL pointers
+  * e358173fbfd iris: Add GET_PARAM for protected context capability
+    support
+  * 937325137ed drm-uapi: bump headers (except AMD)
+  * a4bb6d7c722 anv: remove BDW specific WA for CS stall enable
+  * 386c7a5158a radv/ci: use the low-priority runners for vangogh jobs
+  * 43d83cd0d89 ci/b2c: select the DUT to run on by name
+  * 926e97d5df2 r600/sfn: Remove duplicate assignment
+  * 12b816ce79c mesa/st: discard whole resource when mapping drawpixels
+    texture
+  * 1a975bc278f lp: align memory for long16 CL types
+  * 8e7d434b8cd etnaviv: query: optimize context flushes
+  * 5ef6da21d91 etnaviv: query: correct max number of occlusion query
+    samples
+  * 3d98e9c2e0c etnaviv: query: correct max number of perfmon samples
+  * f33a4fa6025 etnaviv: query: remove incorrect comment
+  * b6a4b988abf etnaviv: query: reset sample count on begin_query
+  * 22d5d1bc404 etnaviv: query: move sample counter manipulation into
+    query providers
+  * 4452216a280 radv: Use RESET_FILTER_CAM for some mesh shading draws.
+  * 4181e144eff radv: Always flush before writing acceleration structure
+    properties
+  * 31fb75a08b0 ac/llvm: set +cumode for radeonsi
+  * 19196199a8a ac: Replace the usage of pipe_compare_func with
+    compare_func
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 12 Jun 2023 19:47:40 +0200
+
 mesa (23.2.0~git2306101200.51cd2965c71~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
