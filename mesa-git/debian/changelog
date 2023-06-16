@@ -1,3 +1,50 @@
+mesa (23.1.2+git2306152328.8e4950928c4~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 8e4950928c4 Revert "iris: Add missed tile flush flag"
+  * de041409733 intel/blorp: Avoid 32bpc fast clear sampling issue
+  * 5b14568dad5 ac: fix PIPE_FORMAT_R11G11B10_FLOAT DST_SEL_W
+  * be57dc25ac6 radv: reset some dynamic states when the fragment shader
+    stage is unbound
+  * 2c81fbf6d91 radv: fix re-emitting some dynamic states when the
+    previous FS is NULL
+  * d1f7f07fcb4 ac/nir/ngg: fix ngg_gs_clear_primflags crash
+  * 86aba432725 zink: strip format list when disabling mutable during
+    image creation
+  * 17663b71111 lavapipe: add version uuid to shader binary validation
+  * 6cfd019a85c anv: fix incorrect batch for 3DSTATE_CONSTANT_ALL
+    emission
+  * d6d2f3661f2 anv: disable mesh/task for generated draws
+  * 4c443d21150 zink: massively shrink qbo size for timestamp queries
+  * f259a7b0c31 lavapipe: use PACKAGE_VERSION for cache uuid in release
+    builds
+  * 8259af094e5 zink: only try to create srgb mutable images if the vk
+    format is supported
+  * 22ab43f3e8b nir: Fix constant expression for unpack_64_4x16
+  * 00ecfc86905 nir_opt_constant_folding: Fix nir_deref_path leak
+  * 09a04dda8ce meson: Key whether to build batch decoder on expat
+  * a570bb33bb9 r600: fix cayman_convert_border_color() swizzle behavior
+  * 006648a4dbd mesa: Drop dead TGSI serialization prototypes.
+  * 9bd71cd6017 Revert "glx: Remove pointless GLX_INTEL_swap_event
+    paranoia"
+  * 37531fa0ce9 nouveau: fix nouveau_heap_destroy() memory leak
+  * 6d48542bbc5 anv: split ANV_PIPE_RENDER_TARGET_BUFFER_WRITES for
+    finer grained flushing
+  * 26a920b1813 aco: Fix assert in insert_exec_mask
+  * 5571386b4c8 aco: Fix live_var_analysis assert
+  * 69df6917c0a aco: Reset scratch_rsrc on blocks without predecessors
+  * 20448890ffb aco: Mark exec write used when it writes other
+    registers.
+  * ddcfd032128 rusticl/event: ensure even status is updated in order
+  * 3ea2976e875 etnaviv: query: reset sample count on begin_query
+  * 880f7388230 radv: Always flush before writing acceleration structure
+    properties
+  * 8cf5581e925 nir/lower_shader_calls: Fix cursor if broken after
+    nir_cf_extract() call
+  * d98d6e0e1c0 frontends/va: Fix missing unlock
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 16 Jun 2023 20:19:13 +0200
+
 mesa (23.1.2+git2306081617.1c6f2ef1f98~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
