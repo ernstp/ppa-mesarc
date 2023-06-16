@@ -1,3 +1,38 @@
+libsdl2 (2.27.1+git2306150223.76392f4fe~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 76392f4fe Handle DPI scaling in SDL_GetWindowSurface
+  * 3a5abee51 Removed unused function
+  * e7ee375f2 Fixed third-party Nintendo Switch Pro controllers shutting
+    down when we try to set the home LED.
+  * 4aec54988 Allow switching licensed Nintendo Switch Pro controllers
+    into gyro input mode
+  * 271e03f0d Added support for the PowerA Fusion Pro Wireless
+    Controller in Bluetooth mode
+  * d4f9be441 Updated to version 2.27.1 for release candidate
+  * 1f5b21ead Removed more Linux Xbox mappings in favor of the automatic
+    mapping
+  * 35c788492 Use the automatic mapping instead of a hardcoded one for
+    Xbox controllers on Linux
+  * 3f6c4ec6d Cleanup for previous change, fixing typos, etc.
+  * fc72f12e7 Added automatic mapping support for Xbox controllers on
+    the 6.x Linux kernels
+  * 681f67d35 fixed build after commit
+    d2372c853843def01b7adb9872cbb89b0d6079ec.
+  * d2372c853 Added automatic mapping for Xbox Elite paddles using the
+    xpadneo driver
+  * 7db23f4ef Fixed joystick vendor detection in Linux automatic gamepad
+    mapping
+  * 36ff6327b linux: Improve gamepad mapping heuristic to accept Android
+    conventions
+  * 26a38a0b2 linux: Reduce magic numbers when mapping gamepad axes
+  * b3e1fd97b Fixed enumerating Steam Controllers on iOS
+  * c77aaa5d9 Fixed n3ds build
+  * e4e0a1290 Reduce the chance of destroying the joystick mutex while
+    it's in use
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 16 Jun 2023 20:16:00 +0200
+
 libsdl2 (2.27.0+git2306111847.2afb49ba9~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
