@@ -1,3 +1,50 @@
+mesa (23.2.0~git2306161852.94d827332f3~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 94d827332f3 dri: Replace usage of boolean/TRUE/FALSE with
+    bool/true/false
+  * 7f3874981dd radv/rt: Enable RT pipelines on GFX10_3+ excluding
+    vangogh
+  * 49b400423ce Revert "radv: Enable ray tracing pipelines by default"
+  * b49afd6ce24 radv: Add the BOs of all shaders in a RT pipeline
+  * 99e44cc527d aco/opcodes: delete wrong comment copy pasted from NIR
+  * fe3993447d4 aco: remove v_cvt_pkrtz_f16_f32_e64 when it's actually
+    VOP2
+  * 49bdc3a1c2c aco/opcodes: move v_cndmask_b32 back to the VOP2 list
+  * 89c86af39e6 aco/spill: Use arena allocator for spills
+  * 73835f4b099 aco/spill: Use arena allocator for next use distances
+  * b3aae9c5568 nouveau: eliminate busy waiting on fences
+  * 8f2680871da anv: convert most pc in genX_cmd_buffer to use pc helper
+  * 9f3b51255a7 anv: change most pipe controls in gfx8_cmd_buffer to use
+    pc helper
+  * b3589a88992 anv: change pipe control in indirect draw gen to use pc
+    helper
+  * 6a7dcd3e12f anv: change pipe controls in genX_gpu_memcpy to use pc
+    helper
+  * e70cf3ea988 anv: change pipe control in genX_pipeline to use pc
+    helper
+  * c232269db43 anv: change pipe controls in genX_state to use pc helper
+  * 6dc95685f3b anv: convert genX_query pipe controls to use pc helper
+  * d8c76f88441 anv: implement invalidate part of
+    emit_apply_pipe_flushes with helper
+  * 9f6f69e0f9b anv: implement flush part of emit_apply_pipe_flushes
+    with helper
+  * c3658f5a5d3 anv: wrap pipe control emission to a set of helper
+    functions
+  * 1ad79cb84fc virgl: Fix stack overflow in virgl_bind_sampler_states
+  * 0e726c63ff8 radv: add dgc_emit_index_buffer()
+  * a842f37dff7 radv: add dgc_emit_draw_indexed() helper
+  * 0551c54dff9 radv: add dgc_emit_draw() helper
+  * bb24e17d445 radv: add dgc_emit_vertex_buffer() helper
+  * be05e0e7a45 radv: add dgc_emit_push_constant() helper
+  * cc3a9b90a97 radv: add dgc_emit_state() helper
+  * 1d0c18ba3b2 radv: remove unused radv_dgc_token struct
+  * 562e890f2c6 ac/radeonsi: add av1 defaults header file from radeonsi
+  * b7f37265ac2 lavapipe: correctly update shader object per-stage push
+    constant sizes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 16 Jun 2023 20:16:48 +0200
+
 mesa (23.2.0~git2306121840.3aa1aed2370~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
