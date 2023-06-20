@@ -1,3 +1,47 @@
+mesa (23.2.0~git2306202011.414576aad54~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 414576aad54 zink: fix anv ci flake wildcarding
+  * c15b2491ec0 zink: ZINK_HEAP_HOST_VISIBLE_CACHED ->
+    ZINK_HEAP_HOST_VISIBLE_COHERENT_CACHED
+  * 7a169254c51 zink: add COHERENT requirement for CACHED memory
+  * 59a72570b66 compiler: Move spirv into a module of its own
+  * 2af68d157b3 isl: Add and use size and alignment calculators
+  * 68f7c538142 aco/gfx10+: use v_cndmask with literal for reduction
+    identity
+  * 71d30bcede5 aco: combine scalar mul+pk_add to pk_fma
+  * 6db61d0dc07 aco: use uses helpers for pk_fma opt
+  * 532407094a0 radv: use wave32 for small workgroups
+  * b765a27d73b radv: refactor CS subgroup size determination
+  * 41d8837e89c radeonsi/vcn: update luma and chroma size
+  * 1359e806f25 radv: advertise VK_EXT_depth_bias_control
+  * 266b2cfe5bf radv: implement VK_EXT_depth_bias_control
+  * 0432a748ee0 vulkan/runtime: call CmdSetDepthBias2EXT() from
+    CmdSetDepthBias()
+  * ae7d904a73b r600/sfn: Implement source mod optimization in backend
+  * da92733d5a9 r600/sfn: add source and dest mod info to opcode table
+  * 2f6ded1098a r600/sfn: allow source mods for per source with multi-
+    slot ops
+  * 0ff3c4bef21 r600/sfn: drop use of nir source mods
+  * 47152b6c09b r600/sfn: Fix typo
+  * bd93d6b2fba virgl: don't allow vertex input arrays on GLES hosts
+  * a2d40c09b72 zink, drirc: Add Borderlands 2 workaround to fix spir-v
+    1.6 translated discard
+  * 1dade03b1fa etnaviv: remove not used tgsi includes
+  * c784a3db7fe etnaviv: drop usage of tgsi_swizzle_names
+  * c9ced5abde1 etnaviv: remove tgsi remains
+  * ab6aa14f427 v3d: clear alpha-only as red-only
+  * 91c56020264 gallium/util: fix color clamp for alpha-only formats
+  * e1d7861dd69 isl: handle DRM_FORMAT_MOD_INVALID in
+    isl_drm_modifier_has_aux
+  * b8f8146c6e4 gallium: Remove unused os_process.h in gallium/auxiliary
+  * 3851a655796 dd: Replace the usage of os_get_process_name with
+    util_get_process_name in dd_draw.c
+  * e287d39f4dd zink: Replace the usage of os_get_process_name with
+    util_get_process_name
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Jun 2023 22:03:13 +0200
+
 mesa (23.2.0~git2306161852.94d827332f3~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
