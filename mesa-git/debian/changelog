@@ -1,3 +1,26 @@
+mesa (23.1.2+git2306201438.8bdf4b2b41d~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 8bdf4b2b41d compiler/types: fix size of padded OpenCL Structs
+  * 9c599dff880 anv: avoid private buffer allocations in
+    vkGetDeviceImageMemoryRequirementsKHR
+  * db633a8caa0 r600: Split tex CF only if written component is read
+  * cf19bd944d7 radeonsi: fix RB+ and gfx11 issues with framebuffer
+    state
+  * a2a63c53390 radeonsi: don't convert L8A8 to R8A8 when blitting via
+    compute to fix gfx7
+  * f38154889fd .pick_status.json: Mark
+    5db031bf3ea3e37983f3ab17f2b550e1949d95a9 as denominated
+  * 73c5434c25a virgl: Fix stack overflow in virgl_bind_sampler_states
+  * f7ac8d19c10 lavapipe: correctly update shader object per-stage push
+    constant sizes
+  * d7839ab2a74 lavapipe: more fixes for sample shading
+  * 5e54b211e30 meson: Remove reference to removed SWR driver
+  * 9f91082b676 .pick_status.json: Update to
+    a2d40c09b72374db5d2dd4115c1ea51b2543f515
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Jun 2023 22:05:42 +0200
+
 mesa (23.1.2+git2306152328.8e4950928c4~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
