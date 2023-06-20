@@ -1,3 +1,18 @@
+libsdl2 (2.29.0+git2306202050.ceece918e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * ceece918e Updated to version 2.29.0 for development
+  * ffa78e6be Updated to version 2.28.0 for release
+  * 4ce5c3a69 ibus: Handle error when getting the D-Bus machine ID
+  * a3d4fd71c Added support for blitting SDL_PIXELFORMAT_INDEX1LSB
+  * d97423eba Fixed DualSense controllers not being picked up by the
+    HIDAPI driver
+  * 333a03f1e We don't know in advance whether a device is connected
+    over Bluetooth in SDL2
+  * 5b8fc907d Added support for the GameSir G4 Pro
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 20 Jun 2023 22:02:28 +0200
+
 libsdl2 (2.27.1+git2306150223.76392f4fe~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
