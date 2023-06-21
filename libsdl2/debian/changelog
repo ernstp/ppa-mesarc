@@ -1,3 +1,13 @@
+libsdl2 (2.29.0+git2306211940.dfbdaca2b~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * dfbdaca2b Use default sensor calibration if we can't read it from
+    the Nintendo Switch controller
+  * 657c34655 Apply DPI scale to mouse coordinates in
+    SDL_WarpMouseInWindow()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Jun 2023 21:56:56 +0200
+
 libsdl2 (2.29.0+git2306202050.ceece918e~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
