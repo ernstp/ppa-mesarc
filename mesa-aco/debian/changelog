@@ -1,3 +1,50 @@
+mesa (23.2.0~git2306212059.df6749ed569~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * df6749ed569 radv: inline radv_can_enable_dual_src()
+  * 8b73109a938 radv: remove redundant intermediate variable in
+    radv_is_mrt0_dual_src()
+  * 2a1d97e3fcf dzn: Ignore export access parameters
+  * 63f44951ac4 asahi: drop unnecessary DRM_FORMAT_MOD_{LINEAR,INVALID}
+    fallbacks
+  * cfa7eec06c7 aco: don't set exec_hi for wave32 scan reductions
+  * 5d03bbc91d1 pvr: Fix csb control stream extension
+  * 5336cbff3bd intel/fs: Constant propagate into SHADER_OPCODE_SHUFFLE
+  * b902fb2e14e pvr: Fix dynamic offset patching
+  * 4071b8e7f32 pvr: Fix barrier insertion on merged subpasses
+  * 822dc384b13 pvr: Fix seg fault on empty descriptor set
+  * 9d75795087c radv: Move most of DB_SHADER_CONTROL to PS, more precise
+    GFX11 blend WA
+  * b687cbe36c1 isl: add surface creation reporting mechanism
+  * 75074414302 isl: assert on gfx8 condition that should not be met
+  * 31cc7a18876 isl: assert on gfx7 condition that should not be met
+  * 4616aa2fac2 isl: assert on gfx6 condition that should not be met
+  * 7cf7ea25002 zink: radv vangogh ci updates
+  * 1ca87a300dd zink: always clamp NUM_QUERIES to 500
+  * 0e32de0aed7 zink: recache present semaphores
+  * 6b204c61622 zink: acquire persistently bound swapchain descriptors
+    before setting usage
+  * 98031749421 zink: fix ubo array sizing in ntv
+  * 240b419c03a vulkan/video: consider removed bits when calculating the
+    size of comsumed data.
+  * a28994f73c7 util/rbsp: keep track of removed bits for the emulation
+    prevention three bytes.
+  * 6f2e260d2bf vulkan/video: move parsing longterm rps in h265 slice
+    parsing.
+  * b10631865d8 vulkan/video: adds more conditions for setting
+    loop_filter_across_slices_enable in h265 slice parsing.
+  * 48b32124c61 radv/rt: Store the prolog outside the shaders array
+  * ebe4e337fda radv: Use _mesa_shader_stage_to_string for executable
+    name
+  * 334a20ae28a radv: Implement executable properties for ray tracing
+    stages
+  * bf5b74c3bae radv: Use get_shader_from_executable_index for
+    executable properties
+  * 8a5c4b3ebf8 radv: Adjust the traversal shader description
+  * eeae2fb5c4c radv: Move the shader type to radv_shader_info
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Jun 2023 21:57:48 +0200
+
 mesa (23.2.0~git2306202011.414576aad54~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
