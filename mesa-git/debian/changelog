@@ -1,3 +1,25 @@
+mesa (23.1.2+git2306211643.73800b7772d~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 73800b7772d zink: always clamp NUM_QUERIES to 500
+  * 4c720fda92f zink: acquire persistently bound swapchain descriptors
+    before setting usage
+  * 54d2b9b5fa1 zink: fix ubo array sizing in ntv
+  * 16d52011292 .pick_status.json: Update to
+    b687cbe36c12081921e03c8633fedea334642105
+  * 0d41f0369f6 anv: track buffer writes from shaders for query results
+    writes
+  * ec6b046f8f7 anv: limit ANV_PIPE_RENDER_TARGET_BUFFER_WRITES to blorp
+    operations using 3D
+  * 4bebab6c552 radv/video: drop incorrect defines for uapi ones.
+  * 144ac599c5e util/blitter: fix util_blitter_clear_buffer() refcnt
+    imbalance
+  * 4dcacfff6a1 zink: add COHERENT requirement for CACHED memory
+  * c08692ab6bb .pick_status.json: Update to
+    48b32124c61f35ef39cee7e32ff7795dd49e0690
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 21 Jun 2023 22:00:09 +0200
+
 mesa (23.1.2+git2306201438.8bdf4b2b41d~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
