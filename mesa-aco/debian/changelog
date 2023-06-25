@@ -1,3 +1,53 @@
+mesa (23.2.0~git2306251752.c421ecea56e~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * c421ecea56e vulkan: Update XML and headers to 1.3.255
+  * 73af0475cbd vulkan: Add NV suffix to VK_NV_cooperative_matrix
+    feature names
+  * 07597596588 rusticl/program: skip linking compiled binaries
+  * 18f1087a21c rusticl: bump bindgen requirement
+  * 5b29463746d nir: Add function nir_function_set_impl
+  * 9fa38cf1427 vtn: Do not assign main_entry_point->impl twice
+  * 0d9f474381b draw: Update the comment and function name to match the
+    type
+  * e7f0dd27107 draw: Replace usage of ubyte/ushort/uint with
+    uint8_t/uint16_t/uint32_t in draw_pt_vsplit.c
+  * f35ebd221f5 draw: Replace usage of boolean/TRUE/FALSE with
+    bool/true/false in draw_pt_vsplit*
+  * fbe9a7ca3e7 rusticl/mesa: create proper build-id hash for the disk
+    cache
+  * 29b932512a8 rusticl/meson: extract common bindgen rust args
+  * c8963738896 rusticl: generate bindings for build-id stuff
+  * d14af004321 rusticl: structurize and reorder mesa binding args
+  * 337908440ee v3dv: replace boolean and uint with bool and size_t
+  * fa8a2326910 docs/coding-style: add pre-commit hook fallback for
+    clang-format
+  * 270d898e754 docs/coding-style: add example emacs config for clang-
+    format
+  * 342196f7b05 docs/coding-style: add example vim config for clang-
+    format
+  * 89873e5e5ce r300: properly count maximum used register index
+  * 561cce32f14 anv: Only expose video decode bits with
+    KHR_video_decode_queue
+  * 727335045dd anv: Pipe anv_physical_device to
+    anv_get_image_format_features2
+  * 02aaf589083 nv50/ir/nir: set numBarriers if we emit an OP_BAR
+  * 69c452781b3 nvc0: fix printing shaders
+  * 45d86b419bf rusticl/program: add debugging option to disable SPIR-V
+    validation
+  * 2b2a5138900 rusticl/program: add debugging for OpenCL C compilation
+  * 2362fd502bb docs: document CLC_DEBUG
+  * 1b3669a1ed3 intel: Initialize FF_MODE2 on all Gfx12 platforms
+  * 427fee35079 intel/gfx12.5: Enable L3 partial write merging for
+    compressible surfaces among other cases.
+  * d7ec6f17246 ci/fastboot: use gzipped Image to avoid compressing on
+    the runner
+  * 7d3c29dc600 frontends/va: fix some coverity scan reported issues
+  * dc93f205c11 meson: Explicitly add "check : false" to a couple
+    instances of run_command
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 25 Jun 2023 21:00:45 +0200
+
 mesa (23.2.0~git2306212059.df6749ed569~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
