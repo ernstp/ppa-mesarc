@@ -1,3 +1,52 @@
+mesa (23.1.3+git2306281930.836d642c34e~f~mesarc2) focal; urgency=medium
+
+  * New snapshot:
+  * 836d642c34e anv: fix utrace batch allocation
+  * 84d40dcf318 radv/amdgpu: workaround a kernel bug when replacing
+    sparse mappings
+  * a59ae56afbd radv/amdgpu: skip adding per VM BOs for sparse during CS
+    BO list build
+  * 455c266ec5c anv: Only expose video decode bits with
+    KHR_video_decode_queue
+  * c6f3c29ab0f anv: Pipe anv_physical_device to
+    anv_get_image_format_features2
+  * dbb2b8df971 intel: Initialize FF_MODE2 on all Gfx12 platforms
+  * 952380c90c1 intel/gfx12.5: Enable L3 partial write merging for
+    compressible surfaces among other cases.
+  * 879fdb8ea87 .pick_status.json: Update to
+    e67337bebf623e67d119f48c2d24f3b831482ede
+  * 689746c8868 freedreno: Reallocate on unshared export
+  * 37cc02d26e2 freedreno: Add aux-context support
+  * a88f2eab775 freedreno: Handle export error handling
+  * 4ddc83be953 freedreno/drm: Don't try to export suballoc bo
+  * b98eb78f586 tu: Fix missing unlock
+  * 5300cff16ce nir/lower_bool_to_int32: Fix progress reporting
+  * 1e149d37df3 compiler: Allow the explicit_stride of aoa types to be
+    zero
+  * e1e7e7bf17e .pick_status.json: Mark
+    af895692b3b52599e456f14e08a3beaa32b5a4c8 as denominated
+  * 034fc760545 radv/amdgpu: fix dumping cs with RADV_DEBUG=noibs
+  * 2ac642c5f90 r600/sfn: Don't clear clear group flag on vec4 that
+    comes from TEX or FETCH
+  * 4a288b1dd51 anv/video: fix to set U/V offset correctly.
+  * 004e527fbfa glsl: call nir_opt_find_array_copies() when linking
+  * d93ab514219 venus: Fix detection of push descriptor set
+  * b2c94821fff venus: suballocate feedback slot with feedback buffer
+    alignment
+  * 249c76e27b0 anv: align buffers to a cache line
+  * be04c20aa71 mapi: Fixes check_table.cpp for DrawArraysInstancedARB
+    and DrawElementsInstancedARB
+  * 16964024b6d nir/lower_tex: ignore saturate for txf ops
+  * 552ac035f01 asahi: drop unnecessary DRM_FORMAT_MOD_{LINEAR,INVALID}
+    fallbacks
+  * b4cd2c34e5b pvr: Fix dynamic offset patching
+  * 753abf8b459 pvr: Fix barrier insertion on merged subpasses
+  * 9d31e05b8a8 pvr: Fix seg fault on empty descriptor set
+  * 5f3317ec1c6 .pick_status.json: Update to
+    f9e6d35f65c6c5913d54ba5306af391a8701a68a
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Jun 2023 20:12:57 +0200
+
 mesa (23.1.3+git2306221854.1b830eb55e5~f~mesarc2) focal; urgency=medium
 
   * New snapshot:
