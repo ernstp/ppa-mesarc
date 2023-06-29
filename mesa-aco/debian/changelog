@@ -1,3 +1,51 @@
+mesa (23.2.0~git2306291858.33ee59af1de~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * 33ee59af1de radv: fix incorrect size for primitives generated query
+  * 4f3890dd87b anv: move WA 1607854226 to use the WA infrastructure
+  * 2bd2c03b0ee lavapipe: handle multiview queries
+  * e81b5b972ec nir/validate: Assert txf(_ms) matches dimension
+  * 5099137612c aco/optimizer: delete s_bitcmp optimization
+  * 130fbda71b9 radv: set has_bit_test for aco
+  * 44d0b785ccf nir/opt_algebraic: combine bitz/bitnz
+  * 573e98f34ac aco: implement nir_op_bitz/bitnz
+  * 6585209cdd9 nir/lower_bit_size: mask bitz/bitnz src1 like shifts
+  * 481a34e82e4 nir: add single bit test opcodes
+  * 9ca1bb3cf8f util/blitter: revert util_blitter_clear_buffer()
+  * 625215dbe17 ci/fdno: Pause a660 testing
+  * 68b8aa788dc intel/compiler: Switch to use nir_foreach_function_impl
+  * 46df42c4e80 crocus: Switch to use nir_foreach_function_impl
+  * e1bf96dd567 glsl: Remove the extra scope in gl_nir_link_uniforms.c
+  * dcf9cfd2973 glsl: Switch to use nir_foreach_function_impl from
+    nir_foreach_function
+  * 4a8ec0db90c d3d12: Switch to use nir_foreach_function_impl
+  * 99dce8407e5 asahi: Use nir_foreach_function_impl instead
+    nir_foreach_function in function agx_nir_lower_zs_emit
+  * a4342177204 gallium/auxiliary: Switch to use
+    nir_foreach_function_impl
+  * a8d669b5931 nir/split_64bit_vec3_and_vec4: Use the right number of
+    components
+  * d3003b0a413 Revert "isl: Set Depth to array len for 3D storage
+    images"
+  * 2e8c0a33e77 anv: implement storage image depth query using
+    descriptor buffer read
+  * a7ccba2dfd1 v3dv: fix blit path for compressed image to buffer
+    copies
+  * 599e76617da v3dv: use div_round_up for division by block size
+  * a1fda29bd1d anv: look into batch bo reloc list looking for BOs to
+    decode
+  * 5f7fb0a720c clang-format: Add nir_foreach_function_impl into
+    src/.clang-format
+  * 62ce223245c treewide: Switch to use nir_foreach_function_with_impl
+    when possible
+  * b91bff3537f clang-format: Add nir_foreach_function_with_impl into
+    src/.clang-format
+  * fde6b51749a nir: Split macro nir_foreach_function_with_impl out of
+    nir_foreach_function_impl
+  * afa79cd9b88 nir: use imm-helpers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Jun 2023 20:10:26 +0200
+
 mesa (23.2.0~git2306251752.c421ecea56e~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
