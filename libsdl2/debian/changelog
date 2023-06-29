@@ -1,3 +1,21 @@
+libsdl2 (2.29.0+git2306290232.1453cfa4e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 1453cfa4e pulseaudio: Move to a threaded mainloop.
+  * 0ba93e4aa Don't crash if SDL_MapRGB() and SDL_MapRGBA() are passed a
+    NULL format
+  * 170428b10 Fixed Nintendo Switch Pro controllers that don't have
+    readable user calibration
+  * 950ff0056 hidapi: switch: Handle MCU input reports
+  * 38619bb28 SDL_FindFreePlayerIndex() will always return the next
+    available player index
+  * c6660afe4 Corrected the Victrix FS Pro as a PS4 controller instead
+    of a PS3 controller
+  * 8acf72965 Removed 100 ms hitch when querying third party Nintendo
+    Switch controllers that don't respond to request for info
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 29 Jun 2023 20:09:40 +0200
+
 libsdl2 (2.29.0+git2306211940.dfbdaca2b~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
