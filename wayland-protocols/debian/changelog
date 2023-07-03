@@ -1,3 +1,15 @@
+wayland-protocols (1.32+git2307031126.681c33c~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 681c33c build: Bump version to 1.32
+  * 174b348 stable/xdg-shell: clarify initial wl_surface acknowledgement
+  * 3c1fb30 xdg-activation: Clarify that the token stays valid if the
+    object is destroyed
+  * 12c0630 security-context-v1: new protocol
+  * c124b64 xdg-shell: Add suspended toplevel state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 03 Jul 2023 17:49:31 +0200
+
 wayland-protocols (1.31+git2305221547.bbe9298~f~base2) focal; urgency=medium
 
   * New snapshot:
