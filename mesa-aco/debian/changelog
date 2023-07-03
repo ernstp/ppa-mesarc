@@ -1,3 +1,46 @@
+mesa (23.2.0~git2307032116.5be8f98f5ac~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 5be8f98f5ac compiler/clc: Switch to use nir_foreach_function_impl in
+    function nir_lower_libclc
+  * 0dd0f35205c v3d/ci: add new flake
+  * d2719c31777 d3d12: Video Decode - Refactor and style fixes
+  * 5a8d8dad9a8 d3d12: Video Process - Implement get_processor_fence and
+    async queing
+  * c875028b028 d3d12: Video Encode - GPU wait on input surface fence
+  * 9510c11c6fe d3d12: Video Decode - Sync 3D context copy with decode
+    work for texture array case
+  * 4b15eaeba8b d3d12: Apply style format to d3d12_video_dec.cpp
+  * af0b4eacab7 d3d12: Video Decode - Implement get_decoder_fence and
+    async queing
+  * fb1783616e3 frontend/va: Add video processing async fence support
+  * c78611c0ab6 frontend/va: Pass surf->fence in
+    PIPE_VIDEO_ENTRYPOINT_ENCODE contexts for driver to wait on input
+    surface pending work
+  * 6b09f8f453e zink/ci: Add ext_transform_feedback@api-errors to fail
+    list.
+  * 94b92718d9f radv: Enable weak reference cache for device->mem_cache.
+  * 3bd72eec1e4 radv: reference pipeline cache object in radv_pipeline
+  * 05269047d3c intel: Use nir_builder_at
+  * ed083055492 panfrost: Use nir_builder_at
+  * 12a268ea813 microsoft: Use nir_builder_at
+  * 8b606d53470 lavapipe: Use nir_builder_at
+  * 47934ecf07c zink: Use nir_builder_at
+  * b8486673a02 vc4: Use nir_builder_at
+  * 364edfefe4e radeonsi: Use nir_builder_at
+  * 977f385e656 r600: Use nir_builder_at
+  * fba5c97bc1a etnaviv: Use nir_builder_at
+  * 7f9e790d429 crocus: Use nir_builder_at
+  * 2c413ed86f0 gallium,st: Use nir_builder_at
+  * 79a37ceda09 freedreno: Use nir_builder_at
+  * be45d4fa6ef spirv: Use nir_builder_at
+  * 574079e354e nir: Use nir_builder_at
+  * c1b472c834f glsl: Use nir_builder_at
+  * 5c8c2ec85c6 v3d: Use nir_builder_at
+  * 8ce27e7ed28 asahi: Use nir_builder_at
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 03 Jul 2023 22:13:01 +0200
+
 mesa (23.2.0~git2307031645.b774d5f9d5e~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
