@@ -1,3 +1,20 @@
+libsdl2 (2.29.0+git2307031704.e65ca6195~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e65ca6195 khronos: Fixed a typo in a Vulkan header, to match
+    upstream.
+  * e42a3a323 cmake: use SDL_CPU_ARM32 instead of
+    CMAKE_GENERATOR_PLATFORM STREQUAL "ARM"
+  * 769bf2ebc rwops: Use SetFilePointerEx on Windows for appending
+    writes.
+  * fc0854651 Added Linux mapping for the Logitech Chillstream
+  * e6f635ca1 wayland: don't use libdecor_frame_get_* functions when
+    header doesn't have it
+  * 099e53f3a Fixed build
+  * 0f940cb6c Added support for the Nintendo Online Famicom controllers
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 03 Jul 2023 17:46:24 +0200
+
 libsdl2 (2.29.0+git2306290232.1453cfa4e~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
