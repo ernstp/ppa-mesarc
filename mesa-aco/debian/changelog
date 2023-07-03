@@ -1,3 +1,48 @@
+mesa (23.2.0~git2307031645.b774d5f9d5e~f~mesaaco4) focal; urgency=medium
+
+  * New snapshot:
+  * b774d5f9d5e freedreno/fdperf: Use common device info helpers
+  * a9c6f7ffdff vulkan/pipeline_cache: Introduce weak reference mode.
+  * 47c9fba3221 vulkan/pipeline_cache: Move cache_object_unref out of
+    header.
+  * 44bfeb77d9f vulkan/pipeline_cache: Move locking outside of
+    remove_object.
+  * 64c959e46c7 vulkan/pipeline_cache: Do not consume object passed into
+    remove_object.
+  * 3774c3232c4 docs/features: update anv entries
+  * eb0610c4012 Revert "ci: disable Collabora's LAVA lab for maintance"
+  * d3b6635663f ci/microsoft: partly revert rename from container-rules
+    to manual-rules
+  * 80a140953d9 ci: when touching farms, never run manual jobs
+  * ece34ec1276 tu/kgsl: Fix memory overwrite with
+    vkFlushMappedMemoryRanges when more than 1 range
+  * ae48fae658a aco: remove 64-bit integer conversion opcodes
+  * 1194a3baa98 radeonsi: use nir_lower_conv64
+  * b3b9b22c953 radv: call nir_lower_int64 later
+  * 38cff03e58b radv: use nir_lower_conv64
+  * 3d0e997e99e nir: split nir_lower_mov64
+  * bd43d9e3d90 radv: Enable required subgroup size on mesh/task.
+  * 34ace6688ac radv: Use required subgroup info for graphics shaders.
+  * 8982bd60453 radv: Refactor required subgroup size in pipeline key.
+  * b8fbce045e6 etnaviv: nir: do a late nir_opt_cse run
+  * 8d49f66ee91 ci: disable Collabora's LAVA lab for maintance
+  * 1fc98414b6b ci/traces: print version of apps used for replaying
+    traces
+  * ae69494be00 ci/apitrace: include version with LTO enabled
+  * 40c7262c407 ci/traces: guard DXVK and VK behind VK_DRIVER
+  * 28667995e4c ci: create manual farm rules
+  * c9de0d29774 ci/microsoft: rename manual rules according to rest
+    introduced rules
+  * 4403797b716 ci/microsoft: uploading artifacts gets stuck currently
+    (retried)
+  * ea9f8c26bc9 docs(fix): remove last ref to i965 in features.txt
+  * ee69c56c8ca sfn: indent fixes after switch to use
+    nir_foreach_function_impl
+  * 2b64f29f0fb sfn: Convert to use nir_foreach_function_impl
+  * 8410468d230 llvmpipe: Convert to use nir_foreach_function_impl
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 03 Jul 2023 17:47:09 +0200
+
 mesa (23.2.0~git2306291858.33ee59af1de~f~mesaaco4) focal; urgency=medium
 
   * New snapshot:
