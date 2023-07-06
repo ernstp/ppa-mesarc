@@ -1,3 +1,45 @@
+mesa (23.2.0~git2307061823.6686a1e7ea4~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 6686a1e7ea4 zink: fix anv ci flakes (for real this time)
+  * 1c29200a15e vk/wsi: add error logging for syncfile import/export
+    failures
+  * a69a4f393b0 vk/wsi: unify dmabuf exporting
+  * 2b885b233f7 vk/wsi/x11: stop roundtripping on presentation
+  * 36d5b583171 vk/wsi/x11: handle geometry updating more asynchronously
+  * fb9f697fbb8 vk/wsi/x11: move surface alpha check from get_caps to
+    creation
+  * 776f258ddba zink: Free the cdt when an error occurs
+  * 0a6dd797ea7 nir/opt_shrink_vectors: enable sparse intrinsics
+    shrinking
+  * c26c0a36d34 intel/fs: disable coarse pixel shader with interpolater
+    messages at sample
+  * 30163c59f70 rusticl: Drop Program::kernel_count
+  * 3dde5c231e1 rusticl: Drop some Kernel data and have a NirKernelBuild
+    ref instead
+  * 005b41fd391 tgsi: uint -> unsigned
+  * a42dc4ef5e5 tgsi: uint -> uint32_t
+  * dcbca3e3b3f tgsi: use enum for interpolate-mode
+  * 733ed06e940 tgsi: use enum for shader-type
+  * e4b86e76cf7 tgsi: use enum for property-name
+  * 5ccf63dc9d8 tgsi: use enum for tgsi-file type
+  * 32f40b2e813 tgsi: use stdint.h types
+  * a65da48b6cc tgsi: use enum instead of defines
+  * e8114fe9a74 aux/util: uint -> unsigned
+  * 284151262fd aux/util: use stdint.h types
+  * 3f79b51dcd6 aux/util: use unsigned instead of uint
+  * ae0df2a52fa aux/util: use enum for primitive-type
+  * 70e153e8d08 aux/util: match type of
+    pipe_draw_start_count_bias::start/count
+  * 0f98f750db3 aux/util: use enum for render-condition
+  * 647241a770c aux/pp: use unsigned instead of uint
+  * 872719d15cf gallivm: use unsigned instead of uint
+  * c3ec99bf9a5 pipebuffer: use unsigned instead of uint
+  * d29bb6467e2 aux/trace: use stdint.h types
+  * d941078129b math: drop MAT_[ST][XYZ] defines
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Jul 2023 19:05:20 +0200
+
 mesa (23.2.0~git2307032116.5be8f98f5ac~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
