@@ -1,3 +1,37 @@
+libsdl2 (2.29.0+git2307061737.3054c0dc5~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 3054c0dc5 Fixed %p formatting when there is following text
+  * 52d63ba26 Do a full UCS4 zero termination on iconv converted strings
+  * bad5431a1 Fixed wayland clipboard not always updating in response to
+    Ctrl-C
+  * 1ab452fc5 Fixed printf formatting for "%p" and added a unit test to
+    check it
+  * 2a946832b Added GetClientScreenRect() and fixed build for C89
+    compilers
+  * 488a91eb4 Fixed crash if mutex functions are used before any mutex
+    has been created
+  * f75c0e320 center cursor to client area (excludes titlebar thickness)
+  * 4d4c81d43 Revert "Update SDL_windowswindow.c"
+  * 1e6c128c4 Update SDL_windowswindow.c
+  * 1c6a64936 cmake: check whether SONAME actualy exists //Have include
+    libunwind.h
+  * 0262f757e cmake: check whether libunwind can be compiled and linked
+    against
+  * 8908d1628 cmake: explicitly disable WINDOWS_EXPORT_ALL_SYMBOLS for
+    SDL2
+  * 61808b03b Fixed resource leak and crash at exit in the D3D11
+    renderer
+  * d65185a6a Made error handling more consistent in
+    D3D12_RenderReadPixels()
+  * bf277eb80 The clip rect is defined in terms of the current viewport
+  * 825b0324c fixed windows build after commit 7e8be3f
+  * 7e8be3f28 Retry to open the clipboard in case another application
+    has it open
+  * a6ba8a158 Removed spurious casts
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 06 Jul 2023 19:04:36 +0200
+
 libsdl2 (2.29.0+git2307031704.e65ca6195~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
