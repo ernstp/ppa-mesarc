@@ -1,3 +1,44 @@
+mesa (23.2.0~git2307080326.6934f660357~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 6934f660357 ci/freedreno: document number of a630 devices available
+  * 15cddb7035a ci/freedreno: re-enable a530 as it's now stable with
+    multiple skips
+  * 69a14f3f7db ci/freedreno: switch a630_{piglit,skqp} and a618_gl to
+    Weston
+  * 591ce8f185b add initial .git-blame-ignore-revs
+  * 98ed583a6d7 clang-format: enforce formatting of egl
+  * e85983d7726 egl: re-format using clang-format
+  * f30081e5868 egl: prevent clang-format from reordering some headers
+  * f2300eeb67a egl: protect the formatting in a couple of places
+  * 659bace01a5 egl: add a few trailing commas
+  * 35d8db96ed2 egl: change a couple of clang-format settings
+  * f5eec48799b clang-format: add wayland foreach macros
+  * d4575d7fcb1 clang-format: add egl foreach macro
+  * 66a01b9377b ci/amd: switch all possible jobs from X11 to Wayland
+  * a6740ee7a4d d3d12: Fix indexing of local_reference_state
+  * 8166c1f8c1a intel/genxml: Drop incorrect compute aux-inv register
+    entry
+  * cc6c35518fe intel/genxml: Fix typo in CCS cache flush enable
+  * a126ba0cbd0 iris: Use correct CCS0 aux-map register offset
+  * c328638b3b2 anv: Use correct CCS0 aux-map register offset in pipe
+    flush
+  * 1fb94609137 anv: Program compute aux-map base address during queue
+    init
+  * b4ab4e85498 intel/genxml: Add COMPCS0 aux-table registers
+  * 0908adf567a ci/windows: Re-enable Windows builds
+  * ea3c73b33c6 microsoft/clc: Fix usage of nir_builder_at
+  * 511116d6307 radv: Fix label name
+  * 158813816e7 virgl/ci: fix skips definition
+  * 5b2e672bb0b v3dv/ci: skip more tests that are timing out
+  * fb7c9745141 v3dv/ci: fix skipping of vk tests
+  * d5e01e67a4f vc4/ci: fix skipping of gles3 piglit tests
+  * 975a8ecc881 frontends/va: use resources instead of views
+  * 025dcbea661 d3d12: implementation for get_resources()
+  * e4389fe0eec nouveau: implementation for get_resources()
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 08 Jul 2023 15:23:19 +0200
+
 mesa (23.2.0~git2307061823.6686a1e7ea4~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
