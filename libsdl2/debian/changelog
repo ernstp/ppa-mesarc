@@ -1,3 +1,39 @@
+libsdl2 (2.29.0+git2307111952.e8b6edd5a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e8b6edd5a RAWINPUT_RegisterNotifications() should return int, for
+    consistency
+  * 34c5bde35 Improved RAWINPUT <-> XInput/WGI device correlation
+  * 9117b2e30 Fixed crash if RAWINPUT is not initialized
+  * 6bf5f5a22 Don't send k_ePS4FeatureReportIdCapabilities to Sony PS4
+    controllers
+  * 92fd2938e Minor cleanup
+  * 9cd7cbe13 Added support for absolute mice with evdev
+  * 823127881 Unaligned stacks on i686-w64-mingw32, may lead to crashes
+    (#7607)
+  * 0ad822eb7 SDL_RWFromMem, SDL_RWFromConstMem: reject negative size
+    parameters.
+  * 156c7badf Re-added mappings for older Xbox One controllers on Linux
+  * 547c8c288 Add kernel32 to SDL_EXTRA_LIBS required for cross-
+    compilation to Win32 native
+  * 4b1dd54a5 Fixed mapping BTN_TR2 to right trigger
+  * acdde129b X11: Use XFixes to detect clipboard updates
+  * f8a0135ed Added WGI gamepad added/removed listeners for RAWINPUT
+  * 1f7bc0888 Don't tickle Bluetooth PS4 controllers in simple mode with
+    an effects packet
+  * de849d5e6 Lazily initialize the WGI gamepad support
+  * a6228e7aa Added the hint SDL_HINT_JOYSTICK_WGI to control whether to
+    use Windows.Gaming.Input for controllers
+  * e16a83d39 Prefer using XInput for rumble over WGI, as it allows
+    rumble in the background
+  * a0a3957eb Continue running XInput detection while RAWINPUT is active
+  * b90343e51 video(wayland): use both --icon and --icon-name for Zenity
+    (#7897)
+  * 042243471 emscripten: Add JS library dependencies using EM_JS_DEPS
+    macro
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jul 2023 11:15:35 +0200
+
 libsdl2 (2.29.0+git2307061737.3054c0dc5~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
