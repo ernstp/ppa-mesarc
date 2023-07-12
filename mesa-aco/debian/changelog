@@ -1,3 +1,46 @@
+mesa (23.2.0~git2307121045.2c3b6243002~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 2c3b6243002 nvc0: backport fp helper invocation fix to 2nd gen
+    Maxwell+
+  * 0c778ec3c8e anv: Adds a workaround for HEVC decoding on some old
+    platforms.
+  * ad980dc699e ci: update fails for fixed tests due to llvmpipe linear
+    changes.
+  * a07fa6516b0 llvmpipe/linear: add support for rgba color buffers.
+  * f96b6027a1a llvmpipe/linear: add support for sampling when cbuf
+    order is different.
+  * a3f586685db llvmpipe/linear: add sample routines for swapping r/b
+    channels
+  * 70f49c78cc7 llvmpipe/linear/tgsi: calculate num_texs properly for
+    nir.
+  * e43804ba65d llvmpipe/linear: refactor linear samplers into templated
+    code.
+  * 0230179f8b5 freedreno/ci: Update pixmark piano checksums
+  * 69f8daca166 pan/mdg: Ingest new-style registers
+  * 35030fc79c3 gallivm: Switch to reg intrinsics
+  * fded7e7b66e nir: Remove nir_register-based unit tests
+  * e96a9a1b71c nir: Remove nir_lower_regs_to_ssa
+  * 9eab1e7521b nir/lower_shader_calls: Convert to register intrinsics
+  * 002f8b657eb mesa: Convert PTN to register intrinsics
+  * b55836a74df mesa: Return SSA defs from PTN ALU helpers
+  * 5b835f1a08a mesa: Simplify ptn_log() a bit
+  * 2198eedd045 gallium: Convert TTN to register intrinsics
+  * a6d9f168ce1 gallium: Return SSA values from TTN ALU helpers
+  * 61010e52554 nir: Add lower_vec_to_regs pass
+  * aea8a702008 nir: Add intrinsics version of locals_to_regs
+  * ae0408be1bd nir/from_ssa: Support register intrinsics
+  * 29b2ace1845 nir/from_ssa: Make additional assumptions in coalescing
+  * 36b29201faa nir: Produce intrinsics in lower_{phis,ssa_defs}_to_regs
+  * 73e191924c0 nir: Add a reg_intrinsics flag to nir_convert_from_ssa
+  * bcf3a622d1d nir: Add new version of lower_regs_to_ssa
+  * 2eb554af482 nir: Add legacy data structures & helpers
+  * d313eba94ef nir: Add pass for trivializing register access
+  * 1d6c06e4b97 nir: Add helpers for walking register uses
+  * 7229bffcb13 nir: Add intrinsics for register access
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jul 2023 11:16:18 +0200
+
 mesa (23.2.0~git2307080326.6934f660357~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
