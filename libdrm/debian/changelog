@@ -1,3 +1,10 @@
+libdrm (2.4.115+git2307062003.7d7a9901~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 7d7a9901 tests/amdgpu/vcn:update decoder unit test
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jul 2023 11:15:11 +0200
+
 libdrm (2.4.115+git2305111853.98e1db50~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
