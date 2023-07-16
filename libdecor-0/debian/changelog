@@ -1,3 +1,11 @@
+libdecor-0 (0.1.99+git2307152150.f43652c~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * f43652c libdecor: Pass through xdg_toplevel 'suspended' state
+  * bb2ec85 libdecor: check if plugins use different conflicting symbols
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Jul 2023 00:28:28 +0200
+
 libdecor-0 (0.1.99+git2306062334.7326039~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
