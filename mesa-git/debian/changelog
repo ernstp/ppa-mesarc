@@ -1,3 +1,50 @@
+mesa (23.1.3+git2307162311.0b280da5f8f~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 0b280da5f8f nv50/ir: Support vector movs
+  * 0da490834f4 glx: Assign unique serial number to GLXBadFBConfig error
+  * 1b07a68962a aco: Fix subgroup_id intrinsic on GFX10.3+.
+  * 158ab7ae3af pvr: skip setting up SPM consts buffer when no const
+    shared regs are used
+  * b45ea013d2b crocus: Avoid fast-clear with incompatible view
+  * a37e7e9eb8e nvc0: backport fp helper invocation fix to 2nd gen
+    Maxwell+
+  * 8559e91ce0c llvmpipe/linear: don't allow linear path for shader
+    output with location frac
+  * 10baa0f9ed7 anv: fix utrace signaling with Xe
+  * 39ecbc5e5a7 virgl/video: Fix out-of-bounds access in
+    fill_mpeg4_picture_desc()
+  * 0e1870e23d2 zink: fix batch disambiguation on first submit
+  * 509e01c410f frontends/va: Fix memory leak of decrypt_key
+  * 922274a1120 radv/rt: Miss rays that hit the triangle's v edge
+  * 5c2c92849a0 radv/rt: Enable exact on software intersection functions
+  * c6be593b908 panfrost: fix refcnt imbalance related to blitter
+  * 342d3e43eec wgl: Fix depth/stencil image support when using zink
+    kopper
+  * 7fb42b1c93c d3d12: Fix indexing of local_reference_state
+  * 06e1a5bf1b1 r600: Pre-EG  - Set wrap texture modes to repeat when
+    seemless cube is used
+  * 29f4a653879 venus: fix leaks from tracked present src images
+  * b475e300a0d venus: fix a cmd tmp storage leak
+  * 3092a1a99eb intel/fs: disable coarse pixel shader with interpolater
+    messages at sample
+  * 1c8ea779cad nir: Add nir_foreach_function_impl helper
+  * 9ad16a4b600 vbo: correctly restore _VaryingInputs for display list
+    fast path
+  * f52fcfeaea6 gallivm: Fix atomic_global types
+  * d5ff432d7d0 glsl: Fix yylloc.source propagation in YYLLOC_DEFAULT
+  * a5e9f7633a9 radeonsi: fix refcnt imbalance related to
+    util_blitter_save_fragment_constant_buffer_slot()
+  * ed9e36ef8c5 winsys/panfrost: Make sure we reset scanout on error in
+    create_kms_dumb_buffer_for_resource()
+  * 44175d888c9 renderonly: Make sure we reset scanout on error in
+    create_kms_dumb_buffer_for_resource()
+  * 88d9ba028cb renderonly: Fix potential NULL deref in the error path
+  * b5bc8d82337 winsys/panfrost: Fix a scanout resource leak
+  * d766ffcc24c aux/trace: fix bindless texture dumping
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Jul 2023 00:31:43 +0200
+
 mesa (23.1.3+git2306281930.836d642c34e~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
