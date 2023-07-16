@@ -1,3 +1,27 @@
+libsdl2 (2.29.0+git2307162311.4b2b475ac~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 4b2b475ac remove unused vulkan/*.hpp files.
+  * a4ad293d4 Relicensed testutils to match other test code
+  * 6089b3570 Fixed getting the CRC of virtual joysticks without a
+    VID/PID
+  * a99910085 wayland/video: Validate the returned window display
+    pointer before dereferencing it
+  * 57e9a9eee ci: move 'set -eu' to after source_cmd
+  * b9d16dac4 pulseaudio: Some fixes that seem to avoid an assertion in
+    libpulse.
+  * 776a5e0d2 pulseaudio: eliminate <pulse/simple.h> include.
+  * 376c6a9dd apply commit 3aba9d44732d6e4538deb2c9e4389951fe5a0de5 to
+    autotools, too.
+  * 3aba9d447 pulseaudio: We should be using libpulse, not libpulse-
+    simple.
+  * 832b52418 pulseaudio: don't wait on pa_context_subscribe in hotplug
+    thread.
+  * 29d461b62 need pulseaudio >=0.9.15. call
+    pa_threaded_mainloop_set_name only if available.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Jul 2023 00:28:44 +0200
+
 libsdl2 (2.29.0+git2307111952.e8b6edd5a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
