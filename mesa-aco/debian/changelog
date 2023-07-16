@@ -1,3 +1,49 @@
+mesa (23.3.0~git2307160211.dfd96fac414~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * dfd96fac414 ci/freedreno: add another a530 flakes
+  * f952756d1e2 ci/freedreno: fix unexpectedpass flake on a630
+  * 5b3cccaf630 ci/lima: EGL testing was disabled when fp16 fail was
+    removed
+  * 87439a8c718 ci/radeonsi: stoney arb_timer_query got fixed between
+    kernel 6.3.1..13
+  * d3f26cbbe1a Revert "lima/ci: temporarily disable deqp-egl tests due
+    to timeouts"
+  * c467d760cba ci/freedreno: add fails introduced by upreving to 6.3.13
+  * bd2b31a89cc ci: update kernel to 6.3.13
+  * 23158e9a3f7 ci: build kernel in gfx-ci/linux and just use binaries
+    in Mesa3D CI
+  * 9bcdc45ee7e nir: Devendor load_sample_mask
+  * 56d61d9a644 nir: Add fence_{pbe,mem}_to_tex(_pixel)_agx intrinsics
+  * 259ba104f79 nv50/ir: Support vector movs
+  * 39824457283 glx: Assign unique serial number to GLXBadFBConfig error
+  * 9590bce3e24 radeonsi: prefix function with si_ to prevent name
+    collision
+  * 27d30fe3c0e isl: Disable MCS compression just on ACM platform
+  * efa65945360 intel/compiler: Look at 2 register worth of data instead
+    of 4
+  * 8b93fa149bf iris: migrate WA 14016118574 to use the WA framework
+  * 83716b08cf1 iris: migrate WA 14013910100 to use the WA framework
+  * e85a18a9afe Update radeon_vcn_enc.c
+  * 64eab1f3ae2 radeonsi: enable vcn encoder rgb input support
+  * 043dcfad04d Revert "ac/nir/ngg: Follow intrinsic sources when
+    analyzing before culling."
+  * d408ae88db6 radeonsi: Use DIV_ROUND_UP instead of ALIGN_POT
+  * 6d312c61600 etnaviv: optimize transfers when whole resource level is
+    discarded
+  * f8f0f1c5cb5 etnaviv: optimize render resource update
+  * 61e27debf5b etnaviv: keep blit destination tile status valid if
+    possible
+  * dce4aa83e4f etnaviv: allow sampler TS even if the resource is
+    flushed
+  * fdedc0b3b37 etnaviv: optimize sampler source update
+  * 995e34840f0 etnaviv: add tile status buffer status into TS metadata
+  * 49d2f9f918a etnaviv: move TS meta into etna_resource_level
+  * 97aec88c793 etnaviv: add helper to set TS validity
+  * 0f2df7d3615 etnaviv: add helper to get TS validity
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Jul 2023 00:29:22 +0200
+
 mesa (23.2.0~git2307121045.2c3b6243002~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
