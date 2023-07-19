@@ -1,3 +1,46 @@
+xwayland (2:23.1.99+git2307191730.8ee1e6507~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 8ee1e6507 Bump version to 23.1.99.901
+  * 8ed4308e0 Revert "xwayland/glamor: Avoid implicit redirection with
+    depth 32 parent windows"
+  * 04e33792c Bump version to 23.1.99.1
+  * 707b447e4 meson: Change project name to xwayland
+  * 2f7cee944 Don't install Xvfb
+  * dad40e0db meson: Build Xwayland unconditionally
+  * 312e8f37b Drop miext/shadow directory
+  * 86a2b27ac Drop EXA code
+  * 128622685 Drop config directory
+  * 1b9f41238 Drop Xephyr / kdrive DDX
+  * 7f915811f Drop Xorg DDX
+  * cbd93eada Drop Xwin DDX and x86 MinGW-w64 cross build
+  * 296e2765b Drop Xnest DDX
+  * 7d6a10abc Drop Xquartz DDX
+  * 94deed272 xwayland: Use sensible defaults for rootful size
+  * 7c8587748 Xwayland: Do not mark decorate as experimental
+  * 516f1b96c xwayland: Make Xwayland rootful resizable
+  * 63c0a2dfa xwayland: Make xwl_randr_add_modes_fixed() public API
+  * d6c5999e9 xwayland/glamor: Avoid implicit redirection with depth 32
+    parent windows
+  * c38442bc3 xwayland/glamor: Require equal pixmap depths in
+    xwl_glamor_check_flip
+  * 9fb1f0ef2 composite: Expose CompositeIsImplicitRedirectException
+  * ff0c252e5 composite: Free cs->implicitRedirectExceptions in
+    compCloseScreen
+  * 16aa40f1c glamor: Use DrawablePtr in struct copy_args
+  * 537169089 glamor: Fix up alpha channel if needed in
+    glamor_upload_boxes
+  * 78e0bb500 glamor: glamor_prep_pixmap_box → glamor_prep_drawable_box
+  * ff27ffa1c glamor: Eliminate glamor_fini_pixmap
+  * a504f65d8 glamor: Take DrawablePtr instead of PixmapPtr in
+    up/download_boxes
+  * 5893de5a2 glamor: Make program APIs take DrawablePtrs instead of
+    PixmapPtrs
+  * 0ed2d6921 glamor: Remove unused transfer functions
+  * ef1812655 xwayland: Clean up drm lease when terminating. #946
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:25:53 +0200
+
 xwayland (2:23.1.2+git2306061120.79a529dc3~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
