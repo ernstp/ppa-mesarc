@@ -1,3 +1,14 @@
+corectrl (1.4.0~git2307171958.f2f6b8c~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * f2f6b8c Fix typo on variable name
+  * 37c605c Refactor parsing logic of overdrive voltage curves
+  * 3aa97c0 Provide voltage curve capability only for valid voltage
+    curves
+  * badc33a Use nested namespace definitions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:18:43 +0200
+
 corectrl (1.4.0~git2305041744.6ce3a81~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
