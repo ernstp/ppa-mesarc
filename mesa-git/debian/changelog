@@ -1,3 +1,50 @@
+mesa (23.2.0~rc1+git2307192135.cc7c25cd2e7~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * cc7c25cd2e7 r600/sfn: remove debug output leftovers
+  * de83da2c258 egl/wayland: wait for compositor to release shm buffers
+  * f9207b80275 nvc0: initial Ada enablement
+  * 9fd22c22138 etnaviv: fix segfault after compile failure
+  * 2b824834736 glsl: fix validation of ES vertex attribs
+  * 3ef7bd62a37 iris: Re-emit 3DSTATE_DS for each primitive (workaround
+    14019750404)
+  * 81e2dbc5e02 anv: implement Wa_14019750404
+  * 7d3806c46ca anv: ensure mesh is disabled on context init
+  * 2776b10985e iris: ensure mesh is disabled on context init
+  * 131f7e185b9 util/u_queue: fix util_queue_finish deadlock by merging
+    lock and finish_lock
+  * addba377e1a panfrost: Fix transform feedback on v9
+  * 9dc7d8e5f0d anv: ensure CFE_STATE is emitted for ray tracing
+    pipelines
+  * d32d759e600 ci/microsoft: when re-enabling Windows Farm, always run
+    the container
+  * 19338ff7a1d .pick_status.json: Update to
+    59087003c4b7a4f5a6bf207f214a4c3443b9759f
+  * 83345b262ad ci: add quirk for GitLab assuming changes is always true
+    for scheduled runs
+  * 506dd219874 mesa: fix 38% decrease in display list performance of
+    Viewperf2020/NX8_StudioAA
+  * 83af104c26d nir/unsigned_upper_bound: fix phi(bcsel)
+  * 3d824826e21 intel/perf: add perf query support for Intel Raptorlake
+  * 0c315945e3b glthread: determine global locking once every 64 batches
+    to fix get_time perf
+  * 43ee2ea11b6 ac/nir: always round cube array layers
+  * f65ce545d07 radv: add conformant_trunc_coord to cache UUID
+  * b859706d1b9 ac/llvm: skip ballot zext for 32-bit dest with wave32-as-
+    wave64
+  * 2cbf4b3d118 ac/llvm: fix wave32 ac_build_mbcnt_add with 64-bit mask
+  * 1b7988af830 radv: fix radv_get_ballot_bit_size with CS
+  * 9c5e06e3005 ac/llvm: fix AC_TM_CHECK_IR
+  * 849b2126878 iris: fix iris for WA 16013000631
+  * 52ac3ad411b Revert "lima/ci: temporarily disable deqp-egl tests due
+    to timeouts"
+  * 506b1b801ae nv50/ir: Support vector movs
+  * 8f3f35b868a glx: Assign unique serial number to GLXBadFBConfig error
+  * 37d0a9fdafa .pick_status.json: Update to
+    3a8aae9e6aa526367523c58dfe5046909776be74
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:22:17 +0200
+
 mesa (23.1.3+git2307162311.0b280da5f8f~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
