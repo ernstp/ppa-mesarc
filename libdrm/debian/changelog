@@ -1,3 +1,10 @@
+libdrm (2.4.115+git2307171440.5e0b1df4~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 5e0b1df4 tests/amdgpu/vcn: fix session buffer issue for vcn1-vcn3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:19:00 +0200
+
 libdrm (2.4.115+git2307062003.7d7a9901~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
