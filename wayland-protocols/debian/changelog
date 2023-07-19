@@ -1,3 +1,13 @@
+wayland-protocols (1.32+git2307111527.5293896~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 5293896 security-context-v1: Document what can be done with the open
+    sockets
+  * b19ee1a security-context-v1: Document out of band metadata for
+    flatpak
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:24:38 +0200
+
 wayland-protocols (1.32+git2307031126.681c33c~f~base2) focal; urgency=medium
 
   * New snapshot:
