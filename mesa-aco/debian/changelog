@@ -1,3 +1,54 @@
+mesa (23.3.0~git2307192357.46958bcb74f~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 46958bcb74f intel/fs: fix missing predicate on SEL instruction
+  * 7fe16571403 zink: set feedback attachments on batch init
+  * 7cbdb0b7142 zink: set pipeline dynamic state count after all dynamic
+    states are set
+  * 97c79cdf19d nir: Use instructions_pass() for nir_fixup_deref_modes()
+  * a0d426370db ir3: Fix FS quad ops returning wrong values from helper
+    invocations
+  * 696f37f5c3f freedreno/regs: Rename SP_FS_CTRL_REG0.DIFF_FINE into
+    LODPIXMASK
+  * 59087003c4b r600/sfn: remove debug output leftovers
+  * 7a4e3b27880 radeonsi/vcn: Fix setting color range in AV1 bitstream
+  * 2661e975dca intel/aux_map: Add function and macro to return l2 and
+    l1 table masks
+  * c50008903b2 intel/aux_map: Drop magic sub table size number
+  * b9a38a16619 intel/aux_map: Convert l1_entry_addr_out to canonical
+  * 4f44c47db8b intel/aux_map: Mask out bits above index 47 in
+    intel_aux_get_meta_address_mask()
+  * 47792b3642c intel/aux_map: Rename some variables to improve
+    readability
+  * 14ae2c58b88 intel/aux_map: Replace magic number by
+    INTEL_AUX_MAP_ENTRY_VALID_BIT
+  * 4fc38aa99b8 intel/aux_map: Use get_aux_entry() in remove_mapping()
+  * 872b4247ad8 intel/aux_map: Nuke format_enum
+  * db4b365f2b3 etnaviv: initialize VIVS_GL_BUG_FIXES
+  * af38b1acd57 zink/ci: update list of expected failures for NAVI10
+  * 74451ed3f08 egl/wayland: wait for compositor to release shm buffers
+  * 2a6fc690c18 anv: Use workaround framework to Wa_14016118574
+  * 58febefa9a3 tgsi: remove unused tgsi_shader_info.max_depth
+  * 0335976fb20 tgsi: remove unused
+    tgsi_shader_info.const_buffers_indirect
+  * 674fbed75df tgsi: remove unused
+    tgsi_shader_info.indirect_files_written
+  * bfb7f854614 tgsi: remove unused tgsi_shader_info.indirect_files_read
+  * 606db8cc400 tgsi: remove unused
+    tgsi_shader_info.uses_bindless_image_atomic
+  * 67f85d3f459 tgsi: remove unused
+    tgsi_shader_info.uses_bindless_image_store
+  * 70d84086667 tgsi: remove unused
+    tgsi_shader_info.uses_bindless_image_load
+  * aa6a3faf755 tgsi: remove unused
+    tgsi_shader_info.uses_bindless_buffer_atomic
+  * 33e9189aa1b tgsi: remove unused
+    tgsi_shader_info.uses_bindless_buffer_store
+  * 98b157bd9c3 tgsi: remove unused
+    tgsi_shader_info.uses_bindless_buffer_load
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:19:56 +0200
+
 mesa (23.3.0~git2307160211.dfd96fac414~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
