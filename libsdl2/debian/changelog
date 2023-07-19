@@ -1,3 +1,17 @@
+libsdl2 (2.29.0+git2307180248.c4c034ca4~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * c4c034ca4 Don't fail to create a window if it's too large, just
+    clamp it to the max instead
+  * f7dc8c0ea Fixed LED pending check failing when the controller
+    timestamp is very large
+  * bb036ef54 Don't send k_EPS5FeatureReportIdCapabilities to Sony PS5
+    controllers
+  * 910dad505 Don't tickle Bluetooth PS5 controllers in simple mode with
+    an effects packet
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 20 Jul 2023 00:19:17 +0200
+
 libsdl2 (2.29.0+git2307162311.4b2b475ac~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
