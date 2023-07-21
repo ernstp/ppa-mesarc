@@ -1,3 +1,46 @@
+mesa (23.3.0~git2307211642.0195e1204b6~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 0195e1204b6 radeonsi/vcn: num bs_bufs must be proportional to num
+    jpeg engines
+  * 47a9d016414 radeonsi/vcn: support variable number of bs_bufs
+  * 53d35c641da radv: bind the pre-compiled PS epilog to the cmdbuf
+    state
+  * 55f05309cae radv: pass a shaders array for computing
+    ia_multi_vgt_param
+  * b0f53c3a480 radv: remove unused param in
+    radv_pipeline_emit_vgt_gs_out()
+  * 3348cd3a80e radv: stop using a pipeline for emitting
+    VGT_VERTEX_REUSE_BLOCK_CNTL
+  * 03b2c34793b nir: Remove register arrays
+  * 14660141840 nir: Rename lower_locals_to_reg_intrinsics back
+  * d2c94f9e714 nir: Remove nir_lower_locals_to_regs
+  * a8c0b6695fc panfrost: Remove unused helpers
+  * a08286f993a intel/fs: Don't read reg.base_offset
+  * 01965a2fe95 anv: drop CFE state validation checks
+  * e7e7042093c anv,iris: program the maximum number of threads on
+    compute queue init
+  * 5a952807487 etnaviv: nir: lower nir_texop_txs
+  * 88f399b6515 etnaviv: nir: support intrinsic used for txs lowering
+  * fb48d3d1da0 nir: add enta specific intrinsic used for txs lowering
+  * 65ffa5b0b80 etnaviv: move nir texture lowerings into one pass
+  * 06046a02f83 anv: merge cases leading to the same code
+  * 0eb2679cdb5 anv: drop unused function
+  * 3c83ac80021 intel/compiler: remove redundant code
+  * e3ecba32664 anv: use ycbcr_info for P010 format
+  * 340df429777 nouveau: Delete the nouveau_compiler tool
+  * b5a638454de nouveau: Drop BuildUtil::Location
+  * 73239d40290 nouveau: Drop BuildUtil::DataArray
+  * 51dfde7b96e nouveau: Drop ConverterCommon::Subroutine
+  * c631635f435 nouveau: Drop tgsi support from nv50_ir_prog_info
+  * 38a96f79afb nouveau: Delete nv50_ir_from_tgsi.cpp
+  * 9178b049cc5 nv50: Keep nir directly in nv50_program
+  * d00d9673996 nvc0: Keep nir directly in nvc0_program
+  * 88bf4b61af8 zink: emit SpvCapabilitySampleMaskPostDepthCoverage with
+    SpvExecutionModePostDepthCoverage
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Jul 2023 17:22:37 +0200
+
 mesa (23.3.0~git2307192357.46958bcb74f~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
