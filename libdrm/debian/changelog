@@ -1,3 +1,10 @@
+libdrm (2.4.115+git2307201301.cc8c223c~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * cc8c223c xf86drmMode: constify drmModeCrtcSetGamma
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Jul 2023 17:21:36 +0200
+
 libdrm (2.4.115+git2307171440.5e0b1df4~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
