@@ -1,3 +1,10 @@
+libsdl2 (2.29.0+git2307202237.64294e456~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 64294e456 Remove the unimplemented CloseIC in fcitx module
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 21 Jul 2023 17:21:59 +0200
+
 libsdl2 (2.29.0+git2307180248.c4c034ca4~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
