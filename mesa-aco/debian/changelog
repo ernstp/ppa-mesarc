@@ -1,3 +1,54 @@
+mesa (23.3.0~git2307261401.7b29ae557ab~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 7b29ae557ab ci/farms: always compare the code against main
+    repository
+  * 50c29e1ffa1 anv: simplify buffer address+size loads from descriptor
+    buffer
+  * f1f58c3bea7 isl: add ability to store buffer size in unused
+    RENDER_SURFACE_STATE fields
+  * d099e47de04 intel/fs: add more UNDEFs around SEND messages
+  * 5c727248197 intel/fs: consider UNDEF as non-partial write
+  * 08bfcc12d47 radv: rename radv_pipeline_stage to radv_shader_stage
+  * 090d88247de radv: cleanup pipeline compute emit helpers
+  * fdec88bd7c3 radv: rework determining the NGG stage without a
+    graphics pipeline
+  * 174816019fc radv: simplify lowering NGG GS intrinsics
+  * 70dbe011bb0 radv: rename graphics pipeline linking helpers
+  * 697d4d4b030 radv: move removing all varyings when the FS is a noop
+  * 5da9f38c539 radv: stop passing radv_graphics_pipeline to
+    radv_fill_shader_info()
+  * a7fdcc3b221 radv: rework considering force VRS without relying on
+    graphics pipeline
+  * 9d89b29a80d radv: set next_stage to MESA_SHADER_NONE if there is no
+    FS
+  * b250efa7140 radv: initialize stage/next_stage earlier
+  * d62e494b370 intel/vec4: fix log_data pointer
+  * 6e43618b825 ac: Switch to use nir_foreach_function_impl in function
+    analyze_shader_before_culling
+  * a606074a7a9 radeonsi: Convert to use nir_foreach_function_impl
+  * 3f7a3a66982 microsoft/clc/compiler: Convert to use
+    nir_foreach_function_impl when possible
+  * d5baad2afae microsoft/compiler: convert to use
+    nir_foreach_function_with_impl in function emit_module
+  * 87109c3e1b1 vulkan/runtime: Add helper functions for
+    VK_EXT_host_image_copy
+  * 2388f22a5e5 gm107/ir: fix SULDP for loads without a known format
+  * 377c2a045fc intel/compiler: call brw_nir_adjust_payload from
+    brw_postprocess_nir
+  * cb0de0a1d34 intel/fs: Constant fold OR and AND
+  * 61c786bad51 intel/fs: Constant fold SHL
+  * 56e6186dcf0 intel/fs: Always do opt_algebraic after
+    opt_copy_propagation makes progress
+  * d089272fc07 ci/a5xx: Add another GPU hanging piglit test to the
+    skips.
+  * 2f834340a67 Uprev Piglit to ed58dfbd12be34fa3dab97a7a2987b890e0637f1
+  * 65ff9f0a556 tu: Fix data race in userspace VMA management.
+  * 3efba1e2e96 iris: Request Xe KMD to place BOs to CPU visible VRAM
+    when required
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 26 Jul 2023 16:58:44 +0200
+
 mesa (23.3.0~git2307211642.0195e1204b6~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
