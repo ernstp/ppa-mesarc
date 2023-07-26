@@ -1,3 +1,11 @@
+libdrm (2.4.115+git2307261026.4de32c86~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 4de32c86 xf86drm: drop control nodes implementation
+  * 4b51e34d xf86drm: bump DRM_MAX_MINOR to 64
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 26 Jul 2023 16:57:43 +0200
+
 libdrm (2.4.115+git2307201301.cc8c223c~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
