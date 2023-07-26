@@ -1,3 +1,16 @@
+mesa (23.2.0~rc1+git2307211916.e66e7caa568~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * e66e7caa568 r600/sfn: remove debug output leftovers
+  * 87e8eb1d6aa egl/wayland: wait for compositor to release shm buffers
+  * f0ef7000d4d nvc0: initial Ada enablement
+  * a7ee67a3350 etnaviv: fix segfault after compile failure
+  * 79d2996a3f8 glsl: fix validation of ES vertex attribs
+  * b1c330e64a8 iris: Re-emit 3DSTATE_DS for each primitive (workaround
+    14019750404)
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 26 Jul 2023 17:01:11 +0200
+
 mesa (23.2.0~rc1+git2307192135.cc7c25cd2e7~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
