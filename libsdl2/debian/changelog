@@ -1,3 +1,17 @@
+libsdl2 (2.29.0+git2307291633.82cd3bfe1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 82cd3bfe1 Add missing break
+  * 7cc324804 minor os/2 stuff merged from the bitwiseworks' fork
+  * 3e341021c fixed typo in prev. patch.
+  * 1ecf77d63 test/testnativecocoa.m: fixed deprecation warnings.
+  * 507be6c3f Sorted controller list
+  * f4561db69 Add Steam Deck controller mapping to database.
+  * 2b0ca8711 SDL_atomic.h: __ARM_ARCH is not always defined for an arm
+    platform
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 30 Jul 2023 16:17:53 +0200
+
 libsdl2 (2.29.0+git2307252050.37d1ab83c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
