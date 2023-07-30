@@ -1,3 +1,22 @@
+xwayland (2:23.1.99+git2307271651.5b39ad904~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 5b39ad904 xwayland: Make fullscreen used a fixed size
+  * 9b6b11d19 xwayland: Set min/max size for rootful with lidecor
+  * 6be0ac85f xwayland: Use update size from libdecor configure handler
+  * 7c04404d7 xwayland: Add configuration to libdecor update size
+  * c728d2912 xwayland: attach new buffer from libdecor handlers
+  * 37864d77e xwayland: Move the libdecor resize to its own function
+  * 5d41621ed xwayland: Use the screen width/height for libdecor state
+  * 992d344d8 xwayland: Move attach buffer out of post damage
+  * b3ee50022 xwayland/glamor: Avoid implicit redirection with depth 32
+    parent windows
+  * d82d2c96d glamor: Make glamor_solid_boxes take a DrawablePtr
+  * 6ed8c9596 mi: Fix up alpha channel if needed in miPaintWindow
+  * 63fae8a24 glamor: Add and use glamor_drawable_effective_depth helper
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 30 Jul 2023 16:23:32 +0200
+
 xwayland (2:23.1.99+git2307191730.8ee1e6507~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
