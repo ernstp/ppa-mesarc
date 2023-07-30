@@ -1,3 +1,49 @@
+mesa (23.3.0~git2307301541.99aeea467ba~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 99aeea467ba r600: Force CF when emitting a NOP on R600 in gs copy
+    shader
+  * 8d7f682bdba nv50/ir/nir: Fix zero source handling of tex
+    instructions.
+  * 5df97c27dc8 intel/compiler: Use nir SUBGROUP_INVOCATION for RT
+    TOPOLOGY_ID
+  * dbf19b76e8f intel/isl: Use intel_needs_workaround() for MTL CCS WA
+  * 23b45c5a291 lavapipe/ci: use tighter changes: rules
+  * 0831f93e5f9 nir/builder: Add a nir_txs_deref() helper
+  * ee0942f7a62 nir/builder: Allow tex helpers on image types
+  * e690d88d69d freedreno/afuc: Initial a7xx support
+  * 6fd00074475 afuc: Fix writing $00
+  * 7d7aa2251e1 afuc: Add setbit/clrbit
+  * 1046ebbb899 afuc: Convert to isaspec
+  * 7376af0eef2 afuc: Fix xmov lexer typo
+  * 038680c2f62 isaspec: Add initial decoding support
+  * 2faf344f037 isaspec: Rename isa_decode() to isa_disasm()
+  * 26cce0a1333 isaspec: Add callback after decoding an instruction
+  * b63782da165 isaspec: Add "custom" field type
+  * dc874e46547 isaspec: Add support for function and entrypoint labels
+  * 569d3ac5a15 isaspec: Add support for "absolute" branches
+  * 86b17d96b3a isaspec: Add "displayname" for altering {NAME} when
+    decoding
+  * c237539d621 egl: Implement EGL_EXT_explicit_device
+  * 41e664f8258 egl: android: Remove legacy name-based shared buffers
+    support
+  * 2b7599dc495 intel: Rename intel_gem_add_ext() to
+    intel_i915_gem_add_ext()
+  * c9950786f61 intel/common: Move functions inside of C++ ifdef
+  * 4198a301b3f intel: Move i915_drm.h specific code from
+    common/intel_gem.h to common/i915/intel_gem.h
+  * 0579627f211 iris: Replace I915_EXEC_FENCE_SIGNAL by
+    IRIS_BATCH_FENCE_SIGNAL in common code
+  * 1174e7412ee intel/dev: Port intel_dev_info tool to Xe KMD
+  * 56e0aff5307 anv, drirc: Add workaround to speed up Cyberpunk 2077
+    reg allocation
+  * 739e21fa9a7 intel/fs: Add a parameter to speed up register spilling
+  * be11fee2a72 aco: Refactor select_program to smaller functions.
+  * 623d704de85 iris/xe: Call iris_lost_context_state() when batch
+    engine is replaced
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 30 Jul 2023 16:18:35 +0200
+
 mesa (23.3.0~git2307261401.7b29ae557ab~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
