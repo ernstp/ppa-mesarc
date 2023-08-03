@@ -1,3 +1,51 @@
+mesa (23.3.0~git2308032157.6e7718dcea4~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 6e7718dcea4 anv: debug messaging for sparse texture usage
+  * df349bc2bef anv: enable fake sparse for Elden Ring
+  * 7db20032096 anv: add fake sparse support
+  * 17e505cb2d7 asahi: decouple layout from gallium
+  * 68c30215a9a etnaviv: decouple drm from gallium
+  * 74589123338 docs/ci: expand the description of test suites
+  * 774ce3ff88e docs/ci: drop mention of build systems variants in the
+    CI
+  * a4df4fd0f56 docs/ci: in paragraph about the CI being overwhelmed,
+    mention our tool to help with that
+  * 845518d5d40 docs/ci: stop trying to enumerate drivers that are
+    tested using VK-GL-CTS
+  * f5672d048e9 ci: include some timing information in the git cache
+    download script
+  * f8cc1ab04b1 docs/ci: remove default nginx config, which we don't
+    need for proxy
+  * f9ebbcd8b67 docs/ci: update to systemd and used version of the trace
+    for testing
+  * e389234a5e1 docs/ci: default to port 80 for the caching proxy
+  * 57b0db63e12 ci/amd: fix timeouting radeonsi-raven-va-full job
+  * 95431435930 radeonsi: Enable
+    PIPE_VIDEO_CAP_SUPPORTS_CONTIGUOUS_PLANES_MAP
+  * 4f047c9583a radeonsi: Copy all planes with multi-plane staging
+    textures
+  * 2cb3c2cbfb2 zink: Collapse is_ssa check
+  * 91f676819cd vc4,broadcom/compiler: Drop write_mask handling
+  * 59645f05a7f nouveau/codegen: Drop writemask check
+  * 30ff0857bef r600/sfn: Ignore instruction write masks
+  * b870988b77f r600/sfn: Stop referencing legacy functionality
+  * c545df7426a frontends/va: Init view_resources array in
+    vlVaPut/GetImage
+  * ca8647e29b7 frontends/va: Don't allow multi-plane derive without
+    driver support
+  * 9e9d90c6c38 lavapipe: VK_EXT_host_image_copy
+  * 6d3009d7585 lavapipe: be slightly more permissive for bad apps (and
+    cts) with dynrender
+  * cd3ea02da05 ac/radv: decouple radv vulkan driver and compiler from
+    gallium
+  * b5401a4b0e8 nouveau/drm-shim: Decouple from gallium
+  * 9ecfd9feea4 intel/tools: Use 'env bash' to find bash executable
+  * 37b56dfd7d0 meson: Remove arm_neon_workaround
+  * 4c4d2d35c25 glx: decouple from gallium
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 03 Aug 2023 23:03:19 +0200
+
 mesa (23.3.0~git2307301541.99aeea467ba~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
