@@ -1,3 +1,10 @@
+xwayland (2:23.1.99+git2308021510.43cf20021~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 43cf20021 Bump version to 23.1.99.902
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 03 Aug 2023 23:07:58 +0200
+
 xwayland (2:23.1.99+git2307271651.5b39ad904~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
