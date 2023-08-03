@@ -1,3 +1,41 @@
+mesa (23.2.0~rc2+git2308022255.389475115a9~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 389475115a9 zink/ci: update list of expected failures for NAVI10
+  * 5f6bdce7c61 zink: emit SpvCapabilitySampleMaskPostDepthCoverage with
+    SpvExecutionModePostDepthCoverage
+  * dcafca12d62 zink: be even dumber about buffer refs when replacing
+    storage
+  * a5a2cc6c2ab anv: Don't support ASTC images with modifiers
+  * b1e6110c328 anv: use the correct GFX_VERx10 macro for WA
+  * 443ca0a444b radeonsi: fix a CDNA regression breaking compute
+  * 45f97bf08e1 turnip: flush cache for dstBuffer in
+    vkCmdCopyQueryPoolResults
+  * 9a85a37e70c panfrost: Fix transform feedback on v9 harder
+  * c2933475794 panfrost: Lower vertex_id for XFB
+  * 5b96710f0b6 intel/fs: fix missing predicate on SEL instruction
+  * ad0a9aaadcb zink: set pipeline dynamic state count after all dynamic
+    states are set
+  * f71841922cc ir3: Fix FS quad ops returning wrong values from helper
+    invocations
+  * deaa2218497 freedreno/regs: Rename SP_FS_CTRL_REG0.DIFF_FINE into
+    LODPIXMASK
+  * 13eb1bd04b6 anv: implement Wa_14019750404
+  * d019262cf43 .pick_status.json: Mark
+    d3f26cbbe1a957b76804da44bbf5e30de2bac941 as denominated
+  * a7c460f1203 .pick_status.json: Update to
+    e88c0770969f6ae0bfa5bea0f9d99687d257fea1
+  * 08a0f8fe020 docs: Update release calendar for 23.2.0-rc2
+  * 71e6fe758c6 VERSION: update to 23.2.0-rc2
+  * 753854965cb Revert incorrect 23.2.0 release
+  * 3bf326ea68f docs: Add sha256 sum for 23.2.0
+  * 876f2c35ada docs: Update release calendar for 23.2.0
+  * 97c28e22e8a VERSION: update to 23.2.0
+  * 4c7e92d4984 docs: add release notes for 23.2.0
+  * be075d161fb docs: truncate new_features.txt
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 03 Aug 2023 23:05:38 +0200
+
 mesa (23.2.0~rc1+git2307282033.629f2e937ac~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
