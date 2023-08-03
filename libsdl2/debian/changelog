@@ -1,3 +1,34 @@
+libsdl2 (2.29.0+git2308022338.2304b4e86~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2304b4e86 Added a gamepad mapping for the G-Shark GS-GP702
+  * 0f753d979 The Flydigi Vader and Apex series controllers all have the
+    same VID, PID, and name
+  * 805fc29ae Removed Flydigi Vader 2 mappings
+  * 57f3c41b9 adjusted coding style in SDL_os2_joystick.c to match rest
+    of SDL better
+  * b58557a3a minor os/2 stuff merged from the bitwiseworks' fork
+  * 6a787b800 SDL_video.c: move ngage video before offscreen.
+  * 0deed07b3 SDL_video.c: move os2 video before offscreen.
+  * ebf2c49b5 Fixed build
+  * 38c63afd6 Fixed duplicate key press/release events on iOS
+  * 030bb7282 Synchronize on-screen keyboard state with text input
+    active state
+  * 335e9c769 Only pass keypresses up the responder chain when text
+    input is active
+  * 5e9320f6b Revert "Stop beep when running iOS apps on ARM-based Macs"
+  * e2afc1f37 Fixed build
+  * 2468fccf7 Fixed crash if a display is enumerated twice
+  * dc5dda0f3 cocoa: Ignore first mouse motion event after enabling
+    relative mode.
+  * 3030fd815 x11: Blocking for window maximization should wait 100 ms,
+    not 1000.
+  * 5c3df60ec Revert "x11: check if window size/position has changed
+    during SDL_ShowWindow."
+  * 8825fbf71 Fall back to Xlib if XRandR isn't available
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 03 Aug 2023 23:02:36 +0200
+
 libsdl2 (2.29.0+git2307291633.82cd3bfe1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
