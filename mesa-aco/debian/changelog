@@ -1,3 +1,43 @@
+mesa (23.3.0~git2308042332.8c62b3938a8~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 8c62b3938a8 nvk: Enable the new UAPI
+  * b2fe4c77295 nvk: Print an error message if VM_BIND support is
+    missing
+  * 0b6afbc407f nouveau/winsys: Allow nouveau_ws_device_new() without
+    VM_BIND
+  * 1a6a198ab54 nvk: add new internal bo allocation flag.
+  * 766a6a5a4d4 nvk: Use an empty EXEC for the empty submit case
+  * 9cb945015ca nvk: enable sparse residency buffer on maxwell+
+  * 0fe8090bc72 nvk: enable a bunch of external fence/semaphore bits
+  * 921fc517ce1 nvk: enable sparse features
+  * 9a0a5f85619 nvk: Handle pre-turing indirect buffers with sparse
+  * 723041a3ed7 nvk/queue: add support for syncobjs and sparse binds
+  * 7321d151a94 nvk: Add support for sparse images
+  * 03f0f01904c nvk: Add support for sparse buffers
+  * 6dbf02ec646 nouveau/mme: Support the new UAPI
+  * fa8bbfaa55a nouveau/winsys: add support for the vma bind interfaces
+  * c815ff16615 nvk: always sync internal cmd bufs for vma lifetimes.
+  * 9d7d76cddcd nouveau/shim: Use the imported nouveau_drm.h headers
+  * 5fd1b8e0860 nvk: Use the imported nouveau_drm.h headers
+  * 300df8e177f nouveau/winsys: Use the imported nouveau_drm.h headers
+  * fc1fb3a5160 drm-uapi: Import nouveau_drm.h
+  * ae37fbba123 nouveau: Move shader topology info to nv_device_info
+  * d8b7b1d7842 nvk: Decorate CmdBegin/EndRendering entrypoints
+  * 40ab58035e2 nvk: Implement GetRenderingAreaGranularityKHR
+  * 8636597c4a1 nvk: Implement CmdBindIndexBuffer2KHR
+  * c4b7754e7c5 nvk: Use VkBufferUsageFlags2
+  * 98a3bc699bb nvk: Implement the maintenance5 image layout queries
+  * af72961ff17 nvk: Rework memory requirements to handle aspects
+    correctly
+  * 733d20277c7 nvk: Misc. style nits
+  * 50e5ee586ce nvk: enable EXT_depth_clip_enable
+  * 15d12bb6152 nvk: enable EXT_depth_clip_control
+  * 57c38a56696 nvk: Implement CopyQueryPoolResults with a compute
+    shader
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 05 Aug 2023 08:54:57 +0200
+
 mesa (23.3.0~git2308032157.6e7718dcea4~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
