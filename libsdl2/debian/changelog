@@ -1,3 +1,11 @@
+libsdl2 (2.29.0+git2308041753.f522c5380~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f522c5380 wayland: Don't initialize OpenGL when the window flags
+    didn't specify it
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 05 Aug 2023 08:54:22 +0200
+
 libsdl2 (2.29.0+git2308022338.2304b4e86~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
