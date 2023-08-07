@@ -1,3 +1,35 @@
+mesa (23.3.0~git2308071606.c5a6e88c4e8~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * c5a6e88c4e8 pvr: do not claim support for ASTC texture compression
+  * 6c25dc09099 freedreno: add ci flake
+  * d2d0f4a28ad virgl: add ci flake
+  * cfa23e66901 panfrost/vk: Use correct sampler dimensions for MSAA
+  * f5074adeb52 anv: enable INTEL_DEBUG=nofc
+  * 85c5b68823c v3dv: drop cpu path for buffer to image copies
+  * 67be2b6e639 radv: initialize result when pipeline cache creation
+    fails
+  * 77773490cf9 zink: use fprintf instead of printf to align the
+    requirements warnings
+  * 4f5bfc66910 zink: force image barriers after dmabuf import
+  * 652e87bc5d0 zink: better handle separate shader dsl creation when no
+    bindings exist
+  * 18214bf9ea3 docs: add two nvk exts to features.txt
+  * bfe4a0e744d intel/decoder: Make intel_spec_load_filename() have
+    separate dir and name strings
+  * b4c8d2dc455 intel/decoder: Add intel_spec_load_common()
+  * 1d5535613e6 intel/decoder: Fix xml filename when verx10 % 10 is not
+    0
+  * 807c0d6bb75 r600/sfn: Take source uses into account when switching
+    channels
+  * bcfa71a6d09 nvk: Call nir_lower_int64
+  * 93362f801ac nvk: Use more consistent device variable names
+  * 8088d73fd1c ci/freedreno: document another flakes on Adreno 530
+  * 286e58b8d8a nv50/ir: convert system values to gl_system_value
+  * f5c41c4b78f nv50/ir: use own info struct for sys vals
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 07 Aug 2023 16:48:26 +0200
+
 mesa (23.3.0~git2308042332.8c62b3938a8~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
