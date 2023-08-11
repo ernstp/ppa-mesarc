@@ -1,3 +1,23 @@
+libsdl2 (2.29.0+git2308110006.10135b2d7~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 10135b2d7 Fix overflow when doing SDL_sscanf("%hd", ...)
+  * f348370e1 Fix out of bound read of 'has_hat' array
+  * 951657c99 Fixed crash when running with the dummy video driver
+  * 7df721d4e Allow running tests with the dummy video driver
+  * 046522461 Sync -Wsign-compare warning fix from sdl2-compat
+  * 9d6b028e0 tests: build tests with fast math disabled
+  * fcae9cd21 cmake: build with -Wdocumentation
+  * e5f3b22d6 cmake: update cmake_minimum_required to avoid deprecated
+    warning
+  * 64f17314a MSVC has __declspec(deprecated)
+  * 1d8806b0f Fixed testautomation --filter pixels_allocFreePalette
+  * e56dc9c30 Fixed testautomation --filter pixels_allocFreeFormat
+  * 4bceea70c Added the Victrix Pro FS for PS4/PS5 to the controller
+    list
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Aug 2023 10:13:50 +0200
+
 libsdl2 (2.29.0+git2308061645.8087c0a5d~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
