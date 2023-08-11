@@ -1,3 +1,47 @@
+mesa (23.3.0~git2308110943.b34c027cb0e~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * b34c027cb0e radv: use the number of VS outputs for computing the
+    tessellation info
+  * 8a97302f57f radv: add support for loading the LSHS vertex stride
+    from a SGPR
+  * 0cb88ddca29 iris: implement required PSS sync for Wa_18019816803
+  * 92941ee84bb anv: implement required PSS sync for Wa_18019816803
+  * 419531c5d98 intel/blorp: add a new flag to communicate PSS sync need
+  * 973e6f3be09 gallium: remove start_slot parameter from
+    pipe_context::set_vertex_buffers
+  * e0da62c0e96 nvk: NOUVEAU_WS_BO_LOCAL is a trap.
+  * 9f767db1265 nv50/ir: Rework conversions for texture array indices
+  * 585f0e8b489 nir: minor fixes for io_to_scalar
+  * 0a12cedec91 zink: add a special separate shader i/o mode for legacy
+    variables
+  * b24911e5dbd zink: pre-convert mode in fixup_io_locations
+  * 52c57667eda nvk: Use common physical device properties
+  * c06f70ca180 radv: Use common physical device properties
+  * eaee792ea5f vulkan: Add a generated vk_properties struct
+  * 0ab0e5d803e ci/a530: document piglit flake
+  * 5ba5bcf2b60 vulkan/wsi: Allow binding presentation_timing when
+    software rendering
+  * 54c7099087f panfrost: upcast uint8/uint16 before shifting them
+    beyond their range
+  * 90a6ebdf80d amd/ci: drop duplicate test expectations
+  * 85e74944c69 winsys/amdgpu: fix a race between import and destroy
+  * 17c95e070cd r600/sfn: work around injecting extra CF's to handle
+    hardware bugs
+  * b8edd19358e radv: Handle VK_SUBOPTIMAL_KHR in trace layers
+  * de6d298fd08 ci/zink+radv: set a timeout of 2x the normal runtime
+  * 9da56a36980 iris: Inline iris_can_sample_mcs_with_clear
+  * 1d1dbbd03f1 iris: Drop get_copy_region_aux_settings
+  * 60aebe8fa89 iris: Fix iris_copy_region calls involving FCV_CCS_E
+  * 3acdb29332e iris: Fix aux usage tracking in prepare_render
+  * abc0b3a0dd1 pvr: Add VK_KHR_copy_commands2
+  * 3c6356493a3 pvr: Print VkStructureType name on
+    pvr_debug_ignored_stype()
+  * ffc93ba7a34 pvr: Add VK_KHR_get_surface_capabilities2
+  * 40888311243 pvr: Add VK_KHR_get_memory_requirements2
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Aug 2023 10:14:44 +0200
+
 mesa (23.3.0~git2308071606.c5a6e88c4e8~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
