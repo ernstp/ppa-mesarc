@@ -1,3 +1,26 @@
+mesa (23.2.0~rc2+git2308091900.3ccee9dda15~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 3ccee9dda15 llvmpipe: Fix compiling with LP_USE_TEXTURE_CACHE
+  * 78811cc73ce nir: Fix 16-component nir_replicate.
+  * 37ea011cc3f aco: Fix some constant patterns in 16-bit vec4
+    construction with s_pack.
+  * 9d5a4e0e022 aco: fix nir_op_vec8/16 with 16-bit elements.
+  * 6dc7de2441f venus: fix cmd state leak across implicit reset
+  * 33cdc6043d8 venus: fix a cmd builder render_pass state leak across
+    reset
+  * 97d2dff4916 gallivm: fix atomic global temporary storage.
+  * 7315f3a8669 svga: set clear_texture to NULL for vgpu9
+  * 3b388a6dcbf lvp: avoid reading immutable sampler from desc write
+    info
+  * c0eb1c601e6 tu: Fix vk2tu_*_stage flag type
+  * 7fbf06e5038 anv,iris: program the maximum number of threads on
+    compute queue init
+  * f874ebe0241 .pick_status.json: Update to
+    c5a6e88c4e816ded6105b74f101528eb004e0581
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 11 Aug 2023 10:17:13 +0200
+
 mesa (23.2.0~rc2+git2308022255.389475115a9~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
