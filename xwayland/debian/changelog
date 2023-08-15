@@ -1,3 +1,10 @@
+xwayland (2:23.1.99+git2308111040.67b2d80db~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 67b2d80db xwayland: Commit after acknowledging configure
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Aug 2023 12:46:23 +0200
+
 xwayland (2:23.1.99+git2308021510.43cf20021~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
