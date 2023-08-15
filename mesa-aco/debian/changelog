@@ -1,3 +1,52 @@
+mesa (23.3.0~git2308151111.a02b5138a71~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * a02b5138a71 radv/rt: Rename traversal_shader to
+    traversal_shader_addr
+  * c291f612cb3 radv/rt: Rename shader_pc and next_shader
+  * 2edf222abdc egl: reenable partial redraw with a warning when using
+    gallium hud
+  * d0f4333fcad intel/decoder: Fix memory leak on error path
+  * 6a2a36d7ddc driconf: add a workaround for Captain Lycop: Invasion of
+    the Heters
+  * 210fe9f5867 zink: drop CWE requirement for renderpass tracking with
+    primgen queries
+  * 1bff8ade885 zink: rip out some awkward parts of the old non-cwe path
+  * 55360307359 zink: rework rast-discard for primgen queries
+  * 4f743df4f00 zink: unset primgen suspended flag when ending a primgen
+    query
+  * 5ea5318e607 zink: require EDS1 for CWE usage
+  * 69cacebd29a zink: track start/stop of a couple query types
+  * da5ca7529f7 gallivm: Drop the Vulkan YUV format hacks
+  * 4accbb27a22 vulkan/format: Translate G8B8G8R8_422_UNORM and
+    B8G8R8G8_422_UNORM properly
+  * eb23ce91b53 vulkan/format: Use correct swizzle for 1-plane YCbCr
+    formats
+  * b9870275b12 anv: Disable CCS_E for ISL_FORMAT_YCRCB_*
+  * 0e33bb56a4e blorp: Use R8G8_UINT for YCRCB_* formats with CCS
+  * 3fff38f624e gallivm: Support G8B8_G8R8_422_UNORM and
+    B8G8_R8G8_422_UNORM
+  * 0c03d44093d util/format: Add G8B8_G8R8_422_UNORM and
+    B8G8_R8G8_422_UNORM formats
+  * 9a6ec6cdd6a util/format: 8-bit interleaved YUV formats are UNORM
+  * c1a0bdae1cc intel/genxml: Update xml with gen_sort_tags.py output
+  * 549540ca7cd intel/genxml: Add final newline to output when saving
+    xml
+  * 548a0bc7d2a intel/genxml: Don't rewrite sorted xml if the contents
+    didn't change
+  * e60a0b16163 intel/genxml: Move sorting & writing into GenXml class
+  * 3176abc0f20 panfrost/ci: updated CI expectations
+  * 56be9a55be0 pan/decode: handle more than one panfrost_device
+  * cea0cc5b163 panfrost: fix invalid memory access in
+    get_equation_str()
+  * bfa4125308b zink: ci updates
+  * f5c1da10f5c lavapipe/ci: Remove descriptor_indexing fails
+  * b2f6de8f0d8 gallivm: Run nir_convert_to_lcssa before
+    nir_convert_from_ssa
+  * 4695bebc795 nir: Drop nir_dest
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Aug 2023 12:43:55 +0200
+
 mesa (23.3.0~git2308110943.b34c027cb0e~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
