@@ -1,3 +1,12 @@
+libsdl2 (2.29.0+git2308132254.0b9d8e679~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 0b9d8e679 Quiet spurious warning
+  * 4a0f56b67 SDL_TriggerBreakppoint for riscv arch (both 32/64)
+    version.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 15 Aug 2023 12:43:13 +0200
+
 libsdl2 (2.29.0+git2308110006.10135b2d7~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
