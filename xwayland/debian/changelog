@@ -1,3 +1,13 @@
+xwayland (2:23.2.0+git2308160959.9143d93e4~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 9143d93e4 Bump version to 23.2.0
+  * e4b3bd625 xwayland: Default geometry for undecorated rootful
+  * c7c810d77 xwayland: Apply root toplevel configure dimensions
+  * 9c670a14d xwayland: Make xwl_window_libdecor_resize reusable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Aug 2023 11:13:21 +0200
+
 xwayland (2:23.1.99+git2308111040.67b2d80db~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
