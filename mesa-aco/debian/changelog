@@ -1,3 +1,42 @@
+mesa (23.3.0~git2308160536.8e13736222e~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 8e13736222e radeonsi: remove unused arg of
+    get_tcs_tes_buffer_address
+  * 0e97fe38b79 radeonsi: part mode standalone tcs support aco compile
+  * 59f4504d058 radeonsi: add si_aco_build_shader_part
+  * 8631851b8f6 radeonsi: change si_fill_aco_options args
+  * 04aadb32ad9 radeonsi: add si_get_tcs_epilog_args
+  * 8e0cff56f31 radeonsi: remove separate_prolog arg from prolog/epilog
+    build
+  * b744405aa25 radeonsi: extract si_llvm_build_shader_part
+  * e797bd78c96 radeonsi: fill part mode tcs aco shader info
+  * ac867af0997 radeonsi: share si_get_tcs_out_patch_stride with aco
+  * 1001478a681 radeonsi: support upload multi part shader binary
+  * 85c0f310994 radeonsi: add exec_size to shader binary
+  * 51a8479a510 aco: use semantic location as io temp index
+  * 4c7fdebf9bc ac/nir/tess: move tess factor output out of control flow
+  * 47563880388 aco,radeonsi: save const addr to symbol
+  * facbd13df14 aco: skip scratch init when no scratch arg provide
+  * d3333609e64 aco: don't emit s_endpgm for tcs with epilog
+  * b41d3e42f7c aco: add tcs epilog generation for radeonsi
+  * a2484b20f90 aco: add pending_lds_access option for insert waitcnt
+  * 5cf6f4f9a74 aco: allow tcs with epilog to keep nir store output
+    instruction
+  * 5d05ae5df0b aco: add tcs end regs for epilog usage
+  * 7c7062f8f92 aco: move jump to epilog out of ic_merged_wave_info
+  * 85d9646288d aco: add p_end_with_regs pseudo instruction
+  * a3549d7f7ab aux/trace: trace video_buffer method return vals
+  * 992ded3a3fe aux/trace: unwrap refrence frames in picture_desc
+  * ac9c2689a6d aux/trace: wrap video_codec & video_buffer
+  * a5279f1ec51 aux/trace: add context video methods
+  * ace894cff87 aux/trace: add screen video methods
+  * 9d1da9ec202 aux/trace: fix set_hw_atomic_buffers method name
+  * 713437b2fcd aux/trace: move trace_sample_view logic
+  * 9ff20e23fed aux/trace: deduplicate enum dump macro work
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 16 Aug 2023 11:10:44 +0200
+
 mesa (23.3.0~git2308151111.a02b5138a71~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
