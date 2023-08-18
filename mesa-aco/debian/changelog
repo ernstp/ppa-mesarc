@@ -1,3 +1,44 @@
+mesa (23.3.0~git2308181336.8849e1e3a65~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 8849e1e3a65 anv: emitting 3DSTATE_PRIMITIVE_REPLICATION is required
+    on Gen12+
+  * e62f2c48a08 dri: Use RGB internal formats for RGBX formats
+  * 61dd0ff97d8 ci/freedreno: another batch of Adreno 530 flakes
+  * b78ea2a38f2 radv: stop copying if VS or TES uses the InvocationID
+    built-in
+  * d547c996ae3 radv: simplify declaring VS specific input SGPRs
+  * 525143d01a6 radv: remove unused param from
+    radv_pipeline_init_multisample_state()
+  * 1cf840fb3eb radv: remove radv_cmd_buffer::cached_vertex_formats
+  * c1361690623 radv: fix emitting TCS epilogs for GFX6-9
+  * f9a9471cafc radv: add missing comment about
+    TCS_OFFCHIP_LAYOUT_LSHS_VERTEX_STRIDE
+  * c6a56e6b3d3 radv: reduce TCS_OFFCHIP_LAYOUT_NUM_PATCHES to 6-bits
+  * 20381eb5226 nir: Drop nir_push_if_src()
+  * 96c0f8c5800 nir: Drop nir_instr_rewrite_src()
+  * b5d6b7c402a nir: Drop most uses if nir_instr_rewrite_src()
+  * 71ddaca2e23 nir: Drop nir_instr_rewrite_src_ssa()
+  * de063a1481a nir: Drop most uses of nir_instr_rewrite_src_ssa()
+  * 964c73e13ed nir: Drop nir_if_rewrite_condition()
+  * 267b4fb1b9c nir: Add and use a nir_instr_init_src() helper
+  * 9c8cb69c158 nir: Add a nir_instr_clear_src() helper and use it
+  * 7af0dcbdfc8 nir/opt_undef: Don't rewrite a bcsel to mov
+  * 53294de682a nir: Take a nir_def * in nir_phi_instr_add_src()
+  * 298a3eebd8a nir: Take a nir_def * in nir_tex_instr_add_src()
+  * 6d168b93bce ci/etnaviv: update ci expectation
+  * 3e0cd6dfb9b nv50: limit max code uploads to 0x8000
+  * 26b2bdcfe01 iris,crocus: drop unnecessary DEBUG_NO_CCS/NO_HIZ checks
+  * 20db03d32fb anv,hasvk: drop unnecessary DEBUG_NO_CCS/NO_HIZ checks
+  * b3affef2529 intel/isl: Enable INTEL_DEBUG=noccs/nohiz in ISL helpers
+  * 4dfd306454a disk_cache: Disable the "List" test for RO disk cache.
+  * e595c367d5f zink: Fix one addicional case when running a compositor
+  * d7daf78f628 intel/compiler: Respect NIR_DEBUG_PRINT_INTERNAL for
+    DEBUG_OPTIMIZER
+  * 8a8bde69a58 ci/turnip: Add a660 VK coverage.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Aug 2023 17:47:48 +0200
+
 mesa (23.3.0~git2308160536.8e13736222e~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
