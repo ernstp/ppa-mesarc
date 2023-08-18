@@ -1,3 +1,12 @@
+libdrm (2.4.115+git2308172309.18644eb6~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 18644eb6 nouveau: add interface to make buffer objects global
+  * 3bc3cca2 xf86drm: use drm device name to identify drm node type
+  * 7130cb16 xf86drm: update DRM_NODE_NAME_MAX supporting more nodes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 18 Aug 2023 17:47:25 +0200
+
 libdrm (2.4.115+git2307271610.c6013245~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
