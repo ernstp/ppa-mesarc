@@ -1,3 +1,24 @@
+libsdl2 (2.29.0+git2308251803.f032e8c19~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f032e8c19 updated dynapi after SDL_GDKGetDefaultUser addition
+  * 24fcb6147  gdk: Add SDL_GDKGetDefaultUser, SDL_GetPrefPath
+    implementation
+  * 6ff48dddc Fixed the report format for the Razer Wolverine V2 Pro
+  * 862a654b7 Accept key events from any source
+  * 8e27a6937 Updated to Android minSdkVersion 19 and targetSdkVersion
+    34
+  * 9237f8edc video: Fixed small memory leak when disconnecting a
+    display.
+  * 1f4e86d61 video: Minor cleanup in SDL_VideoQuit.
+  * 04ff593bf emscriptenaudio: Fire the capture silence_callback at an
+    interval.
+  * ddbbef88e emscriptenaudio: Don't bother undefining things about to
+    be unreachable.
+  * ae7f54f51 emscriptenaudio: Deal with blocked audio devices better.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:36:29 +0200
+
 libsdl2 (2.29.0+git2308132254.0b9d8e679~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
