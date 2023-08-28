@@ -1,3 +1,10 @@
+libdrm (2.4.116+git2308231157.7bdb135f~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 7bdb135f build: bump version to 2.4.116
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:36:12 +0200
+
 libdrm (2.4.115+git2308172309.18644eb6~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
