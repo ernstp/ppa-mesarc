@@ -1,3 +1,11 @@
+libdecor-0 (0.1.99+git2308250845.ca6e6b6~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * ca6e6b6 Fix window closing in case of SSD
+  * 0d63d12 Conditionally check for wayland-protocols 1.32
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:35:58 +0200
+
 libdecor-0 (0.1.99+git2307152150.f43652c~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
