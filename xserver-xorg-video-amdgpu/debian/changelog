@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu (23.0.0+git2307122216.ae22d12~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * ae22d12 Free output_ids
+  * 2897e17 Fix segfault on dock suspend, unplug, resume
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:39:53 +0200
+
 xserver-xorg-video-amdgpu (23.0.0+git2302221807.7025aef~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
