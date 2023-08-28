@@ -1,3 +1,46 @@
+mesa (23.3.0~git2308282021.72f104791d1~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 72f104791d1 venus: expose at least one cached memory type
+  * 7c98510d173 d3d12: Fix H264 interlaced decode
+  * c3cf7f3e35c d3d12: Fix Map/Unmap of YUV resources
+  * 71466eb863e vk/wsi/x11: Remove dead code
+  * f816578e4e2 nv50: Remove unused value
+  * 3e66eba59e6 driconf: add a workaround for Rainbow Six Extraction
+  * 577b231458f nv/codegen: Delete copy and assign
+  * 932d7fe4cd4 nv/codegen: Change copy-constructor call to assign
+  * 5ce6e09ffc7 nir/algebraic: Remove redundant pack / unpack lowering
+    patterns
+  * 69d086c6c41 nir/builder: Add nir_extract_i8_imm and
+    nir_extract_u8_imm helpers
+  * 58c7ad6aceb hasvk/tests: Propagate failures to gtest
+  * 27a66f70a5b hasvk/tests: Link a single hasvk_tests binary using
+    gtest
+  * 66d3b4a8b25 hasvk/tests: Refactor state_pool_test_helper to not use
+    macros for parametrization
+  * 54b0745b5e5 anv/tests: Propagate failures to gtest
+  * c374033f5b8 anv/tests: Link a single anv_tests binary using gtest
+  * 695e356d4a0 anv/tests: Refactor state_pool_test_helper to not use
+    macros for parametrization
+  * 2d2a189fef4 ci/panfrost: we have enough device, parallelize Vulkan
+    tests
+  * cccbd8ae699 ci/panfrost: add G52 flakes
+  * 35b2af0f0be lavapipe: further limit accurate_a0 hack
+  * bba4880ffcb zink: add a618 flake
+  * c9e060bfbe6 r300: there is no limitation on presubtract source file
+  * 87ea850d765 r300: move power of two multipliers down
+  * 7ae3d3eb8d9 r300: convert x * 2 into x + x for presubtract
+  * 0508db91556 r300: implement bias presubtract
+  * 3b743603383 r300: exit early in presubtract is not supported
+  * 24d35a56d99 r300: reorder for easier presubtract 1-x pattern
+    recognition
+  * 939845e424d zink: pass KERNEL shaders through successfully
+  * 226aefccd3e rusticl: fixes for zink shader images
+  * 07272f6c359 rusticl/device: _MAX_CONST_BUFFER0_SIZE is unsigned
+  * 54b37078ebf rusticl: add debug option to sync every event
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:37:07 +0200
+
 mesa (23.3.0~git2308181336.8849e1e3a65~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
