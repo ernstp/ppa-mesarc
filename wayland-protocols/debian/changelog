@@ -1,3 +1,10 @@
+wayland-protocols (1.32+git2308141432.e1d61ce~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * e1d61ce linux-dmabuf: add note about implicit sync
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:39:36 +0200
+
 wayland-protocols (1.32+git2307111527.5293896~f~base2) focal; urgency=medium
 
   * New snapshot:
