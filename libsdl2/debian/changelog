@@ -1,3 +1,14 @@
+libsdl2 (2.29.0+git2308311055.aa7ba6297~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * aa7ba6297 metal: Add hint to select low power device instead of the
+    default one (#8182)
+  * 0b995f21e wayland: add SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_EGL
+  * bb1fe302c wayland: don't define SDL_VIDEO_DRIVER_WAYLAND_DYNAMIC_*
+    macro's
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 03 Sep 2023 12:16:33 +0200
+
 libsdl2 (2.29.0+git2308251803.f032e8c19~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
