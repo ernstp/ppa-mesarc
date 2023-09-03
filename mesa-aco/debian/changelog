@@ -1,3 +1,41 @@
+mesa (23.3.0~git2309030649.8a32614a183~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 8a32614a183 isl/tilememcpy_test: add multiple tile testing
+  * fa6562b239f Revert "iris: Disable tiled memcpy for Tile4"
+  * a6c8ddb5965 intel/isl: Linear to Tile-4 conversion unittest
+  * 4f0d02902eb intel/isl: Convert Tile4 texture to linear format
+  * a648ee7a70f intel/isl: Convert linear texture to Tile4 format
+  * d16eac17d84 intel/isl: Unittest for linear to Ytile conversion
+  * ca7ae1a53f8 blorp: drop undefined macro
+  * 99a88ca4a24 crocus: fix GFX_VERx10 macro
+  * 802043018eb crocus: add a __gen_get_batch_address declaration
+  * 86e8ba4d327 anv: use the lineage number for WA
+  * 50c2fe46fab iris: use the correct WA macros and lineage numbers
+  * cbc49166617 anv: drop dead ifdef
+  * c38b67f4d1a intel: Limit Intel Vulkan RT to x86_64
+  * fd114ab7068 ci: Disable WHL jobs
+  * 3e457c6b7e9 ci: Disable known broken Bifrost Vulkan job
+  * 2ae94b38943 aco: implement some exclusive scans with inclusive scans
+  * f90f68aa1cf rusticl/memory: only specify PIPE_BIND_SHADER_IMAGE
+    where supported
+  * 3a715cc9d2f nir: add nir_scalar_equal
+  * bce9bba90d4 nir: add nir_scalar intrinsic helpers
+  * 1ae3c40732e docs: add LAVA farm informations
+  * 1a990e21c8a Revert "ci: disable a660 jobs"
+  * 4066f05fe43 anv: enable standard Y tiles
+  * db4488a2dca anv: Align memory VA to support for Ys, Tile64 tiled
+    images
+  * e03f3b646c1 isl: enable Tile64 for 3D images
+  * e956f6ad305 intel/isl: Allow Ys tiling
+  * 4ac46dbb46c isl: reorder tiling selection
+  * af559c48d39 intel/aux_map: correctly program tiling mode for Ys
+  * 3c6d003d9fb blorp: allow 3D blits/copies on Ys/Yf/Tile64 tiling
+  * e182f5770d8 isl: disable CCS on Ys/Yf
+  * 4e36aa507e9 isl: disable miptails on gfx12 with yuv formats
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 03 Sep 2023 12:17:19 +0200
+
 mesa (23.3.0~git2308282021.72f104791d1~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
