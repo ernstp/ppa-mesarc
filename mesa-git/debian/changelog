@@ -1,3 +1,53 @@
+mesa (23.2.0~rc2+git2309012058.69f5c51b2d2~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 69f5c51b2d2 nouveau: add exported GEM handles to the global list
+  * fc9ecb59316 nv50: fix code uploads bigger than 0x10000 bytes
+  * f6149e7ff67 aux/trace: fix set_hw_atomic_buffers method name
+  * 0f12f5dba69 gallium/dri: fix dri2_from_names
+  * 8aca433f4a6 nir/zink: fix gs emulation xfb_info sizing
+  * 9386fe103e0 aco: don't create sendmsg(dealloc_vgprs) if scratch is
+    used
+  * 7033e016929 egl: reenable partial redraw with a warning when using
+    gallium hud
+  * a45b1aecf57 driconf: add a workaround for Captain Lycop: Invasion of
+    the Heters
+  * e59fb5130a8 u/draw: skip zero-sized indirect draws
+  * 34b2f00d9cd aco: summarize register demand after handling branches
+  * 8dab73cab2f zink: fix crash in lower_pv_mode_gs_store
+  * 2febfbce396 anv: don't try to access dynamic buffers from surface
+    states
+  * a2204efb8fd frontends/va: Ignore requested size when creating
+    VAEncCodedBufferType
+  * 94f2aaca0c6 ci/deqp: really remove the uncompressed results.csv file
+  * 6d080b3e824 vulkan: ignore VkPipelineColorWriteCreateInfoEXT if the
+    state is dynamic
+  * dbb887f0138 asahi,agx: Fix stack buffer overflow in
+    agx_link_varyings_vs_fs
+  * 65d0399ccbf vulkan/wsi: Allow binding presentation_timing when
+    software rendering
+  * 8b5492aa31c panfrost: upcast uint8/uint16 before shifting them
+    beyond their range
+  * 5e903eeffa9 radv: Handle VK_SUBOPTIMAL_KHR in trace layers
+  * 3841203348b zink: fix big tcs output io
+  * 1287fbdb3a0 zink: explicitly set non-optimal last_vertex_stage
+    shader key on ctx create
+  * cd5e0498c52 lavapipe: block yuv formats from getting blit feature
+    flags
+  * db509248671 lavapipe: fix resolves where src image has a layer
+    offset
+  * 7f37c0d07de llvmpipe: fix early depth + alpha2coverage + occlusion
+    query interaction
+  * 865584a081d llvmpipe: block weird uses of subsampled formats in
+    buffers
+  * b69bf84d239 glsl: fix potential crash with DisableUniformArrayResize
+  * da9cf451f52 zink: generated tcs is on the tes, not the vs
+  * 6c71fd3e554 hasvk: fix null descriptor handling with A64 messages
+  * 7cd58273ccf aux/trace: fix winsys handle dumping
+  * b39929ed5c2 zink: add more locking for pipeline cache
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 03 Sep 2023 12:19:51 +0200
+
 mesa (23.2.0~rc2+git2308091900.3ccee9dda15~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
