@@ -1,3 +1,39 @@
+mesa (23.3.0~git2309052143.959801d9d9e~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 959801d9d9e zink: polaris ci updates
+  * 07cb81f0fcf asahi: Skip LOD bias lowering for GLES
+  * 2adb0f31fc9 gallium,mesa/st: Add PIPE_CONTEXT_NO_LOD_BIAS flag
+  * 6269b60a1ce asahi: Conditionally expose cube arrays
+  * dd3dd6e127f asahi: Handle linear 1D Arrays
+  * 56267ec14d0 asahi: Forbid linear 1D Array images
+  * fb606262608 agx: Run opt_idiv_const after lowering texture
+  * 49951ef3cc2 agx: Lower coordinates for cube map array images
+  * fb76f6cc6ed agx: Handle cube arrays when clamping arrays
+  * 54ebddaa0fe ail: Force page-alignment for layered attachments
+  * f9b08cf3a65 asahi: Translate cube array dimension
+  * 7895d5b79c8 agx: Add unit test for cmp+sel fusing
+  * bdad7992bc0 agx: Add unit test for if_cmp fusing
+  * 08e0c5a9cf1 agx: Fuse compares into selects
+  * e7ffc799d1a agx: Fuse conditions into if's
+  * f17ad0c516e agx: Generate unfused comparison pseudo ops
+  * ed6e3913494 agx: Add pseudo-instructions for icmp/fcmp
+  * 139e56c0dba agx: Only use nest by 1 for loops w/o continue
+  * 8f06252e9b1 agx: Add helper to determine if a NIR loop uses continue
+  * 5c9495cf376 agx: Omit while_icmp without continue
+  * e71a1469a8a agx: Omit push_exec at top level
+  * 6e0ae2c3165 agx: Detect conditional breaks
+  * a009f39fca7 agx: Use agx_first_instr
+  * aad7d5288ad agx: Add agx_first/last_instr helpers
+  * ffb64283eeb agx: Add break_if_*cmp instructions
+  * ff816f224b8 agx: Split nest instruction into begin_cf + break
+  * b89c048c9bf agx: Lower nest later
+  * b25b36a9e39 agx: Expand nest
+  * 84054441437 agx: Lower pseudo-ops later
+  * f9343fe5ca1 agx: Remove logical_end instructions
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Sep 2023 22:31:56 +0200
+
 mesa (23.3.0~git2309030649.8a32614a183~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
