@@ -1,3 +1,53 @@
+mesa (23.2.0~rc3+git2309052139.c111021a223~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * c111021a223 ac/surface: limit RADEON_SURF_NO_TEXTURE to color
+    surfaces
+  * aa654a73fd4 zink: wait on async fence during ctx program removal
+  * 1e301fd1a71 radv/amdgpu: Do not pass in a BO handle when clearing
+    PRT VA region.
+  * c4f0338b60a Revert "radv/amdgpu: skip adding per VM BOs for sparse
+    during CS BO list build"
+  * 836b0c02471 Revert "radv/amdgpu: workaround a kernel bug when
+    replacing sparse mappings"
+  * c1652bd821e Revert "ac: don't call ac_query_pci_bus_info from
+    ac_query_gpu_info"
+  * 1c8580e35a8 v3d/qpu: fix type of function argument
+  * 45f9735f969 v3dv: fix shader stage name in error message
+  * 84e3384070d v3dv: fix copy/pasted type of `sample`
+  * 2e0a8b50758 v3dv: fix
+    VK_PIPELINE_ROBUSTNESS_{BUFFER,IMAGE}_BEHAVIOR_DEVICE_DEFAULT_EXT
+    copy/paste typo
+  * eabe8637786 nir/passthrough_gs: Fix array size
+  * f60c6feac4b Revert "Revert "intel/ci: disable iris-jsl-deqp because
+    it always fails for an AMD MR""
+  * 60062a6923f .pick_status.json: Updates notes for
+    f8cb0d8a44afb9c70f38e359ffe0ad57416e66a4
+  * cea3ae3dc08 nir/lower_helper_writes: Consider bindless images
+  * e5a372f1c8d zink: fix format in
+    zink_make_{image,texture}_handle_resident()
+  * b9fc66567a7 vc4: drop duplicate .lower_ldexp
+  * b2a4d4134a0 r300: don't abort on flow control when using draw for vs
+  * 66ecca80811 nir: Fix metadata in nir_lower_is_helper_invocation
+  * 18cf53d672b dri: Use RGB internal formats for RGBX formats
+  * 607dc78cfc1 nv50: limit max code uploads to 0x8000
+  * 6a1e020bf6e disk_cache: Disable the "List" test for RO disk cache.
+  * cb26d486894 Revert "vk/wsi/x11: handle geometry updating more
+    asynchronously"
+  * 9fb99462d15 nouveau: take glsl_type ref unconditionally
+  * e54b901c2e9 vk/graphics: fix CWE handling with DS3
+  * 5d5e5f95c43 nir: Don't handle nir_op_mov in get_undef_mask in
+    opt_undef
+  * d5221de27de nir: Handle nir_op_mov properly in opt_shrink_vectors
+  * 19ef25a61b4 radv: disable 64-bit color attachments
+  * ee2baff7bdd .pick_status.json: Updates notes for
+    aebe58458611e0bb585a5bce8e16c1175783f3cc
+  * e13569a4d67 .pick_status.json: Update to
+    10e75aae1bddee9795b1ff04ffd656b0da79b5b5
+  * ad234040e51 docs: update calendar for 23.2.0-rc3
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Sep 2023 22:34:24 +0200
+
 mesa (23.2.0~rc2+git2309012058.69f5c51b2d2~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
