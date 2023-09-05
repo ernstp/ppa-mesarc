@@ -1,3 +1,15 @@
+libdrm (2.4.116+git2309052125.0be9179f~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 0be9179f amdgpu: add marketing names from Adrenalin 23.7.2
+  * e194de72 amdgpu: add marketing names from PRO Edition 23.Q3 W7000
+  * 51f3109f amdgpu: add marketing names from amd-5.5.1 (23.10.1)
+  * d4a7ee1a amdgpu: add marketing names from amd-5.4.6 (22.40.6)
+  * 6a961ca8 amdgpu: Use PRI?64 to format uint64_t
+  * ca041d5f amdgpu: Fix pointer/integer mismatch warning
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Sep 2023 22:30:53 +0200
+
 libdrm (2.4.116+git2308231157.7bdb135f~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
