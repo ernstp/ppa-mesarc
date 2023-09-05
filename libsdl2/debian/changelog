@@ -1,3 +1,17 @@
+libsdl2 (2.29.0+git2309042112.1d495351a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 1d495351a Detect Simagic wheel bases as wheels (#8198)
+  * 365a36386 Detect Logitech G923 Playstation as wheel G923 have two
+    different versions - Xbox version is already present in the wheel
+    list, but not the PS version.
+  * 242b25aba Detect Logitech PRO Racing Wheel for Xbox (PC mode) as
+    wheel Logitech PRO Racing Wheel have two different versions - for
+    Playstation and Xbox. Vendor + Product ID for Playstation version
+    already present in SDL sources, but not an Xbox version
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 05 Sep 2023 22:31:13 +0200
+
 libsdl2 (2.29.0+git2308311055.aa7ba6297~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
