@@ -1,3 +1,10 @@
+libdecor-0 (0.1.99+git2309071048.422abaf~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 422abaf libdecor-gtk: handle touch events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 Sep 2023 23:55:11 +0200
+
 libdecor-0 (0.1.99+git2308250845.ca6e6b6~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
