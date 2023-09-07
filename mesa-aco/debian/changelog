@@ -1,3 +1,52 @@
+mesa (23.3.0~git2309072302.13723e3097e~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 13723e3097e radv/ci: use the default kernel on vkcts-navi10
+  * 76ef5f82ab7 radv/ci: drop the auto-reboot-on-hang for vkcts-navi10
+  * b16472fc97f ir3/lower_tex_prefetch: Fix crash with lowered
+    load_barycentric_at_offset
+  * eb7a46ed3d5 v3dv: bump up MAX_UNIFORM_BUFFERS to 16
+  * 383842fab81 radv: Fix dumping vertex descriptors with
+    RADV_DEBUG=hang.
+  * 6d2d74fa1c4 pvr: Add VK_KHR_driver_properties
+  * 34813e13db5 pps-producer: add ability to select device with
+    DRI_PRIME
+  * 0228b294e8b radv: Fix IB size for RADV_DEBUG=hang.
+  * 6e4663635f6 mesa: disable snorm readpix clamping with
+    EXT_render_snorm
+  * 285223d0fd0 radv: fix interactions with primitives generated queries
+    and pipeline stats
+  * 6f4fe3f81b0 anv: Copy/Clear MSAA images over companion RCS while we
+    are on compute
+  * 5b8bef86501 anv: Extract batch print code to anv_print_batch helper
+  * 9866c4e32b5 anv: Skip layout transition on the compute queue
+  * 46d203c0abf anv: Add secondary companion RCS cmd buffer to primary
+  * 4d79c2d280f anv: Execute an empty batch to sync main and companion
+    RCS batch
+  * 0c49d3cf977 anv: Setup companion RCS command buffer submission
+  * a63277ec36b anv: Execute RCS init batch on companion RCS
+    context/engine
+  * 103512ef3b2 anv: Move compute specfic bits under compute queue init
+  * b3753025766 anv: Create companion RCS engine
+  * a5f2c8c845e anv: create individual logical engines on i915 when
+    possible
+  * a5e4be45c08 intel: Pass virtual memory address space ID while
+    creating context
+  * b73960fc408 intel: Add helper to create/destroy i915 VM
+  * 13b3d7f7411 anv: Handle companion RCS in end/destory/reset code path
+  * 801523f03d7 anv: Split out End/Destroy/Reset cmd buffer code into
+    helper
+  * edcde0679c0 anv: Add helper to create companion RCS command buffer
+  * 31eaeb82746 v3dv: handle pPlaneLayouts in
+    VkImageDrmFormatModifierExplicitCreateInfoEXT
+  * 717fbda5367 v3dv: be more precise in vkGetImageSubresourceLayout
+  * 8019a1b9292 glsl: ir_function_param_visitor::visit_enter always true
+    condition
+  * 5d203c4ae03 glsl_to_nir: add more unhandled function types
+  * 67d1c36bb4a glsl: fix out params in glsl to nir
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 Sep 2023 23:56:19 +0200
+
 mesa (23.3.0~git2309052143.959801d9d9e~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
