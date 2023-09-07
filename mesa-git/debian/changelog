@@ -1,3 +1,24 @@
+mesa (23.2.0~rc3+git2309071814.0225cef623d~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 0225cef623d .pick_status.json: Updates notes for
+    9865e5dff49395543da4331a943ba5a03ce6a413
+  * ccd77ea6b87 .pick_status.json: Updates notes for
+    7e246f7f2bde0c859269c4b81505bd0887045e7b
+  * a74366852e0 mesa: fix some TexParameter and SamplerParameter cases
+  * a565472aa98 .pick_status.json: Updates notes for
+    93b4f200dead198e680991a1e95bf3d3b58f87bd
+  * 604f6ccfc0e aco: fix u2f16 with 32bit input
+  * d4ade709281 aco: fix p_bpermute_gfx6 with input at non-zero byte
+  * f098e525034 zink: don't start multiple cache jobs for the same
+    program
+  * 11a9877e942 blorp: Drop unnecessary assertions in
+    blorp_can_hiz_clear_depth
+  * ce28feff35b nir/load_store_vectorize: Handle intrinsics with
+    constant base
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 Sep 2023 23:58:45 +0200
+
 mesa (23.2.0~rc3+git2309052139.c111021a223~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
