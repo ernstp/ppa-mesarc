@@ -1,3 +1,10 @@
+libdrm (2.4.116+git2309061728.ee52a88a~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * ee52a88a amdgpu: add marketing names from Adrenalin 23.9.1
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 Sep 2023 23:55:25 +0200
+
 libdrm (2.4.116+git2309052125.0be9179f~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
