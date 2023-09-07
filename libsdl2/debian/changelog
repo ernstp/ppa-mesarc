@@ -1,3 +1,12 @@
+libsdl2 (2.29.0+git2309071653.25eca09c7~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 25eca09c7 include: Replaced old Bugzilla URL.
+  * 88299502b wayland: Ensure that the toplevel window is recreated when
+    switching decoration modes
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 Sep 2023 23:55:41 +0200
+
 libsdl2 (2.29.0+git2309042112.1d495351a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
