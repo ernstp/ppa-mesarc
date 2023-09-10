@@ -1,3 +1,24 @@
+libdrm (2.4.116+git2309101414.dfd00c62~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * dfd00c62 modetest: allocate and commit atomic request around
+    set_property()
+  * 7618a646 modetest: allow using -r and -P
+  * 2e17aea5 modetest: permit -r and -s to work together
+  * 64b09cef modetest: document why no blob is created for linear gamma
+    LUT
+  * b709c301 modetest: avoid erroring if there's no gamma legacy support
+  * 45f3d9ba modetest: custom mode support
+  * 4d3635fa util: remove unused definitions of RED, GREEN, and BLUE
+  * ea5237e5 modetest: fix mode_vrefresh() for interlace/dblscan/vscan
+  * 022a4d8a util: fix grey in YUV SMPTE patterns
+  * be42051e modetest: add support for DRM_FORMAT_NV{24,42}
+  * 8e5286d4 util: add pattern support for DRM_FORMAT_NV{24,42}
+  * cd3b248c util: add NV24 and NV42 frame buffer formats
+  * 8db39ef7 modetest: add support for writeback connector
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 10 Sep 2023 14:21:46 +0200
+
 libdrm (2.4.116+git2309061728.ee52a88a~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
