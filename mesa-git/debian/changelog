@@ -1,3 +1,10 @@
+mesa (23.2.0~rc3+git2309081953.cc3aad2a9fb~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * cc3aad2a9fb radv: fix 128bpp comp-to-single clears
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 10 Sep 2023 14:25:15 +0200
+
 mesa (23.2.0~rc3+git2309071814.0225cef623d~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
