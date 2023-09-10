@@ -1,3 +1,17 @@
+libsdl2 (2.29.0+git2309100322.ce32c44b5~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * ce32c44b5 docs: Added Emscripten filesystem notes.
+  * 818a26f21 docs: Corrected/improved some Emscripten docs.
+  * 5e6a851d6 docs: Fixed some Emscripten details
+  * f788a671e docs: Remove "more on this later" comment for something
+    already covered.
+  * bd77b9a0c docs: Rewrote README-emscripten.md
+  * 8ad043fc3 render: Enable clipping for zero-sized rectangles
+  * b388f6e32 cmake: use MSVC_RUNTIME_LIBRARY to force MT
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 10 Sep 2023 14:22:08 +0200
+
 libsdl2 (2.29.0+git2309071653.25eca09c7~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
