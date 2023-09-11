@@ -1,3 +1,12 @@
+libsdl2 (2.29.0+git2309101533.92dc22601~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 92dc22601 cmake: make sure SDL_GetPrefPath is run before
+    testfilesystem
+  * 2adebcd6c ci: run tests in parallel
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 Sep 2023 18:49:57 +0200
+
 libsdl2 (2.29.0+git2309100322.ce32c44b5~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
