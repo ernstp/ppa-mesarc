@@ -1,3 +1,46 @@
+mesa (23.3.0~git2309111804.0c29b7aeaf2~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 0c29b7aeaf2 anv: remove misleading comment about batch_len
+  * 9a7c6ae32cd anv/xe: return failure in case waiting for the vm_bind
+    syncobj fails
+  * 935a1d2c8ff anv/xe: make vm_binds async
+  * 7018e64d794 anv: add a new vm_bind vfunc
+  * a54451075d4 anv: rename the vm_bind vfuncs
+  * 0a1ccd4a9a6 vulkan wsi: add support for PresentOptionAsyncMayTear
+  * 39aa4837601 zink: set optimal_keys for turnip jobs
+  * cf66ed2dec6 zink: imply ZINK_DEBUG=quiet if ZINK_DEBUG=optimal_keys
+    is set on turnip
+  * 1e1f58c1aca zink: add ZINK_DEBUG=quiet
+  * cb76e90793f ci/zink: Add new zink-lvp flakes
+  * f5c80f001bd ci/intel: Add new skqp flake
+  * 077e2da21ec ci/d3d12: Add new flake
+  * abb612ec1f7 ci/radeonsi: Add new flake
+  * 9dbc8a7ee3d ci: Declare stages before jobs
+  * e3aab80d4f9 meson: support installation tags
+  * 05e80e1a5e2 v3dv: expand sampling from linear image hack to support
+    multi-planar images
+  * 95f881adbd7 v3dv: add support for sampling simple 2D linear textures
+  * 151f78150ba Revert "ci: disable Collabora's LAVA lab for maintance"
+  * d74d017f7d7 v3dv: Rely on the internal tiled flag instead of the
+    common vk structure
+  * a03525d8db7 tu: Split program draw state into per-shader states
+  * a80f0260738 ir3: Add helper to determine when variant exceeds safe
+    constlen
+  * 252aee26346 freedreno, ir3, tu: Constify various uses of
+    ir3_shader_variant
+  * d1b333a0b57 tu: Split up tu6_emit_vpc()
+  * 211aeb2dda1 ir3: Add ir3_find_input_loc() helper
+  * 0d82f929427 tu: Pull entangled shader state into program config
+  * 56667588203 tu, freedreno/a6xx: Don't use VS for PrimID passthru
+    state
+  * b312155cc54 tu: Rename PrimID-related registers
+  * 979cf7bac04 tu: Merge depth/stencil draw states
+  * 3a1f7c61b6a tu: Stop reusing base Vulkan dynamic state enums
+  * 1f88c9c5a4c tu: Merge PC_RASTER_CNTL into RAST draw state
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 11 Sep 2023 18:50:42 +0200
+
 mesa (23.3.0~git2309091840.39fca243bb9~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
