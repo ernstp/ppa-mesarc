@@ -1,3 +1,52 @@
+mesa (23.3.0~git2309122146.85192dcfc6e~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 85192dcfc6e wsi/x11: Don't allow signal_present_id to rewind.
+  * 08fee190aa0 wsi/x11: Fix potential deadlock in present ID.
+  * da16a76fe7d venus: fix a device memory report leak
+  * 9eba1d91875 intel/genxml: update PIPE_CONTROL instruction for dg2
+  * 8c8985390d0 Revert "frontends/va: Also map VAImageBufferType for
+    reading"
+  * 7eabe9bb40d ci_run_n_monitor: add comment to explain "MR > fork"
+    logic
+  * 717cff829c5 ci: remove duplicate fork pipeline in MRs
+  * 941d92408ee bin/ci_run_n_monitor: automatically pick MR pipelines
+    when they exist
+  * f398f0fb44b bin/ci_run_n_monitor: print in which repo we're looking
+    for the pipeline
+  * b8a54c50a6a nir: fix invalid sampler search by texture id
+  * 5a7044d0bc9 zink: move find_sampler_var from zink to nir core
+  * 010147cd642 llvmpipe: make sure to initialize the lp_setup_context
+    slots with the default values
+  * f9b341cbf40 radv: use shortcut_1d_workgroup_id
+  * 2965a9d5102 radv: optimize mesh workgroup ID using
+    ts_mesh_dispatch_dimensions
+  * 81d17246ec2 nir/lower_system_values change num_workgroups to
+    uint32_t
+  * b3b58b91f41 zink: ci updates
+  * 5f73b8976bb aux/tc: fix address calc for segmented texture subdata
+  * b6bc1f85f45 aux/tc: fix staging buffer sizing for texture_subdata
+  * 64b49fb501e v3dv: don't assume that bound descriptors have been
+    written
+  * 9d2bad8b373 zink/ci: document more flakes seen on vangogh
+  * 13161f4adb2 zink/ci: automatically reboot when hitting a kernel BUG
+    on vangogh
+  * 29f730b793d docs/features: cl_khr_3d_image_writes needs driver
+    support
+  * 2cc981a0cd5 radv: fix capturing RGP on RDNA3 with more than one
+    Shader Engine
+  * 6caae898dd4 radv: fix emitting SQTT userdata when CAM is needed
+  * 23f9e89fce6 anv: enable VK_EXT_mesh_shader where supported
+  * 4eddeea7bf2 intel/fs: handle URB setup for fast linked mesh
+    pipelines
+  * 17d7f7a292f intel/fs: read viewport and layer from the FS payload
+  * d36da7c5f82 anv: track what kind of pipeline a fragment shader may
+    be used with
+  * b200e5765cb anv: use a simpler MUE layout for fast linked libraries
+  * bcde58ea86e blorp: fix hangs with mesh enabled
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Sep 2023 23:07:41 +0200
+
 mesa (23.3.0~git2309111804.0c29b7aeaf2~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
