@@ -1,3 +1,10 @@
+libglvnd (1.7.0+git2309121602.faa23f2~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * faa23f2 Increment the version number to 1.7.0.
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 12 Sep 2023 23:07:16 +0200
+
 libglvnd (1.6.0+git2304041449.179d727~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
