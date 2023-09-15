@@ -1,3 +1,10 @@
+libsdl2 (2.29.0+git2309130036.a8b941469~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * a8b941469 detect fanatec steering wheels
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 Sep 2023 08:42:21 +0200
+
 libsdl2 (2.29.0+git2309101533.92dc22601~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
