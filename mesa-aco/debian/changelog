@@ -1,3 +1,49 @@
+mesa (23.3.0~git2309150548.dd6a7a8e615~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * dd6a7a8e615 lavapipe: clamp cache uuid size
+  * b73ebc6bfc3 zink: flag db maps as unsynchronized
+  * a5be0385c7c aux/tc: don't use pipe_buffer_create_with_data() for rp-
+    optimized subdata
+  * 81dd39de019 aux/tc: fix rp info handling around tc_sync calls
+  * c9b7639a7dc compiler/types: Fix array name dimension flipping for
+    unsized arrays
+  * ea998ddd348 glsl: Annotate _mesa_glsl_error() with PRINTFLIKE
+  * 2db04de6df1 freedreno: Build drm subdir before perfcntrs, which uses
+    it.
+  * c5a6cdfeb98 ci: add locked flag to bindgen-cli on x86_64_build.sh
+  * 92f5442489e intel/fs: Merge copy prop dataflow loops
+  * fa2757aa979 intel/fs: Use rb_tree for copy prop dataflow
+  * 35644bb4832 intel/fs: Use rb_tree to store ACP entries by
+    destination
+  * c28bf1a2495 intel/fs: Use rb_tree to store ACP entries by source
+  * 06bdd3eac04 intel/fs: Encapsulate per-block ACP in a structure
+  * c262752d741 intel/fs: Make opt_copy_propagation_local file private
+  * 09461082985 intel/fs: Simplify check in can_propagate_from
+  * 1f15a0f8b2e intel/fs: Don't loop in try_constant_propagate
+  * ab23d89adef intel/fs: Move src.file checks out of
+    try_constant_propagate and try_copy_propagate
+  * b5b2338c5cf intel/fs: Make try_constant_propagate and
+    try_copy_propagate file private
+  * 8665e37960f intel/fs: Don't try to copy propagate into a source
+    again after progress is made
+  * e488b46419b intel/fs: Don't continue fixed point iteration just
+    because liveout changes
+  * 385f01c89b5 util/rb-tree: Inline rb_tree_init
+  * 0f917d93bf1 util/rb-tree: Work around C++'s dislike of offsetof
+  * f7472f23ba3 glsl/list: Clean up an inappropriate comment
+  * 6f1b1d63304 intel/genxml: Auto-import genxml files using
+    genxml_import.py
+  * cd0c758f328 intel/genxml: Start Xe2 support
+  * 57b56312979 intel/decoder: Implement support for importing genxml
+  * 0ec95e425cd intel/decoder: ralloc_steal() values from spec context
+    for fields and enums
+  * 0495f952d48 intel/genxml: Add genxml_import.py script
+  * 6ad2f39bab5 intel/genxml: Add GenXml.flatten_xml() method
+  * c0f7feb239a intel/genxml: Add GenXml.add_xml_imports method
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 Sep 2023 08:43:02 +0200
+
 mesa (23.3.0~git2309122146.85192dcfc6e~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
