@@ -1,3 +1,34 @@
+mesa (23.2.0~rc3+git2309150101.3317f14d838~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 3317f14d838 Revert "zink: use VK_WHOLE_SIZE when binding null db
+    buffer descriptors"
+  * 3ad3d2f9b69 .pick_status.json: Update to
+    6f1b1d6330443aca93c70b07aa2ac657266545c5
+  * 5d5bb80d9ba ac/nir/ngg: Wait for attribute ring stores in mesh
+    shaders.
+  * a3ccb7af800 ac/nir/ngg: Refactor mesh shader primitive export.
+  * 15590ef1f1c ac/nir/ngg: Wait for attribute stores before VS/TES/GS
+    pos0 export.
+  * e74270f0644 ac/nir: Slightly refactor how pos0 exports are added
+    when missing.
+  * 4919f41300c ac/nir: Add done arg to ac_nir_export_position.
+  * 2d9504670b7 intel/fs: use ffsll so we don't explode on 32 bits
+  * 1594c8efde8 anv: enable VK_EXT_mesh_shader where supported
+  * 9e80ffbbd7d intel/fs: handle URB setup for fast linked mesh
+    pipelines
+  * 5ef518e4371 intel/fs: read viewport and layer from the FS payload
+  * 7ea676e52e3 anv: track what kind of pipeline a fragment shader may
+    be used with
+  * 86f9963837b anv: use a simpler MUE layout for fast linked libraries
+  * cb6c918ff98 blorp: fix hangs with mesh enabled
+  * 2010d1f4fb4 intel/compiler: load debug mesh compaction options once
+  * 13b41ca3d4e intel/compiler,anv: put some vertex and primitive data
+    in headers
+  * 5442c2f3cec intel/compiler/mesh: compactify MUE layout
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Fri, 15 Sep 2023 08:45:38 +0200
+
 mesa (23.2.0~rc3+git2309081953.cc3aad2a9fb~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
