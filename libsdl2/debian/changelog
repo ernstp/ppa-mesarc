@@ -1,3 +1,10 @@
+libsdl2 (2.29.0+git2309151423.70a2ac2f1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 70a2ac2f1 x11: Always update clipboard owner
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 16 Sep 2023 12:28:24 +0200
+
 libsdl2 (2.29.0+git2309130036.a8b941469~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
