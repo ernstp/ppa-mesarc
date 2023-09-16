@@ -1,3 +1,48 @@
+mesa (23.3.0~git2309160239.3a307e22483~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 3a307e22483 intel/common: Add sse2_args for 32-bit build when -
+    Dsse2=false was set
+  * 3c4c263dc73 vulkan/android: improve vkQueueSignalReleaseImageANDROID
+  * 6ed2515df1a vulkan: remove a dup entry from
+    vk_image_usage_to_ahb_usage
+  * 497aecb2100 Android.mk: Only link LLVM for radeonsi, not amd_vk
+  * ec32619cb04 Android.mk: Explicitly enable/disable LLVM support
+  * 599f47f11c6 Android.mk: Allow building only Vulkan drivers
+  * de9bf84501d meson: use a single dependency call for lua
+  * 57f83469071 ci/zink: drop redundant `MESA_LOADER_DRIVER_OVERRIDE:
+    zink`
+  * 3251f321b86 mesa: some cleanups for texparam extension checks
+  * ee3981e84d6 Revert "ci: disable lima LAVA lab for maintance"
+  * 83d856d4bc8 ci/farm-rules: re-add "run every container and build job
+    when a farm gets re-enabled"
+  * 67c7f391b3e ci/farm-rules: rename .disable-farm-mr-rules to make it
+    clear it's only about MRs
+  * fa2fc50f81d freedreno/decode: Fix printing chip-id
+  * 9fa75efe69c freedreno/layout: Handle 565/etc MSAA special case
+  * 4952db73fb5 freedreno: Fix crash with debug msgs enabled
+  * cd2c4927c82 zink: use null attachments for null attachments with
+    dynamic render
+  * 267b997abf1 zink: propagate rp_tc_info_updated across unordered
+    blits
+  * 12cdd546be4 zink: use much bigger dummy surfaces
+  * 047213fcbaf tu: handle unused color attachments without crashing
+  * 42722347362 lavapipe: EXT_load_store_op_none
+  * 73a9f9c5cac tu: Actually emit patchpoint for viewports with FDM
+  * 64ed3576993 tu: Fix assert in FDM state emission
+  * f8bb1b22fbe tu: Fix tu6_emit_*_fdm size call
+  * 749e1de9d33 tu: Fix per-view viewport state propagation
+  * 21fa6777129 ci: document which image tags need to be bumped when
+    updating {alpine,debian,fedora}/x86_64
+  * c1990cdb001 ci: document which image tags need to be bumped when
+    updating piglit
+  * 7521dbae602 ci: Fix pre-merge pipelines with no code changes
+  * b1a63d5418f intel/fs: Check if the whole ubo load range is in the
+    push const range
+  * 2bd86f80482 panvk: Add Android ICD loader entry point
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 16 Sep 2023 12:29:03 +0200
+
 mesa (23.3.0~git2309150548.dd6a7a8e615~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
