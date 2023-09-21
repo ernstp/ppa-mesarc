@@ -1,3 +1,64 @@
+mesa (23.3.0~git2309211021.2009b9b5e28~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 2009b9b5e28 ci: limit build jobs to 30min so that they can retry
+    when they go wrong
+  * 33ca3a999c9 rusticl/kernel: skip adding global id offsets if not
+    used
+  * a9f408bd521 rusticl/mesa: fix `set_constant_buffer` when passing an
+    empty buffer
+  * f1b9b7f9556 intel/fs: Update SSBO & shared uniform block loads for
+    Xe2
+  * 9fb2b12c999 intel/compiler: Update RT stack_id access for Xe2
+  * d371565d344 intel/compiler: Update ray-tracing intrinsic lowering
+    for Xe2
+  * 3d744a6890d intel/compiler: Update lower_trace_ray_logical_send()
+    for Xe2
+  * 9e43fa09a6d intel/compiler: Update emit_rt_lsc_fence() for Xe2
+  * 9846dd798b9 intel/compiler: Update opt_split_sends() for Xe2 reg
+    size
+  * 727ab2c11d6 intel/compiler/fs: Support Xe2 reg size in
+    assign_curb_setup
+  * cef4d53daf5 intel/xe2+: Round up size to reg_unit() in
+    fs_reg_alloc::alloc_spill_reg().
+  * fe3d90aedff intel/fs/xe2+: Fix calculation of spill message width
+    for Xe2 regs.
+  * 791d0401047 intel/fs/xe2+: Fix execution width of
+    SHADER_OPCODE_GET_BUFFER_SIZE for SIMD16 EU.
+  * ac4f5985773 intel/fs/xe2+: Update regioning lowering offset
+    alignment checks for Xe2 regs.
+  * 37e280f28ae intel/fs: Lower unsupported regioning with non-trivial
+    2D regions on FIXED_GRFs.
+  * dd632bf5278 intel/fs/xe2+: Update TASK/MESH payload setup for Xe2
+    reg size.
+  * 8944ac7d6c3 intel/fs/xe2+: Update BS payload setup for Xe2 reg size.
+  * 14e1b9ee69b intel/fs/xe2+: Update TES payload setup for Xe2 reg
+    size.
+  * 4b3243104cd intel/fs/xe2+: Update TCS payload setup for Xe2 reg
+    size.
+  * 6195eac210c intel/fs/xe2+: Update GS payload setup for Xe2 reg size.
+  * 28744c89543 intel/compiler/xe2: Account for reg_unit() in TES
+    intrinsics
+  * 9859f5b4d20 intel/compiler/xe2: Account for reg_unit() in TCS
+    intrinsics
+  * 610daa3166e intel/fs/xe2+: Fix payload layout of sampler messages
+    for Xe2 reg size
+  * c9f28575461 intel/compiler/xe2: TXD is lowered to SIMD16 in SIMD32
+    mode
+  * ef817650c94 intel/compiler/xe2: Use SIMD16 for
+    nir_intrinsic_image_size
+  * 0b23df39519 intel/compiler/xe2: Update fs_visitor::setup_vs_payload
+    to account for Xe2 reg size
+  * 42b90f05f60 intel/compiler: Adjust barrier emission for Xe2+
+  * 8b1dc77521d intel/fs/xe2+: Scale BRW_MAX_MSG_LENGTH by native
+    register size.
+  * 4de065f6a25 intel/compiler: Adjust fence message lengths for new
+    register width on Xe2+
+  * e1289d61358 intel/compiler: Adjust CS payload registers for new
+    register width on Xe2+
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 21 Sep 2023 12:02:37 +0200
+
 mesa (23.3.0~git2309160239.3a307e22483~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
