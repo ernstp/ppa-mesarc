@@ -1,3 +1,11 @@
+libdrm (2.4.116+git2309191639.6abc1640~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 6abc1640 ci: bump FreeBSD to 13.2
+  * bdab6068 xf86drm: mark DRM_MAX_MINOR as deprecated
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 21 Sep 2023 12:01:21 +0200
+
 libdrm (2.4.116+git2309131826.13691f52~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
