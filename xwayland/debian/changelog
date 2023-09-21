@@ -1,3 +1,13 @@
+xwayland (2:23.2.1+git2309201010.ada62bf82~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * ada62bf82 Bump version to 23.2.1
+  * ad46baaa5 glamor: Ignore destination alpha as necessary for
+    composite operation
+  * 2ab53d5c9 xtest: Check whether there is a sendEventsProc to call
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 21 Sep 2023 12:11:35 +0200
+
 xwayland (2:23.2.0+git2308160959.9143d93e4~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
