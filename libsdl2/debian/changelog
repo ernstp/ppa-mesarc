@@ -1,3 +1,23 @@
+libsdl2 (2.29.0+git2309210032.834e8898b~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 834e8898b SDL_dbus.h: define DBUS_TIMEOUT_USE_DEFAULT if not already
+    defined.
+  * 60070d0b3 emscripten: Restore compatibility with existing emsdk
+    releases.
+  * 330d420af Use EM_ASM_PTR when the return value is a pointer
+  * 2fcbf321f wayland: Fix drag offer leak
+  * a683ce415 linux: Add portal drag and drop
+  * 95a6f986a update config.guess and config.sub from mainstream
+  * 37dee79b7 Fixed sensor timestamp units for third-party PS5
+    controllers
+  * 62e7049a4 Fixed error: array subscript 2 is above array bounds of
+    ‘const Uint8[2]’
+  * fff3c2573 Fixed sensor timestamp calculation for third-party PS5
+    controllers
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 21 Sep 2023 12:01:55 +0200
+
 libsdl2 (2.29.0+git2309151423.70a2ac2f1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
