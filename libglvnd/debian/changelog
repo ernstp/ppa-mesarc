@@ -1,3 +1,11 @@
+libglvnd (1.7.0+git2309191914.e993752~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * e993752 Merge branch 'ci-mr-pipelines' into 'master'
+  * 729f96c ci: enable merge request pipelines
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 21 Sep 2023 12:01:41 +0200
+
 libglvnd (1.7.0+git2309121602.faa23f2~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
