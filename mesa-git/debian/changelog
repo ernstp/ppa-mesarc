@@ -1,3 +1,54 @@
+mesa (23.2.0~rc3+git2309221746.29fc24d2894~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 29fc24d2894 zink: disable validation
+  * f066d9bcd75 ac/nir/ngg: Wait for attribute ring stores in mesh
+    shaders.
+  * e78d9b00bfd ac/nir/ngg: Refactor mesh shader primitive export.
+  * 93c501e273e ac/nir/ngg: Wait for attribute stores before VS/TES/GS
+    pos0 export.
+  * 1f0ba8cdd84 ac/nir: Slightly refactor how pos0 exports are added
+    when missing.
+  * 156a26826e4 ac/nir: Add done arg to ac_nir_export_position.
+  * 9a012e05dc5 intel/fs: use ffsll so we don't explode on 32 bits
+  * e3ce501d01c anv: enable VK_EXT_mesh_shader where supported
+  * 4a49ba59dbc intel/fs: handle URB setup for fast linked mesh
+    pipelines
+  * bbdc325e593 intel/fs: read viewport and layer from the FS payload
+  * c3a84ff48de anv: track what kind of pipeline a fragment shader may
+    be used with
+  * 3932095156b anv: use a simpler MUE layout for fast linked libraries
+  * 73ccbcab601 blorp: fix hangs with mesh enabled
+  * 7f766cfb795 intel/compiler: load debug mesh compaction options once
+  * 03fc9642fc3 intel/compiler,anv: put some vertex and primitive data
+    in headers
+  * 6b99242dbc1 intel/compiler/mesh: compactify MUE layout
+  * a02429d43fc radv: fix 128bpp comp-to-single clears
+  * 3cfc127448d .pick_status.json: Updates notes for
+    9865e5dff49395543da4331a943ba5a03ce6a413
+  * f3789c8c607 .pick_status.json: Updates notes for
+    7e246f7f2bde0c859269c4b81505bd0887045e7b
+  * 365d3dbea19 mesa: fix some TexParameter and SamplerParameter cases
+  * d9eb323a397 .pick_status.json: Updates notes for
+    93b4f200dead198e680991a1e95bf3d3b58f87bd
+  * f49e1ecce19 aco: fix u2f16 with 32bit input
+  * e350c853721 aco: fix p_bpermute_gfx6 with input at non-zero byte
+  * 32763470260 zink: don't start multiple cache jobs for the same
+    program
+  * 23f0ecc3a26 blorp: Drop unnecessary assertions in
+    blorp_can_hiz_clear_depth
+  * ab3518257c8 nir/load_store_vectorize: Handle intrinsics with
+    constant base
+  * 9ddd8fffe9e ac/surface: limit RADEON_SURF_NO_TEXTURE to color
+    surfaces
+  * f36e5c85583 zink: wait on async fence during ctx program removal
+  * c71b07bc0ca radv/amdgpu: Do not pass in a BO handle when clearing
+    PRT VA region.
+  * 0041529843c Revert "radv/amdgpu: skip adding per VM BOs for sparse
+    during CS BO list build"
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 22 Sep 2023 18:58:56 +0200
+
 mesa (23.2.0~rc3+git2309150101.3317f14d838~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
