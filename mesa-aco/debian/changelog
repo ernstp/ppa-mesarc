@@ -1,3 +1,50 @@
+mesa (23.3.0~git2309221823.1cdc4be14b6~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 1cdc4be14b6 intel/compiler: Don't allocate memory for SIMD select
+    error handling
+  * e55aa87f323 compiler: Only enable mesaclc helper if we have OpenCL
+    SPIR-V support
+  * 4e065cdaaa2 clover: Only compile/depend libclspirv and libclnir when
+    using SPIR-V support
+  * 3a210932ada clover: Hide SPIR-V related code behind
+    HAVE_CLOVER_SPIRV
+  * 0e7337e8301 rusticl: Ensure NIR generated headers will be available
+  * 3988d901ac8 meson: Remove unnecessary inc_compiler mentions
+  * ec835595f0d compiler: Use a meson dependency for libcompiler
+  * 9442571664e ci: separate hiden jobs to -inc.yml files
+  * 17dfbb6ce78 zink: fix semaphore signal ordering
+  * 12778fc99f7 zink: add a ZINK_DEBUG=validation alias
+  * fe43e639744 zink: set workgroup_memory_explicit_layout for shader
+    validation
+  * 5d90b1db70a lavapipe: set separate_shaders for shader objects
+  * cf903ff79b1 zink: delete a non-maintenance5 workaround for shobj use
+  * 3c50b93efef zink: require maintenance5 for shobj
+  * 792d76feb17 zink: delete injected pointsize during shader creation
+  * 51e067d9e59 lavapipe/ci: Fix asan expectations
+  * be8a73f40d0 nir/deref: Layer rematerialization helpers
+  * 439e8c42cc4 nir/lcssa: Fix rematerializing derefs
+  * 29dc1b193a0 nir: Add nir_rematerialize_deref_in_use_blocks
+  * ba809dccb8c nir/deref: remove rematerialize_deref_in_block cache
+  * ab1310e84d7 nir: Add nir_foreach_block_in_cf_node_reverse
+  * 70e497a2ac8 nir: Add nir_cf_node_cf_tree_prev
+  * 01f6afb01a0 ci/zink+radv: bump the timeout of zink-radv-navi10-valve
+    by 10 minutes
+  * e7c977503ca ci/zink+radv: specify that zink-radv-navi10-valve should
+    run in the mupuf farm
+  * c891c1fdce6 virgl: Cover all the formats defined in the virgl
+    definition
+  * 24555cdbbd9 aco/spill: Make sure that offset stays in bounds
+  * 9510af0f603 freedreno/fence: Hold a strong ref to batch
+  * 86f50775388 freedreno: Add reformatting commits to .git-blame-ignore-
+    revs
+  * dedb2f02089 glsl: remove unused
+    validate_first_and_last_interface_explicit_locations()
+  * 7b744bb8df5 glsl: switch to nir
+    validate_first_and_last_interface_explicit_locations()
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 22 Sep 2023 18:56:24 +0200
+
 mesa (23.3.0~git2309211021.2009b9b5e28~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
