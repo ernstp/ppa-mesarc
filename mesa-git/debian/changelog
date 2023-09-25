@@ -1,3 +1,48 @@
+mesa (23.2.0~rc4+git2309250451.d86619a4982~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * d86619a4982 tu: Fix assert in FDM state emission
+  * 8ddfe6b7431 tu: Fix per-view viewport state propagation
+  * 9eb180b3108 intel/fs: Check if the whole ubo load range is in the
+    push const range
+  * 1b1d78da213 lavapipe: clamp cache uuid size
+  * 8c6638a4bc3 zink: flag db maps as unsynchronized
+  * 7932c7a0900 aux/tc: don't use pipe_buffer_create_with_data() for rp-
+    optimized subdata
+  * 3fac6fa023c aux/tc: fix rp info handling around tc_sync calls
+  * c617870e8fe radeonsi/vcn: change max_poc to fixed value for hevc
+    encoder.
+  * 3e6c9dd71ac aco/insert_exec_mask: set Exact mode after p_discard_if
+    when necessary
+  * 1b614a22f24 radv: set THREAD_TRACE_MARKER_ENABLE for mesh/task draws
+  * 41cee21f620 radv/video: take db alignment into account when
+    allocating images.
+  * 814b8bf593e aux/tc: fix renderpass tracking fb state clobber
+    scenario
+  * dc504299b80 aux/tc: Add ASSERTED to unreferenced release build
+    variable
+  * 2bc31ef058e panfrost: delete stale editorconfig file
+  * 62c008d231c glsl: check for xfb setting xfb info
+  * d3b688005c2 spirv: use a pointer sized int type for opencl event_t
+  * 8ac453ea150 compiler/types: Use right hash for function types
+  * af918215793 radv: don't emit event code on video queues.
+  * 6c8285296d5 wsi/x11: Fix potential deadlock in present ID.
+  * 7ca144b9bf0 venus: fix a device memory report leak
+  * 684ce435075 nir: fix invalid sampler search by texture id
+  * 66e20bb8240 zink: move find_sampler_var from zink to nir core
+  * 3c20252635b aux/tc: fix address calc for segmented texture subdata
+  * 4d7b7927ff8 aux/tc: fix staging buffer sizing for texture_subdata
+  * 75b7526185c radv: fix capturing RGP on RDNA3 with more than one
+    Shader Engine
+  * 1c36f3c4a0b radv: fix emitting SQTT userdata when CAM is needed
+  * 2537864f900 vulkan wsi: add support for PresentOptionAsyncMayTear
+  * 0a6043c6322 lima: fix plbu block stride calculation
+  * 6cfb05190dd nir/inline_uniforms: fix oob access with
+    nir_find_inlinable_uniforms
+  * 8a6a489777a intel/dev: Update device string for MTL PCI ID 0x7d55
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 25 Sep 2023 08:36:04 +0200
+
 mesa (23.2.0~rc3+git2309221746.29fc24d2894~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
