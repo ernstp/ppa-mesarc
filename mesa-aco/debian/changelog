@@ -1,3 +1,44 @@
+mesa (23.3.0~git2309250523.129e27a46e5~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 129e27a46e5 llvmpipe/linear: move to nir inputs
+  * 90c4468ed0e llvmpipe/linear: convert to using nir for output.
+  * 8477b97f1bb llvmpipe/fs: start converting dervied state to nir
+    based.
+  * b72e77bd97d llvmpipe/fs: start converting interp/input paths to nir.
+  * 2b09d2d7159 llvmpipe/nir: call gather info to update inputs read
+    properly
+  * 5827034dfc0 gallivm: drop tgsi aos paths.
+  * e9a41875dac llvmpipe/linear: drop tgsi path.
+  * 1f3446499f2 ci/freedreno: disable broke cheza (Adreno 630) runners
+  * a57cc0ae0c8 r600/sfn: Fix use of scheduled_shader vs shader
+  * 34a068de6ff r600/sfn: sort the uniforms of the right shader
+  * c04f313cc53 r600: Use nir_builder helpers for load/store_shared_r600
+  * 28137a187bd r600: Use more auto-generated nir_builder helpers
+  * feafb8a256b pvr: Fix dynamic desc offset storage
+  * bf17e4fe330 pvr: Fix `for` loop itarator usage
+  * 47b481cace5 nvk: Set GUARDBAND_Z_SCALE_1 when Z-clipping
+  * d7f3fdc262a nvk: Enable dynamic clip/clamp enable
+  * 07091f0f94f nvk: Fix depth clipping parameters
+  * e317ba373b7 nvk: Clean up viewport math
+  * 17dfbc25d23 iris: do not mention specifically clover for OpenCL
+    support
+  * a4e4bf8ccd0 ci/venus: add fragment.32B_in_memory_with_vec4_s32 flake
+  * b9c9fb7259a anv: fix frame count reporting in INTEL_MEASURE
+  * 6f85e6b06be nvk: Disable statistics around meta ops
+  * 169835da39b nvk: Lower interp_at_sample to interp_at_offset
+  * 53ed2ff7420 pvr: remove pvr_pbe_get_src_pos()
+  * 66198024465 pvr: treat VK_IMAGE_CREATE_MUTABLE_FORMAT_BIT as not
+    supported
+  * 865bdc3da2b lavapipe: set default min sample shading to 1
+  * a2a848cb19e lavapipe: set default viewport and scissor count for
+    cmdbufs
+  * 0d975219ad9 lavapipe: more vertex stride fixups
+  * 94debd4b4c3 lavapipe: always set independent blend
+  * 74ac66c2759 lavapipe: fix variable descriptor count support handling
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 25 Sep 2023 08:33:39 +0200
+
 mesa (23.3.0~git2309221823.1cdc4be14b6~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
