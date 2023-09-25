@@ -1,3 +1,39 @@
+mesa (23.3.0~git2309251618.21db2e70174~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 21db2e70174 aco: reset prefetch in the correct block after removing
+    the exit
+  * 1c21b3a62ad intel/ds: avoid dropping traces when running out of
+    shared memory
+  * 00b65c75ad5 anv/utrace: trace CPU on timestamp buffer readiness
+  * 7d30b1e28f7 intel/ds: track number of tracepoint timestamp copies
+  * 64769bc5b2e util/u_trace: count number of tracepoints
+  * a5f58e5f854 intel/ds: lock submissions to u_trace_context
+  * a851dc5e3c0 intel: don't assume Linux minor dev node
+  * 6857497be69 anv: enable utrace timestamp buffer copies on compute
+    engine
+  * a334fb005bc anv: move utrace flush out of backends
+  * 08e0c063cfe anv: move simple shaders code to its own object
+  * 7a35113455a anv: add simple shader support without a command buffer
+  * 2cc5b3b1e02 anv: add a memcpy compute internal kernel
+  * e0f420c3348 anv: fix utrace timestamp buffer copies
+  * dd2ef9a0e4c frontends/va: Set default rate control values once when
+    creating encoder
+  * c970a9b6634 frontends/va: Process VAEncSequenceParameterBufferType
+    first in vaRenderPicture
+  * 49e471de70c docs: add calendar for 23.3
+  * cf3fb0fee7c radv/ci: add more tests to the navi21 vkcts flake list
+  * 0a065b5cf50 radv/ci: increase the parallelism of the vkcts-navi21
+    job
+  * bf321993866 v3d/shim: include new ioctl parameters
+  * 219a14d0933 radv: enable cache counters for RGP on GFX11
+  * 70a4290e287 radv: add SPM support for GFX11
+  * 301c402bd82 ac/spm: add support for GFX11
+  * 26c710b7c42 ac/spm: add new segment types for GFX11
+  * 97d87a431a6 ac/gpu_info: define AMD_MAX_WGP
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 25 Sep 2023 17:39:45 +0200
+
 mesa (23.3.0~git2309250523.129e27a46e5~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
