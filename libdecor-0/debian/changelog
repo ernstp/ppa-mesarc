@@ -1,3 +1,10 @@
+libdecor-0 (0.2.0+git2309250849.ad320fc~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * ad320fc build: Bump version to 0.2.0
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 25 Sep 2023 17:39:28 +0200
+
 libdecor-0 (0.1.99+git2309071048.422abaf~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
