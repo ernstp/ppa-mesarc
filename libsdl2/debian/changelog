@@ -1,3 +1,11 @@
+libsdl2 (2.29.0+git2309250228.9772d0512~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 9772d0512 SDL_iconv_string() defaults to UTF-8
+  * 27f2df229 Check for NULL before dereferencing newly allocated memory
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 25 Sep 2023 08:32:49 +0200
+
 libsdl2 (2.29.0+git2309210032.834e8898b~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
