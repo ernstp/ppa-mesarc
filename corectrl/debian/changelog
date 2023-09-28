@@ -1,3 +1,19 @@
+corectrl (1.4.0~git2309281927.438fd6d~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 438fd6d CHANGELOG: add CMake minimum required version note
+  * 6cec19c Bump CMake minimum version to 3.22
+  * 0650b7c Add Botan 3 compilation support
+  * ccecd64 Fix typos
+  * 7723ecd Fix C++20 deprecation warning
+  * ddea819 Bump C++ standard to C++20
+  * ebb98a2 Reword comment
+  * ad3bd85 CHANGELOG: add english translation fix contribution note
+  * 0c73a94 Merge branch 'typo' into 'master'
+  * b242e68 Fixed typo
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Sep 2023 23:21:14 +0200
+
 corectrl (1.4.0~git2307171958.f2f6b8c~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
