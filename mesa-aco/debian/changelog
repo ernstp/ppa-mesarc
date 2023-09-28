@@ -1,3 +1,46 @@
+mesa (23.3.0~git2309282022.3d993e63bb5~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 3d993e63bb5 anv: Enable barrier handling on video engines
+  * 8e97d291a8f ac/llvm: replace removed amdgcn.ldexp for LLVM 18
+  * d638c60628c ci/etnaviv: Drop some gc2k flakes that I think are
+    resolved.
+  * 990dc589950 ci/etnaviv: Skip some tests that hang the GPU and knock
+    out other tests.
+  * b8ce0dcef5e radeonsi: fix compute-only contexts
+  * 286cd186811 nvk: Init pipelineCacheUUID
+  * 0e7b1e2fca6 radv/ci: add a manual job for vkd3d-proton on navi31
+  * 5e47f4f0084 radv/ci: add a manual job to run vkcts on navi31
+  * d7aad24b5ec radv/ci: update the vkcts gfx1100 flake/fail lists
+  * 2e7514cfa86 glsl: remove now unused varying linker code
+  * 36e49c162ce glsl: switch to nir linkers
+    cross_validate_outputs_to_inputs()
+  * 7d1948e9b5d glsl: implement cross_validate_outputs_to_inputs() in
+    nir linker
+  * f2e87c5c286 nir: add used field to nir variables
+  * 0bfae246400 glsl: move is_gl_identifier() to linker_util
+  * 78b9f1053fa glsl: move interpolation_string() to linker_util
+  * 337c32cb3ad nir: copy explicit_invariant flag to nir vars
+  * af2a96bb37b radv: stop skip emitting CB states when there is no
+    color attachment
+  * 441e57048b4 glx: XFree visual info
+  * 02150ca017f r300:  Fix out-of-bounds access in
+    ntr_emit_store_output()
+  * 9bc1fd25a41 ci/zink+radv: document flake
+  * 435699de774 isaspec: python does not need ';'
+  * 03c1e67b6ca spirv: Track when a shader has a cooperative matrix
+  * b98f87612bc spirv: Implement SPV_KHR_cooperative_matrix
+  * b17a2c35bce spirv: Let vtn_ssa_value hold references to variables
+  * 3d7e5ec758b spirv: Expose some memory related functions in
+    vtn_private.h
+  * af3eb80afab nir: Handle cooperative matrix in various passes
+  * 3105d516d0a nir: Add new intrinsics for Cooperative Matrix
+  * 2d0f4f2c17b compiler/types: Add support for Cooperative Matrix types
+  * b75da97a1d9 anv: enable sparse resources by default
+  * 7e2d8cced38 anv/sparse: add INTEL_DEBUG=sparse
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Sep 2023 23:21:52 +0200
+
 mesa (23.3.0~git2309251618.21db2e70174~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
