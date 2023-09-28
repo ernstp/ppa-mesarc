@@ -1,3 +1,50 @@
+mesa (23.2.0~rc4+git2309261729.0f28940fea3~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 0f28940fea3 iris: assert(bo->deps) after realloc()
+  * 2e4c04864a0 iris: avoid stack overflow in iris_bo_wait_syncobj()
+  * 3a257694f6a iris: assert bufmgr->bo_deps_lock is held
+  * 3fd835f6fd7 intel/fs: Constant fold OR and AND
+  * 41fe60cf3e4 intel/fs: Constant fold SHL
+  * 201782d0fa6 intel/fs: Always do opt_algebraic after
+    opt_copy_propagation makes progress
+  * 6395f22216b Revert "intel/fs: only avoid SIMD32 if strictly inferior
+    in throughput"
+  * a2005ce2e3d iris: ensure stalling pipe control before fast clear
+  * 4788aec2f34 blorp: update and move fast clear PIPE_CONTROLs to
+    drivers
+  * efe981f50ee blorp: switch blorp_update_clear_color to early return
+  * 42cef07fb09 zink/ci: mark unexpcted pass as expected
+  * 265a822e9d8 aco: reset prefetch in the correct block after removing
+    the exit
+  * 94d14d477f0 intel: don't assume Linux minor dev node
+  * 739d44b0fca anv: fix utrace timestamp buffer copies
+  * 8d5d8757e18 frontends/va: Set default rate control values once when
+    creating encoder
+  * 136be4a64d4 frontends/va: Process VAEncSequenceParameterBufferType
+    first in vaRenderPicture
+  * 52fbebd9d89 pvr: Fix dynamic desc offset storage
+  * 14783f1d4f0 pvr: Fix `for` loop itarator usage
+  * ab94478a1f5 zink: always trace_screen_unwrap in acquire
+  * 0e3f799bb95 zink: avoid UAF on wayland async present with to-be-
+    retired swapchain
+  * 34ae85f587e zink: move swapchain fence to swapchain object
+  * e65fc1236c4 .pick_status.json: Update to
+    f4fecdad724edf8187d22928ed844af7fd84654d
+  * 99f8655d50b aco/spill: Make sure that offset stays in bounds
+  * 20de808c327 radeonsi: emit framebuffer state after allocating cmask
+  * 3a6ddfd65e1 docs: Update Clover's env variable documentation
+  * e4faebcc3e3 crocus: avoid issues with undefined clip distance
+  * f35d00a75ae iris: avoid issues with undefined clip distance
+  * 32ff84911be vulkan/android: add missing
+    AHARDWAREBUFFER_USAGE_GPU_DATA_BUFFER usage
+  * 28642b50e52 aco: remove unused p_logical_end check when optimizing
+    branching sequence
+  * d5a468dc361 aco: check logical_phi_info at p_logical_end when
+    eliminating exec writes
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Sep 2023 23:24:21 +0200
+
 mesa (23.2.0~rc4+git2309250451.d86619a4982~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
