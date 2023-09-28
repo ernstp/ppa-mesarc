@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu (23.0.0+git2309251950.31a092a~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 31a092a Enable TearFree if it's set to auto and VariableRefresh is
+    enabled
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Sep 2023 23:26:47 +0200
+
 xserver-xorg-video-amdgpu (23.0.0+git2307122216.ae22d12~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
