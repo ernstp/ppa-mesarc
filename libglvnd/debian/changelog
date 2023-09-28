@@ -1,3 +1,11 @@
+libglvnd (1.7.0+git2309261758.f88aeaf~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * f88aeaf Merge branch 'fix-platform-device-last-error' into 'master'
+  * cc26398 EGL: Fix error reporting for EGL_PLATFORM_DEVICE_EXT
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Sep 2023 23:21:32 +0200
+
 libglvnd (1.7.0+git2309191914.e993752~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
