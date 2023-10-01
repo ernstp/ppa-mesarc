@@ -1,3 +1,14 @@
+corectrl (1.4.0~git2309291916.67af9a7~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 67af9a7 Add support to activate manual profiles at application
+    startup
+  * 29785dd Refactor runtime command line arguments handling
+  * 154cb65 Simplify system tray and main window visibility
+    initialization code
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 01 Oct 2023 22:40:04 +0200
+
 corectrl (1.4.0~git2309281927.438fd6d~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
