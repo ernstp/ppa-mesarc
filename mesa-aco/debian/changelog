@@ -1,3 +1,40 @@
+mesa (23.3.0~git2310011837.dbe2230408a~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * dbe2230408a asahi: decode: Fix uint64_t format modifiers in
+    agxdecode_stateful()
+  * d99ed6d66d0 asahi: Handle layered background programs
+  * 3715586580b asahi: Generate layered EOT programs
+  * c87095e518d asahi: Use a 2D Array texture for array render targets
+  * 87a7b239e1f asahi: Write to cubes/etc attachments as 2D array
+  * 0cbecc1ad14 asahi: Predicate layer ID reads
+  * e2a0d64d524 asahi: Add pass to predicate layer ID reads
+  * e518c92d26e asahi: Assume LAYER is flat-shaded
+  * 68437eb0bab asahi: Account for layering for attachment views
+  * 9dc87a00fdf asahi: Expose VS_LAYER_VIEWPORT behind a flag
+  * 2396d3fe626 asahi: Use layered layouts
+  * 8a48af4f8f9 agx/lower_tilebuffer: Support spilled layered RTs
+  * 041451b655c agx/tilebuffer: Support layered layouts
+  * b252630604e agx: Support packed layered rendering writes
+  * 4a954dff07e asahi,agx: Select layered rendering outputs
+  * 88fd76d378d asahi: Add helper to get layer id in internal program
+  * 7d94f2ee49c agx: Add pass to lower layer ID writes
+  * 175819eec60 agx: Handle layered block image stores
+  * c3a208d6d9e agx: Pack block image store dim correctly
+  * da0da5d6f8a agx/nir_lower_texture: Allow disabling layer clamping
+  * 10b9c2fa364 nir: Support arrays in block_image_store_agx
+  * f4042afd577 nir: Add layer_id_written_agx sysval
+  * d83d24e96af agx: Insert jmp_exec_none instructions
+  * 79c4d4213c2 agx: Add agx_prev_block helper
+  * dd6106c8bd6 agx: Add jumps to block ends
+  * 22ab505a3d2 agx: Augment if/else/while_cmp with a target
+  * 9a894c9a334 agx: Set PIPE_SHADER_CAP_CONT_SUPPORTED
+  * d05657e0d67 agx: Hoist sample_mask/zs_emit
+  * 0d8362b8427 agx: Align the reg file for 256-bit vectors
+  * cb14cddfa50 asahi: Clamp index buffer extent to what's read
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 01 Oct 2023 22:41:28 +0200
+
 mesa (23.3.0~git2309282022.3d993e63bb5~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
