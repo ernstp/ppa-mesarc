@@ -1,3 +1,15 @@
+libsdl2 (2.29.0+git2309301721.f9dc49c21~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f9dc49c21 Fix automated tests using the dummy video driver
+  * 71b7790be snd_pcm_plugin_flush was removed in QNX 7.1 and later
+  * 933ec9e97 cmake: add qnx support
+  * a263cc236 Allow the use of posix_spawn() instead of vfork/execlp()
+  * 6b5eadb10 SDLTest_CompareSurfaces: Decode pixels correctly on big-
+    endian platforms
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 01 Oct 2023 22:40:38 +0200
+
 libsdl2 (2.29.0+git2309250228.9772d0512~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
