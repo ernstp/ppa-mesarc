@@ -1,3 +1,43 @@
+mesa (23.3.0~git2310021602.79b767f4c08~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 79b767f4c08 aco: remove -0.0 for 32 bit fsign with mul_legacy/omod
+    when denorms are flushed
+  * 9508cadadb7 aco/optimizer: copy propagate to output modifier
+    instructions
+  * 89f3a5ea37e aco/optimizer: check if we can use omod before labeling
+    it
+  * d3033974ee6 radv/ci: update list of flakes for NAVI10/VEGA10
+  * 387dc05a610 radv/ci: update list of expected failures on PITCAIRN
+  * b01e8742343 radv: fix alignment of DGC command buffers
+  * 1c4d57568ac intel/genxml: remove HDC from gen11.xml, it is not
+    available
+  * a49ff4e0244 iris: HDC flush is available only for GFX_VER 12+
+  * 99d3d766461 anv: HDC flush is available only for GFX_VER 12+
+  * c02db0d90ff iris: flush data cache when flushing HDC on GFX < 12
+  * 558738e3c54 aco: remove zero offset optimization
+  * 7139a789596 nir/constant_folding: remove zero texel offset
+  * c3a894fb475 aco: disable zero offset optimization for strict WQM
+    coords
+  * 305db1af114 nir: scalarize masked_swizzle_amd created from
+    shuffle_xor
+  * 524e8865ce9 iris/anv: move Wa_14018912822 as a drirc workaround
+  * ebe95fee21c iris: correct dst alpha blend factor in Wa_14018912822
+  * 6ea2ea0bb0e anv: fix internal compute copy shader build
+  * d48d8aefdff docs: Move isaspec out of drivers/freedreno
+  * 4afbf4ad31b v3d: get rid of shader_state pointer in v3d_key
+  * 3fb9e27a3d2 v3d: fix RAM shader cache
+  * 8a4bd328cf1 v3d: use pre-computed shader sha1 for disk cache
+  * 0ed36b524c8 v3d: compute nir sha1 for uncompiled shader state
+  * adc63d25032 broadcom/compiler: add a couple of shader key helpers
+  * ccd3e68146f ci: disable Collabora's LAVA lab for maintance
+  * b1156507ed2 ci/vkcts-navi21: mark more of the RT handles checks as
+    flakes
+  * a7ed8394905 ci/vkcts-vangogh: mark dEQP-
+    VK.dynamic_rendering.primary_cmd_buff.basic.* as flake
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 02 Oct 2023 17:11:33 +0200
+
 mesa (23.3.0~git2310011837.dbe2230408a~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
