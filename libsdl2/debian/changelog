@@ -1,3 +1,10 @@
+libsdl2 (2.29.0+git2310020914.321c2f8f2~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 321c2f8f2 ci: disable Intel compilers
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 02 Oct 2023 17:10:53 +0200
+
 libsdl2 (2.29.0+git2309301721.f9dc49c21~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
