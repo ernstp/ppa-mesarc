@@ -1,3 +1,11 @@
+mesa (23.2.0~rc4+git2309271907.054767cce3b~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 054767cce3b meson: use llvm-config instead of cmake to fix linking
+    errors with meson 1.2.1
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 05 Oct 2023 01:23:27 +0200
+
 mesa (23.2.0~rc4+git2309261729.0f28940fea3~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
