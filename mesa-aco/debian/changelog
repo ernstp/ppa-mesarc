@@ -1,3 +1,47 @@
+mesa (23.3.0~git2310050058.867a995ce75~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 867a995ce75 ac/gpu_info: override ib_size_alignment for VCN_DEC and
+    JPEG
+  * f0762f003d9 zink: fix for startup crash of weston running on top of
+    zink + venus
+  * 59ea386065b gallium/util: add more tests for compute-only contexts
+  * b9289c51b56 gallium/util: fix GALLIUM_TESTS=1 by using
+    cso_set_vertex_buffers_and_elements
+  * fac31bb7bde nvk: Take GETPARAM_EXEC_PUSH_MAX into account
+  * 0756a13aba7 drm-uapi: Sync nouveau_drm.h
+  * 247946a5e44 mesa: check numlevels and numlayers when creating a
+    texture view
+  * 9ec0c90d6d8 docs: update calendar for 23.1.9
+  * 2b36bd246d6 docs: add sha256sum for 23.1.9
+  * 45181a9539b docs: add release notes for 23.1.9
+  * 1a268dc59d6 aco: disable FI for quad/masked swizzle
+  * ad5be403039 nir: add fetch inactive index to
+    quad_swizzle_amd/masked_swizzle_amd
+  * 0e79f76aa58 aco: add fetch_inactive field to DPP instructions
+  * 26fce534b51 aco: shrink DPP8_instruction
+  * e90b5385a03 egl: move is_render_node flag to platform_wayland
+  * 394c3b97f15 egl: make explicit that we don't support render nodes
+    for software EGLDevice
+  * 950825cb365 egl: simplify _eglAddDRMDevice()
+  * f0861645bb6 egl: remove unused parameter from _eglAddDRMDevice()
+  * 7de445e69a0 egl: rewrite outdated comment in _eglFindDevice()
+  * a4f7f9975ae panfrost: Add GPU variant of G57 to the set of known ids
+  * 47fb3f06c48 tu: Add push_consts_per_stage debug option
+  * a5f0f7d4b16 turnip,ir3: Implement A7XX push consts load via preamble
+  * e39b6e2b9b3 freedreno: Make possible to specify A7XX feature flags
+  * 823b3bfeeaf ir3,tu: Refactor push consts info plumbing
+  * d5d7631060f freedreno/registers: Refine a7xx push consts registers
+  * b8ad3ddb1e2 radv: fix emulated geometry shader
+    primitives/invocations queries
+  * c3d823765aa radv/ci: rename GFX1100 lists to NAVI31
+  * 86bdabb4c2e ci: fix shebang in build-deqp-runner.sh
+  * bc432ab9a04 radeonsi/ci: update navi10 results
+  * f4d08bf92da Revert "radeonsi: specialize si_draw_rectangle using a
+    C++ template"
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 05 Oct 2023 01:20:51 +0200
+
 mesa (23.3.0~git2310040457.a2641ddf0df~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
