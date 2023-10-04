@@ -1,3 +1,44 @@
+mesa (23.3.0~git2310040457.a2641ddf0df~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * a2641ddf0df gallium: add PIPE_MAP_NONE
+  * ef00ea7b50f aux/trace: dump enum names for map usage
+  * 72323f66d99 zink: guarantee egl syncobj lifetime
+  * 4ef22262104 zink: fix end-of-batch barrier pipeline stages
+  * d0dd973fe27 zink: move v3dv scalarBlockLayout workaround
+  * 2531050ec9b zink: move push descriptor disable to driver workarounds
+  * c3f5416eaf3 zink: fix crashing in image rebinds
+  * 9e67866609c radv/video: find SPS with pps_seq_parameter_set_id
+  * 60dd34b02a6 zink/ci: bump zink-anv-tgl-full timeout to 1h45m
+  * 91cb09b2368 zink/ci: update list of expectations for zink-anv-tgl
+  * 57aa6dad16a ci/crocus: Add a related flake to a known one.
+  * e8511d5adba ci/docker: Clear the results file before starting a new
+    deqp test run.
+  * c3c2a8def0c ci/zink: Skip more doubles tests on anv that flake at 3
+    minute timeouts.
+  * 73dd48f3e07 ci/etnaviv: Skip a GLES2 test that times out the asan
+    job.
+  * 1432f7cf4a6 ci/etnaviv: Minor xfail/flake polishing.
+  * 77b240a251c ci/anv: Drop the 16bit.scalar.13 skip.
+  * c742cba1139 ci/anv: Drop incorrect xfail addition for TGL
+  * 16662f8d3a5 copyimage: check requested slice early when cube maps
+    are involved
+  * 17b8b2cffdb anv: Add support for a transfer queue on Alchemist
+  * 5112b421462 anv: Handle end of pipe with MI_FLUSH_DW on transfer
+    queue
+  * b048ba569a3 ci: Compile Turnip's virtio kmd in debian-arm64
+  * 34d436fde25 tu/virtio: Fix incorrect call to tu_perfetto_submit
+  * ec955733020 tu/a7xx: Correctly record timestamps for u_trace
+  * 583c636ea40 freedreno: Add attach-bo debugging
+  * 366367eba86 freedreno: Move/add some attach_bo()
+  * 9870cca6a00 freedreno: Add missing indirect_draw_count tracking
+  * 8a3b4b69a27 freedreno: Add private-BO tracking
+  * c6f17d89c72 freedreno/batch: Move query_buf allocation
+  * 2189920e49d freedreno: Fix user const buffer dirtiness
+  * 4c0defda8a2 freedreno: Fix streamout offset_buf dirtiness
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 04 Oct 2023 09:59:39 +0200
+
 mesa (23.3.0~git2310021602.79b767f4c08~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
