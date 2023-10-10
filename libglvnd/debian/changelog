@@ -1,3 +1,11 @@
+libglvnd (1.7.0+git2310061912.62176c2~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 62176c2 Merge branch 'loongarch-meson' into 'master'
+  * ce2d1eb meson.build: wire loongarch64_tsd dispatch type
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:13:19 +0200
+
 libglvnd (1.7.0+git2309261758.f88aeaf~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
