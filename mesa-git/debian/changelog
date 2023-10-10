@@ -1,3 +1,51 @@
+mesa (23.2.1+git2310062244.24e51fa0ff5~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 24e51fa0ff5 zink: fix crashing in image rebinds
+  * 7599d6e5b57 copyimage: check requested slice early when cube maps
+    are involved
+  * 7ada92b433b freedreno: Add missing indirect_draw_count tracking
+  * 87153053976 freedreno: Fix user const buffer dirtiness
+  * 51a36be63c1 freedreno: Fix streamout offset_buf dirtiness
+  * 4b6322f1c66 tu/kgsl: Fix memory leak of tmp allocations during
+    submissions
+  * 7429e4985a2 isaspec: encode: Correct used regex
+  * 2e4ecc4dbe4 iris: flush data cache when flushing HDC on GFX < 12
+  * f497e05f405 aco: disable zero offset optimization for strict WQM
+    coords
+  * ff0a61d03eb radv: Fix check in insert_block
+  * 4232287b918 radv: fix external handle type queries for dmabuf/fd
+  * 56ec87a1f7b aco/optimizer_postRA: don't combine DPP across exec on
+    GFX8/9
+  * 979d0420d5b .pick_status.json: Updates notes for
+    a9945216ba223d57ade453d5f855edd93dd3b200
+  * 5f9b2b3dde0 radeonsi: fix compute-only contexts
+  * 90edcc41f83 radv: stop skip emitting CB states when there is no
+    color attachment
+  * f16f2d15bc0 radv: Initialize shader freelist on allocation
+  * becd32d09c5 .pick_status.json: Update to
+    b72f474ff017b170dbfc75763b37bf1a6575c45c
+  * 334f71a18a6 glx: XFree visual info
+  * e78379bb734 vulkan: Handle vkSetDebugUtilsObjectNameEXT on WSI
+    objects
+  * 42103240b39 vulkan: Extend vkGet/SetPrivateDataEXT handling to
+    VkSurface
+  * 2d4f783dab0 vulkan: Extend vkGet/SetPrivateDataEXT handling to all
+    platforms
+  * 2fa0dc41f85 nir/lower_int64: fix find_lsb(0)
+  * 7136f44d676 tu/kgsl: Fix bitfield of DITHER_MODE_MRT6
+  * 743171d2b51 .pick_status.json: Updates notes for
+    e90f9d8e212535fbd44bb4088fb0e8078d9f2935
+  * 8211a803e9c iris: add missing workaround for 3DSTATE_LINE_STIPPLE
+  * a8829aa9835 .pick_status.json: Update to
+    b72f474ff017b170dbfc75763b37bf1a6575c45c
+  * 7200f83b9a0 aco: implement 64bit div find_lsb
+  * e950f170872 aco: fix p_extract with v1 dst and s1 operand
+  * 6af3f02354d vc4: Fix mask RGBA validation at YUV blit
+  * a0fca3385e3 llvmpipe: reset viewport_index_slot in fb bind
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:17:00 +0200
+
 mesa (23.2.0~rc4+git2309271907.054767cce3b~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
