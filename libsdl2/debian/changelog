@@ -1,3 +1,21 @@
+libsdl2 (2.29.0+git2310100940.b7a0ef6bd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b7a0ef6bd artsaudio: revert bad arts_init return code check from
+    commit ce5da5d.
+  * 701045206 tests: Disable mouse warp test under Wayland
+  * e8c915dac wayland: Try to skip the Wayland driver if not connecting
+    to or in a Wayland session
+  * 25b008136 Backport #7697 to SDL 2
+  * c4a169a6f Fix automated video tests under X11/Wayland
+  * 1d8dbb289 wayland: Unref the libdecor window when hiding
+  * 43c57e323 triangle: don't read destination pixel when you're going
+    to discard it anyways
+  * 2d5c05a69 blit_slow: don't read destination pixel when you're going
+    to discard it anyways
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:13:36 +0200
+
 libsdl2 (2.29.0+git2310020914.321c2f8f2~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
