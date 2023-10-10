@@ -1,3 +1,10 @@
+wayland-protocols (1.32+git2310071854.e1abed6~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * e1abed6 Add the transient seat protocol
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:19:26 +0200
+
 wayland-protocols (1.32+git2309300330.90d13c1~f~base2) focal; urgency=medium
 
   * New snapshot:
