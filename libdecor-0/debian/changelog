@@ -1,3 +1,11 @@
+libdecor-0 (0.2.0+git2310092155.0052066~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 0052066 gtk: disable setlocale()
+  * 672985c build: Use `gnu_symbol_visibility` everywhere
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:13:00 +0200
+
 libdecor-0 (0.2.0+git2309250849.ad320fc~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
