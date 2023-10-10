@@ -1,3 +1,48 @@
+mesa (23.3.0~git2310101142.8fe599ed1c3~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 8fe599ed1c3 tu: Zero init tu_render_pass and tu_subpass for dynamic
+    rendering
+  * 964a27aa39f tu: Fix stale tu_render_pass_attachment::store_stencil
+    with dyn rendering
+  * 335cf5f22f2 nir: Use a tagged pointer for nir_src parents
+  * 316af8c9651 nir: Assert the nir_src union is used safely
+  * c39896b17b4 nir: Use getters for nir_src::parent_*
+  * ad619da3bc7 nir: Use set_parent_instr internally
+  * 19f8e0e3aa3 nir: Add trivial nir_src_* getters
+  * 4753ce7d723 lima/pp: Do not use union undefined behaviour
+  * e1622dcca1a radv: fix IB alignment
+  * af062126ae1 lavapipe: expose planar ycbcr formats and new ycbcr
+    features
+  * e6ae51014da lavapipe: handle planes in texture lowering.
+  * a13a07d166f lavapipe: add descriptor sets bindings for planar images
+  * cfdad158a1f lavapipe: handle planes in get image sub resource
+  * 64cf0d47b00 lavapipe: handle planes in copies
+  * d2671d3c176 lavapipe: allocate image and image view planes.
+  * a368e3f8d5b lavapipe: start introducing planes structure.
+  * 9bbb21eecd7 lavapipe: cleanup copy code to use a local region
+    variable.
+  * b52261cb9cf lavapipe: convert sampler to use vk base class.
+  * 66c118495ed llvmpipe: don't support planar formats for buffers.
+  * d1622204b59 lavapipe: don't emit blit src/dst for subsampled
+    formats.
+  * b66afc2a54c llvmpipe: don't create texture functions for planar
+    textures.
+  * f9e7997ac8b lavapipe: support host image copying on compressed
+    texture formats
+  * 21a79acaa7e lavapipe: fix subresource layers asserts
+  * 05047ceced4 lavapipe: fix some whitespace in advance of other
+    changes.
+  * 0e97568aed0 radeonsi: enable aco compile for part mode ps
+  * 333d6f007aa radeonsi: add ps epilog shader part build
+  * 42907365f86 radeonsi: fill aco shader info for ps part
+  * a994db1d8f3 radeonsi: extract si_get_ps_epilog_args to be shared
+    with aco
+  * e41833a6a28 radeonsi: add ps prolog shader part build
+  * 5263a9e364f ac,radeonsi: remove unused ps prolog key fields
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:14:21 +0200
+
 mesa (23.3.0~git2310050058.867a995ce75~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
