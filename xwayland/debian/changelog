@@ -1,3 +1,20 @@
+xwayland (2:23.2.1+git2310120940.4f8a851b6~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 4f8a851b6 xwayland: Cancel the EI disconnect timer when freed
+  * cc79b2a83 glamor: xv: Fix invalid accessing of plane attributes for
+    NV12
+  * 07c18c90e xwayland: Give up on EI on setup failure
+  * 10353a01a xwayland: Add an option to enable EI portal support
+  * 4f8e209d2 xwayland/glamor/gbm: Set GBM_BO_USE_LINEAR if only LINEAR
+    modifier is supported
+  * c9a842e60 xwayland/present: Handle NULL window_priv in
+    xwl_present_cleanup
+  * 2bd43be92 glamor: fixes GL_INVALID_ENUM errors on ES if there is no
+    quads
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 13 Oct 2023 02:33:54 +0200
+
 xwayland (2:23.2.1+git2309201010.ada62bf82~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
