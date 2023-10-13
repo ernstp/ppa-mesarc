@@ -1,3 +1,12 @@
+libsdl2 (2.29.0+git2310110709.2849ca404~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2849ca404 x11: Properly check for XInput2 support before using it.
+  * e417c6cff ci: stop FreeBSD job after 30 minutes
+  * 32587bd7d Sync wiki -> header
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 13 Oct 2023 02:30:29 +0200
+
 libsdl2 (2.29.0+git2310100940.b7a0ef6bd~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
