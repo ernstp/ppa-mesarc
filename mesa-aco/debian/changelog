@@ -1,3 +1,49 @@
+mesa (23.3.0~git2310130052.40f22f8ecd4~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 40f22f8ecd4 nir/print: Decode system values in the variable
+    declarations.
+  * 0d652c0c8db zink: shrink vectors during optimization
+  * 8df8d1e2f28 nir/opt_algebraic: Reduce int64
+  * 8b5b362be6f nir/lower_io: Use load_global_constant for OpenCL
+  * 569d44eff4b nir/print: Handle KERNEL
+  * 6d0efa8701d nir/legalize_16bit_sampler_srcs: Use instr_pass
+  * b1b7616418a nir/opt_phi_precision: Work with libraries
+  * cd1ba219586 r600/sfn: Handle load_global_constant
+  * aef37305a18 ci: Uprev virglrenderer
+  * fe05e6610b2 anv: fixup spirv cap for ImageReadWithoutFormat on
+    Gfx12.5
+  * 80d837cf404 ci: add a630 trace flakes
+  * bed0542b2f6 anv: Enable transfer queue only on ACM+ platforms
+  * 1f77f52bbe5 radv: skip GDS allocation for NGG streamout on GFX11
+  * 2cc32880897 radv: mark GDS as needed for XFB queries with NGG
+    streamout on GFX11
+  * f0abdaea9f7 amd/llvm,aco,radv: implement NGG streamout with
+    GDS_STRMOUT registers on GFX11
+  * 7a3981b9a7c radv: enable radv_disable_aniso_single_level=true for
+    Zink too
+  * f1c9efc52e0 pvr: Don't merge subpasses on framebuffer-global
+    dependancy
+  * 1c35e495d99 tu: Use common `vk_subpass_dependency_is_fb_local()`
+  * 9b7d4376533 vulkan: Add `vk_subpass_dependency_is_fb_local()` helper
+  * 7397502a1fd radv: disable primitive restart for non-indexed draws on
+    GFX11
+  * f33d9376089 mesa/st: ignore StencilSampling if stencil not part of
+    the format
+  * ed2cac0f1e3 venus: enable Vulkan 1.3 for Android 13 and above
+  * 51521e1f9d2 ci/ci_run_n_monitor: limit repetitions on --stress
+  * 57fa35f19c0 ci/ci_run_n_monitor: allow <user>/<project> in --project
+  * 6b49b477aca ci/ci_run_n_monitor: simplify enable/cancel logic in
+    monitor_pipeline()
+  * 17843ad7c68 ci/ci_run_n_monitor: merge enable_job with retry_job
+  * 90da4a6845c ci/ci_run_n_monitor: make --target mandatory
+  * 633c08688b2 ci/ci_run_n_monitor: merge print_job_status_change with
+    print_job_status
+  * 7f6c339740b ci/ci_run_n_monitor: simplify with defaultdict
+  * f838499901a ci/ci_run_n_monitor: print stress test results per job
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 13 Oct 2023 02:31:10 +0200
+
 mesa (23.3.0~git2310101142.8fe599ed1c3~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
