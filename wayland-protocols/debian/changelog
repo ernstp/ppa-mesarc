@@ -1,3 +1,12 @@
+wayland-protocols (1.32+git2310101443.51bee6e~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 51bee6e linux-dmabuf: mark as stable
+  * a113a93 build: add version for stable protocols
+  * 78e38c5 build: simplify dict loops
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 13 Oct 2023 02:33:40 +0200
+
 wayland-protocols (1.32+git2310071854.e1abed6~f~base2) focal; urgency=medium
 
   * New snapshot:
