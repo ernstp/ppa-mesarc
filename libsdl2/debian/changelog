@@ -1,3 +1,14 @@
+libsdl2 (2.29.0+git2310132023.df6db90dd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * df6db90dd Fix sdltest_randomAsciiStringWithMaximumLength() where it
+    requests a string a size 0 seen with: ./testautomation --seed
+    MILAFAP2AKVP3V4G --filter sdltest_randomAsciiStringWithMaximumLength
+  * d8b34b099 pulseaudio: Stop the threaded mainloop before destroying
+    the context.
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 14 Oct 2023 19:44:46 +0200
+
 libsdl2 (2.29.0+git2310110709.2849ca404~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
