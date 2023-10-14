@@ -1,3 +1,42 @@
+mesa (23.3.0~git2310141912.2320ad1da6d~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 2320ad1da6d fix: clover: warning: ignoring return value of ‘int
+    posix_memalign(…)’ [-Wunused-result]
+  * 10e3de37bf6 rusticl/memory: use get_mut instead of lock in drop
+  * 0b31cda6783 ci: ci_marge_queue.py
+  * 3083b854e06 rusticl/kernel: get rid of Arcs in KernelDevStateVariant
+  * d3d94818ed0 rusticl/queue: make it Sync
+  * 57bafe51d23 rusticl/queue: get rid of pointless Option around our
+    worker thread handle
+  * aa1d746a8e8 rusticl/cl: mark _cl_image_desc as Send and Sync
+  * e994935c1f2 rusticl/mesa: mark PipeTransfer as Send
+  * 54920462402 rusticl/mesa: mark PipeResource as Send and Sync
+  * dde84568ad0 rusticl/mesa/nir: Mark NirShader and NirPrintfInfo as
+    Send and Sync
+  * 6189b3fe439 rusticl/mesa/nir: mark more methods as mut
+  * 02c433dd878 rusticl: bump rustc version to 1.66
+  * 70806cc840d nvk: Always set pixel_min/max_Z to CLAMP
+  * 29e2e9290b3 anv: add support for vk_require_astc driconf
+  * b30d5a4794c anv: advertise emulated formats
+  * 8352b61ffa1 anv: fix up blit src for emulated formats
+  * 7b84c8d6ea1 anv: fix up image views for emulated formats
+  * a73e0e9a042 anv: decompress on upload for emulated formats
+  * 61e480cb545 anv: add a hidden plane for emulated formats
+  * 9ffe8b9235d anv: add anv_is_format_emulated
+  * 94192418f83 anv: add anv_cmd_buffer_{save,restore}_state
+  * 710c14f20bf anv: add anv_descriptor_set_write
+  * 7a4903626b8 anv: support alternative push descriptor sets
+  * a86a4e5fcf4 anv: add anv_push_descriptor_set_{init,finish}
+  * d5841dce606 anv: support image views with surface state stream
+  * 815b568ed52 anv: add anv_image_view_{init,finish}
+  * b16e803571c anv: remove unused field from anv_image_view
+  * 567c32b55cf radv, drirc: rename radv_require_{etc2,astc}
+  * cfdc57d120f anv: update batch chaining to Gfx9 commands
+  * 6c268cdf051 pipe-loader: allow to load multiple zink devices
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 14 Oct 2023 19:45:24 +0200
+
 mesa (23.3.0~git2310130052.40f22f8ecd4~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
