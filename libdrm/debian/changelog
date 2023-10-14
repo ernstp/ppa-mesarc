@@ -1,3 +1,11 @@
+libdrm (2.4.116+git2310101025.8d8357dc~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 8d8357dc amdgpu: add support for querying VM faults information
+  * 22b698a5 amdgpu: amdgpu_drm.h for new GPUVM fault ioctl
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 14 Oct 2023 19:44:25 +0200
+
 libdrm (2.4.116+git2309191639.6abc1640~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
