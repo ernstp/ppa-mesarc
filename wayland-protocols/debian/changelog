@@ -1,3 +1,11 @@
+wayland-protocols (1.32+git2310122312.d70af2e~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * d70af2e governance: fix typos
+  * 9ffeb97 README: fix typos
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 14 Oct 2023 19:50:12 +0200
+
 wayland-protocols (1.32+git2310101443.51bee6e~f~base2) focal; urgency=medium
 
   * New snapshot:
