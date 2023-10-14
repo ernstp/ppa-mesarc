@@ -1,3 +1,10 @@
+mesa (23.2.1+git2310122133.94ed71dad16~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 94ed71dad16 anv: turn off non zero fast clears for CCS_E
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 14 Oct 2023 19:47:52 +0200
+
 mesa (23.2.1+git2310062244.24e51fa0ff5~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
