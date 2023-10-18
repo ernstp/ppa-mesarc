@@ -1,3 +1,10 @@
+libsdl2 (2.29.0+git2310180518.4aab2342e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 4aab2342e Check for device disconnection in HIDAPI_JoystickOpen()
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 18 Oct 2023 11:56:12 +0200
+
 libsdl2 (2.29.0+git2310132023.df6db90dd~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
