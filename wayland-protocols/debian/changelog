@@ -1,3 +1,11 @@
+wayland-protocols (1.32+git2310171414.479580d~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 479580d xdg-decoration: remove ambiguous wording in configure event
+  * 079b601 xdg-decoration: fix configure event summary
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 18 Oct 2023 11:59:16 +0200
+
 wayland-protocols (1.32+git2310122312.d70af2e~f~base2) focal; urgency=medium
 
   * New snapshot:
