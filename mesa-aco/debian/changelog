@@ -1,3 +1,51 @@
+mesa (23.3.0~git2310181113.d3edbf69358~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * d3edbf69358 nvk: Advertise VK_KHR_workgroup_memory_explicit_layout
+  * 6ababdcd105 radeonsi: Fix plane size in si_copy_multi_plane_texture
+  * b2cdbfc2eff radv/rt: Use nir_shader_instructions_pass for
+    lower_rt_instructions
+  * 459f18b866f nvk: Enable VK_EXT_load_store_op_none
+  * f2ae21758fc llvmpipe: Compile a nop texture function for unsupported
+    configurations
+  * 6e2bb716b0c util: improve BITFIELD_MASK and BITFIELD64_MASK on clang
+  * 35ae5dce39c mesa: don't pass Infs to the shader via gl_Fog.scale
+  * 91da6be8cec glsl: Remove lower_discard().
+  * c5712410ec3 nir: Flatten ifs with discards in
+    nir_opt_peephole_select for HW without CF.
+  * 2c4d5c6aecd i915: Make I915_DEBUG=fs log shaders that fail to link
+    due to CF.
+  * 9a8956bb771 lavapipe: VK_EXT_nested_command_buffer
+  * 10c2180a929 zink: add automatic swapchain readback using heuristics
+  * 5f16f52dfa7 zink: fix readback_present locking
+  * 0c2045553fe zink: use screen destructor for creation fails
+  * 9bb404317ee zink: reorder glsl_type_singleton_init_or_ref call
+  * fcf3f7d28f8 zink: don't destroy uninitialized disk cache thread
+  * dfd6a2d8784 zink: don't destroy any simple_mtx_t objects during
+    screen destroy
+  * 01f2aa846e5 zink: add some checks to determine whether queue is init
+    on screen destroy
+  * 7a7e577d8e6 iris: Support parameter queries for main planes
+  * 2be404f5571 egl: error out if we can't find an EGLDevice in
+    _eglFindDevice()
+  * 88c03ddd345 egl/drm: get compatible render-only device fd for kms-
+    only device
+  * e10d8cd5dd2 loader: add loader_is_device_render_capable()
+  * 9ec9849c85e kmsro: try to use only compatible render-capable devices
+  * 4d953efc28b dri: add queryCompatibleRenderOnlyDeviceFd() to
+    __DRI_MESA extension
+  * 2b6a4219152 pipe-loader: add
+    pipe_loader_get_compatible_render_capable_device_fd()
+  * 3c977f55f5a loader: add driver list as parameter in
+    loader_open_render_node_platform_device()
+  * cd2854ccfbe loader: rename loader_open_render_node() to
+    loader_open_render_node_platform_device()
+  * 3fdea1567db venus: properly expose KHR_external_fence/sempahore_fd
+  * 4591c525eaa nvk: Implement VK_EXT_depth_bias_control
+  * 8639c311bdb nvk: Re-sort device features
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 18 Oct 2023 11:56:49 +0200
+
 mesa (23.3.0~git2310141912.2320ad1da6d~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
