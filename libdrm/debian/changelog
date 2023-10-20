@@ -1,3 +1,13 @@
+libdrm (2.4.117+git2310200724.5254fd11~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 5254fd11 build: bump version to 2.4.117
+  * bd205d13 meson: replace deprecated program.path -> program.full_path
+  * 16e6a965 meson: Use feature.require() and feature.allowed()
+  * a6a2ccb4 meson: fix intel requirements
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 21 Oct 2023 01:00:34 +0200
+
 libdrm (2.4.116+git2310101025.8d8357dc~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
