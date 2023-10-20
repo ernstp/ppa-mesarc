@@ -1,3 +1,44 @@
+mesa (23.3.0~git2310210001.f4e7aefe079~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * f4e7aefe079 svga: Unify gmr and mob surface pool managers
+  * 354f0b5b022 svga: Make surfaces shareable at creation.
+  * b0100d23fb6 ci/venus: mark more flaky tests after recent cts uprev
+  * 46fc9decadf ci/marge_queue: add missing python-dateutils to
+    requirements.txt
+  * f8753a542be mesa: add GL_APPLE_sync support
+  * c3516861e86 zink: properly alias shared memory
+  * 389b0ce6040 zink: wrap shared memory blocks in a struct
+  * 2c1dff3851d frontends/va: Fix locking in vlVaBeginPicture
+  * c70687afe7a pvr: Implement VK_EXT_host_query_reset
+  * 649ebbb0fb7 pvr: Implement VK_EXT_texel_buffer_alignment
+  * ea59d612949 pvr: Enable VK_KHR_bind_memory2 extension
+  * 1f056f229a7 pvr: Implement VK_KHR_external_semaphore
+  * 89f9724b1a0 pvr: Implement VK_KHR_external_fence
+  * 6f3dfba8030 anv: document the draw indirect optimization ring mode
+  * 454870dd5f1 anv: merge gfx9/11 indirect draw generation shaders
+  * 11b4c23d19b anv: add ring buffer mode to generated draw optimization
+  * 718e77eee57 anv: index indirect data buffer with absolute offset
+  * db335d9b738 anv: factor out host/gpu internal shaders interfaces
+  * da1e39faa4e util/glsl2spirv: add ability to pass defines
+  * c700d47c567 anv: move generation batch fields to a sub-struct
+  * 2e0ff4c551e anv: avoid MI commands to copy draw indirect count
+  * 1af1085d769 anv: identify internal shader in NIR
+  * d5aec0ca4b0 anv: extract out draw call generation
+  * 8ab3c03a320 anv: fix generated draws gl_DrawID with more than 8192
+    indirect draws
+  * 8aadd4745cb anv: move generation shader return instruction to last
+    draw lane
+  * 6fc76eb280f Revert "etnaviv: use correct blit box sizes when copying
+    resource"
+  * edfbf74df1d dri: Drop a duplicate mesa vs pipe format table.
+  * 06fd4691104 ci: drop skip for glx-swap-copy.
+  * e64ab3e4a94 glx: Delete support for GLX_OML_swap_method.
+  * fb95f1d55c7 ci_run_n_monitor: Poll mesa/mesa and user/mesa for
+    pipelines at the same time.
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 21 Oct 2023 01:01:32 +0200
+
 mesa (23.3.0~git2310181113.d3edbf69358~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
