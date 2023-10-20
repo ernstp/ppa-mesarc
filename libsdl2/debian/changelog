@@ -1,3 +1,10 @@
+libsdl2 (2.29.0+git2310191014.44d872108~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 44d872108 Allow building against old Linux kernels.
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 21 Oct 2023 01:00:55 +0200
+
 libsdl2 (2.29.0+git2310180518.4aab2342e~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
