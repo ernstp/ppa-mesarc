@@ -1,3 +1,15 @@
+libsdl2 (2.29.0+git2310231944.d47c286b1~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d47c286b1 SDL_IsJoystickProductWheel() returns SDL_TRUE for Asetek
+    wheelbases (thanks @IOBYTE!)
+  * 259009a7e Add missing error reporting in Android_JNI_FileOpen()
+  * 90255914a cmake: install pdb's when present
+  * e3e41b69a Revert "Check to make sure the Windows joystick device has
+    buttons and axes"
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 23 Oct 2023 20:09:28 +0200
+
 libsdl2 (2.29.0+git2310191014.44d872108~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
