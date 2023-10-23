@@ -1,3 +1,28 @@
+mesa (23.3.0~git2310231959.7a3fb60ac85~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 7a3fb60ac85 docs/ci: Add some links in the CI docs to how to track
+    job flakes
+  * 553070f993f docs/ci: Drop old instructions for farm disabling
+  * 2ef0e6be172 util: Remove MESA_TRACE_BEGIN/END
+  * d64765c2001 util/perf: Remove the tracing categories
+  * b7a4e780714 util: Avoid the use of MESA_TRACE_BEGIN/END
+  * bf1a68833b3 venus: Change the only occurrence of VN_TRACE_BEGIN/END
+    to VN_TRACE_SCOPE
+  * c6379013923 aux/tc: Use MESA_TRACE_SCOPE instead of _BEGIN/_END
+  * 57c6e79db5f tu: Use MESA_TRACE_SCOPE instead of _BEGIN/_END
+  * f60a9d89c1c freedreno/drm/virtio: Use MESA_TRACE_SCOPE instead of
+    _BEGIN/_END
+  * e0301659f1f zink: fix zink_destroy_screen for early screen creation
+    fails
+  * 90cd5f37991 etnaviv: Skip 'empty' cmd streams
+  * 4c8fad4fd88 etnaviv: drm: Be able to mark end of context init
+  * 2c62fdc8a7d pvr: Only setup the bgobj to load if we have a load_op
+  * fc62df19b77 ci/b2c: change artifacts path to match baremetal and
+    LAVA
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 23 Oct 2023 20:10:27 +0200
+
 mesa (23.3.0~git2310221130.9f4f52f4f34~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
