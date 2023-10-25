@@ -1,3 +1,10 @@
+xwayland (2:23.2.1+git2310240545.829a99117~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 829a99117 Switch to libbsd-overlay
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 03:23:53 +0200
+
 xwayland (2:23.2.1+git2310120940.4f8a851b6~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
