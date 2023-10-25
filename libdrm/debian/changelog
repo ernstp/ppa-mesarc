@@ -1,3 +1,19 @@
+libdrm (2.4.117+git2310241859.8a933c77~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 8a933c77 meson: fix typo in libdrm_intel
+  * a2dbfd64 modetest: add SMPTE pattern support for C[124] formats
+  * bf462d03 modetest: add support for DRM_FORMAT_C[124]
+  * c895650f util: add SMPTE pattern support for C2 format
+  * 6b9b4627 util: add SMPTE pattern support for C1 format
+  * 15c66576 util: add SMPTE pattern support for C4 format
+  * 8134deb3 util: store number of colors for indexed formats
+  * 236766b0 util: add support for DRM_FORMAT_C[124]
+  * 6d9645bb util: factor out and optimize C8 SMPTE color LUT
+  * eb06a81e util: improve SMPTE color LUT accuracy
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 03:20:09 +0200
+
 libdrm (2.4.117+git2310200724.5254fd11~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
