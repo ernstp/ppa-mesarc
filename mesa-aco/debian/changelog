@@ -1,3 +1,43 @@
+mesa (23.3.0~git2310250206.b653669fc5a~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * b653669fc5a anv: add gen9 astc workaround
+  * c42b1a5a748 anv: prep for gen9 astc workaround
+  * 9a79c5f1e5c radv: Support SDMA in si_cs_emit_write_event_eop.
+  * b442de86c1e radv: Support SDMA in radv_cp_wait_mem.
+  * 04a3ed8a922 radv: Support SDMA in radv_cs_write_data_head.
+  * 5308378a35e nir: Add NVIDIA-specific geometry shader opcodes
+  * 1fa7c37a362 nir: Add NVIDIA-specific I/O intrinsics
+  * 8188842fdc2 nir: Add a range to most I/O intrinsics
+  * a2b799c53ca nir: Add an load_barycentric_at_offset_nv intrinsic
+  * 1a2e8290ab5 nir: Add NV-specific texture opcodes
+  * 5984265d459 nir: Add a load_sysval_nv intrinsic
+  * abf3175161a nir/lower_tex: Add a lower_txd_clamp option
+  * d3d5122f7cf nir: Add convert_alu_types to divergence analysis
+  * 0680330cf7d nir: Add a nir_ssa_def_all_uses_are_fsat() helper
+  * 28ebe62af2c radv: enable mesh shader gs_fast_launch=2 and multi-row
+    export
+  * 35311369491 radv: implement mesh shader multi-row export
+  * 773d35d25e5 ac/nir: implement mesh shader multi-row export
+  * c29d8a9e68b ac/nir,radv: pass workgroup size to ac_nir_lower_ngg_ms
+  * c300a496ea7 ac/nir: add emit_ms_outputs helper
+  * 23cb0b00db9 radv: implement mesh shader gs_fast_launch=2
+  * c63ac280146 ac/nir: optimize mesh shader local_invocation_index
+  * cddbe9a4c23 ac/nir: implement mesh shader gs_fast_launch=2
+  * 75bc2e71493 ac/nir: refactor mesh vertex/primitive export
+  * 24431419cec ac/nir: remove dead code
+  * 6ec72806b78 ac/nir: add row parameter to helpers
+  * 4c3677094ec aco,nir: add export_row_amd intrinsic
+  * 4bd4ff5d9b1 nir: improve ms_cross_invocation_output_access with
+    local_invocation_id
+  * b91ed68fa0e intel/compiler: Don't emit calls to validate() in
+    release build
+  * 13cac671fd0 ac/gpu_info: fix querying the maximum number of IBs per
+    ring
+  * 3bf1b7deba8 anv: selectively enable FCV optimization for DG2
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 03:21:08 +0200
+
 mesa (23.3.0~git2310231959.7a3fb60ac85~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
