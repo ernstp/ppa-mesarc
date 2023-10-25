@@ -1,3 +1,22 @@
+mesa (24.0.0~git2310252156.0757ac65273~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 0757ac65273 docs: reset new_features.txt
+  * ed8abf1e2de VERSION: bump to 24.0
+  * a97065adab0 anv: fix uninitialized use of compute initialization
+    batch
+  * 84001ea4258 v3dv: fix confusing nomenclature about DRM nodes
+  * d0f775e54de ci: skip implicit modifier piglits for zink
+  * 99ff88cb5ea zink: delete some dead modifier handling
+  * 1c3db3e39a7 zink: blow up broken xservers more reliably
+  * ff093f522a3 zink: use weston for anv ci
+  * 477b310dfd5 util: skip zero-sized SHA1Update
+  * 1afd0878e98 nir/lower_shader_calls: skip zero-sized qsort
+  * f9289dfd024 nir/serialize: fix signed integer overflow
+  * 9a6c20e64f1 nir/trivialize_registers: Handle obscure load hazard
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 23:36:36 +0200
+
 mesa (23.3.0~git2310251823.6aef22af770~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
