@@ -1,3 +1,50 @@
+mesa (23.3.0~git2310251823.6aef22af770~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 6aef22af770 docs/features: remove empty lines confusing mesamatrix
+  * 1febb6f7626 radv: report the last GPUVM fault when a device lost is
+    detected
+  * 5a6208ad722 radv: query and report the last GPUVM fault with
+    RADV_DEBUG=hang
+  * 5eb8b3e9b11 radv/amdgpu: add support quering the last GPUVM fault
+  * bdc62108be2 amd: add has_gpuvm_fault_query
+  * 37462ce72d5 amd: update amdgpu_drm.h
+  * 1b0fbcbe1c7 radv: remove outdated RADV_DEBUG=vmfaults support
+  * 6bbbdd5ceb7 zink: Fix SyntaxWarning in zink_extensions script
+  * 5a928f7563a panfrost: Add env variable for max AFBC packing ratio
+  * 888d7c8ee6a panfrost: Add some debug utility methods for resources
+  * 33b48a55857 panfrost: Add debug flag to force packing of AFBC
+    textures on upload
+  * bc91af8021a panfrost: Don't force constant modifier after converting
+  * e9d523bb92a panfrost: Legalize resource when attaching to a batch
+  * bc55d150a91 panfrost: Add support for AFBC packing
+  * 32fbd388895 panfrost: Add method to get size of AFBC superblocks
+    valid data
+  * ae3fb3089f5 panfrost: Add infrastructure for internal AFBC compute
+    shaders
+  * c1429a31200 panfrost: Split out internal of `panfrost_launch_grid`
+  * 91514e70918 panfrost: Make panfrost_resource_create_with_modifier
+    public
+  * 542c44ffde4 panfrost: Add panfrost_batch_write_bo
+  * 113d88f94d2 panfrost: Precalculate stride and nr of blocks for AFBC
+    layouts
+  * 9f3a79a6a39 panfrost: Add method to get size of AFBC subblocks
+  * 39efd7c2456 panfrost: Add methods to determine slice and body
+    alignment
+  * 6012bde0fc7 panfrost: Fix error in comment
+  * c7e522a9f3e egl: fix leaking drmDevicePtr in _eglFindDevice
+  * 3de5da7a5d6 anv: fixup 32bit build of internal shaders
+  * 471942e06b1 etnaviv: Don't leak disk_cache
+  * a53a394d30b ci: Bump PyYAML to 6.0.1
+  * d52c39a6cd9 intel/dev: expand existing fix for all gfx12 with small
+    EU count
+  * 67450674c0a compiler/types: Move comments and reorganize
+    declarations
+  * dfcca138007 compiler/types: Remove warnings about potential
+    fallthrough
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 18:45:58 +0200
+
 mesa (23.3.0~git2310250206.b653669fc5a~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
