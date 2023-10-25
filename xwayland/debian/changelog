@@ -1,3 +1,11 @@
+xwayland (2:23.2.2+git2310250352.e4487cae1~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * e4487cae1 Bump version to 23.2.2
+  * 1e8478455 Xi/randr: fix handling of PropModeAppend/Prepend
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 18:48:37 +0200
+
 xwayland (2:23.2.1+git2310240545.829a99117~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
