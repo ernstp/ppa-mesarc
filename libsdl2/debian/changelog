@@ -1,3 +1,18 @@
+libsdl2 (2.29.0+git2310250232.4194a902e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 4194a902e Added support for "%[]" sscanf syntax
+  * 3823ba1de n3ds systhread - use 80kb thread stack size as default,
+    remove hard cap
+  * 301ee21f3 n3ds systhread - prefer to put audio thread on system core
+  * 6623c87d0 SDL_n3dsaudio.c - don't risk leaving current_priority
+    uninitialized
+  * 070f57820 SDL_n3dsaudio.h: use triple buffering
+  * 62266dbd4 SDL_n3dsaudio.c: separate mixer locks from audio device
+    locks
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 03:20:27 +0200
+
 libsdl2 (2.29.0+git2310231944.d47c286b1~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
