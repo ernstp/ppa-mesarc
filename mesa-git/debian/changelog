@@ -1,3 +1,46 @@
+mesa (23.3.0~rc1+git2310252229.c8c90eb456a~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * c8c90eb456a VERSION: bump for rc1
+  * a97065adab0 anv: fix uninitialized use of compute initialization
+    batch
+  * 84001ea4258 v3dv: fix confusing nomenclature about DRM nodes
+  * d0f775e54de ci: skip implicit modifier piglits for zink
+  * 99ff88cb5ea zink: delete some dead modifier handling
+  * 1c3db3e39a7 zink: blow up broken xservers more reliably
+  * ff093f522a3 zink: use weston for anv ci
+  * 477b310dfd5 util: skip zero-sized SHA1Update
+  * 1afd0878e98 nir/lower_shader_calls: skip zero-sized qsort
+  * f9289dfd024 nir/serialize: fix signed integer overflow
+  * 9a6c20e64f1 nir/trivialize_registers: Handle obscure load hazard
+  * 6aef22af770 docs/features: remove empty lines confusing mesamatrix
+  * 1febb6f7626 radv: report the last GPUVM fault when a device lost is
+    detected
+  * 5a6208ad722 radv: query and report the last GPUVM fault with
+    RADV_DEBUG=hang
+  * 5eb8b3e9b11 radv/amdgpu: add support quering the last GPUVM fault
+  * bdc62108be2 amd: add has_gpuvm_fault_query
+  * 37462ce72d5 amd: update amdgpu_drm.h
+  * 1b0fbcbe1c7 radv: remove outdated RADV_DEBUG=vmfaults support
+  * 6bbbdd5ceb7 zink: Fix SyntaxWarning in zink_extensions script
+  * 5a928f7563a panfrost: Add env variable for max AFBC packing ratio
+  * 888d7c8ee6a panfrost: Add some debug utility methods for resources
+  * 33b48a55857 panfrost: Add debug flag to force packing of AFBC
+    textures on upload
+  * bc91af8021a panfrost: Don't force constant modifier after converting
+  * e9d523bb92a panfrost: Legalize resource when attaching to a batch
+  * bc55d150a91 panfrost: Add support for AFBC packing
+  * 32fbd388895 panfrost: Add method to get size of AFBC superblocks
+    valid data
+  * ae3fb3089f5 panfrost: Add infrastructure for internal AFBC compute
+    shaders
+  * c1429a31200 panfrost: Split out internal of `panfrost_launch_grid`
+  * 91514e70918 panfrost: Make panfrost_resource_create_with_modifier
+    public
+  * 542c44ffde4 panfrost: Add panfrost_batch_write_bo
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 23:39:07 +0200
+
 mesa (23.2.1+git2310122133.94ed71dad16~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
