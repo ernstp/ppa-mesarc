@@ -1,3 +1,11 @@
+wayland-protocols (1.32+git2310241211.999e443~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 999e443 security-context-v1: Make sandbox engine names use reverse-
+    DNS
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 03:23:39 +0200
+
 wayland-protocols (1.32+git2310171414.479580d~f~base2) focal; urgency=medium
 
   * New snapshot:
