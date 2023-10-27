@@ -1,3 +1,12 @@
+libsdl2 (2.29.0+git2310270209.832afa81a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 832afa81a Fixed making the EGL context current when resuming on
+    Android
+  * b29128994 CI: change FreeBSD CI runner to cross-platform-actions.
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 27 Oct 2023 09:08:16 +0200
+
 libsdl2 (2.29.0+git2310251801.1db0bd3fc~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
