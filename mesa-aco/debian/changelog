@@ -1,3 +1,50 @@
+mesa (24.0.0~git2310270833.b6fbc4e4ddf~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * b6fbc4e4ddf v3d/ci: run V3D GL tests in 64-bits
+  * ce5475366e9 compiler,vulkan,drm-shim: Remove unused include
+    directories from meson.build
+  * 73b639ec5ce nir: #include "util/macros.h" for BITFIELD64_MASK in
+    nir.c
+  * ee1039877c1 mesa/st/texture: match width+height for texture
+    downloads of cube textures
+  * df74ea77178 zink: unset explicit_xfb_buffer for non-xfb shaders
+  * 87e3720b66a aux/u_transfer_helper: set rendertarget bind for msaa
+    staging resource
+  * 694ebe8c722 zink: only emit xfb execution mode for last vertex stage
+  * e8b2680045b zink: clamp resolve extents to src/dst geometry
+  * 009d4a5fda5 zink: always set
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_HOST_ALLOCATION_BIT_EXT for usermem
+  * 7035b5a8e85 zink: emit SpvCapabilitySampleRateShading with SampleId
+  * f2fb2df6a38 ci: bump VVL to 1.3.269
+  * 969ede45210 ci/bin: Refactor create_job_needs_dag
+  * 4e4743ec0a3 ci/bin: Do not forget to add early-stage dependencies
+  * c7b67d86191 ci/bin: Use iid instead of SHA in gitlab_gql
+  * 49b3118302e nir/lower_bit_size: Use b2b for boolean subgroup ops
+  * 50147591332 nir: Return b2b ops from nir_type_conversion_op()
+  * d5c310899a7 nir: Split nir_lower_subgroup_options::lower_vote_eq
+    into two bits
+  * f10d768a886 nir/lower_bit_size: Use u_intN_min/max()
+  * 5465e5b157b nir/lower_bit_size: Handle vote_feq/ieq separately
+  * 5979e74177e nir/lower_bit_size: Fix subgroup lowering for floats
+  * 16664b74a2c nir: Add a lower_read_first_invocation option to
+    lower_subgroups
+  * 3d027cca1e1 nir: Add a lower_first_invocation_to_ballot option to
+    lower_subgroups
+  * d1d29d4f406 ci: skip zink vram test
+  * 9a98d6714d1 zink: enable unsynchronized texture uploads using
+    staging buffers
+  * 846a5ea2244 zink: add locking for batch refs
+  * cd08b070a39 zink: add flag to restrict unsynchronized texture access
+  * 8ee0d6dd711 zink: add a third cmdbuf for unsynchronized (not
+    reordered) ops
+  * 8d0eaf97db6 zink: rework cmdbuf submission to be more extensible
+  * 7d0dbdeca29 zink: assert that transfer_dst is available before doing
+    buf2img
+  * 0b11b41fff6 zink: barrier_cmdbuf -> reordered_cmdbuf
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 27 Oct 2023 09:09:01 +0200
+
 mesa (24.0.0~git2310252156.0757ac65273~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
