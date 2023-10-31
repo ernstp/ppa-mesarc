@@ -1,3 +1,16 @@
+libsdl2 (2.29.0+git2310302108.517db6d88~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 517db6d88 cmake: reset check state before testing -fobjc-arc
+  * 20630b2e6 cmake: check -fobjc-arc compiler flag on Apple platforms
+  * 7774de0fe cmake: file(RELATIVE_PATH) needs 2 absolute paths
+  * 60e8ff16d wayland: Sanity check pointers and protocols before
+    confining
+  * 19c3e125b wayland: Check the relative pointer handle before
+    destroying
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 31 Oct 2023 01:03:09 +0100
+
 libsdl2 (2.29.0+git2310270209.832afa81a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
