@@ -1,3 +1,10 @@
+libdrm (2.4.117+git2310301325.de88f74d~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * de88f74d modetest: add support for DRM_FORMAT_NV{15,20,30}
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 31 Oct 2023 01:02:48 +0100
+
 libdrm (2.4.117+git2310241859.8a933c77~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
