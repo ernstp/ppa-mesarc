@@ -1,3 +1,50 @@
+mesa (24.0.0~git2310310003.fddad4d5f9f~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * fddad4d5f9f intel/compiler: Assert that FS_OPCODE_[REP_]FB_WRITE is
+    for pre-Gfx7
+  * 48f60f4c4b6 intel/compiler: Convert the repclear shader to use send-
+    from-GRF
+  * ef7d1b5f446 intel/compiler: Drop unused saturate handling in
+    repclear shader
+  * e6d9267d4f9 intel/compiler: Delete repclear shader's special case
+    for 1 color target
+  * e6460fe66b6 intel/compiler: Delete unused repclear shader uniform
+    handling
+  * b35f1fc910b intel/compiler: Delete unused emit_dummy_fs()
+  * 5b24ab91e43 venus: switch to unconditionally deferred query feedback
+  * 7fbf608f2da venus: append query feedback at submission time
+  * d2a626787e5 venus: track/recycle appended query feedback cmds
+  * 6dcf033dc30 venus: support deferred query feedback recording
+  * 99807b3db65 venus: refactor out common cmd feedback functions
+  * 2ea6f935ce5 venus: add helper function to get cmd handle
+  * 180cb30986e ci/docs: add coreutils
+  * cdca0b2ce4d anv: fix corner case of mutable descriptor pool creation
+  * fac60c140ba ci: don't run sanity in Marge pipelines
+  * 49395b4aa4b docs/ci: allow sanity job to be missing
+  * 3f64b12c1e6 ci: drop confusing fake `rules`, `if` and `when` on the
+    list of rules strings
+  * 9669334b418 ci/zink+radv: add another flake on polaris
+  * e64a97694ac anv: use anv_state_pool_state_address for blorp vertex
+    buffer address
+  * 8d813a90d62 anv: fail pool allocation when over the maximal size
+  * 8fc42d83bed anv: make sure pools can handle more than 2Gb
+  * cc67bd48d95 anv: add max_size argument for block & state pools
+  * b30428416ae anv: deal with state stream allocation failures
+  * ed83d1415c2 anv: rename internal heaps
+  * f9753488ecb blorp: handle binding table & surface state allocation
+    failures
+  * 1cc26e8b665 rusticl: Show an error message if the build is attempted
+    with an outdated bindgen version
+  * e350193eb56 util: remove unused lut
+  * 2833d1ade14 intel/dev: fix intel_device_info_is_adln check
+  * 9bd47aabaf3 anv: Add more space for init_render_queue_state() batch
+    (MTL regression)
+  * 117f81585ea tu/a6xx: Exclude REG_A6XX_TPL1_UNKNOWN_B602 from reg
+    stomping
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 31 Oct 2023 01:03:49 +0100
+
 mesa (24.0.0~git2310270833.b6fbc4e4ddf~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
