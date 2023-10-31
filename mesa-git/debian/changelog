@@ -1,3 +1,48 @@
+mesa (23.3.0~rc1+git2310301649.21798650dea~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 21798650dea tu: Fix reading of stale (V)PC_PRIMITIVE_CNTL_0
+  * c03932b6e68 radv: fix a synchronization issue with primitives
+    generated query on RDNA1-2
+  * 8a50c841cf1 v3d,v3dv: fix MMU error from hardware prefetch after
+    ldunifa
+  * 8986b7f9aec zink: deallocate global_bindings array
+  * 5e690f40976 rusticl/mesa: pass PIPE_BIND_LINEAR in
+    resource_create_texture_from_user
+  * 62c4a2273e4 radeonsi: initialize perfetto in the right place
+  * 39f9dc50f58 anv: Fix leak when compiling internal kernels
+  * ede1cdbcaf4 zink: check for cbuf0 writes before setting A2C
+  * 2ee4ef998a3 radv: correctly return oom from the device when failing
+    to create a cs
+  * e8e6ad5692e zink: add more locking for compute pipelines
+  * 423202cae44 rusticl/queue: Only take a weak ref to the last Event
+  * 77eb71a612b radv: fix buffers in vkGetDescriptorEXT with size not
+    aligned to 4
+  * f9337e1c78a zink: lower fisnormal as it requires the Kernel Cap
+  * 65bd87bd357 rusticl/mem: properly set pipe_image_view::access
+  * bcfdd7476fa rusticl/device: restrict param_max_size further
+  * 336e6df3ef9 rusticl/device: restrict image_buffer_size
+  * 7b731ab6e81 mesa/st/texture: match width+height for texture
+    downloads of cube textures
+  * 199f9783a04 zink: unset explicit_xfb_buffer for non-xfb shaders
+  * 08ad7e3e0f8 aux/u_transfer_helper: set rendertarget bind for msaa
+    staging resource
+  * 1e7a25df6bd zink: only emit xfb execution mode for last vertex stage
+  * c7822e2b6fd zink: clamp resolve extents to src/dst geometry
+  * dea50199a15 zink: always set
+    VK_EXTERNAL_MEMORY_HANDLE_TYPE_HOST_ALLOCATION_BIT_EXT for usermem
+  * da8fcbaef53 zink: emit SpvCapabilitySampleRateShading with SampleId
+  * 8a7498e13f0 nir/lower_bit_size: Fix subgroup lowering for floats
+  * 0144e4d0b3f zink: add copy box locking
+  * a5bcd8b84ff meson: Add gallium-drivers=all option
+  * 048a358bf54 meson: Add vulkan-drivers=all option
+  * b42d8248223 crocus: Support building on non-Intel
+  * eb6e3a2a89a hasvk: Support builiding on non-Intel
+  * 4a30434a0cb d3d12: d3d12_video_buffer_create_impl - Fix resource
+    importing
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 31 Oct 2023 01:06:18 +0100
+
 mesa (23.3.0~rc1+git2310252229.c8c90eb456a~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
