@@ -1,3 +1,20 @@
+libsdl2 (2.29.0+git2311050624.e8f4045d0~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e8f4045d0 Use XINPUT_STATE instead of XINPUT_STATE_EX (thanks
+    Andrew!)
+  * aa129c925 Fixed potential uninitialized memory access (thanks
+    Mathieu!)
+  * 4c2eb6b95 Use the default UCS2/UCS4 conversion rather than non-
+    portable INTERNAL encoding
+  * e226008d8 configure: move HAVE_LINUX_INPUT_H to CheckInputEvents()
+  * 8b1b6734f cmake: fold HAVE_INPUT_EVENTS into HAVE_LINUX_INPUT_H
+  * 97c2bdf25 Added patch note for SDL_GDKGetDefaultUser()
+  * 20ecd2afc Check to make sure the Windows joystick device has buttons
+    and axes
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 05 Nov 2023 16:27:41 +0100
+
 libsdl2 (2.29.0+git2310302108.517db6d88~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
