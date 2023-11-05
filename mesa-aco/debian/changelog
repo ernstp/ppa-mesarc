@@ -1,3 +1,47 @@
+mesa (24.0.0~git2311050131.cd0a01522f2~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * cd0a01522f2 ttn: Set sample shading for sample ID reads
+  * 95ad0c750c5 Android.mk: disable android-libbacktrace to build with
+    Android 14
+  * 520e79a3b58 Android.mk: filter out cflags to build with Android 14
+    bundled clang
+  * 0e481bf4632 ci: Opt out asahi from clang-format
+  * 1f1ec1c6bcc rusticl: Show an error message if the version of bindgen
+    can't be detected
+  * e9f725c7414 ci/rules: add missing clang-format files to what needs
+    containers to build
+  * 5be1972f618 ci: bump image tags to rebuild deqp
+  * 37970fa7037 ci/build-deqp: print more detailed information about
+    what deqp version is running
+  * 124b4097f32 ci/build-deqp: move mkdir earlier
+  * a61dcdd4b1d ci/build-deqp: split deqp version into a variable
+  * 22f4ca2cf3c ci/build-deqp: stop ignoring failures while fetching
+    patches
+  * be18be9deb0 Revert "ci: backport two mesh/task query fixes for
+    VKCTS"
+  * 655cbf203d1 docs/features: mark rusticl gl_sharing as done
+  * d67d501af46 tu/drm/virtio: Switch to vdrm helper
+  * 0e3584df44d freedreno/drm/virtio: Switch to vdrm helper
+  * 06e57e32310 virtio: Add vdrm native-context helper
+  * 53ccb421a27 freedreno/drm: Simplify backend mmap impl
+  * 6f467fc6a37 freedreno/drm: Add more APIs to per backend API
+  * b90244776ad virtio/drm: Split out common virtgpu drm structs
+  * 9bdee8cd390 vc4/ci: comment why piglit is disabled
+  * c2db19f4965 anv: setup the TR-TT vma heap
+  * 0a120edfb8d anv/sparse: extract anv_sparse_bind()
+  * 544c5c006c3 intel/genxml: add the Gen12+ TR-TT registers
+  * 1af14265427 anv/sparse: also print bind->address at dump_anv_vm_bind
+  * b94d7dbe66f anv/sparse: join multiple NULL binds when possible
+  * 2fc0bbe8140 anv/sparse: join multiple bind operations when possible
+  * 2883c6ddaa0 anv: alloc client visible addresses at the bottom of
+    vma_hi
+  * e1b50074feb anv: don't forget to destroy device->vma_mutex
+  * 0a072bb31c0 rusticl/context: fix importing gl cube maps
+  * 06a2258b4be radeonsi: hack for importing 3D textures
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 05 Nov 2023 16:28:21 +0100
+
 mesa (24.0.0~git2310310003.fddad4d5f9f~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
