@@ -1,3 +1,10 @@
+wayland-protocols (1.32+git2310302056.87e0ce4~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 87e0ce4 presentation-time: stop referring to Linux/glibc
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 05 Nov 2023 16:33:12 +0100
+
 wayland-protocols (1.32+git2310241211.999e443~f~base2) focal; urgency=medium
 
   * New snapshot:
