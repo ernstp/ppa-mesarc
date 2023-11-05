@@ -1,3 +1,19 @@
+libdrm (2.4.117+git2310311424.a0b01143~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * a0b01143 modetest: add support for big-endian XRGB1555/RGB565
+  * 584a85b8 util: add pwetty support for big-endian RGB565
+  * 32a03fb3 util: fix pwetty on big-endian
+  * 6f00a734 util: add test pattern support for big-endian
+    XRGB1555/RGB565
+  * bc37db5c modetest: add support for parsing big-endian formats
+  * 9d702421 util: add missing big-endian RGB16 frame buffer formats
+  * 1b8d0e5c util: fix 16 bpp patterns on big-endian
+  * 8cb6d837 util: fix 32 bpp patterns on big-endian
+  * 5dba8d73 intel: determine target endianness using meson
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 05 Nov 2023 16:27:23 +0100
+
 libdrm (2.4.117+git2310301325.de88f74d~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
