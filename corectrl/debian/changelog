@@ -1,3 +1,18 @@
+corectrl (1.4.0~git2311032000.ced78d8~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * ced78d8 Fix compilation with Linux 6.6 API headers
+  * fe0e5cb Format code
+  * be51d48 CHANGELOG: add version 1.3.7 notes
+  * 4af1b94 Merge branch 'fix-wayland-appid' into 'master'
+  * 1207762 Fix window association with the application desktop file
+    under Wayland
+  * 050ff06 CHANGELOG: Add merge request 42 contribution notes
+  * 665dba2 Merge branch 'gcc-14' into 'master'
+  * a98ceb0 Fix building with gcc 14
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 05 Nov 2023 16:27:10 +0100
+
 corectrl (1.4.0~git2310161550.c768234~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
