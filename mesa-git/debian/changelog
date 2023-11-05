@@ -1,3 +1,54 @@
+mesa (23.3.0~rc2+git2311041522.7ccb51b87c4~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 7ccb51b87c4 anv: remove CS_FLUSH from query regression
+  * b58483b78f8 zink: Fix crash on zink_create_screen error path
+  * f5288dfc24a nvk: Should use alignment instead of align
+  * f88b1dd1e85 .pick_status.json: Mark
+    8dda860f83ac30d042dc6beb4438cc925d1fd130 as denominated
+  * 7ec72dceb17 radv: stop using vk_render_pass_state::render_pass
+  * ebbecb9d522 frontends/va: Map decoder and postproc surfaces for
+    reading
+  * 7afb7e9a42b freedreno/drm: Fix race in zombie import
+  * 28e36118af5 nir: don't take the derivative of the array index in
+    `nir_lower_tex`
+  * 35fea70555b r600/sfn: Fixup component count only if intrinsic has it
+  * eb41ceec14b r600: Link with libgalliumvl, when enabling rusticl this
+    is needed
+  * 0afd2930fd3 nvc0: implement PIPE_CAP_TIMER_RESOLUTION
+  * 4cbcc74d8fa v3d/ci: Remove minetest trace
+  * ab2a7f32e63 freedreno/ci: Remove minetest trace
+  * 2cfc7776bd6 nir: Handle wildcards with casts in copy_prop_vars
+  * 844e330299a venus: fix query feedback batch leak and race upon
+    submission
+  * 6f99c62086b tu/virtio: Fix timeline semaphore support
+  * 2bd7e293bfe tu/msm: Fix timeline semaphore support
+  * a8e266b7b3b radv: skip radv_remove_varyings for mesh shaders
+  * 9e451512431 radv: call lower_array_deref_of_vec before
+    lower_io_arrays_to_elements
+  * 8081cb909bd nir: add deref follower builder for casts.
+  * 11398ee00f1 r600: Add callbacks for get_driver_uuid and
+    get_device_uuid
+  * 5443e661908 rusticl: Show an error message if the version of bindgen
+    can't be detected
+  * bfbd6f22c35 rusticl: Show an error message if the build is attempted
+    with an outdated bindgen version
+  * 364214f1c71 .pick_status.json: Update to
+    1f1ec1c6bcc2a32a3c1df8c2cc7a2f4e7139b7ec
+  * c97af690c9c VERSION: bump for 23.3.0-rc2
+  * 2b66b23045a radv: emit COMPUTE_PIPELINESTAT_ENABLE for CS
+    invocations on ACE
+  * 18397e51adc radv: fix compute shader invocations query on compute
+    queue on GFX6
+  * 4ac0a878680 .pick_status.json: Update to
+    faed5d647f2416bb0ce3a9d33a3955169c70dc52
+  * 3cb82751417 radv: bind the non-dynamic graphics state from the
+    pipeline unconditionally
+  * 14fac5200d4 rusticl/mesa/screen: do not derefence the entire
+    pipe_screen struct
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 05 Nov 2023 16:30:51 +0100
+
 mesa (23.3.0~rc1+git2310301649.21798650dea~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
