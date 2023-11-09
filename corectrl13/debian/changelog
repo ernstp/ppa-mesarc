@@ -1,3 +1,12 @@
+corectrl (1.3.8+git2311051857.7c0ed9b~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 7c0ed9b Bump version to 1.3.8
+  * b716042 Format CMake files
+  * fe57b49 Fix compilation with Linux 6.6 API headers
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 09 Nov 2023 14:09:17 +0100
+
 corectrl (1.3.7+git2311011615.fd30831~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
