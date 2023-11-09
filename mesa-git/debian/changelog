@@ -1,3 +1,47 @@
+mesa (23.3.0~rc3+git2311081950.65109bc8ac3~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 65109bc8ac3 VERSION: bump for 23.3.0-rc3
+  * 41b7bd398c9 .pick_status.json: Mark
+    227300345ed38377190b0eaf08694d5c42ee7e60 as denominated
+  * 9d8e3aac70c anv: Add missing ANV_BO_ALLOC_EXTERNAL flags when
+    calling anv_device_import_bo()
+  * b8112ed6db7 frontends/va: Remove wrong use of ProfileToPipe
+  * f30bd0074e2 radv: disable gs_fast_launch=2 by default
+  * 765cb46e2d5 zink: apply can_do_invalid_linear_modifier to Venus
+  * 4d887245b94 .pick_status.json: Update to
+    a77ea9555aa00cc12f3d1c440252e940ff552500
+  * b419916e7f5 nir/loop_analyze: Fix inverted condition handling in
+    iterations calculation
+  * 43540839e7b panfrost: use perf_debug instead of open-coding
+  * ae337176ef0 agx: Fix fragment side effects scheduling
+  * c531ae3c808 venus: skip bind sparse info when checking for feedback
+    query
+  * 1357b742927 pvr: Fix VK_EXT_texel_buffer_alignment
+  * cf3bd8bedc5 nir: fix inserting the break instruction for partial
+    loop unrolling
+  * 45368572c8f .pick_status.json: Update to
+    aa33ca0a52591961f8ae01dc253354462ed17c18
+  * b328f019421 rusticl/queue: fix implicit flushing of queue
+    dependencies
+  * 984d8051ef4 rusticl/queue: do not send empty lists of event to
+    worker queue
+  * f103f773b69 radeonsi: Fix offset for linear surfaces on GFX < 9
+  * 3294d74e206 Android.mk: disable android-libbacktrace to build with
+    Android 14
+  * 1371823a179 Android.mk: filter out cflags to build with Android 14
+    bundled clang
+  * 6d1b7d90d18 .pick_status.json: Update to
+    7d6f9ccfbeab050c26775d5e03578a01526cbfcb
+  * 1c1382b3042 ci: Try really hard to print final result string
+  * 2872c824bc2 anv: remove CS_FLUSH from query regression
+  * a317466914a zink: Fix crash on zink_create_screen error path
+  * b03733fc6b0 nvk: Should use alignment instead of align
+  * d0d8b3508d0 .pick_status.json: Mark
+    8dda860f83ac30d042dc6beb4438cc925d1fd130 as denominated
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 09 Nov 2023 14:13:00 +0100
+
 mesa (23.3.0~rc2+git2311041522.7ccb51b87c4~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
