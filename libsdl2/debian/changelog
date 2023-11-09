@@ -1,3 +1,46 @@
+libsdl2 (2.29.0+git2311090546.dfc38ef46~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * dfc38ef46 Implemented VT switching for KMSDRM on Linux
+  * adc088052 cmake: also install pdb files of static libraries
+  * 509c70c69 Allow the application to draw while Windows is in a modal
+    move/resize loop
+  * 3900fca30 Fixed FreeBSD build
+  * 76ff25eed Fixed FreeBSD build
+  * 5d29f2280 Store the requested muted state
+  * 87bb0f5bc Don't mute the console input if we can't read the keyboard
+  * f9baa3027 sdlchecks.cmake: Clarified the reason why shared X11 mode
+    doesn't work
+  * 7e11bd1ac Removed useless branch test
+  * af7fe2cf9 Actually we need to enumerate the 8BitDo Xbox SKUs
+  * 524ccf033 Assume all 8BitDo Xbox controllers have a share button
+  * b1807797a Make sure joysticks are locked when adding and removing
+    them
+  * b07e5d38a Added missing calls to SDL_InvalidParamError("surface")
+  * 624905a7f Destroy the window surface if we've created it for the
+    software renderer
+  * 4ace02df5 Added a mapping for the Atari VCS controller connected
+    over Bluetooth (thanks @WizzardSK!)
+  * 70adacf08 Make sure we include the null terminator in
+    XLookupStringAsUTF8()
+  * fb92d150d Removed unused SDL_OSEvent
+  * d9559ce1d Added subsystem refcount tests to testautomation
+  * 7526a87ff Handle subsystem dependencies recursively
+  * 171e306db Enable the 5th player LED on the DualSense controller
+  * d6c725d52 Removed misleading comment
+  * 0c85173d5 Fixed connecting and disconnecting real-joysticks closing
+    virtual joysticks in Emscripten (thanks David!)
+  * 7555701de autotools: fix linux joystick breakage after commit
+    221d6ea8a8ca
+  * 065d80716 hidapi: Avoid memcpy'ing to NULL.
+  * 9d7feaaf9 coreaudio: If paused, clear any pending stream data.
+  * d5896f901 Fixed memory leak in XInput code
+  * 64a7e75dd Only save ibus_addr_file after we've successfully read an
+    address from it.
+  * 93e51dd33 fix a possible memory leak in SDL_vasprintf()
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 09 Nov 2023 14:09:47 +0100
+
 libsdl2 (2.29.0+git2311050624.e8f4045d0~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
