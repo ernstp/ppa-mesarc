@@ -1,3 +1,53 @@
+mesa (24.0.0~git2311091214.b6dbbd3ff79~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * b6dbbd3ff79 radeonsi/ci: document new failures and flakes
+  * 02942d6e7ec aco: Update printed block kinds
+  * 073b8765394 intel/fs/xe2+: Don't special case SEL_EXEC in
+    inferred_exec_pipe().
+  * 23e14a6c271 intel/eu/xe2+: Add definition for size of GRF space on
+    Xe2.
+  * ff3814abdd7 intel/fs/xe2+: Handle extended math instructions as in-
+    order in SWSB pass.
+  * 5fb6760f110 intel/fs/xe2+: Teach SWSB pass about the behavior of
+    double precision instructions.
+  * 9e446c92823 intel/fs/xe2+: Add comment reminding us to take
+    advantage of the 32 SBID tokens.
+  * 15d6c6ab110 intel/eu/xe2+: Add support for 10-bit SWSB
+    representation on Xe2+ platforms.
+  * 40416850f18 intel/compiler: Re-enable opt_zero_samples() in many
+    cases for Gfx12.5
+  * daeab51a628 intel/compiler: Re-enable opt_zero_samples() for Gfx7+
+  * ef8553082ee intel/compiler: Rework opt_split_sends to not
+    rely/modify LOAD_PAYLOAD
+  * e017bcae59a intel/compiler: Clarify the asserts in
+    nir_load_workgroup_id lowering
+  * 534323f2af6 ci/zink: disable nheko trace, as it sometimes crashes
+  * fa7ec4226bd Revert "ci/freedreno: disable antichambers trace"
+  * b1fc5390c6d freedreno/a6xx: Fix antichamber trace replay assert
+  * b33aa7b01a2 aco: don't CSE v_permlane across exec
+  * a9bdf58c36e freedreno/a6xx: Assume MOD_INVALID imports are linear
+  * f4601d82c13 intel/compiler: Remove unused parameter from
+    brw_nir_analyze_ubo_ranges()
+  * d2125dac859 intel/compiler: Take more precise params in
+    brw_nir_optimize()
+  * c4be90b4ba3 intel/compiler: Remove unused parameter from
+    brw_nir_adjust_payload()
+  * a77ea9555aa blorp: WA 16014538804 for DG2, MTL A0
+  * de6653dc5d0 anv: WA 16014538804 for DG2, MTL A0
+  * 1da1bcd0383 iris: pull WA 22014412737 into emit_3dprimitive_was
+  * 8ce3b99bc14 iris: Wa 16014538804 for DG2, MTL A0
+  * 1b03acb26ba blorp,anv,iris: refactor blorp functions into something
+    more generic
+  * 09eb6e31066 aco/tests: fix tests with LLVM 18
+  * e4d9f6fb505 aco/tests: fix tests with LLVM 17
+  * 9f7e57ce98a fast_urem_by_const: #ifdef DEBUG an assertion.
+  * c2e6569b460 ci: re-apply two mesh/task query fixes for VKCTS
+  * f8b83520221 ci/bin: Print a summary list of dependency and target
+    jobs
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 09 Nov 2023 14:10:29 +0100
+
 mesa (24.0.0~git2311050131.cd0a01522f2~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
