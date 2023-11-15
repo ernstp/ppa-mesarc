@@ -1,3 +1,11 @@
+libglvnd (1.7.0+git2311150026.5d1da69~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 5d1da69 Merge branch 'configure.ac-64-bit-file-API' into 'master'
+  * 956d2d3 configure.ac: enable 64-bit file API where availablie
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 15 Nov 2023 12:45:37 +0100
+
 libglvnd (1.7.0+git2310061912.62176c2~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
