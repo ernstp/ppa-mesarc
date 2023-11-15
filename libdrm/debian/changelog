@@ -1,3 +1,10 @@
+libdrm (2.4.117+git2311151011.6acadd49~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 6acadd49 modetest: switch usage to proper options grammar
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 15 Nov 2023 11:18:36 +0100
+
 libdrm (2.4.117+git2310311424.a0b01143~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
