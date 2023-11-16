@@ -1,3 +1,55 @@
+mesa (23.3.0~rc4+git2311152236.4611aef8a85~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 4611aef8a85 VERSION: bump for 23.3.0-rc4
+  * 313457b66ec radv/sqtt: Fix tracing acceleration structure commands
+  * f12636cecf8 ci/traces: drop the freedoom-phase2-gl-high.trace
+  * 178c046b9e4 aco: add missing scc def for SALU quad broadcast
+  * a600a58f897 radv: set radv_zero_vram=true for Unreal Engine 4/5
+  * 0960a0c5dd4 radv: fix registering queues for RGP with compute only
+  * dbb2f6ed669 r600: Add missing dep on git_sha1.h
+  * 0680995b18a gallium/auxiliary/vl: Scale dst_rect x0/y0 when
+    rendering chroma plane
+  * b1833834ddb gallium/auxiliary: Fix coordinates clamp in
+    util_compute_blit
+  * 73b6b7497ed gallium/auxiliary/vl: Fix coordinates clamp in compute
+    shaders
+  * f56bb3ec4b9 nir_lower_mem_access_bit_sizes: Fix write-mask-
+    constrained 3-byte stores as atomics
+  * 85c0b6281cf docs: fix RADV_THREAD_TRACE_CACHE_COUNTERS default
+  * 2b38d1451e9 anv: Flush data cache while clearing depth using
+    HIZ_CCS_WT
+  * e194c6b9ba9 iris: add data cache flush for pre hiz op
+  * bbf099223ef anv: Write timestamp using MI_FLUSH_DW on blitter
+  * 828b3966fa5 .pick_status.json: Mark
+    fcfa68a632e5711cc657b103c9a0384928e9bf49 as denominated
+  * 7cf359fb57d vulkan: Don't use set_foreach_remove when destroying
+    pipeline caches
+  * 16ed2f180c3 .pick_status.json: Update to
+    03a7cb261828b350dd9b56bd74850197ca9eba33
+  * eb9f7db980f zink: Check for VK_EXT_extended_dynamic_state3 before
+    setting A2C
+  * 3902e9302da freedreno: Always attach bo to submit
+  * 12ab5dfd520 radeonsi/gfx11: don't set OREO_MODE to fix rare
+    corruption
+  * a28ea69d0a5 vulkan: use instance allocator for `object_name` in some
+    objects
+  * c6a9afc57a9 .pick_status.json: Update to
+    08f851f4361cfbdb211dc70d03cf3ebff331c3ee
+  * 81ab4a3a015 v3d: Don't implicitly clear the content of the imported
+    buffer
+  * 30135c2a89a ir3/ra: Don't swap killed sources for early-clobber
+    destination
+  * 193256f9e77 isl: disable MCS compression on R9G9B9E5
+  * 8d9fa8ef99a vulkan: fix potential memory leak in
+    create_rect_list_pipeline()
+  * e59c24f6b89 .pick_status.json: Mark
+    fa7ec4226bdf48bf63438e303af83ecd58ec95f2 as denominated
+  * 928e9db0086 .pick_status.json: Update to
+    56451ce773c11094a8c08fdc6b500bb8bdcf37e1
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 16 Nov 2023 07:23:44 +0100
+
 mesa (23.3.0~rc3+git2311081950.65109bc8ac3~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
