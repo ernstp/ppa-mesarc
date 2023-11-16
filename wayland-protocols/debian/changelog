@@ -1,3 +1,10 @@
+wayland-protocols (1.32+git2311092257.bde1c87~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * bde1c87 staging/drm-lease: fix typo in description
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 16 Nov 2023 07:28:10 +0100
+
 wayland-protocols (1.32+git2310302056.87e0ce4~f~base2) focal; urgency=medium
 
   * New snapshot:
