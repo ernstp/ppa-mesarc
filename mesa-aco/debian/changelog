@@ -1,3 +1,41 @@
+mesa (24.0.0~git2311160422.904015ae855~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 904015ae855 ac/surface/tests: Remove duplicate variable
+    block_size_bits
+  * 49e5b583154 venus: enable VK_EXT_extended_dynamic_state3
+  * 417437c7156 venus: pipeline fixes for VK_EXT_extended_dynamic_state3
+  * e3de4a9852c venus: sync protocol for VK_EXT_extended_dynamic_state3
+  * d5efa3f204c docs: update calendar for 23.3.0-rc{2,3,4} and add
+    another release candidate
+  * c905aeb4e49 ac: be careful with stencil_offset override
+  * 7718bad4746 radv: minor clean up to image view extent override
+  * 2533d0a0e29 radv: fix image view extent override for astc
+  * 295734bf88d intel/fs: fix residency handling on Xe2
+  * 0bd23d62631 nak: Enable SM70 for Volta
+  * 01046cd6add anv/drirc: add option to disable FCV optimization
+  * aedf9113c48 nak: Set "evict first" from ACCESS_NON_TEMPORAL
+  * adc3fd4c99e nak: Add encodings for cache eviction priorities
+  * df9a95a813c gallium/auxiliary/vl: NIR compute shaders
+  * 848811f98ae gallium/auxiliary: NIR blit_compute_shader
+  * 03a7cb26182 ac/gpu_info: Manually compute L3 size for Navi33
+  * 90f8cf0f36c radv/sqtt: Handle monolithic RT pipelines
+  * b6e09dd5212 radv/sqtt: Fix tracing acceleration structure commands
+  * fa0476fa6e9 meson: Update lua wrap to 5.4.6-4
+  * 1eff68dd2a6 ci/traces: drop the freedoom-phase2-gl-high.trace
+  * b12d7f10d45 aco: validate ALU operands and defs
+  * 91539713bb3 aco: add src/def count and size for all ALU opcodes
+  * d9c3ba3b909 aco: use correct operand size for int tg4 wa
+  * 1d167d187ef aco/gfx10+: don't use v_cmpx with VCC def
+  * 509ce19643f aco: add missing scc def for SALU quad broadcast
+  * 18f6c2328f1 aco: use lm for carry out in vsub32
+  * 9acd9c01002 aco/tests: use correct operand size for some 64bit ops
+  * 6a136b4e050 aco/tests: add some missing scc defs
+  * 2f4e53b22ad aco: fix detecting sgprs read by SMEM hazard
+  * e49c413a86a aco: use null operand for SOPK s_waitcnt
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 16 Nov 2023 07:19:11 +0100
+
 mesa (24.0.0~git2311091214.b6dbbd3ff79~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
