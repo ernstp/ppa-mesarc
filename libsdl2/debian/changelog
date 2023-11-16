@@ -1,3 +1,34 @@
+libsdl2 (2.29.0+git2311141958.cc7c0a2da~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * cc7c0a2da Fixed IOS_SupportedHIDDevice() returning SDL_FALSE before
+    initialization
+  * 76cc24e34 Added SDL_HINT_JOYSTICK_IOKIT and SDL_HINT_JOYSTICK_MFI to
+    control whether the IOKit and GCController drivers should be used
+    for joystick support.
+  * 0ec1209ea Fixed a memory leak at window creation.
+  * 925362a2f Replacing SDL_SCANCODE_AUDIOMUTE by SDL_SCANCODE_MUTE on
+    Windows
+  * 1de85491e Fixed mouse wheel scrolling direction on iOS
+  * cc20d0147 Revert "Check to make sure the Windows joystick device has
+    buttons and axes"
+  * 8c82b7302 Fixed the ROG PUGIO II showing up as a game controller
+  * 92d70f416 cpuinfo: Fix detection of physical memory above 2GB on
+    NetBSD
+  * 63e9827b9 wayland: Fix DPI calculation with scaled outputs
+  * f3419d8c0 Re-add SDL_assert() with non boolean ptr syntax (#8531)
+  * c29df1699 Added shortened name for "Nintendo Co., Ltd."
+  * 4a0bd06d5 Added support for the GameSir-G7 Controller for Xbox
+  * 03f29c19d Added support for the Dragonrise GameCube adapter with VID
+    0x1843
+  * a14b948b6 [SDL2] pointer boolean (#8523)
+  * 4a3a9f3ad Older gcc does not support #pragma GCC diagnostic inside
+    functions
+  * d38ccfa88 x11: Ignore deprecated declaration of XKeycodeToKeysym
+  * f0d65436f ci: re-enable Intel compilers on ci
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 16 Nov 2023 07:17:09 +0100
+
 libsdl2 (2.29.0+git2311090546.dfc38ef46~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
