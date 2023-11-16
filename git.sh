@@ -104,7 +104,7 @@ done
 
 popd
 if [ -n "$PPA" ] && [ -z "$NOUPLOAD" ]; then
-	dput ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
+	dput ssh-ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
 	rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb
 fi
 
