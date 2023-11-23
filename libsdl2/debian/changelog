@@ -1,3 +1,42 @@
+libsdl2 (2.29.0+git2311230339.baaac5cca~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * baaac5cca cmake: Android expects SDL programs to be built as shared
+    libraries
+  * 5abcfdb93  SDL_stdinc.h: fix compile warning when using
+    SDL_PR[iux]64 on Android
+  * 8cf7e9e7d autotools, cmake: set SDL_SYSTEM_ICONV to OFF for windows
+    (like SDL3.)
+  * 0e9d05029 psp: Hook up event subsystem init/quit.
+  * 87875a49b Removed some function declarations that don't actually
+    exist.
+  * 17e62abb6 revise iconv detection:
+  * 4940b5dbc SDL_bsdjoystick: fix -Wundef warning on FreeBSD
+  * 3fb512417 cmake: add openbsd wscons sources to build, if supported
+  * 59b0a2d71 kmsdrm: restrict KMSDRM_ReleaseVT/KMSDRM_AcquireVT to
+    SDL_INPUT_LINUXEV
+  * dcd21d042 Improved GCController handling on Apple platforms
+  * 2d81beb81 Show the mapping used when a game controller is opened
+  * 4de4b1e7a Don't tickle PS4 Bluetooth controllers in simple mode
+  * f33ab44f8 Extend blitting support for all <8bpp formats
+  * 67eb03400 Add SDL_PIXELFORMAT_INDEX2LSB and
+    SDL_PIXELFORMAT_INDEX2MSB
+  * cb5b8c974 testshader: Don't make local variables with the same name
+    as GL entry points.
+  * c331b64d7 audio: Tighten up possession of detectionLock during
+    device open.
+  * e51760e11 audio: Wait for device thread to set `device->threadid`
+    before continuing.
+  * c67ff8237 Avoid textinput events when pasting from clipboard on iOS.
+  * 42d979a23 audio: Just use the system default stack size for the
+    device thread.
+  * 1bb5448fe Use the correct pixel formats for OpenGL ES on big endian
+  * 2222f44c9 use format string attributes for functions accepting
+    va_list params, too
+  * d81d98685 cmake: fix uses of undefined macro identifiers (-Wundef)
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 Nov 2023 20:31:50 +0100
+
 libsdl2 (2.29.0+git2311141958.cc7c0a2da~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
