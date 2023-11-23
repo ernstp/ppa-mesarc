@@ -1,3 +1,48 @@
+mesa (23.3.0~rc4+git2311220946.ac66a49ba6a~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * ac66a49ba6a tu: Fix re-emitting VS param state after it is re-
+    enabled
+  * ab01f44513e aco/sched: treat p_dual_src_export_gfx11 like export
+  * 0f944319224 drirc: Set limit_trig_input_range option for Valheim
+  * 4e9ef47839f intel/perf: fix querying of configurations
+  * 16361af817e v3dv: Rework to remove drm authentication for wsi
+  * 1a198151650 .pick_status.json: Update to
+    f39ed0063b4cd3e5a71efad2d43ce31f574c698d
+  * 0b3f2e02fbd util: Include stdint.h in libdrm.h
+  * 3db740ff6ce egl: ensure a render node is passed to _eglFindDevice()
+  * 62455a9a259 egl: move dri2_setup_device() after
+    dri2_setup_extensions()
+  * ef07bc116ec egl: extract EGLDevice setup in dedicated function
+  * f62a7df6d15 egl/dri2: increase NUM_ATTRIBS to fit all the attributes
+  * a5931818196 radv: enable radv_disable_trunc_coord for vkd3d-
+    proton/DXVK
+  * 0ac2529959d radv: add radv_disable_trunc_coord option
+  * 64dee1015cc anv: fix dirty state tracking for
+    3DSTATE_PUSH_CONSTANT_ALLOC
+  * 5f12ed0774b anv: fix CC_VIEWPORT pointer dirty after blorp/simple-
+    shaders
+  * c972359d41c panfrost: Flag the right shader when updating images
+  * 317998e30f1 intel/nir/rt: fix reportIntersection() hitT handling
+  * f80e96eb26d intel/fs: rerun divergence analysis prior to
+    convert_from_ssa
+  * 402553152f2 zink: allow software rendering only if selected
+  * 6e218edda57 panfrost: Support parameter queries for main planes
+  * 5542b17f724 util: Add new helpers for pipe resources
+  * 1a238bece94 zink: Fix waiting for texture commit semaphores.
+  * c573f2437df zink: Fix missing sparse buffer bind synchronization.
+  * 61bd4b332b1 zink: fix dereference before NULL check
+  * e8c975a6423 radv: add a missing async compute workaround for
+    Tonga/Iceland
+  * dd46e0b6d33 radv: fix a descriptor leak with debug names and host
+    base descriptor set
+  * 5952462ecf1 radv: fix image view extent override for astc
+  * 0ecb0ec428d anv/drirc: add option to disable FCV optimization
+  * 4c0233497b0 .pick_status.json: Update to
+    f05688aa3299a27430119b27e45181a6f415bff8
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 Nov 2023 20:37:17 +0100
+
 mesa (23.3.0~rc4+git2311152236.4611aef8a85~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
