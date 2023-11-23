@@ -1,3 +1,13 @@
+libdrm (2.4.118+git2311201403.02a41cf3~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 02a41cf3 build: bump version to 2.4.118
+  * 07f4948b xf86drmMode: add drmModeCloseFB()
+  * 7b609866 Sync headers with drm-next
+  * 15b7fbf3 xf86drm: add drmGetNodeTypeFromDevId
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 Nov 2023 20:31:30 +0100
+
 libdrm (2.4.117+git2311151011.6acadd49~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
