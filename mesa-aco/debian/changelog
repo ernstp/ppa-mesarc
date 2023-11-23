@@ -1,3 +1,48 @@
+mesa (24.0.0~git2311231914.f1c9e901462~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * f1c9e901462 r300: add late vectorization after
+    nir_move_vec_src_uses_to_dest
+  * ad7efdea6e3 radv: do not set OREO_MODE to fix rare corruption on
+    GFX11
+  * d9f312b86aa radv: set radv_invariant_geom=true for War Thunder
+  * 46cc7ffb798 radv: add missing FDCC_CONTROL bits for GFX1103 R2
+  * ab346031150 radv: disable TC-compatible HTILE on Tonga and Iceland
+  * 1b7107efe41 glsl: drop ir_binop_ubo_load
+  * 9528d050a4b d3d12: fix usage of GetAdapterLuid() in mingw/GCC using
+    ABI helper
+  * 43cb4cb6dde anv: use the right vertexOffset on CmdDrawMultiIndexed
+  * bb0ad6f0f5b egl/haiku: Remove some dead cleanup code
+  * c9e33f35456 hgl: Redefine visual options in hgl_context.h
+  * af90199fd87 egl/haiku: Cleanup includes; minor build fix
+  * 2f0ed0680cf glsl/nir: return failure from link_varyings if there is
+    a linker error
+  * a141b526410 st/mesa: disable light_twoside if back faces are culled
+  * 2d3f0a834ae anv: Add comment to copy image code block
+  * 73d69ef1e6b util/rbsp: Fill bits twice if reading more than 16 bits
+  * db208af9670 lima: Support parameter queries for
+    PIPE_RESOURCE_PARAM_NPLANES
+  * 3b10547e67d aco: enable helper lanes if shader-
+    >info.fs.require_full_quads
+  * f1110576d90 nir: add info.fs.require_full_quads
+  * 2db0507b5d5 nir/gather_info: add missing wide subgroup operations
+  * 1179d83a89a nir: remove info.fs.needs_all_helper_invocations
+  * f39ed0063b4 radv/ci: add missing expected failures for mesh queries
+    on VANGOGH
+  * d3e3c30d367 anv: implement Wa_18020335297
+  * 418299c120e anv: refactor state emission
+  * 4031443a4a6 iris: implement Wa_18020335297
+  * 73317bb7065 nvk: use nvk_pipeline_zalloc
+  * 90dc83fc9f5 radeonsi: add missing args in spi_ps_input_ena when
+    fbfetch output
+  * 5b453046244 nvk: Implement VK_EXT_primitives_generated_query
+  * 7bda83bdfc3 nvk: Disable flush on each queries and flush at the end
+  * 0fa85b983f7 mesa/st, dri2, wgl, glx: Restore flush_objects interop
+    backward compat
+  * 76b751c3b1e mesa/st: use pipe_shader_from_nir
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 Nov 2023 20:32:52 +0100
+
 mesa (24.0.0~git2311160422.904015ae855~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
