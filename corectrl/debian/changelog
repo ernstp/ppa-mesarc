@@ -1,3 +1,15 @@
+corectrl (1.4.0~git2311191417.8fc146a~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 8fc146a Use const references on some loop variables and lambda
+    parameters
+  * a851ae3 Make ISWInfo::IProvider::provideInfo method constant
+  * fc714b8 Make IGPUInfo::IProvider methods constant
+  * a2d7074 Log std::string directly rather than its underlying data
+  * 65ea979 Log all out of range states on PMFreqRangeProvider
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 Nov 2023 20:31:09 +0100
+
 corectrl (1.4.0~git2311051900.3272cb4~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
