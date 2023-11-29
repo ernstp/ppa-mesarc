@@ -1,3 +1,10 @@
+libdecor-0 (0.2.0+git2311020139.cc58dd2~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * cc58dd2 libdecor: fix leak of DBusError in get_setting_sync
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:04:58 +0100
+
 libdecor-0 (0.2.0+git2310101605.c6c780c~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
