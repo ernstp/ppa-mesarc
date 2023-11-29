@@ -1,3 +1,37 @@
+libsdl2 (2.29.0+git2311282303.013467234~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 013467234 cmake: copy sources to binary directory in separate target
+  * 8f14dc699 Corrected comment
+  * 3381828cc Fix 3DS Analog Values (#8581)
+  * be0e303ec document the purpose of SDL_SetTextInputRect
+  * 546bab0a8 Fixed the GameCube HIDAPI controller mapping
+  * 98ee4a529 Removed HIDAPI controller mappings
+  * d42fa25a9 test: SDLTest_PrintEvent now reports key event mod state.
+  * 7d25a443c cocoa: Use `-[NSApplicationDelegate
+    applicationSupportsSecureRestorableState]`.
+  * 3fbaf737e test: Removed unnecessary line added by copy/paste error.
+  * 258849c9b test: testwm2 now displays keyboard mod state.
+  * 594a79c2f Set framebuffer_srgb_capable to the actual value obtained
+    (#8634)
+  * 8d47e3bb8 Added support for the NACON Revolution 5 Pro controller
+  * bbcf40e81 cmake: fixed iconv detection test program
+  * 0fb36f29a cmake: check if CMP0087 exists before setting it (#8613)
+  * 4339647d9 render: Clip lines before Bresenham algorithm generates
+    points.
+  * a391dd5fe rect: Avoid numeric overflow on massive lines in
+    SDL_IntersectRectAndLine.
+  * 657f5f791 autotools: fix actually wrong use of AC_MSG_RESULT
+  * e9b486937 opengl: Creating a texture trashes the cached `texturing`
+    state, fix it.
+  * 0a6b5abf4 render: GL-based renderers should treat adaptive vsync as
+    vsync being enabled.
+  * d8102bf66 x11: Deal with difference in GLX_EXT_swap_control_tear
+    behavior.
+  * 489e9b69d autotools: bump minimum needed autoconf version to 2.65.
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:05:54 +0100
+
 libsdl2 (2.29.0+git2311230339.baaac5cca~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
