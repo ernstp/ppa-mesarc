@@ -1,3 +1,36 @@
+mesa (23.3.0~rc5+git2311281404.421a8aaff1e~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 421a8aaff1e ac/nir: fix partial mesh shader output writes on GFX11
+  * dced0dba023 venus: Do not submit batch manually when no feedback is
+    required
+  * 3ff4768692b d3d12: Fix multidimensional array ordering
+  * 54f93b17881 intel/ci: fix .hasvk-manual-rules
+  * 25252589175 intel/perf: fix regex escaping
+  * 94ad18d1e7c nir: fix gathering TESS_LEVEL_INNER/OUTER usage with
+    lowered IO
+  * 3ed7b95a559 radeonsi: check sctx->tess_rings is valid before using
+    it
+  * dd56f591e54 .pick_status.json: Update to
+    f843b14c171299e1696ca6d971ccaa496f60c3ab
+  * c03abd2d9f5 VERSION: bump for 23.3.0-rc5
+  * 53bafbe4fd2 mesa: restore call to _mesa_set_varying_vp_inputs from
+    set_vertex_processing_mode
+  * b52742c0189 v3d/resource: Support offset query for multi-planar
+    planes
+  * 090160db3a7 vc4/resource: Support offset query for multi-planar
+    planes
+  * 5e1fe5d0fd6 radv: do not set OREO_MODE to fix rare corruption on
+    GFX11
+  * 2d4868629f5 radv: set radv_invariant_geom=true for War Thunder
+  * c73c7c0b0bb radv: disable TC-compatible HTILE on Tonga and Iceland
+  * ff6ed814f7b anv: use the right vertexOffset on CmdDrawMultiIndexed
+  * 142c333748e util/rbsp: Fill bits twice if reading more than 16 bits
+  * c05aadcf25a .pick_status.json: Update to
+    b07a58157d0b110dbc09a42cffe7046c3200dd3b
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:12:44 +0100
+
 mesa (23.3.0~rc4+git2311220946.ac66a49ba6a~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
