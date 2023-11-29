@@ -1,3 +1,43 @@
+mesa (24.0.0~git2311291504.d50d9eccad8~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * d50d9eccad8 ac,radv,radeonsi: use common 1D texture lowering
+  * ba2bbe21b4d ci: opt-out panfrost from clang-format
+  * 112093f9e2d intel: make CLOCK_BOOTTIME optional for non-Linux
+  * 5c32c41f657 intel: make CLOCK_TAI optional for non-Linux
+  * ec43c20182b anv: implement dummy blit for Wa_16018063123
+  * 889d16a43a2 iris: implement dummy blit for Wa_16018063123
+  * 827b0fa1efd nir/lower_vars_to_scratch: Remove all unused derefs
+  * f9c7f336137 nvk: Enable 8 and 16-bit integer types
+  * bda208665f9 nak: Handle non-DW-aligned UBO loads
+  * ed535c9d982 nak: Implement integer conversions
+  * 3b3f2514712 nak: Implement more int/float conversions
+  * 9e84e9e44b1 nak: Add base support for 8 and 16-bit types
+  * 082c9866141 nak: Fix int8/16 lowering
+  * dc5cc847dde nak: Implement nir_op_extract_*
+  * c0d0ce4c6b4 nak: Rework OpPrmt a bit
+  * 7b6103ccc85 nak: Add a builder helper for OpPrmt
+  * d5693a590e0 nak: Drop the PrmtSelection stuff
+  * 7dff232c094 intel/ds: add trace of buffer markers
+  * c8e122a7380 anv: Implement rudimentary VK_AMD_buffer_marker support
+  * 746da376e42 venus: implement
+    vkGet[Device]ImageSparseMemoryRequirements
+  * a0355dfcfbe nvk: Advertise Vulkan 1.1 on Turing+
+  * 93acce99f3d vulkan: Default override patch version to
+    VK_HEADER_VERSION
+  * 11897376c77 radv/rt: Skip null checks for small case counts
+  * fe674f67b1b radv/rt: Use a helper for inlining non-recursive stages
+  * 3f747fcbfc2 iris: Init aux map state for compute engine
+  * d5e0901fd51 agx: fix 1D texture sampling
+  * e14633fa7d3 nir/lower_tex: Add 1D lowering
+  * 5de5a0d4755 intel/compiler: Don't use fs_visitor::bld in thread
+    payload classes
+  * 2d6240ab146 intel/compiler: Don't use fs_visitor::bld in
+    fs_reg_alloc
+  * f55867b56c5 intel/compiler: Don't use fs_visitor::bld in tests
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:07:34 +0100
+
 mesa (24.0.0~git2311231914.f1c9e901462~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
