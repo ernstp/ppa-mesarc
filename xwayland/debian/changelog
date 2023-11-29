@@ -1,3 +1,14 @@
+xwayland (2:23.2.2+git2311291132.7883646a8~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 7883646a8 build: Allow for custom server config directory
+  * 074c2a1e5 xwayland: Do not resize when running fullscreen
+  * 654fca9c3 xwayland: Update the fullscreen window on output change
+  * 8046b0c22 xwayland: Add a helper function to update fullscreen
+  * 89d237c59 xwayland: Add xwl_output to the Xwayland types
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:20:06 +0100
+
 xwayland (2:23.2.2+git2310250352.e4487cae1~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
