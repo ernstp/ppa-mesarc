@@ -1,3 +1,11 @@
+libglvnd (1.7.0+git2311282343.908086d~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 908086d Merge branch 'master' into 'master'
+  * a094592 tests: Add _GLOBAL_OFFSET_TABLE_ to PLATFORM_SYMBOLS
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:05:29 +0100
+
 libglvnd (1.7.0+git2311150026.5d1da69~j~wayland0) jammy; urgency=medium
 
   * New snapshot:
