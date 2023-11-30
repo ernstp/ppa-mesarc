@@ -1,4 +1,4 @@
 GIT="https://gitlab.freedesktop.org/glvnd/libglvnd.git"
-DISTROS="jammy lunar mantic"
+DISTROS="jammy mantic noble"
 INC=0
 PPA=wayland
