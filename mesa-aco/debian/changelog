@@ -1,3 +1,45 @@
+mesa (24.0.0~git2312011859.00e88584af6~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 00e88584af6 vulkan: Add helpers for access flags
+  * 44add595af8 vulkan: Add helpers for pipeline stage flags
+  * fe12c1c29e5 vulkan: Add some auto-generated synchronization helpers
+  * 9ad51980deb vulkan: Move vk_synchronization2 to vk_synchronization
+  * 2538354850b nvk: Stop initializing the 2D engine
+  * 85fd85f9506 nvk: Use the copy engine for NVK_DEBUG=zero_memory
+  * 74b083ef75e nvk: Use the copy engine for CmdFillBuffer
+  * 771bf5aaa3a nak: Fix NAK_ATTR_CLIP_CULL_DIST_7 wrong value
+  * bd545924877 radv: remove radv_pipeline_key::dynamic_color_write_mask
+  * a6f22aa182d radv: disable meshShaderQueries on gfx10.3
+  * 8cfae774395 anv: enable VK_EXT_depth_range_unrestricted
+  * 80cafa35712 anv: ensure that we clamp only when
+    EXT_depth_range_unrestricted is not enabled
+  * 2e72917923f blorp: set min/max viewport depths to -FLT_MAX/FLT_MAX
+    when EXT_depth_range_unrestricted is enabled
+  * ced313eec80 radv: make sure to prefetch the compute shader for DGC
+  * ab6cf1592fc radv: fix bogus interaction between DGC and RT with
+    descriptor bindings
+  * b6f3b55b887 pvr: Add powervr winsys implementation
+  * be82fe7ab99 pvr: Add command stream and static context state layout
+    to rogue_kmd_stream.xml
+  * 90916c955b9 pvr: csbgen: Add dummy implementation of stream type
+  * d9132b63d96 include/drm-uapi: add pvr_drm.h
+  * 3a46181fe0b zink: do not handle PIPE_SWIZZLE_NONE
+  * d7e067823bf d3d12: do not handle PIPE_SWIZZLE_NONE from sampler-view
+  * a5970c1a01c panfrost: do not handle NONE-swizzle
+  * e233eee492f lavapipe: do not use NONE-swizzle
+  * 1fbec9f5323 util/format: document NONE swizzle
+  * 5f7aa0e012b hasvk: Enable hasvk override Vulkan API Version for
+    Brawlhalla
+  * 9de69287465 hasvk: Add Vulkan API version override
+  * c13de0509c4 r600/sfn: Don't try to re-use iterators when the set is
+    made empty
+  * b16017d0807 nir: fix load layer id system_values_read info gather
+  * a499be0ee32 intel/genxml: Update IDD for new fields
+  * c916038b894 intel/genxml: Update COMPUTE_WALKER_BODY for xe2
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Dec 2023 00:26:24 +0100
+
 mesa (24.0.0~git2311291504.d50d9eccad8~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
