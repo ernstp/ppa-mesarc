@@ -1,3 +1,12 @@
+libsdl2 (2.29.0+git2311302342.757c984dd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 757c984dd gamecontroller: Backport 3.0 'type:' field to 2.0
+  * 61cd57d37 cocoa: Resync modifier keypressed on
+    NSEventTypeFlagsChanged event.
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Dec 2023 00:25:23 +0100
+
 libsdl2 (2.29.0+git2311282303.013467234~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
