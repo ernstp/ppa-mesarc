@@ -1,3 +1,14 @@
+libdecor-0 (0.2.1+git2312012214.060fe76~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 060fe76 build: Bump version to 0.2.1
+  * 60b65b9 gtk: Don't report errors during construction
+  * 2165002 Handle NULL wl_output as argument
+  * f8d945e gtk: Optionally use wl_output_release
+  * 2cc5029 cairo: Optionally use wl_output_release
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Dec 2023 00:25:10 +0100
+
 libdecor-0 (0.2.0+git2311020139.cc58dd2~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
