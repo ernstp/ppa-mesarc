@@ -1,3 +1,10 @@
+mesa (23.3.0+git2311292030.1fbdd37d4c1~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 1fbdd37d4c1 VERSION: bump for 23.3.0
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Dec 2023 00:19:29 +0100
+
 mesa (23.3.0~rc5+git2311281404.421a8aaff1e~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
