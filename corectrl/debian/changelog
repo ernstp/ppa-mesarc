@@ -1,3 +1,10 @@
+corectrl (1.4.0~git2312011747.1539b94~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 1539b94 Read AMD GPU power sensor data from sysfs
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Dec 2023 00:24:53 +0100
+
 corectrl (1.4.0~git2311191417.8fc146a~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
