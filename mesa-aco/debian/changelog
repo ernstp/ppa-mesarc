@@ -1,3 +1,49 @@
+mesa (24.0.0~git2312050907.81ec1fa0b5b~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 81ec1fa0b5b nvk: use `||` instead of `|` between bools
+  * 3115e6e211e amd/ci: reuse .radeonsi-rules in .radeonsi-vaapi-rules
+  * 344a4948b79 intel/hang_replay: fix compile race with generated files
+  * dcf2f251694 nouveau: Move headers/classes to headers/nvidia/classes
+  * ec345567add nouveau: Rename nvidia-headers to headers
+  * e568ef122a3 d3d12,dzn: Simplify the usage of #include
+    <wsl/winadapter.h>
+  * 767aa002304 dzn: Fixes -Werror=incompatible-pointer-type
+  * f2e3285d8e2 freedreno/drm: Fix zombie BO import harder
+  * 3c10b70ee83 nvk: Enable linear images for texturing
+  * 03492b55323 nvk: Wire up rendering to linear
+  * 6ab77530420 nil: Add support for linear images
+  * b1737856adf nvk: Fix GetImageSubResourceLayout for non-disjoint
+    images
+  * db1ec1c67a5 nil: Add support for filling out linear texture headers
+  * bd667acb354 nvk: Advertise VK_EXT_subgroup_size_control
+  * 579ea57db94 freedreno/regs: add mdp_fetch_mode enum
+  * 10cca7ac499 freedreno/regs/mdp_common: fix BPC comments
+  * 80816f210d1 freedreno/regs/mdp_common: change BPC1 -> BPC4
+  * d05e81fa7f9 isaspec: Sort labels with same output
+  * 93e9bfcfd51 panfrost: Fix multiplanar YUV texture descriptor
+    emission on v9+
+  * dafd6e776ef venus: fix typo in comment
+  * 64a827a8e62 venus: update symbols that have become aliases for newer
+    ones
+  * f5297208d08 vk/overlay-layer: update symbols that have become
+    aliases for newer ones
+  * d0df3834b4a vk/util: update symbols that have become aliases for
+    newer ones
+  * d6144ba88fc vk/wsi: update symbols that have become aliases for
+    newer ones
+  * 84c27ea42c1 vk/runtime: update symbols that have become aliases for
+    newer ones
+  * 7c76125db25 anv: use 2 different buffers for surfaces/samplers in
+    descriptor sets
+  * 09a3a93372b anv: set layout printer
+  * 4608de6645e anv: add missing push descriptor flush on ray tracing
+    pipelines
+  * f26e83b6a41 anv: make a couple of descriptor function private
+  * 1cdadbcdf62 anv: move descriptor set type selection to earlier
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 05 Dec 2023 10:45:22 +0100
+
 mesa (24.0.0~git2312011859.00e88584af6~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
