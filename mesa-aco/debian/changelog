@@ -1,3 +1,55 @@
+mesa (24.0.0~git2312062131.e126e82c790~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * e126e82c790 zink/ci: stop running zink-radv-navi31-valve
+    sequentially
+  * bec2928cc2d zink/ci: update list of failures for NAVI31
+  * f6dc3429e62 zink/ci: skip more tests that run OOM on NAVI31
+  * 969af605fe8 intel/isl: Set mocs.blitter_dst/src for MTL
+  * 4ff1b0f7516 anv/video: only report matching memory types for
+    protected sessions
+  * e8a96e6ba09 vulkan/runtime: retain video session creation flags
+  * 22c60ea384a nir: Respect variable alignments in
+    lower_vars_to_explicit_types
+  * 629af540ca1 spirv: Plumb variable alignments through to NIR
+  * 47b825c6c5c v3d: include the revision in the device name
+  * 1f0a9f853c4 intel: Sync xe_drm.h take 2 part 3
+  * d1109f67bb0 iris: Emit EXECUTE_INDIRECT_DRAW when available
+  * e5b7e16f3b4 nvk: Implement VK_EXT_texel_buffer_alignment
+  * 47f666b64bf radv: enable extendedDynamicState3AlphaToCoverageEnable
+    on GFX11
+  * bca4ebc3c40 radv: export MRTZ via PS epilogs when alpha to coverage
+    is dynamic on GFX11
+  * 0cbe0d2968c nir/loop_analyze: support loops with min/max and non-add
+    incrementation
+  * fc1ebc67b12 nir/loop_analyze: support umin and {u,i,f}max
+  * 9591c366669 nir/loop_analyze: check min compatibility with
+    comparison
+  * b6c2a5d48dd nir/loop_analyze: fix vector basis/limit/comparison
+  * 2f467738193 nir/loop_analyze: scalarize try_eval_const_alu
+  * 79605884137 nir/loop_analyze: skip if basis/limit/comparison is
+    vector
+  * 0957b01a064 ci: take microsoft farm offline
+  * 13e9e73974e zink/ci: remove skipped tests from the list of expected
+    failures for NAVI31
+  * 79cf2b6824d radv: determine and emit SPI_SHADER_Z_FORMAT for PS
+    epilogs
+  * 4248d0b03ae radv,aco: declare PS epilog VGPR arguments for
+    depth/stencil/samplemask
+  * 8b87c985b0c radv: prepare the PS epilog key for exporting MRTZ on
+    RDNA3
+  * 5b01285cfba radv: determine if MRTZ needs to be exported via PS
+    epilogs
+  * b2a37b43047 ac/nir: add an option to skip MRTZ exports in
+    ac_nir_lower_ps()
+  * 81eeb157f80 aco: export depth/stencil/samplemask in
+    create_fs_jump_to_epilog()
+  * 680f249c9f3 ci: improve comments
+  * b6fa242fb00 ci: make sure pre-merge pipelines have the same jobs as
+    merge pipelines
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 06 Dec 2023 23:06:35 +0100
+
 mesa (24.0.0~git2312050907.81ec1fa0b5b~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
