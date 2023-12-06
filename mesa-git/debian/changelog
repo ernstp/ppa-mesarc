@@ -1,3 +1,18 @@
+mesa (23.3.0+git2312051534.d59fcc714ec~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * d59fcc714ec v3d: add B10G10R10[X2/A2]_UNORM to format table.
+  * 65eb17f4153 nvk: use `||` instead of `|` between bools
+  * 10a47cde73f freedreno/drm: Fix zombie BO import harder
+  * ae6c9315a88 panfrost: Fix multiplanar YUV texture descriptor
+    emission on v9+
+  * d6711f9e2d8 anv: Fix MI_ARB_CHECK calls in generated indirect draws
+    optimization
+  * 50cbb6ae23f .pick_status.json: Update to
+    1700c6af6f807f801382c6cea5cb7136563e8bad
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 06 Dec 2023 23:11:18 +0100
+
 mesa (23.3.0+git2312042236.7515018c22e~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
