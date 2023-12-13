@@ -1,3 +1,51 @@
+mesa (23.3.0+git2312121835.a7e3f3b58cf~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * a7e3f3b58cf ci: do not mount already mounted directories
+  * 137420fe9d6 ci/baremetal: make BM_BOOTCONFIG optional
+  * b3ece9b09f5 ci: fix kdl commit fetch
+  * 109f64de6c7 driconfig: add a workaround for Hades (Vulkan backend)
+  * da30685af91 spirv: add missing build dependency
+  * a858601acd8 nir: Handle divergence for decl_reg
+  * 49f4db4fa13 docs: drop unused manual optimizations override
+  * 4f12cdb8ba7 .pick_status.json: Update to
+    a921a69010102c6e35267066dc8a50461cae46fd
+  * 836ef56c51c venus: fix query feedback copy sanitize off by 1
+  * 4a609462257 freedreno/a6xx: Fix NV12+UBWC import
+  * fd321f72a08 meson: Update lua wrap to 5.4.6-4
+  * 77d464619c1 .pick_status.json: Update to
+    9ab59574ef162393f89c36980a366eeb8ecccb64
+  * 583b2e031cd nvk: fix transform feedback with multiple saved
+    counters.
+  * 4d9ec22da3c venus: properly initialize ring monitor initial alive
+    status
+  * 0f6ee029d87 venus: fix async compute pipeline creation
+  * 8975c22b525 anv: Don't report more memory available than the heap
+    size
+  * db5d58d009e anv: Drop 3/4 of PPGTT size restriction for sys heap
+    size calculation
+  * 3913722a7fa intel/compiler: infer the number of operands using
+    lsc_op_num_data_values
+  * 4b4f608e105 anv: Fix handling of host_cached_coherent bos in gen9 lp
+    in older kernels
+  * f63ea1a1303 nir/loop_analyze: skip if basis/limit/comparison is
+    vector
+  * 85a215801cf d3d12: d3d12_create_fence_win32 - Fix double refcount
+    bump
+  * 668577272de d3d12: Fix screen->winsys leak in d3d12_screen
+  * 425a702a897 d3d12: Fix d3d12_tcs_variant_cache_destroy leak in
+    d3d12_context
+  * f776553f4d7 radv: set combinedImageSamplerDescriptorCount to 1 for
+    multi-planar formats
+  * 605f8b70d4e panfrost: Don't leak NIR compute shaders
+  * 42f5040e696 v3d: drop leftover from "move v3d_tiling to common"
+  * bf55c9f591d ci: fix rules for formatting checks
+  * 0b95d1a0303 zink: initialize drm_fd to -1
+  * aa7a34120ed .pick_status.json: Update to
+    5bf68ab70133edd264f832f4a133288b8b45f66d
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 13 Dec 2023 15:48:06 +0100
+
 mesa (23.3.0+git2312051534.d59fcc714ec~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
