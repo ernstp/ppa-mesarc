@@ -1,3 +1,53 @@
+mesa (24.0.0~git2312131356.2f205caea48~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 2f205caea48 etnaviv: Add static_assert(..) to catch memory
+    corruption
+  * 11ffb20b707 etnaviv: Update headers from rnndb
+  * de3190d36d7 radeonsi: fix reg_saved_mask for non graphics contexts
+  * c3c3a8926a4 radv/amdgpu: Separate the concept of residency from
+    use_global_list.
+  * 63120a55b84 radv/amdgpu: Remove virtual bo dump logic.
+  * 40c6e54ce73 anv: rename anv_create_companion_rcs_command_buffer to
+    anv_cmd_buffer_ensure_rcs_companion
+  * bed1b8b90d8 radeonsi: fix divide by zero in
+    si_get_small_prim_cull_info()
+  * d376d8c5ea0 anv: promote EXT_calibrated_timestamps to KHR
+  * 4eb1eb0db19 anv: promote EXT_vertex_attribute_divisor to KHR
+  * f99e43d606e anv: switch to use runtime physical device properties
+    infrastructure
+  * dc858202a9c anv: get features after initializing drm
+  * a1dcf943ab5 isl: constify isl_device_get_sample_counts()
+  * 2336058bbbf iris: use slow clear for small surfaces with
+    Wa_18020603990
+  * 25a32433b13 anv: use slow clear for small surfaces with
+    Wa_18020603990
+  * ca8d9f850b4 radv/ci: remove dEQP-VK.mesh_shader.ext.query.* from the
+    lists
+  * f576ce3340d radv: advertise VK_KHR_vertex_attribute_divisor
+  * 24c755316ba vulkan/runtime: promote VK_EXT_vertex_attribute_divisor
+    to KHR
+  * 06056310947 radv: stop clearing FMASK_COMPRESS_1FRAG_ONLY for TC-
+    compat CMASK images
+  * c70c269b16b radv: remove useless check for TC-compat CMASK images
+    during fb emission
+  * 205938cd39c v3dv: disallow image stores on VK_KHR_DISPLAY surfaces
+  * f6437f4388e nvk: Implement VK_EXT_multi_draw
+  * afbaeee3581 nvk: VK_EXT_color_write_enable
+  * f217d267d3a gallium: add PIPE_IMAGE_ACCESS_DRIVER_INTERNAL
+  * 15b5437f8f4 gallium: fix util_clamp_color type confusion
+  * d136583c82d rusticl/kernel: explicitly set rounding modes
+  * 53b01459fd9 rusticl: add freedreno alias for RUSTICL_ENABLE
+  * f1817ab7e03 radv,vtn,driconf: Add and use radv_rt_ssbo_non_uniform
+    workaround for Crysis 2/3 Remastered
+  * 63e2bba5928 nak: Don't set both FTZ and DNZ at the same time
+  * dcbf31dce21 vulkan/wsi: always create command buffer for special
+    blit queues
+  * a8b2426419b intel/compiler: Use reference instead of pointer for
+    fs_visitor
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 13 Dec 2023 15:13:31 +0100
+
 mesa (24.0.0~git2312062131.e126e82c790~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
