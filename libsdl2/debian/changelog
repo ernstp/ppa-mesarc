@@ -1,3 +1,33 @@
+libsdl2 (2.29.0+git2312122317.cc6d8eb72~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * cc6d8eb72 tests: Fix whitespace
+  * a78cdbd7e tests: Backport automated video test changes
+  * 33588662e Refactor away some additional integer types.
+  * b620788b4 Add new file to OpenWatcom makefiles.
+  * 20cc64483 Add new file to vcxproj files.
+  * bed789794 Add new steam deck HIDAPI controller to controller
+    database.
+  * 0dbe9022f Disable lizard mode while steam deck HID device is opened.
+  * a6b9d987e Translate steam deck HID reports to SDL events.
+  * 5718ba253 Implement steam deck HIDAPI initialization.
+  * e7f03de46 Add steam deck detection and HIDAPI driver scaffold.
+  * 33843b093 Use existing XUSB driver software PID 0x02a1 instead of
+    PID 0x02fe
+  * 7d9412160 You should call present when using a software renderer as
+    well.
+  * 79a8e8cf0 Make built-in joystick device lists extendable by using
+    hints
+  * 6526c4d0f Refactor VIDPID list loading code
+  * f0e7f3e7e Back out Steam virtual gamepad changes
+  * 10c292b05 cmake+xcode: use IMPORTED SHARED framework target
+  * ddac84403 Fixed build
+  * dd2863794 Use the Steam virtual gamepad slot as the gamepad player
+    index
+  * 5b26d4e0c Sort Steam virtual gamepads by Steam controller slot
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 13 Dec 2023 15:11:47 +0100
+
 libsdl2 (2.29.0+git2311302342.757c984dd~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
