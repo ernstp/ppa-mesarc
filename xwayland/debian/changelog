@@ -1,3 +1,13 @@
+xwayland (2:23.2.3+git2312130252.7439e9c6c~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 7439e9c6c Bump version to 23.2.3
+  * 19e9f1999 Xi: allocate enough XkbActions for our buttons
+  * aaf854fb2 randr: avoid integer truncation in length check of
+    ProcRRChange*Property
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 13 Dec 2023 15:52:42 +0100
+
 xwayland (2:23.2.2+git2312040920.eea4c7533~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
