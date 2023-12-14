@@ -1,3 +1,33 @@
+mesa (23.3.1+git2312132017.0a50920f2ea~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 0a50920f2ea util/hash_table: Don't leak hash_key_u64 objects when
+    the u64 hash table is destroyed
+  * 0594f8ec768 util/hash_table: Don't leak hash_u64_key objects when
+    the entry exists
+  * 06ab666613f util/hash_table: Use FREE() to be consistent with the
+    CALLOC_STRUCT() call
+  * fcdb403f3bc etnaviv: Add static_assert(..) to catch memory
+    corruption
+  * 6291db85729 etnaviv: Update headers from rnndb
+  * bc0c064b87c radeonsi: fix divide by zero in
+    si_get_small_prim_cull_info()
+  * 5a51d20f7aa rusticl/kernel: explicitly set rounding modes
+  * 3d31646c7e0 radv,vtn,driconf: Add and use radv_rt_ssbo_non_uniform
+    workaround for Crysis 2/3 Remastered
+  * 163b9a9085a ci/freedreno: fail introduced by ARB_post_depth_coverage
+  * eebdf4a90cf ci/freedreno: timestamp-get no longer fails on Adreno
+  * 32bfb5468fb anv: fix incorrect queue_family access on command buffer
+  * b6b70fee717 nir/divergence: handle printf intrinsic
+  * 7d805b42da8 nir/clone: fix missing printf_info clone
+  * c962ecd0a2b .pick_status.json: Update to
+    d761871761e5fe7d498b0cc818ed627698ed1225
+  * 1a2e6abe56a docs: add sha256sum for 23.3.1
+  * 6cdc2b044d5 VERSION: bump for 23.3.1
+  * b9d588b5db6 docs: add release notes for 23.3.1
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Dec 2023 20:29:59 +0100
+
 mesa (23.3.0+git2312121835.a7e3f3b58cf~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
