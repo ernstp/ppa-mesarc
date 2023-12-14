@@ -1,3 +1,50 @@
+mesa (24.0.0~git2312141743.3b715fb99de~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 3b715fb99de v3dv: enable CPU jobs in the simulator
+  * f11a458a508 v3d/v3dv: move V3D_CSD definitions to a separate file
+  * 35b4dcb2f26 v3dv: use the copy performance query results user
+    extension
+  * 8913c134e45 drm-uapi: extend interface for copy performance query
+    CPU job
+  * 43258ad44b5 v3dv: use the reset performance query user extension
+  * b2db2e3f33d v3dv: don't start iterating performance queries at zero
+  * 6089982a823 drm-uapi: extend interface for the reset performance
+    query CPU job
+  * 4a9da29016c v3dv: use the copy timestamp query results user
+    extension
+  * a990defab30 drm-uapi: extend interface for copy timestamp results
+    CPU job
+  * d1d52ebdc96 v3dv: use the reset timestamp user extension
+  * 7af9b47471e drm-uapi: extend interface for reset timestamp CPU job
+  * 17e03ebacd8 v3dv: use the timestamp query user extension
+  * d48aaa47734 drm-uapi: extend interface for timestamp query CPU job
+  * 2e32644e35f v3dv: occlusion queries aren't handled with a CPU job
+  * 2a0d196abf1 v3dv: switch timestamp queries to using BO memory
+  * e404ccba5b4 v3dv: use the indirect CSD user extension
+  * b1134775e07 v3dv: create a CPU queue type
+  * e1623082985 v3dv: check CPU queue availability
+  * 2589998e053 drm-uapi: extend interface for indirect CSD CPU job
+  * d2a6383c647 v3dv: allow set_multisync() to accept more wait syncobjs
+  * f01d702d4a6 v3dv: allow different in/out sync queues
+  * 3a3acac8c5d v3dv: move multisync functions to the beginning of the
+    file
+  * 14267d97393 ci/freedreno: more issues showed up on a618, let's use
+    6.4
+  * a0f350429ba ci/b2c: fix the `cmdline_extra` variable name
+  * 1ef5feac5ef radv: fix binding partial depth/stencil views with
+    dynamic rendering
+  * 759b68bf662 bin/gitlab_gql: print merged yaml as yaml instead of a
+    python dict
+  * db6541a41a2 bin/gitlab_gql: fix --print-merged-yaml when --rev !=
+    HEAD
+  * 6a92af158dc anv: wait for CS write completion before executing
+    secondary
+  * 98ea540158f radv: add support for MRT compaction with PS epilogs
+  * 8760b7fab71 radv: cleanup radv_pipeline_generate_ps_epilog_key()
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Dec 2023 20:25:25 +0100
+
 mesa (24.0.0~git2312131356.2f205caea48~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
