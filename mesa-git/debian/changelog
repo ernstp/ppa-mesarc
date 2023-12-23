@@ -1,3 +1,56 @@
+mesa (23.3.1+git2312221651.14eb40ba21a~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 14eb40ba21a drirc/anv: disable FCV optimization for Baldur's Gate 3
+  * ec8cb995358 etnaviv: Remove duplicate initializers
+  * fc2b8f9ee3d mesa: fix enum support for EXT_clip_cull_distance
+  * 9a43aab925b vk/util: ignore unsupported feature structs
+  * fa0f07c5e13 intel/common: add directory prefix to intel_gem.h
+    include
+  * 676fd7a287a rusticl: check rustc version for flags requiring newer
+    rustc/clippy
+  * 0c6d7bcd0c6 rusticl: silence clippy::arc-with-non-send-sync for now
+  * 3c7025cc4e6 .pick_status.json: Update to
+    1e6fcd6a611574241b1cde306afcc416a03ac76b
+  * d93e7ef99f4 radeonsi/sqtt: use calloc instead of malloc
+  * fab56a0d03b radeonsi/sqtt: rework pm4.reg_va_low_idx
+  * 4425ef56535 radeonsi/sqtt: clear record_counts variable
+  * 78b48817d1b radeonsi/sqtt: fix RGP pm4 state emit function
+  * 953da130705 radv: Use correct writemask for cooperative matrix
+    ordering.
+  * a23408d57a8 rusticl: do not warn on empty RUSTICL_DEBUG or
+    RUSTICL_FEATURES
+  * 8d2fa241ae9 .pick_status.json: Update to
+    e61fae6eb8ae1ae1228d6f89329324310db808ae
+  * 771c65fe5f1 d3d12: Fix AV1 video encode 32 bits build
+  * af708d5e80d intel/fs: Don't optimize DW*1 MUL if it stores value to
+    the accumulator
+  * e17dfc075a4 nir/loop_analyze: Don't test non-positive iterations
+    count
+  * ab4a2e97a9a egl/glx: fallback to software when Zink is forced and
+    fails
+  * 684d11421c3 d3d12: Only destroy the winsys during screen
+    destruction, not reset
+  * 0bbbc9e7102 glx: Handle IGNORE_GLX_SWAP_METHOD_OML regardless of
+    GLX_USE_APPLEGL
+  * 2d842a3f3bf gallium/dri: Return __DRI_ATTRIB_SWAP_UNDEFINED for
+    _SWAP_METHOD
+  * ead6751f58c iris: use intel_needs_workaround with 14015055625
+  * 5ea94d17248 intel/compiler: move gen5 final pass to actually be
+    final pass
+  * cb65e078a7c .pick_status.json: Update to
+    670a799ebff9a98daafccf49324c2a01311b0c41
+  * 25f02192a5e vulkan/wsi/wayland: ensure drm modifiers stored in chain
+    are immutable
+  * 79b2605743e vulkan: Fix dynamic graphics state enum usage
+  * 8b389ea261c vulkan/wsi: fix build when platform headers are
+    installed in non-standard locations
+  * fd1d0b4e65c radv/rt: Initialize unused children in PLOC early-exit
+  * c2a1b110195 drirc: setup anv_assume_full_subgroups=16 for
+    UnrealEngine5.1
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 23 Dec 2023 08:51:40 +0100
+
 mesa (23.3.1+git2312132017.0a50920f2ea~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
