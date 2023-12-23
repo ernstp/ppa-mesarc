@@ -1,3 +1,11 @@
+libdrm (2.4.119+git2312211249.fc5f2239~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * fc5f2239 meson: bump libdrm version to 2.4.119
+  * 85343095 amdgpu: add amdgpu_va_get_start_addr
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 23 Dec 2023 08:45:59 +0100
+
 libdrm (2.4.118+git2311201403.02a41cf3~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
