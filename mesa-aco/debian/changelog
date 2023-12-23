@@ -1,3 +1,64 @@
+mesa (24.0.0~git2312222112.551924aa879~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 551924aa879 ci: apply two bugfixes for VKCTS
+  * 3e46ee61d55 intel/fs/xe2+: Lift CPS dispatch width restrictions on
+    Xe2+.
+  * 84b53e1a54c intel/fs/xe2+: Pass correct dispatch_width to
+    fs_generator for geometry-processing stages.
+  * 3f92dde55ef intel/fs/xe2+: Stop building SIMD8 shaders for geometry
+    stages (VS/TCS/TES/GS).
+  * 68779161556 intel/fs/xe2+: Stop building SIMD8 fragment shaders.
+  * 7397ba61c2d intel/fs/xe2+: Stop building SIMD8 compute-like shaders
+    (CS/BS/TS/MS).
+  * 69cc72e50ad anv/gfx12: Hook up dual-SIMD8 fragment shader dispatch.
+  * 4ec54e84da6 iris/gfx12: Hook up dual-SIMD8 fragment shader dispatch.
+  * ccb5795938c intel/gfx12: Enable SIMD8 dispatch in 3DSTATE_PS for FS
+    multipolygon dispatch.
+  * 4868408e6e0 intel/genxml: Add 3DSTATE_PS definitions needed for dual-
+    SIMD8 dispatch on Gfx12+.
+  * 1f2c44dc217 intel/compiler: Attempt to build dual-SIMD8 variant of
+    fragment shaders on gfx12+ platforms.
+  * 261d07f3989 intel: Add debug flag for enabling dual-SIMD8 fragment
+    shader dispatch.
+  * 28aec45eed5 intel/fs/gfx12: Implement multi-polygon format of render
+    target array index in PS payload.
+  * 5b1ab77423e intel/fs/gfx12: Implement multi-polygon format of
+    back/front-facing flag in PS payload.
+  * 4672fcbc76b intel/fs: Fix PS thread payload setup for
+    depth_w_coef_reg.
+  * 09ea8409870 intel/fs: No need to copy null destinations in
+    lower_simd_width.
+  * 5e0760a993f intel/fs/gfx12: Don't consider multipolygon PS to have
+    packed dispatch.
+  * 8f92baa5d31 intel/fs/gfx12+: Don't set
+    nir_divergence_single_prim_per_subgroup option for fragment shaders.
+  * 6bf99e6a452 intel/compiler: Don't change types for copies from ATTR
+    file.
+  * 2ed36050fb9 intel/fs: Don't copy-propagate ATTR registers in multi-
+    polygon FS shaders when invalid.
+  * 3f89fa63e6c intel/compiler: Pass max_polygons to copy-prop from
+    fs_visitor.
+  * b62ad4e0288 intel/fs: Rework layout of FS vertex setup data in ATTR
+    file to support multi-polygon dispatch.
+  * a844c0b185b intel/fs: Fix fs_reg::component_size() to handle two-
+    dimensional register regions.
+  * 83a0252e8d4 intel/fs: Pass builder to per_primitive_reg().
+  * 8e9f09dbe52 intel/fs: Provide component index explicitly to
+    interp_reg().
+  * 742a575bd6f intel/fs: Consider ATTR registers with different
+    fs_reg::nr as belonging to disjoint register spaces.
+  * 2d26ed66881 intel/fs: Assert fs_reg::nr is always zero for ATTR
+    registers in geometry stages.
+  * b26cf8b1891 intel/fs: Map all TES input attributes to ATTR register
+    number 0.
+  * ef12565a378 intel/fs: Map all VS input attributes to ATTR register
+    number 0.
+  * 1d22721b5a6 intel/fs: Map all GS input attributes to ATTR register
+    number 0.
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 23 Dec 2023 08:47:24 +0100
+
 mesa (24.0.0~git2312141743.3b715fb99de~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
