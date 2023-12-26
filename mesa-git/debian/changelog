@@ -1,3 +1,12 @@
+mesa (23.3.1+git2312240834.99fdd1bcf18~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 99fdd1bcf18 drirc/anv: disable FCV optimization for Baldur's Gate 3
+  * 04ed77a1aea etnaviv: Remove duplicate initializers
+  * 7cfc8d3ab9d mesa: fix enum support for EXT_clip_cull_distance
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 26 Dec 2023 17:13:44 +0100
+
 mesa (23.3.1+git2312221651.14eb40ba21a~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
