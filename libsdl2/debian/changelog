@@ -1,3 +1,24 @@
+libsdl2 (2.29.0+git2312250102.3b1e0e163~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 3b1e0e163 Try SDL_UDEV_deviceclass to detect joysticks even if in a
+    container
+  * 857e5b08c Fixed trying to add a game controller mapping for the
+    accelerometer on iOS
+  * 49eb375a5 Added SDL2.framework to the embedded frameworks for SDL
+    test programs
+  * aeda6a8e6 Record the initial input report mode and only restore
+    simple mode if that's what we started with
+  * fe76c4071 Added a runtime check for BLUETOOTH_CONNECT in addition to
+    BLUETOOTH (thanks @perepujal!)
+  * 884c21c56 Use common generic syscond for platforms with no cond
+    implementation
+  * 557d8e2f2 PS2 use WaitSemaEx for waiting for semaphore with timeout
+  * 3a8032f49 Make sure the string is terminated, fixed invalid read in
+    SDL_PrivateGameControllerParseControllerConfigString()
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 26 Dec 2023 17:08:02 +0100
+
 libsdl2 (2.29.0+git2312211600.e7c457571~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
