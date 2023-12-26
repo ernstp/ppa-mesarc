@@ -1,3 +1,34 @@
+mesa (24.0.0~git2312252136.d9ba75e2e11~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * d9ba75e2e11 Revert "vk/util: ignore unsupported feature structs"
+  * bc9fe6637b3 ci: merge debian-rusticl-testing into debian-testing
+  * 6d4577799ce ci/microsoft: Update the image-tag and image-path for
+    msvc2019/msvc2022
+  * cb50d0cabfd ci/msvc: Split the install of rust and d3d out of
+    mesa_deps_test.ps1
+  * 6e8c3a585ab ci/msvc: Stick VK-GL-CTS to specific version
+    56114106d860c121cd6ff0c3b926ddc50c4c11fd
+  * 85bbc1a7530 ci/msvc: Stick deqp-runner to version v0.16.1
+  * 5109790cf93 ci/msvc: Install both msvc2019 and msvc2022
+  * 14e624bf439 ci/msvc: Install msvc2019 only from vs2022
+  * 24c40cafc4d ci/msvc: Upgrade to vs2022 build tools
+  * 25a560b6226 ci/msvc: Remove &windows_msvc_image_tag
+  * c0ad42fe345 ci/msvc: Improve msvc init
+  * a2595dbf3bf ci/msvc: Rename vs to msvc for consistence
+  * 4d6d0a24ed0 ci/msvc: Rename vs2019 to msvc
+  * 543e872d908 ci/msvc: Split install vulkan sdk out of choco
+  * 9e89e7a7c2b ci/msvc: Install graphics tools(DirectX debug layer)
+    easy to stuck, place it at the beginning
+  * 09ca7b3d9e8 ci/msvc: update flex and bison to winflexbison3
+  * 7e8db6aedfd meson: always define {,DRAW_}LLVM_AVAILABLE one way or
+    the other
+  * ac5a27917d9 ci: fix farm restore pipelines
+  * d75643f400c ci: disable collabora farm as it is currently offline
+  * c05261a7d82 ci/v3dv: add new failures
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 26 Dec 2023 17:09:10 +0100
+
 mesa (24.0.0~git2312222112.551924aa879~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
