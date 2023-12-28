@@ -1,3 +1,29 @@
+mesa (24.0.0~git2312272334.ebee672ef87~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * ebee672ef87 docs: update calendar for 23.3.2
+  * b8215b54420 docs: add sha256sum for 23.3.2
+  * 0cf1ee35f7e docs: add release notes for 23.3.2
+  * 3465e9f3526 anv: Assume that imported bos already have flat CCS
+    requirements satisfied
+  * 8d0e70f628b anv: Replace anv_bo.vram_only by anv_bo.alloc_flags
+    check
+  * 060439bdf0e anv: Add ANV_BO_ALLOC_IMPORTED
+  * 5683c54d8f1 driconf: add Witcher3 to Intel XeSS workaround
+  * b77b67064e4 driconf: add Dying Light 2 to Intel XeSS workaround
+  * 55c262898ae iris: Skip mi_builder init for indirect draws
+  * d55b5d4af5d iris: Don't search the exec list if BOs have never been
+    added to one
+  * d178334d5ca iris: Initialize bo->index to -1 when importing buffers
+  * bd32badbb77 iris: Delay main and aux resource creation on import
+  * 5f93f97892e iris: Use common res fields for imported planes
+  * a0f3c0a2466 iris: Inline import_aux_info
+  * 81d132d5ea9 iris: Use helpers for generic aux plane importing
+  * 733607cc37e iris: Simplify a plane count check in from_handle
+  * 79222e5884f iris: Simplify get_main_plane_for_plane
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Dec 2023 13:03:49 +0100
+
 mesa (24.0.0~git2312252136.d9ba75e2e11~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
