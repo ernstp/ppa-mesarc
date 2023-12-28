@@ -1,3 +1,11 @@
+wayland-protocols (1.32+git2312271943.46f201b~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 46f201b xdg-shell: Clarify what a toplevel by default includes
+  * 9d83649 linux-dmabuf: sync changes from unstable to stable
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Dec 2023 13:12:50 +0100
+
 wayland-protocols (1.32+git2311241950.c4f5598~f~base2) focal; urgency=medium
 
   * New snapshot:
