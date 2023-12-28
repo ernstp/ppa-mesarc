@@ -1,3 +1,13 @@
+libsdl2 (2.29.0+git2312272349.0f8f4f676~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 0f8f4f676 Sync SDL3 wiki -> header
+  * 8030e7546 Fix static build with libdecor 0.2.0
+  * 5dfb0c19c Fix static build with libdrm 2.4.116
+  * 2afbb5713 Add Access Controller
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Dec 2023 13:02:44 +0100
+
 libsdl2 (2.29.0+git2312250102.3b1e0e163~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
