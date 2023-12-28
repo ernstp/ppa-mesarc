@@ -1,3 +1,28 @@
+mesa (23.3.2+git2312281307.0aa0ae31d3e~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 0aa0ae31d3e anv: Assume that imported bos already have flat CCS
+    requirements satisfied
+  * be59925ab2a .pick_status.json: Mark
+    8d0e70f628b745ad81124e0c3fe5e46ea84f6b46 as denominated
+  * e0d1a5f284b .pick_status.json: Mark
+    060439bdf0e74f0f2e255d0a81b5356f9a2f5457 as denominated
+  * 101dcc53f1d .pick_status.json: Update to
+    ebee672ef87794f3f4201270623a92f34e62b8ff
+  * 4239dfff45e .pick_status.json: Mark
+    eb5bb5c784e97c533e30b348e82e446ac0da59c8 as denominated
+  * 9e60ecdd213 docs: add sha256sum for 23.3.2
+  * 527d45230f7 VERSION: bump for 23.3.2
+  * ad50fc2dba4 docs: add release notes for 23.3.2
+  * 64741669def iris: Skip mi_builder init for indirect draws
+  * 43e9a93fcaa iris: Don't search the exec list if BOs have never been
+    added to one
+  * 72dac9936f6 iris: Initialize bo->index to -1 when importing buffers
+  * 0289027140f .pick_status.json: Update to
+    55c262898ae7188311c89a60e4ec0fbb67b7a95b
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Dec 2023 13:08:29 +0100
+
 mesa (23.3.1+git2312240834.99fdd1bcf18~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
