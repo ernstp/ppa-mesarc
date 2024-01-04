@@ -1,3 +1,45 @@
+mesa (24.0.0~git2401041548.34cc7651728~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 34cc7651728 radv/rt: Free traversal NIR after compilation
+  * b8e06fa48aa virgl: Only send the same amount of data than declared
+    in pipe_sampler_state
+  * 395dee0d89b radv: drop si_ prefix from all functions
+  * 89947eb151d radv: remove radv_write_scissors()
+  * dd64293104a radv: rename si_make_texture_descriptor() to
+    gfx6_make_texture_descriptor()
+  * 887ac765bbd radv: remove duplicated si_tile_mode_index() function
+  * aa1eb54b3bd radv: constify a variable in radv_emit_depth_control()
+  * 8b7b5be98bc radv: disable stencil test without a stencil attachment
+  * cc7ce6c01f9 r300: mark load_ubo_vec4 with ACCESS_CAN_SPECULATE
+  * f8a5cba3b42 r300: remove backend LRP lowering
+  * f62a1282744 r300: remove backend CMP lowering
+  * e6e1da81249 r300: lower ftrunc in NIR
+  * 77f429e1a51 r300: fcsel_ge lowering from lowered ftrunc
+  * 6167f6e0962 r300: lower flrp in NIR
+  * ddcf29202d0 r300: add some more early bool lowering
+  * 024491f60fd r300: nir fcsel/CMP lowering pass for R500
+  * 75e7790ee52 r300: small adress register load optimization
+  * af3cca98a2f lavapipe: bump .maxResourceDescriptorBufferRange
+  * da53d0b6e5a gallivm/lp: move sampler index around to reduce struct
+  * 839045bcc84 gallivm/lp: merge sample info into normal info
+  * 344fa0895ee gallivm/lp: reduce image descriptor size.
+  * 749a4fff869 gallivm/lp: reduce size of lp_jit_texture.
+  * 1c68381ead4 gallivm/sample: make the load_mip helper useful outside
+    this file.
+  * bdde30c1310 gallivm/sample: add some num_samples vs level zero only
+    support
+  * 7d4453b5862 gallivm/sample: refactor first/last level handling and
+    use level_zero_only.
+  * c8c8c5a3cf3 freedreno/drm: don't crash in heap allocator when run
+    under valgrind
+  * fd6b3bf2672 freedreno/drm: notify valgrind about FD_BO_NOMAP maps
+  * 60686d4146c ir3/a6xx: fix ldg/stg of ulong2 and ulong4 data
+  * 3f25a73f17c ir3: fix shift amount for 8-bit shifts
+  * e7f3112eb97 asahi: Implement lod queries
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 04 Jan 2024 16:55:03 +0100
+
 mesa (24.0.0~git2312272334.ebee672ef87~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
