@@ -1,3 +1,10 @@
+wayland-protocols (1.32+git2312271956.7f20018~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 7f20018 ci: upgrade ci-templates and Debian
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 04 Jan 2024 17:04:11 +0100
+
 wayland-protocols (1.32+git2312271943.46f201b~f~base2) focal; urgency=medium
 
   * New snapshot:
