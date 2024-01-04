@@ -1,3 +1,16 @@
+libsdl2 (2.29.0+git2401031507.7b4f1ef01~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 7b4f1ef01 yuv2rgb: warning fixes and comment out unused code
+  * 41bf6b5a5 Add basic rumble support to Steam Deck
+  * 0fc357446 Updated copyright for 2024
+  * d649f9572 Use GNU sed if available
+  * 4f8dd2d39 Speed up processing of update-copyright.sh
+  * b02c8267f sdl2.m4: Call $PKG_CONFIG rather than hard-coding pkg-
+    config
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 04 Jan 2024 16:53:59 +0100
+
 libsdl2 (2.29.0+git2312272349.0f8f4f676~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
