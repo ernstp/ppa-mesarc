@@ -1,3 +1,12 @@
+libdrm (2.4.119+git2401041100.118addfa~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 118addfa amdgpu: fix use-after-free
+  * 54b12081 radeon: fix missing stencil_tile_mode initialisation in the
+    linear/fallback case
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 04 Jan 2024 16:53:36 +0100
+
 libdrm (2.4.119+git2312211249.fc5f2239~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
