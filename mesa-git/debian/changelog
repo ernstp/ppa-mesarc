@@ -1,3 +1,26 @@
+mesa (23.3.2+git2401040002.f544bd05caf~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * f544bd05caf zink: enforce maxTexelBufferElements for texel buffer
+    sizing
+  * f4e231dddd7 zink: lock screen queue on context_destroy and
+    CreateSwapchain
+  * 6fa1ab1ad0d aco/tests: use more raw strings
+  * 10b141aa89c Revert "d3d12: Fix screen->winsys leak in d3d12_screen"
+  * 2382dca2c51 Revert "d3d12: Only destroy the winsys during screen
+    destruction, not reset"
+  * fb5dea4b0d1 .pick_status.json: Update to
+    2c078bfd18cae0ed1a0a3916020e49fb74668504
+  * f03eab9efc8 zink: put sysmacros.h include under #ifdef
+    MAJOR_IN_SYSMACROS
+  * c47c264f4d5 zink: use KHR version of maint5 features
+  * 8ef51248719 zink: update profile schema
+  * 92cdf6cb5f2 meson: Support for both packaging and distutils
+  * 0b44ec8648a .pick_status.json: Update to
+    39c8cca34fb72db055df18abf1d473e099f4b05b
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 04 Jan 2024 16:59:50 +0100
+
 mesa (23.3.2+git2312281307.0aa0ae31d3e~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
