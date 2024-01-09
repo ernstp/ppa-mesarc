@@ -1,3 +1,49 @@
+mesa (24.0.0~git2401091904.3da27733166~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 3da27733166 vtn: fuse OpenCL mad if we can can
+  * f6d2df5a754 egl: implement EGL_EXT_query_reset_notification_strategy
+  * 73603c19c52 EGL: sync files with Khronos
+  * db5ddf1c2e4 d3d12: Decode - Adding more supported resolution
+  * 4c7486c9aac radv/winsys: replace '<= GFX6' by '== GFX6'
+  * ae4628d3d6c radv: do not program COMPUTE_MAX_WAVE_ID (GDS register)
+    on GFX6
+  * ec656e19840 lavapipe: maint6
+  * 89a7ee73930 lavapipe: maint6 descriptor stuff
+  * 6c83b9f2199 vk/cmd_queue: fix up indentation a little
+  * e977a2368b8 vk/cmd_queue: generate maint6 functions
+  * 2439982eac3 vk/cmd_queue: stop using explicit casts
+  * ad158b0beec anv: Call anv_measure_submit() before
+    anv_cmd_buffer_chain_command_buffers()
+  * d37414d8a4d anv: Fix anv_measure_start/stop_snapshot() over copy or
+    video engine
+  * b8d48ebc93e anv: Add missing anv_measure_submit() calls in Xe KMD
+    backend
+  * a0f7820fe83 anv: Simply companion_rcs handling
+  * 428a179865a anv: Drop useless STATIC_ASSERT in
+    anv_physical_device_init_queue_families()
+  * 0997766069b anv: Increase ANV_MAX_QUEUE_FAMILIES
+  * 0c42c79edfb utils/u_debug: Fix parse of "all,<something else>
+  * a63f3fbdae0 mesa: check for float-format support
+  * c75b882de4c mesa/main: require EXT_color_buffer_float for ES 3.2
+  * 782fb8966bd mesa: actually check for EXT_color_buffer_float support
+  * 5f995f5e34b mesa/st: do not check for emulated format
+  * ee8ac6a7a2f mesa/st: do not require render-target support for
+    texture-only exts
+  * 5c42d6c62f9 v3dv: implement
+    VK_EXT_shader_demote_to_helper_invocation
+  * 658ce711d5b radv/rt: Lower ray payloads to registers
+  * 8e6d28f4734 intel/tools/tests: Add i965_asm tests for gfx12 and
+    gfx12.5
+  * b87fc2125e9 intel/tools/tests: Unbreak i965_asm tests
+  * bb2083a57cc intel/tools/tests: Fix sends indirect argument in gfx9
+    test
+  * 98d24614249 intel/tools/i965_asm: Don't set src0 for break and while
+    on gfx12
+  * db4d58fe310 intel/tools/i965_asm: Add dp4a and add3 instructions
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 09 Jan 2024 20:06:58 +0100
+
 mesa (24.0.0~git2401041548.34cc7651728~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
