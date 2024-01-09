@@ -1,3 +1,40 @@
+libsdl2 (2.29.0+git2401091511.2afd04d09~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 2afd04d09 test/acinclude.m4 (AM_PATH_SDL2): apply recent sdl2.m4
+    PKG_CONFIG patch
+  * 69f3bb2e3 test: Accept small numerical differences in more
+    mathematical tests
+  * d1c5038f1 testautomation: don't do float equality tests
+  * f62d1220a Restore the previously initialized subsystems after the
+    Init/Quit test
+  * 4c11307a4 Only initialize audio drivers that have been requested
+  * b1a82b577 gamecontroller: Fix function name in cherry-picked
+    documentation
+  * 3ff56fda1 testautomation: only require accelerated renderer with non-
+    dummy video driver
+  * 64754f3a2 test: When listing test-cases, say which ones are disabled
+  * d3c21666d gamepad: Clarify range and direction of axes
+  * 5e12e4b81 Updated documentation for SDL_HINT_SHUTDOWN_DBUS_ON_QUIT
+  * 8c4e4d57b Add hint to make SDL handle dbus_shutdown()
+  * ca3b8fe91 Fixed build
+  * e1c3dcb40 Don't try to send the PS third-party feature request to
+    the Logitech G815 keyboard
+  * c309546e8 Fixed warning: no previous prototype for function
+    'SDL_GetGameControllerTypeFromString' [-Wmissing-prototypes]
+  * 0e913a22d Renamed ShowTextInput/HideTextInput to
+    ShowScreenKeyboard/HideScreenKeyboard on Android
+  * be29ca018 Use the application requested size to determine automatic
+    orientation on iOS
+  * f892ae10d updateKeyboard should use the SDL window's screen instead
+    of the view window's screen, which may be nil.
+  * 674e89457 Added mapping for the RX Gamepad, e.g. Pandora Box 7
+  * b1ad45acd Fix memory barriers on ARMv5
+  * eb1b9b418 SDL_audio.c: Fix crash if we switch from direct output to
+    streaming, and if the buffersizes change.
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 09 Jan 2024 20:05:46 +0100
+
 libsdl2 (2.29.0+git2401031507.7b4f1ef01~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
