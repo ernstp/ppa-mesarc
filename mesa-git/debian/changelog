@@ -1,3 +1,30 @@
+mesa (23.3.2+git2401091831.118aafe7341~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 118aafe7341 zink: always force flushes when originating from api
+    frontend
+  * 3405dbf9734 zink: Always fill external_only in
+    zink_query_dmabuf_modifiers
+  * ade42dfb0e1 zink: Initialize pQueueFamilyIndices for image query /
+    create
+  * cff9bdc316e zink: fix heap-use-after-free on batch_state with sub-
+    allocated pipe_resources
+  * 5d1329a1b34 .pick_status.json: Mark
+    fbe4e16db2d369c3e54067d17f81bdce8661a461 as denominated
+  * 488a1ee83c5 .pick_status.json: Update to
+    031978933151e95690e93919e7bfd9f1753f2794
+  * 2934ae2736e radv/rt: Free traversal NIR after compilation
+  * 84d8ac768f8 radv: disable stencil test without a stencil attachment
+  * 1acb1a232f1 radv: fix binding partial depth/stencil views with
+    dynamic rendering
+  * 955d7b3fa36 llvmpipe: fix caching for texture shaders.
+  * 4ea8f20b19a intel/compiler: fix release build unused variable.
+  * 548cc0dd8c8 gallivm: handle llvm 16 atexit ordering problems.
+  * 1c4c1c84310 .pick_status.json: Update to
+    e2a7c877ad1fd6bda4032f707eea7646e5229969
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 09 Jan 2024 20:11:45 +0100
+
 mesa (23.3.2+git2401040002.f544bd05caf~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
