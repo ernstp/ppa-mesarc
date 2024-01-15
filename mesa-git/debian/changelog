@@ -1,3 +1,50 @@
+mesa (23.3.3+git2401121944.151cd31e051~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 151cd31e051 zink: fix separate shader patch variable location
+    adjustment
+  * 62161b74254 zink: Fix resizable BAR detection logic
+  * 92f39d1cc3a zink: fix buffer rebind early-out check
+  * 5aab597ecb0 zink: ignore tc buffer replacement info
+  * 35b321e9b8d zink: always force flushes when originating from api
+    frontend
+  * 572e3a1bfae anv: fix disabled Wa_14017076903/18022508906
+  * d85271f340c radv: Correctly select SDMA support for PRIME blit.
+  * 5361f9c7bdd r300: fix reusing of color varying slots for generic
+    ones
+  * 4b10fa974bf lavapipe: fix devenv icd filename
+  * 62a8493ac11 radv: do not issue SQTT marker with
+    DISPATCH_MESH_INDIRECT_MULTI
+  * ebfe425490d nir: Fix cast
+  * 761ef45a62d symbols-check: Add _GLOBAL_OFFSET_TABLE_
+  * 6468166ae22 d3d10umd: Fix compilation
+  * 7979ca07ec8 radeonsi: compute epitch when modifying surf_pitch
+  * 3dcea0be227 ac/surface: don't oversize surf_size
+  * 15a237d7fe2 .pick_status.json: Update to
+    68f5277887aae1cdc202f45ecd44df2c3c59ba7d
+  * fa4796afd65 docs: add sha256sum for 23.3.3
+  * d495e8da3dd VERSION: bump for 23.3.3
+  * bcd106f4d15 docs: add release notes for 23.3.3
+  * 04b3e4a4f22 egl: only check dri3 on X11
+  * a53c9acd822 vtn: Allow for OpCopyLogical with different but
+    compatible types
+  * 1c476c7742d .pick_status.json: Update to
+    67ad1142cf6afe61de834cefeddb4be06382899f
+  * 635d1b7d69b anv: Increase ANV_MAX_QUEUE_FAMILIES
+  * 08f688d2361 .pick_status.json: Update to
+    f6d2df5a7542025022e69b81dbe3af3e51ea5cd3
+  * 4ea3b942819 .pick_status.json: Mark
+    b38c776690c9c39b04c57d74f9b036de56995aff as denominated
+  * 92dcb152749 ac/rgp: Fix single-bit-bitfield-constant-conversion
+    warning
+  * b570eb60432 radv: don't emit cp dma packets on video rings.
+  * 7c9e93fe8c3 aco: fix applying input modifiers to DPP8
+  * a3bcb524829 vtn: Remove transpose(m0)*m1 fast path
+  * e7dd2637a5b nir/opt_move_discards_to_top: don't schedule
+    discard/demote across subgroup operations
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 15 Jan 2024 19:17:10 +0100
+
 mesa (23.3.2+git2401091831.118aafe7341~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
