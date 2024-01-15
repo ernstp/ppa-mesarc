@@ -1,3 +1,20 @@
+corectrl (1.3.9+git2401141258.cefb583~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * cefb583 Bump version to 1.3.9
+  * bbaf270 Disable hwmon fan controls on systems with overdrive fan
+    controls
+  * 56444ed Add GPUInfoOdFanCtrl capability detection
+  * db1870f Read AMD GPU power sensor data from sysfs
+  * 1e1d63f Use const references on some loop variables and lambda
+    parameters
+  * 89f80c8 Make ISWInfo::IProvider::provideInfo method constant
+  * ddb6824 Make IGPUInfo::IProvider methods constant
+  * ae540ab Log std::string directly rather than its underlying data
+  * 7d461bb Log all out of range states on PMFreqRangeProvider
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 15 Jan 2024 19:10:05 +0100
+
 corectrl (1.3.8+git2311051857.7c0ed9b~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
