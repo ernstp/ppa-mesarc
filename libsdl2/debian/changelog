@@ -1,3 +1,28 @@
+libsdl2 (2.29.0+git2401132045.38d11e5cc~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 38d11e5cc Add missing `(void)` in functions params
+  * bbe4d693e Use correct touch check flag
+  * b6e97d9ff Fixed Xcode warnings
+  * 5db6eb774 Removed reference to deleted header from Xcode project
+  * 347b6cdcb Prevent ASAN warning: like SDL_triangle.c:305:30: runtime
+    error: left shift of negative value -672 (even if the value was
+    correctly computed)
+  * 66209135d render: Fix line clipping with translated viewports
+  * 01fa4dd9d Fixed ASAN warning, runtime error: left shift of 160 by 24
+    places cannot be represented in type 'int'
+  * 9fe09950f wayland: Raise the frame throttle limit
+  * 71cd1fa59 Fix compile error with XInputOnGameInput.h
+  * 4f2c7328d test: Use AUDIO_F32SYS for native-endianness
+  * 1634a4cc3 test: Use SDL_CreateRGBSurfaceWithFormatFrom for
+    SDLTest_ImageFace
+  * feaf52dba test: Fix encoding declaration for RGB24 test images
+  * 970ed36de Only force X11 if SDL_VIDEO_DRIVER_X11 is available
+  * bd2f1e9ea Use the X11 driver if the application uses X11-based
+    graphics frameworks
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 15 Jan 2024 19:11:02 +0100
+
 libsdl2 (2.29.0+git2401091511.2afd04d09~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
