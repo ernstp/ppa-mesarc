@@ -1,3 +1,24 @@
+xwayland (2:23.2.3+git2401111120.4acc5cfb7~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 4acc5cfb7 glamor: Fall back for mixed depth 24/32 in glamor_set_alu
+  * ea76920a5 glamor: Make glamor_set_alu take a DrawablePtr
+  * 02236e3fd glamor: Don't override source alpha to 1.0 if it's used
+    for blending
+  * 7b3010b26 dix: initialize the XTest sendEventsProc for all devices
+  * 335d2c9fc xwayland: override the XTest sendEventsProc for all
+    devices
+  * d5c278fab dix: don't allow for devices with 0 axes
+  * 813457410 Xi: require a pointer and keyboard device for
+    XIAttachToMaster
+  * 630da5cb1 xwayland: Pass the correct oeffis device types
+  * d1176c145 os: Use KERN_PROC_ARGS to determine client command on
+    DragonFly and FreeBSD
+  * cfa63ee2d os: Use LOCAL_PEERCRED to determine local client PID on
+    FreeBSD
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 15 Jan 2024 19:21:46 +0100
+
 xwayland (2:23.2.3+git2312130252.7439e9c6c~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
