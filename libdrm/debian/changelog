@@ -1,3 +1,11 @@
+libdrm (2.4.120+git2401131037.75254bf2~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 75254bf2 build: bump version to 2.4.120
+  * 6c4392f4 Sync headers with drm-next
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 15 Jan 2024 19:10:42 +0100
+
 libdrm (2.4.119+git2401041100.118addfa~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
