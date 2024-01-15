@@ -1,3 +1,52 @@
+mesa (24.1.0~git2401151741.ea023ff5cdd~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * ea023ff5cdd rusticl/kernel: no need to reset the scratch size
+    anymore
+  * 835c208578b rusticl/kernel: add a few comments in regards to pass
+    ordering
+  * f8966598940 rusticl/kernel: run opt/lower_memcpy later to fix a
+    crash
+  * 2f229a8ba63 etnaviv: implicitly update shared texture resources
+  * 27ac55873a1 etnaviv: only add shared resources to implicit flush
+    list
+  * 9ab9df39417 etnaviv: track resource sharing
+  * 22c4a5e1272 v3d/ci: run OpenGL 3.1 tests
+  * 480ec5b1d48 freedreno/replay: Add WSL backend for Windows
+  * 16de8e99cf6 freedreno/replay: Correctly free iova on msm backend
+  * 56a6bc758d5 freedreno/replay: Delete all buffers after each
+    submission
+  * 985a5c8f1ad broadcom/simulator: protect simulator BO rallocs with
+    mutexes
+  * 56eb09480b6 anv: rename video command file
+  * 51d63f22363 anv: move compute/ray-tracing commands to their own file
+  * cfe894e1e94 anv: move draw commands to their own file
+  * ddc18b4e784 anv: move generated draw flush helper to its own file
+  * df1dc882cb2 anv: fix missing header
+  * 74c8edd288f anv: fix include guards
+  * 6bb3ae99c52 anv: export descriptor flushing functions
+  * 43fb43ba2cf radv: never set DISABLE_WR_CONFIRM for CP DMA clears and
+    copies
+  * b555f9451cc radv: introduce radv_graphics_state_key
+  * b888677dcfe radv: add vertex_robustness1 to radv_shader_stage_key
+  * f2f87d08721 radv: re-organize radv_pipeline_key
+  * fb80421a623 radv: stop passing the pipeline key when compiling
+    compute/rt shaders
+  * 6e7018e74d6 radv: remove unused
+    lower_rt_instruction_monolithic_state::key
+  * ea89328fb41 radv: remove unecessary radv_nir_compiler_options::key
+  * 6e1a73a53d1 radv: add optimisations_disabled to
+    radv_shader_stage_key
+  * 3a776f036fc radv: use radv_shader_stage_key directly with pre-
+    existing fields
+  * 28e330c2453 radv: add radv_shader_stage_key to radv_shader_stage
+  * cff2a3aafcc radv: move radv_pipeline_key::mesh_fast_launch_2 to the
+    per-device cache key
+  * d74150fc661 radv: remove one unused parameter in
+    radv_fill_shader_info_ngg()
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 15 Jan 2024 19:12:06 +0100
+
 mesa (24.0.0~git2401091904.3da27733166~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
