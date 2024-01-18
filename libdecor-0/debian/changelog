@@ -1,3 +1,17 @@
+libdecor-0 (0.2.2+git2401152200.7807ae3~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 7807ae3 build: Bump version to 0.2.2
+  * 9e35684 gtk: fix memory leak when destroying the gtk plugin
+  * 758ceed gtk: fix memory leak when freeing seats
+  * ce69853 gtk: Make resize corner region larger
+  * 82d02ea cairo: Make resize corner region larger
+  * 59a6999 cursor-settings: Get theme/size from env if D-Bus call fails
+  * 394f49b gtk: Use g_clear_pointer() in a couple of places
+  * 86863f8 gtk: Don't early out of frame free function
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 18 Jan 2024 08:07:51 +0100
+
 libdecor-0 (0.2.1+git2312012214.060fe76~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
