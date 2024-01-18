@@ -1,3 +1,22 @@
+xwayland (2:23.2.4+git2401161038.4f16a3f0b~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * 4f16a3f0b Bump version to 23.2.4
+  * 51be9e767 ephyr,xwayland: Use the proper private key for cursor
+  * 4093057b9 glx: Call XACE hooks on the GLX buffer
+  * 42f8d1828 dix: when disabling a master, float disabled slaved
+    devices too
+  * 01cd3a728 Xi: do not keep linked list pointer during recursion
+  * 7efd09cdb Xi: flush hierarchy events after adding/removing master
+    devices
+  * 1c22e4a35 Xi: when creating a new ButtonClass, set the number of
+    buttons
+  * ee5377d94 dix: fix DeviceStateNotify event calculation
+  * 9105be1c5 dix: Allocate sufficient xEvents for our DeviceStateNotify
+  * b5cb27032 dix: allocate enough space for logical button maps
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 18 Jan 2024 08:17:52 +0100
+
 xwayland (2:23.2.3+git2401111120.4acc5cfb7~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
