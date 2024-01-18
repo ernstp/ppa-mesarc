@@ -1,3 +1,20 @@
+libsdl2 (2.29.0+git2401172229.3d6cf2b5c~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 3d6cf2b5c update config.guess and config.sub from mainstream
+  * f7f9478ca docs: Note SDL_UpdateWindowSurfaceRects can update beyond
+    specified areas.
+  * 9db80adfb Fixed bug #7614: Segmentation Fault in SDL_BlitSurface
+  * f3b0dc500 Fixed bug #8301 - Software renderer draws long lines
+    incorrectly / SDL_RENDERLINEMETHOD_GEOMETRY
+  * c69e858e7 audio: Patched to compile (mixed declarations and code).
+  * 1e2f31181 audio: backport SDL3's audio datatype converters.
+  * eae81ec80 Touchpads already have their right/left buttons swapped in
+    raw input
+  * f641d91f6 Restore window minimum and maximum size if it is recreated
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 18 Jan 2024 08:08:08 +0100
+
 libsdl2 (2.29.0+git2401132045.38d11e5cc~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
