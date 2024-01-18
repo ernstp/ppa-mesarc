@@ -1,3 +1,51 @@
+mesa (24.0.0~rc2+git2401180029.a062b0432a2~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * a062b0432a2 ci/deqp: uprev deqp-runner for Linux too to 0.18.0
+  * 01b374ecafb ci/deqp: ensure that in `default` builds, wayland + x11
+    + xcb are all built
+  * e716b08f860 VERSION: bump for 24.0.0-rc2
+  * 9d1a0646633 radv/rt: Add workaround to make leaves always active
+  * f7f823c787e panvk: Fix access to unitialized
+    panvk_pipeline_layout::num_sets field
+  * b65d7520f6c panvk: Fix tracing
+  * 1246e54f1c9 nir: Use alu source components count in
+    nir_alu_srcs_negative_equal
+  * 4175b4d547e Revert "ci: lima farm is down"
+  * 9732d1bdcd8 compiler/spirv: The spirv shader is binary, should write
+    in binary mode
+  * 8974222433e vulkan/wsi/wayland: fix returns and avoid leaks for
+    failed swapchain
+  * ce34ec41cde ci: fix job dependency error in MRs for bin/ci/* scripts
+  * 3dabc03b58a .pick_status.json: Update to
+    10e2dbb63b9d1f8f35c4fc3f570cd19b3fc03b43
+  * 25ae9134ddd radeonsi/vcn: Fix H264 slice header when encoding I
+    frames
+  * 43a00ad0fa7 glsl/nir: fix gl_nir_cross_validate_outputs_to_inputs()
+    memory leak
+  * 78fd14d9384 rusticl/kernel: run opt/lower_memcpy later to fix a
+    crash
+  * c5b8590e6d7 radv: never set DISABLE_WR_CONFIRM for CP DMA clears and
+    copies
+  * 9888a95130d etnaviv: disable 64bpp render/sampler formats
+  * 05ff8910887 .pick_status.json: Update to
+    ff84aef116f9d0d13440fd13edf2ac0b69a8c132
+  * fc4180339ca anv: check for wa 16013994831 in emit_so_memcpy_end
+  * b39ee4d7669 intel/disasm: Remove duplicate variable reg_file
+  * 5b8984f32f9 anv: hide vendor ID for The Finals
+  * eb3d73073ff intel/aux_map: fix fallback unmapping range on failure
+  * f19b7d8dfc4 mesa: Consider mesa format in addition to internal
+    format for mip/cube completeness
+  * 04ffe4771e5 anv: Fix PAT entry for userptr in integrated GPUs
+  * 0ebdd39d852 venus: populate oom from ring submit alloc failures
+  * fcd78c52814 util/tests: Disable half-float NaN test on hppa/old-mips
+  * 97ebcff41ce util: Add DETECT_ARCH_HPPA macro
+  * 6febac5c965 Revert "ci/radeonsi: disable VA-API testing on raven"
+  * ab960ee0bfb radeonsi: compute epitch when modifying surf_pitch
+  * fc11cbb37ed radv: Recompute max_waves after postprocessing RT config
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 18 Jan 2024 08:13:30 +0100
+
 mesa (23.3.3+git2401121944.151cd31e051~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
