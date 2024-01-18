@@ -1,3 +1,44 @@
+mesa (24.1.0~git2401180602.30e09d0e981~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 30e09d0e981 nak: implement FLO on SM50
+  * f33683e4dad radv: don't submit empty command buffers on encoder
+    ring.
+  * d32f2ee7b63 radv/video: refactor sq start/end code to avoid decode
+    hangs.
+  * 6bd31b60e14 vulkan/video: constify the encoding apis.
+  * 7f9381782f9 venus: ensure object id is unique
+  * 184bcfdc1c3 nvk: Implement VK_KHR_zero_initialize_workgroup_memory
+  * 6e214f21579 nvk: Properly configure the min/max shared mem size
+  * eaa7980e15e nvk: Add a #define for max shared memory size
+  * be0f04f5bd3 nvk: Unref shaders on pipeline free
+  * 4b0448d8f8b nvk: Set framebufferIntegerColorSampleCounts
+  * 03f5fc45bbd docs: update calendar for 24.0.0-rc2
+  * 6e4bb8253ed venus: fix shmem leak on vn_ring_destroy
+  * 531505f8c59 nouveau: mme: Add a dumper
+  * cb6d954c67d nouveau: nvidia-headers: Add nv_push_dump tool
+  * d9cd3e4c55b nouveau: nvidia-headers: Add compute array parsing to
+    class_parser.py
+  * 2cc9ad0e5c4 nouveau: nvidia_header: Add AMPERE_COMPUTE_B in
+    vk_push_print
+  * 20b3f9521ee nouveau: nvidia_header: Add TURING_COMPUTE_A and
+    AMPERE_COMPUTE_A in vk_push_print
+  * 2d8b9b91601 nouveau: nvidia_header: Add AMPERE_A in vk_push_print
+  * 32f2a0f1e15 nouveau/mme: Stop using isaspec
+  * a69b7f1b19c nouveau/mme/fermi: Stop truncating iadd immediates
+  * 10e2dbb63b9 radv: delay emitting streamout enable at draw time
+  * bdfce158bd9 amd/ci: add flakes seen today
+  * 79422eccd80 ci: Add kmod
+  * a9831caa144 radv/rt: Add workaround to make leaves always active
+  * a18ea091af4 nir/comparison_pre_tests: update expectations
+  * 873fe637e20 nir/alu_srcs_negative_equal: bail earlier if possible
+  * 4740ee8d670 nir: Minor clean up in nir_alu_srcs_negative_equal
+  * b289028d0ab ci/ci_gantt_chart: show duration on hover
+  * ffaa247b4ff ci/ci_gantt_chart: add option to save output to a file
+  * cf86e97ace3 ci/ci_gantt_chart: add timeout vertical line
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 18 Jan 2024 08:09:09 +0100
+
 mesa (24.1.0~git2401151741.ea023ff5cdd~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
