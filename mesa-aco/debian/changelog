@@ -1,3 +1,49 @@
+mesa (24.1.0~git2401202055.c3a64f8dd11~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * c3a64f8dd11 intel/fs/xe2+: Allow SIMD16 MULH instructions.
+  * 54f3d5a00c7 intel/fs: Emit QUAD_SWIZZLE instructions with WE_all for
+    derivative lowering.
+  * 3e710a84ad8 intel/fs: Set the default execution group to 0 when not
+    representable by the platform.
+  * 43c9620dbf1 intel/eu/xe2+: Translate brw_reg fields in REG_SIZE
+    units to physical 512b GRF units during codegen.
+  * 8bc38215206 intel/fs/xe2+: Disable bank conflict mitigation pass for
+    now.
+  * 6efcba9e362 intel/ir/xe2+: Add support for 32 SBID tokens to
+    performance model.
+  * a9c057d5a35 radv: Implement NIR debug printf
+  * 03379d74ba5 util/printf: Expose util_printf_prev_tok
+  * d05f8f6146a util/printf: Include stdio.h
+  * 87417012f3f zink: Update zink-anv-tgl flakes
+  * 908f444ec10 ci/deqp: backport fix for zlib.net not allowing tarball
+    download anymore
+  * ebcab145cfc dzn: Add a debug option to enable experimental shader
+    models
+  * 90bf4b630b2 microsoft/compiler: Handle comparison bias/gradient
+    sampling
+  * 733b7fe831f microsoft/compiler: Declare shader model 6.8 / validator
+    1.8
+  * bf461d856fc ci/ci_post_gantt: add script that post gantt to Marge's
+    messages
+  * 1a9a71e2d99 freedreno/registers: A couple newline changes
+  * 2e733e94d81 freedreno/registers: Add basic kernel header support
+  * ab64afc109e freedreno/registers: Generate copyright comment blurb
+  * 8eca68d2dee freedreno/registers: Don't re-parse files
+  * d1567249e99 freedreno/registers: De-duplicate xml_reg_files
+  * 15f94505ba7 freedreno/registers: Pass full args to dump_c()
+  * 670e93bfb5d freedreno/a6xx: fix comment
+  * 5552ffd0f3b intel: Use an intel enum for cmat scope
+  * 0a03cf5b3c2 aco: remove boolean shuffle isel
+  * b4180ebbb9e radeonsi: lower boolean shuffle
+  * 2571580b2b7 radv: lower boolean shuffle
+  * d641750573a nir: add lowering for boolean shuffle
+  * 37a15ba53a8 ac/llvm: implement as_uniform and ballot_relaxed
+  * 6b031daf16c aco: implement as_uniform and ballot_relaxed
+  * 1cb5bf70090 nir: add ballot_relaxed and as_uniform intrinsics
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 22 Jan 2024 07:56:56 +0100
+
 mesa (24.1.0~git2401180602.30e09d0e981~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
