@@ -1,3 +1,10 @@
+wayland-protocols (1.33+git2401191446.5434607~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 5434607 build: Bump version to 1.33
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 22 Jan 2024 08:05:49 +0100
+
 wayland-protocols (1.32+git2312271956.7f20018~f~base2) focal; urgency=medium
 
   * New snapshot:
