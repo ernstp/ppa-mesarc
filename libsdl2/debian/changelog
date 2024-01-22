@@ -1,3 +1,56 @@
+libsdl2 (2.29.1+git2401220427.ed5d3d9f8~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * ed5d3d9f8 Fix compilation on loongarch
+  * f569cc56a tests: Fix automated audio tests on Windows and Linux
+  * 06dd70bc8 video: Use string comparison instead of #ifdefs for driver
+    detection
+  * a420eb79b cmake: run testautomation with CTest on ci
+  * 41fc39811 Move check for SDL_Delay upper bounds to testtimer
+  * 173734097 Use helper_ddtod function to compare atan2 infinity cases
+  * 69a6efcd1 Avoid using higher precision floating point numbers by
+    using it in a function
+  * fbee0b86b video: verify SDL_GetNumVideoDisplays is succesful
+  * 880c69392 testautomation_math: do relative comparison + more precise
+    correct trigonometric values
+  * 811adaa34 Only test error message when using specific video drivers
+  * 5368f4556 Remove one test that contains call of SDL_Quit() /
+    SDL_Init() because it conficts with the initializaion of test
+    common. (before it used SDL_VideoInit SDL_VideoQuit which weren't
+    perturbated by SDL_Quit())
+  * 3d5679bb8 Fix video_getSetWindowPosition() that fail when checking
+    events,   because testautomation_events.c() didn't finish to poll
+    all events before
+  * e3203278f Updated tests so they'll pass if we enable the C runtime
+    in SDL2.dll
+  * b5aec14d4 gdk: Backport SDL3 MR #8844
+  * 8eb2ec6a8 watcom makefiles: remove yuv_rgb_lsx.c from sources
+  * 83f3045ee Revert "updated WhatsNew.txt"
+  * f1bc5f305 Prevent asan warning on qsort():
+    'src/stdlib/SDL_qsort.c:27:5: runtime error: null pointer passed as
+    argument 1, which is declared to never be null`
+  * c3a3f1807 updated WhatsNew.txt
+  * 5d6eb4a5a Fixed overflow in SDL_SoftStretch() (see #8878)
+  * cfc22ac7d Added patch notes for the SDL 2.30.0 release
+  * b4f99deb9 Updated to version 2.29.1 for RC build
+  * 1e13aa2c9 androidaudio: same fix as AAudio for pausing thread when
+    backgrounding app.
+  * 109bb2f17 Make sure the render target isn't bound as a resource
+  * f7ab765b8 Fixed crash scaling very large surfaces
+  * 910e040e9 aaudio: Block the audio device thread when in the
+    background.
+  * bb969ac74 Fixed bug #7614: Segmentation Fault in SDL_BlitSurface
+    (#7808)
+  * 87b5bb584 Fixed potential overflow in software triangle rendering
+  * 11b111e1f Fixed types used in documentation (thanks @Dragon-
+    Baroque!)
+  * be576c5fe Updated Xcode projects after https://github.com/libsdl-
+    org/SDL/commit/472a415c8fa0a77c26765ce0bee0ca2330f7d179
+  * 472a415c8 video: move standard c, sse and lsx implementations of
+    yuv2rgb to its own source
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 22 Jan 2024 07:55:50 +0100
+
 libsdl2 (2.29.0+git2401172229.3d6cf2b5c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
