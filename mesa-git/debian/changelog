@@ -1,3 +1,17 @@
+mesa (24.0.0~rc2+git2401181407.085612fce5e~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 085612fce5e radv: don't submit empty command buffers on encoder
+    ring.
+  * 74ee323c17b radv/video: refactor sq start/end code to avoid decode
+    hangs.
+  * 2ff9219359c nvk: Unref shaders on pipeline free
+  * ed75400a509 venus: fix shmem leak on vn_ring_destroy
+  * 22c416e1c89 .pick_status.json: Update to
+    d2b08f9437f692f6ff4be2512967973f18796cb2
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 22 Jan 2024 08:01:25 +0100
+
 mesa (24.0.0~rc2+git2401180029.a062b0432a2~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
