@@ -1,3 +1,49 @@
+mesa (24.0.0~rc3+git2401302259.6dadb9b032c~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 6dadb9b032c anv: fix transfer barriers flushes with compute queue
+  * 2d46d9da5f5 anv: move *bits_for_access_flags to genX_cmd_buffer
+  * 4c991f51556 Revert "venus: refactor query feedback cmds"
+  * 40ae3a05c08 Revert "venus: acquire mutex when recycling query
+    feedback cmds"
+  * eb01e12181e Revert "virgl: Use better reporting for mirror_clamp
+    features"
+  * 05f1c47438b virgl: Use better reporting for mirror_clamp features
+  * af4400b62c3 radv: fix segfault when getting device vm fault info
+  * 1eec9578a5c r600: lower dround_even also on hardware that supports
+    fp64
+  * 5bbc4f69a5f radeonsi: Destroy queues before the aux contexts
+  * 961e33e1051 venus: acquire mutex when recycling query feedback cmds
+  * e5a9f541470 venus: refactor query feedback cmds
+  * 5f7921620ef anv: retain ccs image binding address
+  * 8be6eab8362 anv: rename aux_tt image field
+  * 66d3b00eaa0 anv: factor out aux-tt binding logic for future reuse
+  * 68e58263eba radeonsi: adjust flags for
+    si_compute_shorten_ubyte_buffer
+  * 88880bfc78a radeonsi: emit cache flushes before draw registers
+  * 439aff7ff66 anv: add missing alignment for AUX-TT mapping
+  * e7715e39a5b panfrost: Legalize before updating part of a AFBC-packed
+    texture
+  * 97c0e12da37 panfrost: add can_discard flag to
+    pan_legalize_afbc_format
+  * dae3eb155a2 panfrost: add copy_resource flag to
+    pan_resource_modifier_convert
+  * dc7b4111fd9 panfrost: factor out method to check whether we can
+    discard resource
+  * 6ffceb71385 nak: Fix TCS output reads
+  * 8f9db1db2eb anv: don't prevent L1 untyped cache flush in 3D mode
+  * 5b7553a1013 freedreno/drm: don't crash for unsupported devices
+  * 77e4a2a06e7 anv: untyped data port flush required when a pipeline
+    sets the VK_ACCESS_2_SHADER_STORAGE_READ_BIT
+  * 2588d3f4b90 gallivm: passing fp16_split_fp64 to fp16 lowering.
+  * 09bace40bf4 nvk: Don't exnore ExternalImageFormatInfo
+  * aba20a934da aco: fix labelling of s_not with constant
+  * 7e4e5fbdfbd zink: set more dynamic states when using shader objects
+  * 77c2a5d4d82 .pick_status.json: Update to
+    b75ee1a0670a3207dfd99917e4f47d064a44197f
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 31 Jan 2024 07:30:04 +0100
+
 mesa (24.0.0~rc2+git2401181407.085612fce5e~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
