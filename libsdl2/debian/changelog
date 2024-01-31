@@ -1,3 +1,50 @@
+libsdl2 (2.31.0+git2401302011.8ce6fb251~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 8ce6fb251 Use the exact motion associated with the warp
+  * d34a7c5ed Fixing viewport
+  * 36b843828 Fix scissor usage
+  * faa8fc291 Fix color
+  * 971508c0d autotools: a few libtool updates from mainstream
+  * c55bd2482 Fixed testautomation log callback calling convention
+  * ec25d6b1e aaudio: Backport headphone hotplugging support from SDL3.
+  * bb30a3536 Fixed Watcom build
+  * 11c932bf1 Fixed build
+  * f0b8fee88 Added the environment variable SDL_LOGGING to control
+    default log output
+  * 6ec3f5a28 Simplified the default log category logic
+  * 2c1106856 Document that the default log priority is error, not
+    critical
+  * fcd1c155c SDL_rwops.c (SDL_IsRegularFile): fix WinRT build failure
+    due to S_ISREG
+  * 230ae797a SDL_RWFromFile, stdio: reject if the file is not a regular
+    file.
+  * 529759613 Report out of memory instead of crashing in
+    SDL_LoadFile_RW()
+  * 332213163 Fixed N3DS build
+  * 4ff3b2827 Enable text input on video initialization without popping
+    up an on-screen keyboard
+  * f931b25f4 wasapi: If GetDeviceBuf can't get a full buffer, go back
+    to waiting.
+  * 1e06a3614 wasapi: Clamp device->spec.samples to the hardware buffer
+    size.
+  * 7aab3f0db blendmode: Corrected docs for
+    `SDL_BLENDOPERATION_[REV_]SUBTRACT`.
+  * 08caafe2f Improved timing accuracy of SDL_WaitEventTimeout() on
+    Windows
+  * 138fe3d43 mayflash adapter PS4 support
+  * b16ef14c7 Make sure we include the matching copy of vk_video headers
+  * 0f5a81565 Update to the latest version of the Khronos headers
+  * 919658477 Fixed ambiguity between std::byte and byte in rpcndr.h
+  * 48b62e2e5 make video/pandora to actually compile somehow.
+  * 9e352e61d fixes after ShowMessageBox changes:
+  * c5c0b2cb3 SDL_ShowMessageBox: Remove `#ifdef`s and respect
+    SDL_VIDEO_DRIVER hint.
+  * 1e016fd5e aaudio: Set low-latency audio mode.
+  * aaf426e28 testhaptic.c: include stdlib.h for exit()
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 31 Jan 2024 07:22:58 +0100
+
 libsdl2 (2.29.1+git2401220427.ed5d3d9f8~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
