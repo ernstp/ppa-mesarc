@@ -1,3 +1,15 @@
+corectrl (1.4.0~git2401261346.37be701~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 37be701 Refactor library and executable targets
+  * e548e4b Fix compilation with clang
+  * 76d4610 Add workaround for process monitor not working with recent
+    kernels
+  * cf67443 Avoid unnecessary process event type check in the BPF filter
+  * b3a0e42 Set BUILD_TESTING=OFF by default
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 31 Jan 2024 07:22:36 +0100
+
 corectrl (1.4.0~git2401151750.42333d5~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
