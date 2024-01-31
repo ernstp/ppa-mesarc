@@ -1,3 +1,56 @@
+mesa (24.1.0~git2401310508.0a97d1ebfa2~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 0a97d1ebfa2 zink: fix descriptor buffer unmaps on screen destroy
+  * c900cca96c4 zink: always map descriptor buffers as COHERENT
+  * 3f119a1fd8d util/disk_cache: Add marker on cache usage.
+  * 5fbb00dbc75 venus: use obj handle instead of id in device memory
+    report
+  * 8c87657fbd8 driconf: Fake vendorid for RDR2
+  * 01a99f5d4d5 d3d12:
+    d3d12_video_encoder_negotiate_current_h264_slices_configuration to
+    use correct mode when intra-refresh is on
+  * 45a6e1dc895 nak/nir: Stop lowering load_local_invocation_index
+  * ac11cb0f72b nvk: Call lower_compute_system_values after
+    zer_initialize_workgroup_memory
+  * 1718980e851 venus: force async pipeline create on threads creating
+    descriptor pools
+  * 62797f036f5 zink/ci: update polaris10's expectations after piglit
+    uprev
+  * a0bf21e72f8 zink/ci: update navi31's expectations after piglit uprev
+  * a6ea0f17628 radeonsi/ci: update vangogh's expectations after piglit
+    uprev
+  * faf3bb644df spirv: Update headers and grammar JSON
+  * e3c2dc2324a nir/print: Rename workgroup-size to workgroup_size
+  * 449e44d6d35 nir/print: Don't print shared_size twice
+  * 0ab3b3c641f nir/builder: Fix compilation with gcc-13 when tsan is
+    enabled
+  * 80a1b916011 nir/lower_int64: Fix compilation with gcc-13 and tsan
+    enabled
+  * ca47138fb17 radv: Fix compilation with gcc-13 and tsan enabled
+  * f6383e03f9c zink: use enums as return values in
+    resource_object_create
+  * 3d203b54771 zink: remove duplicate arguments and use
+    VkMemoryRequirements locally
+  * 9c3e733779e zink: simplify call to get_export_flags
+  * 472bca94690 zink: Move more code to create_image and create_buffer
+  * 0b88f680675 zink: extract allocate_bo_and_update_obj from
+    resource_object_create
+  * df9cbe431ee zink: drop duplicate assignment to obj->alignment
+  * 063949063c7 zink: extract debug_resource_mem from
+    resource_object_create
+  * 7180670e289 zink: extract update_obj_info from
+    resource_object_create
+  * 081e5d11092 zink: extract function update_alloc_info from
+    resource_object_create
+  * 1d0e9001cd9 zink: extract function create_image from
+    resource_object_create
+  * eb394f53162 zink: redesign the allocation try loop to test all heaps
+  * 252e877a876 zink: extract function allocate_bo from
+    resource_create_object
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 31 Jan 2024 07:24:04 +0100
+
 mesa (24.1.0~git2401202055.c3a64f8dd11~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
