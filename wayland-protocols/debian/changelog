@@ -1,3 +1,10 @@
+wayland-protocols (1.33+git2401301322.c4f897d~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * c4f897d Add xdg-toplevel-drag protocol
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 31 Jan 2024 07:34:36 +0100
+
 wayland-protocols (1.33+git2401191446.5434607~f~base2) focal; urgency=medium
 
   * New snapshot:
