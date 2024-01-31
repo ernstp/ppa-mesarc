@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2401241940.4d7a9a6~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 4d7a9a6 Handling of color management properties
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 31 Jan 2024 07:34:51 +0100
+
 xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2309251950.31a092a~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
