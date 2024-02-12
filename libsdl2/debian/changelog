@@ -1,3 +1,36 @@
+libsdl2 (2.31.0+git2402122018.6669d04ea~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 6669d04ea Fixed error: unused variable 'axes' [-Werror,-Wunused-
+    variable]
+  * 971c5c261 Explicitly retain and release NSObjects in C structures
+  * de0cb94e7 Wayland: Avoid SEGV if a modifier notification comes
+    before the keymap
+  * 4ae87e215 Fix broken use of MsgWaitForMultipleObjects.
+  * 646cccede Guarded ElementAlreadyHandled with #ifdef
+    ENABLE_PHYSICAL_INPUT_PROFILE (thanks @Donione!)
+  * 93d7b6e50 Redefine XINPUT_CAPABILITIES_EX as an SDL typedef
+  * 40b61b81f Added VIDPID for OpenFFBoard wheel (thanks @groybe!)
+  * d2a3347c1 Emscripten_SetWindowFullscreen: Fix crash due to
+    uninitialized EmscriptenFullscreenStrategy members
+  * a09b0b05e Fix memory leak in SDL_UpdateSteamVirtualGamepadInfo()
+  * a29f37c14 SDL_windowsopengl.c: WGL: Fixed null-pointer dereference
+    crash
+  * ca0101657 SDL_audiotypecvt.c: Fixed memory corruption when
+    resampling S16 t F32
+  * c53c35192 Fix SDL_mfijoystick build issues
+  * fc787a41d vulkan_metal.h: Make compatible with ObjC ARC (thanks
+    @jmroot!)
+  * 05bb182a5 Don't test 10-bit pixel format conversion
+  * 58907d2c2 testautomation_math: Fix misleading log output
+  * a7bd18c0d test: Don't accept results that are much less than
+    expected
+  * f73abd49c testautomation: Don't expect exp to yield exact floating
+    point results
+  * 8eed915df Don't use the system iconv on Apple mobile platforms
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 12 Feb 2024 23:06:42 +0100
+
 libsdl2 (2.31.0+git2401302011.8ce6fb251~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
