@@ -1,3 +1,10 @@
+xwayland (2:23.2.4+git2402081706.d755da587~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * d755da587 xwayland: Ensure pointer for gestures has buttons
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 12 Feb 2024 23:20:26 +0100
+
 xwayland (2:23.2.4+git2401161038.4f16a3f0b~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
