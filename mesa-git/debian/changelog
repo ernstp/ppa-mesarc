@@ -1,3 +1,48 @@
+mesa (24.0.0+git2402062309.c3ba03903f3~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * c3ba03903f3 frontends/va: Fix updating AV1 rate control parameters
+  * cb6f5b00e9e meson: upgrade zlib wrap to 1.3.1
+  * 223c8cd0d32 aco: fix >8 byte linear vgpr copies
+  * 71c17409146 anv,driconf: Add sampler coordinate precision workaround
+    for AoE 4
+  * 7bca150d5a4 anv: flush tile cache independent of format with HIZ-CCS
+    flush
+  * 7a27b2afbac panfrost: Fix dual-source blending
+  * acdfcc42437 radv: don't submit 0 length on UVD either.
+  * c47dbea2a0c radv/uvd: uvd kernel checks for full dpb allocation.
+  * 4c25e80e6cb radv: init decoder ip block earlier.
+  * 3ee587ed569 radv: fix correct padding on uvd
+  * d24a93dbecf radv/sqtt: fix describing queue submits for RGP
+  * dbf730b14df radv: add a workaround for mipmaps and minLOD on GFX6-8
+  * b9554aead13 panfrost: fix UB caused by shifting signed int too far
+  * 3f5b57c6968 radv/sqtt: Handle ray tracing pipelines with no
+    traversal shader
+  * 8c5fafef1d2 driconf: set vk_x11_strict_image_count for Atlas Fallen
+    Vulkan
+  * f45c9a38db7 glsl: don't tree graft globals
+  * 4ce8d2d8b39 egl/drm: flush before calling get_back_bo
+  * 9f0048a73f4 radv/rt: Write inactive node data in ALWAYS_ACTIVE
+    workaround
+  * 60d67f1820b zink: use sparse residency for buffers.
+  * 22bc2a897c0 vk/util: fix 'beta' check for physical device properties
+  * 8c6de60c54d vk/util: fix 'beta' check for physical device features
+  * e79ec6621bf .pick_status.json: Update to
+    fa8e0ba3f739cb46cf7bb709903c0206f240c584
+  * ee25160ed5d docs: add sha256sum for 24.0.0
+  * 150a5d82987 docs: add release notes for 24.0.0
+  * 03ecd8b0a51 VERSION: bump for 24.0.0
+  * 74a0eb9cfa8 aco/insert_exec_mask: Fix unconditional demote at top-
+    level control flow.
+  * ec84f5a1e2f clc: retrieve libclang path at runtime.
+  * 63dc250b694 clc: force fPIC for every user when using shared LLVM
+  * a3a927a1cde broadcom/compiler: be more careful with unifa in non-
+    uniform control flow
+  * f7c73de1c27 broadcom/compiler: fix incorrect flags update for
+    subgroup elect
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 12 Feb 2024 23:13:35 +0100
+
 mesa (24.0.0~rc3+git2401302259.6dadb9b032c~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
