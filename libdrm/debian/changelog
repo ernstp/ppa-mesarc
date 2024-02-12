@@ -1,3 +1,17 @@
+libdrm (2.4.120+git2402081523.7ab1cdac~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 7ab1cdac xf86drm: ignore symlinks in process_device()
+  * 14094328 amdgpu: add marketing names from amd-6.0.1
+  * 9d9498f4 amdgpu: add marketing name for Radeon RX 6550M
+  * dfb8111e amdgpu: add marketing names from amd-6.0
+  * fb13af43 amdgpu: add marketing names from Windows Steam Deck OLED
+    APU driver
+  * 64144740 amdgpu: add marketing names from PRO Edition for W7700
+  * ad750dc6 amdgpu: add marketing names from Adrenalin 23.11.1
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 12 Feb 2024 23:06:21 +0100
+
 libdrm (2.4.120+git2401131037.75254bf2~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
