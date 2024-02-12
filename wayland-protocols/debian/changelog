@@ -1,3 +1,10 @@
+wayland-protocols (1.33+git2402100317.4c8840c~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 4c8840c Fix typo in ext-foreign-toplevel-list-v1
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 12 Feb 2024 23:20:05 +0100
+
 wayland-protocols (1.33+git2401301322.c4f897d~f~base2) focal; urgency=medium
 
   * New snapshot:
