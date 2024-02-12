@@ -1,3 +1,46 @@
+mesa (24.1.0~git2402122225.98b62434bd9~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 98b62434bd9 intel/compiler: Lower texture operation to combine LOD
+    and AI
+  * c984d6e2fcf nir: Drop intel specific lowering code
+  * 15129c76347 intel/compiler: Use nir_tex_src_backend1 to pack LOD and
+    array index
+  * 73a3257968b intel/compiler: Add texture operation lowering pass
+  * 646a7c864d3 anv: re-introduce BO CCS allocations
+  * bd197c6bcff intel/aux_map: add helper to compute offset in aux data
+  * c0889a127b1 intel/aux_map: add BSpec reference
+  * da6484a8a47 anv: use address helper to compute address u64 value
+  * 7763e75eead anv: move ALLOC_HOST_CACHED_COHERENT as define
+  * 3f64ec141ee isl: add a no-aux-align usage flag
+  * 44515bb92cd isl: printout sparse usage
+  * 926d9f1cef1 radv: support minmax filter for more formats
+  * 05cf04ac97f nvk: Convert shader addresses to offsets in nvk_shader.c
+  * afd42f5951f nvk/heap: Rework over-allocation
+  * 728256e9945 nvk/heap: Use nvk_heap_bo::addr instead of bo->offset
+  * 83521dd4864 nvk: Don't set CONSTANT_BUFFER_SELECTOR with a zero size
+  * 28ad2f488a0 anv: Store host-located copy of NULL surface state for
+    faster memcpy
+  * 48a0a3112f2 freedreno: Add a750 clock gating control related
+    registers
+  * 097e543c0a0 Revert "zink: always force flushes when originating from
+    api frontend"
+  * aed5e4e1f2b zink: Always set mfence->submit_count to the fence
+    submit_count
+  * 8d44a115080 radeonsi/vcn: Don't reinitialize encode session on
+    bitrate/fps change
+  * e0b4dfbbda9 anv: don't unmap AUX ranges at BO delete
+  * fb62bffcdaf radv: Wire up ac_gather_context_rolls
+  * ba6d6e5ee11 amd/common: Use the correct register table for GFX10_3
+  * 1098afd7fbe gallium: add PIPE_CAP_FP16 for AMD_gpu_shader_half_float
+  * 6fbf3367886 compiler/types: Add a contains_32bit helper
+  * 5f1f6d74968 glsl: add half float AMD_shader_trinary_minmax functions
+  * d619c16c3f9 glsl: add half float derivative functions
+  * 14de2eff89c glsl: add half float interpolation functions
+  * 9dc5eec02c9 glsl: allow half float varyings
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 12 Feb 2024 23:07:45 +0100
+
 mesa (24.1.0~git2401310508.0a97d1ebfa2~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
