@@ -129,6 +129,13 @@ else
 	confflags_GALLIUM += -Dllvm=enabled
 	confflags_GALLIUM += -Dgallium-opencl=icd
 
+	# Rusticl!
+	ifneq (,$(filter $(DEB_DISTRIBUTION),noble))
+		ifeq ($(DEB_HOST_ARCH),amd64)
+			confflags_GALLIUM += -Dgallium-rusticl=true
+		endif
+	endif
+
 	# nine makes sense only on archs that build wine
 	ifneq (,$(filter $(DEB_HOST_ARCH), amd64 arm64 armel armhf i386 powerpc))
 		confflags_GALLIUM += -Dgallium-nine=true
