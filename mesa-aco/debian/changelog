@@ -1,3 +1,9 @@
+mesa (24.1.0~git2402171727.893780b3625~f~mesaaco6) focal; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 03:26:11 +0100
+
 mesa (24.1.0~git2402171727.893780b3625~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
