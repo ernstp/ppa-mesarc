@@ -1,3 +1,47 @@
+mesa (24.0.1+git2402142205.92cb6d5938f~f~mesarc4) focal; urgency=medium
+
+  * New snapshot:
+  * 92cb6d5938f docs: add sha256sum for 24.0.1
+  * 3e361635b8d VERSION: bump for 24.0.1
+  * 68a46fd8464 docs: add release notes for 24.0.1
+  * 9b4abb2ed05 radv,driconf: Enable active AS leaf workaround for Jedi
+    Survivor
+  * e4c2cbeb337 anv: fix buffer marker cache flush issues on MTL
+  * 8d18be6357b nir/lower_io: fix handling for compact arrays with
+    indirect derefs
+  * c1afe862994 intel: Fix intel_get_mesh_urb_config()
+  * 003ba21b5fd aco/gfx11+: limit hard clauses to 32 instructions
+  * 73c637fcfea rusticl/mem: support GL_TEXTURE_BUFFER
+  * 277c905b417 rusticl/mem: properly handle buffers
+  * c2068493357 nir/lower_cl_images: record image_buffers and
+    msaa_images
+  * a2a141dffad anv: fix incorrect flushing on shader query copy
+  * 48608401a37 intel/fs: rerun divergence prior to lowering non-uniform
+    interpolate at sample
+  * 9b2d95ab130 llvmpipe: Set "+64bit" for X86_64
+  * 73b955965b0 radeonsi/vcn: Don't reinitialize encode session on
+    bitrate/fps change
+  * 23442c825b0 anv: don't unmap AUX ranges at BO delete
+  * d1b79ef57b8 Revert "ci: Enable GALLIUM_DUMP_CPU=true only in the
+    clang job"
+  * e7c7b4e2f10 nvk: Don't clobber vb0 after repeated blits
+  * e8c13d5b9df aco: don't remove branches that skip v_writelane_b32
+  * ddb4aff2c2c aco/gfx11+: disable v_pk_fmac_f16_dpp
+  * 963ad46563c hasvk: add missing linker arguments
+  * 8667ddc2093 mesa: plumb errors through to texture allocation
+  * 46c290d94b4 tu: Do not print anything on systems without Adreno GPU
+  * 45c761f2c26 pan/va: Add missing valhall_enums dep to valhall_disasm
+  * 41b9381046a panfrost: Pad compute jobs with zeros on v4
+  * d329b14698e driconf: Apply dual color blending workaround to Dying
+    Light
+  * 25b67841a13 driconf: Advertise GL_EXT_shader_image_load_store on
+    iris for SVP13
+  * 7d8c7ccc0d4 freedreno: Fix MSAA z/s layout in GMEM
+  * feacc7e5a37 r300: fix vs output register indexing
+  * 7d78a9b36b6 iris: Fix return of iris_wait_syncobj()
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 02:02:54 +0100
+
 mesa (24.0.0+git2402062309.c3ba03903f3~f~mesarc4) focal; urgency=medium
 
   * New snapshot:
