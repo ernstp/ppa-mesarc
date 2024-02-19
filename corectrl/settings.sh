@@ -1,5 +1,5 @@
 GIT="https://gitlab.com/corectrl/corectrl.git"
-DISTROS="jammy mantic noble"
+DISTROS="mantic noble"
 PREBUMP=1
-INC=17
+INC=18
 PPA=mesarc
