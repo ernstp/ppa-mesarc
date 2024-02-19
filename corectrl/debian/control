@@ -20,7 +20,9 @@ Build-Depends:
  libegl1-mesa-dev | libegl-dev,
  libquazip5-dev,
  libpolkit-gobject-1-dev,
- libdbus-1-dev
+ libdbus-1-dev,
+ libquazip1-qt5-dev,
+ libspdlog-dev
 Standards-Version: 4.1.4
 Homepage: https://gitlab.com/corectrl/corectrl
 
