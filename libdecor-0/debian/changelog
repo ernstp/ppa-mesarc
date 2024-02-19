@@ -1,3 +1,12 @@
+libdecor-0 (0.2.2+git2402171437.8dc6b62~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 8dc6b62 Give libdecor clients access to XDG_TOPLEVEL_STATE_RESIZING
+  * fe7ee8d libdecor: add libdecor_frame_get/set_userdata
+  * cef873f libdecor: add userdata to struct libdecor
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 01:55:34 +0100
+
 libdecor-0 (0.2.2+git2401152200.7807ae3~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
