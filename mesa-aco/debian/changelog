@@ -1,3 +1,48 @@
+mesa (24.1.0~git2402171727.893780b3625~f~mesaaco5) focal; urgency=medium
+
+  * New snapshot:
+  * 893780b3625 mesa: check driver format support for certain
+    GetInternalformativ queries
+  * c7b2ac3377a radv: Remove ray_launch_size_addr_amd system value.
+  * f933536517c winsys/amdgpu: enable unlimited number of parallel
+    queues for VCN
+  * 3e118c6d2f7 winsys/amdgpu: convert amdgpu_cs.c to .cpp
+  * 7475b105d2c docs/anv: Add recommended GuC firmware version
+  * 0ec231cb51f venus: simplify feedback types tracking during
+    submission
+  * c320203f4ca venus: misc cleanups for queue submission
+  * 7a6979f9379 venus: use vn_cached_storage for vn_queue_submission
+    allocs
+  * 1e122861daa venus: refactor to add vn_cached_storage
+  * 09735905798 venus: rewrite fence feedback interception to minimize
+    batches
+  * 55224006b78 venus: fix the cmd stride used for qfb recording
+  * 017818a8bf8 nvk: Implement the VR-related display extensions
+  * 5feb326d807 intel/isl: Include compiler generic header
+  * ae50ac46d11 intel: Remove brw_ prefix from process debug function
+  * c773898f39e intel/compiler: Rename brw_gfx_ver_enum.h to
+    intel_gfx_ver_enum.h
+  * d8f9a05f322 intel/compiler: Rename the passes and files related to
+    intel_nir.h
+  * dc76cfc7814 intel/compiler: Collect NIR-only passes in intel_nir.h
+  * 24db040a49e anv: Drop warnings for engine initialization failure
+  * 876db913504 meson: rework intel-rt option to be a feature
+  * 6a126b75e0c meson: drop intel-cl deprecation of 'false'
+  * 19cd3bb7217 nvk: Implement VK_EXT_map_memory_placed
+  * 40926850573 nouveau/winsys: Add a fixed_addr to nouveau_ws_bo_map
+  * be9685e4e71 nvk: Use nouveau_ws_bo_new_mapped() for descriptors
+  * 08d13a55e47 vulkan: Update XML and headers to 1.3.278
+  * ec5d0ffb04f radv: fix pipeline stats mask
+  * 805d45e9168 intel/decoder: Move decoder to a separate module
+  * 7009f00ae08 radv: re-enable GS_FAST_LAUNCH=2 by default on GFX11
+  * 3713f27260e radv: only configure {XYZ_DIM,DRAW_INDEX}_REG for mesh
+    shaders if enabled
+  * 0db2d13af1a radeonsi/vcn: only use multi slices reflist when
+    available
+  * dce20690542 radv/ci: switch vkcts-polaris10 from mupuf to KWS' farm
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 01:57:09 +0100
+
 mesa (24.1.0~git2402122225.98b62434bd9~f~mesaaco5) focal; urgency=medium
 
   * New snapshot:
