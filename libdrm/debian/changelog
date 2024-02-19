@@ -1,3 +1,14 @@
+libdrm (2.4.120+git2402150220.01f91aa7~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 01f91aa7 meson: make build system happy by replacing deprecated
+    feature
+  * 7c5c742d xf86drm: Don't consider node names longer than the maximum
+    allowed
+  * 1aa800d4 Revert "xf86drm: ignore symlinks in process_device()"
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 01:55:46 +0100
+
 libdrm (2.4.120+git2402081523.7ab1cdac~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
