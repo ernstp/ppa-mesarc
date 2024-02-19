@@ -1,3 +1,32 @@
+libsdl2 (2.31.0+git2402181811.f24216c2b~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f24216c2b wayland: Don't pass null string pointers to
+    wl_cursor_theme_get_cursor
+  * df00a7dd4 x11: Cleaned up system cursor code to match previous
+    Wayland change.
+  * 827917ea6 wayland: Minor cleanup in new mouse cursor selection code.
+  * 271df2fdd emscripten, wayland, x11: Share the table of CSS cursor
+    names
+  * aa6c390bb emscripten, wayland, x11: Map SIZEALL to "all-scroll"
+    instead of "move"
+  * 67827c0b0 wayland: Prefer to use CSS names for cursors, falling back
+    to X11
+  * e2535ba54 wayland: Use CSS/freedesktop cursor name "default" as a
+    fallback
+  * 6c0e3532f x11: Use XcursorLibraryLoadCursor to load system cursors
+    when available.
+  * bc30fb295 don't let SDL_render.c:render_drivers[] have an empty
+    initializer list.
+  * d0731ab9a Check the SDL_VIDEO_RENDER_??? macros with #if instead of
+    #ifdef
+  * 699cec1a8 wayland: Don't store wl_output pointers in mode driver
+    data
+  * 120b8d418 Revert "wayland: Don't initialize OpenGL when the window
+    flags didn't specify it"
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 01:56:05 +0100
+
 libsdl2 (2.31.0+git2402122018.6669d04ea~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
