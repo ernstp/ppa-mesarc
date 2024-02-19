@@ -1,3 +1,18 @@
+corectrl (1.4.0~git2402181938.1e1f6de~j~mesarc16) jammy; urgency=medium
+
+  * New snapshot:
+  * 1e1f6de Replace easyloggingpp with spdlog
+  * a770b5e Require QuaZip 1.0 or later
+  * 0a6efc1 Integrate Swedish translation
+  * bbb6ed2 Merge branch 'sv-se' into 'master'
+  * a52c61e Add Swedish translation file
+  * 90fe5f8 CHANGELOG: move fmt note to Removed section
+  * b686435 Merge branch 'catch2-v3' into 'master'
+  * bcca68e Migrate to catch2 v3
+  * 8cd6107 Reapply "Replace fmt library with std::format"
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 01:55:17 +0100
+
 corectrl (1.4.0~git2402061859.cb5f906~j~mesarc16) jammy; urgency=medium
 
   * New snapshot:
