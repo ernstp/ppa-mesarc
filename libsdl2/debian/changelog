@@ -1,3 +1,12 @@
+libsdl2 (2.31.0+git2402212133.69fb802a9~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 69fb802a9 Fixed Visual Studio warning 4459
+  * 4316c5ec0 audio: fix SSE conversion of Sint8 audio to Float32.
+  * 903d888cc Convert mouse wheel coordinates to renderer view
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 22 Feb 2024 12:59:56 +0100
+
 libsdl2 (2.31.0+git2402181811.f24216c2b~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
