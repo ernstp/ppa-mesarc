@@ -1,3 +1,13 @@
+corectrl (1.4.0~git2402211516.228cff3~m~mesarc18) mantic; urgency=medium
+
+  * New snapshot:
+  * 228cff3 Refactor providers
+  * 019f34e Remove bundled trompeloeil library
+  * 51f2a6e Remove bundled pugixml library
+  * a7e8d10 CMakeLists.txt cleaning and fixes
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 22 Feb 2024 12:59:35 +0100
+
 corectrl (1.4.0~git2402181938.1e1f6de~m~mesarc18) mantic; urgency=medium
 
   * New snapshot:
