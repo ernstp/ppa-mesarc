@@ -1,3 +1,54 @@
+mesa (24.1.0~git2402220930.fa342419329~f~mesaaco6) focal; urgency=medium
+
+  * New snapshot:
+  * fa342419329 intel/ci: bump anv/tgl fraction to 6
+  * da5a6d185cb ci/anv: add more testing for optimization paths
+  * 59b0f7b6b7a radv: free NIR shaders when creating linked shaders with
+    ESO
+  * 77f036d574c radv: fix a big memleak with VK_EXT_shader_object
+  * e88a5842b23 radv: remove the union in radv_shader_object
+  * 9ae8f0f9d74 radv: fix indirect dispatches on compute queue with
+    conditional rendering on GFX7
+  * 776f4523f91 radv: fix binary shaders compatibility with ESO
+  * f123a04256d radv: introduce a per physical device cache key
+  * c303d399ffd radv: initialize disk cache slightly later when creating
+    a physical device
+  * 0543394bfa7 radv: move mesh_fast_launch_2 to radv_physical_device
+  * 0f0fa64eed0 glsl: move some lowering to the compiler
+  * 82d617e8b13 glsl: fix potential crash in expression flattening
+  * ac45d893d62 zink: handle stencil_fallback in
+    zink_clear_depth_stencil
+  * e3d4897dfee anv: flush query clears for all gens
+  * 62f65f4bfda egl/dri2: if zink is preferred from dri3 skip dri2
+    paths.
+  * a590a8ef459 anv+zink/ci: remove recently fixed tests from the crash
+    list
+  * 2526308dcd4 anv/sparse: allow binding operations to match the
+    resource size
+  * a501a840a38 anv/sparse: add an extra step before
+    anv_sparse_bind_resource_memory()
+  * c3aa7e42ba7 zink: fix bind size handling in buffer_bo_commit()
+  * 83895d4025d intel: Only build shaders with anv and iris
+  * 815a6647eb1 meson: do not pull in clc for clover
+  * 6474f8c2ce1 clc: include opencl-c.h for extensions needing it
+  * 11dbdedf465 st/mesa: optimize st_update_arrays using lots of C++
+    template variants
+  * 045b1cda57d st/mesa: add VAO fast path C++ template variants for
+    st_update_array callback
+  * 7a5ddd29c2e mesa: don't use the slow VAO path except for drivers
+    that want to use it
+  * f8cd9604f97 d3d12: make DrawTransformFeedback not depend on the
+    vertex buffer offset
+  * 341d0fcbf69 intel/tools/error_decode: Detect and split error dump
+    file parsing by KMD
+  * 1b07bb12d35 intel/tools/error_decode: Add support to search for Xe
+    KMD error dumps
+  * 77484ab6cf5 intel/tools/error_decode: Simply error message handling
+  * 70e2384f8f7 intel/tools/error_decode: Add function to try to open
+    error dump file
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 22 Feb 2024 13:01:12 +0100
+
 mesa (24.1.0~git2402171727.893780b3625~f~mesaaco6) focal; urgency=medium
 
   * New snapshot:
