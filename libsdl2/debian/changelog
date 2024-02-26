@@ -1,3 +1,13 @@
+libsdl2 (2.31.0+git2402232202.9a65d123a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 9a65d123a ci: update deprecated node.js 16 actions
+  * fdbf233cf ci: bump cross-platform-actions/action version to v0.23.0
+  * 54faea8b8 x11: Don't resize, move, or raise windows when changing
+    the min/max size
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 26 Feb 2024 15:37:52 +0100
+
 libsdl2 (2.31.0+git2402212133.69fb802a9~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
