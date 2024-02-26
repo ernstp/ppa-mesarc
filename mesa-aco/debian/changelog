@@ -1,3 +1,56 @@
+mesa (24.1.0~git2402261455.4d00edda000~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * 4d00edda000 r300: fix memory leaks when register allocation fails
+  * b11ecacb937 r300: fix r300_destroy_context() related memory leaks
+  * 4071c399a27 radv: compute the total LDS usage in
+    gfx10_get_ngg_info()
+  * d85311b1206 radv: compute NGG scratch LDS base in
+    gfx10_get_ngg_info()
+  * 0570d40d5b3 radv: determine NGG culling info before NGG info
+  * e3863a22bbf radv: pass radv_shader_info to gfx10_get_ngg_info()
+  * 4db0952639e radv: pass gfx10_ngg_info to gfx10_get_ngg_info()
+  * beb2e7df682 radv: determine NGG query info before linking shader
+    info
+  * 64f46c83a34 radv: use so.num_outputs to determine if NGG shaders
+    need XFB queries
+  * 7f8a84a0246 radv: do not set gs.has_pipeline_stat_query twice for
+    NGG GS
+  * 6c1e82e309f radv: remove unused parameter in
+    gfx10_get_ngg_query_info()
+  * e9169881dbd anv: add missing generated file dep
+  * 5816b5961f5 zink: use new flag to determine whether swapchain
+    readback cache is usable
+  * 01c9199cb8c zink: only update swapchain readback cache when
+    necessary
+  * 8fb83c09359 zink: only update swapchain readback cache on create if
+    necessary
+  * 417a1986fb1 zink: set and manage a flag indicating that swapchain
+    readback needs updating
+  * 114a5da7905 zink: update swapchain readback cache on create
+  * 7486aaa1c0e zink: make readback attempts count towards
+    ZINK_READBACK_THRESHOLD
+  * d5d5f54fe9d zink: add a swapchain readback case for reading
+    differently-acquired image
+  * ae80f9ce65d zink: make kopper_swapchain_image::acquired the resource
+    that acquired it
+  * d2ed77072cf zink: flag acquired swapchain image as readback target
+    on acquire, not present
+  * c3a2e2f9f2e zink: lock buffer age when chundering swapchain for
+    readback
+  * 9fa2d9bd50e zink: fix swapchain readback conditional
+  * 50b671c1c39 zink: fix (dynamic rendering) execution of scissored
+    clears during flush
+  * e6020355969 zink: clamp in_rp clears to fb size
+  * e032e7f6cce zink: don't pre-init null fbfetch info
+  * 5fdbb0868ac zink: start out with 256x256 sized dummy surfaces
+  * aaf78eadf37 zink: create/resize dummy surfaces on-demand
+  * 1ea64063c8e zink: break out null fbfetch init for descriptor buffer
+  * 263d2620255 zink: also set null fbfetch surfaces when no fb surface
+    is bound
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 26 Feb 2024 15:38:57 +0100
+
 mesa (24.1.0~git2402220930.fa342419329~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
