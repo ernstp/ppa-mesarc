@@ -1,3 +1,50 @@
+mesa (24.0.1+git2402261322.c440d7ceef0~f~mesarc5) focal; urgency=medium
+
+  * New snapshot:
+  * c440d7ceef0 anv: add missing generated file dep
+  * 20cc365eb2e zink: flag acquired swapchain image as readback target
+    on acquire, not present
+  * cf0ed80d3a3 zink: lock buffer age when chundering swapchain for
+    readback
+  * 850c9dbdc95 zink: fix (dynamic rendering) execution of scissored
+    clears during flush
+  * baba35ed693 zink: clamp in_rp clears to fb size
+  * ffd79476ece zink: assert that batch_id is valid in
+    zink_screen_check_last_finished()
+  * ab000d79513 zink: fix longstanding issue with active batch state
+    recycling
+  * 2728e5f2ccd zink: only scan active batch states for free states if >
+    1 exist
+  * 313a9e6b738 .pick_status.json: Update to
+    4071c399a27932ea9253eb8a65d5725504bac6f3
+  * f5311e2418a anv: limit depth flush on dynamic render pass suspend
+  * d2c6a48ee91 intel/nir: only consider ray query variables in lowering
+  * aead18c79d4 vdpau: Refactor query for video surface formats.
+  * 40ab1da1b4a egl/wayland: Flush after blitting to linear copy
+  * 83250a30aa6 ci: Update llvmpipe trace checksums
+  * 6aa24ea086c gallivm: Consider the initial mask when terminating
+    loops
+  * 5e178a07a07 llvmpipe: Use full subgroups when possible
+  * da3ac67e23e mesa/main: allow GL_BGRA for FBOs
+  * 76bb6e7f8ec radv: fix indirect dispatches on compute queue with
+    conditional rendering on GFX7
+  * 21090c8d3ec meson: do not pull in clc for clover
+  * c8bdf6129a4 vdpau: Declare texture object as immutable using helper
+    function.
+  * d50d8ea2bae aco/ra: fix GFX9- writelane
+  * c7f3e736a03 aco/ra: don't initialize assigned in initializer list
+  * db5a9976260 anv: disable Wa_16013994831
+  * d3df85a1979 spirv: only consider IO variables when adjusting patch
+    locations for TES
+  * d0ea44cfdcd v3d,v3dv: fix BO allocation for shared vars
+  * 2e1ccf1c598 nvk: fix dri options leak.
+  * 2bc85abbf2b nouveau/winsys: fix bda heap leak.
+  * 0f8d77fc046 nvk: Invalidate the texture cache before MSAA resolves
+  * 6add0415135 vk/wsi/x11/sw: use swapchain depth for putimage
+  * 0de687d8f81 r300: fix vertex_buffer related refcnt imbalance
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 26 Feb 2024 15:45:04 +0100
+
 mesa (24.0.1+git2402142205.92cb6d5938f~f~mesarc5) focal; urgency=medium
 
   * New snapshot:
