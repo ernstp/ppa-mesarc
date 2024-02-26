@@ -1,3 +1,13 @@
+corectrl (1.4.0~git2402241206.f8bf0e9~m~mesarc18) mantic; urgency=medium
+
+  * New snapshot:
+  * f8bf0e9 Replace erase-remove idiom with simpler C++20 std::erase
+  * 154c6dd Remove unimplemented userspace option from CPU scaling
+    governors
+  * c57ab99 Update translation files
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 26 Feb 2024 16:37:24 +0100
+
 corectrl (1.4.0~git2402211516.228cff3~m~mesarc18) mantic; urgency=medium
 
   * New snapshot:
