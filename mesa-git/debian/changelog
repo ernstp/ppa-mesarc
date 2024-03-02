@@ -1,3 +1,28 @@
+mesa (24.0.2+git2402281948.5131484a30b~f~mesarc5) focal; urgency=medium
+
+  * New snapshot:
+  * 5131484a30b docs: add sha256sum for 24.0.2
+  * a3df5eab6c3 VERSION: bump for 24.0.2
+  * 11367cc87a8 docs: add release notes for 24.0.2
+  * 8a5c89a2947 [24.0 only] disable clang-format
+  * 7e6f55f336b egl/wayland: Fix EGL_EXT_present_opaque
+  * b137afc1e6d egl/wayland: Add opaque-equivalent FourCCs
+  * b067a61c078 nir: Mark nir_intrinsic_load_global_block_intel as
+    divergent
+  * e7244292ce7 frontends/va: Only set VP9 segmentation fields when
+    segmentation is enabled
+  * 6157ac47f5c iris: make sure DS and TE are sent in pairs on >= gfx125
+  * dd627a3462b nir: Allow nir_texop_tg4 in implicit derivative
+  * f22f1117bdc tu: Follow pipeline compatibility rules for dynamic
+    descriptors
+  * b44886773c1 intel/blorp: disable use of REP16 independent of format
+  * d6aefb583ea r300: fix memory leaks when register allocation fails
+  * e94f1fc304e r300: fix r300_destroy_context() related memory leaks
+  * 046ca162a95 .pick_status.json: Update to
+    82ff9204abab5267f82a9ce73f9dca1541ef5ee6
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Mar 2024 09:16:57 +0100
+
 mesa (24.0.1+git2402261322.c440d7ceef0~f~mesarc5) focal; urgency=medium
 
   * New snapshot:
