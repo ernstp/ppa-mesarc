@@ -1,3 +1,13 @@
+libdecor-0 (0.2.2+git2403041401.4f2c03d~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 4f2c03d Rename os_create_anonymous_file to avoid a conflict in
+    wayland-cursor
+  * 0987553 gtk: Make right/double click "gesture" based
+  * 49de40f gtk: Make header gestures a state machine
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:24:38 +0100
+
 libdecor-0 (0.2.2+git2402252146.749847e~j~wayland1) jammy; urgency=medium
 
   * New snapshot:
