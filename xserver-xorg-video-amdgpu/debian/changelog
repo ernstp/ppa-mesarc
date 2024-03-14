@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (23.0.0+git2402250201.8df03a7~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 8df03a7 gitlab CI: add builds against server-21.1-branch
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:37:33 +0100
+
 xserver-xorg-video-amdgpu (23.0.0+git2401241940.4d7a9a6~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
