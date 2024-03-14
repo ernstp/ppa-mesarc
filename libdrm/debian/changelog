@@ -1,3 +1,11 @@
+libdrm (2.4.120+git2403050453.c8f327ce~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * c8f327ce amdgpu: Make amdgpu_device_deinitialize thread-safe
+  * 1b4e04ba tests/util: add tidss driver
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:24:54 +0100
+
 libdrm (2.4.120+git2402150220.01f91aa7~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
