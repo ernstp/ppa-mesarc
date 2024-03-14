@@ -1,3 +1,45 @@
+mesa (24.1.0~git2403140208.9b6d6c1d2d0~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * 9b6d6c1d2d0 docs: add sha256sum for 24.0.3
+  * c0a40e724b7 docs: add release notes for 24.0.3
+  * 7604697ec61 nvk: Implement shaderStorageImageMultisample
+  * 357720c5a7d nvk: Use different descriptor layouts for storage vs.
+    sampled images
+  * 86a462fb96d nvk: Stop pretending to handle Intel image intrinsics
+  * bd9836a0b82 nvk: Use a HW generation names instead of chipsets
+  * be1ef1a8d85 nil: Expose nil_pix_extent_sa()
+  * 418f8be9eac nil: Add a helper to view a MSAA image as samples
+  * ed6fd25a620 nil: Add support for larger textures on Pascal+
+  * c3177e4fc27 nil: Whitespace fix
+  * 72e1a577522 nvk: Reorder device features
+  * 94622ae4917 nvk: Advertise VK_KHR_vertex_attribute_divisor
+  * 133c73da856 nvk: enable a mappable bar heap when rebar is disabled.
+  * 647a2d1f6b6 r300/ci: enable nine tests
+  * 98b36e02b9c ci: build nine tests
+  * 96640b142ee ci: build nine in debian-testing
+  * da285796334 ci: install xwayland in x86_64_test-gl
+  * 13812cc91d5 ci: reduce irrelevant output to a simple list of
+    libraries
+  * 045bc86ac9d ci/freedreno: mark fails resolved by "drm/msm/gem: Add
+    metadata uapi"
+  * f1680f58b14 ci/freedreno: disable workarounds for Adreno 618, 630,
+    and 660
+  * ab690f25e8c ci: uprev kernel to 6.6.21
+  * e0da118ab12 anv/hasvk: default image_read_without_format to true
+  * 9c770f06c64 nine: drop useless and a bit too long line
+  * 5b6a4b1c796 nine: fill missing licenses headers and copyrights
+  * 81d3de71cd4 nine: convert licenses block to SPDX
+  * ac5d529c651 nvk: Enable VK_KHR_shader_subgroup_uniform_control_flow
+  * 376d1e6667a rusticl: implement cl_khr_suggested_local_work_size
+  * de94d989406 iris: Set BO_ALLOC_NO_SUBALLOC when allocating bo for
+    slab
+  * 4f165117dc2 nouveau/drm: remove nouveau_client::id
+  * 9583fb8d00e nouveau/drm: drop unsued chan argument from
+    nouveau_pushbuf_kick
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:26:22 +0100
+
 mesa (24.1.0~git2402261455.4d00edda000~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
