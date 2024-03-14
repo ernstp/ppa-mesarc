@@ -1,3 +1,55 @@
+mesa (24.0.3+git2403140111.90dcd95c0e7~f~mesarc5) focal; urgency=medium
+
+  * New snapshot:
+  * 90dcd95c0e7 docs: add sha256sum for 24.0.3
+  * c4d371fa7ed VERSION: bump for 24.0.3
+  * 7c2243b1dba docs: add release notes for 24.0.3
+  * 991396e8230 v3d: fix line coords with perspective projection
+  * 0aeacc08830 v3d: add load_fep_w_v3d intrinsic
+  * ce73c8f8296 radeonsi: try to disable dcc if compute_blit is the only
+    option
+  * bcad1274bbb nvk: Disable the Out Of Range Address exception
+  * 8ee75c66d3a nvk: Always wait for the FALCON in set_priv_reg
+  * ed886a26c7d nvk: Document the register name for the helper load
+    workaround
+  * b775fb81e9b driconf: add radv_zero_vram for Crystal Project
+    (1637730)
+  * e9551eaf330 util/u_debug: fix parsing of "all" again
+  * c46abe651b5 etnaviv: Fix how we determine the max supported number
+    of varyings
+  * c93608ecf93 .pick_status.json: Update to
+    9a57b1df5395bbcaa6f48ea851860bedc7ceefb9
+  * 00de0668b54 lima: update expected CI failures
+  * d45476c079d lima: gpir: abort compilation if load_uniform instrinsic
+    src isn't const
+  * c679b07111c lima: ppir: use dummy program if FS has empty body
+  * 41b3728135b lima: ppir: always use vec4 for output register
+  * c54a222442d mesa: fix CopyTexImage format compatibility checks for
+    ES
+  * 5e8ca5d067f venus: fix ffb batch prepare for a corner case and avoid
+    a memcpy UB
+  * 4364f09974b intel/tools: avoid invalid time and file bits
+    combination
+  * 8c84083a170 radv/rt: Fix raygen_imported condition
+  * ead9441e18e .pick_status.json: Mark
+    a367cd49314a993d09168e790d3090a2303a48d9 as denominated
+  * 5ce5cfa3b60 .pick_status.json: Update to
+    e1afffe7fa7bd8e1cd1f7e58cfa2f33faf889628
+  * 79bd37189b1 zink/nir-to-spirv: Make sure sampleid for
+    InterpolateAtSample is int
+  * 9ec4e8aa479 panfrost: protect alpha calculation from accessing non-
+    existent component
+  * 933f7a68d1b .pick_status.json: Update to
+    f3fe1f2f18d7ccc8a7cf85cd88c4bdf426445702
+  * eecce40e2a9 radv/rt: Fix frontface culling with emulated RT
+  * dfc52d165a0 radv/rt: Use doubles inside
+    intersect_ray_amd_software_tri
+  * c968caaa69b iris: Fix tessellation evaluation shaders that use
+    scratch
+  * 14a15f8265b util/blitter: iterate samples in stencil_fallback
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:32:36 +0100
+
 mesa (24.0.2+git2402281948.5131484a30b~f~mesarc5) focal; urgency=medium
 
   * New snapshot:
