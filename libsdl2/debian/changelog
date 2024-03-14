@@ -1,3 +1,43 @@
+libsdl2 (2.31.0+git2403131623.59d4a3945~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 59d4a3945 Add checks for memfd_create() and posix_fallocate() to the
+    autotools build
+  * 88bdc028e Fix build (C90 declaration order)
+  * d3c89bb47 wayland: Allocate the cursor shared memory buffer entirely
+    in memory, if possible.
+  * e54774fac Removed incorrect mapping for a HORI controller
+  * 318493695 cmake: we only need a C++ compiler for Android, Haiku and
+    UWP
+  * 66054a651 Turn HIDAPI joystick support off by default on mobile
+    platforms
+  * cd197be53 Fixed crash if joystick functions are passed a NULL
+    joystick
+  * 528b71284 Added support for the 6-button SEGA Mega Drive Control Pad
+    for Nintendo Online
+  * 26054d993 Fixed mapping for the Sanwa Supply JY-P76USV controller
+  * da9bfc43e GDK: Partially revert
+    2670eb44afec9311ee8fbec447703c427db1e1c8
+  * 177a83665 SDL_RWFromFile, stdio: allow named pipes along with
+    regular files.
+  * bdc7ad8f5 Keep track of whether the Android on-screen keyboard was
+    opened by the application
+  * 75c5cff0b Fixed "${folder^}Activity: bad substitution" with bash 3.2
+    on macOS
+  * a842bc29f Uppercase the first letter of the class name to match Java
+    conventions
+  * d35dee76c Added a mapping for the Sanwa Supply JY-P76USV controller
+  * 9e1e0fb92 Removed the mapping for the G-Shark GS-GP702
+  * 627e15871 SDL_GameControllerGetAppleSFSymbolsNameForAxis() returns
+    NULL if the symbol isn't found
+  * b87116ff0 SDL_GameControllerGetAppleSFSymbolsNameForButton() returns
+    NULL if the symbol isn't found
+  * 05f670961 If the viewport changes the cliprect should be updated
+  * 9eaf7d8cc wayland: Remove all references to destroyed outputs from
+    windows
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:25:13 +0100
+
 libsdl2 (2.31.0+git2402232202.9a65d123a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
