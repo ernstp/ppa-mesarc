@@ -1,3 +1,23 @@
+corectrl (1.4.0~git2403121322.3ff1f2d~m~mesarc18) mantic; urgency=medium
+
+  * New snapshot:
+  * 3ff1f2d Use QByteArray to test raw data in CommandQueue tests
+  * edc571f Log fallback translation load error
+  * e2768b9 Handle QML signals with arrow functions
+  * e284797 CHAMGELOG: add version 1.3.11 notes
+  * d0174c6 Revert "Add workaround for process monitor not working with
+    recent kernels"
+  * eee8b73 Check whether a manual profile exist before toggling it
+  * 7b18886 Only set CPU EPP hint when the frequency scaling governor is
+    'powersave'
+  * 9bf841d Add CPU Energy Performance Preference control
+  * 4485dbe Add missing catch include to some header files used on tests
+  * 4fff66b Remove unused include
+  * 058a603 Rename variable on CPUFreqXMLParser implementation
+  * 5b9a356 Reuse unit scaling governor path variable on CPUFreqProvider
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:24:28 +0100
+
 corectrl (1.4.0~git2402241206.f8bf0e9~m~mesarc18) mantic; urgency=medium
 
   * New snapshot:
