@@ -1,3 +1,20 @@
+wayland-protocols (1.34+git2403271915.1c57b24~f~base2) focal; urgency=medium
+
+  * New snapshot:
+  * 1c57b24 xdg-shell: add missing enum attribute to
+    set_constraint_adjustment
+  * a5536f9 xdg-shell: recommend against drawing decorations when tiled
+  * aac8841 cursor-shape-v1: Does not advertises the list of supported
+    cursors
+  * c7e9c4f build: Bump version to 1.34
+  * 8be7ad6 linux-explicit-synchronization-v1: add linux-drm-syncobj
+    note
+  * ae9ed7a linux-drm-syncobj-v1: new protocol
+  * 9408483 staging/dialog: Add "dialog" protocol
+  * 0819d97 tablet-v2: clarify that name/id events are optional
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 27 Mar 2024 23:15:46 +0100
+
 wayland-protocols (1.33+git2402100317.4c8840c~f~base2) focal; urgency=medium
 
   * New snapshot:
