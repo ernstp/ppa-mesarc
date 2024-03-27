@@ -1,3 +1,42 @@
+mesa (24.1.0~git2403272236.3a10d1be0e9~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * 3a10d1be0e9 etnaviv: fix depth writes without testing
+  * 2b2f74ab354 nir/divergence: add zink intrinsics
+  * 0ab81efefc0 gallium: remove always-false parameter
+  * 9ea8249e556 nouveau: Fix NINC TERT handling in vk_push_print
+  * 382a53979b3 radv/ci: add more flakes
+  * b75d65dfb22 freedreno/registers: fix installation of schema
+  * c0875d21563 rpi/ci: add flakes
+  * 2c4625c8875 ci: bump VVL to v1.3.281
+  * 739d45d5d43 radv: inline radv_device_fault_detection_enabled
+  * f4199a9b219 rusticl: work around reference-to-mutable-static
+    warnings
+  * 437e0cb3cbd zink: Removed unused function
+  * 8b707e03019 v3dv/ci: track regression
+  * dac3b9ac264 ci/etnaviv: Remove duplicates
+  * 1ea357a7d77 ci/svga: add missed test and gl-rules include
+  * 3d348e632e3 svga/ci: workaround vmware farm's inability to use
+    public DNS 8.8.8.8
+  * 54050d88441 svga/ci: land vmware mesa-ci lava farm
+  * 8dde690a5b2 pvr: Implement VK_KHR_index_type_uint8
+  * d7517afa810 panvk: Make panvk_pipeline_layout per-gen
+  * ea98467a2da panvk: Make panvk_queue per-gen
+  * 4253ad99994 panvk: Make panvk_pipeline per-gen
+  * f912b075dd6 panvk: Make panvk_descriptor_set_layout per-gen
+  * 52abe6e921c panvk: Make panvk_descriptor_set per-gen
+  * cc61d544898 panvk: Make panvk_shader per-gen
+  * a790f771691 panvk: Make panvk_cmd_buffer per-gen
+  * 18e03803a75 panvk: Make panvk_sampler a per-gen
+  * 9ff7971b16b panvk: Make panvk_image_view per-gen
+  * 4aeb7aa22fd panvk: Make panvk_buffer_view per-gen
+  * 2de95773b9c panvk: Kill panvk_private.h
+  * fc69751abdf panvk: Move panvk_wsi definitions to panvk_wsi.h
+  * 2a032600c61 panvk: Move the panvk_priv_bo logic to
+    panvk_priv_bo.{c,h}
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 27 Mar 2024 23:04:10 +0100
+
 mesa (24.1.0~git2403140208.9b6d6c1d2d0~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
