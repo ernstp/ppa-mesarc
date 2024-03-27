@@ -1,3 +1,16 @@
+libdrm (2.4.120+git2403270855.c7c3c14b~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * c7c3c14b amdgpu: fix deinit logic
+  * c45ffb1e symbols-check: Add _fbss, _fdata, _ftext
+  * 525e8044 symbols-check: Add _GLOBAL_OFFSET_TABLE_
+  * 7275ef8e amdgpu: add amdgpu_device_initialize2
+  * 6978f999 amdgpu: add amdgpu_va_range_alloc2
+  * 96fe43a0 amdgpu: expose amdgpu_va_manager publicly
+  * 43768487 amdgpu: add amdgpu_va_manager
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 27 Mar 2024 23:02:27 +0100
+
 libdrm (2.4.120+git2403050453.c8f327ce~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
