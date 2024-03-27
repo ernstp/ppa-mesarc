@@ -1,3 +1,40 @@
+libsdl2 (2.31.0+git2403251945.5fff9bc1e~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 5fff9bc1e Don't fail joystick initialization if udev isn't available
+  * 358a80a47 remove non-existent vulkan.hpp and vulkan_mir.h from Xcode
+    project
+  * eb185e8d8 VisualC: remove vulkan.hpp
+  * cbc9bd980 Add Yawman Arrow flightstick controller
+  * 5d8017995 PSP: send initial SDL_JOYDEVICEADDED event
+  * 6e1611cc7 udev: Fix O(n^2) device walking issue (closes #9092)
+  * 6ba3e5653 SDL_GetWindowSurface: update documentation re: surface-
+    >pixels
+  * 7b6695f4d PSP: zero-copy WindowSurface API for direct VRAM access
+  * 37c664a13 PSP: fix regression, GetTicks64 should return millisecs
+  * 763d768f7 Fix bug #9331 - SDL3 Android crash getVibrator() == null
+  * 82b449611 PSP: improve performance counter res to us granularity
+  * fa18c9bf4 Add support for MadCatz Saitek Side Panel Control Deck
+  * 5df737bb3 wayland: Check the returned display pointer before
+    dereferencing
+  * a9ac34984 Poll for the initial controller state when using
+    DirectInput
+  * 4a79fe44f N3DS: Fix locale name and early return.
+  * 43f0ae1e5 Improve event processing latency when gamepad/sensor is
+    open
+  * c17d2246f PSP/Joystick: fix formatting
+  * 86f223d66 PSP: don't block on joystick event query
+  * 2d6c10005 Added a mapping for the Defender Joystick Cobra R4 (thanks
+    @kotenok2000!)
+  * 07f04bb35 Use the CRC as part of the unique key for mappings
+  * 24aedc143 wayland: Always use the entire buffer for the viewport
+    source
+  * b8daf14fe If a mapping specifies a crc, don't match for controllers
+    that don't have that CRC
+  * 525c317ed wayland: Add cursor-shape-v1 protocol support
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 27 Mar 2024 23:02:58 +0100
+
 libsdl2 (2.31.0+git2403131623.59d4a3945~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
