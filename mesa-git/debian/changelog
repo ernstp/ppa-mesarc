@@ -1,3 +1,50 @@
+mesa (24.0.4+git2403272254.06d94df022d~f~mesarc5) focal; urgency=medium
+
+  * New snapshot:
+  * 06d94df022d docs: add sha256sum for 24.0.4
+  * bb6a55b75b8 VERSION: bump for 24.0.4
+  * ea5e99da514 docs: add release notes for 24.0.4
+  * 25dac7bc125 radv/video: fix h265 decode with unaligned w/h
+  * 0bc813906c9 intel/brw: Fix opt_split_sends() to allow for FIXED_GRF
+    send sources
+  * f942a506762 {vulkan,radv,anv}/video: fix issue in H264 scaling lists
+    derivation
+  * 9900dc15e43 nir_to_spirv: Allow LOD for external images
+  * acee542721d anv: fix bitfield checks in gfx runtime flushing
+  * 0edfbaaf99c anv: fix block pool allocation failure
+  * 7c6ea9011b2 blorp: handle a few allocation failure cases
+  * cdfe4171c57 nvk: fix valve segfault from setting a descriptor set
+    from NULL
+  * 31be238fe87 panvk: Disable global offset on varying and non-VS
+    attribute descriptors
+  * 32c80c965cc nir/gather_types: Support unstructured control-flow
+  * cd6b71cd476 nir/builder: Correctly handle decl_reg or undef as the
+    first instruction
+  * 465e9bd99e0 radeonsi/vcn: update to use correct padding size.
+  * aade46435a0 frontends/va: add surface alignment attribute
+  * 27c7c507934 radeonsi/vcn: add enc surface alignment caps
+  * 21e95719eeb radv: invalidate L2 metadata for
+    VK_ACCESS_2_MEMORY_READ_BIT
+  * 90dc45bcff0 rusticl: work around reference-to-mutable-static
+    warnings
+  * b75b707f966 .pick_status.json: Update to
+    c0875d21563257442fd91aab5740248b0fd96a5c
+  * 3e0fc344c96 teximage: allow glCopyTex{Sub}Image[123]D into R/RG
+    textures with OpenGL ES 2.0
+  * 53ad33ce26f aco/gfx11: fix scratch ST mode assembly
+  * 2e028d7cf37 radeonsi: preserve alpha if needed in kill_ps_outputs_cb
+  * b0ada3497cb zink: clamp swapchain renderarea instead of asserting
+  * 0a04f001237 zink: defer present barrier to flush if a clear is
+    pending
+  * 8428accd423 ac/llvm,radeonsi: fix memory leaks triggered by
+    ac_nir_translate() errors
+  * 4f34ef90afc anv: don't leak device->vma_samplers
+  * 12ac7ecdf2f aco/cssa: reset equal_anc_out if merging fails
+  * 2e08bfb5df5 radv: add a workaround for null IBO on GFX6
+  * be542ad96f0 zink: do io fixup on patch variables too
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 27 Mar 2024 23:11:05 +0100
+
 mesa (24.0.3+git2403140111.90dcd95c0e7~f~mesarc5) focal; urgency=medium
 
   * New snapshot:
