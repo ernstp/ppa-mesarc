@@ -1,3 +1,15 @@
+corectrl (1.5.0~git2403171214.5c77ecb~m~mesarc18) mantic; urgency=medium
+
+  * New snapshot:
+  * 5c77ecb Bump version to 1.5.0-dev
+  * 4dabb24 Bump version to 1.4.0
+  * ce684ab Add missing override keyword on CPUFreq tests
+  * 8f00cab Explicitly set QML Binding restoreMode
+  * 9288467 Enable native font rendering using
+    QQuickWindow::setTextRenderType
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 28 Mar 2024 00:02:11 +0100
+
 corectrl (1.4.0~git2403121322.3ff1f2d~m~mesarc18) mantic; urgency=medium
 
   * New snapshot:
