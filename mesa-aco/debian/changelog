@@ -1,3 +1,54 @@
+mesa (24.1.0~git2404050225.c891a384e78~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * c891a384e78 dzn: Don't copy app indirect args if we don't need to
+  * db16dcf0f99 dzn: Add a hash table of command signatures with non-
+    default strides
+  * d7bd87aa27f dzn: Rework indirect drawing keys for shaders and
+    command signatures
+  * ccf439629ff dzn: Update pipeline cache params to take all options
+    into account
+  * 4de88025cc2 dzn: Understand whether first-vertex and base-instance
+    are needed for a pipeline
+  * fbd4e5d8aae dzn: Query options21
+  * ed465bf7387 dzn: Delete dzn structs for indirect draw args and use
+    D3D ones
+  * f6c3d73700f spirv2dxil: Output more specific metadata for whether
+    draw sysvals are needed
+  * 30b1a6750c3 spirv2dxil: Support passing first vertex / base instance
+    to DXIL backend
+  * 607720151f8 microsoft/compiler: Handle base vertex/instance sysvals
+    as DXIL intrinsics
+  * 349c4d84c03 ci/windows: Bump Agility SDK to 1.613.2 for
+    ExecuteIndirect validation fix
+  * 0b67d3d9094 intel/elk: Delete stray nir_opt_dce
+  * 24cdbbdaa20 intel/brw: Delete stray nir_opt_dce
+  * 44fb57b8270 intel/elk: Don't call nir_opt_remove_phis before
+    nir_convert_from_ssa
+  * 6377e8fd299 intel/brw: Don't call nir_opt_remove_phis before
+    nir_convert_from_ssa
+  * 87101e7d834 intel/compiler: Ensure load_barycentric_at_sample and
+    load_interpolated_input remain together
+  * 49217c2547a ci: enable shader-db on lima
+  * 69b911bc532 radv: remove radv_private.h
+  * 367cf70a292 radv: move RADV_USE_WSI_PLATFORM define to radv_wsi.h
+  * 28eefbadeb3 radv: move CLOCK_MONOTONIC_RAW define to
+    radv_physical_device.h
+  * e8269c01cbb radv: move RADV_API_VERSION to radv_instance.h
+  * e25882352bc radv: move RADV_SUPPORT_CALIBRATED_TIMESTAMPS to
+    radv_physical_device.c
+  * cc1526eeacf radv: replace radv_is_aligned() by util_is_aligned()
+  * 81e3c46d065 util: add util_is_aligned()
+  * 5cc32585331 radv: replace radv_float_to_{u,s}fixed() by
+    util_{un}signed_fixed()
+  * 6a27c5e9a89 radv: replace align_u32_npot() by ALIGN_NPOT
+  * e75fdac533d radv: replace align_{u32,u64}() by align{64}()
+  * ba153fc06b8 radv: replace radv_minify() by u_minify()
+  * 799e99fe215 radv: rename remaining phys_dev occurrences to pdev
+  * b409936e975 radv: add missing endif comment for some headers
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 05 Apr 2024 05:57:12 +0200
+
 mesa (24.1.0~git2403272236.3a10d1be0e9~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
