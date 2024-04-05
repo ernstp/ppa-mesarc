@@ -1,3 +1,35 @@
+mesa (24.0.4+git2404011708.52549327115~f~mesarc5) focal; urgency=medium
+
+  * New snapshot:
+  * 52549327115 broadcom/compiler: fix workaround for GFXH-1602
+  * 7cbcbd3bbfe v3d: implement fix for GFXH-1602
+  * 33da1afe5d5 docs: we support EGL 1.5 for a long time
+  * f0ab4edc1bb .pick_status.json: Update to
+    fcb568a5d5a52db75fa2f6d04579bb404ca7f597
+  * 8ab2fb3fe41 r300: add missing copyright header
+  * c84e2e3181b r300: add missing licence to the r300_public.h
+  * d7af7fdeccd tu: fix memory leaks in tu_shader
+  * 27faffb9765 nir: intel/brw: Change the order of sources for
+    nir_dpas_intel
+  * da2e83a3322 intel/brw: Use enums for DPAS source regioning
+  * b10ce2157b7 intel/brw: Clear write_accumulator flag when changing
+    the destination
+  * 4bd77aff494 zink: only check that CUBE_COMPATIBLE for images doesn't
+    subtract flags
+  * 6c9706d99ee meson: fix link failure with llvm-18
+  * c34dc4bebf3 Revert "zink: store last pipeline directly for
+    zink_gfx_program::last_pipeline"
+  * 6c4a85a04e2 aco: don't combine mul+add_clamp to mad_clamp
+  * e0c85b916c5 radv: fix conditional rendering with mesh+task and
+    multiview (again)
+  * f8bfdc4bbb6 vulkan/wsi/x11: Explicitly discard errors from
+    xcb_present_pixmap.
+  * 3a181751eee etnaviv: fix depth writes without testing
+  * 60c5bc93b48 .pick_status.json: Update to
+    3d68dd78d07b30cefe90d76af681075f4ed6b33d
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 05 Apr 2024 06:03:26 +0200
+
 mesa (24.0.4+git2403272254.06d94df022d~f~mesarc5) focal; urgency=medium
 
   * New snapshot:
