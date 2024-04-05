@@ -1,3 +1,16 @@
+libsdl2 (2.31.0+git2404022103.1fa614290~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 1fa614290 Fix default Windows window icon not suiting the DPI.
+  * 906ad64d7 Fix Caps Lock and Backspace mapping for Colemak
+  * f1690e265 Workaround a macOS cursor-related bug.
+  * 02246aaeb wikiheaders.pl: Report a function's header file name.
+  * 4d91f0e79 SDL_stdinc.h: Android passes sizeof(ENUM) == sizeof(int)
+    assertion
+  * 0d8ce4a76 psp: Fixed building with pspdev when not using CMake.
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 05 Apr 2024 05:56:06 +0200
+
 libsdl2 (2.31.0+git2403251945.5fff9bc1e~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
