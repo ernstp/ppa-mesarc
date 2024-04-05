@@ -1,3 +1,19 @@
+xwayland (2:23.2.5+git2404040558.f69899a41~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * f69899a41 xwayland: Use correct pointer types on i386
+  * 28cfd2f98 Bump version to 23.2.5
+  * 01941a831 render: fix refcounting of glyphs during
+    ProcRenderAddGlyphs
+  * 672b26d1f Xi: ProcXIPassiveGrabDevice needs to use unswapped length
+    to send reply
+  * bd16cc836 Xi: ProcXIGetSelectedEvents needs to use unswapped length
+    to send reply
+  * 4c8de123f dix: fix valuator copy/paste error in the
+    DeviceStateNotify event
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 05 Apr 2024 06:08:06 +0200
+
 xwayland (2:23.2.4+git2402081706.d755da587~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
