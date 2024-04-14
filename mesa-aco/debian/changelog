@@ -1,3 +1,43 @@
+mesa (24.1.0~git2404141932.566174785c2~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * 566174785c2 lavapipe: Explicitely support ycbcr formats
+  * 8f5fb4e0951 lavapipe: Handle multiple planes in GetDescriptorEXT
+  * c48d6097cdf lavapipe: Do nort use NIR_PASS during lowering
+  * 4335d006a7c lavapipe: Implement ray_tracing_maintenance1 queries
+  * a26f96ed3de lavapipe: Handle accel struct queries in
+    handle_copy_query_pool_results
+  * 6cc780173a8 r300/ci: failures list update
+  * fe35a8b00e7 nir: change "user_data_amd" sysval from 4 to 8
+    components
+  * c1f750eed9e nir: add nir_intrinsic_optimization_barrier_sgpr_amd
+  * 6426f6de6a2 nir: allow FP16 in nir_format_linear_to_srgb
+  * 281e08714e3 nir: add more build helpers
+  * b681677f7d3 nak: Rewrite union_find and use it in repair_ssa
+  * b5f4c54d0de nak: Remove old union_find implementation
+  * 7101ed7f885 ci: temporarily disable Android test builds
+  * b9c80ee59e8 etnaviv: drm: Remove fallback value for
+    ETNA_GPU_NUM_CONSTANTS
+  * 57a662fc4cf etnaviv: Copy values from etna_core_info
+  * e60e045b89a etnaviv: drm: Fill limits
+  * def32f8668e etnaviv: hwdb: Fill limits
+  * b68e868d314 etnaviv: common: Add some limit values
+  * ef19966e380 etnaviv: common: Add enum etna_core_type
+  * aaccc25a4dd etnaviv: drm: Make use of hwdb
+  * 2192e620bb0 etnaviv: hwdb: Add etna_query_feature_db(..)
+  * 394652e5a02 etnaviv: hwdb: Generate hwdb.h
+  * a07d1864db3 ci: Install python3-pycparser in build container
+  * d9e490c2f48 etnaviv: hwdb: Import gc_feature_database from ST
+  * 5c5dc646ed2 etnaviv: hwdb: Import gc_feature_database from Amlogic
+  * 775eff30464 etnaviv: hwdb: Import gc_feature_database from NXP
+  * e1c6748cf4c etnaviv: drm: Query some id values in etna_gpu_new(..)
+  * d600b45ccc9 etnaviv: Switch to etna_core APIs
+  * 358e1f10c52 etnaviv: drm: Initialize etna_core_info based on kernel
+    features
+  * 8639367f556 etnaviv: common: Add feature bitset
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 14 Apr 2024 20:55:30 +0200
+
 mesa (24.1.0~git2404050225.c891a384e78~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
