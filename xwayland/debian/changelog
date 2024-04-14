@@ -1,3 +1,12 @@
+xwayland (2:23.2.6+git2404091123.db9cde032~j~wayland7) jammy; urgency=medium
+
+  * New snapshot:
+  * db9cde032 Bump version to 23.2.6
+  * c3c2218ab render: Avoid possible double-free in
+    ProcRenderAddGlyphs()
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 14 Apr 2024 21:05:26 +0200
+
 xwayland (2:23.2.5+git2404040558.f69899a41~j~wayland7) jammy; urgency=medium
 
   * New snapshot:
