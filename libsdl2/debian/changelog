@@ -1,3 +1,12 @@
+libsdl2 (2.31.0+git2404110717.e75d72670~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e75d72670 include: Fixes to make the headers friendly with the
+    latest wikiheaders.
+  * 9216b7a5e stdinc: modify default alloca prototype
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 14 Apr 2024 20:54:28 +0200
+
 libsdl2 (2.31.0+git2404022103.1fa614290~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
