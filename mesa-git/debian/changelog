@@ -1,3 +1,49 @@
+mesa (24.0.5+git2404102228.976b75c8c5f~f~mesarc5) focal; urgency=medium
+
+  * New snapshot:
+  * 976b75c8c5f docs: add sha256sum for 24.0.5
+  * 77376147202 VERSION: bump for 24.0.5
+  * 4de817cee28 docs: add release notes for 24.0.5
+  * 066c61c7485 intel: Enable Xe KMD support by default
+  * cbbf9d781ba r600: add license information to the sfn_shader_gs.h
+  * 4a33e47af56 r600: add license info to the r600_opcodes.h
+  * df4f6b54919 r600: add license header to r600_formats.h
+  * b1087acbcbb frontend/nine: Reset should EndScene
+  * 7bf97678ddb frontend/nine: Fix destruction race
+  * 63873590d82 frontend/nine: Fix missing light flag check
+  * 64b06290628 frontend/nine: Fix programmable vs check
+  * e1c686778a7 frontend/nine: Fix ff ps key
+  * ad2594ead47 nir/serialize: Encode data for temporaries
+  * b573f698853 driconf: add a workaround for Joe Danger
+  * b351969fa25 driconf: add a workaround for Joe Danger 2
+  * 50669655ed4 glsl: allow out arrays in #110 with
+    allow_glsl_120_subset_in_110
+  * dac8689fc32 anv, iris: add missing CS_STALL bit for GPGPU texture
+    invalidation
+  * c73e830dc91 svga: Fix instanced draw detection
+  * 5eb9128a52c etnaviv: rs: take src dimensions into account when
+    increasing height alignment
+  * a6aa5d30d7e isl: set NullPageCoherencyEnable for depth/stencil
+    sparse surfaces
+  * b3a65a18818 anv: mark descriptors & pipeline dirty after blorp
+    compute
+  * 60c8db6cd12 nvk: Add a _pad field to nvk_fs_key
+  * 3e9ac50d376 gallium: handle copy_image of depth textures
+  * 6dab9b4a6de anv: add missing data flush out of L3 for transform
+    feedback writes
+  * 45904c576d5 glsl: Use a stable attr sort for VS in / FS out
+  * 1971a267bc1 .pick_status.json: Update to
+    2c1cb65949933a05eedb2eacc15cd893ecaef8aa
+  * 5681b3604a5 ci/amd: drop old PIGLIT_REPLAY_DESCRIPTION_FILE
+    surpassed by PIGLIT_TRACES_FILE
+  * 0d608f1b5bf anv: Create protected engine context when i915 supports
+    vm control
+  * a5d4638ed50 radv: make sure the heap budget is less than or equal to
+    the heap size
+  * 0deacc982bb intel/dev: Add 0x56be and 0x56bf DG2 PCI IDs
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 14 Apr 2024 21:01:05 +0200
+
 mesa (24.0.4+git2404011708.52549327115~f~mesarc5) focal; urgency=medium
 
   * New snapshot:
