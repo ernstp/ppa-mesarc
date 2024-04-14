@@ -1,3 +1,10 @@
+libdrm (2.4.120+git2404110127.1179edb4~f~mesarc0) focal; urgency=medium
+
+  * New snapshot:
+  * 1179edb4 include poll.h instead of sys/poll.h
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 14 Apr 2024 20:54:05 +0200
+
 libdrm (2.4.120+git2403291609.f94a79a7~f~mesarc0) focal; urgency=medium
 
   * New snapshot:
