@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 set -o pipefail
 
@@ -99,7 +99,10 @@ done
 
 popd
 if [ -n "$PPA" ] && [ -z "$NOUPLOAD" ]; then
-	dput ssh-ppa:ernstp/"$PPA" ${PACKAGE_NAME}_*_source.changes
+	for changes in $(ls ${PACKAGE_NAME}_*_source.changes); do
+		echo -e ${CYAN}Uploading to $PPA: $changes${NC}
+		dput ssh-ppa:ernstp/"$PPA" $changes
+	done
 	rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb
 fi
 
