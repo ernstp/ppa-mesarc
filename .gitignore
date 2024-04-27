@@ -1,3 +1,5 @@
 */*
 !*/debian
 !*/settings.sh
+!*/settings2.sh
+*/debian/*/changelog
