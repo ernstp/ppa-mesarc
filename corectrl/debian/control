@@ -22,7 +22,8 @@ Build-Depends:
  libpolkit-gobject-1-dev,
  libdbus-1-dev,
  libquazip1-qt5-dev,
- libspdlog-dev
+ libspdlog-dev,
+ libpugixml-dev
 Standards-Version: 4.1.4
 Homepage: https://gitlab.com/corectrl/corectrl
 
