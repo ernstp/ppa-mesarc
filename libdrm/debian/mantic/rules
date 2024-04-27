@@ -1,0 +1,146 @@
+#!/usr/bin/make -f
+
+###
+### Configuration, decide what to build
+###
+
+# Some variables:
+DEB_HOST_ARCH     ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_ARCH_OS  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
+DEB_HOST_ARCH_CPU ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
+
+confflags = \
+	--auto-features=disabled \
+	-Ddefault_library=both \
+	-Dman-pages=enabled \
+	-Dradeon=enabled \
+	-Damdgpu=enabled \
+	-Dinstall-test-programs=true \
+	-Dvalgrind=disabled \
+	$()
+
+# Linux vs. the rest:
+ifeq (linux, $(DEB_HOST_ARCH_OS))
+	confflags += -Dudev=true
+	confflags += -Dvmwgfx=enabled
+	confflags += -Dnouveau=enabled
+	NOUVEAU = yes
+else
+	confflags += -Dudev=false
+	confflags += -Dvmwgfx=disabled
+	confflags += -Dnouveau=disabled
+	NOUVEAU = no
+endif
+
+# Intel is only on x86:
+ifneq (,$(filter amd64 i386,$(DEB_HOST_ARCH_CPU)))
+ifneq (,$(filter linux kfreebsd hurd,$(DEB_HOST_ARCH_OS)))
+	INTEL = yes
+endif
+endif
+ifeq ($(INTEL), yes)
+	confflags += -Dintel=enabled
+else
+	confflags += -Dintel=disabled
+endif
+
+# Exynos/Omap/Tegra are only on arm
+ifneq (,$(filter arm,$(DEB_HOST_ARCH_CPU)))
+	ARM = yes
+endif
+ifeq ($(ARM), yes)
+	confflags += -Dexynos=enabled
+	confflags += -Domap=enabled
+else
+	confflags += -Dexynos=disabled
+	confflags += -Domap=disabled
+endif
+
+# Etnaviv is on armhf and arm64
+ifneq (,$(filter armhf arm64,$(DEB_HOST_ARCH)))
+	ETNAVIV = yes
+endif
+ifeq ($(ETNAVIV), yes)
+	confflags += -Detnaviv=enabled
+else
+	confflags += -Detnaviv=disabled
+endif
+
+# Tegra is on arm and arm64
+ifneq (,$(filter arm arm64,$(DEB_HOST_ARCH_CPU)))
+	TEGRA = yes
+endif
+ifeq ($(TEGRA), yes)
+	confflags += -Dtegra=enabled
+else
+	confflags += -Dtegra=disabled
+endif
+
+# Freedreno is on arm and arm64
+ifneq (,$(filter arm arm64,$(DEB_HOST_ARCH_CPU)))
+	FREEDRENO = yes
+endif
+ifeq ($(FREEDRENO), yes)
+	confflags += -Dfreedreno=enabled -Dfreedreno-kgsl=true
+else
+	confflags += -Dfreedreno=disabled
+endif
+
+###
+### Actual build
+###
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(confflags)
+
+override_dh_auto_test:
+	dh_auto_test || echo "Test suite failure, but keeping on anyway"
+
+override_dh_install:
+	find debian/tmp -name '*.la' -delete
+	dh_install
+
+  ifneq (,$(filter $(DEB_HOST_ARCH_CPU),arm))
+	for file in debian/tmp/usr/bin/exynos_*; do \
+		mv $$file debian/libdrm-tests/usr/bin; \
+	done
+  endif
+  ifneq (,$(filter $(DEB_HOST_ARCH_CPU),arm arm64))
+	for file in debian/tmp/usr/bin/tegra-*; do \
+		mv $$file debian/libdrm-tests/usr/bin; \
+	done
+  endif
+  ifneq (,$(filter $(DEB_HOST_ARCH),armhf arm64))
+	for file in debian/tmp/usr/bin/etnaviv*; do \
+		mv $$file debian/libdrm-tests/usr/bin; \
+	done
+  endif
+
+override_dh_makeshlibs:
+	dh_makeshlibs -plibdrm2 -V'libdrm2 (>= 2.4.89)' --add-udeb=libdrm2-udeb -- -c4
+ifeq ($(INTEL), yes)
+	dh_makeshlibs -plibdrm-intel1 -V'libdrm-intel1 (>= 2.4.75)' -- -c4
+endif
+ifeq ($(NOUVEAU), yes)
+	dh_makeshlibs -plibdrm-nouveau2 -V'libdrm-nouveau2 (>= 2.4.66)' -- -c4
+endif
+	dh_makeshlibs -plibdrm-radeon1 -V'libdrm-radeon1 (>= 2.4.39)' -- -c4
+	dh_makeshlibs -plibdrm-amdgpu1 -V'libdrm-amdgpu1 (>= 2.4.97)' -- -c4
+ifeq ($(ARM), yes)
+	dh_makeshlibs -plibdrm-omap1 -V'libdrm-omap1 (>= 2.4.38)' -- -c4
+	dh_makeshlibs -plibdrm-exynos1 -V'libdrm-exynos1 (>= 2.4.66)' -- -c4
+endif
+ifeq ($(ETNAVIV), yes)
+	dh_makeshlibs -plibdrm-etnaviv1 -V'libdrm-etnaviv1 (>= 2.4.89)' -- -c4
+endif
+ifeq ($(TEGRA), yes)
+	dh_makeshlibs -plibdrm-tegra0 -V'libdrm-tegra0' -- -c4
+endif
+ifeq ($(FREEDRENO), yes)
+	dh_makeshlibs -plibdrm-freedreno1 -V'libdrm-freedreno1 (>= 2.4.97)' -- -c4
+endif
+
+%:
+	dh $@ --with quilt \
+		--builddirectory=build/ \
+		--buildsystem=meson
