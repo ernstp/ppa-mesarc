@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+dpkg_late_eval ?= $(or $(value DPKG_CACHE_$(1)),$(eval DPKG_CACHE_$(1) := $(shell $(2)))$(value DPKG_CACHE_$(1)))
+DEB_DISTRIBUTION = $(call dpkg_late_eval,DEB_DISTRIBUTION,dpkg-parsechangelog -SDistribution)
+
+ifeq ($(DEB_DISTRIBUTION),bionic)
+export CC = gcc-8
+export CXX = g++-8
+endif
+
+%:
+	dh $@ --buildsystem=cmake
+
+override_dh_auto_test:
+	true

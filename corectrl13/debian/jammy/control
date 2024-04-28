@@ -1,0 +1,49 @@
+Source: corectrl
+Section: admin
+Priority: optional
+Maintainer: Ernst Sjöstrand <ernstp@gmail.com>
+Build-Depends:
+ gcc-11 | gcc-10 | gcc-9 | gcc-8,
+ g++-11 | g++-10 | g++-9 | g++-8,
+ cmake,
+ extra-cmake-modules,
+ debhelper (>=11~),
+ qttools5-dev,
+ qml-module-qtquick2,
+ qtdeclarative5-dev,
+ libqt5charts5-dev,
+ libqt5svg5-dev,
+ libbotan-2-dev,
+ libqca-qt5-2-dev,
+ libdrm-dev,
+ qtbase5-dev,
+ libegl1-mesa-dev | libegl-dev,
+ libquazip5-dev,
+ libpolkit-gobject-1-dev,
+ libdbus-1-dev
+Standards-Version: 4.1.4
+Homepage: https://gitlab.com/corectrl/corectrl
+
+Package: corectrl
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ qml-module-qtquick2,
+ qml-module-qtquick-controls2,
+ qml-module-qtquick-layouts,
+ qml-module-qtquick-window2,
+ qml-module-qt-labs-platform,
+ qml-module-qtcharts,
+ sysvinit-utils,
+ util-linux,
+ hwdata,
+ mesa-utils,
+ vulkan-tools | vulkan-utils
+Description: Core control application
+ CoreCtrl is a Free and Open Source GNU/Linux application that
+ allows you to control with ease your computer hardware using
+ application profiles. It aims to be flexible, comfortable and
+ accessible to regular users.
+ By Juan Palacios: https://www.patreon.com/jpalaciosdev
