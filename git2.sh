@@ -73,12 +73,14 @@ fi
 GIT_VERSION=$(git show --date=format-local:%y%m%d%H%M -s --format=format:%cd.%h)
 GIT_REV=$(git show -s --format=format:%h)
 
+found_build=0
 for dist in $(ls ../debian) ; do
 	DEBIAN_VERSION=${EPOCH}${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~${PPA}${INC}
 
 	OLD_DEBIAN_VERSION=$(dpkg-parsechangelog -l ../debian/$dist/changelog -S Version)
 
 	if [ "$DEBIAN_VERSION" != "$OLD_DEBIAN_VERSION" ]; then
+		found_build=1
 		echo -e ${CYAN}Building for $dist${NC}
 
 		dch -c ../debian/$dist/changelog -D ${dist} -v ${DEBIAN_VERSION} "New snapshot:"
@@ -96,6 +98,11 @@ for dist in $(ls ../debian) ; do
 		debuild --no-lintian -S -d
 	fi
 done
+
+if [[ $found_build = "0" ]]; then
+	echo -e ${CYAN}Nothing new${NC}
+	exit 0
+fi
 
 popd
 if [ -n "$PPA" ] && [ -z "$NOUPLOAD" ]; then
