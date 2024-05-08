@@ -1,3 +1,52 @@
+libsdl2 (2.31.0+git2405080953.d499b25a3~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * d499b25a3 SDL_vulkan.h: Fixed typo in SDL_Vulkan_LoadLibrary docs.
+  * 06f437e1b wikiheaders: sync up with main branch.
+  * 8c92af5e5 Added a Windows mapping for the SPEEDLINK STRIKE Gamepad
+  * d8fbeec09 autotools, cmake, macOS: Do not use the system iconv() by
+    default
+  * 8b4e389ad wikiheaders: updated from SDL3, plus fixes to headers to
+    deal with that.
+  * 63ea838db test, watcom.mif: revert
+    78391e6530352bdf66ba5d38c3dac9fc70bb0578
+  * 78391e653 test, watcom.mif: revert 9ecdcd8bb and use %copy instead
+  * 9ecdcd8bb test, watcom makefile: change copy command to use a dos
+    path separator
+  * 8f6a5c9ad wikiheaders-options: Correct project full name.
+  * 59937e0fd wikiheaders: manpages See Also sections should specify 3
+    vs 3type.
+  * 2f54d8a45 wikiheaders: Manpages go in man3 directory, even if
+    they're 3type.
+  * 1caa42703 Fixed building with GDK (thanks @Romans-I-XVI!)
+  * 7554e82ec Added GDK app constrained/unconstrained events (#9608)
+  * 75340b827 loongarch: Delete the configuration of the compilation
+    option "mlasx"
+  * 67c60e0b9 Fixed build error (thanks @sezero!)
+  * 45b804c15 Avoid opening non-joystick devices if possible to speedup
+    scanning
+  * 0963c11af Initialize udev before joystick manual scan so class
+    lookup works
+  * 863d4a0f2 x11: Fix pointer warp on XWayland
+  * 59cc43ccb Added a note about WIN+V for future reference (thanks
+    @orconut!)
+  * 33af02ae6 Fixed Win+V handling (pasting from clipboard history) on
+    Windows (thanks @ocornut!)
+  * ab10bf54f SDL_TextInputEvent: Improve documentation.
+  * 26e3d65ea CI, macOS: install autoconf.
+  * e03ad30a5 docs: heavy editing to make this happy with latest
+    wikibridge.
+  * a96196c95 include: Fixed SDL_AudioFormat documentation.
+  * 623a83f2b Sync wiki -> SDL2.
+  * e69d0e516 wikiheaders_options: People can include specific headers
+    if they want!
+  * 8f18e2f52 Add USB IDs for the Thrustmaster TS-XW racing wheel
+  * 4e29be814 Fixed compilation with C89 (thanks @d-s-a!)
+  * effc16954 Fixed build
+  * 59a041681 3DS: Improve framebuffer support
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 08 May 2024 12:40:09 +0200
+
 libsdl2 (2.31.0+git2404110717.e75d72670~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
