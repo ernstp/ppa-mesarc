@@ -1,3 +1,48 @@
+mesa (24.2.0~git2405081100.6bcc300e00c~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * 6bcc300e00c rusticl: add RUSTICL_MAX_WORK_GROUPS
+  * 91552bb4ecc rusticl: lower huge grids
+  * 204c287327f rusticl/kernel: properly handle grid and offsets being
+    usize
+  * 8da8c6c2d8b rusticl: use stream uploader for cb0 if prefered
+  * 56f7b0297e0 v3dv: Use errno when logging an error to stderr
+  * e2b9c5a9e3e zink: move blocking gfx program init functions to thread
+  * 66dc759d0f8 zink: precompile_job() -> gfx_program_precompile_job()
+  * 54db502053d zink: split gfx program creation into 2-stage functions
+  * da04a316f70 zink: reorder fencing in zink_create_gfx_program()
+  * 7d849da0fdf zink: reorder some code in zink_create_gfx_program()
+  * 921fbac6a38 zink: move gfx shader init to thread
+  * 450447257b0 zink: split generated tcs creation into 2-stage
+    functions
+  * 68eaba7e87e zink: reorder precompile_separate_shader_job() in file
+  * ca51c5a9da2 zink: split shader create into 2-stage functions
+  * 8b540129410 zink: use zink_shader type directly in
+    zink_create_gfx_shader_state()
+  * b6b91a3ed98 zink: more effectively synchronize separate shader
+    program precompiles
+  * 27fe924cf00 zink: always block the precompile threads when pruning
+    shaders
+  * ac1d003d372 zink: break out shadow sampler scanning
+  * de6139027ca zink: rename zink_shader variable in create functions
+  * 3849f367cc0 zink: simplify flagging legacy shadow samplers
+  * 95e4a2b37e3 zink: simplify confusing return in rewrite_tex_dest
+  * 21a61d75b72 zink: use info.fs.uses_sample_qualifier instead of
+    manual scan
+  * 7bdaf6e95f7 zink: use zink_shader_key_optimal unions for pipeline
+    state asserts
+  * 84328766143 zink: delete GS conditional in update_so_info
+  * d77a1762bd3 zink: clamp buffer_indices_hashlist resets to used
+    region
+  * 72b3c2e4baa ci: identify and label S3 buckets
+  * cc6bd04dd7b ci: kernel stored in a different s3 bucket
+  * 73188a4590a intel/perf: Add function to open perf stream
+  * d27dcb815ee intel/perf: Add and use a function to return platform OA
+    format
+  * b98538d54c9 crocus: Free intel_perf_config and intel_perf_context
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 08 May 2024 12:41:21 +0200
+
 mesa (24.1.0~git2404141932.566174785c2~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
