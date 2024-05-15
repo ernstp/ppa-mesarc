@@ -1,3 +1,28 @@
+libsdl2 (2.31.0+git2405141650.080599066~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 080599066 wikiheaders: Automatically categorize API symbols by
+    subsystem.
+  * efaa58732 Don't enable enhanced report mode for Bluetooth Nintendo
+    Switch controllers by default
+  * b6899f82f SDL_iconv_string: simplify recomputation of outbuf and
+    outbytesleft
+  * 312a8a19d SDL_x11sym.h: corrected XQueryKeymap() proto.
+  * b8b1ebf57 Sync SDL2 wiki -> header
+  * 62175552e SDL_video.h: Make a note that changing fullscreen mode
+    might reset renderers.
+  * f23cc950f Sync SDL2 wiki -> header
+  * ed0eb7ee0 SDL_video.h: Add a 'sa' for SDL_GLContext to
+    SDL_GL_CreateContext.
+  * 7d0ea2a88 Sync SDL2 wiki -> header
+  * dd48b6f8c Sync SDL2 wiki -> header
+  * 17ad4fdf4 Sync SDL2 wiki -> header
+  * 1b7c2c9e4 Sync SDL2 wiki -> header
+  * 7d60ff996 SDL_JoystickEventState: Make documentation and
+    implementation match.
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 15 May 2024 14:53:27 +0200
+
 libsdl2 (2.31.0+git2405080953.d499b25a3~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
