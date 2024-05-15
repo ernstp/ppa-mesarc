@@ -1,3 +1,55 @@
+mesa (24.2.0~git2405151402.aa9244c8f6b~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * aa9244c8f6b intel/brw: update Xe2 max SIMD message sizes
+  * c8852719d05 radv: rename radeon perfctr uconfig helpers
+  * 2957cedad7d radv: remove redundant radeon_set_perfctr_reg() helper
+  * 6b023780ada radv: introduce radeon_set_reg_seq()
+  * f0d4212847c radv: stop using radv_physical_device for radeon helpers
+  * 1e78e4a344d rusticl/device: properly handle devices with no support
+    for images
+  * 017ae1f02d9 rusticl/device/caps: move enough for has_images
+  * e02b4e0d449 rusticl/device: add DeviceCaps and move timestamp stuff
+    into it
+  * e3e5f8e6db8 anv/sparse: assert a format can't be standard and non-
+    standard
+  * 4384c8782ed anv+zink/ci: add failures related to multi-sampled
+    sparse binding
+  * 5294faee203 anv: check for VK_RENDERING_SUSPENDING_BIT once at
+    CmdEndRendering
+  * 7ef3d652b25 anv/sparse: enable MSAA for Sparse when applicable
+  * 4e5979b5a20 anv/sparse: flush the tile cache when resolving sparse
+    images
+  * 8abfdfe576b anv/sparse: exclude Xe2's Tile64's non-standard block
+    shapes
+  * e69c7cd1496 anv/sparse: fix block_size_B when the image is multi-
+    sampled
+  * 6d748f5b2c7 anv/sparse: reject all sample flags that non-sparse
+    doesn't support
+  * 620f1d1a7a0 anv/sparse: properly reject sample counts we don't
+    support
+  * af725a2ccc8 anv/sparse: we can't do multi-sampled depth/stencil
+    sparse images
+  * 6d38801ebd9 anv/sparse: add the MSAA block shape tables
+  * 66b6671d3c1 isl: add ISL_TILING_64_XE2 to isl_tiling_to_name()
+  * 90b0925588d radeonsi: constify struct pipe_vertex_buffer *
+  * 283f8af9763 radeonsi/ci: remove some gfx11 flakes
+  * f237f497eb2 radeonsi/ci: update failures for all generations
+  * 87fd149bd86 radeonsi/ci: fix caselists for vk-gl-cts/main
+  * b91220a825d radeonsi: remove slow code from
+    si_msaa_resolve_blit_via_CB
+  * b771d135574 radeonsi: replace the clear_12bytes_buffer shader with
+    the DMA compute shader
+  * 995e7d927c2 radeonsi: use set_work_size for all internal compute
+    dispatches
+  * 83d8b3bc1a0 radeonsi: simplify the complex clear/copy_buffer shader
+  * 92497d1c8fe radeonsi: minor simplifications of clear/copy_buffer
+    shaders
+  * 81c90cded01 radeonsi: get NIR options from si_screen instead of
+    calling get_compiler_options
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 15 May 2024 14:55:05 +0200
+
 mesa (24.2.0~git2405081100.6bcc300e00c~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
