@@ -1,0 +1,8 @@
+Bug-Database: https://github.com/mesonbuild/meson/issues
+Documentation: https://mesonbuild.com
+FAQ: https://mesonbuild.com/FAQ.html
+Registry:
+  - Name: PyPI
+    Entry: meson
+Repository: https://github.com/mesonbuild/meson.git
+Repository-Browse: https://github.com/mesonbuild/meson

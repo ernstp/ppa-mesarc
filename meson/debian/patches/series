@@ -1,2 +1,1 @@
-1-disable-openmpi.patch
-2-disable-rootdir-test.patch
+lp2049904.patch

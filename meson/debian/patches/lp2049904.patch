@@ -1,0 +1,39 @@
+Description: Suffix rustc link args with `-Clink-arg=-lc` when linking against C ABI libraries
+Author: Mate Kukri <mate.kukri@canonical.com>
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/rustc/+bug/2049904
+Forwarded: no
+Last-Update: 2024-02-15
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: meson-1.3.2/mesonbuild/backend/ninjabackend.py
+===================================================================
+--- meson-1.3.2.orig/mesonbuild/backend/ninjabackend.py
++++ meson-1.3.2/mesonbuild/backend/ninjabackend.py
+@@ -1978,6 +1978,7 @@ class NinjaBackend(backends.Backend):
+         linkdirs = mesonlib.OrderedSet()
+         external_deps = target.external_deps.copy()
+         target_deps = target.get_dependencies()
++        have_c_abi_libs = False
+         for d in target_deps:
+             linkdirs.add(d.subdir)
+             deps.append(self.get_dependency_filename(d))
+@@ -1992,6 +1993,8 @@ class NinjaBackend(backends.Backend):
+                 args += ['--extern', '{}={}'.format(d_name, os.path.join(d.subdir, d.filename))]
+                 project_deps.append(RustDep(d_name, self.rust_crates[d.name].order))
+                 continue
++            else:
++                have_c_abi_libs = True
+ 
+             # Link a C ABI library
+ 
+@@ -2039,6 +2042,10 @@ class NinjaBackend(backends.Backend):
+                 else:
+                     args.append(f'-Clink-arg={a}')
+ 
++        # LP: #2049904 Link with libc last if we have C ABI libraries
++        if have_c_abi_libs:
++            args.append("-Clink-arg=-lc")
++
+         for d in linkdirs:
+             d = d or '.'
+             args.append(f'-L{d}')

@@ -1,17 +1,20 @@
 Source: meson
-Maintainer: Jussi Pakkanen <jpakkane@gmail.com>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Jussi Pakkanen <jpakkane@gmail.com>
 Section: devel
 Priority: optional
-Standards-Version: 4.5.0
+Standards-Version: 4.6.2
 Homepage: https://mesonbuild.com
-X-Python3-Version: >= 3.6
+X-Python3-Version: >= 3.7
 Rules-Requires-Root: no
-Build-Depends: python3-all:any (>= 3.5),
+Build-Depends: debhelper-compat (= 12),
+  python3:any (>= 3.7),
   dh-exec,
   dh-python,
   python3-setuptools,
   ninja-build (>= 1.6),
-  bash-completion
+  bash-completion,
+  python3-dev,
 
 Package: meson
 Architecture: all

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright 2017 Jussi Pakkanen
+# Copyright 2017-2023 Jussi Pakkanen
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -71,9 +71,13 @@ def write_args_from_envvars(ofile):
     write_args_line(ofile, 'cpp_link_args', cpp_link_args)
 
 cpu_family_map = dict(mips64el="mips64",
-                      i686='x86')
+                      i686='x86',
+                      powerpc64le='ppc64',
+                      )
 cpu_map = dict(armhf="arm7hlf",
-               mips64el="mips64",)
+               mips64el="mips64",
+               powerpc64le="ppc64",
+               )
 
 def run(options):
     if options.arch is None:
@@ -122,7 +126,31 @@ def run(options):
         ofile.write("cpu = '%s'\n" % host_cpu)
         ofile.write("endian = '%s'\n" % host_endian)
 
-if __name__ == '__main__':
+def internal_impl():
+    print('WARNING: this tool is deprecated, use "meson env2mfile" instead.')
     options = parser.parse_args()
     run(options)
     print('Remember to add the correct --libdir arg to Meson invocation.')
+
+def external_impl():
+    print('NOTE: Using Meson env2mfile, you should update build scripts to use that instead.')
+    cmd = ['meson', 'env2mfile', '--cross']
+    had_arch = False
+    for c in sys.argv[1:]:
+        if c.startswith('--arch'):
+            c = c.replace('--arch', '--debarch')
+            had_arch = True
+        cmd.append(c)
+    if not had_arch:
+        cmd.append('--debarch=auto')
+    try:
+        subprocess.check_call(cmd, shell=False)
+    except Exception as e:
+        sys.exit(str(e))
+
+if __name__ == '__main__':
+    revert_to_internal = True
+    if revert_to_internal:
+        internal_impl()
+    else:
+        external_impl()
