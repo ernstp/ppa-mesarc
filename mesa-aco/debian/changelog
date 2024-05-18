@@ -1,3 +1,52 @@
+mesa (24.2.0~git2405180004.b4bd3807045~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * b4bd3807045 nir/algebraic: eliminate pack+unpack and unpack+pack
+    pairs
+  * 681acde6d39 nvk/meta: Save and restore set_dynamic_buffer_start
+  * 3e9b08f417e nvk: Refactor nvk_meta_begin() to use a desc helper
+  * 6f0292f6b09 nvk: Add an NVK_MAX_SAMPLES #define
+  * ce0efbd1758 nvk: Move and better document set_dynamic_buffer_start
+  * 99f806b7338 nvk: Advertise 32 descriptor sets
+  * 54ce220f108 nvk: Store an nvk_buffer_address for each set in the
+    root table.
+  * 0e417df4996 nvk: Add static asserts for nvk_buffer_address layout
+  * 6fcfcd26259 nvk: Store descriptor set addresses in descriptor state
+  * f55c51a343c ci/etnaviv: add flakes from nightly runs
+  * 788d945c9a7 ci/alpine: re-enable Mold linker
+  * 7ae4a2ae349 u_gralloc/fallback: Extract modifier from QCOM
+    native_handle
+  * 2934e1fad52 Revert "egl/wayland: Remove
+    EGL_WL_create_wayland_buffer_from_image"
+  * 7fe169dd4ab ac,radv,radeonsi: introduce a helper to build a sampler
+    descriptor
+  * cd05b23a954 radeonsi: refactor si_translate_border_color()
+  * c6b29a47887 egl/dri2: fix error returns on dri2_initialize_x11_dri3
+    fail
+  * caca5e0de60 radv: add more helpers to emit viewports
+  * 73e1ff6b545 radv: use float instead of double for viewport
+    zscale/ztranslate
+  * 50ef8600bc6 radv: pass radv_physical_device to
+    radv_emit_default_sample_locations()
+  * 9e7c44ea116 radv: simplify radv_emit_default_sample_locations()
+  * 0697452f57e ac,radv,radeonsi: add a helper to translate buffer
+    dataformat
+  * 5d9bdb6410c ac,radv,radeonsi: add a helper to translate buffer
+    numformat
+  * 34090151034 radv: reject unsupported buffer formats earlier
+  * 622e1b6385e radv: only enable VK_MESA_image_alignment_control on
+    GFX9-11.5
+  * f0200a54d95 radv: add a helper to configure ring buffer descriptors
+  * db58d0f40b8 venus: forward nice priority when creating ring
+  * 4d2d49c63f5 sync protocol for VkRingPriorityInfoMESA
+  * 9b02584bed6 ci/panfrost: Revert "ci/panfrost: disable G52 until
+    machines gets fixed"
+  * 782f2b3dea2 ci/intel: add new jsl flake
+  * 49760b6af62 ci: Revert "ci: update failures list with angle for jsl,
+    tgl"
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 18 May 2024 11:05:44 +0200
+
 mesa (24.2.0~git2405151402.aa9244c8f6b~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
