@@ -1,3 +1,52 @@
+mesa (24.2.0~git2405210059.e1b4b399ce0~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * e1b4b399ce0 zink: disable cpu_storage for PIPE_USAGE_STREAM
+  * 01bac643f6c freedreno/ir3: Fix ldg/stg offset
+  * 23488790c14 zink: remove dgc debug mode
+  * e0931071154 lavapipe: lvp_indirect_command_layout ->
+    lvp_indirect_command_layout_nv
+  * aaa3f37ae59 lavapipe: plumb print_cmds through NV DGC
+  * 42e3d580cc7 lavapipe: split out DGC into separate file
+  * 3be436830e8 ac/llvm: Remove global access ops handling
+  * d2e80e57a3c radeonsi,aco: Run ac_nir_lower_global_access pass
+  * 46644ba371e meson: use glslang --depfile argument when possible
+  * 32e43fe77cc ac,radv,radeonsi: add helper to know if a format is
+    supported by DB
+  * d2234adf59a ac,radv,radeonsi: add helper to know if a format is
+    supported by CB
+  * c62f86587f4 amd/common: move some format related helpers to
+    ac_formats.c
+  * 473559001f2 radv: add radv_is_colorbuffer_format_blendable()
+  * 8f39e3a0f3a radv: stop checking the return value of
+    ac_get_cb_number_type()
+  * e227f2cc721 radv: remove redundant check for
+    VK_FORMAT_E5B9G9R9_UFLOAT_PACK32 on GFX6-10
+  * 58ca4cee9ec d3d12: Video Encode - Fix inputs for older OS support
+    query cap
+  * d8eb9fc9b45 nir: Mark variable as ASSERTED to fix unused variable
+    warning treated as error
+  * 07080c5fc52 radv: simplify creating gfx10 texture descriptors for
+    sliced 3d/2d view of 3d
+  * 16952a179bb radv: allow 3d views with
+    VK_IMAGE_CREATE_2D_VIEW_COMPATIBLE_BIT_EXT
+  * 96a9625866b ac,radv,radeonsi: add a function to get the color format
+    endian swap
+  * 35c6b9c066c ac,radv,radeonsi: add a function to translate db format
+  * 934fc47822d radv: use PIPE_FORMAT in radv_translate_dbformat()
+  * 7f0430bb361 ac,radv,radeonsi: add a function to translate colorswap
+  * 40428bd497b radv: use PIPE_FORMAT in radv_translate_colorswap()
+  * 255e76b4193 ac,radv,radeonsi: add a function to translate tex
+    numformat
+  * 6030c876d02 radv: use PIPE_FORMAT in radv_translate_tex_numformat()
+  * 2fef95f901e radv: stop checking the output value of
+    radv_translate_tex_numformat
+  * 418fed1805a aco: update VS prolog waitcnt for GFX12
+  * f01cac835f9 aco/stats: support GFX12 in collect_preasm_stats()
+  * 9e9cabd2fa1 aco/waitcnt: support GFX12 in waitcnt pass
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 21 May 2024 07:46:10 +0200
+
 mesa (24.2.0~git2405180004.b4bd3807045~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
