@@ -1,3 +1,13 @@
+libsdl2 (2.31.0+git2405201847.f88e8da17~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * f88e8da17 Sync SDL2 wiki -> header
+  * 0466c4560 hidapi: Replace BSD license with "original" hidapi
+    license.
+  * a26d2e705 Sync SDL2 wiki -> header
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 21 May 2024 07:44:56 +0200
+
 libsdl2 (2.31.0+git2405172017.fdf28471c~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
