@@ -1,3 +1,10 @@
+libsdl2 (2.31.0+git2405212245.01314ff1d~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 01314ff1d Sync SDL2 wiki -> header
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 May 2024 18:15:04 +0200
+
 libsdl2 (2.31.0+git2405201847.f88e8da17~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
