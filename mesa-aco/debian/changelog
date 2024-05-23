@@ -1,3 +1,50 @@
+mesa (24.2.0~git2405231704.4d298673da9~f~mesaaco7) focal; urgency=medium
+
+  * New snapshot:
+  * 4d298673da9 get_color_read_type: make sure format/type combo is
+    legal for gles
+  * 5120d51d829 Uprev Piglit to e180f96239edba441f22f58dfc852cafb902844a
+  * c23c5c0a073 nir/opt_varyings: Don't promote flat inputs when moving
+    post-dominator.
+  * 9dad0ced521 nir/opt_varyings: Print FS VEC4 type when debugging
+    relocate_slot.
+  * 72330e607f5 nvk/ci: mark the job as failing in case of hangs,
+    instead of silently rebooting
+  * 93493ea441d nvk/ci: adjust the regex for "dut is broken and needs to
+    be rebooted"
+  * afef3820093 panfrost: untangle faces from layers
+  * 8455e0521e8 panfrost: explicitly loop over surfaces
+  * 6497adeb353 panfrost: simplify panfrost_texture_num_elements
+  * 7cb2831ef57 v3dv/ci: Add more dEQP-VK subgroups that are currently
+    skipped
+  * 8b448ffdd75 turnip+zink/ci: add gl & gles CTS jobs on the a750
+  * 3088af9051f turnip/ci: add vkcts jobs on the a750
+  * 6f9614c1872 ci/b2c: Reduce the length of the kernel cmdline
+  * 265b0ebd9ac ci/b2c: add aarch64 tests for gl & vk
+  * 2867a07922b radv: fix setting a custom pitch for CB on GFX10_3+
+  * f168dc6d537 zink/ci: rename zink-turnip collabora rule to make it
+    unambiguous
+  * 815a5e9a8e5 ci: add debian/arm64_test images for gl & vk
+  * 7fb13a91532 ci/image-tags: rename DEBIAN_X86_64_TEST_*_TAG to drop
+    the x86 mention
+  * c325632b14f ci: prepare VK debian test image for multi-arch
+  * 124ff9c2328 ci: prepare GL debian test image for multi-arch
+  * 3cd6f86b7e4 ci: prepare base debian test image for multi-arch
+  * c7cecc1604f ci: rename debian/arm*_test to
+    debian/baremetal_arm*_test to be clear about which infra uses that
+  * 968af05a531 ci: drop dead variables (see previous commit)
+  * 27592453ac2 ci: fix build-kernel.sh -> download-prebuilt-kernel.sh
+  * 2abdc846067 Revert "zink: use a slab allocator for
+    zink_kopper_present_info"
+  * cdf75e8e02c docs: update calendar for 24.1.0
+  * f4cc6645ff8 docs: add sha256sum for 24.1.0
+  * 0e3d86f7d33 docs: add release notes for 24.1.0
+  * 7afebc15ce1 v3dv: V3D_CL_MAX_INSTR_SIZE bytes in last CL instruction
+    not needed
+  * bb77ac983e4 v3dv: Increase alignment to 16k on CL BO on RPi5
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 23 May 2024 18:16:07 +0200
+
 mesa (24.2.0~git2405210059.e1b4b399ce0~f~mesaaco7) focal; urgency=medium
 
   * New snapshot:
