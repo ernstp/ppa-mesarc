@@ -1,3 +1,20 @@
+libsdl2 (2.31.0+git2405272240.b3081bbbd~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * b3081bbbd regenerated the configure script.
+  * 65d8c07c7 Allow building the Raspberry Pi video driver with standard
+    EGL headers
+  * 6c2977882 VC+d3d12: use __has_include to detect presence of d3d12
+    ehaders
+  * 6c10201e5 cmake: direct3d12 renderer needs d3d12.h and
+    d3d12sdklayers.h
+  * c79e61680 d3d12: older Windows SDK headers contain wrong function
+    prototypes
+  * 54c435409 d3d12: xbox has no DXGI_PRESENT flags
+  * 964e0c9b4 Added Linux bindings for the Qanba Drone 2 Arcade Joystick
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 27 May 2024 23:07:39 +0200
+
 libsdl2 (2.31.0+git2405212245.01314ff1d~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
