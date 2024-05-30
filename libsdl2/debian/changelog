@@ -1,3 +1,14 @@
+libsdl2 (2.31.0+git2405281702.5e876db89~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 5e876db89 autotools needs to check d3d12sdklayers.h too
+  * 0439fc600 Makefile.in: add VisualC-GDK to SRC_DIST
+  * 6825a4aab SDL_config_os2.h: remove duplicated HAVE_WCSL* defines.
+  * 8bc47dc3f Fixed compiling SDL_platform_defines.h on macOS with older
+    compilers (thanks @sezero!)
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 30 May 2024 08:34:58 +0200
+
 libsdl2 (2.31.0+git2405272240.b3081bbbd~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
