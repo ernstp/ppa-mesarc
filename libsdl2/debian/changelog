@@ -1,3 +1,13 @@
+libsdl2 (2.31.0+git2406052211.70faef84a~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 70faef84a build-scripts/ltmain.sh: minor updates hand-picked from
+    mainstream
+  * 997ef8860 Sort joystick drivers in Android.mk
+  * f725ce492 Build the dummy joystick driver on Android
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 05 Jun 2024 23:09:18 +0200
+
 libsdl2 (2.31.0+git2406051736.e1bb00cdc~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
