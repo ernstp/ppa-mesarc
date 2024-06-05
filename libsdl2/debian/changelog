@@ -1,3 +1,23 @@
+libsdl2 (2.31.0+git2406051736.e1bb00cdc~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * e1bb00cdc Add a basic ShowMessageBox implementation for PSP (#9932)
+  * 6da524253 SDL_render_psp.c: Fix crash in PSP_DestroyRenderer()
+  * 018f2791c PSP: Add on-screen keyboard support
+  * 2cb1a2d0a SDL_assert: add support for aarch64-w64-mingw32
+  * 295266c70 Merge pull request #9953 from sharkwouter/fix-double-libs-
+    in-pkgconfig
+  * 1803e6555 CMake: Prevent double SDL2 and SDL2main entries in sdl2.pc
+  * 863670c0a always define PRI?64 using 'I64' when targeting windows
+  * 35d719ef2 Added support for the Razer Kitsune in PS5 mode
+  * 1568501dd android: Default to custom theme in styles.xml
+  * d5e5d4a80 move vista+ display config function ptr calls to device-
+    >driverdata
+  * 51ba036e6 Verify that the timer callback is passed the correct
+    parameters
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 05 Jun 2024 19:34:02 +0200
+
 libsdl2 (2.31.0+git2405281702.5e876db89~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
