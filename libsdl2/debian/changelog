@@ -1,3 +1,22 @@
+libsdl2 (2.31.0+git2406081750.477c71874~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 477c71874 Added wiki-style documentation for SDL_JoystickGUID
+  * 1c3090a1a Fix broken dead key behavior on Wayland
+  * 7fce9f3fd Minor cleanup for SDL style
+  * 2e8bd8f1f Fixed build
+  * 22c14442e Fix spurious LCtrl on RAlt key pressed
+  * 0f9191a64 Added VRS DirectForce Pro wheelbase VID/PID to wheel
+    devices list
+  * fc6bbde52 wayland: Set the initial min/max limits on non-libdecor
+    windows during a show operation
+  * f520062ad Fixed PlayStation detection interrupting input for the
+    Logitech K400 keyboard
+  * e2f597de8 Added support for the Saitek Cyborg V.3 Rumble Pad in PS3
+    mode
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 11 Jun 2024 16:08:55 +0200
+
 libsdl2 (2.31.0+git2406052211.70faef84a~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
