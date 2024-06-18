@@ -1,3 +1,37 @@
+libsdl2 (2.31.0+git2406180011.5a26b2688~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 5a26b2688 Fixed requesting USB permission on Android 14 (thanks
+    @ikhoeyZX!)
+  * a6fdd155f Pass through the original name used by the Steam Virtual
+    Gamepad
+  * 77285b6c3 Android: Use SCREEN_ORIENTATION_FULL_USER instead of
+    SCREEN_ORIENTATION_FULL_SENSOR for resizable window.
+  * 744eb00b0 Sync SDL2 wiki -> header
+  * 177dfddaf simplify OpenBSD D-pad calculation with bitwise operation
+    (#7996)
+  * 510f413bb coreaudio: simplify memory leak fix.
+  * a9da8dd22 Addressed memory leak in SDL_coreaudio.m
+  * a4d240d29 SDL_events.c: remove long long casts an the override of
+    SDL_PRIs64
+  * 9422c5720 revert commit ac25395 as it broke linux..
+  * ac253956b SDL_events.c: override of SDL_PRIs64 for mingw is no
+    longer needed
+  * 948b926d4 SDL_qsort.c: better match private funcs' compare args to
+    SDL3 version.
+  * 143d5d779 Sync SDL2 wiki -> header
+  * 169f77ed5 Re-enable full controller reports for Joy-Con controllers
+  * 6b9bf7113 Try to guess the type of a Nintendo Switch controller if
+    we can't read the device info
+  * f1b19aa74 Ignore spurious reply packets when reading Nintendo Switch
+    controller reports
+  * ce6d3c5cc SDL_qsort.c: change private function compare args to
+    SDL_CompareCallback
+  * b2b236941 Moved function pointer params to typedefs, etc, for latest
+    wikiheaders.
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 18 Jun 2024 22:54:16 +0200
+
 libsdl2 (2.31.0+git2406081750.477c71874~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
