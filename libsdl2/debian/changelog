@@ -1,3 +1,48 @@
+libsdl2 (2.31.0+git2406292022.288aea3b4~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 288aea3b4 Fixed build
+  * 0d9e54237 Respect SDL_HINT_RENDER_DRIVER when creating an
+    accelerated window surface
+  * a3f0c373d Clean up any renderer in SDL_DestroyWindowSurface()
+  * a0ec7c090 libtool.m4: fix appending of -no_fixup_chains to
+    allow_undefined_flag.
+  * 98ec8b88c acinclude/libtool.m4: updates from mainstream git:
+  * 3bf2b90da Remove the inconsistent and lag-causing usleep call in
+    SDL_fcitx.c
+  * 14183f8ec SDL_endian.h: Fix byte order detection on Solaris (and
+    some SPARC compilers).
+  * d96f1d536 begin_code: Solaris Studio has `__has_attribute` defined
+    by isn't usable here.
+  * 3e4bb5acd x11: Fix build when `X_HAVE_UTF8_STRING` is not defined.
+  * 498cbffd8 atomic: Solaris needs the `_nv` variant of
+    `atomic_or_uint`.
+  * b23343b7c configure.ac: Explicitly disable Vulkan support on
+    Solaris.
+  * ee3b2b7de Make sure we don't try to use the XInput DLL after it's
+    unloaded
+  * 88bbab275 Fixed building with older libdrm headers
+  * ecde0ca6b Fixed building with the steamrt/scout SDK
+  * 64d4baccb Fix building with the steamrt/scout SDK
+  * 10c14e78b Fixing systimer
+  * 4d82ceae0 Add slash to cwd call
+  * 20f1061cc video: Fix memory leak when deleting a video display
+  * 3b88d4f46 wayland: Fix double free when deleting an output display
+  * 6589287ed fix: Use drmModeAddFB2WithModifiers instead of
+    drmModeAddFB to allow using GBM modifiers.
+  * 8ae7841d9 Revert "Make sdl2-config interpreter configurable"
+  * 99d7b9e62 Fix std::thread memory leak
+  * b9f005505 Make sdl2-config interpreter configurable
+  * ab5740bde Fix joystick (/dev/input/xxx) support on FreeBSD
+  * 6a2dd96ac android: actually use ReLinker
+  * b444e656c android: add an option to manually pass the context when
+    loading a native library
+  * c1d10c36e Sync SDL2 wiki -> header
+  * 194d72bb2 Add SDL_MOUSE_RELATIVE_CURSOR_VISIBLE (#7947)
+  * 4800edfa0 Update qsort implementation
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 01 Jul 2024 03:33:17 +0200
+
 libsdl2 (2.31.0+git2406180011.5a26b2688~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
