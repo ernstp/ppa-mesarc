@@ -1,3 +1,12 @@
+libsdl2 (2.31.0+git2407032254.845ebbbe9~j~wayland8) jammy; urgency=medium
+
+  * New snapshot:
+  * 845ebbbe9 Added support for the ROG RAIKIRI
+  * cd8ea5e3f Only use the default gamepad mapping if an automatic
+    mapping isn't available
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 03 Jul 2024 22:51:58 +0200
+
 libsdl2 (2.31.0+git2406292022.288aea3b4~j~wayland8) jammy; urgency=medium
 
   * New snapshot:
