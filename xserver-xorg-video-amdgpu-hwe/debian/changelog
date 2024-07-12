@@ -1,3 +1,14 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2407111739.07d6613~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 07d6613 dont use obsolete pict_f_transform alias anymore
+  * c561fe4 dont check for HAS_DIRTYTRACKING_ROTATION: it's always
+    enabled.
+  * ade777e drop compat with ancient xserver versions
+  * 44e8272 bump minimal xorg version to 1.18
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 12 Jul 2024 15:06:56 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2402250201.8df03a7~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
