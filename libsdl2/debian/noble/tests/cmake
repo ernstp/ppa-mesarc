@@ -1,0 +1,42 @@
+#!/bin/sh
+# Copyright 2019-2020 Collabora Ltd.
+# SPDX-License-Identifier: Zlib
+# (see "zlib/libpng" in debian/copyright)
+
+set -eux
+
+WORKDIR="$(mktemp -d)"
+cleanup () {
+    rm -fr "$WORKDIR"
+}
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    cat <<EOF > "$WORKDIR/toolchain.cmake"
+set(CMAKE_C_COMPILER $DEB_HOST_GNU_TYPE-gcc)
+set(CMAKE_CXX_COMPILER $DEB_HOST_GNU_TYPE-g++)
+set(PKG_CONFIG_EXECUTABLE $DEB_HOST_GNU_TYPE-pkg-config)
+EOF
+    CCFILE=-DCMAKE_TOOLCHAIN_FILE="$WORKDIR/toolchain.cmake"
+else
+    CCFILE=
+fi
+
+srcdir="$(pwd)"
+
+mkdir "$WORKDIR/example"
+(
+    cd "$WORKDIR/example"
+    cmake $CCFILE "$srcdir/debian/tests/cmake-example"
+)
+make -C "$WORKDIR/example" VERBOSE=1
+"$WORKDIR/example/hello"
+make -C "$WORKDIR/example" VERBOSE=1 clean
+
+mkdir "$WORKDIR/findsdl2"
+(
+    cd "$WORKDIR/findsdl2"
+    cmake $CCFILE "$srcdir/debian/tests/cmake-findsdl2"
+)
+make -C "$WORKDIR/findsdl2" VERBOSE=1
+"$WORKDIR/findsdl2/hello"
+make -C "$WORKDIR/findsdl2" VERBOSE=1 clean

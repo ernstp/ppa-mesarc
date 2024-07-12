@@ -1,0 +1,14 @@
+Document: libsdl2
+Title: LibSDL2 Manual
+Author: Sam Lantinga
+Abstract:
+ SDL is a library that allows programs portable low level access to a video
+ framebuffer, audio output, mouse, and keyboard.
+ .
+ This version of SDL is compiled with X11 and Wayland graphics drivers and OSS,
+ ALSA, NAS, sndio and PulseAudio sound drivers.
+Section: Programming/C++
+
+Format: HTML
+Index: /usr/share/doc/libsdl2-doc/html/index.html
+Files: /usr/share/doc/libsdl2-doc/html/*

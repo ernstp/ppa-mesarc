@@ -1,0 +1,138 @@
+#!/bin/sh
+# This test exercises various ways to use SDL2 that are considered
+# incorrect, but used to work.
+#
+# Loosely based on glib2.0's debian/tests/build
+# (C) 2012 Canonical Ltd.
+# (C) 2018-2020 Simon McVittie
+# Authors: Martin Pitt, Simon McVittie
+
+set -eux
+
+WORKDIR=$(mktemp -d)
+trap 'rm -rf "$WORKDIR"' 0 INT QUIT ABRT PIPE TERM
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
+cd "$WORKDIR"
+cat <<EOF > use-sdl.c
+#undef NDEBUG
+#include <assert.h>
+
+#ifdef WRONG_INCLUDE_PATH
+# if INDIRECT
+#   include <SDL2/SDL_ttf.h>
+# else
+#   include <SDL2/SDL.h>
+# endif
+#else
+# if INDIRECT
+#   include <SDL_ttf.h>
+# else
+#   include <SDL.h>
+# endif
+#endif
+
+int main(void)
+{
+    SDL_version compiled;
+    SDL_version linked;
+
+    SDL_VERSION(&compiled);
+    SDL_GetVersion(&linked);
+
+    assert(compiled.major == 2);
+    assert(linked.major == 2);
+
+    return 0;
+}
+EOF
+
+cd "$WORKDIR"
+cat <<EOF > use-ttf.c
+#undef NDEBUG
+#include <assert.h>
+
+#ifdef WRONG_INCLUDE_PATH
+# include <SDL2/SDL_ttf.h>
+#else
+# include <SDL_ttf.h>
+#endif
+
+int main(void)
+{
+    const SDL_version *version = TTF_Linked_Version();
+    assert (version != NULL);
+
+    return 0;
+}
+EOF
+
+# Emulate the assumption made by neverball_1.6.0+git20180603-2,
+# which assumes that the CFLAGS from sdl2-config are enough to
+# find related libraries like SDL2_ttf.
+
+for tool in pkg-config sdl2-config; do
+    case "$tool" in
+    (pkg-config)
+        # shellcheck disable=SC2046
+        "${CROSS_COMPILE}gcc" -o "use-${tool}" use-ttf.c $("${CROSS_COMPILE}pkg-config" --cflags --libs sdl2 SDL2_ttf)
+        ;;
+    (sdl2-config)
+        # shellcheck disable=SC2046
+        "${CROSS_COMPILE}gcc" -o "use-${tool}" use-ttf.c $(PKG_CONFIG="${CROSS_COMPILE}pkg-config" sdl2-config --cflags --libs) -lSDL2_ttf
+        ;;
+    (*)
+        exit 1
+        ;;
+    esac
+
+    echo "build (with $tool): OK"
+    [ -x use-${tool} ]
+    ./use-${tool}
+    echo "run (with $tool): OK"
+done
+
+# Emulate the assumption made by planetblupi_1.14.2-1,
+# which assumes that the SDL2 headers are in /usr/include/SDL2 without
+# consulting pkg-config.
+
+# shellcheck disable=SC2046
+"${CROSS_COMPILE}gcc" -o use-sdl use-sdl.c -I/usr/include/SDL2 $("${CROSS_COMPILE}pkg-config" --libs sdl2)
+# shellcheck disable=SC2046
+"${CROSS_COMPILE}gcc" -o use-ttf use-ttf.c -I/usr/include/SDL2 $("${CROSS_COMPILE}pkg-config" --libs sdl2 SDL2_ttf)
+echo "build (assuming headers in /usr/include/SDL2): OK"
+[ -x use-sdl ]
+./use-sdl
+[ -x use-ttf ]
+./use-ttf
+echo "run: OK"
+
+# Emulate the assumption made by jag_0.3.5-5, mrboom_4.9-1 and
+# trigger-rally_0.6.6.1-2, which assume that the SDL2 headers can be
+# included via #include <SDL2/foo.h>.
+
+"${CROSS_COMPILE}gcc" -o use-sdl use-sdl.c -DWRONG_INCLUDE_PATH -lSDL2
+"${CROSS_COMPILE}gcc" -o use-ttf use-ttf.c -DWRONG_INCLUDE_PATH -lSDL2 -lSDL2_ttf
+echo "build (assuming <SDL2/*.h> and -lSDL2* in default search paths): OK"
+[ -x use-sdl ]
+./use-sdl
+[ -x use-ttf ]
+./use-ttf
+echo "run: OK"
+
+# clang has different symlink behaviour, so building jag_0.3.5-5 etc.
+# with clang would have a different failure mode. Test that too.
+
+clang ${DEB_HOST_GNU_TYPE:+--target="${DEB_HOST_GNU_TYPE}"} -o use-sdl use-sdl.c -DWRONG_INCLUDE_PATH -lSDL2
+clang ${DEB_HOST_GNU_TYPE:+--target="${DEB_HOST_GNU_TYPE}"} -o use-ttf use-ttf.c -DWRONG_INCLUDE_PATH -lSDL2 -lSDL2_ttf
+echo "build (clang, assuming <SDL2/*.h> and -lSDL2* in default search paths): OK"
+[ -x use-sdl ]
+./use-sdl
+[ -x use-ttf ]
+./use-ttf
+echo "run: OK"
