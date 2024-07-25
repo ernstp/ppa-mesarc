@@ -1,3 +1,12 @@
+xserver-xorg-video-amdgpu (23.0.0+git2407122037.04bc88d~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 04bc88d Check GFX12 swizzle mode correctly
+  * d1c7ab5 ci: use gfx-ci/ci-deb-repo to get latest libdrm
+  * 7c943d5 ci: switch from testing to bookworm
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 25 Jul 2024 16:41:26 +0200
+
 xserver-xorg-video-amdgpu (23.0.0+git2407111739.07d6613~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
