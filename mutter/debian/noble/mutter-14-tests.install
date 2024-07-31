@@ -1,0 +1,4 @@
+#!/usr/bin/dh-exec
+usr/libexec/installed-tests/mutter-${MUTTER_API_VERSION}
+usr/share/installed-tests/mutter-${MUTTER_API_VERSION}
+usr/share/mutter-${MUTTER_API_VERSION}/tests

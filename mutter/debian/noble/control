@@ -1,0 +1,291 @@
+Source: mutter
+Section: x11
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Jeremy Bícha <jbicha@ubuntu.com>
+Build-Depends: debhelper-compat (= 13),
+               dh-exec,
+               dh-sequence-gir,
+               dh-sequence-gnome,
+               at-spi2-core <!nocheck>,
+               adwaita-icon-theme <!nocheck>,
+               dbus-daemon <!nocheck>,
+               dmz-cursor-theme <!nocheck>,
+               gnome-control-center-data,
+               gnome-pkg-tools (>= 0.10),
+               gnome-settings-daemon-common <!nocheck>,
+               gnome-settings-daemon-dev,
+               gobject-introspection (>= 1.41.3),
+               gsettings-desktop-schemas-dev (>= 40~alpha),
+               gtk-doc-tools (>= 1.15),
+               libei-dev (>= 1.0.901),
+               libeis-dev (>= 1.0.901),
+               libcairo2-dev (>= 1.10.0),
+               libcanberra-gtk3-dev,
+               libcolord-dev,
+               libdisplay-info-dev,
+               libdrm-dev (>= 2.4.83),
+               libegl1-mesa-dev (>= 17),
+               libfribidi-dev (>= 1.0.0),
+               libgbm-dev (>= 17.3),
+               libgdk-pixbuf-2.0-dev,
+               libgirepository1.0-dev (>= 0.9.12),
+               libgl-dev,
+               libgles-dev,
+               libglib2.0-dev (>= 2.75.0),
+               libgnome-desktop-4-dev,
+               libgraphene-1.0-dev (>= 1.10.2),
+               libgtk-3-dev (>= 3.19.8) <!nocheck>,
+               libgtk-4-dev,
+               libgudev-1.0-dev (>= 232),
+               libice-dev,
+               libinput-dev (>= 1.19.0),
+               libjson-glib-dev (>= 0.13.2-1~),
+               liblcms2-dev,
+               libnvidia-egl-wayland-dev,
+               libpam0g-dev,
+               libpango1.0-dev (>= 1.46.0),
+               libpipewire-0.3-dev (>= 0.3.33),
+               libpixman-1-dev (>= 0.42),
+               libsm-dev,
+               libstartup-notification0-dev (>= 0.7),
+               libsysprof-6-dev [!hurd-i386 !i386],
+               libsysprof-capture-4-dev (>= 3.40.1),
+               libsystemd-dev (>= 212),
+               libwacom-dev (>= 0.13),
+               libwayland-dev (>= 1.21.0),
+               libxau-dev,
+               libx11-dev,
+               libx11-xcb-dev,
+               libxcb-randr0-dev,
+               libxcb-res0-dev,
+               libxcomposite-dev (>= 1:0.4),
+               libxcursor-dev,
+               libxdamage-dev,
+               libxext-dev,
+               libxfixes-dev (>= 6.0),
+               libxi-dev (>= 2:1.7.4),
+               libxinerama-dev,
+               libxkbcommon-dev (>= 0.4.3),
+               libxkbcommon-x11-dev,
+               libxkbfile-dev,
+               libxrandr-dev,
+               libxrender-dev,
+               libxt-dev,
+               meson (>= 0.55.0),
+               pkgconf,
+               python3-attr,
+               python3-jinja2,
+               python3-dbus <!nocheck>,
+               python3-dbusmock <!nocheck>,
+               sysprof [!hurd-i386 !i386],
+               systemd-dev,
+               wayland-protocols (>= 1.33),
+               xauth <!nocheck>,
+               xcvt,
+               xkb-data,
+               xvfb,
+               xwayland (>= 2:23.1.0),
+               zenity
+Rules-Requires-Root: no
+Standards-Version: 4.6.2
+Homepage: https://mutter.gnome.org/
+Vcs-Git: https://salsa.debian.org/gnome-team/mutter.git
+Vcs-Browser: https://salsa.debian.org/gnome-team/mutter
+
+Package: mutter
+Architecture: linux-any
+Depends: adwaita-icon-theme,
+         gnome-settings-daemon-common,
+         gsettings-desktop-schemas (>= 40~alpha),
+         mutter-common (>= 46.0-1),
+         zenity,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Provides: x-window-manager
+Suggests: gnome-control-center (>= 1:3.25.2),
+          xdg-user-dirs
+Description: Example window manager using GNOME's window manager library
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains the mutter executable. It can be used as a
+ standalone window manager, but is primarily intended for debugging.
+
+Package: mutter-14-tests
+Architecture: linux-any
+Depends: at-spi2-core,
+         dbus-daemon,
+         dmz-cursor-theme,
+         libmutter-14-0 (= ${binary:Version}),
+         libmutter-test-14 (= ${binary:Version}),
+         mutter (= ${binary:Version}),
+         python3,
+         python3-dbus,
+         python3-dbusmock,
+         xauth,
+         xvfb,
+         xwayland (>= 2:23.1.0),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Tests for GNOME's window manager library
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains test programs, designed to be run as part of a
+ regression testsuite.
+
+Package: gir1.2-mutter-14
+Section: introspection
+Architecture: linux-any
+Multi-Arch: same
+Depends: libmutter-14-0 (= ${binary:Version}),
+         ${gir:Depends},
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: GObject introspection data for Mutter
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains the GObject introspection data which may be
+ used to generate dynamic bindings.
+
+Package: libmutter-14-0
+Section: libs
+Architecture: linux-any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: adwaita-icon-theme,
+         gsettings-desktop-schemas (>= 40~alpha),
+         mutter-common (>= ${source:Version}),
+         mutter-common-bin (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Breaks: gnome-shell (<< 46.0),
+        xwayland (<< 2:23.1.0),
+Description: window manager library from the Mutter window manager
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains the window manager shared library, used by mutter
+ itself, and gnome-shell.
+
+Package: libmutter-14-dev
+Section: libdevel
+Architecture: linux-any
+Multi-Arch: same
+Depends: gir1.2-mutter-14 (= ${binary:Version}),
+         gsettings-desktop-schemas-dev (>= 40~alpha),
+         libatk1.0-dev,
+         libcairo2-dev,
+         libdrm-dev,
+         libegl1-mesa-dev,
+         libgbm-dev,
+         libgdk-pixbuf-2.0-dev,
+         libgles-dev,
+         libglib2.0-dev (>= 2.75.0),
+         libgraphene-1.0-dev (>= 1.9.3),
+         libinput-dev (>= 1.19),
+         libmutter-14-0 (= ${binary:Version}),
+         libpango1.0-dev,
+         libwayland-dev,
+         libx11-dev,
+         libxcomposite-dev,
+         libxdamage-dev,
+         libxext-dev,
+         libxfixes-dev (>= 6.0),
+         libxi-dev,
+         libxrandr-dev,
+         ${misc:Depends}
+Description: Development files for the Mutter window manager
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains the development files.
+
+Package: libmutter-test-14
+Section: libs
+Architecture: linux-any
+Depends: libmutter-14-0 (= ${binary:Version}),
+         mutter (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Provides: gir1.2-metatest-14
+Description: Test helper library for GNOME's window manager library
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ This package contains a private library used by the automated tests for
+ mutter and gnome-shell. It should not be used by non-GNOME packages.
+
+Package: mutter-common
+Section: misc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Breaks: magpie-common (<< 0.9.3-0ubuntu8~)
+Replaces: magpie-common (<< 0.9.3-0ubuntu8~)
+Description: shared files for the Mutter window manager
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains the shared files.
+
+Package: mutter-common-bin
+Section: misc
+Architecture: linux-any
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Breaks: mutter (<< 44~)
+Replaces: mutter (<< 44~)
+Description: shared programs for the Mutter window manager
+ Mutter is a Wayland display server and X11 window manager and
+ compositor library. It contains functionality related to, among other
+ things, window management, window compositing, focus tracking, workspace
+ management, keybindings and monitor configuration.
+ .
+ Internally it uses a fork of Cogl, a hardware acceleration abstraction
+ library used to simplify usage of OpenGL pipelines, as well as a fork
+ of Clutter, a scene graph and user interface toolkit.
+ .
+ This package contains the program files which are used for the libraries
+ and others.

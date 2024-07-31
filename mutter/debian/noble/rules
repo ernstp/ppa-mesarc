@@ -1,0 +1,75 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/default.mk
+
+built_binaries := $(shell dh_listpackages)
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-O1
+export DPKG_GENSYMBOLS_CHECK_LEVEL = 4
+
+# Following upstream method to compute the API version
+MUTTER_MAJOR_VERSION = $(shell echo $(DEB_VERSION_UPSTREAM) | sed 's/[~.].*//')
+MUTTER_API_VERSION = $(shell echo $$(( $(MUTTER_MAJOR_VERSION) - 32 )) )
+MUTTER_SONAME = 0
+
+export MUTTER_API_VERSION
+export MUTTER_SONAME
+
+%:
+	dh $@
+
+CONFFLAGS = \
+	-Dauto_features=enabled \
+	-Degl_device=true \
+	-Dremote_desktop=true \
+	-Dwayland_eglstream=true
+export deb_udevdir = $(shell pkg-config --variable=udevdir udev | sed s,^/,,)
+
+ifneq ($(filter i386,$(DEB_HOST_ARCH)),)
+CONFFLAGS +=-Dprofiler=false
+endif
+
+ifeq ($(shell dpkg-vendor --query vendor),Ubuntu)
+CONFFLAGS += -Dlibdisplay_info=disabled
+endif
+
+override_dh_gnome_clean:
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		$(CONFFLAGS)
+
+# Use meson test directly as it allows us to use the timeout multiplier
+BUILDDIR=$(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)
+TEST_COMMAND_BASE=env \
+	GIO_USE_VFS=local \
+	GIO_USE_VOLUME_MONITOR=unix \
+	GSETTINGS_SCHEMA_DIR=$(BUILDDIR)/data \
+	GVFS_DISABLE_FUSE=1 \
+	dbus-run-session -- xvfb-run -s '+iglx -noreset' -a \
+	dh_auto_test -- -C $(BUILDDIR) --no-rebuild --verbose --timeout-multiplier 6 \
+	           --no-stdsplit --print-errorlogs
+TEST_COMMAND=$(TEST_COMMAND_BASE) --no-suite flaky
+TEST_COMMAND_FLAKY=env DEB_ALLOW_FLAKY_TESTS=1 $(TEST_COMMAND_BASE) --suite flaky
+
+override_dh_auto_test:
+	true
+
+# debhelper >= 13.4 makes all of /usr/libexec executable, which is not
+# quite right for installed-tests
+override_dh_fixperms:
+	dh_fixperms -Xusr/libexec/installed-tests
+ifneq ($(filter %-tests,$(built_binaries)),)
+	chmod --recursive --changes a+rX,u+w,og-w debian/*-tests/usr/libexec/installed-tests
+endif
+
+override_dh_girepository:
+	dh_girepository /usr/lib/$(DEB_HOST_MULTIARCH)/mutter-$(MUTTER_API_VERSION)
+
+override_dh_makeshlibs:
+	dh_makeshlibs -V
+
+override_dh_shlibdeps:
+	dh_shlibdeps -Llibmutter-$(MUTTER_API_VERSION)-$(MUTTER_SONAME) \
+		-l/usr/lib/$(DEB_HOST_MULTIARCH)/mutter-$(MUTTER_API_VERSION)

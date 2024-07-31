@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+echo "debian/rules override_dh_auto_configure "
+debian/rules override_dh_auto_configure
+
+echo "debian/rules override_dh_auto_build"
+debian/rules override_dh_auto_build

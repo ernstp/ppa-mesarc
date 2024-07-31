@@ -1,0 +1,17 @@
+Tests: build
+Depends: @builddeps@
+Restrictions: allow-stderr
+
+Tests: libmutter-14-dev
+Depends: build-essential,
+         dbus-daemon,
+         libmutter-14-dev,
+         xauth,
+         xvfb
+Restrictions: allow-stderr superficial
+
+Tests: installed-tests
+Classes: desktop
+Depends: gnome-desktop-testing,
+         mutter-14-tests
+Restrictions: allow-stderr skippable

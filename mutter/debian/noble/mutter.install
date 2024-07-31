@@ -1,0 +1,2 @@
+usr/bin
+usr/lib/${DEB_HOST_MULTIARCH}/mutter-${env:MUTTER_API_VERSION}/plugins

@@ -1,0 +1,152 @@
+From: =?utf-8?b?Ik1hcmNvIFRyZXZpc2FuIChUcmV2acOxbyki?= <mail@3v1n0.net>
+Date: Tue, 14 Mar 2023 18:22:14 +0100
+Subject: window: Add ability to override the edge constraints
+
+This is allows extensions (such as Tiling Assistant) to override behavior
+of windows borders when a window is tiled.
+
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/gnome-shell-extension-tiling-assistant/+bug/2011611
+Forwarded: not-needed
+---
+ src/core/meta-private-introspected.h | 27 ++++++++++++++++++++++
+ src/core/window-private.h            |  7 ++++++
+ src/core/window.c                    | 45 ++++++++++++++++++++++++++++++++++++
+ src/meson.build                      |  3 ++-
+ 4 files changed, 81 insertions(+), 1 deletion(-)
+ create mode 100644 src/core/meta-private-introspected.h
+
+diff --git a/src/core/meta-private-introspected.h b/src/core/meta-private-introspected.h
+new file mode 100644
+index 0000000..ee5b2f4
+--- /dev/null
++++ b/src/core/meta-private-introspected.h
+@@ -0,0 +1,27 @@
++# pragma once
++
++#include <glib-object.h>
++
++#include <meta/types.h>
++
++/**
++ * MetaTileConstraint:
++ * @META_TILE_CONSTRAINT_NONE: No constraint
++ * @META_TILE_CONSTRAINT_WINDOW: Window constraint
++ * @META_TILE_CONSTRAINT_MONITOR: Monitor constraint
++ */
++typedef enum
++{
++  META_WINDOW_CONSTRAINT_NONE,
++  META_WINDOW_CONSTRAINT_WINDOW,
++  META_WINDOW_CONSTRAINT_MONITOR,
++} MetaWindowConstraint;
++
++
++META_EXPORT
++void
++meta_window_override_constraints (MetaWindow           *window,
++                                  MetaWindowConstraint  top,
++                                  MetaWindowConstraint  left,
++                                  MetaWindowConstraint  right,
++                                  MetaWindowConstraint  bottom);
+diff --git a/src/core/window-private.h b/src/core/window-private.h
+index 3c6d94e..53e96d4 100644
+--- a/src/core/window-private.h
++++ b/src/core/window-private.h
+@@ -261,6 +261,13 @@ struct _MetaWindow
+     MetaEdgeConstraint left;
+   } edge_constraints;
+ 
++  struct {
++    MetaEdgeConstraint top;
++    MetaEdgeConstraint right;
++    MetaEdgeConstraint bottom;
++    MetaEdgeConstraint left;
++  } overridden_constraints;
++
+   double tile_hfraction;
+ 
+   uint64_t preferred_output_winsys_id;
+diff --git a/src/core/window.c b/src/core/window.c
+index d7be013..8474124 100644
+--- a/src/core/window.c
++++ b/src/core/window.c
+@@ -73,6 +73,7 @@
+ #include "core/constraints.h"
+ #include "core/frame.h"
+ #include "core/keybindings-private.h"
++#include "core/meta-private-introspected.h"
+ #include "core/meta-workspace-manager-private.h"
+ #include "core/place.h"
+ #include "core/stack.h"
+@@ -2877,6 +2878,38 @@ meta_window_update_tile_fraction (MetaWindow *window,
+     meta_window_tile (tile_match, tile_match->tile_mode);
+ }
+ 
++G_ALWAYS_INLINE static inline MetaEdgeConstraint
++get_edge_constraint (MetaWindowConstraint constraint)
++{
++  switch (constraint)
++    {
++      case META_WINDOW_CONSTRAINT_NONE:
++        return META_EDGE_CONSTRAINT_NONE;
++      case META_WINDOW_CONSTRAINT_WINDOW:
++        return META_EDGE_CONSTRAINT_WINDOW;
++      case META_WINDOW_CONSTRAINT_MONITOR:
++        return META_EDGE_CONSTRAINT_MONITOR;
++    }
++
++  g_return_val_if_reached (META_WINDOW_CONSTRAINT_NONE);
++}
++
++void
++meta_window_override_constraints (MetaWindow           *window,
++                                  MetaWindowConstraint  top,
++                                  MetaWindowConstraint  left,
++                                  MetaWindowConstraint  right,
++                                  MetaWindowConstraint  bottom)
++{
++  window->overridden_constraints.left = get_edge_constraint (left);
++  window->overridden_constraints.right = get_edge_constraint (right);
++  window->overridden_constraints.top = get_edge_constraint (top);
++  window->overridden_constraints.bottom = get_edge_constraint (bottom);
++
++  update_edge_constraints (window);
++  meta_window_frame_size_changed (window);
++}
++
+ static void
+ update_edge_constraints (MetaWindow *window)
+ {
+@@ -2932,6 +2965,18 @@ update_edge_constraints (MetaWindow *window)
+       window->edge_constraints.right = META_EDGE_CONSTRAINT_MONITOR;
+       window->edge_constraints.left = META_EDGE_CONSTRAINT_MONITOR;
+     }
++
++  if (window->overridden_constraints.top != META_EDGE_CONSTRAINT_NONE)
++      window->edge_constraints.top = window->overridden_constraints.top;
++
++  if (window->overridden_constraints.bottom != META_EDGE_CONSTRAINT_NONE)
++      window->edge_constraints.bottom = window->overridden_constraints.bottom;
++
++  if (window->overridden_constraints.left != META_EDGE_CONSTRAINT_NONE)
++      window->edge_constraints.left = window->overridden_constraints.left;
++
++  if (window->overridden_constraints.right != META_EDGE_CONSTRAINT_NONE)
++      window->edge_constraints.right = window->overridden_constraints.right;
+ }
+ 
+ void
+diff --git a/src/meson.build b/src/meson.build
+index a8cf7e1..4d7251f 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -1259,7 +1259,8 @@ if have_introspection
+     sources: [
+       mutter_enum_types[1],
+       mutter_introspected_sources,
+-      mutter_public_header_files
++      mutter_public_header_files,
++      'core' / 'meta-private-introspected.h',
+     ],
+     nsversion: libmutter_api_version,
+     namespace: 'Meta',

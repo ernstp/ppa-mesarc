@@ -1,0 +1,35 @@
+#!/bin/sh
+
+set -eu
+
+namespace=mutter-14/
+
+if [ -z "${HOME-}" ] || ! [ -w "${HOME}" ]; then
+    export HOME="${AUTOPKGTEST_TMP}"
+fi
+
+cd "$AUTOPKGTEST_TMP"
+
+if [ -z "$(ginsttest-runner -l "$namespace")" ]; then
+    echo "Error: no installed-tests found matching $namespace" >&2
+    exit 1
+fi
+
+e=0
+ginsttest-runner \
+    --log-directory "$AUTOPKGTEST_ARTIFACTS" \
+    --tap \
+    "$namespace" || e="$?"
+
+if [ "$e" -ne 0 ]; then
+    arch="$(dpkg --print-architecture)"
+    case "$arch" in
+        # Please keep this list in sync with debian/rules
+        (armhf|mips|mips64el|mipsel|ppc64el|riscv64|s390x|alpha|hppa|powerpc|sparc64|x32)
+            echo "# Ignoring test failure on $arch"
+            exit 77
+            ;;
+    esac
+
+    exit "$e"
+fi

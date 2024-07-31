@@ -1,0 +1,12 @@
+usr/include/mutter-${env:MUTTER_API_VERSION}/clutter
+usr/include/mutter-${env:MUTTER_API_VERSION}/cogl
+usr/include/mutter-${env:MUTTER_API_VERSION}/meta
+usr/include/mutter-${env:MUTTER_API_VERSION}/mtk
+usr/lib/${DEB_HOST_MULTIARCH}/libmutter-${env:MUTTER_API_VERSION}.so
+usr/lib/${DEB_HOST_MULTIARCH}/mutter-${env:MUTTER_API_VERSION}/*.so
+usr/lib/${DEB_HOST_MULTIARCH}/mutter-${env:MUTTER_API_VERSION}/*.gir
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/libmutter-${env:MUTTER_API_VERSION}.pc
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/mutter-clutter-${env:MUTTER_API_VERSION}.pc
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/mutter-cogl-${env:MUTTER_API_VERSION}.pc
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/mutter-cogl-pango-${env:MUTTER_API_VERSION}.pc
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/mutter-mtk-${env:MUTTER_API_VERSION}.pc
