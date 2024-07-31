@@ -1,4 +1,4 @@
 GIT="https://gitlab.freedesktop.org/glvnd/libglvnd.git"
-DISTROS="jammy mantic noble"
+DISTROS="jammy noble oracular"
 INC=0
 PPA=mesarc
