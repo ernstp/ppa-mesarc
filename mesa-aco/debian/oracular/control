@@ -4,23 +4,25 @@ Priority: optional
 Maintainer: Ernst Sjöstrand <ernstp@gmail.com>
 Standards-Version: 4.1.4
 Build-Depends:
- debhelper (>= 11),
- directx-headers-dev (>= 1.602.0) [linux-amd64 linux-arm64],
- glslang-tools [amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
- meson (>= 1.3.2),
+ debhelper-compat (= 13),
+ directx-headers-dev (>= 1.613.0) [linux-amd64 linux-arm64],
+ flatbuffers-compiler [linux-arm64],
+ glslang-tools [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ meson (>= 1.4.0),
  quilt (>= 0.63-8.2~),
  pkg-config,
  libdrm-dev (>= 2.4.120),
  libx11-dev,
  libxxf86vm-dev,
  libexpat1-dev,
- libsensors-dev,
+ libflatbuffers-dev [linux-arm64],
+ libsensors-dev [!hurd-any],
  libxfixes-dev,
  libxdamage-dev,
  libxext-dev,
- libva-dev (>= 1.6.0) [linux-any kfreebsd-any] <!pkg.mesa.nolibva>,
- libvdpau-dev (>= 1.5) [linux-any kfreebsd-any],
- libvulkan-dev [amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ libva-dev (>= 1.6.0) [linux-any] <!pkg.mesa.nolibva>,
+ libvdpau-dev (>= 1.5) [linux-any],
+ libvulkan-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  x11proto-dev,
  linux-libc-dev (>= 2.6.31) [linux-any],
  libpciaccess-dev,
@@ -35,28 +37,37 @@ Build-Depends:
  libxcb-sync-dev,
  libxrandr-dev,
  libxshmfence-dev (>= 1.1),
+ libxtensor-dev [linux-arm64],
  libzstd-dev,
+ lua5.4 [arm64 armel armhf],
  python3,
  python3-mako,
- python3-setuptools,
  python3-ply,
+ python3-pycparser [arm64 armhf],
+ python3-setuptools,
  flex,
  bison,
- libelf-dev [amd64 arm64 armel armhf i386 kfreebsd-amd64 kfreebsd-i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64],
+ libelf-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  libwayland-dev (>= 1.15.0) [linux-any],
  libwayland-egl-backend-dev (>= 1.15.0) [linux-any],
- llvm-17-dev,
- libclang-17-dev,
- libclang-cpp17-dev,
- libclc-17-dev,
- libclc-17,
- wayland-protocols (>= 1.24),
+ llvm-17-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ libclang-17-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ libclang-cpp17-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ libclc-17-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ wayland-protocols (>= 1.34),
  zlib1g-dev,
  libglvnd-core-dev (>= 1.3.2),
- valgrind,
- libllvmspirvlib-17-dev,
- bindgen [amd64],
- rustc [amd64],
+ valgrind [amd64 arm64 armhf i386 mips64el powerpc ppc64 ppc64el s390x],
+ rustc (>= 1.73) [amd64],
+ rustfmt [amd64],
+ bindgen (>= 0.66.1~) [amd64],
+ cbindgen [amd64],
+ llvm-spirv-17 [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x x32],
+ libclc-17 [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x x32],
+ libllvmspirvlib-17-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
+ librust-paste-dev [amd64],
+ librust-syn-dev [amd64],
+Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/xorg-team/lib/mesa.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/mesa
 Homepage: https://mesa3d.org/
@@ -93,7 +104,7 @@ Description: X acceleration library -- development files
 
 Package: libd3dadapter9-mesa
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 powerpc
+Architecture: amd64 arm64 armel armhf i386
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -107,7 +118,7 @@ Description: state-tracker for Direct3D9
 
 Package: libd3dadapter9-mesa-dev
 Section: libdevel
-Architecture: amd64 arm64 armel armhf i386 powerpc
+Architecture: amd64 arm64 armel armhf i386
 Depends:
  libd3dadapter9-mesa (= ${binary:Version}),
  libudev1 [linux-any],
@@ -123,7 +134,7 @@ Description: state-tracker for Direct3D9 -- development files
 
 Package: libgbm1
 Section: libs
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any
 Depends:
  ${shlibs:Depends},
  ${misc:Depends},
@@ -137,7 +148,7 @@ Description: generic buffer management API -- runtime
 
 Package: libgbm-dev
 Section: libdevel
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any
 Depends:
  libgbm1 (= ${binary:Version}),
  ${misc:Depends},
@@ -168,16 +179,6 @@ Description: free implementation of the EGL API -- Mesa vendor library
  .
  This package contains the Mesa vendor library for EGL.
 
-Package: libegl1-mesa
-Section: oldlibs
-Architecture: any
-Depends:
- libegl1,
- ${misc:Depends},
-Multi-Arch: same
-Description: transitional dummy package
- This is a transitional dummy package, it can be safely removed.
-
 Package: libegl1-mesa-dev
 Section: libdevel
 Architecture: any
@@ -194,28 +195,6 @@ Description: free implementation of the EGL API -- development files
  .
  This package provides the development environment for compiling programs
  against the EGL library.
-
-Package: libwayland-egl1-mesa
-Section: oldlibs
-Architecture: linux-any
-Depends:
- ${misc:Depends},
- libegl1,
- libwayland-egl1,
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
-Description: transitional dummy package
- This is a transitional dummy package, it can be safely removed.
-
-Package: libgles2-mesa
-Section: oldlibs
-Architecture: any
-Depends:
- libgles2,
- ${misc:Depends},
-Multi-Arch: same
-Description: transitional dummy package
- This is a transitional dummy package, it can be safely removed.
 
 Package: libgles2-mesa-dev
 Section: oldlibs
@@ -269,22 +248,12 @@ Description: free implementation of the OpenGL API -- GLX vendor library
  This package does not include the modules themselves: these can be found
  in the libgl1-mesa-dri package.
 
-Package: libgl1-mesa-glx
-Section: oldlibs
-Architecture: any
-Depends:
- libgl1,
- libglx-mesa0,
- ${misc:Depends},
-Multi-Arch: same
-Description: transitional dummy package
- This is a transitional dummy package, it can be safely removed.
-
 Package: libgl1-mesa-dri
 Section: libs
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
+ libvulkan1 [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  ${shlibs:Depends},
  ${misc:Depends}
 Multi-Arch: same
@@ -360,9 +329,22 @@ Description: Mesa Off-screen rendering extension -- development files
  .
  For more information on OSmesa see the libosmesa6 package.
 
+Package: mesa-teflon-delegate
+Section: libs
+Architecture: arm64
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
+Description: Mesa TensorFlow Lite external delegate
+ TensorFlow Lite delegate which can make use of NPUs to accelerate ML
+ inference. It is implemented in the form of a external delegate, a shared
+ library which the TensorFlow Lite runtime can load at startup.
+
 Package: mesa-va-drivers
 Section: libs
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any
 Build-Profiles: <!pkg.mesa.nolibva>
 Depends:
  ${shlibs:Depends},
@@ -384,7 +366,7 @@ Description: Mesa VA-API video acceleration drivers
 
 Package: mesa-vdpau-drivers
 Section: libs
-Architecture: linux-any kfreebsd-any
+Architecture: linux-any
 Depends:
  libvdpau1,
  ${shlibs:Depends},
@@ -404,11 +386,11 @@ Description: Mesa VDPAU video acceleration drivers
 
 Package: mesa-vulkan-drivers
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64
+Architecture: amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
  libvulkan1,
- python3:any | python3-minimal:any,
+ python3:any,
  ${shlibs:Depends},
  ${misc:Depends}
 Provides: vulkan-icd
@@ -419,10 +401,10 @@ Description: Mesa Vulkan graphics drivers
 
 Package: mesa-opencl-icd
 Section: libs
-Architecture: amd64 arm64 armel armhf i386 mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sparc64
+Architecture: amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
- libclc-15,
+ libclc-17,
  ocl-icd-libopencl1 | libopencl1,
  ${shlibs:Depends},
  ${misc:Depends},
@@ -433,5 +415,17 @@ Description: free implementation of the OpenCL API -- ICD runtime
  Language) library, which is intended for use with an ICD loader. OpenCL
  provides a standardized interface for computational analysis on graphical
  processing units.
+
+Package: mesa-drm-shim
+Section: libs
+Architecture: amd64 arm64 armel armhf i386 mips64el powerpc ppc64 ppc64el s390x sparc64
+Pre-Depends: ${misc:Pre-Depends}
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Multi-Arch: same
+Description: DRM shim libraries
+ This package provides drm-shim libraries which can be used for testing DRM drivers when
+ none exists on the host
 
 # vim: tw=0
