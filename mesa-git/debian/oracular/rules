@@ -34,6 +34,8 @@ else
   endif
 endif
 
+export RUSTC=rustc-1.80
+
 EGL_PLATFORMS = x11
 GALLIUM_DRIVERS =
 VULKAN_DRIVERS =
