@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2407191408.ee16309~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * ee16309 use XNFcallocarray() instead of xnfcalloc macro
+  * 5d16005 use XNFalloc() instead of xnfalloc
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 29 Aug 2024 01:31:03 +0200
+
 xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2407122037.04bc88d~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
