@@ -1,6 +1,12 @@
 libglvnd (1.7.0+git2405171624.606f662~j~mesarc0) jammy; urgency=medium
 
   * New snapshot:
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 11 Oct 2024 08:14:55 +0200
+
+libglvnd (1.7.0+git2405171624.606f662~j~mesarc0) jammy; urgency=medium
+
+  * New snapshot:
   * 606f662 Merge branch 'haiku-bugfix' into 'master'
   * 9d7f6af Haiku: guard calls to fRenderer in HGL
 
