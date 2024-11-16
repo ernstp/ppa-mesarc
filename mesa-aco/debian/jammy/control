@@ -412,7 +412,7 @@ Section: libs
 Architecture: amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32
 Pre-Depends: ${misc:Pre-Depends}
 Depends:
- libclc-17,
+ libclc-16,
  ocl-icd-libopencl1 | libopencl1,
  ${shlibs:Depends},
  ${misc:Depends},
