@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb
+rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb *.deb
 
 EPOCH=
 
@@ -110,6 +110,6 @@ if [ -n "$PPA" ] && [ -z "$NOUPLOAD" ]; then
 		echo -e ${CYAN}Uploading to $PPA: $changes${NC}
 		dput ssh-ppa:ernstp/"$PPA" $changes
 	done
-	rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb
+	rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb *.deb
 fi
 
