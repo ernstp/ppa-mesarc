@@ -13,31 +13,40 @@ DEB_HOST_ARCH_OS   ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 DEB_HOST_ARCH_CPU  ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
 # for finding the correct llvm-config when meson doesn't know about it yet
-LLVM_VERSION = 17
+LLVM_VERSION = 19
 export PATH:=/usr/lib/llvm-$(LLVM_VERSION)/bin/:$(PATH)
 
+RUST_VERSION = 1.80
+export RUSTC=rustc-$(RUST_VERSION)
+
 export DEB_BUILD_MAINT_OPTIONS=optimize=-lto
-export MESON_PACKAGE_CACHE_DIR=/usr/share/cargo/registry/
 
-ifeq (,$(filter $(DEB_HOST_ARCH), armhf ppc64el sh3 sh4))
-buildflags = \
-	$(shell DEB_CFLAGS_MAINT_APPEND=-Wall DEB_CXXFLAGS_MAINT_APPEND=-Wall dpkg-buildflags --export=configure)
-else
-  ifneq (,$(filter $(DEB_HOST_ARCH), armhf))
+DEB_CFLAGS_MAINT_APPEND := -Wall
+DEB_CXXFLAGS_MAINT_APPEND := -Wall
+ifneq (,$(filter $(DEB_HOST_ARCH), armhf))
   # Workaround for a variant of LP: #725126
-  buildflags = \
-	$(shell DEB_CFLAGS_MAINT_APPEND="-Wall -fno-optimize-sibling-calls" DEB_CXXFLAGS_MAINT_APPEND="-Wall -fno-optimize-sibling-calls" dpkg-buildflags --export=configure)
-  else
-    # Workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=83143
-    buildflags = \
-	$(shell DEB_CFLAGS_MAINT_APPEND="-Wall -O1" DEB_CXXFLAGS_MAINT_APPEND="-Wall -O1" dpkg-buildflags --export=configure)
-  endif
+  DEB_CFLAGS_MAINT_APPEND += -fno-optimize-sibling-calls
+  DEB_CXXFLAGS_MAINT_APPEND += -fno-optimize-sibling-calls
+else ifneq (,$(filter $(DEB_HOST_ARCH), loong64))
+  # Workaround loong64 BFD linker crash related to TLSDESC
+  DEB_CFLAGS_MAINT_APPEND += -mtls-dialect=trad
+  DEB_CXXFLAGS_MAINT_APPEND += -mtls-dialect=trad
+else ifneq (,$(filter $(DEB_HOST_ARCH), m68k))
+  # This library has huge jump tables: Debian #1067207
+  DEB_CFLAGS_MAINT_APPEND += -mlong-jump-table-offsets
+  DEB_CXXFLAGS_MAINT_APPEND += -mlong-jump-table-offsets
+else ifneq (,$(filter $(DEB_HOST_ARCH), sh4))
+  # Workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=83143
+  DEB_CFLAGS_MAINT_APPEND += -freorder-blocks-algorithm=simple
+  DEB_CXXFLAGS_MAINT_APPEND += -freorder-blocks-algorithm=simple
 endif
-
-export RUSTC=rustc-1.80
+buildflags = $(shell \
+	DEB_CFLAGS_MAINT_APPEND='$(DEB_CFLAGS_MAINT_APPEND)' \
+	DEB_CXXFLAGS_MAINT_APPEND='$(DEB_CXXFLAGS_MAINT_APPEND)' \
+	dpkg-buildflags --export=configure)
 
 EGL_PLATFORMS = x11
-GALLIUM_DRIVERS =
+GALLIUM_DRIVERS = softpipe
 VULKAN_DRIVERS =
 VULKAN_LAYERS =
 
@@ -53,7 +62,6 @@ WINE_ARCHS     = amd64 arm64 armel armhf i386
 
 # hurd doesn't do direct rendering
 ifeq ($(DEB_HOST_ARCH_OS), hurd)
-  GALLIUM_DRIVERS += softpipe
   confflags_DIRECT_RENDERING = -Dglx-direct=false
   confflags_GBM = -Dgbm=disabled
 else
@@ -110,17 +118,11 @@ else
   ifneq (,$(filter $(DEB_HOST_ARCH), $(LLVM_ARCHS)))
 	GALLIUM_DRIVERS += radeonsi zink llvmpipe
 
-	# Only enable amd on riscv64, swrast needs CPU JIT support which doesn't work properly yet
-	ifneq (,$(filter $(DEB_HOST_ARCH), riscv64))
-		VULKAN_DRIVERS += amd
-		confflags_GALLIUM += -Ddraw-use-llvm=false
-	else
-	  # drop virtio from armel, it doesn't build
-	  ifneq (,$(filter $(DEB_HOST_ARCH), armel))
+	# drop virtio from armel, it doesn't build
+	ifneq (,$(filter $(DEB_HOST_ARCH), armel))
 		VULKAN_DRIVERS += amd swrast
-	  else
+	else
 		VULKAN_DRIVERS += amd swrast virtio
-	  endif
 	endif
 
 	VULKAN_LAYERS += device-select intel-nullhw overlay
@@ -133,6 +135,7 @@ else
 	endif
 
 	ifneq (,$(filter $(DEB_HOST_ARCH), $(NVK_ARCHS)))
+		export MESON_PACKAGE_CACHE_DIR=/usr/share/cargo/registry/
 		VULKAN_DRIVERS += nouveau
 	endif
 
@@ -141,7 +144,6 @@ else
 		confflags_GALLIUM += -Dgallium-nine=true
 	endif
   else
-	GALLIUM_DRIVERS += softpipe
 	confflags_GALLIUM += -Dllvm=disabled
   endif
 
@@ -204,7 +206,7 @@ rewrite_wrap_files:
 	done
 	touch subprojects/rewrite
 
-override_dh_clean:
+override_dh_clean: regen_control
 	dpkg-parsechangelog | awk '/^Version:/ {print $$2}' | sed 's/-.*//;s/~/-/' > VERSION
 	rm -rf .pc
 	rm -rf build
@@ -307,3 +309,13 @@ override_dh_makeshlibs:
 gentarball:
 	git archive --format=tar upstream-experimental --prefix=$(DEB_SOURCE)-$(DEB_VERSION_UPSTREAM)/ \
 		| gzip -9 > ../$(DEB_SOURCE)_$(DEB_VERSION_UPSTREAM).orig.tar.gz
+
+regen_control:
+	sed -e"s,@LLVM_VERSION@,$(LLVM_VERSION),g" \
+	    -e"s,@LLVM_ARCHS@,$(LLVM_ARCHS),g" \
+	    -e"s,@RUSTICL_ARCHS@,$(RUSTICL_ARCHS),g" \
+	    -e"s,@NVK_ARCHS@,$(NVK_ARCHS),g" \
+	    -e"s,@VALGRIND_ARCHS@,$(VALGRIND_ARCHS),g" \
+	    -e"s,@WINE_ARCHS@,$(WINE_ARCHS),g" \
+            -e"s,@RUST_VERSION@,$(RUST_VERSION),g" \
+	    debian/control.in > debian/control
