@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (23.0.0+git2411222330.18995f1~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 18995f1 Use GBM_BO_USE_FRONT_RENDERING on front_buffer alloc
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 05 Dec 2024 08:23:12 +0100
+
 xserver-xorg-video-amdgpu (23.0.0+git2407191408.ee16309~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
