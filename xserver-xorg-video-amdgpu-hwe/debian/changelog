@@ -1,3 +1,11 @@
+xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2501251703.2cb59a9~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 2cb59a9 use dixDestroyPixmap() instead of direct driver call
+  * 7943a70 Fixed AMDGPUOptions_KMS for align structures 64bit
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Jan 2025 08:45:56 +0100
+
 xserver-xorg-video-amdgpu-hwe-18.04 (23.0.0+git2411222330.18995f1~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
