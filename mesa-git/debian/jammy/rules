@@ -17,7 +17,6 @@ LLVM_VERSION = 16
 export PATH:=/usr/lib/llvm-$(LLVM_VERSION)/bin/:$(PATH)
 
 export DEB_BUILD_MAINT_OPTIONS=optimize=-lto
-export MESON_PACKAGE_CACHE_DIR=/usr/share/cargo/registry/
 
 ifeq (,$(filter $(DEB_HOST_ARCH), armhf ppc64el sh3 sh4))
 buildflags = \
@@ -108,17 +107,11 @@ else
   ifneq (,$(filter $(DEB_HOST_ARCH), $(LLVM_ARCHS)))
 	GALLIUM_DRIVERS += radeonsi zink llvmpipe
 
-	# Only enable amd on riscv64, swrast needs CPU JIT support which doesn't work properly yet
-	ifneq (,$(filter $(DEB_HOST_ARCH), riscv64))
-		VULKAN_DRIVERS += amd
-		confflags_GALLIUM += -Ddraw-use-llvm=false
-	else
-	  # drop virtio from armel, it doesn't build
-	  ifneq (,$(filter $(DEB_HOST_ARCH), armel))
+	# drop virtio from armel, it doesn't build
+	ifneq (,$(filter $(DEB_HOST_ARCH), armel))
 		VULKAN_DRIVERS += amd swrast
-	  else
+	else
 		VULKAN_DRIVERS += amd swrast virtio
-	  endif
 	endif
 
 	VULKAN_LAYERS += device-select intel-nullhw overlay
@@ -131,6 +124,7 @@ else
 	endif
 
 	ifneq (,$(filter $(DEB_HOST_ARCH), $(NVK_ARCHS)))
+		export MESON_PACKAGE_CACHE_DIR=/usr/share/cargo/registry/
 		VULKAN_DRIVERS += nouveau
 	endif
 
@@ -139,7 +133,6 @@ else
 		confflags_GALLIUM += -Dgallium-nine=true
 	endif
   else
-	GALLIUM_DRIVERS += softpipe
 	confflags_GALLIUM += -Dllvm=disabled
   endif
 
@@ -250,7 +243,6 @@ override_dh_install:
 
 	# Get rid of some files which aren't installed. Do not
 	# use -f to ensure we notice disappearing files:
-	rm debian/tmp/usr/lib/*/libglapi.so
 	rm debian/tmp/usr/lib/*/libEGL_mesa.so
 	rm debian/tmp/usr/lib/*/libGLX_mesa.so
 	# use -f here though
