@@ -1,3 +1,10 @@
+xserver-xorg-video-amdgpu (23.0.0+git2501271107.353b372~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * 353b372 ci: compactify redundant declarations via matrix
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 04 Feb 2025 01:12:27 +0100
+
 xserver-xorg-video-amdgpu (23.0.0+git2501251703.2cb59a9~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
