@@ -73,7 +73,7 @@ else
   # hurd also lacks *_CLOEXEC
   EGL_PLATFORMS += wayland
 
-  GALLIUM_DRIVERS += nouveau r300 r600 virgl
+  GALLIUM_DRIVERS += r300 r600 virgl
   confflags_DIRECT_RENDERING = -Dglx-direct=true
   confflags_GBM = -Dgbm=enabled
   confflags_GALLIUM += -Dgallium-extra-hud=true
