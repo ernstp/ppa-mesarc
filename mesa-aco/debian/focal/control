@@ -292,39 +292,6 @@ Description: shared infrastructure for Mesa drivers
  multiple Mesa drivers. This library is an implementation detail of Mesa
  and should not be used directly by user code.
 
-Package: libosmesa6
-Section: libs
-Architecture: any
-Depends:
- ${shlibs:Depends},
- ${misc:Depends},
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
-Description: Mesa Off-screen rendering extension
- OSmesa is a Mesa extension that allows programs to render to an
- off-screen buffer using the OpenGL API without having to create a
- rendering context on an X Server.  It uses a pure software renderer.
- .
- This package provides both 16-bit and 32-bit versions of the off-screen
- renderer which do not require external libraries to work.
-
-Package: libosmesa6-dev
-Section: libdevel
-Architecture: any
-Depends:
- libosmesa6 (= ${binary:Version}),
- mesa-common-dev (= ${binary:Version}) | libgl-dev,
- ${misc:Depends},
-Conflicts: libosmesa-dev
-Replaces: libosmesa-dev
-Provides: libosmesa-dev
-Multi-Arch: same
-Description: Mesa Off-screen rendering extension -- development files
- This package provides the required environment for developing programs
- that use the off-screen rendering extension of Mesa.
- .
- For more information on OSmesa see the libosmesa6 package.
-
 Package: mesa-teflon-delegate
 Section: libs
 Architecture: arm64

@@ -53,7 +53,6 @@ GALLIUM_DRIVERS = softpipe
 VULKAN_DRIVERS =
 VULKAN_LAYERS =
 
-confflags_OSMESA = -Dosmesa=true
 confflags_SSE2 = -Dsse2=true
 confflags_TEFLON = -Dteflon=false
 
@@ -194,7 +193,6 @@ confflags += \
 	$(confflags_GBM) \
 	$(confflags_GALLIUM) \
 	$(confflags_GLES) \
-	$(confflags_OSMESA) \
 	$(confflags_SSE2) \
 	$(confflags_VALGRIND) \
 	$(confflags_TEFLON)
