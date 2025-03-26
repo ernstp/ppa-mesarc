@@ -1,0 +1,45 @@
+#!/bin/sh
+# Copyright 2020-2021 Collabora Ltd.
+# Copyright 2021 Christian Rauch.
+# SPDX-License-Identifier: MIT
+
+set -eux
+
+if [ -n "${AUTOPKGTEST_ARTIFACTS-}" ]; then
+    WORKDIR="$AUTOPKGTEST_ARTIFACTS"
+else
+    WORKDIR="$(mktemp -d)"
+    trap 'cd /; rm -fr "$WORKDIR"' 0 INT QUIT ABRT PIPE TERM
+fi
+
+if [ -n "${DEB_HOST_GNU_TYPE:-}" ]; then
+    CROSS_COMPILE="$DEB_HOST_GNU_TYPE-"
+else
+    CROSS_COMPILE=
+fi
+
+srcdir="$(pwd)"
+echo "#define _GNU_SOURCE" > "$WORKDIR/config.h"
+cp demo/demo.c "$WORKDIR"
+cp src/cursor-settings.h "$WORKDIR"
+cp src/cursor-settings.c "$WORKDIR"
+cp src/utils.h "$WORKDIR"
+wayland-scanner client-header /usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml "$WORKDIR/xdg-shell-client-protocol.h"
+wayland-scanner private-code /usr/share/wayland-protocols/stable/xdg-shell/xdg-shell.xml "$WORKDIR/xdg-shell-protocol.c"
+cd "$WORKDIR"
+
+"${CROSS_COMPILE}gcc" \
+    cursor-settings.c \
+    demo.c \
+    xdg-shell-protocol.c \
+    -o test \
+    $("${CROSS_COMPILE}pkg-config" \
+        --cflags \
+        --libs \
+        libdecor-0 \
+        wayland-client \
+        wayland-cursor \
+        xkbcommon \
+    )
+"$srcdir/debian/tests/run-with-display" wayland \
+./test --timed-quit
