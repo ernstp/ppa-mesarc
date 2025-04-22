@@ -1,0 +1,34 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/pkg-info.mk
+
+SUPPORT = https://www.debian.org/support
+
+%:
+	dh $@ --buildsystem=meson
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-Dbuilder_addr="debian-x@lists.debian.org"
+		-Dbuilder_string="$(DEB_SOURCE) $(DEB_VERSION_UPSTREAM) ($(SUPPORT))"
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/tmp
+
+	rm -rf debian/tmp/usr/lib/*/xorg/protocol.txt
+	rm -f debian/tmp/usr/share/man/man1/Xserver.1
+	# for now
+	rm -f debian/tmp/usr/lib/*/pkgconfig/xwayland.pc 
+
+override_dh_clean:
+	dh_clean
+	rm -rf debian/build
+	rm -rf build-source
+	rm -f aclocal.m4 ltmain.sh m4/l*.m4
+
+override_dh_auto_test:
+	true
+
+gentarball:
+	git archive --format=tar upstream-unstable --prefix=$(DEB_SOURCE)-$(DEB_VERSION_UPSTREAM)/ \
+		| gzip -9 > ../$(DEB_SOURCE)_$(DEB_VERSION_UPSTREAM).orig.tar.gz
