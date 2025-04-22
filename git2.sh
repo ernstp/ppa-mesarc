@@ -75,7 +75,8 @@ GIT_REV=$(git show -s --format=format:%h)
 
 found_build=0
 for dist in $(ls ../debian) ; do
-	DEBIAN_VERSION=${EPOCH}${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~${PPA}${INC}
+	DEBIAN_VERSION_NOE=${PACKAGE_VERSION}${SEPARATOR}git${GIT_VERSION}~${dist:0:1}~${PPA}${INC}
+	DEBIAN_VERSION=${EPOCH}${DEBIAN_VERSION_NOE}
 
 	OLD_DEBIAN_VERSION=$(dpkg-parsechangelog -l ../debian/$dist/changelog -S Version)
 
@@ -96,6 +97,11 @@ for dist in $(ls ../debian) ; do
 		cp -r ../debian/$dist debian
 
 		debuild --no-lintian -S -d
+
+		if [ -n "$PPA" ] && [ -z "$NOUPLOAD" ]; then
+			echo -e ${CYAN}Uploading to $PPA: $changes${NC}
+			dput ssh-ppa:ernstp/"$PPA" ../${PACKAGE_NAME}_${DEBIAN_VERSION_NOE}_source.changes
+		fi
 	fi
 done
 
@@ -105,11 +111,5 @@ if [[ $found_build = "0" ]]; then
 fi
 
 popd
-if [ -n "$PPA" ] && [ -z "$NOUPLOAD" ]; then
-	for changes in $(ls ${PACKAGE_NAME}_*_source.changes); do
-		echo -e ${CYAN}Uploading to $PPA: $changes${NC}
-		dput ssh-ppa:ernstp/"$PPA" $changes
-	done
-	rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb *.deb
-fi
 
+rm -vf *.dsc *.build *.buildinfo *.changes *.upload *.tar.gz *.tar.xz *.ddeb *.deb
