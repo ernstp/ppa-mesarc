@@ -1,0 +1,38 @@
+#!/usr/bin/make -f
+#
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export PYTHON=/usr/bin/python3
+
+override_dh_auto_install:
+	dh_auto_install
+	find debian/tmp -name '*.la' -delete
+
+override_dh_missing:
+	dh_missing --fail-missing
+
+override_dh_auto_test:
+	xvfb-run -a ninja -C build test
+
+override_dh_makeshlibs:
+	dh_makeshlibs -a -- -c4
+
+override_dh_bugfiles:
+	dh_bugfiles -A
+
+%:
+	dh $@ --builddirectory=build/ \
+		--buildsystem=meson
+
+# For maintainer use only, generate a tarball:
+gentarball: SOURCE=libglvnd
+gentarball: UV=$(shell dpkg-parsechangelog|awk '/^Version:/ {print $$2}'|sed 's/-.*$$//')
+gentarball: ORIG = ../$(SOURCE)_$(UV).orig.tar.gz
+gentarball:
+	if [ -f $(ORIG) ]; then \
+	  echo "$(ORIG) already exists, stopping"; exit 1; \
+	fi
+	git archive --format=tar upstream-unstable --prefix=$(SOURCE)-$(UV)/ \
+	  | gzip -9 > $(ORIG)
+	pristine-tar commit $(ORIG) upstream-unstable

@@ -1,0 +1,7 @@
+usr/include/GLES
+usr/include/GLES2
+usr/include/GLES3
+usr/lib/*/libGLESv1_CM.so
+usr/lib/*/libGLESv2.so
+usr/lib/*/pkgconfig/glesv1_cm.pc
+usr/lib/*/pkgconfig/glesv2.pc
