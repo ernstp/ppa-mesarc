@@ -63,66 +63,6 @@ Vcs-Git: https://salsa.debian.org/xorg-team/lib/mesa.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/mesa
 Homepage: https://mesa3d.org/
 
-Package: libxatracker2
-Section: libs
-Architecture: amd64 i386 x32
-Depends:
- ${shlibs:Depends},
- ${misc:Depends},
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
-Description: X acceleration library -- runtime
- This package contains the XA (X acceleration) library.  It is used exclusively
- by the X server to do render, copy and video acceleration.
- .
- XA is intended to be used by the vmware driver for virtualized X acceleration.
-
-Package: libxatracker-dev
-Section: libdevel
-Architecture: amd64 i386 x32
-Depends:
- libxatracker2 (= ${binary:Version}),
- ${misc:Depends},
-Multi-Arch: same
-Description: X acceleration library -- development files
- This package contains the XA (X acceleration) library.  It is used exclusively
- by the X server to do render, copy and video acceleration.
- .
- XA is intended to be used by the vmware driver for virtualized X acceleration.
- .
- This package provides the development environment for compiling programs
- against the xatracker library.
-
-Package: libd3dadapter9-mesa
-Section: libs
-Architecture: @WINE_ARCHS@
-Depends:
- ${shlibs:Depends},
- ${misc:Depends},
- libudev1 [linux-any],
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
-Description: state-tracker for Direct3D9
- This package contains a Gallium3D state tracker that implements the Direct3D9
- API.  Combined with the gallium-nine branch of Wine, programs using D3D9 can
- achieve native (or better) graphics performance.
-
-Package: libd3dadapter9-mesa-dev
-Section: libdevel
-Architecture: @WINE_ARCHS@
-Depends:
- libd3dadapter9-mesa (= ${binary:Version}),
- libudev1 [linux-any],
- ${misc:Depends},
-Pre-Depends: ${misc:Pre-Depends}
-Multi-Arch: same
-Description: state-tracker for Direct3D9 -- development files
- This package contains a Gallium3D state tracker that implements the Direct3D9
- API.  Combined with the gallium-nine branch of Wine, programs using D3D9 can
- achieve native (or better) graphics performance.
- .
- Development files
-
 Package: libgbm1
 Section: libs
 Architecture: linux-any

@@ -60,7 +60,6 @@ LLVM_ARCHS     = amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc
 RUSTICL_ARCHS  = DISABLEEEE
 NVK_ARCHS      = DISABLEEEE
 VALGRIND_ARCHS = amd64 arm64 armhf i386 mips64el powerpc ppc64 ppc64el s390x
-WINE_ARCHS     = amd64 arm64 armel armhf i386
 
 # hurd doesn't do direct rendering
 ifeq ($(DEB_HOST_ARCH_OS), hurd)
@@ -78,6 +77,7 @@ else
   confflags_GALLIUM += -Dgallium-extra-hud=true
   confflags_GALLIUM += -Dgallium-vdpau=enabled
   confflags_GALLIUM += -Dlmsensors=enabled
+  confflags_GALLIUM += -Dgallium-xa=disabled
 
   # Freedreno requires arm in addition
   ifneq (,$(filter arm arm64,$(DEB_HOST_ARCH_CPU)))
@@ -98,8 +98,6 @@ else
   ifneq (,$(filter $(DEB_HOST_ARCH), amd64 i386 x32))
 	GALLIUM_DRIVERS += crocus i915 iris svga
 	VULKAN_DRIVERS += intel intel_hasvk
-	# svga needs xa state tracker
-	confflags_GALLIUM += -Dgallium-xa=enabled
   endif
 
   ifneq (,$(filter $(DEB_HOST_ARCH), amd64))
@@ -129,7 +127,6 @@ else
 
 	VULKAN_LAYERS += device-select intel-nullhw overlay
 	confflags_GALLIUM += -Dllvm=enabled
-	confflags_GALLIUM += -Dgallium-opencl=icd
 
 	# Build rusticl for archs where rustc is available
 	ifneq (,$(filter $(DEB_HOST_ARCH), $(RUSTICL_ARCHS)))
@@ -139,11 +136,6 @@ else
 	ifneq (,$(filter $(DEB_HOST_ARCH), $(NVK_ARCHS)))
 		export MESON_PACKAGE_CACHE_DIR=/usr/share/cargo/registry/
 		VULKAN_DRIVERS += nouveau
-	endif
-
-	# nine makes sense only on archs that build wine
-	ifneq (,$(filter $(DEB_HOST_ARCH), $(WINE_ARCHS)))
-		confflags_GALLIUM += -Dgallium-nine=true
 	endif
   else
 	confflags_GALLIUM += -Dllvm=disabled
@@ -185,7 +177,6 @@ confflags += \
 	-Dvulkan-drivers="[$(VULKAN_DRIVERS_LIST)]" \
 	-Dvulkan-layers="[$(VULKAN_LAYERS_LIST)]" \
 	-Dglvnd=enabled \
-	-Dshared-glapi=enabled \
 	-Db_ndebug=true \
 	-Dbuild-tests=false \
 	-Dtools=drm-shim \
@@ -316,6 +307,5 @@ regen_control:
 	    -e"s,@RUSTICL_ARCHS@,$(RUSTICL_ARCHS),g" \
 	    -e"s,@NVK_ARCHS@,$(NVK_ARCHS),g" \
 	    -e"s,@VALGRIND_ARCHS@,$(VALGRIND_ARCHS),g" \
-	    -e"s,@WINE_ARCHS@,$(WINE_ARCHS),g" \
-            -e"s,@RUST_VERSION@,$(RUST_VERSION),g" \
+		-e"s,@RUST_VERSION@,$(RUST_VERSION),g" \
 	    debian/control.in > debian/control

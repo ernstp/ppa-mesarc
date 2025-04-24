@@ -1,3 +1,0 @@
-etc/OpenCL/vendors/*.icd
-usr/lib/*/gallium-pipe/*.so
-usr/lib/*/lib*OpenCL*
