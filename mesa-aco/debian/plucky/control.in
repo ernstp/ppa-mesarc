@@ -65,6 +65,7 @@ Build-Depends:
  libllvmspirvlib-@LLVM_VERSION@-dev [@LLVM_ARCHS@],
  librust-paste-dev [@NVK_ARCHS@],
  librust-syn-dev (>= 2.0.48) [@NVK_ARCHS@],
+ librust-rustc-hash-dev [@NVK_ARCHS@],
 Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/xorg-team/lib/mesa.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/mesa
