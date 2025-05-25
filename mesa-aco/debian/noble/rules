@@ -80,7 +80,6 @@ else
   confflags_GALLIUM += -Dgallium-extra-hud=true
   confflags_GALLIUM += -Dgallium-vdpau=enabled
   confflags_GALLIUM += -Dlmsensors=enabled
-  confflags_GALLIUM += -Dgallium-xa=disabled
 
   # Freedreno requires arm in addition
   ifneq (,$(filter arm arm64,$(DEB_HOST_ARCH_CPU)))
