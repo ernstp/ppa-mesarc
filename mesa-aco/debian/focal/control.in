@@ -3,6 +3,7 @@ Section: graphics
 Priority: optional
 Maintainer: Ernst Sjöstrand <ernstp@gmail.com>
 Standards-Version: 4.1.4
+Architecture: amd64 i386
 Build-Depends:
  debhelper-compat (= 13),
  directx-headers-dev (>= 1.606.4) [linux-amd64 linux-arm64],
