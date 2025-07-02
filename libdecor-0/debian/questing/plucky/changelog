@@ -1,0 +1,444 @@
+libdecor-0 (0.2.2+git2507011019.6994c9b~p~mesarc2) plucky; urgency=medium
+
+  * New snapshot:
+  * 6994c9b Fix set_handle_application_cursor() segfault with fallback
+    plugin
+  * d547651 Fix crash in libdecor-c++-demo introduced at 5974b6d4
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 02 Jul 2025 18:38:02 +0200
+
+libdecor-0 (0.2.2+git2505141138.42f7a53~p~mesarc2) plucky; urgency=medium
+
+  * New snapshot:
+  * 42f7a53 Pass through the xdg_toplevel v7 window constraint
+    properties
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 21 May 2025 12:09:03 +0200
+
+libdecor-0 (0.2.2+git2504170953.32ac12a~p~mesarc2) plucky; urgency=medium
+
+  * New snapshot:
+  * 32ac12a gtk: Refuse to load if gtk2 is already in the process
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 14 May 2025 21:12:35 +0200
+
+libdecor-0 (0.2.2+git2504141651.6cdb62a~p~mesarc2) plucky; urgency=medium
+
+  * New snapshot:
+  * 6cdb62a Don't commit frame when with no content set
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 20 Apr 2025 16:29:04 +0200
+
+libdecor-0 (0.2.2+git2504031009.5974b6d~p~mesarc2) plucky; urgency=medium
+
+  * New snapshot:
+  * 5974b6d Add an event to pass through the toplevel window bounds
+  * 03be9c3 demo/egl: Make use of set_handle_application_cursor()
+  * bce618c demo/c++: Make use of set_handle_application_cursor()
+  * c23c1f9 Introduce 'set_handle_application_cursor()' API
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 13 Apr 2025 17:00:13 +0200
+
+libdecor-0 (0.2.2+git2503091456.8cbf2e8~p~mesarc2) plucky; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 26 Mar 2025 01:29:17 +0100
+
+libdecor-0 (0.2.2+git2503091456.8cbf2e8~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+  * 8cbf2e8 plugins/gtk: Don't redraw for scale change when fullscreen
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 11 Mar 2025 18:56:09 +0100
+
+libdecor-0 (0.2.2+git2503070029.2d5d80a~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+  * 2d5d80a Allow setting null parent
+
+ -- Ernst Persson <ernstp@gmail.com>  Sun, 09 Mar 2025 14:03:03 +0100
+
+libdecor-0 (0.2.2+git2501281553.bc954f4~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+  * bc954f4 set 'native' argument for 'add_languages'
+  * 604c329 override_dependency requires meson 0.54.0
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 07 Mar 2025 08:48:42 +0100
+
+libdecor-0 (0.2.2+git2501211712.f7cd7ff~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+  * f7cd7ff libdecor: Fix set_visibility for SSD compositors
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Jan 2025 08:28:23 +0100
+
+libdecor-0 (0.2.2+git2501211618.d7f4b6a~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+  * d7f4b6a replace space by tab
+  * 74839e5 plugins/gtk: Only support running on the main thread
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 22 Jan 2025 14:15:49 +0100
+
+libdecor-0 (0.2.2+git2407061621.ae2cd6d~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+  * ae2cd6d meson: override libdecor dependency
+
+ -- Ernst Persson <ernstp@gmail.com>  Fri, 08 Nov 2024 21:34:57 +0100
+
+libdecor-0 (0.2.2+git2405312118.c2bd8ad~o~mesarc2) oracular; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 03 Aug 2024 13:45:37 +0200
+
+libdecor-0 (0.2.2+git2405312118.c2bd8ad~n~mesarc2) noble; urgency=medium
+
+  * New snapshot:
+  * c2bd8ad Rename cursor-settings.c to desktop-settings.c
+  * bf091cb gtk: Activate dark mode based on DBus
+  * 8f0d143 Restore use with gcc version 10
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 05 Jun 2024 19:20:39 +0200
+
+libdecor-0 (0.2.2+git2403041401.4f2c03d~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 4f2c03d Rename os_create_anonymous_file to avoid a conflict in
+    wayland-cursor
+  * 0987553 gtk: Make right/double click "gesture" based
+  * 49de40f gtk: Make header gestures a state machine
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 14 Mar 2024 08:24:38 +0100
+
+libdecor-0 (0.2.2+git2402252146.749847e~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 749847e Add an interface to query the XDG toplevel WM capabilities
+  * 36d02ca libdecor: make interface parameters in public API const
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 26 Feb 2024 15:37:39 +0100
+
+libdecor-0 (0.2.2+git2402171437.8dc6b62~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 8dc6b62 Give libdecor clients access to XDG_TOPLEVEL_STATE_RESIZING
+  * fe7ee8d libdecor: add libdecor_frame_get/set_userdata
+  * cef873f libdecor: add userdata to struct libdecor
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 19 Feb 2024 01:55:34 +0100
+
+libdecor-0 (0.2.2+git2401152200.7807ae3~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 7807ae3 build: Bump version to 0.2.2
+  * 9e35684 gtk: fix memory leak when destroying the gtk plugin
+  * 758ceed gtk: fix memory leak when freeing seats
+  * ce69853 gtk: Make resize corner region larger
+  * 82d02ea cairo: Make resize corner region larger
+  * 59a6999 cursor-settings: Get theme/size from env if D-Bus call fails
+  * 394f49b gtk: Use g_clear_pointer() in a couple of places
+  * 86863f8 gtk: Don't early out of frame free function
+
+ -- Ernst Persson <ernstp@gmail.com>  Thu, 18 Jan 2024 08:07:51 +0100
+
+libdecor-0 (0.2.1+git2312012214.060fe76~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 060fe76 build: Bump version to 0.2.1
+  * 60b65b9 gtk: Don't report errors during construction
+  * 2165002 Handle NULL wl_output as argument
+  * f8d945e gtk: Optionally use wl_output_release
+  * 2cc5029 cairo: Optionally use wl_output_release
+
+ -- Ernst Persson <ernstp@gmail.com>  Sat, 02 Dec 2023 00:25:10 +0100
+
+libdecor-0 (0.2.0+git2311020139.cc58dd2~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * cc58dd2 libdecor: fix leak of DBusError in get_setting_sync
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 29 Nov 2023 17:04:58 +0100
+
+libdecor-0 (0.2.0+git2310101605.c6c780c~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * c6c780c gtk: use error notification with string formatting
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 25 Oct 2023 03:19:55 +0200
+
+libdecor-0 (0.2.0+git2310092155.0052066~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 0052066 gtk: disable setlocale()
+  * 672985c build: Use `gnu_symbol_visibility` everywhere
+
+ -- Ernst Persson <ernstp@gmail.com>  Tue, 10 Oct 2023 12:13:00 +0200
+
+libdecor-0 (0.2.0+git2309250849.ad320fc~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * ad320fc build: Bump version to 0.2.0
+
+ -- Ernst Persson <ernstp@gmail.com>  Mon, 25 Sep 2023 17:39:28 +0200
+
+libdecor-0 (0.1.99+git2309071048.422abaf~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 422abaf libdecor-gtk: handle touch events
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 07 Sep 2023 23:55:11 +0200
+
+libdecor-0 (0.1.99+git2308250845.ca6e6b6~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * ca6e6b6 Fix window closing in case of SSD
+  * 0d63d12 Conditionally check for wayland-protocols 1.32
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 29 Aug 2023 00:35:58 +0200
+
+libdecor-0 (0.1.99+git2307152150.f43652c~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * f43652c libdecor: Pass through xdg_toplevel 'suspended' state
+  * bb2ec85 libdecor: check if plugins use different conflicting symbols
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 17 Jul 2023 00:28:28 +0200
+
+libdecor-0 (0.1.99+git2306062334.7326039~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 7326039 libdecor_plugin_gtk fix read after frees
+  * 82a581f libdecor-gtk: immediately set NULL after free
+  * 6ca6dac libdecor-gtk: reset hdr_focus.type in pointer_leave
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 08 Jun 2023 10:05:48 +0200
+
+libdecor-0 (0.1.99+git2305162237.93a4c06~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 93a4c06 libdecor: Exit plugins elegantly if we don't have required
+    globals
+  * 0d77393 libdecor: Roundtrip wl_display after setting up global
+    callback
+  * 8cc8de2 gtk: Fix crash on destroy when globals could not be obtained
+  * a40348a cairo: Fix crash on destroy when globals could not be
+    obtained
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 28 May 2023 16:22:54 +0200
+
+libdecor-0 (0.1.99+git2305151457.0fc00cb~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 0fc00cb ci: Update workflow
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 16 May 2023 20:40:52 +0200
+
+libdecor-0 (0.1.99+git2305020024.db4e508~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * db4e508 libdecor_plugin_fallback_frame_get_border_size need support
+    being called with null args
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 03 May 2023 21:05:05 +0200
+
+libdecor-0 (0.1.99+git2304041214.05f132e~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * 05f132e Fix creation of narrow, non-resizeable window
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 01 May 2023 17:29:41 +0200
+
+libdecor-0 (0.1.99+git2302151956.a254d0c~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * a254d0c meson: bump version on master to 0.1.99
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 21:07:10 +0100
+
+libdecor-0 (0.1.0+git2302060814.cb610d8~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+  * cb610d8 meson: add libdecor_includepath to libdecor_dep
+  * 3f3e5e1 Fix pixel size of cairo-drawn titlebar label.
+  * 4b2c5f4 gtk: don't redraw decoration redundantly
+  * 90c323e meson: add devenv settings for GTK plugin
+  * b244489 meson: configure devenv only for sufficient meson version
+  * 25f29fe gtk: inhibit assertion about invalid widget
+  * 8e870cc replace whitespace with tabs
+  * 92d8522 c++-demo: update window state before content size
+    calculation
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 19:55:00 +0100
+
+libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland1) jammy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 15 Feb 2023 19:50:01 +0100
+
+libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Tue, 06 Dec 2022 19:33:01 +0100
+
+libdecor-0 (0.1.0+git2211251421.b5a9029~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * b5a9029 Link to gitlab.freedesktop.org
+  * 80e4691 libdecor: print an error message when a plugin has a
+    conflicting symbol
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 26 Nov 2022 20:15:57 +0100
+
+libdecor-0 (0.1.0+git2210272135.e87dcfd~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * e87dcfd gtk: add GTK plugin that draws widget via cairo surfaces
+  * 2a46514 add GTK dependency to documentation
+  * d421d45 ci: add 'gtk+-3.0'
+  * c1c62e3 libdecor: fix titlebar height calculation order
+  * 2b15f44 add myself to copyright header
+  * 9be00da demo: remove designated initializers
+  * 3b8baf0 cairo: move blur function into common library
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 31 Oct 2022 21:04:04 +0100
+
+libdecor-0 (0.1.0+git2209191759.8b42120~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * 8b42120 plugin: Add vfunc to list commonly conflicting symbols
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 22 Sep 2022 20:15:24 +0200
+
+libdecor-0 (0.1.0+git2209161633.a735d05~j~wayland0) jammy; urgency=medium
+
+  * New snapshot:
+  * a735d05 cairo: Keep a ref to the frame while invoking
+    libdecor_frame_close().
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 17 Sep 2022 11:55:42 +0200
+
+libdecor-0 (0.1.0+git2205311549.5e58ec6~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 5e58ec6 os-compatibility: handle EINTR gracefully
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 09 Jun 2022 11:40:02 +0200
+
+libdecor-0 (0.1.0+git2204290059.a382710~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * a382710 demo: constrain window size to prevent manual resize below
+    minimum
+  * c3b3965 libecor: make getter for min/max limits public
+  * f6e4255 libdecor: drop 'p' prefix for pointer to width and height
+  * 2b32d7c libdecor: reorder set_min/set_max functions
+  * 92e29a2 remove leading and trailing space
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 07 May 2022 11:02:07 +0200
+
+libdecor-0 (0.1.0+git2204191107.099b44e~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 099b44e Avoid infinite loop in init_plugins()
+  * e6f836b libdecor: implement 'frame_get_border_size' for fallback
+    plugin
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 21 Apr 2022 18:54:25 +0200
+
+libdecor-0 (0.1.0+git2204172306.546ed58~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 546ed58 fix 'else' style
+  * 020649b libdecor: compute window geometry from frame border size
+  * 1041b76 libdecor: use border sizes to compute all content and window
+    conversions
+  * 1c5006f libdecor: add an interface for querying the decoration frame
+    border size
+  * 096e49d clean trailing white space
+  * 92dbd3a libdecor: Add LIBDECOR_FORCE_CSD environment variable
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 18 Apr 2022 17:19:05 +0200
+
+libdecor-0 (0.1.0+git2202251144.870462b~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 870462b Add more cleanup on exit of EGL demo
+  * dff53e4 Prevent libdecor-cairo from overwriting any user-set min
+    window size
+  * 17f258a readme: Add code of conduct section
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sun, 27 Feb 2022 22:17:48 +0100
+
+libdecor-0 (0.1.0+git2202141155.2173e1a~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 2173e1a Fix leak of plugin private data
+  * 3b73224 Fix checking of plugin file extension
+  * e76b4ec Add a Meson devenv
+  * c3c4316 Allow multiple paths in LIBDECOR_PLUGIN_DIR
+  * 755122c Fix a possible use after free
+  * a5f72a6 os-compatibility: use libdecor in debug name / temporary
+    file prefix
+  * 888c55d os-compatibility: make os_resize_anonymous_file private
+  * 0f19596 os-compatibility: drop duplicate _GNU_SOURCE in favor of
+    meson
+  * 466230a build: add memfd_create fallback from libwayland
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Mon, 14 Feb 2022 21:34:12 +0100
+
+libdecor-0 (0.1.0+git2201271217.316b337~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 316b337 document OpenGL dependency for EGL demo
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 27 Jan 2022 17:11:09 +0100
+
+libdecor-0 (0.1.0+git2201111037.a5e1d87~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * a5e1d87 cairo: Show empty border surfaces when tiled
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Wed, 12 Jan 2022 17:52:30 +0100
+
+libdecor-0 (0.1.0+git2112100922.8e465f1~i~wayland0) impish; urgency=medium
+
+  * New snapshot:
+  * 8e465f1 cairo: fix use after free in wl_list_for_each
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Thu, 16 Dec 2021 17:18:53 +0100
+
+libdecor-0 (0.1.0+git2110211017.754432e~h~wayland0) hirsute; urgency=medium
+
+  * New snapshot:
+
+ -- Ernst Sjöstrand <ernstp@gmail.com>  Sat, 13 Nov 2021 07:38:09 +0100
+
+libdecor-0 (0.1.0-2) unstable; urgency=medium
+
+  * Mark all patches as applied upstream
+  * d/patches: Add some more bug fixes from upstream
+    - This requires a build-dependency on libopengl-dev when building
+      the manual tests
+  * Use https format URI in copyright file
+  * d/upstream/metadata: Add
+  * Standards-Version: 4.6.0 (no changes needed)
+  * Upload to unstable
+
+ -- Simon McVittie <smcv@debian.org>  Sat, 06 Nov 2021 16:23:30 +0000
+
+libdecor-0 (0.1.0-1) experimental; urgency=medium
+
+  [ Christian Rauch ]
+  * Initial release (Closes: #988116)
+
+  [ Simon McVittie ]
+  * d/control: Set Maintainer to the SDL team
+  * Various packaging and test improvements
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 11 Aug 2021 16:06:55 +0100

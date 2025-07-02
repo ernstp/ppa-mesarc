@@ -1,0 +1,67 @@
+#!/bin/sh
+# vim:set sw=4 sts=4 et:
+#
+# Run a wrapped command in a fake display environment
+#
+# Copyright 2021 Marco Trevisan <marco@ubuntu.com>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# Assume a Debian Policy §10.4-compatible shell like dash or bash (with the
+# 'local' builtin)
+# shellcheck disable=SC2039
+
+set -e
+
+me="$(basename "$0")"
+
+usage () {
+    local status="${1-2}"
+
+    if [ "$status" -ne 0 ]; then
+        exec >&2
+    fi
+
+    echo "Usage: $me [wayland|x11] COMMAND [ARGS...]"
+    exit "$status"
+}
+
+display="$1"
+
+case "$display" in
+    wayland)
+        shift
+        if [ -z "$XDG_RUNTIME_DIR" ]; then
+            our_xrd="$(mktemp -d -t xdg-runtime-XXXXXXXX)"
+            export XDG_RUNTIME_DIR="$our_xrd"
+        fi
+        if ! command -v weston > /dev/null; then
+            echo "No weston available"
+            exit 1
+        fi
+        socket="wayland-$(od -vAn -N1 -tu1 < /dev/urandom | tr -d '[:space:]')"
+        weston --backend=headless-backend.so --socket="$socket" --idle-time=0 2>&1 &
+        weston_pid=$!
+        trap 'kill $weston_pid; [ -n $our_xrd ] && rm -rfv $our_xrd' EXIT INT
+        while [ ! -S "$XDG_RUNTIME_DIR/$socket" ]; do
+            echo "Waiting for socket..."
+            sleep 1
+        done
+        env -u DISPLAY WAYLAND_DISPLAY="$socket" "$@"
+        exit $?
+    ;;
+    x11)
+        shift
+        if ! command -v xvfb-run > /dev/null; then
+            echo "No xvfb-run available"
+            exit 1
+        fi
+        exec env -u WAYLAND_DISPLAY xvfb-run -a -s "-screen 0 1024x768x24 -noreset" "$@"
+    ;;
+    -h|--help|help)
+        usage 0
+        ;;
+    *)
+        usage 2
+        ;;
+esac
