@@ -1,3 +1,14 @@
+xserver-xorg-video-amdgpu (23.0.0+git2506262125.dc2d8ad~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * dc2d8ad Improve man page formatting
+  * 0befaab trivial: Add workflow rules
+  * 9ca5735 Fix a crash when initializing with a property with no atoms
+  * 953a14f Revert "use dixDestroyPixmap() instead of direct driver
+    call"
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 02 Jul 2025 18:57:19 +0200
+
 xserver-xorg-video-amdgpu (23.0.0+git2501271107.353b372~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
