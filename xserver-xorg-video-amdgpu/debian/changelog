@@ -1,3 +1,13 @@
+xserver-xorg-video-amdgpu (23.0.0+git2506262154.b696afa~b~mesarc0) bionic; urgency=medium
+
+  * New snapshot:
+  * b696afa Drop support for autotools build system
+  * 8d335c1 Migrate CI over to meson
+  * c98eb13 Add support for the meson build system
+  * e94cada Add missing xorg-server.h header
+
+ -- Ernst Persson <ernstp@gmail.com>  Wed, 16 Jul 2025 13:32:00 +0200
+
 xserver-xorg-video-amdgpu (23.0.0+git2506262125.dc2d8ad~b~mesarc0) bionic; urgency=medium
 
   * New snapshot:
