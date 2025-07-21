@@ -65,6 +65,7 @@ Build-Depends:
  libllvmspirvlib-19-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  librust-paste-dev [amd64],
  librust-syn-dev (>= 2.0.48) [amd64],
+ librust-rustc-hash-2-dev [amd64],
 Rules-Requires-Root: no
 Vcs-Git: https://salsa.debian.org/xorg-team/lib/mesa.git
 Vcs-Browser: https://salsa.debian.org/xorg-team/lib/mesa
