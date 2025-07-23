@@ -6,6 +6,7 @@ Uploaders: Timo Aaltonen <tjaalton@debian.org>
 Build-Depends:
  debhelper (>= 11),
  quilt,
+ meson,
  libdrm-dev (>= 2.4.89) [!hurd-i386],
  libgl1-mesa-dev | libgl-dev,
  libgbm-dev,
