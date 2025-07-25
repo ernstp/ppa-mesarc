@@ -190,7 +190,7 @@ confflags += \
 
 rewrite_wrap_files:
 	cp -r subprojects subprojects-save
-	./debian/get-wraps-from-cargo-registry.py --cargo-registry "$$MESON_PACKAGE_CACHE_DIR"
+	./debian/get-wraps-from-cargo-registry.py --cargo-registry /usr/share/cargo/registry/
 	touch subprojects/rewrite
 
 override_dh_clean: regen_control
