@@ -99,10 +99,6 @@ else
 	VULKAN_DRIVERS += intel intel_hasvk
   endif
 
-  ifneq (,$(filter $(DEB_HOST_ARCH), amd64))
-	confflags_GALLIUM += -Dintel-clc=enabled
-  endif
-
   ifneq (,$(filter $(DEB_HOST_ARCH), $(VALGRIND_ARCHS)))
 	confflags_VALGRIND += -Dvalgrind=enabled
   endif
