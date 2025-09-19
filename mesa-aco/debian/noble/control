@@ -20,7 +20,6 @@ Build-Depends:
  libxfixes-dev,
  libxext-dev,
  libva-dev (>= 1.6.0) [linux-any] <!pkg.mesa.nolibva>,
- libvdpau-dev (>= 1.5) [linux-any],
  libvulkan-dev [amd64 arm64 armel armhf i386 loong64 mips64el powerpc ppc64 ppc64el riscv64 s390x sparc64 x32],
  x11proto-dev,
  linux-libc-dev (>= 2.6.31) [linux-any],
@@ -266,26 +265,6 @@ Description: Mesa VA-API video acceleration drivers
  post-processing for the supported graphics cards.
  .
  This package enables support for VA-API for some gallium drivers.
-
-Package: mesa-vdpau-drivers
-Section: libs
-Architecture: linux-any
-Depends:
- libvdpau1,
- ${shlibs:Depends},
- ${misc:Depends},
-Enhances:
- libvdpau1,
-Provides:
- vdpau-driver,
-Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
-Description: Mesa VDPAU video acceleration drivers
- These libraries provide the Video Decode and Presentation API for Unix.
- They provide accelerated video playback (incl. H.264) and video
- post-processing for the supported graphics cards.
- .
- This package enables support for VDPAU for some gallium drivers.
 
 Package: mesa-vulkan-drivers
 Section: libs

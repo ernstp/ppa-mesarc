@@ -78,7 +78,6 @@ else
   confflags_DIRECT_RENDERING = -Dglx-direct=true
   confflags_GBM = -Dgbm=enabled
   confflags_GALLIUM += -Dgallium-extra-hud=true
-  confflags_GALLIUM += -Dgallium-vdpau=enabled
   confflags_GALLIUM += -Dlmsensors=enabled
 
   # Freedreno requires arm in addition
@@ -251,11 +250,6 @@ override_dh_install:
 	   debian/libgl1-mesa-dri/usr/lib/${DEB_HOST_MULTIARCH}/dri/
 
   ifneq ($(DEB_HOST_ARCH_OS), hurd)
-	# Copy the hardlinked vdpau drivers correctly.
-	install -m755 -d debian/mesa-vdpau-drivers/usr/lib/${DEB_HOST_MULTIARCH}/vdpau/
-	mv debian/tmp/usr/lib/${DEB_HOST_MULTIARCH}/vdpau/libvdpau*.so* \
-	   debian/mesa-vdpau-drivers/usr/lib/${DEB_HOST_MULTIARCH}/vdpau/
-
     ifeq (,$(filter pkg.mesa.nolibva,$(DEB_BUILD_PROFILES)))
 	# Copy the hardlinked va drivers correctly.
 	install -m755 -d debian/mesa-va-drivers/usr/lib/${DEB_HOST_MULTIARCH}/dri/
