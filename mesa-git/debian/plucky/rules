@@ -188,14 +188,7 @@ confflags += \
 
 rewrite_wrap_files:
 	cp -r subprojects subprojects-save
-	for crate in paste proc-macro2 quote unicode-ident rustc-hash; \
-	do \
-		export crate_namever=`basename $$MESON_PACKAGE_CACHE_DIR/$$crate-*`; \
-		sed -e"/source.*/d" -e"s,$${crate}-.*,$${crate_namever}," -i subprojects/$${crate}.wrap; \
-	done
-	export crate_namever=`basename $$MESON_PACKAGE_CACHE_DIR/syn-2.*`; \
-	sed -e"/source.*/d" -e"s,syn-.*,$${crate_namever}," -i subprojects/syn.wrap; \
-
+	./debian/get-wraps-from-cargo-registry.py --cargo-registry /usr/share/cargo/registry/
 	touch subprojects/rewrite
 
 override_dh_clean: regen_control
