@@ -1,0 +1,4 @@
+usr/lib/*/libgbm.so
+usr/lib/*/pkgconfig/gbm.pc
+usr/include/gbm.h
+usr/include/gbm_backend_abi.h
