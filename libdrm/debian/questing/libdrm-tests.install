@@ -1,6 +1,0 @@
-usr/bin/amdgpu_stress
-usr/bin/drmdevice
-usr/bin/modetest
-usr/bin/vbltest
-usr/bin/modeprint
-usr/bin/proptest
