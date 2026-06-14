@@ -5,6 +5,7 @@ Maintainer: Ernst Sjöstrand <ernstp@gmail.com>
 Standards-Version: 4.1.4
 Build-Depends:
  debhelper-compat (= 13),
+ dh-exec,
  directx-headers-dev (>= 1.613.0) [linux-amd64 linux-arm64],
  flatbuffers-compiler [linux-arm64],
  glslang-tools [@LLVM_ARCHS@],

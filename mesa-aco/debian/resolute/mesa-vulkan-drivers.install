@@ -1,5 +1,13 @@
+#!/usr/bin/dh-exec
 usr/bin/mesa-overlay-control.py
+[arm64] usr/share/drirc.d/00-v3dv-defaults.conf
+[arm64] usr/share/drirc.d/00-panvk-defaults.conf
+[arm64] usr/share/drirc.d/00-turnip-defaults.conf
+[amd64 i386] usr/share/drirc.d/00-anv-defaults.conf
+[amd64 i386] usr/share/drirc.d/00-hasvk-defaults.conf
+[amd64] usr/share/drirc.d/00-nvk-defaults.conf
 usr/share/drirc.d/00-radv-defaults.conf
+usr/share/drirc.d/00-venus-defaults.conf
 usr/share/vulkan/explicit_layer.d/*.json
 usr/share/vulkan/icd.d/*.json
 usr/share/vulkan/implicit_layer.d/*.json
