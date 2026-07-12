@@ -5,6 +5,7 @@ usr/bin/mesa-overlay-control.py
 [arm64] usr/share/drirc.d/00-turnip-defaults.conf
 [amd64 i386] usr/share/drirc.d/00-anv-defaults.conf
 [amd64 i386] usr/share/drirc.d/00-hasvk-defaults.conf
+usr/share/drirc.d/00-lavapipe-defaults.conf
 usr/share/drirc.d/00-radv-defaults.conf
 usr/share/drirc.d/00-venus-defaults.conf
 usr/share/vulkan/explicit_layer.d/*.json
